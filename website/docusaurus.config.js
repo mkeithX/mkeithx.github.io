@@ -3,13 +3,14 @@
 // (when paired with `@ts-check`).
 // There are various equivalent ways to declare your Docusaurus config.
 // See: https://docusaurus.io/docs/api/docusaurus-config
-
+import autoprefixer from "autoprefixer";
 import {themes as prismThemes} from 'prism-react-renderer';
+import tailwind from "tailwindcss";
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'mkeithX',
-  tagline: "It's me, mkeithX",
+  tagline: "I'm a Software Engineer passionate about solving meaningful problems.",
   favicon: 'img/favicon.ico',
   titleDelimiter: '·',
   url: 'https://mkeithx.github.io',
@@ -54,7 +55,7 @@ const config = {
     ({
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: false,
+        disableSwitch: true,
         respectPrefersColorScheme: false,
       },
       // Replace with your project's social card
@@ -75,7 +76,9 @@ const config = {
             position: 'right',
             label: 'Tutorial',
           },
+          
           {to: '/blog', label: 'Blog', position: 'right'},
+
           {
             href: 'https://github.com/mkeithX/',
             'aria-label': 'GitHub repository',
@@ -90,7 +93,7 @@ const config = {
           alt: 'mkeithX',
           src: 'img/mkjs.svg',
           href: '/',
-          height: '50'
+          height: '30'
         },
         copyright: `Copyright © ${new Date().getFullYear()} mkeithX.`,
       },
@@ -99,6 +102,18 @@ const config = {
         darkTheme: prismThemes.dracula,
       },
     }),
+    plugins: [
+      async function tailwindPlugin(context, options) {
+        return {
+          name: "docusaurus-tailwindcss",
+          configurePostCss(postcssOptions) {
+            postcssOptions.plugins.push(tailwind);
+            postcssOptions.plugins.push(autoprefixer);
+            return postcssOptions;
+          },
+        };
+      },
+    ],
 };
 
 export default config;
