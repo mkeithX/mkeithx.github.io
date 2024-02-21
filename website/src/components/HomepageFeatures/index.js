@@ -5,7 +5,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     title: 'Easy to Use',
-    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    Svg: require('@site/static/img/kitimi-svg-banner.svg').default,
     description: (
       <>
         Docusaurus was designed from the ground up to be easily installed and
@@ -25,7 +25,7 @@ const FeatureList = [
   },
   {
     title: 'Powered by React',
-    Svg: require('@site/static/img/undraw_docusaurus_react.svg').default,
+    Svg: require('@site/static/img/microsoft_logo.svg').default,
     description: (
       <>
         Extend or customize your website layout by reusing React. Docusaurus can
