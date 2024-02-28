@@ -44,7 +44,7 @@ const config = {
          
         },
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: [require.resolve('./src/css/custom.css')],
         },
       }),
     ],
@@ -62,12 +62,15 @@ const config = {
       image: 'img/docusaurus-social-card.jpg',
       navbar: {
         // title: 'mkeithX',
+        style: 'dark',
+        hideOnScroll: true,
         logo: {
           alt: 'mkjs Logo',
           src: 'img/mkjs.svg',
           target: '_self',
           width: 100,
           height: 100,
+     
         },
         items: [
           {
@@ -84,7 +87,7 @@ const config = {
             label: 'Tutorial',
           },
 
-          {to: '/blog', label: 'Blog', position: 'right'},
+          // {to: '/blog', label: 'Blog', position: 'right'},
 
           {
             href: 'https://github.com/mkeithX/',
@@ -105,8 +108,8 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()} mkeithX.`,
       },
       prism: {
-        theme: prismThemes.github,
-        darkTheme: prismThemes.dracula,
+        theme: prismThemes.vsDark,
+        darkTheme: prismThemes.vsDark,
       },
     }),
     plugins: [
