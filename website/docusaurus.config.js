@@ -55,8 +55,8 @@ const config = {
     ({
       colorMode: {
         defaultMode: 'dark',
-        disableSwitch: true,
-        respectPrefersColorScheme: false,
+        disableSwitch: false,
+        respectPrefersColorScheme: true,
       },
       // Replace with your project's social card
       image: 'img/docusaurus-social-card.jpg',
@@ -73,7 +73,7 @@ const config = {
           {
             type: "docSidebar",
             sidebarId: "projectSidebar",
-            label: "Projects",
+            label: "Docs",
             position: "right"
           },
           
