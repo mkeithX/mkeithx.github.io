@@ -73,13 +73,13 @@ const config = {
      
         },
         items: [
-          {
-            type: "docSidebar",
-            sidebarId: "projectSidebar",
-            label: "Docs",
-            position: "right"
-          },
-          
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "projectSidebar",
+          //   label: "Docs",
+          //   position: "right"
+          // },
+          {to: '/comming-soon', label: 'Docs', position: 'right'},
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
