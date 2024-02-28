@@ -10,7 +10,7 @@ import tailwind from "tailwindcss";
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'mkeithX',
-  tagline: "I'm a passionate Software Engineer who loves pizza 🍕.",
+  tagline: "a passionate Software Engineer who loves pizza 🍕.",
   favicon: 'icons/favicon.ico',
   titleDelimiter: '·',
   url: 'https://mkeithx.github.io',

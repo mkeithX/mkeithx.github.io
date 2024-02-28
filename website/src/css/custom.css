@@ -17,6 +17,7 @@
     --ifm-color-primary-light: #08b1ff;
     --ifm-color-primary-lighter: #14b5ff;
     --ifm-color-primary-lightest: #38c0ff;
+    --kiti-dark: #111317;
    --ifm-code-font-size: 95%;
  }
  
@@ -56,3 +57,12 @@
   .header-github-link:hover::before {
     background-color: var(--ifm-navbar-link-hover-color);
   }
+
+  .navbar.navbar--dark {
+    background-color: var(--kiti-dark);
+  }
+
+  .footer--dark {
+    --ifm-footer-background-color: #20232a;
+  }
+  

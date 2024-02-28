@@ -5,36 +5,37 @@ import styles from './styles.module.css';
 
 const FeatureList = [
   {
-    scale: 1.25,
-    title: 'Easy to Use',
+    scale: 1.0,
+    // title: 'Documentation',
     Svg: require('@site/static/img/kitimi-svg-banner.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    // description: (
+    //   <>
+    //     Docusaurus was designed from the ground up to be easily installed and
+    //     used to get your website up and running quickly.
+    //   </>
+    // ),
   },
   {
-    scale: 0.75,
-    title: 'Focus on What Matters',
-    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    scale: 1.0,
+    // title: 'OSINT',
+    Svg: require('@site/static/img/kali-logo-blue.svg').default,
+    // description: (
+    //   <>
+    //     Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+    //     ahead and move your docs into the <code>docs</code> directory.
+    //   </>
+    // ),
   },
   {
-    title: 'Powered by React',
+    scale: 1.0,
+    // title: 'Windows for Developers',
     Svg: require('@site/static/img/microsoft_logo.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    // description: (
+    //   <>
+    //     Extend or customize your website layout by reusing React. Docusaurus can
+    //     be extended while reusing the same header and footer.
+    //   </>
+    // ),
   },
 ];
 
@@ -44,9 +45,9 @@ function Feature({Svg, scale, title, description}) {
       <div className="text--center">
       <Svg transform={"scale(" + scale + ")"} className={styles.featureSvg} role="img" />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center mb-1 py-3 padding-horiz--md md-2">
         <Heading as="h3">{title}</Heading>
-        <p>{description}</p>
+        <p class="mt-1 py-1">{description}</p>
       </div>
     </div>
   );

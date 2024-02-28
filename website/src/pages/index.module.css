@@ -5,9 +5,10 @@
 
 .heroBanner {
   padding: 4rem 0;
-  text-align: center;
+  text-align: left;
   position: relative;
   overflow: hidden;
+  background-color: #14171A;
 }
 
 @media screen and (max-width: 996px) {
@@ -16,8 +17,19 @@
   }
 }
 
-.buttons {
+/* .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
+} */
+.buttons {
+  display: block;
+  justify-content: center;
+  margin-top: 10px;
+  color: var(--ifm-color-primary-dark);
+}
+
+
+.heroTitleTextHtml b {
+  color: var(--ifm-color-primary-lightest);
 }
