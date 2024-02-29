@@ -4,10 +4,10 @@
  */
 
 .heroBanner {
-  padding: 4rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
+  display: flex;
   background-color: #14171A;
 }
 
@@ -31,5 +31,35 @@
 
 
 .heroTitleTextHtml b {
-  color: var(--ifm-color-primary-lightest);
+  color: var(--ifm-color-primary-dark);
+}
+
+
+@keyframes kit-in-the-box {
+  0% {
+    opacity: 0;
+    transform: scale(0.1) rotate(45deg);
+    transform-origin: center bottom;
+  }
+  50% {
+    transform: rotate(-10deg);
+  }
+  70% {
+    transform: rotate(5deg);
+  }
+  100% {
+    opacity: 1;
+    transform: scale(1);
+  }
+}
+
+.heroBannerLogo {
+  max-width: 35%;
+  margin-top: 20px;
+  padding: 0 20px 20px;
+  animation-duration: 2s;
+  animation-name: kit-in-the-box;
+  float: right;
+  height: auto;
+  display: block;
 }

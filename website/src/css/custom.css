@@ -10,7 +10,7 @@
  
  /* You can override the default Infima variables here. */
  :root {
-    --ifm-color-primary: #00a4ef;
+    --ifm-color-primary: #00A4EF;
     --ifm-color-primary-dark: #0094d7;
     --ifm-color-primary-darker: #008bcb;
     --ifm-color-primary-darkest: #0073a7;
@@ -22,15 +22,15 @@
  }
  
  /* For readability concerns, you should choose a lighter palette in dark mode. */
- html[data-theme="dark"] {
-    --ifm-color-primary: #00a4ef;
-    --ifm-color-primary-dark: #0094d7;
-    --ifm-color-primary-darker: #008bcb;
-    --ifm-color-primary-darkest: #0073a7;
-    --ifm-color-primary-light: #08b1ff;
-    --ifm-color-primary-lighter: #14b5ff;
-    --ifm-color-primary-lightest: #38c0ff;
- }
+ [data-theme='dark'] {
+  --ifm-color-primary: #00a4ef;
+  --ifm-color-primary-dark: #0094d7;
+  --ifm-color-primary-darker: #008bcb;
+  --ifm-color-primary-darkest: #0073a7;
+  --ifm-color-primary-light: #08b1ff;
+  --ifm-color-primary-lighter: #14b5ff;
+  --ifm-color-primary-lightest: #38c0ff;
+}
  
  .docusaurus-highlight-code-line {
    background-color: rgba(0, 0, 0, 0.1);
@@ -64,5 +64,98 @@
 
   .footer--dark {
     --ifm-footer-background-color: #20232a;
+  }
+  
+  .banner {
+    padding: 4rem;
+  }
+  /** In mobile view, reduce the padding */
+  @media screen and (max-width: 996px) {
+    .heroBanner {
+      padding: 2rem;
+    }
+  }
+
+  .navbar__title {
+    font-weight: 650;
+    font-size: medium;
+  }
+  
+  .navbar__brand:hover {
+    color: var(--brand);
+  }
+  
+  .navbar__item.navbar__link {
+    font-weight: 600;
+    user-select: none;
+  }
+  
+  .navbar__item.dropdown:not(.dropdown--right) a {
+    font-weight: 400;
+    font-size: 14px;
+  }
+  
+  .navbar__item.dropdown:not(.dropdown--right) ul {
+    /* Control navbar dropdown alignment */
+    top: calc(100% + 0px);
+    left: 0;
+  }
+  
+  .dropdown > .navbar__link:after {
+    margin-left: 9px;
+    top: 1px;
+    opacity: 0.85;
+  }
+  
+  .navbar__logo {
+    /* width: 40px; */
+    height: 34px;
+    transition: transform 0.5s;
+  }
+  
+
+
+  .main {
+    padding: 15px;
+  }
+  
+  .heading {
+    font-weight: bold;
+  }
+  
+  
+  h1 {
+    font-size: 2.4rem;
+  }
+  
+  h2 {
+    font-size: 2rem;
+  }
+  
+  h3 {
+    font-size: 1.2rem;
+  }
+  
+  p {
+    font-size: 1rem;
+  }
+
+
+  @media screen and (max-width: 966px) {
+    h1 {
+      font-size: 2.4rem;
+    }
+  
+    h2 {
+      font-size: 1.6rem;
+    }
+  
+    h3 {
+      font-size: 1.4rem;
+    }
+  
+    p {
+      font-size: 1rem;
+    }
   }
   

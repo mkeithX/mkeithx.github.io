@@ -5,12 +5,16 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 import autoprefixer from "autoprefixer";
 import {themes as prismThemes} from 'prism-react-renderer';
+
+
 import tailwind from "tailwindcss";
+import remarkMath from 'remark-math';
+import rehypeKatex from 'rehype-katex';
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'mkeithX',
-  tagline: "a passionate Software Engineer who loves pizza 🍕.",
+  tagline: "passionate Software Engineer who loves pizza 🍕",
   favicon: 'icons/favicon.ico',
   titleDelimiter: '·',
   url: 'https://mkeithx.github.io',
@@ -36,9 +40,27 @@ const config = {
       /** @type {import('@docusaurus/preset-classic').Options} */
       ({
         docs: {
-          sidebarPath: './sidebars.js',
+          path: 'docs',
+          showLastUpdateAuthor: false,
+          breadcrumbs: true,
+          sidebarPath: require.resolve('./sidebars.js'),
+          showLastUpdateTime: true,
+          disableVersioning: false,
+          editLocalizedFiles: false,
+          editCurrentVersion: false,
+          routeBasePath: 'docs',
+          remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath],
+          rehypePlugins: [rehypeKatex],
         
         },
+        pages: {
+          path: 'src/pages',
+          routeBasePath: '',
+          mdxPageComponent: '@theme/MDXPage',
+          remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath,],
+          rehypePlugins: [rehypeKatex],
+        },
+
         blog: {
           showReadingTime: true,
          
@@ -49,6 +71,9 @@ const config = {
       }),
     ],
   ],
+  stylesheets: [
+    { href: 'https://cdn.jsdelivr.net/npm/katex@0.13.24/dist/katex.min.css',type: 'text/css',integrity:'sha384-odtC+0UGzzFL/6PNoE8rX/SPcQDXBJ+uRepguP4QkPCm2LBxH3FA3y+fKSiJ+AmM',crossorigin: 'anonymous',},
+  ],
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
@@ -58,8 +83,13 @@ const config = {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
-      // Replace with your project's social card
-      image: 'img/docusaurus-social-card.jpg',
+      docs: {
+        sidebar: {
+          hideable: true,
+          autoCollapseCategories: true,
+        },
+      },
+      image: 'img/social-banner.png',
       navbar: {
         // title: 'mkeithX',
         style: 'dark',
@@ -69,17 +99,23 @@ const config = {
           src: 'img/mkjs.svg',
           target: '_self',
           width: 100,
-          height: 100,
+          // height: 100,
      
         },
         items: [
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "projectSidebar",
-          //   label: "Docs",
-          //   position: "right"
-          // },
-          {to: '/comming-soon', label: 'Docs', position: 'right'},
+          {
+            type: "docSidebar",
+            sidebarId: "projectSidebar",
+            label: "Docs",
+            position: "right"
+          },
+          {
+            type: "docSidebar",
+            sidebarId: "snippetSidebar",
+            label: "Snippets",
+            position: "right"
+          },
+          /* {to: '/come-soon', label: 'Docs', position: 'right'},*/
           {
             type: 'docSidebar',
             sidebarId: 'tutorialSidebar',
@@ -109,7 +145,8 @@ const config = {
       },
       prism: {
         theme: prismThemes.vsDark,
-        darkTheme: prismThemes.vsDark,
+        darkTheme: prismThemes.dracula,
+        additionalLanguages: ['powershell','python','bash','json',],
       },
     }),
     plugins: [
