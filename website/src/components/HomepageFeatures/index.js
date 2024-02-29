@@ -8,34 +8,34 @@ const FeatureList = [
     scale: 1.3,
     title: 'Documentation',
     Svg: require('@site/static/img/kitimi-svg-banner.svg').default,
-    description: (
-      <>
-        Docusaurus was designed from the ground up to be easily installed and
-        used to get your website up and running quickly.
-      </>
-    ),
+    // description: (
+    //   <>
+    //     Docusaurus was designed from the ground up to be easily installed and
+    //     used to get your website up and running quickly.
+    //   </>
+    // ),
   },
   {
     scale: 0.8,
     title: 'WSL',
     Svg: require('@site/static/img/kali-logo-blue.svg').default,
-    description: (
-      <>
-        Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory.
-      </>
-    ),
+    // description: (
+    //   <>
+    //     Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
+    //     ahead and move your docs into the <code>docs</code> directory.
+    //   </>
+    // ),
   },
   {
     scale: 1.0,
     title: 'Windows for Developers',
     Svg: require('@site/static/img/microsoft_logo.svg').default,
-    description: (
-      <>
-        Extend or customize your website layout by reusing React. Docusaurus can
-        be extended while reusing the same header and footer.
-      </>
-    ),
+    // description: (
+    //   <>
+    //     Extend or customize your website layout by reusing React. Docusaurus can
+    //     be extended while reusing the same header and footer.
+    //   </>
+    // ),
   },
 ];
 

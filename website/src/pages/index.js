@@ -6,7 +6,7 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
-import RocketOne from '@site/static/img/rocket-1a.svg';
+import RocketOne from '@site/static/img/react-logo.svg';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -17,19 +17,20 @@ function HomepageHeader() {
          
          title="Logo"
          height={350}
-         width={300}
+         width={350}
          
          />
 
         <div className={clsx("hero__subtitle")}>
           <span>
-            {"Hi there! I'm"}
+            {"Hi! I'm"}
           </span>
         </div>
 
         <Heading as="h4" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
-            Ke<b>i</b>th
+            {/* Ke<b>i</b>th */}
+            {"Keith"}
           </span>
         </Heading>
         <Heading as="p" className="hero__subtitle">

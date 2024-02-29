@@ -31,7 +31,10 @@
   --ifm-color-primary-lighter: #14b5ff;
   --ifm-color-primary-lightest: #38c0ff;
 }
- 
+[data-theme='light'] {
+  --ifm-background-color: #F5F8FA;
+}
+
  .docusaurus-highlight-code-line {
    background-color: rgba(0, 0, 0, 0.1);
    display: block;
@@ -69,12 +72,7 @@
   .banner {
     padding: 4rem;
   }
-  /** In mobile view, reduce the padding */
-  @media screen and (max-width: 996px) {
-    .heroBanner {
-      padding: 2rem;
-    }
-  }
+
 
   .navbar__title {
     font-weight: 650;

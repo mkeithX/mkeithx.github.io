@@ -13,7 +13,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'mkeithX',
-  tagline: "passionate Software Engineer who loves pizza 🍕",
+  tagline: "a passionate software engineer who loves pizza 🍕",
   favicon: 'icons/favicon.ico',
   titleDelimiter: '·',
   url: 'https://mkeithx.github.io',
