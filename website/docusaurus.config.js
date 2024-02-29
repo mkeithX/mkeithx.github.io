@@ -5,11 +5,10 @@
 // See: https://docusaurus.io/docs/api/docusaurus-config
 import autoprefixer from "autoprefixer";
 import {themes as prismThemes} from 'prism-react-renderer';
-
-
 import tailwind from "tailwindcss";
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
+
 
 /** @type {import('@docusaurus/types').Config} */
 const config = {
@@ -61,10 +60,13 @@ const config = {
           rehypePlugins: [rehypeKatex],
         },
 
-        blog: {
+        /* blog: {
           showReadingTime: true,
          
-        },
+        },*/
+
+        blog:false,
+
         theme: {
           customCss: [require.resolve('./src/css/custom.css')],
         },
@@ -110,20 +112,17 @@ const config = {
             position: "right"
           },
           {
+            type: 'docSidebar',
+            sidebarId: 'tutorialSidebar',
+            position: 'right',
+            label: 'Tutorials',
+          },
+          {
             type: "docSidebar",
             sidebarId: "snippetSidebar",
             label: "Snippets",
             position: "right"
           },
-          /* {to: '/come-soon', label: 'Docs', position: 'right'},*/
-          {
-            type: 'docSidebar',
-            sidebarId: 'tutorialSidebar',
-            position: 'right',
-            label: 'Tutorial',
-          },
-
-          // {to: '/blog', label: 'Blog', position: 'right'},
 
           {
             href: 'https://github.com/mkeithX/',
@@ -141,10 +140,10 @@ const config = {
           href: '/',
           height: '30'
         },
-        copyright: `Copyright © ${new Date().getFullYear()} mkeithX.`,
+        copyright: `Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
-        theme: prismThemes.vsDark,
+        theme: prismThemes.dracula,
         darkTheme: prismThemes.dracula,
         additionalLanguages: ['powershell','python','bash','json',],
       },

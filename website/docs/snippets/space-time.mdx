@@ -1,0 +1,138 @@
+---
+sidebar_label: Space time
+slug: /space-time
+---
+
+# Space time
+
+:::info
+
+In this example, we'll demonstrate the **approximate distances** of celestial bodies in light minutes.
+
+:::
+
+:::tip[Note]
+
+While the entire code is written in Python, the same principles can be applied to other programming languages as well.
+
+:::
+
+### From Earth.
+
+
+```py
+LIGHT_SPEED = 299792  # km/s
+distances_from_earth = [
+    {'name': 'Sun', 'distance': 150000000},
+    {'name': 'Mercury', 'distance': 91691000},
+    {'name': 'Venus', 'distance': 41400000},
+    {'name': 'Moon', 'distance': 384402},
+    {'name': 'Mars', 'distance': 78340000},
+    {'name': 'Asteroid Belt', 'distance': 478700000},
+    {'name': 'Jupiter', 'distance': 628730000},
+    {'name': 'Saturn', 'distance': 1275000000},
+    {'name': 'Uranus', 'distance': 2723950000},
+    {'name': 'Neptune', 'distance': 4351400000},
+    {'name': 'Kuiper Belt', 'distance': 7330000000},
+    {'name': 'Oort Cloud', 'distance': 7479890000000},
+]
+
+def to_light_minutes(distance):
+    light_minutes = distance / (LIGHT_SPEED * 60)
+    return round(light_minutes, 2)
+
+def main():
+    print("Approximate distance from Earth (in Light Minutes):")
+    print()
+
+    for planet in distances_from_earth:
+        name = planet['name']
+        distance = planet['distance']
+        light_minutes = to_light_minutes(distance)
+        print(f"{name}: {light_minutes} light minutes")
+
+if __name__ == "__main__":
+    main()
+```
+
+<details>
+<summary>Show output</summary>
+
+```md
+Approximate distance from Earth (in Light Minutes):
+
+Sun: 8.34 light minutes
+Mercury: 5.1 light minutes
+Venus: 2.3 light minutes
+Moon: 0.02 light minutes
+Mars: 4.36 light minutes
+Asteroid Belt: 26.61 light minutes
+Jupiter: 34.95 light minutes
+Saturn: 70.88 light minutes
+Uranus: 151.44 light minutes
+Neptune: 241.91 light minutes
+Kuiper Belt: 407.5 light minutes
+Oort Cloud: 415837.76 light minutes
+```
+
+</details>
+
+
+
+
+### From the Sun.
+
+```py
+LIGHT_SPEED = 299792
+distances_from_sun = [
+    {'name': 'Mercury', 'distance': 57910000},
+    {'name': 'Venus', 'distance': 108200000},
+    {'name': 'Earth', 'distance': 149600000},
+    {'name': 'Mars', 'distance': 227900000},
+    {'name': 'Jupiter', 'distance': 778500000},
+    {'name': 'Saturn', 'distance': 1427000000},
+    {'name': 'Uranus', 'distance': 2871000000},
+    {'name': 'Neptune', 'distance': 4497000000},
+]
+
+def to_minutes(distance):
+    return float(distance) / (LIGHT_SPEED * 60)
+
+def main():
+    print("Approximate distance the Sun (in Light Minutes):")
+    print()
+    for planet in distances_from_sun:
+        print(f"{planet['name']}: {round(to_minutes(planet['distance']), 2)} light minutes")
+
+if __name__ == "__main__":
+    main()
+```
+<details>
+<summary>Show output</summary>
+
+
+
+```md
+Approximate distance the Sun (in Light Minutes):
+
+Mercury: 3.22 light minutes
+Venus: 6.02 light minutes
+Earth: 8.32 light minutes
+Mars: 12.67 light minutes
+Jupiter: 43.28 light minutes
+Saturn: 79.33 light minutes
+Uranus: 159.61 light minutes
+Neptune: 250.01 light minutes
+```
+
+</details>
+
+
+
+
+:::tip[Fun fact]
+
+Great! Now that we've learned how to code basic calculations, we've also discovered that we are actually looking back in time.
+
+:::
+

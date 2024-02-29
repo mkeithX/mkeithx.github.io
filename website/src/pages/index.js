@@ -6,25 +6,27 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 
 import Heading from '@theme/Heading';
 import styles from './index.module.css';
+import RocketOne from '@site/static/img/rocket-1a.svg';
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
-        <img
-          className={clsx(styles.heroBannerLogo, 'margin-vert--sm')}
-          src={require('@site/static/img/cartoon_space_rocket.png').default}
-          alt="logo-dark"
-          height={350}
-          width={300}
-        />
+        <RocketOne className={clsx(styles.heroBannerLogo, 'margin-vert--sm')}
+         
+         title="Logo"
+         height={350}
+         width={300}
+         
+         />
 
-        <Heading as="p" className="hero__subtitle">
-          <span class="mb-0">
-            {"Hi I'm"}
+        <div className={clsx("hero__subtitle")}>
+          <span>
+            {"Hi there! I'm"}
           </span>
-        </Heading>
+        </div>
+
         <Heading as="h4" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             Ke<b>i</b>th
