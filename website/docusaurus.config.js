@@ -122,7 +122,7 @@ const config = {
           //   label: "Snippets",
           //   position: "right"
           // },
-          {to: '/blog', label: 'News', position: 'right'},
+          {to: '/blog', label: 'Blog', position: 'right'},
 
           {
             href: 'https://github.com/mkeithX/',
@@ -149,7 +149,7 @@ const config = {
           href: '/',
           height: '30'
         },
-        copyright: `Copyright © ${new Date().getFullYear()}`,
+        copyright: `Copyright © ${new Date().getFullYear()} Keith W. Tan`,
       },
       prism: {
         theme: prismThemes.oceanicNext,

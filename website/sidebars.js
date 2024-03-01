@@ -28,7 +28,7 @@ const sidebars = {
       collapsible: true,
       items: [
         'general-purpose',
-        'about-me',
+
         // 'installation',
         // 'configuration',
         
@@ -47,7 +47,6 @@ const sidebars = {
       items: [
         "projects/foobar-365",
         "projects/capstone",
-        // "projects/kitimi"
       ]
     },
 
