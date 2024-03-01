@@ -31,9 +31,7 @@
   --ifm-color-primary-lighter: #14b5ff;
   --ifm-color-primary-lightest: #38c0ff;
 }
-[data-theme='light'] {
-  --ifm-background-color: #fff;
-}
+
 
 .docusaurus-highlight-code-line {
   background-color: rgba(0, 0, 0, 0.1);
@@ -84,7 +82,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   }
   
   .navbar__item.navbar__link {
-    font-weight: 600;
+    font-weight: 650;
     user-select: none;
   }
   
@@ -108,7 +106,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   .navbar__logo {
     /* width: 40px; */
     height: 40px;
-    /* transition: transform 0.5s; */
+    transition: transform 0.5s;
   }
 
   @media screen and (max-width: 996px) {
@@ -120,7 +118,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   
   
   
-/* 
+
   .main {
     padding: 12px;
   }
@@ -145,9 +143,9 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   p {
     font-size: 1rem;
   }
- */
 
-  /* @media screen and (max-width: 966px) {
+
+  @media screen and (max-width: 966px) {
     h1 {
       font-size: 2.4rem;
     }
@@ -163,7 +161,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
     p {
       font-size: 1rem;
     }
-  } */
+  }
 
 
   div[class^='announcementBar_']{

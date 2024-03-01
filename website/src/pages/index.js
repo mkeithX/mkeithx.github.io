@@ -20,7 +20,7 @@ function HomepageHeader() {
 
         <div className={clsx("hero__subtitle")}>
           <span>
-            {"Hi, I'm"}
+            {"Hello, I'm "}
           </span>
         </div>
 
@@ -32,7 +32,7 @@ function HomepageHeader() {
         </Heading>
         <Heading as="p" className="hero__subtitle">
           <span>
-            {siteConfig.tagline}
+            {"and I'm a software developer building mostly web applications."}
           </span>
         </Heading>
 

@@ -3,15 +3,15 @@
  * and scoped locally.
  */
 
-.heroBanner {
+ .heroBanner {
   text-align: left;
   position: relative;
   overflow: hidden;
   display: flex;
   background-color: #14171A;
-  height: 350;
-}
-
+  height: 350px; /* Add 'px' to specify height */
+ }
+ 
 
 
 /* .buttons {
@@ -34,23 +34,23 @@
 
 @keyframes kit-in-the-box {
   from {
-    transform: rotate(0deg) scale(1.5);
+    transform: rotate(-360deg) scale(1.3);
   }
   to {
-    transform: rotate(360deg) scale(1.5);
+    transform: rotate(360deg) scale(1.3);
   }
  }
  @media (prefers-reduced-motion: no-preference) {
   .heroBannerLogo {
-    animation: kit-in-the-box infinite 6s linear; /* Fix animation name */
+    animation: kit-in-the-box infinite linear; /* Fix animation name */
   }
  }
 
  .heroBannerLogo {
   max-width: 35%;
   margin-top: 20px;
-  padding: 0 20px 20px;
-  animation-duration: 6s;
+  /* padding: 0 20px 20px; */
+  animation-duration: 12s;
   animation-name: kit-in-the-box;
   float: right;
   height: auto;

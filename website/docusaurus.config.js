@@ -80,27 +80,27 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'light',
+        defaultMode: 'dark',
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
       docs: {
         sidebar: {
-          hideable: false,
+          hideable: true,
           autoCollapseCategories: true,
         },
       },
       image: 'img/social-banner.png',
       navbar: {
-        // title: 'mkeithX',
+        // title: 'X',
         style: 'dark',
         hideOnScroll: true,
         logo: {
           alt: 'mkjs Logo',
           src: 'img/mkjs.svg',
           target: '_self',
-          width: 100,
-          // height: 100,
+          width: 130,
+          // height: 50,
      
         },
         items: [
@@ -116,13 +116,13 @@ const config = {
             position: 'right',
             label: 'Tutorials',
           },
-          {
-            type: "docSidebar",
-            sidebarId: "snippetSidebar",
-            label: "Snippets",
-            position: "right"
-          },
-          {to: '/blog', label: 'Blog', position: 'right'},
+          // {
+          //   type: "docSidebar",
+          //   sidebarId: "snippetSidebar",
+          //   label: "Snippets",
+          //   position: "right"
+          // },
+          {to: '/blog', label: 'News', position: 'right'},
 
           {
             href: 'https://github.com/mkeithX/',
@@ -132,13 +132,14 @@ const config = {
           },
         ],
       },
-      announcementBar: {
-        id: 'announcementBar_',
-        content:
-          'Give a Star &#11088;  <a target="_blank" rel="noopener noreferrer" href="https://github.com/mkeithX/mkeithx.github.io">on Github</a>',
-        textColor: '#fff',
-        isCloseable: true,
-      },
+      // announcementBar: {
+      //   id: 'announcementBar_',
+      //   content:
+      //     'Give a Star &#11088;  <a target="_blank" rel="noopener noreferrer" href="https://github.com/mkeithX/mkeithx.github.io">on Github</a>',
+      //   textColor: '#fff',
+
+      //   isCloseable: true,
+      // },
 
       footer: {
         style: 'dark',
