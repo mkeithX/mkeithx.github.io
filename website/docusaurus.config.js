@@ -61,13 +61,7 @@ const config = {
         },
 
         blog: {
-          path: 'blog',
-          editLocalizedFiles: false,
-          blogTitle: 'Blog title',
-          blogDescription: 'Blog',
-          blogSidebarCount: 5,
-          blogSidebarTitle: 'All posts',
-          routeBasePath: 'blog',
+          showReadingTime: true,
           remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath,],
           rehypePlugins: [rehypeKatex],
         },
