@@ -9,6 +9,19 @@
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <item>
+            <title><![CDATA[Kitimi]]></title>
+            <link>https://mkeithx.github.io/blog/kitimi</link>
+            <guid>https://mkeithx.github.io/blog/kitimi</guid>
+            <pubDate>Fri, 01 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[It all started out with a project we took on while working with Google during the pandemic.{/truncate/} Originally, there were just three of us in the team, and I was leading the way. The initiative centered around creating a knowledge base, as it was something we lacked, ironically. On the brightside however, with those challenges pave the way to Nirvana in realms of software engineering.]]></description>
+            <content:encoded><![CDATA[<p>It all started out with a project we took on while working with Google during the pandemic.<!-- --> Originally, there were just three of us in the team, and I was leading the way. The initiative centered around creating a knowledge base, as it was something we lacked, ironically. On the brightside however, with those challenges pave the way to Nirvana in realms of software engineering.</p>
+<p>Our main goal was to create a system that made it simple for the team to access information and collaborate effectively.
+I chose the name "Scribidibie" for the project, using it as a playful substitute for "scribble." The name "Kitimi" came out later and it's the name I chose to label our group.</p>
+<p>As we expanded, we also introduced Kitiplex—a platform for sharing tools and ideas openly. Even though we started small, with just three of us, our vision has grown. We're committed to developing useful tools for teams and contributing to the wider community. Join us at Kitimi Platforms in making work and collaboration easier!</p>
+<p>Ultimately, just like Kitimi, Kitiplex is not a conventional organization. I do not intend to become one.</p>]]></content:encoded>
+            <category>updates</category>
+        </item>
+        <item>
             <title><![CDATA[Quality docs]]></title>
             <link>https://mkeithx.github.io/blog/good-docs</link>
             <guid>https://mkeithx.github.io/blog/good-docs</guid>
