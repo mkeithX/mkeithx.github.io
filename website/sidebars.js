@@ -29,8 +29,9 @@ const sidebars = {
       items: [
         'general-purpose',
         'about-me',
-        'installation',
-        'configuration',
+        // 'installation',
+        // 'configuration',
+        
       ]
     },
 
@@ -44,9 +45,9 @@ const sidebars = {
         id: "projects/index",
       },
       items: [
+        "projects/foobar-365",
         "projects/capstone",
-        "projects/python-starters",
-        "projects/kitimi"
+        // "projects/kitimi"
       ]
     },
 

@@ -20,14 +20,13 @@ function HomepageHeader() {
 
         <div className={clsx("hero__subtitle")}>
           <span>
-            {"Hello, I'm "}
+            {"Hello, I'm"}
           </span>
         </div>
 
         <Heading as="h4" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
-            {/* Ke<b>i</b>th */}
-            {"Keith"}
+           Keith<b>.</b>
           </span>
         </Heading>
         <Heading as="p" className="hero__subtitle">
@@ -40,7 +39,7 @@ function HomepageHeader() {
           <Link
             className="button button--outline button--primary button--lg px-4"
             to="/docs">
-            {"Explore"}
+            {"Explore 🌍 "}
           </Link>
         </div>
       </div>

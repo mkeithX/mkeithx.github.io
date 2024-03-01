@@ -42,7 +42,7 @@
  }
  @media (prefers-reduced-motion: no-preference) {
   .heroBannerLogo {
-    animation: kit-in-the-box infinite 12s linear; /* Fix animation name */
+    animation: kit-in-the-box infinite 16s linear; /* Fix animation name */
   }
  }
 
@@ -50,7 +50,7 @@
   max-width: 35%;
   margin-top: 20px;
   /* padding: 0 20px 20px; */
-  animation-duration: 12s;
+  animation-duration: 16s;
   animation-name: kit-in-the-box;
   float: right;
   height: auto;
