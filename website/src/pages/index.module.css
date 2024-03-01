@@ -12,11 +12,7 @@
   height: 350;
 }
 
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding: 5rem;
-  }
-}
+
 
 /* .buttons {
   display: flex;
@@ -38,30 +34,28 @@
 
 @keyframes kit-in-the-box {
   from {
-    opacity: 0.5;
-    transform: rotate(0deg) scale(0);
+    transform: rotate(0deg) scale(1.5);
   }
   to {
-    opacity: 1;
-    transform: rotate(360deg)scale(1.0);
+    transform: rotate(360deg) scale(1.5);
   }
   
+}
+@media (prefers-reduced-motion: no-preference) {
+  .heroBannerLogo {
+    animation: heroBannerLogo-spin infinite 6s linear;
+  }
 }
 
 .heroBannerLogo {
   max-width: 35%;
   margin-top: 20px;
   padding: 0 20px 20px;
-  animation-duration: 3s;
+  animation-duration: 6s;
   animation-name: kit-in-the-box;
+  
   float: right;
   height: auto;
   display: block;
-}
-
-@media screen and (max-width: 996px) {
-  .heroBanner {
-    padding-left: 20px;
-    padding-right: 20px;
-  }
+  pointer-events: none;
 }

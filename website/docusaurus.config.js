@@ -13,7 +13,7 @@ import rehypeKatex from 'rehype-katex';
 /** @type {import('@docusaurus/types').Config} */
 const config = {
   title: 'mkeithX',
-  tagline: "I'm a software developer building mostly web applications and this is my portfolio website.",
+  tagline: "I'm a software developer building mostly web applications.",
   favicon: 'icons/favicon.ico',
   titleDelimiter: '·',
   url: 'https://mkeithx.github.io',
@@ -60,12 +60,17 @@ const config = {
           rehypePlugins: [rehypeKatex],
         },
 
-        /* blog: {
-          showReadingTime: true,
-         
-        },*/
-
-        blog:false,
+        blog: {
+          path: 'blog',
+          editLocalizedFiles: false,
+          blogTitle: 'Blog title',
+          blogDescription: 'Blog',
+          blogSidebarCount: 5,
+          blogSidebarTitle: 'All posts',
+          routeBasePath: 'blog',
+          remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath,],
+          rehypePlugins: [rehypeKatex],
+        },
 
         theme: {
           customCss: [require.resolve('./src/css/custom.css')],
@@ -81,13 +86,13 @@ const config = {
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
     ({
       colorMode: {
-        defaultMode: 'dark',
+        defaultMode: 'light',
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
       docs: {
         sidebar: {
-          hideable: true,
+          hideable: false,
           autoCollapseCategories: true,
         },
       },
@@ -123,6 +128,7 @@ const config = {
             label: "Snippets",
             position: "right"
           },
+          {to: '/blog', label: 'Blog', position: 'right'},
 
           {
             href: 'https://github.com/mkeithX/',
@@ -132,6 +138,14 @@ const config = {
           },
         ],
       },
+      announcementBar: {
+        id: 'announcementBar_',
+        content:
+          'Give a Star &#11088;  <a target="_blank" rel="noopener noreferrer" href="https://github.com/mkeithX/mkeithx.github.io">on Github</a>',
+        textColor: '#fff',
+        isCloseable: true,
+      },
+
       footer: {
         style: 'dark',
         logo: {
@@ -143,9 +157,9 @@ const config = {
         copyright: `Copyright © ${new Date().getFullYear()}`,
       },
       prism: {
-        theme: prismThemes.dracula,
-        darkTheme: prismThemes.dracula,
-        additionalLanguages: ['powershell','python','bash','json',],
+        theme: prismThemes.oceanicNext,
+        darkTheme: prismThemes.oceanicNext,
+        additionalLanguages: ['powershell','python','bash','json','java'],
       },
     }),
     plugins: [
