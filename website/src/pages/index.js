@@ -32,7 +32,7 @@ function HomepageHeader() {
         </Heading>
         <Heading as="p" className="hero__subtitle">
           <span>
-            {"and I'm a software developer building mostly web applications."}
+            {siteConfig.tagline}
           </span>
         </Heading>
 
