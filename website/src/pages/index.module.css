@@ -39,23 +39,21 @@
   to {
     transform: rotate(360deg) scale(1.5);
   }
-  
-}
-@media (prefers-reduced-motion: no-preference) {
+ }
+ @media (prefers-reduced-motion: no-preference) {
   .heroBannerLogo {
-    animation: heroBannerLogo-spin infinite 6s linear;
+    animation: kit-in-the-box infinite 6s linear; /* Fix animation name */
   }
-}
+ }
 
-.heroBannerLogo {
+ .heroBannerLogo {
   max-width: 35%;
   margin-top: 20px;
   padding: 0 20px 20px;
   animation-duration: 6s;
   animation-name: kit-in-the-box;
-  
   float: right;
   height: auto;
   display: block;
   pointer-events: none;
-}
+ }
