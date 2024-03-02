@@ -6,7 +6,7 @@ import styles from './styles.module.css';
 const FeatureList = [
   {
     scale: 1.3,
-    title: 'Documentation',
+    title: 'Platform',
     Svg: require('@site/static/img/kitimi-svg-banner.svg').default,
     // description: (
     //   <>
@@ -14,6 +14,17 @@ const FeatureList = [
     //     used to get your website up and running quickly.
     //   </>
     // ),
+  },
+  {
+    scale: 1.0,
+    title: 'Open-source',
+    Svg: require('@site/static/img/kitiplex-svg-banner.svg').default,
+    description: (
+      <>
+        Docusaurus was designed from the ground up to be easily installed and
+        used to get your website up and running quickly.
+      </>
+    ),
   },
   {
     scale: 0.8,

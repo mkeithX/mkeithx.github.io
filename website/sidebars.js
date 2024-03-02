@@ -90,11 +90,30 @@ const sidebars = {
         "tutorials/docusaurus/manage-docs-versions",
         "tutorials/docusaurus/translate-your-site",
         "tutorials/docusaurus/congratulations",
-        "tutorials/docusaurus/custom-config",
+
+        {
+          type: 'category',
+          label: "Extended",
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "doc",
+            id: 'tutorials/docusaurus/extended/index'
+          },
+          items: [
+            "tutorials/docusaurus/extended/custom-config",
+            "tutorials/docusaurus/extended/classic-preset",
+
+          ]
+        }
 
       ],
-
+      
     },
+    {
+
+
+    }
   ],
 
 

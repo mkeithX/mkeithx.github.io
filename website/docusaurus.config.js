@@ -67,7 +67,7 @@ const config = {
         },
 
         theme: {
-          customCss: [require.resolve('./src/css/custom.css')],
+          customCss: './src/css/custom.css',
         },
       }),
     ],
