@@ -62,6 +62,7 @@ const config = {
 
         blog: {
           showReadingTime: true,
+          blogSidebarTitle: 'Recent Updates',
           remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath,],
           rehypePlugins: [rehypeKatex],
         },
@@ -116,13 +117,8 @@ const config = {
             position: 'right',
             label: 'Tutorials',
           },
-          // {
-          //   type: "docSidebar",
-          //   sidebarId: "snippetSidebar",
-          //   label: "Snippets",
-          //   position: "right"
-          // },
-          {to: '/blog', label: 'Blog', position: 'right'},
+
+          {to: '/blog', label: 'Updates', position: 'right'},
 
           {
             href: 'https://github.com/mkeithX/',

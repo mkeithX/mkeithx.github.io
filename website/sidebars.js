@@ -18,6 +18,7 @@ const sidebars = {
   projectSidebar: [
 
     'introduction',
+
     {
       type: 'category',
       label: 'Know more',
@@ -27,11 +28,10 @@ const sidebars = {
       collapsed: false,
       collapsible: true,
       items: [
-        'general-purpose',
 
-        // 'installation',
-        // 'configuration',
-        
+        'motivation',
+        'curriculum-vitae'
+
       ]
     },
 
@@ -70,7 +70,19 @@ const sidebars = {
 
   tutorialSidebar: [
 
-    "tutorials/index",
+    {
+      type: "category",
+      label: "Getting started",
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "tutorials/index",
+      },
+      items: [
+        "tutorials/python-virtual-env"
+      ]
+    },
 
     {
       type: 'category',
@@ -108,12 +120,8 @@ const sidebars = {
         }
 
       ],
-      
+
     },
-    {
-
-
-    }
   ],
 
 
