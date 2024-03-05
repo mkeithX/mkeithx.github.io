@@ -43,7 +43,7 @@ const config = {
           showLastUpdateAuthor: false,
           breadcrumbs: true,
           sidebarPath: require.resolve('./sidebars.js'),
-          showLastUpdateTime: true,
+          showLastUpdateTime: false,
           disableVersioning: false,
           editLocalizedFiles: false,
           editCurrentVersion: false,

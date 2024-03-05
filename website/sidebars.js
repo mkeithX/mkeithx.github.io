@@ -83,6 +83,19 @@ const sidebars = {
         "tutorials/python-virtual-env"
       ]
     },
+    {
+      type: 'category',
+      label: "Python starters",
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: 'tutorials/python-starters/index',
+      },
+      items: [
+        "tutorials/python-starters/hello-world"
+      ]
+    },
 
     {
       type: 'category',
