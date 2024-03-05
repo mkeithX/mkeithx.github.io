@@ -50,6 +50,10 @@ const config = {
           routeBasePath: 'docs',
           remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath],
           rehypePlugins: [rehypeKatex],
+          admonitions: {
+            keywords: ['note', 'tip', 'info', 'warning', 'danger','caution','security',],
+            extendDefaults: true,
+          },
         
         },
         pages: {
@@ -58,6 +62,10 @@ const config = {
           mdxPageComponent: '@theme/MDXPage',
           remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath,],
           rehypePlugins: [rehypeKatex],
+          admonitions: {
+            keywords: ['note', 'tip', 'info', 'warning', 'danger','caution','security',],
+            extendDefaults: true,
+          },
         },
 
         blog: {
@@ -65,10 +73,14 @@ const config = {
           blogSidebarTitle: 'Recent Updates',
           remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath,],
           rehypePlugins: [rehypeKatex],
+          admonitions: {
+            keywords: ['note', 'tip', 'info', 'warning', 'danger','caution','security',],
+            extendDefaults: true,
+          },
         },
 
         theme: {
-          customCss: './src/css/custom.css',
+          customCss: require.resolve('./src/css/custom.css'),
         },
       }),
     ],
@@ -79,6 +91,7 @@ const config = {
 
   themeConfig:
     /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
+    
     ({
       colorMode: {
         defaultMode: 'dark',
@@ -93,14 +106,14 @@ const config = {
       },
       image: 'img/social-banner.png',
       navbar: {
-        // title: 'X',
+        // title: 'Universe',
         style: 'dark',
         hideOnScroll: true,
         logo: {
           alt: 'mkjs Logo',
           src: 'img/mkjs.svg',
           target: '_self',
-          width: 130,
+          width: 80,
           // height: 50,
      
         },
@@ -132,7 +145,6 @@ const config = {
       //   id: 'announcementBar_',
       //   content:
       //     'Give a Star &#11088;  <a target="_blank" rel="noopener noreferrer" href="https://github.com/mkeithX/mkeithx.github.io">on Github</a>',
-      //   textColor: '#fff',
 
       //   isCloseable: true,
       // },
