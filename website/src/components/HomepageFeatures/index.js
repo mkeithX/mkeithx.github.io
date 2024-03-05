@@ -28,9 +28,9 @@ const FeatureList = [
     ),
   },
     {
-    scale: 0.6,
+    scale: 0.8,
     title: 'Docusaurus',
-    Svg: require('@site/static/img/docusaurus-logo.svg').default,
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
     description: (
       <>
       An open-source <code>static-site</code> generator powering most of my front-end projects including this website.
