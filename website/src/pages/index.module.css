@@ -3,23 +3,38 @@
  * and scoped locally.
  */
 
-.heroBanner {
+ /* .heroBanner {
   padding: 4rem 0;
-  text-align: left;
+  text-align: center;
   position: relative;
   overflow: hidden;
+} */
+
+
+.heroBanner {
+  text-align: left;
+  padding: 4rem 0;
+  position: relative;
+  overflow: hidden;
+
   background-color: #14171A;
+
+ }
+ 
+
+@media screen and (max-width: 996px) {
+  .heroBanner {
+    padding: 2rem;
+  }
 }
 
-/* .heroBanner {
-  text-align: left;
-  position: relative;
-  overflow: hidden;
+.buttons {
   display: flex;
-  background-color: #14171A;
-  height: 350px;
- } */
- 
+  align-items: center;
+  justify-content: center;
+}
+
+
 .heroBannerLogo {
   max-width: 35%;
   margin-top: 20px;

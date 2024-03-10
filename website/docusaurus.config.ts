@@ -3,12 +3,12 @@ import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';
 import remarkMath from 'remark-math';
 import rehypeKatex from 'rehype-katex';
-
+import npm2yarn from '@docusaurus/remark-plugin-npm2yarn';
 
 
 const config: Config = {
   title: 'mkeithX',
-  tagline: "I'm a software engineer with a facination for understanding the complex of the universe.",
+  tagline: "I'm a software developer with a facination for understanding the complex of the universe.",
   favicon: 'icons/favicon.ico',
   titleDelimiter: '·',
   url: 'https://mkeithx.github.io',
@@ -36,28 +36,48 @@ const config: Config = {
           path: 'docs',
           showLastUpdateAuthor: false,
           breadcrumbs: true,
-          sidebarPath: require.resolve('./sidebars.js'),
+          sidebarPath: 'sidebars.ts',
           showLastUpdateTime: false,
           disableVersioning: false,
           editLocalizedFiles: false,
           editCurrentVersion: false,
           routeBasePath: 'docs',
-          remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath],
+          remarkPlugins: [[npm2yarn, {sync: true}],remarkMath],
           rehypePlugins: [rehypeKatex],
+          docItemComponent: '@theme/DocItem',
+
         },
 
 
         blog: {
+          path: "blog",
+          blogTitle: 'Blog title',
           showReadingTime: true,
-          blogSidebarTitle: 'Recent Updates',
-          remarkPlugins: [[require('@docusaurus/remark-plugin-npm2yarn'), {sync: true}],remarkMath,],
+          blogSidebarTitle: 'Recents',
+          blogDescription: 'Blog',
+          remarkPlugins: [[npm2yarn, {sync: true}],remarkMath],
           rehypePlugins: [rehypeKatex],
+          routeBasePath: 'blog',
+          feedOptions: {
+            type: 'all',
+            copyright: `Copyright © ${new Date().getFullYear()} mkeithX`,
+          },
         },
+
         theme: {
           customCss: './src/css/custom.css',
         },
       } satisfies Preset.Options,
     ],
+  ],
+
+  stylesheets: [
+    {
+      href: 'https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css',
+      type: 'text/css',
+      integrity:
+      "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",crossorigin: "anonymous"
+    },
   ],
 
   themeConfig: {
@@ -82,23 +102,24 @@ const config: Config = {
         src: 'img/mkjs.svg',
         target: '_self',
         width: 80,
-        // height: 50,
+        height: 80,
    
       },
       items: [
         {
           type: 'docSidebar',
+          sidebarId: 'mkeithxSidebar',
+          position: 'right',
+          label: 'Doc',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'guideSidebar',
-          position: 'left',
+          position: 'right',
           label: 'Guides',
         },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'tutorialSidebar',
-        //   position: 'left',
-        //   label: 'Tutorial',
-        // },
-        {to: '/blog', label: 'Blog', position: 'left'},
+
+        {to: '/blog', label: 'Blog', position: 'right'},
         {
           href: 'https://github.com/mkeithx',
           'aria-label': 'GitHub',
@@ -114,8 +135,8 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Tutorial',
-              to: '/docs/intro',
+              label: 'Guides',
+              to: '/docs/guides',
             },
           ],
         },
@@ -124,15 +145,15 @@ const config: Config = {
           items: [
             {
               label: 'Stack Overflow',
-              href: 'https://stackoverflow.com/questions/tagged/docusaurus',
+              href: 'https://stackoverflow.com',
             },
             {
               label: 'Discord',
-              href: 'https://discordapp.com/invite/docusaurus',
+              href: 'https://discordapp.com',
             },
             {
               label: 'Twitter',
-              href: 'https://twitter.com/docusaurus',
+              href: 'https://twitter.com/mkeithtan',
             },
           ],
         },
@@ -145,16 +166,17 @@ const config: Config = {
             },
             {
               label: 'GitHub',
-              href: 'https://github.com/facebook/docusaurus',
+              href: 'https://github.com/mkeithx',
             },
           ],
         },
       ],
-      copyright: `Copyright © ${new Date().getFullYear()} My Project, Inc. Built with Docusaurus.`,
+      copyright: `Copyright © ${new Date().getFullYear()} mkeithX`,
     },
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
+      additionalLanguages:["powershell", "python", "java"]
     },
   } satisfies Preset.ThemeConfig,
 };
