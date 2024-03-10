@@ -5,6 +5,12 @@
  */
 
 /* You can override the default Infima variables here. */
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+
 :root {
   --ifm-color-primary: #00A4EF;
   --ifm-color-primary-dark: #0094d7;
@@ -31,6 +37,15 @@
 }
 
 
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+ 
+html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
+}
+
 .header-github-link::before {
   content: '';
   width: 24px;
@@ -44,4 +59,66 @@
 
 .header-github-link:hover::before {
   background-color: var(--ifm-navbar-link-hover-color);
+}
+
+
+.navbar.navbar--dark {
+  background-color: var(--kiti-dark);
+}
+
+.footer--dark {
+  --ifm-footer-background-color: #20232a;
+}
+
+
+
+.main {
+  padding: 12px;
+}
+
+.heading {
+  font-weight: bold;
+}
+
+
+h1 {
+  font-size: 2.4rem;
+}
+
+h2 {
+  font-size: 2rem;
+}
+
+h3 {
+  font-size: 1.2rem;
+}
+
+p {
+  font-size: 1rem;
+}
+
+
+@media screen and (max-width: 966px) {
+  h1 {
+    font-size: 2.4rem;
+  }
+
+  h2 {
+    font-size: 1.6rem;
+  }
+
+  h3 {
+    font-size: 1.4rem;
+  }
+
+  p {
+    font-size: 1rem;
+  }
+}
+
+
+div[class^='announcementBar_']{
+  font-size: 18px;
+  font-weight: 600;
+  background-color: #20232a !important;
 }
