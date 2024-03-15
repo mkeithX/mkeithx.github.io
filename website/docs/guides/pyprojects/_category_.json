@@ -1,0 +1,9 @@
+{
+    "position": 1.1,
+    "label": "Python Starters",
+    "link": {
+        "type": "generated-index",
+        "description": "Python mini-projects.",
+        "slug": "/python-starters"
+      }
+}

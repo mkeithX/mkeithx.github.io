@@ -1,14 +1,11 @@
 {
-    "label": "Guides 💡",
+    "label": " 💡Guides",
     "collapsible": true,
-    "collapsed": false,
+    "collapsed": true,
     "position": 2,
-    "className": "red",
     "link": {
         "type": "generated-index",
-        "title": "Guides overview"
-      },
-      "customProps": {
-        "description": "Welcome guides!"
+        "description": "Projects, samples, demos and guides.",
+        "slug": "/guides"
       }
   }

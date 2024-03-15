@@ -1,4 +1,11 @@
 {
-    "label": "Geek space 🚀",
-    "position": 3
+    "label": " 🚀 Geek space",
+    "position": 3,
+    "collapsible": true,
+    "collapsed": true,
+    "link": {
+        "type": "generated-index",
+        "description": "The Universe in a nutshell.",
+        "slug": "/geek-space"
+      }
 }

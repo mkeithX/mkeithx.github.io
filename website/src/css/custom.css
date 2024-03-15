@@ -71,33 +71,6 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 
-
-.main {
-  padding: 12px;
-}
-
-.heading {
-  font-weight: bold;
-}
-
-
-h1 {
-  font-size: 2.4rem;
-}
-
-h2 {
-  font-size: 2rem;
-}
-
-h3 {
-  font-size: 1.2rem;
-}
-
-p {
-  font-size: 1rem;
-}
-
-
 @media screen and (max-width: 966px) {
   h1 {
     font-size: 2.4rem;
@@ -117,8 +90,23 @@ p {
 }
 
 
+
 div[class^='announcementBar_']{
   font-size: 18px;
   font-weight: 600;
   background-color: #20232a !important;
+}
+
+.alert--danger {
+  --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
+  --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
+  --ifm-alert-foreground-color: rgb(66,69,73);
+  --ifm-alert-border-color: #d4351c;
+}
+
+html[data-theme='dark'] .alert--danger {
+  --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
+  --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
+  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-border-color: #d4351c;
 }

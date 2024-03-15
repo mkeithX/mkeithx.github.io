@@ -1,0 +1,90 @@
+---
+slug: /python-virtual-env
+sidebar_position: 1
+title: Virtiual Env in Python
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+:::tip[What's this?]
+
+This module outlines how we create virtual environments in Python. Keep in mind that it's a good practice to use a virtual environment to isolate dependencies and keep your project environment clean
+
+:::
+
+1. Open your terminal or command prompt.
+
+2. Navigate to your project's root directory using the `cd` command:
+
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows">
+   
+    ```bash
+   cd path/to/your/project
+   ```
+  
+  </TabItem>
+  <TabItem value="unix" label="Unix">
+  
+  ```bash
+   cd path/to/your/project
+```
+  
+  </TabItem>
+</Tabs>
+
+
+3. Run the following command to create a virtual environment named `.venv`:
+
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows">
+
+  ```bash
+  py -m venv .venv
+```
+  
+  </TabItem>
+  <TabItem value="unix" label="Unix">
+  
+```bash
+python3 -m venv .venv
+```
+
+
+  </TabItem>
+</Tabs>
+
+4. Activate the virtual environment.
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows">
+
+  ```sh
+  .venv\Scripts\activate
+```
+  
+  </TabItem>
+  <TabItem value="unix" label="Unix">
+
+  ```bash
+  source .venv/bin/activate
+  ```
+  </TabItem>
+</Tabs>
+
+<!-- 5. 
+
+
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win" label="Windows">
+  
+  </TabItem>
+  <TabItem value="unix" label="Unix">
+  
+  
+  </TabItem>
+</Tabs> -->

@@ -12,7 +12,7 @@ const config: Config = {
   tagline:
     "I'm a software developer with a facination for understanding the comple of the universe.",
   favicon: "icons/favicon.ico",
-  titleDelimiter: "·",
+  titleDelimiter: "●",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX", // Usually your GitHub org/user name.
@@ -59,7 +59,7 @@ const config: Config = {
           routeBasePath: "blog",
 
           blogSidebarTitle: 'Recents',
-          blogSidebarCount: 5,
+          // blogSidebarCount: 5,
           include: ['**/*.{md,mdx}'],
           
           exclude: [
@@ -84,7 +84,7 @@ const config: Config = {
         },
 
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: ['./src/css/custom.css'],
         },
       } satisfies Preset.Options,
     ],
@@ -100,18 +100,6 @@ const config: Config = {
     },
   ],
 
-  plugins: [
-    async function tailwindPlugin(context, options) {
-      return {
-        name: "docusaurus-tailwindcss",
-        configurePostCss(postcssOptions) {
-          postcssOptions.plugins.push(tailwind);
-          postcssOptions.plugins.push(autoprefixer);
-          return postcssOptions;
-        },
-      };
-    },
-  ],
 
   themeConfig: {
     
@@ -147,14 +135,9 @@ const config: Config = {
           position: "right",
           label: "Docs",
         },
-        // {
-        //   type: "docSidebar",
-        //   sidebarId: "guideSidebar",
-        //   position: "right",
-        //   label: "Guides",
-        // },
 
         { to: "/blog", label: "Blog", position: "right" },
+
         {
           href: "https://github.com/mkeithx",
           "aria-label": "GitHub",
@@ -177,9 +160,22 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["powershell", "python", "java","bash","json"],
+      additionalLanguages: ["powershell", "python", "java", "bash", "json"],
     },
   } satisfies Preset.ThemeConfig,
+  
+  plugins: [
+    async function tailwindPlugin(context, options) {
+      return {
+        name: "docusaurus-tailwindcss",
+        configurePostCss(postcssOptions) {
+          postcssOptions.plugins.push(tailwind);
+          postcssOptions.plugins.push(autoprefixer);
+          return postcssOptions;
+        },
+      };
+    },
+  ],
 
 
 
