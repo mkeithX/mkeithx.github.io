@@ -10,7 +10,7 @@ import autoprefixer from "autoprefixer";
 const config: Config = {
   title: "mkeithX",
   tagline:
-    "I'm a software developer with a facination for understanding the complex of the universe.",
+    "I'm a software developer with a facination for understanding the comple of the universe.",
   favicon: "icons/favicon.ico",
   titleDelimiter: "·",
   url: "https://mkeithx.github.io",
@@ -41,7 +41,7 @@ const config: Config = {
           path: "docs",
           showLastUpdateAuthor: false,
           breadcrumbs: true,
-          sidebarPath: "sidebars.ts",
+          sidebarPath: "./sidebars.ts",
           showLastUpdateTime: false,
           disableVersioning: false,
           editLocalizedFiles: false,
@@ -54,7 +54,7 @@ const config: Config = {
 
         blog: {
           path: "blog",
-          blogTitle: 'Blog title',
+          blogTitle: 'Blog',
           blogDescription: 'A powered blog!',
           routeBasePath: "blog",
 
@@ -143,18 +143,18 @@ const config: Config = {
       items: [
         {
           type: "docSidebar",
-          sidebarId: "mkeithxSidebar",
+          sidebarId: "docSidebar",
           position: "right",
-          label: "Doc",
+          label: "Docs",
         },
-        {
-          type: "docSidebar",
-          sidebarId: "guideSidebar",
-          position: "right",
-          label: "Guides",
-        },
+        // {
+        //   type: "docSidebar",
+        //   sidebarId: "guideSidebar",
+        //   position: "right",
+        //   label: "Guides",
+        // },
 
-        { to: "/blog", label: "Updates", position: "right" },
+        { to: "/blog", label: "Blog", position: "right" },
         {
           href: "https://github.com/mkeithx",
           "aria-label": "GitHub",
