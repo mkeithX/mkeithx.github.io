@@ -29,11 +29,10 @@ function HomepageHeader() {
             Keith<b>.</b>
           </span>
         </Heading>
-        <Heading as="p" className="hero__subtitle">
-          <span>
-            {siteConfig.tagline}
-          </span>
-        </Heading>
+
+        <div className="hero__subtitle mb-3">
+          {siteConfig.tagline}
+        </div>
 
         <div className={styles.buttons}>
           <Link

@@ -158,7 +158,7 @@ const config: Config = {
           position: "right",
           label: "Docs",
         },
-        {to: "projects", label: "Projects", position: "right"},
+        {to: "showcase/", label: "Showcase", position: "right"},
 
         { to: "/blog", label: "Blog", position: "right" },
 

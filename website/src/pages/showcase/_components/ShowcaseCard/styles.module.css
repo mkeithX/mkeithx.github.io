@@ -1,0 +1,14 @@
+.cardImageWrapper:hover {
+    cursor: pointer;
+  }
+  .cardImage {
+    object-fit: cover;
+    height: 150px;
+    width: 100%;
+    max-width: 100%;
+    margin-bottom: -4px;
+  }
+  
+  .description {
+    font-size: smaller;
+  }
