@@ -146,10 +146,10 @@ const config: Config = {
       hideOnScroll: true,
       logo: {
         alt: "mkjs Logo",
-        src: "img/mkjs.svg",
+        src: "img/logo-bw.png",
         target: "_self",
-        width: 80,
-        height: 80,
+        // width: 80,
+        // height: 80,
       },
       items: [
         {
