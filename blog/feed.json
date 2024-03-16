@@ -1,0 +1,24 @@
+{
+    "version": "https://jsonfeed.org/version/1",
+    "title": "mkeithX Blog",
+    "home_page_url": "https://mkeithx.github.io/blog",
+    "description": "mkeithX Blog",
+    "items": [
+        {
+            "id": "https://mkeithx.github.io/blog/welcome",
+            "content_html": "<p>Welcome to my website! Here, I invite you to delve into my world of exploration, curiosity, and fascination for the universe. From my ongoing projects to snippets of knowledge and everything in between, this platform serves as a hub for all things I'm passionate about.</p>\n<!-- -->\n<h2 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"what-to-expect\">What to Expect<a href=\"https://mkeithx.github.io/blog/welcome#what-to-expect\" class=\"hash-link\" aria-label=\"Direct link to What to Expect\" title=\"Direct link to What to Expect\">​</a></h2>\n<h3 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"guides\">Guides💡:<a href=\"https://mkeithx.github.io/blog/welcome#guides\" class=\"hash-link\" aria-label=\"Direct link to Guides💡:\" title=\"Direct link to Guides💡:\">​</a></h3>\n<p>Dive into my projects, discover useful snippets, and explore workarounds in this section. Whether you're a fellow creator looking for inspiration or someone seeking practical advice, you'll find valuable resources to fuel your endeavors.</p>\n<h3 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"geek-universe-\">Geek Universe 🚀:<a href=\"https://mkeithx.github.io/blog/welcome#geek-universe-\" class=\"hash-link\" aria-label=\"Direct link to Geek Universe 🚀:\" title=\"Direct link to Geek Universe 🚀:\">​</a></h3>\n<p>Embark on a cosmic journey with me through articles about the universe. From the mysteries of space to the wonders of astrophysics, this section is dedicated to satisfying your curiosity about the cosmos.</p>\n<h3 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"misc️\">Misc.⚙️:<a href=\"https://mkeithx.github.io/blog/welcome#misc%EF%B8%8F\" class=\"hash-link\" aria-label=\"Direct link to Misc.⚙️:\" title=\"Direct link to Misc.⚙️:\">​</a></h3>\n<p>Here lies a collection of ad-hoc notes, musings, and all other good stuff that doesn't quite fit into the other categories. Expect the unexpected as we navigate through this eclectic mix of content.</p>\n<h2 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"explore-with-ease\">Explore with Ease<a href=\"https://mkeithx.github.io/blog/welcome#explore-with-ease\" class=\"hash-link\" aria-label=\"Direct link to Explore with Ease\" title=\"Direct link to Explore with Ease\">​</a></h2>\n<p>Navigate through the various directories conveniently located in the left sidebar. Whether you're here to expand your knowledge, seek inspiration, or simply enjoy a bit of cosmic exploration, I hope you'll find something intriguing within these digital pages.</p>\n<h2 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"join-me-on-the-journey\">Join Me on the Journey<a href=\"https://mkeithx.github.io/blog/welcome#join-me-on-the-journey\" class=\"hash-link\" aria-label=\"Direct link to Join Me on the Journey\" title=\"Direct link to Join Me on the Journey\">​</a></h2>\n<p>Remember, this website is a work-in-progress, much like the universe itself. As I continue to learn, create, and explore, new content will be added regularly. So, be sure to check back often and join me on this exciting journey of discovery.</p>\n<p>Thank you for visiting, and I hope you enjoy exploring and learning more about what I do. Here's to the endless possibilities that await us in the vast expanse of the universe!</p>\n<p>Happy exploring,<br>\n<!-- -->Keith</p>",
+            "url": "https://mkeithx.github.io/blog/welcome",
+            "title": "Welcome",
+            "summary": "Welcome to my website! Here, I invite you to delve into my world of exploration, curiosity, and fascination for the universe. From my ongoing projects to snippets of knowledge and everything in between, this platform serves as a hub for all things I'm passionate about.",
+            "date_modified": "2024-03-10T00:00:00.000Z",
+            "author": {
+                "name": "Keith Tan",
+                "url": "https://github.com/mkeithX"
+            },
+            "tags": [
+                "hello",
+                "welcome"
+            ]
+        }
+    ]
+}
