@@ -10,7 +10,7 @@ import autoprefixer from "autoprefixer";
 const config: Config = {
   title: "mkeithX",
   tagline:
-    "I'm a software developer with a facination for understanding the comple of the universe.",
+    "I'm a software developer with a facination for understanding the complex of the universe.",
   favicon: "icons/favicon.ico",
   titleDelimiter: "●",
   url: "https://mkeithx.github.io",

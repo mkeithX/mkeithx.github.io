@@ -1,8 +1,8 @@
 {
-    "label": " 💡Guides",
+    "label": "Guides 💡",
     "collapsible": true,
     "collapsed": true,
-    "position": 2,
+    "position": 3,
     "link": {
         "type": "generated-index",
         "description": "Projects, samples, demos and guides.",
