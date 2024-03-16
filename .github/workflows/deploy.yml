@@ -23,10 +23,9 @@ jobs:
 
       - name: Install dependencies
         run: |
-        cd website
-        npm ci
-      - name: Build website
-        run: npm run build
+          cd website
+          npm ci
+          npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
