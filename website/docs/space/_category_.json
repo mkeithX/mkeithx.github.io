@@ -1,11 +1,11 @@
 {
-    "label": "Geek Universe 🚀",
+    "label": "Geek Universe ⚛️",
     "position": 2,
     "collapsible": true,
     "collapsed": true,
     "link": {
         "type": "generated-index",
-        "description": "Geek-flavored Universe in a nutshell.",
-        "slug": "/geek-space"
+        "description": "The Universe in a nutshell.",
+        "slug": "/geek-universe"
       }
 }

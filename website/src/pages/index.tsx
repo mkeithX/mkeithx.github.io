@@ -7,19 +7,18 @@ import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
 import BannerLogo from "@site/static/img/react-logo.svg";
-
+import React from "react";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
     <header className={clsx("hero hero--dark", styles.heroBanner)}>
       <div className="container">
-      <BannerLogo className={clsx(styles.heroBannerLogo, 'margin-vert--sm')}
-
-          className={clsx(styles.heroBannerLogo)}
+        <BannerLogo
+          className={clsx(styles.heroBannerLogo, "margin-vert--sm")}
           title="BannerLogo"
           width={300}
-          />
+        />
 
         <div className={clsx("hero__subtitle")}>
           <span>{"Hello, I'm"}</span>
@@ -38,8 +37,9 @@ function HomepageHeader() {
 
         <div className={styles.buttons}>
           <Link
-            className="button button--outline button--primary button--lg px-4"
-            to="/docs">
+            className="button button--outline button--primary button--lg px-4 mb-3"
+            to="/docs"
+          >
             {"Explore"}
           </Link>
         </div>

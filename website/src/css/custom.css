@@ -70,8 +70,15 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   --ifm-footer-background-color: #20232a;
 }
 
+/* @media screen and (max-width: 996px) {
+  .heroBanner {
+    padding-left: 20px;
+    padding-right: 20px;
+  }
+} */
 
-@media screen and (max-width: 966px) {
+
+/* @media screen and (max-width: 966px) {
   h1 {
     font-size: 2.4rem;
   }
@@ -87,7 +94,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
   p {
     font-size: 1rem;
   }
-}
+} */
 
 
 

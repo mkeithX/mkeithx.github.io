@@ -12,7 +12,7 @@ const config: Config = {
   tagline:
     "I'm a software developer with a facination for understanding the complex of the universe.",
   favicon: "icons/favicon.ico",
-  titleDelimiter: "●",
+  titleDelimiter: '·',
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX", // Usually your GitHub org/user name.
@@ -54,11 +54,11 @@ const config: Config = {
 
         blog: {
           path: "blog",
-          blogTitle: 'Blog',
-          blogDescription: 'A powered blog!',
+          blogTitle: 'Updates',
+          blogDescription: 'Blog and updates from mkeithX.',
           routeBasePath: "blog",
 
-          blogSidebarTitle: 'Recents',
+          blogSidebarTitle: 'Updates',
           // blogSidebarCount: 5,
           include: ['**/*.{md,mdx}'],
           
@@ -81,6 +81,24 @@ const config: Config = {
             type: "all",
             copyright: `Copyright © ${new Date().getFullYear()} mkeithX`,
           },
+        },
+
+        pages: {
+          path: 'src/pages',
+          routeBasePath: '',
+          include: ['**/*.{js,jsx,ts,tsx,md,mdx}'],
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+          ],
+          mdxPageComponent: '@theme/MDXPage',
+          remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
+          rehypePlugins: [rehypeKatex],
+
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
         },
 
         theme: {
@@ -116,6 +134,11 @@ const config: Config = {
       },
     },
 
+    tableOfContents: {
+      minHeadingLevel: 2,
+      maxHeadingLevel: 5,
+    },
+
     image: "img/social-banner.png",
 
     navbar: {
@@ -135,6 +158,7 @@ const config: Config = {
           position: "right",
           label: "Docs",
         },
+        {to: "projects", label: "Projects", position: "right"},
 
         { to: "/blog", label: "Blog", position: "right" },
 

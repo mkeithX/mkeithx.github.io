@@ -5,13 +5,11 @@
 
  .heroBanner {
   text-align: left;
-  padding: 4rem 0;
   position: relative;
   overflow: hidden;
   display: flex;
   background-color: #14171A;
-  height: 365px;
-  margin-bottom: auto;
+  height: 350px; /* Add 'px' to specify height */
  }
  
 
@@ -25,7 +23,7 @@
 }
 
 .heroBannerLogo {
-  max-width: 40%;
+  max-width: 35%;
   margin-top: 25px;
   /* padding: 0 20px 20px; */
   /* animation-duration: 16s; */
@@ -48,7 +46,7 @@
   }
 }
 
-.buttons {
+/* .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
@@ -59,7 +57,7 @@
   justify-content: center;
   margin-top: 10px;
   color: var(--ifm-color-primary-dark);
-}
+} */
 
 
 .heroTitleTextHtml b {
