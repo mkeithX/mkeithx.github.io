@@ -5,7 +5,6 @@ on:
     branches:
       - main
 
-
 permissions:
   contents: write
 
@@ -20,17 +19,17 @@ jobs:
       - uses: actions/setup-node@v4
         with:
           node-version: 18
+          cache: npm
 
       - name: Install dependencies
         run: |
-          cd website
-          npm install 
-          npm run build
+        cd website
+        npm ci
+      - name: Build website
+        run: npm run build
 
-      
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-       
           publish_dir: website/build
