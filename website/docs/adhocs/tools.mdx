@@ -1,0 +1,119 @@
+---
+title: Tools
+sidebar_label: Tools
+more_data:
+  - Can be provided
+  - as: objects
+    or: arrays
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+
+### Ulitimate styling guide for reference
+
+#### Get started
+
+```mdx title="Standard"
+---
+title: ChangeThis
+sidebar_label: ChangeThis
+slug: /ChangeThis
+---
+```
+
+
+:::tip[]
+
+
+:::
+
+:::info[]
+
+
+:::
+
+:::danger[]
+
+
+:::
+
+:::warning[]
+
+
+:::
+
+:::note[]
+
+
+:::
+
+
+### Details element example
+
+<details>
+  <summary>Toggle me!</summary>
+  <div>
+    <div>This is the detailed content</div>
+    <br/>
+    <details>
+      <summary>
+        Nested toggle! Some surprise inside...
+      </summary>
+      <div>😲😲😲😲😲</div>
+    </details>
+  </div>
+</details>
+
+
+> Easy to maintain open source documentation websites.
+>
+> — Docusaurus
+
+
+<Tabs>
+  <TabItem value="apple" label="Apple" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="orange" label="Orange">
+    This is an orange 🍊
+  </TabItem>
+  <TabItem value="banana" label="Banana">
+    This is a banana 🍌
+  </TabItem>
+</Tabs>
+
+### More tabs
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
+function helloWorld() {
+  console.log('Hello, world!');
+}
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+def hello_world():
+  print("Hello, world!")
+```
+
+</TabItem>
+<TabItem value="java" label="Java">
+
+```java
+class HelloWorld {
+  public static void main(String args[]) {
+    System.out.println("Hello, World");
+  }
+}
+```
+
+</TabItem>
+</Tabs>
