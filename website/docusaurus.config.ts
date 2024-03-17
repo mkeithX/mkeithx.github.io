@@ -12,7 +12,7 @@ const config: Config = {
   tagline:
     "I'm a software developer with a facination for understanding the complex of the universe.",
   favicon: "icons/favicon.ico",
-  titleDelimiter: '·',
+  titleDelimiter: '•',
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX", // Usually your GitHub org/user name.
@@ -37,7 +37,7 @@ const config: Config = {
       {
         docs: {
           path: "docs",
-          showLastUpdateAuthor: false,
+          showLastUpdateAuthor: true,
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
           showLastUpdateTime: true,
@@ -84,7 +84,7 @@ const config: Config = {
 
           feedOptions: {
             type: "all",
-            copyright: `Copyright © ${new Date().getFullYear()} mkeithX`,
+            copyright: `Copyright © ${new Date().getFullYear()} Keith WT`,
           },
         },
 
@@ -205,7 +205,7 @@ const config: Config = {
           items: [
             {
               label: 'LinkedIn',
-              href: 'https://linkedin.com/in/mkeithtan',
+              href: 'https://www.linkedin.com/in/mkeithtan',
             },
             {
               label: 'Twitter',
@@ -221,10 +221,6 @@ const config: Config = {
             {
               label: 'Updates',
               to: '/blog',
-            },
-            {
-              label: 'About',
-              to: '/me',
             },
           ],
         }, 

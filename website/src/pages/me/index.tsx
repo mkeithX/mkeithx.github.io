@@ -31,24 +31,16 @@ function About() {
                 <h2>I'm Keith</h2>
 
                 <p>
-                  A freelance Software Developer and IT Analyst here in the
-                  Philippines.
+                  I'm a freelance Software Developer and IT Analyst based in the
+                  Philippines. I'm passionate about crafting innovative
+                  solutions for businesses and individuals.{" "}
                 </p>
 
                 <p>
-                  My coding journey intertwines with a love for pizza, a
-                  fascination with physics, and my role as a co-founder at{" "}
-                  <a href="https://kitiplex.github.io/">Kitiplex</a>
+                  My coding journey intertwines with a love for pizza,
+                  fascination with the Universe, and my role as a co-founder at{" "}
+                  <a href="https://kitiplex.github.io/">Kitiplex</a>.
                 </p>
-
-                <p>
-                  The quick brown fox jumps over the lazy dog.{" "}
-                </p>
-
-                <i>
-                  This is a test to ensure this <code>page</code> will render correctly.{" "}
-                </i>
-                <p>Thank you!</p>
               </div>
             </div>
           </div>

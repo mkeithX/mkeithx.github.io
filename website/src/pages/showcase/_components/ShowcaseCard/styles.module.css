@@ -37,7 +37,7 @@
 
 .showcaseCardBody {
   font-size:small;
-  line-height: 1.66;
+  line-height: 1.88;
 }
 
 .cardFooter {
@@ -52,12 +52,12 @@
   }
   .cardImage {
     object-fit: cover;
-    height: 150px;
-    width: 100%;
+    height: auto;
+    width: auto;
     max-width: 100%;
     margin-bottom: -4px;
   }
   
   .description {
-    font-size: smaller;
+    font-size: small;
   }

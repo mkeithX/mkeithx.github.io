@@ -53,7 +53,7 @@ function ShowCaseCard(props: Case) {
       <div className="card__footer">
         <section className="margin-bottom--md">
           {props.tags.map((item) => (
-            <span key={item} className="badge badge--secondary margin-right--xs">
+            <span key={item} className="badge badge--secondary badge--sm margin-right--xs">
               {item}
             </span>
           ))}
