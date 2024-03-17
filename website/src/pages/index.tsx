@@ -30,9 +30,7 @@ function HomepageHeader() {
           </span>
         </Heading>
 
-        <div className="hero__subtitle mb-3">
-          {siteConfig.tagline}
-        </div>
+        <div className="hero__subtitle mb-3">{siteConfig.tagline}</div>
 
         <div className={styles.buttons}>
           <Link
@@ -48,12 +46,12 @@ function HomepageHeader() {
 }
 
 export default function Home(): JSX.Element {
-  const { siteConfig } = useDocusaurusContext();
+  const {
+    siteConfig: { customFields, tagline },
+  } = useDocusaurusContext();
+  const { description } = customFields as { description: string };
   return (
-    <Layout
-      title={``}
-      description="Description will go into a meta tag in <head />"
-    >
+    <Layout title={``} description={description}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
@@ -61,3 +59,18 @@ export default function Home(): JSX.Element {
     </Layout>
   );
 }
+
+// export default function Home(): JSX.Element {
+//   const { siteConfig } = useDocusaurusContext();
+//   return (
+//     <Layout
+//       title={``}
+//       description="Description will go into a meta tag in <head />"
+//     >
+//       <HomepageHeader />
+//       <main>
+//         <HomepageFeatures />
+//       </main>
+//     </Layout>
+//   );
+// }

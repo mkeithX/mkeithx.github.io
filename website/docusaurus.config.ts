@@ -8,7 +8,7 @@ import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
 const config: Config = {
-  title: "mkeithX",
+  title: "mkeithx",
   tagline:
     "I'm a software developer with a facination for understanding the complex of the universe.",
   favicon: "icons/favicon.ico",
@@ -21,6 +21,12 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
+
+  customFields: {
+    description: 
+    "Keith's Webspace with random stuff."
+
+  },
 
 
   i18n: {
@@ -149,7 +155,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "mkeithX",
+      title: "MKX",
       logo: {
         alt: "mkjs Logo",
         src: "img/logo-bw.png",
