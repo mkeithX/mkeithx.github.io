@@ -1,6 +1,6 @@
 import React from "react";
 import Link from "@docusaurus/Link";
-
+import Heading from '@theme/Heading';
 import styles from "./styles.module.css";
 import clsx from "clsx";
 
@@ -15,9 +15,17 @@ export type Case = {
 
 function ShowCaseCard(props: Case) {
   return (
-    <article className="card shadow--md" style={{ height: "100%" }}>
-      <div
-        className={clsx("card__image", styles.cardImageWrapper)}
+    <article className="card shadow--md" style={{ height: "100%"}}>
+      <div className={clsx('card__image', styles.cardImage)}>
+      <img
+          src={props.preview}
+          alt={props.title}
+          title={props.title}
+          className={styles.cardImage}
+        />
+      </div>
+      {/* <div
+        className={clsx("card__image", styles.showcaseCardImage)}
         onClick={() => window.open(props.website)}
       >
         <img
@@ -26,17 +34,26 @@ function ShowCaseCard(props: Case) {
           title={props.title}
           className={styles.cardImage}
         />
-      </div>
+      </div> */}
       <div className="card__body">
-        <Link to={props.website}>
+
+        <div className={clsx(styles.showcaseCardHeader)}>
+          <Heading as="h4" className={styles.showcaseCardTitle}>
+          <Link href={props.website} className={styles.showcaseCardLink}>
+            {props.title}
+          </Link>
+          </Heading>
+        </div>
+
+        {/* <Link to={props.website}>
           <h4>{props.title}</h4>
-        </Link>
-        <p className={styles.description}>{props.description}</p>
+        </Link> */}
+        <p className={styles.showcaseCardBody}>{props.description}</p>
       </div>
       <div className="card__footer">
         <section className="margin-bottom--md">
           {props.tags.map((item) => (
-            <span key={item} className="badge badge--primary margin-right--xs">
+            <span key={item} className="badge badge--secondary margin-right--xs">
               {item}
             </span>
           ))}

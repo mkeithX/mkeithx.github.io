@@ -7,26 +7,26 @@ export const cases: Case[] = [
     {
         title: "Native Website",
         website: "https://mkeithx.github.io",
-        preview: require("@site/static/img/social-banner.png").default,
+        preview: require("@site/src/data/showcase/sc-mkeithx-2.png").default,
         description: (
             <>
             This repo contains the configuration and documentation powering this website.
             </>
         ),
         source: "",
-        tags: ["Test", "React"]
+        tags: ["TypeScript", "React", "Python"]
     },
     {
         title: "Kitiplex Native",
         website: "https://kitiplex.github.io",
-        preview: require("@site/static/img/kitiplex-banner.png").default,
+        preview: require("@site/src/data/showcase/ms-banner-kitiplex.png").default,
         description: (
             <>
             This repo contains the configuration and documentation powering this website.
             </>
         ),
         source: "https://github.com/kitiplex/kitiplex.github.io/tree/archive",
-        tags: ["Test", "React"]
+        tags: ["React", "JavaScript"]
     },
     {
         title: "Kitimi Platforms",
@@ -43,13 +43,13 @@ export const cases: Case[] = [
     {
         title: "IUIU",
         website: "https://kitiplex.github.io/iuiu",
-        preview: require("@site/static/img/iuiu-social.png").default,
+        preview: require("@site/src/data/showcase/sc-iuiu.png").default,
         description: (
             <>
             This repo contains the configuration and documentation powering this website.
             </>
         ),
         source: "https://github.com/kitiplex/iuiu",
-        tags: []
+        tags: ["docs","kb","blog"]
     }
 ]

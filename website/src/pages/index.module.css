@@ -12,7 +12,9 @@
   height: 25rem;
  }
  
-
+ .section {
+  padding: 40px 0;
+}
 
 
  .buttons {

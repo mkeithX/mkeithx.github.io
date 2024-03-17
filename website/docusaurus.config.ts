@@ -144,23 +144,25 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
+      title: "mkeithX",
       logo: {
         alt: "mkjs Logo",
         src: "img/logo-bw.png",
         target: "_self",
-        // width: 80,
-        // height: 80,
+        width: 32,
+        height: 32,
       },
       items: [
         {
           type: "docSidebar",
           sidebarId: "docSidebar",
-          position: "right",
+          position: "left",
           label: "Docs",
         },
-        {to: "showcase/", label: "Showcase", position: "right"},
 
-        { to: "/blog", label: "Blog", position: "right" },
+        { to: "/blog", label: "Updates", position: "left" },
+
+        {to: "showcase/", label: "Showcase", position: "right"},
 
         {
           href: "https://github.com/mkeithx",
