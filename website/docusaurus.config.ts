@@ -46,7 +46,7 @@ const config: Config = {
           showLastUpdateAuthor: true,
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
-          showLastUpdateTime: true,
+          showLastUpdateTime: false,
           disableVersioning: false,
           editLocalizedFiles: false,
           editCurrentVersion: false,
