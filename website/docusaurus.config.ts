@@ -22,9 +22,7 @@ const config: Config = {
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
 
-  // Even if you don't use internationalization, you can use this field to set
-  // useful metadata like html lang. For example, if your site is Chinese, you
-  // may want to replace "en" with "zh-Hans".
+
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
@@ -42,11 +40,18 @@ const config: Config = {
           showLastUpdateAuthor: false,
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
-          showLastUpdateTime: false,
+          showLastUpdateTime: true,
           disableVersioning: false,
           editLocalizedFiles: false,
           editCurrentVersion: false,
-          routeBasePath: "docs",
+          routeBasePath: 'docs',
+          include: ['**/*.md', '**/*.mdx'],
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+          ],
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
           docItemComponent: "@theme/DocItem",
@@ -59,7 +64,7 @@ const config: Config = {
           routeBasePath: "blog",
 
           blogSidebarTitle: 'Updates',
-          // blogSidebarCount: 5,
+          blogSidebarCount: 5,
           include: ['**/*.{md,mdx}'],
           
           exclude: [
@@ -178,10 +183,54 @@ const config: Config = {
         alt: 'mkeithX',
         src: 'img/mkjs.svg',
         href: '/',
-        height: '30'
+        // height: '80',
+        width: '250'
       },
+      links: [
+        {
+          title: 'Docs',
+          items: [
+            {
+              label: 'Getting started',
+              to: 'docs/',
+            },
+            {
+              label: 'Guides',
+              to: 'docs/guides/',
+            },
+          ],
+        },
+        {
+          title: 'Social',
+          items: [
+            {
+              label: 'LinkedIn',
+              href: 'https://linkedin.com/in/mkeithtan',
+            },
+            {
+              label: 'Twitter',
+              href: 'https://twitter.com/mkeithtan',
+            },
 
-      copyright: `Copyright © ${new Date().getFullYear()}`,
+          ],
+        },
+        
+        {
+          title: 'More',
+          items: [
+            {
+              label: 'Updates',
+              to: '/blog',
+            },
+            {
+              label: 'About',
+              to: '/me',
+            },
+          ],
+        }, 
+      ],
+
+      copyright: `Copyright © ${new Date().getFullYear()} Keith WT`,
     },
     prism: {
       theme: prismThemes.github,
