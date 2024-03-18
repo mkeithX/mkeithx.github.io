@@ -1,6 +1,8 @@
 ---
 title: APIs & Configurations
 sidebar_label: APIs & Configurations
+description: Understanding APIs and Configurations
+slug: /api-vs-config 
 authors: [mkeithx]
 tags: [api, configs,software, development]
 ---
@@ -18,10 +20,10 @@ Hello there! Let's explore the difference between APIs and configurations and ho
 
 Let's start with APIs. An API, or Application Programming Interface, acts as a bridge between different software applications, allowing them to communicate. In simple terms, APIs enable your project to interact with external services or data sources. For example, you might use an API to retrieve weather forecasts or integrate with social media platforms.
 
-### Example
+### Example API
 
 
-<details>
+<!-- <details>
   <summary>OpenAI API Integration</summary>
   <div>
     <div>Python</div>
@@ -46,14 +48,48 @@ response = openai.Completion.create(
 print(response.choices[0].text.strip())
 ```
   </div>
+</details> -->
+
+
+<details>
+  <summary>OpenAI API</summary>
+  <div>
+    <div>Python</div>
+    <br/>
+
+```py
+import os
+from openai import OpenAI
+
+client = OpenAI(
+    api_key=os.environ.get("OPENAI_API_KEY"),
+)
+
+GPT_MODEL = "gpt-3.5-turbo-1106"
+
+completion = client.chat.completions.create(
+    model = GPT_MODEL,
+    response_format={"type": "text"},
+    messages=[
+        {"role": "system", "content": "You are a helpful assistant, skilled in explaining complex programming concepts in simple terms."},
+        {"role": "user", "content": "Explain the difference of class and function based views in python."}
+    ]
+)
+
+print(completion.choices[0].message.content)
+```
+  </div>
 </details>
 
 
-## Understanding Configurations:
+## Understanding Configurations
+
 
 Now, let's talk about configurations. Configurations, or configs, are settings that define how your project behaves and looks. They let you customize aspects like colors, layouts, and domain names without diving into complex code. Configurations make it easy to tailor your project to your preferences and needs.
 
-### Example
+
+
+### Example Configuration
 
 
 <details>

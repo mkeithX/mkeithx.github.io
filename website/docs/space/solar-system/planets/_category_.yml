@@ -1,0 +1,10 @@
+label: Planets
+collapsible: true
+collapsed: true
+position: 0
+link: 
+    type: doc
+    id: planets-overview
+    
+
+
