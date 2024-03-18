@@ -10,7 +10,7 @@ import autoprefixer from "autoprefixer";
 const config: Config = {
   title: "mkeithx",
   tagline:
-    "I'm a software developer with a facination for understanding the complex of the universe.",
+    "I'm a software developer with a fascination for understanding the complex of the Cosmos.",
   favicon: "icons/favicon.ico",
   titleDelimiter: '•',
   url: "https://mkeithx.github.io",
@@ -150,7 +150,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "img/social-banner.png",
+    image: "img/social-banner-main.png",
 
     navbar: {
       style: "dark",
