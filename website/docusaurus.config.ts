@@ -15,7 +15,7 @@ const config: Config = {
   titleDelimiter: '•',
   url: "https://mkeithx.github.io",
   baseUrl: "/",
-  organizationName: "mkeithX", // Usually your GitHub org/user name.
+  organizationName: "mkeithX", 
   projectName: "mkeithx.github.io",
   deploymentBranch: "gh-pages",
   onBrokenLinks: "throw",
@@ -23,8 +23,7 @@ const config: Config = {
   trailingSlash: false,
 
   customFields: {
-    description: 
-    "Keith's Webspace with random stuff."
+    description: "Keith's Webspace with random stuff."
 
   },
 
@@ -33,8 +32,6 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
-
-
 
   presets: [
     [
@@ -68,8 +65,7 @@ const config: Config = {
           blogTitle: 'Updates',
           blogDescription: 'Blog and updates from mkeithX.',
           routeBasePath: "blog",
-
-          blogSidebarTitle: 'Updates',
+          blogSidebarTitle: 'Recent updates',
           blogSidebarCount: 5,
           include: ['**/*.{md,mdx}'],
           
@@ -153,25 +149,26 @@ const config: Config = {
     image: "img/social-banner-main.png",
 
     navbar: {
-      style: "dark",
+      // style: "dark",
       hideOnScroll: true,
-      title: "MKX",
+      // title: "MKEITHX",
       logo: {
         alt: "mkjs Logo",
-        src: "img/logo-bw.png",
+        src: "img/logo/mkx_demo_new.png",
         target: "_self",
-        width: 32,
-        height: 32,
+        width: 100,
+        height: 28,
       },
       items: [
+
+        { to: "/blog", label: "Blog", position: "left" },
+
         {
           type: "docSidebar",
           sidebarId: "mySidebar",
           position: "left",
           label: "Docs",
         },
-
-        { to: "/blog", label: "Updates", position: "left" },
 
         {to: "showcase/", label: "Showcase", position: "right"},
 
@@ -187,10 +184,10 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: 'mkeithX',
-        src: 'img/mkjs.svg',
+        src: "img/logo/mkx_demo_new.png",
         href: '/',
-        // height: '80',
-        width: '250'
+        height: '80',
+        // width: ''
       },
       links: [
         {
