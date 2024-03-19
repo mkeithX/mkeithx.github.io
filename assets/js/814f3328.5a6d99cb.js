@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7472],{5513:e=>{e.exports=JSON.parse('{"title":"Updates","items":[{"title":"APIs & Configurations","permalink":"/blog/api-vs-config","unlisted":false},{"title":"Welcome","permalink":"/blog/welcome","unlisted":false}]}')}}]);
