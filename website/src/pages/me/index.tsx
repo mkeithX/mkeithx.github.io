@@ -31,18 +31,30 @@ function About() {
                 <h2>I'm Keith</h2>
 
                 <p>
-                I'm a web developer, IT Analyst, husband, father, brother, and son. 😄  
+                I'm an independent web developer and IT analyst. Additionally, I take pride in being an awesome husband, a devoted father, and a steadfast brother. 💪😄  
                 </p>
 
                 <p>
-                I'm passionate about crafting innovative solutions for businesses and individuals.{" "}
+
+                My coding journey is intertwined with my love for pizza and my fascination with understanding the complexities of the Universe. {" "}
                 </p>
 
                 <p>
-                  My coding journey intertwines with a love for pizza,
-                  fascination with the Universe, and my role as a co-founder at{" "}
-                  <a href="https://kitiplex.github.io/">Kitiplex</a>.
+                To provide context, firstly, I never dreamed of becoming a software developer. Yet, here I am. Secondly, although I considered becoming a pilot {"(fortunately, I did not pursue it)"}, my initial job was in the logistics industry, and at some point in my career, I've primarily worked with civil engineers.{" "}
                 </p>
+                
+                <p>
+                Ultimately, my passion extends not only to crafting innovative solutions for businesses but also to contributing to the open-source community. {" "}
+                </p>
+
+                <p>
+                Feel free to download my CV or explore my projects through this link. {" "}
+                </p>
+
+                <p>
+                  Thank you!
+                </p>
+
               </div>
             </div>
           </div>
