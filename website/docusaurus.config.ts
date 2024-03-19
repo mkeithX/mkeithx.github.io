@@ -149,7 +149,7 @@ const config: Config = {
     image: "img/social-banner-main.png",
 
     navbar: {
-      // style: "dark",
+      style: "dark",
       hideOnScroll: true,
       // title: "MKEITHX",
       logo: {
