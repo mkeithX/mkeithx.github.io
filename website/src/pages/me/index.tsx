@@ -12,12 +12,12 @@ function About() {
   const { siteConfig } = useDocusaurusContext();
 
   return (
-    <Layout title="About" description={siteConfig.tagline}>
+    <Layout title="Me" description={siteConfig.tagline}>
       <header className={styles.aboutHeader}>
-        <h2 className="underlineColorSuccess"> Hello, world!🌍 </h2>
+        <h2 className="underlineColorSuccess">Hi there! </h2>
 
-        <div className="mb-3">
-          <span>{""}</span>
+        <div>
+          <span>{"Thank you for stopping by"}</span>
         </div>
       </header>
       <main id="main">
@@ -31,9 +31,11 @@ function About() {
                 <h2>I'm Keith</h2>
 
                 <p>
-                  I'm a freelance Software Developer and IT Analyst based in the
-                  Philippines. I'm passionate about crafting innovative
-                  solutions for businesses and individuals.{" "}
+                I'm a web developer, IT Analyst, husband, father, brother, and son. 😄  
+                </p>
+
+                <p>
+                I'm passionate about crafting innovative solutions for businesses and individuals.{" "}
                 </p>
 
                 <p>

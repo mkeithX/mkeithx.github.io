@@ -20,8 +20,9 @@ function HomepageHeader() {
           width={300}
         />
 
+
         <div className={clsx("hero__subtitle")}>
-          <span>{"Hello, I'm"}</span>
+          <span>{"Hi, I'm"}</span>
         </div>
 
         <Heading as="h2" className="hero__title">
@@ -49,13 +50,14 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { customFields, tagline, title },
+    siteConfig: { customFields, tagline },
   } = useDocusaurusContext();
   const { description } = customFields as { description: string };
   return (
-    <Layout title={title} description={description}>
-      <HomepageHeader />
+    <Layout title={"Keith's Universe with random stuff."} description={description}>
+
       <main>
+      <HomepageHeader />
         <HomepageFeatures />
       </main>
     </Layout>

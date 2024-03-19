@@ -9,8 +9,7 @@ import autoprefixer from "autoprefixer";
 
 const config: Config = {
   title: "mkeithx",
-  tagline:
-    "I'm a software developer with a fascination for understanding the complex of the Cosmos.",
+  tagline:"I'm a web developer and fascinated by the mysteries of the Cosmos.",
   favicon: "icons/favicon.ico",
   titleDelimiter: '•',
   url: "https://mkeithx.github.io",
@@ -23,7 +22,7 @@ const config: Config = {
   trailingSlash: false,
 
   customFields: {
-    description: "Keith's Webspace with random stuff."
+    description: "Keith's Universe with random stuff."
 
   },
 
