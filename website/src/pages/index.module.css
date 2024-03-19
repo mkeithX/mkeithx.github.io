@@ -17,13 +17,6 @@
 }
 
 
- .buttons {
-  display: block;
-  justify-content: center;
-  margin-top: 10px;
-  color: var(--ifm-color-primary-dark);
-}
-
 .heroBannerLogo {
   max-width: 35%;
   margin-top: 25px;

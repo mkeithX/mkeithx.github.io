@@ -156,12 +156,10 @@ const config: Config = {
         alt: "mkjs Logo",
         src: "img/logo/mkx_demo_new.png",
         target: "_self",
-        width: 100,
-        height: 28,
+        // width: 50,
+        height: 200,
       },
       items: [
-
-        { to: "/blog", label: "Blog", position: "left" },
 
         {
           type: "docSidebar",
@@ -169,6 +167,8 @@ const config: Config = {
           position: "left",
           label: "Docs",
         },
+
+        { to: "/blog", label: "Blog", position: "left" },
 
         {to: "showcase/", label: "Showcase", position: "right"},
 
@@ -229,7 +229,7 @@ const config: Config = {
         }, 
       ],
 
-      copyright: `Copyright © ${new Date().getFullYear()} Keith WT`,
+      copyright: `Copyright © ${new Date().getFullYear()} • Keith W. Tan • mkeithx `,
     },
     prism: {
       theme: prismThemes.github,
