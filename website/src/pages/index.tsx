@@ -22,7 +22,7 @@ function HomepageHeader() {
 
 
         <div className={clsx("hero__subtitle")}>
-          <span>{"Hi there!"}</span>
+          <span>{"Hi, "}</span>
         </div>
 
         <Heading as="h2" className="hero__title">

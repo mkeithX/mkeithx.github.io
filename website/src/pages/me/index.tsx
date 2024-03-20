@@ -33,19 +33,16 @@ function About() {
               <div className={clsx("col col--9")}>
                 <h2>I'm Keith</h2>
                 <p>
-                  an independent web developer and IT analyst, passionate about crafting innovative solutions for businesses and contributing to the open-source community. Beyond coding, I take pride in being an awesome husband, a devoted father, and a steadfast brother.
+                  {" ~ "}an independent web developer and IT analyst, passionate about crafting innovative solutions for businesses and contributing to the open-source community. Beyond coding, I take pride in being a loving husband, a devoted dad, and yet, a stubburn brother.
                 </p>
                 <p>
-                  My coding journey is intertwined with my love for pizza and my fascination with understanding the complexities of the Universe. Despite never dreaming of becoming a software developer initially, I've embraced this path wholeheartedly.
+                  My coding journey is intertwined with my love for pizza and my fascination to the cosmos. Despite never dreaming of becoming a software developer initially, I've embraced this path wholeheartedly.
                 </p>
                 <p>
-                  I graduated with a degree in Information Technology, which has provided me with a solid foundation for my career in the tech industry. Along the way, I've collaborated with a diverse range of professionals, including civil engineers, commerce specialists, and lawyers, broadening my perspective and skill set.
+                  I graduated with a degree in Information Technology, which has provided me with a solid foundation for my career in the tech industry. Along the way, I've had the opportunity to work closely with range of professionals, including civil engineers, business specialists, and lawyers, broadening my perspective and skill set.
                 </p>
                 <p>
-                  Ultimately, my passion extends not only to crafting innovative solutions for businesses but also to contributing to the open-source community.
-                </p>
-                <p>
-                  Feel free to <Link to={'/showcase'}>explore my projects</Link> or download {" "} <a target="_blank" rel="noreferrer" href={resumeUrl}>my resume</a>.
+                  Feel free to <Link to={'/showcase'}>explore my projects</Link> or check out {" "} <a target="_blank" rel="noreferrer" href={resumeUrl}>my resume</a>.
                 </p>
                 <p>
                   Thank you!
