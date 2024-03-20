@@ -27,7 +27,7 @@ function About() {
               <div className={clsx("col col--3", styles.profilePic)}>
                 <img src={"https://github.com/mkeithx.png"} />
               </div>
-              <div className="col col--9">
+              <div className={clsx("col col--9")}>
                 <h2>I'm Keith</h2>
 
                 <p>
@@ -40,7 +40,7 @@ function About() {
                 </p>
 
                 <p>
-                To provide context, firstly, I never dreamed of becoming a software developer. Yet, here I am. Secondly, although I considered becoming a pilot {"(fortunately, I did not pursue it)"}, my initial job was in the logistics industry, and at some point in my career, I've primarily worked with civil engineers.{" "}
+                To provide context, firstly, I never dreamed of becoming a software developer. Yet, here I am. Secondly, became a pilot {"(fortunately, I did not pursue it)"}, my initial job was in the logistics industry, and at some point in my career, I've primarily worked with civil engineers.{" "}
                 </p>
                 
                 <p>
@@ -48,7 +48,9 @@ function About() {
                 </p>
 
                 <p>
-                Feel free to download my CV or explore my projects through this link. {" "}
+                Feel free to download  {" "}
+                    <a target="_blank" rel="noreferrer" href={useBaseUrl("files/resume.pdf")}>my resume</a> 
+                    {" "} or explore my projects through <Link to={'/showcase'}>this link.</Link>  {" "}
                 </p>
 
                 <p>
