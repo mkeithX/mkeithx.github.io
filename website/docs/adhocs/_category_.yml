@@ -1,4 +1,6 @@
-label: Misc ⚙️
+label: Misc 🗒️
+collapsible: true
+collapsed: true
 position: 5
 link: 
   type: generated-index

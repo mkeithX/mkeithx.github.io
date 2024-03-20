@@ -7,6 +7,8 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
+const copyright = `Copyright © ${new Date().getFullYear()} • Keith W. Tan • mkeithx `;
+
 const config: Config = {
   title: "mkeithx",
   tagline:"I'm a web developer and fascinated by the mysteries of the Cosmos.",
@@ -61,7 +63,7 @@ const config: Config = {
 
         blog: {
           path: "blog",
-          blogTitle: 'Updates',
+          blogTitle: "Recents on Keith's Universe",
           blogDescription: 'Blog and updates from mkeithX.',
           routeBasePath: "blog",
           blogSidebarTitle: 'Recent updates',
@@ -85,7 +87,8 @@ const config: Config = {
 
           feedOptions: {
             type: "all",
-            copyright: `Copyright © ${new Date().getFullYear()} Keith WT`,
+
+            copyright,
           },
         },
 
@@ -162,11 +165,12 @@ const config: Config = {
 
         {
           type: "docSidebar",
-          sidebarId: "mySidebar",
           position: "left",
-          label: "Docs",
+          sidebarId: "mySidebar",
+          label: "Documentation"
         },
 
+      
         { to: "/blog", label: "Blog", position: "left" },
 
         {to: "showcase/", label: "Showcase", position: "right"},
@@ -193,13 +197,15 @@ const config: Config = {
           title: 'Docs',
           items: [
             {
-              label: 'Getting started',
-              to: 'docs/',
-            },
-            {
               label: 'Guides',
               to: 'docs/guides/',
             },
+
+            {
+              label: 'Getting started',
+              to: 'docs/',
+            },
+
           ],
         },
         {
@@ -213,6 +219,10 @@ const config: Config = {
               label: 'Twitter',
               href: 'https://twitter.com/mkeithtan',
             },
+            {
+              label: 'Facebook',
+              href: 'https://fb.com/mkeithtan',
+            },
 
           ],
         },
@@ -221,17 +231,21 @@ const config: Config = {
           title: 'More',
           items: [
             {
-              label: 'Updates',
+              label: 'Blog',
               to: '/blog',
+            },
+            {
+              label: 'Projects',
+              to: '/showcase',
             },
           ],
         }, 
       ],
-
-      copyright: `Copyright © ${new Date().getFullYear()} • Keith W. Tan • mkeithx `,
+      
+      copyright,
     },
     prism: {
-      theme: prismThemes.github,
+      // theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["powershell", "python", "java", "bash", "json"],
     },
@@ -249,8 +263,6 @@ const config: Config = {
       };
     },
   ],
-
-
 
 };
 

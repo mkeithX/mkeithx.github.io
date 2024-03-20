@@ -1,0 +1,9 @@
+label: Config Tweaks
+position: 4
+link:
+  type: generated-index
+  description: "Custom configurations for personalized experience."
+  slug: /config-tweaks
+
+  # type: doc
+  # id: custom-configs-overview

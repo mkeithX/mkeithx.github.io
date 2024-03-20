@@ -22,12 +22,12 @@ function HomepageHeader() {
 
 
         <div className={clsx("hero__subtitle")}>
-          <span>{"Hi, I'm"}</span>
+          <span>{"Hi there!"}</span>
         </div>
 
         <Heading as="h2" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
-            Keith<b>.</b>
+            I'm Keith<b>.</b>
           </span>
         </Heading>
 

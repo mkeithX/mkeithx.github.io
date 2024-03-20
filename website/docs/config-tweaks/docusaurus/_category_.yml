@@ -1,0 +1,8 @@
+label: Docusaurus
+position: 1
+link: 
+  type: "generated-index"
+  description: "Custom configuration for building, deploying, and maintaining project websites."
+  slug: config-tweaks/docusaurus
+  # type: doc
+  # id: docusaurus-custom-overview
