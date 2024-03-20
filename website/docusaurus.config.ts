@@ -158,8 +158,8 @@ const config: Config = {
         alt: "mkjs Logo",
         src: "img/logo/mkx_demo_new.png",
         target: "_self",
-        width: 100,
-        // height: 100,
+        // width: 50,
+        height: 200,
       },
       items: [
 
