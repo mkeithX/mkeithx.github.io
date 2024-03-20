@@ -8,7 +8,7 @@
   position: relative;
   overflow: hidden;
   display: flex;
-  background-color: #14171A;
+  background-color: var(--kiti-dark-pale);
   height: 25rem;
  }
  

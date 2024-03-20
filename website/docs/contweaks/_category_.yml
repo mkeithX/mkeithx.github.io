@@ -1,9 +1,9 @@
-label: Config Tweaks
+label: ConTweaks
 position: 4
 link:
   type: generated-index
   description: "Custom configurations for personalized experience."
-  slug: /config-tweaks
+  slug: /contweaks
 
   # type: doc
   # id: custom-configs-overview

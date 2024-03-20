@@ -7,7 +7,7 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
-const copyright = `Copyright © ${new Date().getFullYear()} • Keith W. Tan • mkeithx `;
+const copyright = `Copyright © ${new Date().getFullYear()} Keith WT. Built with Docusaurus.`;
 
 const config: Config = {
   title: "mkeithx",
@@ -131,7 +131,7 @@ const config: Config = {
   themeConfig: {
     
     colorMode: {
-      defaultMode: "dark",
+      defaultMode: "light",
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
@@ -158,8 +158,8 @@ const config: Config = {
         alt: "mkjs Logo",
         src: "img/logo/mkx_demo_new.png",
         target: "_self",
-        // width: 50,
-        height: 200,
+        width: 100,
+        // height: 100,
       },
       items: [
 
@@ -167,7 +167,7 @@ const config: Config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "mySidebar",
-          label: "Documentation"
+          label: "Docs"
         },
 
       
@@ -190,7 +190,7 @@ const config: Config = {
         src: "img/logo/mkx_demo_new.png",
         href: '/',
         height: '80',
-        // width: ''
+        // width: '60'
       },
       links: [
         {
@@ -237,6 +237,10 @@ const config: Config = {
             {
               label: 'Projects',
               to: '/showcase',
+            },
+            {
+              label: 'Nutshell',
+              to: "/me"
             },
           ],
         }, 

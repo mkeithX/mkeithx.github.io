@@ -14,14 +14,16 @@ function About() {
   return (
     <Layout title="Me" description={siteConfig.tagline}>
       <header className={styles.aboutHeader}>
-        <h2 className="underlineColorSuccess">Hi there! </h2>
+        <h2 className={clsx(styles.underlineColorSuccess)}>
+          Hi there! 
+          </h2>
 
         <div>
           <span>{"Thank you for stopping by"}</span>
         </div>
       </header>
       <main id="main">
-        <div className={styles.aboutBody}>
+        <div className={clsx(styles.aboutBody)}>
           <div className="container">
             <div className="row padding-bottom--lg">
               <div className={clsx("col col--3", styles.profilePic)}>
@@ -31,7 +33,7 @@ function About() {
                 <h2>I'm Keith</h2>
 
                 <p>
-                I'm an independent web developer and IT analyst. Additionally, I take pride in being an awesome husband, a devoted father, and a steadfast brother. 💪😄  
+                I'm an independent web developer and IT analyst. Additionally, I take pride in being an awesome husband, a devoted father, and a steadfast brother.  
                 </p>
 
                 <p>
@@ -40,7 +42,7 @@ function About() {
                 </p>
 
                 <p>
-                To provide context, firstly, I never dreamed of becoming a software developer. Yet, here I am. Secondly, became a pilot {"(fortunately, I did not pursue it)"}, my initial job was in the logistics industry, and at some point in my career, I've primarily worked with civil engineers.{" "}
+                To provide context, firstly, I never dreamed of becoming a software developer. Yet, here I am. Secondly, I nearly became a pilot {"(fortunately, I never did)"}, my initial job was in the logistics industry, and at some point in my career, I've primarily worked with civil engineers.{" "}
                 </p>
                 
                 <p>
@@ -55,6 +57,7 @@ function About() {
 
                 <p>
                   Thank you!
+
                 </p>
 
               </div>

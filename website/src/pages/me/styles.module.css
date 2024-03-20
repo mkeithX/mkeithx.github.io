@@ -1,8 +1,7 @@
-/* stylelint-disable docusaurus/copyright-header */
 
 .aboutHeader {
-    background-color: var(--ifm-color-dark);
-    /* color: var(--ifm-color-light); */
+    /* background-color: var(--ifm-color-dark);
+    color: var(--ifm-color-dark); */
     /* background-color: #14171A; */
     padding: 1rem 0;
     text-align: center;
@@ -31,9 +30,12 @@
   .aboutBody a {
     font-weight: bold;
   }
+
+
   
   .aboutBody p {
     max-width: 640px;
+
   }
   
   .profilePic {
@@ -75,7 +77,7 @@
   }
   
   .directoryBody h3 {
-    font-weight: normal;
+    font-weight: bold;
   }
   
   @media screen and (max-width: 966px) {
