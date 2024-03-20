@@ -10,10 +10,10 @@ import autoprefixer from "autoprefixer";
 const copyright = `Copyright © ${new Date().getFullYear()} Keith WT. Built with Docusaurus.`;
 
 const config: Config = {
-  title: "mkeithx",
+  title: "MKX",
   tagline:"I'm a web developer and fascinated by the mysteries of the Cosmos.",
   favicon: "icons/favicon.ico",
-  titleDelimiter: '•',
+  // titleDelimiter: '•',
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX", 
