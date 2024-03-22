@@ -148,7 +148,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "img/social-banner-main.png",
+    image: "img/social-react-x-banner.png",
 
     navbar: {
       style: "dark",
@@ -209,7 +209,7 @@ const config: Config = {
           ],
         },
         {
-          title: 'Social',
+          title: 'Connect',
           items: [
             {
               label: 'LinkedIn',
@@ -227,15 +227,15 @@ const config: Config = {
           items: [
             {
               label: 'Blog',
-              to: '/blog',
+              to: 'blog/',
             },
             {
               label: 'Projects',
-              to: '/projects',
+              to: 'projects/',
             },
             {
               label: 'Nutshell',
-              to: "/me"
+              to: "me/"
             },
           ],
         }, 

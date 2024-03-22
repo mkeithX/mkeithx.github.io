@@ -17,7 +17,7 @@ import { faGithub, faLinkedin, faXTwitter } from "@fortawesome/free-brands-svg-i
 function About(): JSX.Element{
   const { siteConfig } = useDocusaurusContext();
   const profilePicUrl = "https://github.com/mkeithx.png";
-  const resumeUrl = useBaseUrl("files/resume.pdf");
+  const resumeUrl = "files/resume.pdf"
 
   return (
     <Layout title="Me" description={siteConfig.tagline}>
