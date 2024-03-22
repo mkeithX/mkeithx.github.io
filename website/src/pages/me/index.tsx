@@ -39,11 +39,7 @@ function About(): JSX.Element{
               <div className={clsx("col col--9")}>
                 <h2>I'm Keith</h2>
                 <p>
-<<<<<<< HEAD
                   {" "} an independent web developer and IT analyst, passionate about crafting innovative solutions for businesses and contributing to the open-source community. Beyond coding, I take pride in being a loving husband, a devoted dad, and yet, a stubburn brother.
-=======
-                 I am an independent web developer and IT analyst, passionate about crafting innovative solutions for businesses and contributing to the open-source community. Beyond coding, I take pride in being a loving husband, a devoted dad, and yet, a stubborn brother.
->>>>>>> 269cbc99263780c4c43267c45cd47cbe2f6b3b8b
                 </p>
                 <p>
                   My coding journey is intertwined with my love for pizza and my fascination to the cosmos. Despite never dreaming of becoming a software developer initially, I've embraced this path wholeheartedly.
