@@ -159,7 +159,7 @@ const config: Config = {
         src: "img/logo/mkx_demo_new.png",
         target: "_self",
         // width: 50,
-        height: 200,
+        height: 50,
       },
       items: [
 
@@ -189,7 +189,7 @@ const config: Config = {
         alt: 'mkeithX',
         src: "img/logo/mkx_demo_new.png",
         href: '/',
-        height: '60',
+        height: '50',
         // width: '60'
       },
       links: [
@@ -219,11 +219,6 @@ const config: Config = {
               label: 'Twitter',
               href: 'https://twitter.com/mkeithtan',
             },
-            {
-              label: 'Facebook',
-              href: 'https://fb.com/mkeithtan',
-            },
-
           ],
         },
         
