@@ -9,6 +9,7 @@ import styles from "./index.module.css";
 import BannerLogo from "@site/static/img/react-logo.svg";
 import React from "react";
 
+
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -55,9 +56,9 @@ export default function Home(): JSX.Element {
   const { description } = customFields as { description: string };
   return (
     <Layout title={"Keith's Galactic Gazette"} description={description}>
-
-      <main>
       <HomepageHeader />
+      <main>
+
         <HomepageFeatures />
       </main>
     </Layout>

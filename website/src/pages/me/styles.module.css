@@ -1,5 +1,7 @@
 .aboutHeader {
-  padding: 1rem 0;
+  background-color: var(--ifm-color-kiti-dark);
+  /* color: var(--ifm-color-secondary-lighter); */
+  padding: 3.6rem 0 1rem;
   text-align: center;
   position: relative;
   overflow: hidden;
@@ -12,6 +14,7 @@
 }
 
 .aboutBody {
+  background-color: var(--ifm-color-kiti-light);
   align-items: center;
   display: flex;
   width: 100%;

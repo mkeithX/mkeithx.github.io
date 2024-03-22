@@ -7,7 +7,7 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
-const copyright = `Copyright © ${new Date().getFullYear()} Keith WT. Built with Docusaurus.`;
+const copyright = `Copyright © ${new Date().getFullYear()} • Keith WT • Built with Docusaurus.`;
 
 const config: Config = {
   title: "MKX",
@@ -173,7 +173,7 @@ const config: Config = {
       
         { to: "/blog", label: "Blog", position: "left" },
 
-        {to: "showcase/", label: "Showcase", position: "right"},
+        {to: "projects/", label: "Projects", position: "right"},
 
         {
           href: "https://github.com/mkeithx",
@@ -189,7 +189,7 @@ const config: Config = {
         alt: 'mkeithX',
         src: "img/logo/mkx_demo_new.png",
         href: '/',
-        height: '80',
+        height: '60',
         // width: '60'
       },
       links: [
@@ -236,7 +236,7 @@ const config: Config = {
             },
             {
               label: 'Projects',
-              to: '/showcase',
+              to: '/projects',
             },
             {
               label: 'Nutshell',
