@@ -12,12 +12,12 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Geek universe",
+    title: "The Cosmos",
     Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
     description: (
       <>
         Embark on a cosmic journey with my articles{" "}
-        <Link to={"/docs/geek-universe"}>about the universe</Link>.
+        <Link to={"/docs/cosmos"}>about the universe</Link>.
       </>
     ),
   },

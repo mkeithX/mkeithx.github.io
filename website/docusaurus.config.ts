@@ -169,6 +169,13 @@ const config: Config = {
           sidebarId: "mySidebar",
           label: "Docs"
         },
+        {
+          type: 'docSidebar',
+          position: "left",
+          sidebarId: "cosmosSidebar",
+          label: "The Cosmos"
+        },
+
 
       
         { to: "/blog", label: "Blog", position: "left" },
