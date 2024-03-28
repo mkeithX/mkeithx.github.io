@@ -4,11 +4,24 @@
         <title>MKX Blog</title>
         <link>https://mkeithx.github.io/blog</link>
         <description>MKX Blog</description>
-        <lastBuildDate>Wed, 20 Mar 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Thu, 28 Mar 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2024 • Keith WT • Built with Docusaurus.</copyright>
+        <item>
+            <title><![CDATA[Announcing Algolia Search]]></title>
+            <link>https://mkeithx.github.io/blog/announcing-algolia</link>
+            <guid>https://mkeithx.github.io/blog/announcing-algolia</guid>
+            <pubDate>Thu, 28 Mar 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[Today, I'm thrilled to announce that my website now features SEARCH functionality, powered by  Algolia.]]></description>
+            <content:encoded><![CDATA[<p>Today, I'm thrilled to announce that my <a href="https://mkeithx.github.io/" target="_blank" rel="noopener noreferrer">website</a> now features SEARCH functionality, powered by  <a href="https://docsearch.algolia.com/" target="_blank" rel="noopener noreferrer">Algolia</a>.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="whats-next">What's next?<a href="https://mkeithx.github.io/blog/announcing-algolia#whats-next" class="hash-link" aria-label="Direct link to What's next?" title="Direct link to What's next?">​</a></h2>
+<p>Custom configuration for DocSearch and crawlers for Docusaurus <code>--typescript</code> variant. Stay tuned!</p>
+<p><img decoding="async" loading="lazy" src="https://imgur.com/oHc4fuc.png" alt="img" class="img_ev3q"></p>]]></content:encoded>
+            <category>updates</category>
+            <category>docs</category>
+        </item>
         <item>
             <title><![CDATA[About Sitemaps]]></title>
             <link>https://mkeithx.github.io/blog/about-sitemaps</link>
