@@ -119,23 +119,33 @@ const config: Config = {
 
   stylesheets: [
     {
+      href: "https://X2M5FPT6G9-dsn.algolia.net",
+      rel: "preconnect",
+    },
+
+    {
       href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",
       type: "text/css",
       integrity:
         "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
       crossorigin: "anonymous",
     },
+
+    {
+      href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
+      rel: "stylesheet",
+    },
   ],
 
+  scripts: [
+    {
+      src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3",
+      type: "text/javascript",
+    }
+  ],
 
   themeConfig: {
-    algolia: {
-      appId: 'X2M5FPT6G9',
-      apiKey: '55634a57a78abcd476d22a48eb543486',
-      indexName: 'mkeithxio',
-      contextualSearch: true,
-    },
-    
+
     colorMode: {
       defaultMode: "light",
       disableSwitch: false,
