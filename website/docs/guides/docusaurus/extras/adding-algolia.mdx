@@ -1,0 +1,83 @@
+---
+title: Adding Algolia Search to Docusaurus V3
+draft: true
+---
+
+# Adding Algolia Search to Docusaurus V3
+
+Docusaurus V3 is a powerful tool for creating static websites with ease, but one feature it lacks out of the box is search functionality. Fortunately, integrating Algolia search into your Docusaurus site is a straightforward process that greatly enhances the user experience. In this guide, we'll walk through the steps to add Algolia search to your Docusaurus V3 site.
+
+## What is Algolia?
+
+[Algolia](https://www.algolia.com/) is a powerful search-as-a-service platform that provides lightning-fast and relevant search capabilities for websites and applications. It offers easy-to-use APIs and comprehensive documentation, making it a popular choice for adding search functionality to websites.
+
+## Prerequisites
+
+Before we begin, make sure you have the following prerequisites:
+
+- A Docusaurus V3 site set up and running.
+- An Algolia account. You can sign up for a free account on the [Algolia website](https://www.algolia.com/).
+
+## Step 1: Install Algolia's JavaScript API Client
+
+To get started, we need to install Algolia's JavaScript API Client. Run the following command in your Docusaurus project directory:
+
+```bash npm2yarn
+npm install algoliasearch
+```
+## Step 2: Create an Algolia Account and Index
+If you haven't already, sign up for an Algolia account. Once logged in, create a new index for your Docusaurus site. Make note of your Application ID, Search-Only API Key, and Index Name as we'll need these later.
+
+
+## Step 3: Configure Algolia Search in Docusaurus
+In your Docusaurus project, locate the docusaurus.config.js file and add the following Algolia search configuration:
+
+```js
+module.exports = {
+  ...
+  algolia: {
+    apiKey: 'YOUR_API_KEY',
+    indexName: 'YOUR_INDEX_NAME',
+    appId: 'YOUR_APP_ID',
+    // Optional: see Algolia's DocSearch documentation for advanced options
+    // https://github.com/algolia/docsearch-configs
+    contextualSearch: true,
+  },
+  ...
+};
+```
+
+Replace 'YOUR_API_KEY', 'YOUR_INDEX_NAME', and 'YOUR_APP_ID' with the corresponding values from your Algolia account.
+
+
+## Step 4: Implement Search UI Component
+Finally, add a search UI component to your Docusaurus site. You can place this component in your header or sidebar, depending on your site's layout preferences. Here's a simple example of how you can implement it:
+
+```js
+import React from 'react';
+import { InstantSearch, SearchBox, Hits } from 'react-instantsearch-dom';
+
+const Search = () => (
+  <InstantSearch
+    appId="YOUR_APP_ID"
+    apiKey="YOUR_API_KEY"
+    indexName="YOUR_INDEX_NAME"
+  >
+    <SearchBox />
+    <Hits />
+  </InstantSearch>
+);
+
+export default Search;
+```
+
+Don't forget to replace the placeholder values with your actual Algolia credentials.
+
+## Step 5: Build and Deploy Your Site
+Once you've completed the above steps, rebuild your Docusaurus site by running:
+
+```bash npm2yarn
+npm run build
+```
+
+Deploy your site as usual. Your Docusaurus site should now have Algolia search functionality enabled!

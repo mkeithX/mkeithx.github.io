@@ -1,3 +1,18 @@
+---
+title: Custom Doc Search using Search to Docusaurus V3
+draft: true
+---
+
+## Step 1. Utitizing Swizzle
+
+```bash npm2yarn
+npm run swizzle @docusaurus/theme-classic SearchBar --typescript
+```
+Use the `Wrap` option
+
+## Step 2: DocSearch
+
+```tsx
 import React from 'react';
 import SearchBar from '@theme-original/SearchBar';
 import type SearchBarType from '@theme/SearchBar';
@@ -11,19 +26,12 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
   return (
     <>
     <DocSearch
-      appId="X2M5FPT6G9"
-      indexName="mkeithxio"
-      apiKey="55634a57a78abcd476d22a48eb543486"
-      placeholder="Search MKX..."
-      resultsFooterComponent={({ state }) => (
-        <h3>
-          {state.context.nbHits} {state.context.nbHits === 1 ? 'match found' : 'matches found'}
-        </h3>
-      )}
-      maxResultsPerGroup={7}
-      insights
+      appId="YOUR-APP-ID"
+      indexName="YOUR-INDEX-NAME"
+      apiKey="YOUR-API-KEY"
     />
       <SearchBar {...props} />
     </>
   );
 }
+```

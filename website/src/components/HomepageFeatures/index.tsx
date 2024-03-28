@@ -36,8 +36,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
     description: (
       <>
-        <Link to={"/docs/guides"}>Curated list </Link>
-        of tips, tricks, and workarounds.
+        Curated list of tips, tricks, and workarounds. <Link to={"docs/contweaks"}>Learn more</Link>.
       </>
     ),
   },

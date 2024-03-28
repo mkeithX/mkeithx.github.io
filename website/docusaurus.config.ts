@@ -24,7 +24,7 @@ const config: Config = {
   trailingSlash: false,
 
   customFields: {
-    description: "Keith's Universe with random stuff."
+    description: "Keith's Galactic Gazette."
 
   },
 
@@ -225,8 +225,8 @@ const config: Config = {
             },
 
             {
-              label: 'Getting started',
-              to: 'docs/',
+              label: 'ConTweaks',
+              to: 'docs/contweaks',
             },
 
           ],

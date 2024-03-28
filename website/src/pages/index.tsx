@@ -55,7 +55,7 @@ export default function Home(): JSX.Element {
   } = useDocusaurusContext();
   const { description } = customFields as { description: string };
   return (
-    <Layout title={"Keith's Galactic Gazette"} description={description}>
+    <Layout title={`Keith's Galactic Gazette`} description={description}>
       <HomepageHeader />
       <main>
 
