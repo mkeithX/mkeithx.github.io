@@ -129,6 +129,12 @@ const config: Config = {
 
 
   themeConfig: {
+    algolia: {
+      appId: 'X2M5FPT6G9',
+      apiKey: '55634a57a78abcd476d22a48eb543486',
+      indexName: 'mkeithxio',
+      contextualSearch: true,
+    },
     
     colorMode: {
       defaultMode: "light",
