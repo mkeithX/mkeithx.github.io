@@ -9,7 +9,6 @@ import styles from "./index.module.css";
 import BannerLogo from "@site/static/img/react-logo.svg";
 import React from "react";
 
-
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
   return (
@@ -20,7 +19,6 @@ function HomepageHeader() {
           title="BannerLogo"
           width={300}
         />
-
 
         <div className={clsx("hero__subtitle")}>
           <span>{"Hi, "}</span>
@@ -40,8 +38,6 @@ function HomepageHeader() {
             to="/docs"
           >
             {"Explore"}
-
-            
           </Link>
         </div>
       </div>
@@ -58,24 +54,8 @@ export default function Home(): JSX.Element {
     <Layout title={`Keith's Galactic Gazette`} description={description}>
       <HomepageHeader />
       <main>
-
         <HomepageFeatures />
       </main>
     </Layout>
   );
 }
-
-// export default function Home(): JSX.Element {
-//   const { siteConfig } = useDocusaurusContext();
-//   return (
-//     <Layout
-//       title={``}
-//       description="Description will go into a meta tag in <head />"
-//     >
-//       <HomepageHeader />
-//       <main>
-//         <HomepageFeatures />
-//       </main>
-//     </Layout>
-//   );
-// }

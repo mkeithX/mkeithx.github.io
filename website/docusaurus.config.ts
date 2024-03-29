@@ -9,6 +9,23 @@ import autoprefixer from "autoprefixer";
 
 const copyright = `Copyright © ${new Date().getFullYear()} • Keith Tan • Built with Docusaurus.`;
 
+const internetProfiles = {
+  linkedin: {
+    label: "LinkedIn",
+    href: "https://www.linkedin.com/in/mkeithtan",
+  },
+
+  github: {
+    label: "GitHub",
+    href: "https://github.com/mkeithx"
+  },
+
+  twitter: {
+    label: "Twitter",
+    href: "https://twitter.com/mkeithtan"
+  }
+}
+
 const config: Config = {
   title: "MKX",
   tagline:"I'm a web developer and fascinated by the mysteries of the Cosmos.",
@@ -28,6 +45,22 @@ const config: Config = {
       src: "https://X2M5FPT6G9-dsn.algolia.net",
       rel: "preconnect",
       crossorigin: true,
+    },
+  ],
+
+  stylesheets: [
+
+    {
+      href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",
+      type: "text/css",
+      integrity:
+        "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
+      crossorigin: "anonymous",
+    },
+
+    {
+      href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
+      rel: "stylesheet",
     },
   ],
 
@@ -134,21 +167,7 @@ const config: Config = {
     ],
   ],
 
-  stylesheets: [
 
-    {
-      href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",
-      type: "text/css",
-      integrity:
-        "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
-      crossorigin: "anonymous",
-    },
-
-    {
-      href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
-      rel: "stylesheet",
-    },
-  ],
 
 
 
@@ -242,14 +261,8 @@ const config: Config = {
         {
           title: 'Connect',
           items: [
-            {
-              label: 'LinkedIn',
-              href: 'https://www.linkedin.com/in/mkeithtan',
-            },
-            {
-              label: 'Twitter',
-              href: 'https://twitter.com/mkeithtan',
-            },
+            internetProfiles.linkedin,
+            internetProfiles.twitter
           ],
         },
         
