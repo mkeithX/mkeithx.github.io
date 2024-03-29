@@ -42,9 +42,9 @@ const config: Config = {
         docs: {
           path: "docs",
           showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
-          showLastUpdateTime: false,
           disableVersioning: false,
           editLocalizedFiles: false,
           editCurrentVersion: false,
@@ -63,10 +63,10 @@ const config: Config = {
 
         blog: {
           path: "blog",
-          blogTitle: "Recents on Keith's Universe",
-          blogDescription: 'Blog and updates from mkeithX.',
+          blogTitle: "Recents",
+          blogDescription: "News and updates from Keith's Universe",
           routeBasePath: "blog",
-          blogSidebarTitle: 'Recent updates',
+          blogSidebarTitle: 'Recent',
           blogSidebarCount: 5,
           include: ['**/*.{md,mdx}'],
           
@@ -99,11 +99,6 @@ const config: Config = {
           },
         },
 
-        // sitemap: {
-        //   priority: 0.5,
-        //   ignorePatterns: ['/tags/**'],
-        //   filename: 'sitemap.xml',
-        // },
 
         pages: {
           path: 'src/pages',
@@ -151,12 +146,7 @@ const config: Config = {
     },
   ],
 
-  scripts: [
-    {
-      src: "https://cdn.jsdelivr.net/npm/@docsearch/js@3",
-      type: "text/javascript",
-    }
-  ],
+
 
   themeConfig: {
 
@@ -188,8 +178,8 @@ const config: Config = {
         alt: "mkjs Logo",
         src: "img/logo/mkx_demo_new.png",
         target: "_self",
-        // width: 50,
-        height: 50,
+        // width: 100,
+        height: 20,
       },
       items: [
 

@@ -13,7 +13,7 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     title: "The Cosmos",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    Svg: require("@site/static/img/undraw_stars.svg").default,
     description: (
       <>
         Embark on a cosmic journey with my articles{" "}
@@ -22,8 +22,8 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Recent updates",
-    Svg: require("@site/static/img/undraw_docusaurus_tree.svg").default,
+    title: "Recents",
+    Svg: require("@site/static/img/undraw_website.svg").default,
     description: (
       <>
         Updates, releases, bulletins and all other stuff.
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "Gists & Guides",
-    Svg: require("@site/static/img/undraw_docusaurus_react.svg").default,
+    Svg: require("@site/static/img/undraw_programming.svg").default,
     description: (
       <>
         Curated list of tips, tricks, and workarounds. <Link to={"docs/contweaks"}>Learn more</Link>.
