@@ -4,7 +4,11 @@ import type SearchBarType from "@theme/SearchBar";
 import type { WrapperProps } from "@docusaurus/types";
 import { DocSearch } from "@docsearch/react";
 
+import '@docsearch/css';
+
+
 type Props = WrapperProps<typeof SearchBarType>;
+
 
 export default function SearchBarWrapper(props: Props): JSX.Element {
   return (
@@ -20,6 +24,9 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
             {state.context.nbHits === 1 ? "match found" : "matches found"}
           </h3>
         )}
+        getMissingResultsUrl={({ query }) => {
+          return `https://github.com/kitiplex/iuiu/issues/new/choose=${query}`;
+        }}
         maxResultsPerGroup={7}
         insights
       />

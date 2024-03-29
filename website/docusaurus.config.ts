@@ -146,7 +146,11 @@ const config: Config = {
     },
   ],
 
-
+  // scripts: [
+  //   {
+  //     src: "https://cdn.jsdelivr.net/npm/@docsearch/react@3"
+  //   }
+  // ],
 
   themeConfig: {
 
