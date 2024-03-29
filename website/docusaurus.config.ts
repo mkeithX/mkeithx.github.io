@@ -23,7 +23,23 @@ const internetProfiles = {
   twitter: {
     label: "Twitter",
     href: "https://twitter.com/mkeithtan"
+  },
+
+  Kitiplex: {
+    label: "Kitiplex",
+    href: "https://kitiplex.github.io/"
+  },
+
+  IUIU: {
+    label: "IUIU",
+    href: "https://kitiplex.github.io/iuiu"
+  },
+
+  Discussion: {
+    label: "Discussion",
+    href: "https://github.com/kitiplex/iuiu/issues/new/choose"
   }
+
 }
 
 const config: Config = {
@@ -224,13 +240,29 @@ const config: Config = {
         { to: "/blog", label: "Blog", position: "left" },
 
         {to: "/projects", label: "Showcase", position: "right"},
-
+        {
+          type: 'dropdown',
+          label: 'Community',
+          position: 'right',
+          items: [
+            internetProfiles.Kitiplex,
+            internetProfiles.IUIU,
+            internetProfiles.Discussion,
+            // {
+            //   type: 'doc',
+            //   label: 'Social',
+            //   docId: 'introduction',
+            // },
+            // ... more items
+          ],
+        },
         {
           href: "https://github.com/mkeithx",
           "aria-label": "GitHub",
           position: "right",
           className: "header-github-link",
         },
+
       ],
     },
     footer: {
@@ -262,7 +294,8 @@ const config: Config = {
           title: 'Connect',
           items: [
             internetProfiles.linkedin,
-            internetProfiles.twitter
+            internetProfiles.twitter,
+
           ],
         },
         
