@@ -7,7 +7,7 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import tailwind from "tailwindcss";
 import autoprefixer from "autoprefixer";
 
-const copyright = `Copyright © ${new Date().getFullYear()} • Keith WT • Built with Docusaurus.`;
+const copyright = `Copyright © ${new Date().getFullYear()} • Keith Tan • Built with Docusaurus.`;
 
 const config: Config = {
   title: "MKX",
@@ -76,7 +76,7 @@ const config: Config = {
             '**/*.test.{js,jsx,ts,tsx}',
             '**/__tests__/**',
           ],
-          postsPerPage: 10,
+          postsPerPage: 'ALL',
           blogListComponent: '@theme/BlogListPage',
           blogPostComponent: '@theme/BlogPostPage',
           blogTagsListComponent: '@theme/BlogTagsListPage',
@@ -87,10 +87,23 @@ const config: Config = {
 
           feedOptions: {
             type: "all",
-
             copyright,
+            createFeedItems: async (params) => {
+              const {blogPosts, defaultCreateFeedItems, ...rest} = params;
+              return defaultCreateFeedItems({
+                // keep only the 10 most recent blog posts in the feed
+                blogPosts: blogPosts.filter((item, index) => index < 10),
+                ...rest,
+              });
+            },
           },
         },
+
+        // sitemap: {
+        //   priority: 0.5,
+        //   ignorePatterns: ['/tags/**'],
+        //   filename: 'sitemap.xml',
+        // },
 
         pages: {
           path: 'src/pages',
@@ -109,6 +122,7 @@ const config: Config = {
           beforeDefaultRemarkPlugins: [],
           beforeDefaultRehypePlugins: [],
         },
+        
 
         theme: {
           customCss: ['./src/css/custom.css'],
@@ -196,7 +210,7 @@ const config: Config = {
       
         { to: "/blog", label: "Blog", position: "left" },
 
-        {to: "projects/", label: "Projects", position: "right"},
+        {to: "/projects", label: "Showcase", position: "right"},
 
         {
           href: "https://github.com/mkeithx",
