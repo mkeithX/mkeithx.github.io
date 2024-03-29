@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[1957],{5461:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/software","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"News and updates from Keith\'s Universe","blogTitle":"Recents"}')}}]);
