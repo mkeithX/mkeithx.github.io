@@ -7,7 +7,7 @@
     <link rel="alternate" href="https://mkeithx.github.io/blog"/>
     <subtitle>MKX Blog</subtitle>
     <icon>https://mkeithx.github.io/icons/favicon.ico</icon>
-    <rights>Copyright © 2024 • Keith WT • Built with Docusaurus.</rights>
+    <rights>Copyright © 2024 • Keith Tan • Built with Docusaurus.</rights>
     <entry>
         <title type="html"><![CDATA[Announcing Algolia Search]]></title>
         <id>https://mkeithx.github.io/blog/announcing-algolia</id>
@@ -20,7 +20,8 @@
 <p><img decoding="async" loading="lazy" src="https://imgur.com/oHc4fuc.png" alt="img" class="img_ev3q"></p>]]></content>
         <author>
             <name>Keith Tan</name>
-            <uri>https://github.com/mkeithX</uri>
+            <email>email@kitimi.onmicrosoft.com</email>
+            <uri>https://github.com/mkeithx</uri>
         </author>
         <category label="updates" term="updates"/>
         <category label="docs" term="docs"/>
@@ -85,7 +86,8 @@
 <p>Sitemaps play a crucial role in optimizing website visibility, enhancing user experience, and facilitating efficient crawling and indexing by search engines. By implementing sitemaps following best practices, website owners can ensure that their digital properties are effectively navigable and discoverable on the vast landscape of the internet.</p>]]></content>
         <author>
             <name>Keith Tan</name>
-            <uri>https://github.com/mkeithX</uri>
+            <email>email@kitimi.onmicrosoft.com</email>
+            <uri>https://github.com/mkeithx</uri>
         </author>
         <category label="post" term="post"/>
         <category label="docs" term="docs"/>
@@ -113,7 +115,8 @@
 <p><em>— K</em></p>]]></content>
         <author>
             <name>Keith Tan</name>
-            <uri>https://github.com/mkeithX</uri>
+            <email>email@kitimi.onmicrosoft.com</email>
+            <uri>https://github.com/mkeithx</uri>
         </author>
         <category label="api" term="api"/>
         <category label="configs" term="configs"/>
@@ -148,7 +151,8 @@
 <p><em>— K</em></p>]]></content>
         <author>
             <name>Keith Tan</name>
-            <uri>https://github.com/mkeithX</uri>
+            <email>email@kitimi.onmicrosoft.com</email>
+            <uri>https://github.com/mkeithx</uri>
         </author>
         <category label="hello" term="hello"/>
         <category label="welcome" term="welcome"/>
