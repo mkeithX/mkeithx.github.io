@@ -23,6 +23,14 @@ const config: Config = {
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
 
+  scripts: [
+    {
+      src: "https://X2M5FPT6G9-dsn.algolia.net",
+      rel: "preconnect",
+      crossorigin: true,
+    },
+  ],
+
   customFields: {
     description: "Keith's Galactic Gazette."
 
@@ -127,10 +135,6 @@ const config: Config = {
   ],
 
   stylesheets: [
-    {
-      href: "https://X2M5FPT6G9-dsn.algolia.net",
-      rel: "preconnect",
-    },
 
     {
       href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",
@@ -146,16 +150,12 @@ const config: Config = {
     },
   ],
 
-  // scripts: [
-  //   {
-  //     src: "https://cdn.jsdelivr.net/npm/@docsearch/react@3"
-  //   }
-  // ],
+
 
   themeConfig: {
 
     colorMode: {
-      defaultMode: "light",
+      defaultMode: "dark",
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
