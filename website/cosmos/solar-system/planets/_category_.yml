@@ -1,7 +1,7 @@
 label: Planets
 collapsible: true
 collapsed: true
-position: 2
+position: 2.5
 link: 
     type: doc
     id: planets-overview
