@@ -189,6 +189,8 @@ export default async function createConfigAsync() {
           id: "cosmos",
           path: "cosmos",
           routeBasePath: "cosmos",
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
           breadcrumbs: true,
           disableVersioning: false,
           editLocalizedFiles: false,
@@ -235,10 +237,10 @@ export default async function createConfigAsync() {
         // title: "DEV",
         logo: {
           alt: "mkjs Logo",
-          src: "img/logo/mkx_demo.png",
+          src: "img/logo/mkx_demo_one.png",
           target: "_self",
           // width: 100,
-          height: 20,
+          // height: 18,
         },
         items: [
           {
@@ -279,9 +281,9 @@ export default async function createConfigAsync() {
         style: "dark",
         logo: {
           alt: "mkeithX",
-          src: "img/logo/mkx_demo_new.png",
+          src: "img/logo/mkx_demo_one.png",
           href: "/",
-          height: "50",
+          height: "40",
           // width: '60'
         },
         links: [
@@ -310,10 +312,6 @@ export default async function createConfigAsync() {
               {
                 label: "Blog",
                 to: "blog/",
-              },
-              {
-                label: "Projects",
-                to: "projects/",
               },
               {
                 label: "Nutshell",

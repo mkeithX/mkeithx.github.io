@@ -22,7 +22,7 @@ import {
 function About(): JSX.Element {
   const { siteConfig } = useDocusaurusContext();
   const profilePicUrl = "https://github.com/mkeithx.png";
-  const resumeUrl = "files/resume.pdf";
+  const resumeUrl = "https://mkeithx.github.io/files/resume.pdf";
 
   return (
     <Layout title="Me" description={siteConfig.tagline}>
