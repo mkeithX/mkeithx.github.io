@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[1188],{3364:e=>{e.exports=JSON.parse('{"title":"The Cosmos","description":"The universe in a nutshell.","slug":"/cosmos","permalink":"/docs/cosmos","navigation":{"next":{"title":"The Solar System","permalink":"/docs/the-solar-system"}}}')}}]);
