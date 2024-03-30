@@ -1,6 +1,0 @@
-label: The Solar System 
-position: 1
-link:
-    type: generated-index
-    description: A star and everything that orbits around it due to gravity.
-    slug: /the-solar-system

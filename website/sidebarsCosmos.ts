@@ -6,7 +6,7 @@ const sidebars: SidebarsConfig = {
 
     {
       type: "category",
-      label: "Getting started",
+      label: "Prologue",
       collapsed: false,
       collapsible: false,
       items: [
@@ -15,10 +15,13 @@ const sidebars: SidebarsConfig = {
           dirName: '.'
         }
       ],
+      description: "Cosmos in a nutshell",
       link: {
         type: "generated-index",
-        description: "Anything in the Cosmos.",
-        slug: '/'
+        title: "Cosmos",
+        description: "The Cosmos, often referred to as the universe in its entirety, encompasses everything that exists, including space, time, matter, energy, and the laws that govern them. It is a vast and mysterious realm, stretching billions of light-years and containing countless celestial objects, such as stars, planets, galaxies, and black holes.",
+        slug: '/',
+
       }
 
     }
