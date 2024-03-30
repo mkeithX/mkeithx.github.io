@@ -19,7 +19,7 @@ const sidebars: SidebarsConfig = {
       link: {
         type: "generated-index",
         title: "Cosmos",
-        description: "The Cosmos, often referred to as the universe in its entirety, encompasses everything that exists, including space, time, matter, energy, and the laws that govern them. It is a vast and mysterious realm, stretching billions of light-years and containing countless celestial objects, such as stars, planets, galaxies, and black holes.",
+        description: "Often referred to as the universe in its entirety, encompasses everything that exists, including space, time, matter, energy, and the laws that govern them. It is a vast and mysterious realm, stretching billions of light-years and containing countless celestial objects, such as stars, planets, galaxies, and black holes.",
         slug: '/',
 
       }

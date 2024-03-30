@@ -5,8 +5,9 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 
+
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
-// import config from "@generated/docusaurus.config";
+
 
 const copyright = `Copyright © ${new Date().getFullYear()} • Keith Tan • Built with Docusaurus.`;
 
@@ -91,6 +92,7 @@ export default async function createConfigAsync() {
     },
 
     presets: [
+
       [
         "classic",
 
@@ -207,6 +209,7 @@ export default async function createConfigAsync() {
     ],
 
     themeConfig: {
+      
       colorMode: {
         disableSwitch: false,
         respectPrefersColorScheme: true,
@@ -229,10 +232,10 @@ export default async function createConfigAsync() {
       navbar: {
         style: "dark",
         hideOnScroll: true,
-        // title: "MKEITHX",
+        // title: "DEV",
         logo: {
           alt: "mkjs Logo",
-          src: "img/logo/mkx_demo_new.png",
+          src: "img/logo/mkx_demo.png",
           target: "_self",
           // width: 100,
           height: 20,
@@ -323,7 +326,7 @@ export default async function createConfigAsync() {
         copyright,
       },
       prism: {
-        // theme: prismThemes.github,
+        // theme: prismThemes.vsDark,
         darkTheme: prismThemes.dracula,
         additionalLanguages: ["powershell", "python", "java", "bash", "json"],
       },

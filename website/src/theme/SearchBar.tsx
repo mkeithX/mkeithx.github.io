@@ -4,8 +4,6 @@ import type SearchBarType from "@theme/SearchBar";
 import type { WrapperProps } from "@docusaurus/types";
 import { DocSearch } from "@docsearch/react";
 
-import '@docsearch/css';
-
 
 type Props = WrapperProps<typeof SearchBarType>;
 
