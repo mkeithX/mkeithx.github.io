@@ -6,7 +6,7 @@ function Card({ image, title, description, link }) {
   return (
     <div className="col col--4">
       <div className="col-demo">
-        <div className="card-demo shadow--md" style={{ height: '100%' }}>
+        <div className="card-demo shadow--md mb-3" style={{ height: '100%' }}>
           <div className="card">
             <div className="card__image">
               <img src={image} alt={title} title={title} />
@@ -20,7 +20,7 @@ function Card({ image, title, description, link }) {
                 className="button button--outline button--info button--block"
                 to={link}
               >
-                Explore
+                Visit
               </Link>
             </div>
           </div>
