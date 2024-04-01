@@ -247,15 +247,15 @@ export default async function createConfigAsync() {
             type: "docSidebar",
             position: "left",
             sidebarId: "mySidebar",
-            label: "Docs",
+            label: "Guides",
           },
-          { to: "/cosmos", label: "Cosmos", position: "left" },
+          { to: "cosmos/overview", label: "Cosmos", position: "left" },
           { to: "/blog", label: "Blog", position: "left" },
 
           { to: "/projects", label: "Showcase", position: "right" },
           {
             type: "dropdown",
-            label: "Community",
+            label: "External",
             position: "right",
             items: [
               internetProfiles.Kitiplex,

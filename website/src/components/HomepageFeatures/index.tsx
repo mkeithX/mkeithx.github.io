@@ -17,7 +17,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Embark on a cosmic journey with my articles{" "}
-        <Link to={"/cosmos"}>about the universe</Link>.
+        <Link to={"/cosmos/overview"}>about the universe</Link>.
       </>
     ),
   },
