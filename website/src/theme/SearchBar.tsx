@@ -23,7 +23,7 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
           </h3>
         )}
         getMissingResultsUrl={({ query }) => {
-          return `https://github.com/kitiplex/iuiu/issues/new/choose=${query}`;
+          return `https://github.com/kitiplex/iuiu/issues/new/choose?title=Missing%20Documentation%20for%20${query}`;
         }}
         maxResultsPerGroup={7}
         insights
