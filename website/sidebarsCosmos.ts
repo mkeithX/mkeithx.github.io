@@ -72,7 +72,7 @@ const sidebars: SidebarsConfig = {
         type: 'generated-index',
         title: 'Legacy',
         slug: '/legacy',
-        description: 'Highlighting the enduring impact of scientific discoveries, technological advancements, and influential figures in astronomy and space exploration.'
+        description: 'Highlighting scientific discoveries, technological advancements, and influential figures in physics, astronomy and space exploration.'
       }
     },
   ],
