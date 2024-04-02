@@ -1,82 +1,67 @@
-import React from "react";
 import clsx from "clsx";
-import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
-
 import styles from "./styles.module.css";
+import React from "react";
+// import Link from "@docusaurus/Link";
 
-export type Case = {
+import useBaseUrl from "@docusaurus/useBaseUrl";
+
+type FeatureItem = {
   title: string;
-  preview: string;
-  image: URL;
-  description: JSX.Element;
-  website: string;
+  imageUrl: JSX.Element;
+  //   description: JSX.Element;
 };
 
-function Card(props: Case) {
+const FeatureList: FeatureItem[] = [
+  {
+    title: "The Cosmos",
+    imageUrl: require("@site/static/img/logo/mkx-x-raw.png").default,
+  },
+  {
+    title: "Recents",
+    imageUrl: require("@site/static/img/react-logo.png").default,
+  },
+  {
+    title: "Gists & Guides",
+    imageUrl: require("@site/static/img/logo/logo-xpr.png").default,
+  },
+];
+
+function Feature({ imageUrl, title }: FeatureItem) {
+  const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx("col col--4")}>
-    <article className="card shadow--md" style={{ height: "100%" }}>
-      <div className={clsx("card__image", styles.cardImage)}>
-        <img
-          src={props.image}
-          alt={props.title}
-          title={props.title}
-          className={styles.cardImage}
-        />
-      </div>
-      <div className="card__body margin-bottom--md">
-        <div className={clsx(styles.cardHeader)}>
-          <Heading as="h4" className={styles.CardTitle}>
-            <Link href={props.website} className={styles.CardLink}>
-              {props.title}
-            </Link>
-          </Heading>
+      {imgUrl && (
+        <div className="text--center">
+          <img
+            className={styles.featureSvg}
+            src={imgUrl}
+            alt={title}
+            height={100}
+            width={100}
+          />
         </div>
-        <p className={styles.CardBody}>{props.description}</p>
+      )}
+
+      <div className="text--center padding-horiz--md">
+        <Heading as="h3">{}</Heading>
+        <p>{}</p>
       </div>
-      <div className="card__footer">
-        <div className="button-group button-group--block">
-          {/* <button
-            className="button button--outline button--info button--block"
-            onClick={() => window.open(props.website)}
-          >
-            {"Visit"}
-          </button> */}
-        </div>
-      </div>
-    </article>
     </div>
   );
 }
-export default Card;
 
-// function Card({ image, title, description, link }) {
-//   return (
-//     <div className="col col--4">
-//       <div className="col-demo">
-//         <div className="card-demo shadow--md mb-3" style={{ height: '100%' }}>
-//           <div className="card">
-//             <div className="card__image">
-//               <img src={image} alt={title} title={title} />
-//             </div>
-//             <div className="card__body">
-//               <h4>{title}</h4>
-//               <small>{description}</small>
-//             </div>
-//             <div className="card__footer">
-//               <Link
-//                 className="button button--outline button--info button--block"
-//                 to={link}
-//               >
-//                 Visit
-//               </Link>
-//             </div>
-//           </div>
-//         </div>
-//       </div>
-//     </div>
-//   );
-// }
-
-// export default Card;
+function IntroCards(): JSX.Element {
+  return (
+    <section className={styles.features}>
+      <div className="container">
+        <div className="row">
+          {FeatureList.map((props, idx) => (
+            <Feature key={idx} {...props} />
+          ))}
+        </div>
+      </div>
+    </section>
+  );
+}
+export default IntroCards;

@@ -1,68 +1,11 @@
-.cardHeader {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.cardFooter {
-  display: flex;
-  flex-wrap: wrap;
-}
-
-/*  */
-
-.cardImageWrapper:hover {
-  cursor: pointer;
-}
-.cardImage {
-  object-fit: cover;
-  height: auto;
-  width: auto;
-  max-width: 100%;
-  margin-bottom: -4px;
-}
-
-.description {
-  font-size: small;
-}
-
-.CardImage {
-  overflow: hidden;
-  height: 150px;
-  border-bottom: 2px solid var(--ifm-color-emphasis-200);
-}
-
-.CardHeader {
-  display: flex;
-  align-items: center;
-  margin-bottom: 12px;
-}
-
-.CardTitle {
-  margin-bottom: 0;
-  flex: 1 1 auto;
-}
-
-.CardTitle a {
-  text-decoration: none;
-  background: linear-gradient(
-      var(--ifm-color-primary),
-      var(--ifm-color-primary)
-    )
-    0% 100% / 0% 1px no-repeat;
-  transition: background-size ease-out 200ms;
-}
-
-.CardTitle a:not(:focus):hover {
-  background-size: 100% 1px;
-}
-
-.CardTitle,
-.CardHeader .svgIconFavorite {
-  margin-right: 0.25rem;
-}
-
-.CardBody {
-  font-size: small;
-  line-height: 1.88;
-}
+.features {
+    display: flex;
+    align-items: center;
+    padding: 2rem 0;
+    width: 100%;
+  }
+  
+  .featureSvg {
+    height: 100px;
+    width: auto;
+  }
