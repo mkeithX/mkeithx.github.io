@@ -208,10 +208,25 @@ export default async function createConfigAsync() {
     ],
 
     themeConfig: {
+
+      // algolia: {
+      //   apiKey: '55634a57a78abcd476d22a48eb543486',
+      //   indexName: 'mkeithxio',
+      //   appId: 'X2M5FPT6G9',
+      //   contextualSearch: true,
+      //   replaceSearchResultPathname: {
+      //     from: '/docs/', // or as RegExp: /\/docs\//
+      //     to: '/',
+      //   },
+      //   searchPagePath: 'docsearch',
+      // },
+
       colorMode: {
         disableSwitch: false,
         respectPrefersColorScheme: true,
       },
+
+
 
       docs: {
         sidebar: {
