@@ -35,6 +35,3 @@ jobs:
        
           publish_dir: website/build
       
-      - name: Algolia Crawler Automatic Crawl
-      uses: algolia/algoliasearch-crawler-github-actions@v1.1.10
-            
