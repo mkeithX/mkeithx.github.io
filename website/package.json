@@ -15,7 +15,7 @@
     "typecheck": "tsc"
   },
   "dependencies": {
-    "@docsearch/react": "3",
+    "@docsearch/react": "^3.6.0",
     "@docusaurus/core": "^3.2.0",
     "@docusaurus/preset-classic": "^3.2.0",
     "@docusaurus/remark-plugin-npm2yarn": "^3.2.0",

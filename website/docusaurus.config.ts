@@ -5,9 +5,7 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 
-
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
-
 
 const copyright = `Copyright © ${new Date().getFullYear()} • Keith Tan • Built with Docusaurus.`;
 
@@ -92,7 +90,6 @@ export default async function createConfigAsync() {
     },
 
     presets: [
-
       [
         "classic",
 
@@ -195,7 +192,7 @@ export default async function createConfigAsync() {
           disableVersioning: false,
           editLocalizedFiles: false,
           editCurrentVersion: false,
-          sidebarPath: './sidebarsCosmos.ts',
+          sidebarPath: "./sidebarsCosmos.ts",
           include: ["**/*.md", "**/*.mdx"],
           exclude: [
             "**/_*.{js,jsx,ts,tsx,md,mdx}",
@@ -211,7 +208,6 @@ export default async function createConfigAsync() {
     ],
 
     themeConfig: {
-      
       colorMode: {
         disableSwitch: false,
         respectPrefersColorScheme: true,
