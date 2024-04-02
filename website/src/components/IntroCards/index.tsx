@@ -1,33 +1,30 @@
 import clsx from "clsx";
 import Heading from "@theme/Heading";
-import styles from "./styles.module.css";
 import React from "react";
-// import Link from "@docusaurus/Link";
-
+import styles from "./styles.module.css";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 
 type FeatureItem = {
-  title: string;
-  imageUrl: JSX.Element;
-  //   description: JSX.Element;
+  imageUrl: string;
+  scale: number; // New property for image scale
 };
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "The Cosmos",
     imageUrl: require("@site/static/img/logo/mkx-x-raw.png").default,
+    scale: 1.0, // Adjust scale as needed
   },
   {
-    title: "Recents",
     imageUrl: require("@site/static/img/react-logo.png").default,
+    scale: 1.0, // Adjust scale as needed
   },
   {
-    title: "Gists & Guides",
     imageUrl: require("@site/static/img/logo/logo-xpr.png").default,
+    scale: .75, // Adjust scale as needed
   },
 ];
 
-function Feature({ imageUrl, title }: FeatureItem) {
+function Feature({ imageUrl, scale }: FeatureItem) {
   const imgUrl = useBaseUrl(imageUrl);
   return (
     <div className={clsx("col col--4")}>
@@ -36,16 +33,15 @@ function Feature({ imageUrl, title }: FeatureItem) {
           <img
             className={styles.featureSvg}
             src={imgUrl}
-            alt={title}
-            height={100}
-            width={100}
+            alt=""
+            height={100 * scale} // Scale the height
+            width={100 * scale}  // Scale the width
           />
         </div>
       )}
 
       <div className="text--center padding-horiz--md">
-        <Heading as="h3">{}</Heading>
-        <p>{}</p>
+        {/* Removed Heading component */}
       </div>
     </div>
   );
@@ -64,4 +60,5 @@ function IntroCards(): JSX.Element {
     </section>
   );
 }
+
 export default IntroCards;

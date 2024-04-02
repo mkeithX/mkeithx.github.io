@@ -16,8 +16,12 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
         placeholder="Search MKX..."
         resultsFooterComponent={({ state }) => (
           <h3>
-            {state.context.nbHits}{" "}
-            {state.context.nbHits === 1 ? "match found" : "matches found"}
+            {state.context && state.context.nbHits !== undefined && ( // Check if state.context.nbHits exists and is not undefined
+              <>
+                {state.context.nbHits}{" "}
+                {state.context.nbHits === 1 ? "match found" : "matches found"}
+              </>
+            )}
           </h3>
         )}
         getMissingResultsUrl={({ query }) => {

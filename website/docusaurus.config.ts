@@ -236,8 +236,6 @@ const config: Config = {
         alt: "mkjs Logo",
         src: "img/logo/mkx_demo_one.png",
         target: "_self",
-        // width: 100,
-        // height: 18,
       },
       items: [
         {
@@ -321,7 +319,6 @@ const config: Config = {
       copyright,
     },
     prism: {
-      // theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["powershell", "python", "java", "bash", "json"],
     },
