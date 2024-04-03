@@ -34,7 +34,7 @@ function HomepageHeader() {
 
         <div className={styles.buttons}>
           <Link
-            className="button button--outline button--primary button--lg px-4 mb-3 mt-3"
+            className="button button--outline button--primary button--lg px-4 mx-3 mt-3"
             to="/introx"
           >
             {"Explore"}

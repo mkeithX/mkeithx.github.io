@@ -91,6 +91,7 @@ const config: Config = {
   },
 
   presets: [
+
     [
       "classic",
 
@@ -182,7 +183,7 @@ const config: Config = {
 
   plugins: [
     [
-      "@docusaurus/plugin-content-docs",
+      'content-docs',
       {
         id: "cosmos",
         path: "cosmos",
@@ -204,11 +205,12 @@ const config: Config = {
         remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
         rehypePlugins: [rehypeKatex],
         docItemComponent: "@theme/DocItem",
-      } as DocsOptions, // Correct type assertion
+      } as DocsOptions, 
     ],
   ],
 
   themeConfig: {
+
     colorMode: {
       disableSwitch: false,
       respectPrefersColorScheme: true,
@@ -229,13 +231,15 @@ const config: Config = {
     image: "img/social-react-x-banner.png",
 
     navbar: {
-      style: "dark",
+      // style: "dark",
       hideOnScroll: true,
-      // title: "DEV",
+      title: "MKX",
       logo: {
         alt: "mkjs Logo",
-        src: "img/logo/mkx_demo_one.png",
+        src: "img/logo/slash-x-demo.png",
         target: "_self",
+        width: 32,
+        height: 32,
       },
       items: [
         {
@@ -247,7 +251,7 @@ const config: Config = {
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
 
-        { to: "/projects", label: "Showcase", position: "right" },
+        { to: "projects/", label: "Showcase", position: "right" },
         {
           type: "dropdown",
           label: "External",
@@ -319,6 +323,7 @@ const config: Config = {
       copyright,
     },
     prism: {
+      theme: prismThemes.dracula,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["powershell", "python", "java", "bash", "json"],
     },

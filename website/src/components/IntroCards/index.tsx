@@ -12,15 +12,15 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     imageUrl: require("@site/static/img/logo/mkx-x-raw.png").default,
-    scale: 1.0, // Adjust scale as needed
+    scale: .90, // Adjust scale as needed
   },
   {
     imageUrl: require("@site/static/img/react-logo.png").default,
-    scale: 1.0, // Adjust scale as needed
+    scale: .60, // Adjust scale as needed
   },
   {
     imageUrl: require("@site/static/img/logo/logo-xpr.png").default,
-    scale: .75, // Adjust scale as needed
+    scale: .54, // Adjust scale as needed
   },
 ];
 
