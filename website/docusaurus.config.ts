@@ -249,7 +249,7 @@ const config: Config = {
           label: "Guides",
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
-        { to: "/blog", label: "Blog", position: "left" },
+        { to: "/blog", label: "Latest", position: "left" },
 
         { to: "projects/", label: "Showcase", position: "right" },
         {

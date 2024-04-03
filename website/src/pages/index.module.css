@@ -51,7 +51,7 @@
 
  @media (prefers-reduced-motion: no-preference) {
   .heroBannerLogo {
-    animation: kit-in-the-box infinite 45s linear;
+    animation: kit-in-the-box infinite 50s linear;
   }
  }
 

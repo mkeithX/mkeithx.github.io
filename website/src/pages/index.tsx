@@ -6,7 +6,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import BannerLogo from "@site/static/img/react-logo.svg";
+import BannerLogo from "@site/static/img/orbit-x-ss.svg";
 import React from "react";
 
 function HomepageHeader() {
@@ -21,13 +21,15 @@ function HomepageHeader() {
         />
 
         <div className={clsx("hero__subtitle")}>
-          <span className="text-small">{"Welcome to"}</span>
-        </div> 
+          <span className="text-small">{"Introducing 🚀"}</span>
+        </div>
 
         <Heading as="h2" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
-            <div className="hero__title mb-3">{siteConfig.title}<b>.</b></div>
-           
+            <div className="hero__title mb-3">
+              {siteConfig.title}
+              <b>.</b>
+            </div>
           </span>
         </Heading>
 
@@ -37,7 +39,7 @@ function HomepageHeader() {
         <div className={styles.buttons}>
           <Link
             className="button button--outline button--primary button--lg px-4"
-            to="/introx"
+            to="/intro"
           >
             {"Explore"}
           </Link>
@@ -53,7 +55,10 @@ export default function Home(): JSX.Element {
   } = useDocusaurusContext();
   const { description } = customFields as { description: string };
   return (
-    <Layout title={`Keith's Webspace for all Humanity`} description={description}>
+    <Layout
+      title={`WebSpace for all Humanity`}
+      description={description}
+    >
       <HomepageHeader />
       <main>
         <HomepageFeatures />
