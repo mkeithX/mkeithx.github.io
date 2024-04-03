@@ -45,8 +45,8 @@ const internetProfiles = {
 // export default async function createConfigAsync() {
 const config: Config = {
   // return {
-  title: "MKX",
-  tagline: "I'm a web developer and fascinated by the mysteries of the Cosmos.",
+  title: "Keith's WebSpace",
+  tagline: "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
   url: "https://mkeithx.github.io",

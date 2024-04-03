@@ -21,20 +21,22 @@ function HomepageHeader() {
         />
 
         <div className={clsx("hero__subtitle")}>
-          <span>{"Hi, "}</span>
-        </div>
+          <span className="text-small">{"Welcome to"}</span>
+        </div> 
 
         <Heading as="h2" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
-            I'm Keith<b>.</b>
+            <div className="hero__title mb-3">{siteConfig.title}<b>.</b></div>
+           
           </span>
         </Heading>
 
         <div className="hero__subtitle mb-3">{siteConfig.tagline}</div>
+        <br></br>
 
         <div className={styles.buttons}>
           <Link
-            className="button button--outline button--primary button--lg px-4 mx-3 mt-3"
+            className="button button--outline button--primary button--lg px-4"
             to="/introx"
           >
             {"Explore"}
@@ -51,7 +53,7 @@ export default function Home(): JSX.Element {
   } = useDocusaurusContext();
   const { description } = customFields as { description: string };
   return (
-    <Layout title={`Keith's Galactic Gazette`} description={description}>
+    <Layout title={`Keith's Webspace for all Humanity`} description={description}>
       <HomepageHeader />
       <main>
         <HomepageFeatures />
