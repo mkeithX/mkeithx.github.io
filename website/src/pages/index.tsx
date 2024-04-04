@@ -6,7 +6,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import BannerLogo from "@site/static/img/orbit-x-ss.svg";
+import BannerLogo from "@site/static/img/orbit-sv-x.svg";
 import React from "react";
 
 function HomepageHeader() {
@@ -56,7 +56,7 @@ export default function Home(): JSX.Element {
   const { description } = customFields as { description: string };
   return (
     <Layout
-      title={`WebSpace for all Humanity`}
+      title={""}
       description={description}
     >
       <HomepageHeader />

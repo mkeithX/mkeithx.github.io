@@ -323,7 +323,7 @@ const config: Config = {
       copyright,
     },
     prism: {
-      theme: prismThemes.dracula,
+      theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: ["powershell", "python", "java", "bash", "json"],
     },

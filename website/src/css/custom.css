@@ -52,9 +52,9 @@
   --ifm-color-primary: #4e89e8;
 } */
 
-[data-theme='dark'] .purple-text {
+/* [data-theme='dark'] .purple-text {
   color: plum;
-}
+} */
 
 .navbar .navbar__items {
   flex: auto;
@@ -87,7 +87,7 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 .header-github-link:hover::before {
-  background-color: var(--ifm-navbar-link-hover-color);
+  background-color: var(--ifm-color-primary);
 }
 
 
