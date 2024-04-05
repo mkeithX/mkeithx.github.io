@@ -82,7 +82,7 @@ const config: Config = {
   ],
 
   customFields: {
-    description: "Keith's Galactic Gazette.",
+    description: "WebSpace for all Mankind.",
   },
 
   i18n: {
