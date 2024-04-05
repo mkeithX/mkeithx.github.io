@@ -51,13 +51,13 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { customFields, tagline },
+    siteConfig: { title, customFields, tagline },
   } = useDocusaurusContext();
   const { description } = customFields as { description: string };
   return (
     <Layout
-      title={""}
-      description={description}
+      title={title}
+      description={`WebSpace for all mankind.`}
     >
       <HomepageHeader />
       <main>
