@@ -1,15 +1,15 @@
 {
     "version": "https://jsonfeed.org/version/1",
-    "title": "Keith's WebSpace Blog",
+    "title": "WebSpace MKX Blog",
     "home_page_url": "https://mkeithx.github.io/blog",
-    "description": "Keith's WebSpace Blog",
+    "description": "WebSpace MKX Blog",
     "items": [
         {
             "id": "https://mkeithx.github.io/blog/announcing-algolia",
-            "content_html": "<p>Today, I'm thrilled to announce that my <a href=\"https://mkeithx.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">website</a> now features SEARCH functionality, powered by  <a href=\"https://docsearch.algolia.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Algolia</a>.</p>\n<h2 class=\"anchor anchorWithHideOnScrollNavbar_WYt5\" id=\"whats-next\">What's next?<a href=\"https://mkeithx.github.io/blog/announcing-algolia#whats-next\" class=\"hash-link\" aria-label=\"Direct link to What's next?\" title=\"Direct link to What's next?\">​</a></h2>\n<p>Custom configuration for DocSearch and crawlers for Docusaurus <code>--typescript</code> variant. Stay tuned!</p>\n<p><img decoding=\"async\" loading=\"lazy\" src=\"https://imgur.com/oHc4fuc.png\" alt=\"img\" class=\"img_ev3q\"></p>",
+            "content_html": "<p>Today, I'm thrilled to announce that my <a href=\"https://mkeithx.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">website</a> now features SEARCH functionality, powered by <a href=\"https://docsearch.algolia.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Algolia</a>.</p>\n<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href=\"https://mkeithx.github.io/docs/contweaks/docusaurus/custom-algolia-search\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>this article</strong></a>.</p>",
             "url": "https://mkeithx.github.io/blog/announcing-algolia",
             "title": "Announcing Algolia Search",
-            "summary": "Today, I'm thrilled to announce that my website now features SEARCH functionality, powered by  Algolia.",
+            "summary": "Today, I'm thrilled to announce that my website now features SEARCH functionality, powered by Algolia.",
             "date_modified": "2024-03-28T00:00:00.000Z",
             "author": {
                 "name": "Keith Tan",

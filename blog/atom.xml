@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkeithx.github.io/blog</id>
-    <title>Keith's WebSpace Blog</title>
+    <title>WebSpace MKX Blog</title>
     <updated>2024-03-28T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkeithx.github.io/blog"/>
-    <subtitle>Keith's WebSpace Blog</subtitle>
+    <subtitle>WebSpace MKX Blog</subtitle>
     <icon>https://mkeithx.github.io/icons/favicon.ico</icon>
     <rights>Copyright © 2024 • Keith Tan • Built with Docusaurus.</rights>
     <entry>
@@ -13,11 +13,9 @@
         <id>https://mkeithx.github.io/blog/announcing-algolia</id>
         <link href="https://mkeithx.github.io/blog/announcing-algolia"/>
         <updated>2024-03-28T00:00:00.000Z</updated>
-        <summary type="html"><![CDATA[Today, I'm thrilled to announce that my website now features SEARCH functionality, powered by  Algolia.]]></summary>
-        <content type="html"><![CDATA[<p>Today, I'm thrilled to announce that my <a href="https://mkeithx.github.io/" target="_blank" rel="noopener noreferrer">website</a> now features SEARCH functionality, powered by  <a href="https://docsearch.algolia.com/" target="_blank" rel="noopener noreferrer">Algolia</a>.</p>
-<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="whats-next">What's next?<a href="https://mkeithx.github.io/blog/announcing-algolia#whats-next" class="hash-link" aria-label="Direct link to What's next?" title="Direct link to What's next?">​</a></h2>
-<p>Custom configuration for DocSearch and crawlers for Docusaurus <code>--typescript</code> variant. Stay tuned!</p>
-<p><img decoding="async" loading="lazy" src="https://imgur.com/oHc4fuc.png" alt="img" class="img_ev3q"></p>]]></content>
+        <summary type="html"><![CDATA[Today, I'm thrilled to announce that my website now features SEARCH functionality, powered by Algolia.]]></summary>
+        <content type="html"><![CDATA[<p>Today, I'm thrilled to announce that my <a href="https://mkeithx.github.io/" target="_blank" rel="noopener noreferrer">website</a> now features SEARCH functionality, powered by <a href="https://docsearch.algolia.com/" target="_blank" rel="noopener noreferrer">Algolia</a>.</p>
+<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href="https://mkeithx.github.io/docs/contweaks/docusaurus/custom-algolia-search" target="_blank" rel="noopener noreferrer"><strong>this article</strong></a>.</p>]]></content>
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
