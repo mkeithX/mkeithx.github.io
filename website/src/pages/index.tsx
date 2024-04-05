@@ -6,7 +6,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import BannerLogo from "@site/static/img/logo/orbit-z-xx.svg";
+import BannerLogo from "@site/static/img/logo/orbit-z-xxx.svg";
 import React from "react";
 
 function HomepageHeader() {
@@ -21,7 +21,7 @@ function HomepageHeader() {
         />
 
         <div className={clsx("hero__subtitle")}>
-          <span className="text-small">{"Introducing 🚀"}</span>
+          <span className="text-small">{"🚀"}</span>
         </div>
 
         <Heading as="h2" className="hero__title">
