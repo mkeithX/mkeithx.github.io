@@ -233,7 +233,7 @@ const config: Config = {
     navbar: {
       // style: "dark",
       hideOnScroll: true,
-      title: "WebSpace",
+      title: "WebSpaceMKX",
       logo: {
         alt: "mkjs Logo",
         src: "img/logo/slash-x-demo.png",
