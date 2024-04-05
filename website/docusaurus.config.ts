@@ -45,7 +45,7 @@ const internetProfiles = {
 // export default async function createConfigAsync() {
 const config: Config = {
   // return {
-  title: "Keith's WebSpace",
+  title: "WebSpace MKX",
   tagline: "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
@@ -233,7 +233,7 @@ const config: Config = {
     navbar: {
       // style: "dark",
       hideOnScroll: true,
-      title: "MKX",
+      title: "WebSpaceMKX",
       logo: {
         alt: "mkjs Logo",
         src: "img/logo/slash-x-demo.png",

@@ -21,7 +21,7 @@ function HomepageHeader() {
         />
 
         <div className={clsx("hero__subtitle")}>
-          <span className="text-small">{"Introducing 🚀"}</span>
+          <span className="text-small">{"Introducing 👨‍🚀"}</span>
         </div>
 
         <Heading as="h2" className="hero__title">
