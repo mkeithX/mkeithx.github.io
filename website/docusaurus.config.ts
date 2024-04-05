@@ -45,7 +45,7 @@ const internetProfiles = {
 // export default async function createConfigAsync() {
 const config: Config = {
   // return {
-  title: "WebSpace MKX",
+  title: "MKX WebSpace",
   tagline: "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
@@ -82,7 +82,7 @@ const config: Config = {
   ],
 
   customFields: {
-    description: "WebSpace for all Mankind.",
+    description: "Web Portal For All Mankind",
   },
 
   i18n: {
@@ -233,7 +233,7 @@ const config: Config = {
     navbar: {
       // style: "dark",
       hideOnScroll: true,
-      title: "WebSpaceMKX",
+      title: "WebSpace",
       logo: {
         alt: "mkjs Logo",
         src: "img/logo/slash-x-demo.png",

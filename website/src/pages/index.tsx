@@ -21,7 +21,7 @@ function HomepageHeader() {
         />
 
         <div className={clsx("hero__subtitle")}>
-          <span className="text-small">{"Introducing 👨‍🚀"}</span>
+          <span className="text-small">{"Introducing 🛰️"}</span>
         </div>
 
         <Heading as="h2" className="hero__title">
@@ -56,8 +56,8 @@ export default function Home(): JSX.Element {
   const { description } = customFields as { description: string };
   return (
     <Layout
-      title={title}
-      description={`WebSpace for all mankind.`}
+      title={description}
+      description={title}
     >
       <HomepageHeader />
       <main>
