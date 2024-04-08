@@ -13,7 +13,7 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
         appId="X2M5FPT6G9"
         indexName="mkeithxio"
         apiKey="55634a57a78abcd476d22a48eb543486"
-        placeholder="Search MKX..."
+        placeholder="Search SpaceHub..."
         resultsFooterComponent={({ state }) => (
           <h3>
             {state.context && state.context.nbHits !== undefined && ( // Check if state.context.nbHits exists and is not undefined
