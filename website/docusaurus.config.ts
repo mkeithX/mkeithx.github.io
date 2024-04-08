@@ -233,12 +233,13 @@ const config: Config = {
     navbar: {
       // style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      // title: "SpaceHub",
       logo: {
         alt: "mkjs Logo",
-        src: "img/logo/slash-x-demo.png",
+        src: "img/logo/spacehub-x-logo-dark.png",
+        srcDark: "img/logo/spacehub-x-logo-light.png",
         target: "_self",
-        width: 32,
+        // width: 280,
         height: 32,
       },
       items: [
@@ -280,7 +281,7 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "mkeithX",
-        src: "img/logo/mkx_demo_one.png",
+        src: "img/logo/spacehub-x-logo-light.png",
         href: "/",
         height: "40",
         // width: '60'
