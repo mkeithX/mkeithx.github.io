@@ -6,7 +6,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import BannerLogo from "@site/static/img/logo/orbit-z-xxx.svg";
+import BannerLogo from "@site/static/img/banner/orbit-x-z.svg";
 import React from "react";
 
 function HomepageHeader() {
@@ -27,8 +27,9 @@ function HomepageHeader() {
         <Heading as="h2" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-              {siteConfig.title}
-              <b>.</b>
+              MKX Space<b>Hub</b>.
+              {/* {siteConfig.title} */}
+              {/* <b>.</b> */}
             </div>
           </span>
         </Heading>

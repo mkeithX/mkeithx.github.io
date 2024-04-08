@@ -70,9 +70,8 @@ const sidebars: SidebarsConfig = {
       ],
       link: {
         type: 'generated-index',
-        title: 'Legacy',
         slug: '/legacy',
-        description: 'Highlighting scientific discoveries, technological advancements, and influential figures in physics, astronomy and space exploration.'
+        description: "Highlighting scientific discoveries, technological advancements, and influential figures in physics, astronomy and space exploration."
       }
     },
   ],
