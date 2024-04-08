@@ -228,7 +228,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "img/social-react-x-banner.png",
+    image: "img/banner/social-banner-new.png",
 
     navbar: {
       // style: "dark",
@@ -295,8 +295,8 @@ const config: Config = {
             },
 
             {
-              label: "ConTweaks",
-              to: "docs/contweaks",
+              label: "Cosmos",
+              to: "cosmos/overview",
             },
           ],
         },
@@ -309,7 +309,7 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
+              label: "Latest",
               to: "blog/",
             },
             {

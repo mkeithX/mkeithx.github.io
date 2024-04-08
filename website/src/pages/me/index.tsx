@@ -64,8 +64,8 @@ function About(): JSX.Element {
                   perspective and enhancing my skill set.
                 </p>
                 <p>
-                  Feel free to <Link to={"/projects"}>explore my projects</Link>{" "}
-                  or check out{" "}
+                  Feel free to explore some of
+                  <Link to={"/projects"}> my projects</Link> or check out{" "}
                   <a target="_blank" rel="noreferrer" href={resumeUrl}>
                     my resume
                   </a>
