@@ -228,7 +228,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "img/banner/social-banner-new.png",
+    image: "img/banner/social-banner-new-x.png",
 
     navbar: {
       // style: "dark",
