@@ -21,7 +21,7 @@ function HomepageHeader() {
         />
 
         <div className={clsx("hero__subtitle")}>
-          <span className="text-small">{"🚀"}</span>
+          <span className="text-small">{"Exploring the Cosmos 🚀"}</span>
         </div>
 
         <Heading as="h2" className="hero__title">
@@ -42,7 +42,7 @@ function HomepageHeader() {
             className="button button--outline button--primary button--lg px-4"
             to="/keyword"
           >
-            {"Explore"}
+            {"Learn more"}
           </Link>
         </div>
       </div>
