@@ -26,17 +26,17 @@ const internetProfiles = {
     href: "https://twitter.com/mkeithtan",
   },
 
-  Kitiplex: {
+  kitiplex: {
     label: "Kitiplex",
     href: "https://kitiplex.github.io/",
   },
 
-  IUIU: {
+  iuiu: {
     label: "IUIU",
     href: "https://kitiplex.github.io/iuiu",
   },
 
-  Discussion: {
+  discussion: {
     label: "Discussion",
     href: "https://github.com/kitiplex/iuiu/issues/new/choose",
   },
@@ -121,9 +121,9 @@ const config: Config = {
         blog: {
           path: "blog",
           blogTitle: "Recents",
-          blogDescription: "News and updates from Keith's Universe",
+          blogDescription: "News and updates from MKX SpaceHub.",
           routeBasePath: "blog",
-          blogSidebarTitle: "Recent",
+          blogSidebarTitle: "What's new",
           blogSidebarCount: 5,
           include: ["**/*.{md,mdx}"],
 
@@ -228,7 +228,15 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
+
+
     image: "img/banner/social-banner-new-x.png",
+    metadata: [
+      {
+        name: "og:image",
+        content: "img/banner/social-banner-new-x.png"
+      },
+    ],
 
     navbar: {
       // style: "dark",
@@ -250,7 +258,7 @@ const config: Config = {
           label: "Guides",
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
-        { to: "/blog", label: "Latest", position: "left" },
+        { to: "/blog", label: "What's new", position: "left" },
 
         { to: "projects/", label: "Showcase", position: "right" },
         {
@@ -258,9 +266,9 @@ const config: Config = {
           label: "External",
           position: "right",
           items: [
-            internetProfiles.Kitiplex,
-            internetProfiles.IUIU,
-            internetProfiles.Discussion,
+            internetProfiles.kitiplex,
+            internetProfiles.iuiu,
+            internetProfiles.discussion,
             // {
             //   type: 'doc',
             //   label: 'Social',
@@ -275,15 +283,27 @@ const config: Config = {
           position: "right",
           className: "header-github-link",
         },
+        {
+          type: 'search', // algolia search
+          position: 'right',
+        },
       ],
     },
+
+    algolia: {
+      apiKey: '82fefaa9b089c4e0914d06335b19eb19',
+      indexName: 'mkeithxio',
+      appId: 'X2M5FPT6G9',
+      contextualSearch: false,
+    },
+
     footer: {
       style: "dark",
       logo: {
         alt: "mkeithX",
         src: "img/logo/spacehub-x-logo-light.png",
         href: "/",
-        height: "40",
+        height: "35",
         // width: '60'
       },
       links: [
