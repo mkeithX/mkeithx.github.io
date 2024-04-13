@@ -22,7 +22,7 @@
   --kiti-pale: #C8BFE7;
   --kiti-soft-grey: #C3C3C3;
 
-  --ifm-code-font-size: 90%;
+  --ifm-code-font-size: 95%;
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
 
@@ -118,7 +118,13 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 
-
+.video-container {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+  max-width: 560px;
+  margin: 0 auto;
+}
 
 
 div[class^='announcementBar_']{
@@ -127,19 +133,19 @@ div[class^='announcementBar_']{
   background-color: #20232a !important;
 }
 
-.alert--danger {
+/* .alert--danger {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
   --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
   --ifm-alert-foreground-color: rgb(66,69,73);
   --ifm-alert-border-color: #d4351c;
-}
+} */
 
-html[data-theme='dark'] .alert--danger {
+/* html[data-theme='dark'] .alert--danger {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
   --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
   --ifm-alert-foreground-color: rgb(255,255,255);
   --ifm-alert-border-color: #d4351c;
-}
+} */
 
 
 [data-theme='light'] .DocSearch {
