@@ -22,7 +22,7 @@
   --kiti-pale: #C8BFE7;
   --kiti-soft-grey: #C3C3C3;
 
-  --ifm-code-font-size: 95%;
+  --ifm-code-font-size: 90%;
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
 
@@ -30,7 +30,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
- /* [data-theme='dark'] {
+ [data-theme='dark'] {
   --ifm-color-primary: #00a4ef;
   --ifm-color-primary-dark: #0094d7;
   --ifm-color-primary-darker: #008bcb;
@@ -39,9 +39,9 @@
   --ifm-color-primary-lighter: #14b5ff;
   --ifm-color-primary-lightest: #38c0ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}  */
+} 
 
-[data-theme='dark'] {
+/* [data-theme='dark'] {
   --ifm-color-primary: #1da1f2;
   --ifm-color-primary-dark: #0d94e7;
   --ifm-color-primary-darker: #0d8cda;
@@ -50,7 +50,7 @@
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-}
+} */
 
 /* [data-theme='dark'] {
   --ifm-color-primary: #4e89e8;
@@ -63,9 +63,6 @@
 .navbar__title {
   display: none;
 }
-
-
-
 
 .navbar .navbar__items {
   flex: auto;

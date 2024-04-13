@@ -118,7 +118,7 @@ const config: Config = {
           beforeDefaultRemarkPlugins: [],
           beforeDefaultRehypePlugins: [],
           docItemComponent: "@theme/DocItem",
-          docRootComponent: '@theme/DocRoot',
+          docRootComponent: "@theme/DocRoot",
         },
 
         blog: {
@@ -127,7 +127,7 @@ const config: Config = {
           blogDescription: "News and updates from MKX SpaceHub.",
           routeBasePath: "blog",
           blogSidebarTitle: "What's new",
-          blogSidebarCount: 'ALL',
+          blogSidebarCount: "ALL",
           include: ["**/*.{md,mdx}"],
 
           exclude: [
@@ -136,7 +136,7 @@ const config: Config = {
             "**/*.test.{js,jsx,ts,tsx}",
             "**/__tests__/**",
           ],
-          postsPerPage: 'ALL',
+          postsPerPage: "ALL",
           blogListComponent: "@theme/BlogListPage",
           blogPostComponent: "@theme/BlogPostPage",
           blogTagsListComponent: "@theme/BlogTagsListPage",
@@ -146,7 +146,6 @@ const config: Config = {
           rehypePlugins: [rehypeKatex],
           beforeDefaultRemarkPlugins: [],
           beforeDefaultRehypePlugins: [],
-
 
           feedOptions: {
             type: "all",
@@ -250,7 +249,7 @@ const config: Config = {
         src: "img/logo/logo-x-light.png",
         srcDark: "img/logo/logo-x-dark.png",
         target: "_self",
-        width: 160,
+        width: 180,
         height: 32,
       },
       items: [
@@ -261,9 +260,9 @@ const config: Config = {
           label: "Guides",
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
-        { to: "blog/", label: "What's new", position: "left" },
+        { to: "blog", label: "What's new", position: "left" },
 
-        { to: "projects/", label: "Showcase", position: "right" },
+        { to: "projects", label: "Showcase", position: "right" },
         {
           type: "dropdown",
           label: "External",
@@ -294,7 +293,7 @@ const config: Config = {
     },
 
     algolia: {
-      apiKey: "82fefaa9b089c4e0914d06335b19eb19",
+      apiKey: "55634a57a78abcd476d22a48eb543486",
       indexName: "mkeithxio",
       appId: "X2M5FPT6G9",
       contextualSearch: false,
@@ -307,7 +306,7 @@ const config: Config = {
         src: "img/logo/spacehub-x-logo-light.png",
         href: "/",
         height: "32",
-        width: '300'
+        width: "300",
       },
       links: [
         {
