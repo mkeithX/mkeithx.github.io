@@ -36,8 +36,9 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_programming.svg").default,
     description: (
       <>
-        Curated list of tips, tricks, and workarounds.{" "}
-        <Link to={"docs/contweaks"}>Learn more</Link>.
+        Curated list of tips, guides, project notes, and gists curated to
+        provide valuable insights. <Link to={"docs/contweaks"}>Learn more</Link>
+        .
       </>
     ),
   },
