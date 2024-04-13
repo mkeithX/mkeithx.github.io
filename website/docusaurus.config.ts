@@ -121,9 +121,9 @@ const config: Config = {
         blog: {
           path: "blog",
           blogTitle: "Recents",
-          blogDescription: "News and updates from Keith's Universe",
+          blogDescription: "News and updates from MKX SpaceHub.",
           routeBasePath: "blog",
-          blogSidebarTitle: "Recent",
+          blogSidebarTitle: "What's new",
           blogSidebarCount: 5,
           include: ["**/*.{md,mdx}"],
 
@@ -250,7 +250,7 @@ const config: Config = {
           label: "Guides",
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
-        { to: "/blog", label: "Latest", position: "left" },
+        { to: "/blog", label: "What's new", position: "left" },
 
         { to: "projects/", label: "Showcase", position: "right" },
         {
