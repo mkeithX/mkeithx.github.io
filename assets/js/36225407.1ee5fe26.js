@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7740],{8645:e=>{e.exports=JSON.parse('{"label":"astronomy","permalink":"/blog/tags/astronomy","allTagsPath":"/blog/tags","count":1,"unlisted":true}')}}]);
