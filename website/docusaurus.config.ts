@@ -46,7 +46,8 @@ const internetProfiles = {
 const config: Config = {
   // return {
   title: "MKX SpaceHub",
-  tagline: "A simple documentation website for web developers and physics enthusiasts.",
+  tagline:
+    "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
   url: "https://mkeithx.github.io",
@@ -75,10 +76,10 @@ const config: Config = {
       crossorigin: "anonymous",
     },
 
-    {
-      href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
-      rel: "stylesheet",
-    },
+    // {
+    //   href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
+    //   rel: "stylesheet",
+    // },
   ],
 
   customFields: {
@@ -91,7 +92,6 @@ const config: Config = {
   },
 
   presets: [
-
     [
       "classic",
 
@@ -102,9 +102,9 @@ const config: Config = {
           showLastUpdateTime: true,
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
-          disableVersioning: false,
-          editLocalizedFiles: false,
-          editCurrentVersion: false,
+          // disableVersioning: false,
+          // editLocalizedFiles: false,
+          // editCurrentVersion: false,
           routeBasePath: "docs",
           include: ["**/*.md", "**/*.mdx"],
           exclude: [
@@ -116,6 +116,7 @@ const config: Config = {
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
           docItemComponent: "@theme/DocItem",
+          docRootComponent: '@theme/DocRoot',
         },
 
         blog: {
@@ -183,7 +184,7 @@ const config: Config = {
 
   plugins: [
     [
-      'content-docs',
+      "content-docs",
       {
         id: "cosmos",
         path: "cosmos",
@@ -191,9 +192,9 @@ const config: Config = {
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: true,
-        disableVersioning: false,
-        editLocalizedFiles: false,
-        editCurrentVersion: false,
+        // disableVersioning: false,
+        // editLocalizedFiles: false,
+        // editCurrentVersion: false,
         sidebarPath: "./sidebarsCosmos.ts",
         include: ["**/*.md", "**/*.mdx"],
         exclude: [
@@ -205,12 +206,11 @@ const config: Config = {
         remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
         rehypePlugins: [rehypeKatex],
         docItemComponent: "@theme/DocItem",
-      } as DocsOptions, 
+      } as DocsOptions,
     ],
   ],
 
   themeConfig: {
-
     colorMode: {
       disableSwitch: false,
       respectPrefersColorScheme: true,
@@ -228,13 +228,11 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-
-
-    image: "img/banner/social-banner-new-x.png",
+    image: "img/banner/social-x.png",
     metadata: [
       {
         name: "og:image",
-        content: "img/banner/social-banner-new-x.png"
+        content: "img/banner/social-x.png",
       },
     ],
 
@@ -244,11 +242,11 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub Logo",
-        src: "img/logo/mkx-x-raw.png",
-        // srcDark: "img/logo/spacehub-x-logo-light.png",
+        src: "img/logo/logo-x-light.png",
+        srcDark: "img/logo/logo-x-dark.png",
         target: "_self",
-        width: 100,
-        height: 40,
+        width: 160,
+        height: 32,
       },
       items: [
         {
@@ -258,7 +256,7 @@ const config: Config = {
           label: "Guides",
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
-        { to: "/blog", label: "What's new", position: "left" },
+        { to: "blog/", label: "What's new", position: "left" },
 
         { to: "projects/", label: "Showcase", position: "right" },
         {
@@ -284,16 +282,16 @@ const config: Config = {
           className: "header-github-link",
         },
         {
-          type: 'search', // algolia search
-          position: 'right',
+          type: "search", // algolia search
+          position: "right",
         },
       ],
     },
 
     algolia: {
-      apiKey: '82fefaa9b089c4e0914d06335b19eb19',
-      indexName: 'mkeithxio',
-      appId: 'X2M5FPT6G9',
+      apiKey: "82fefaa9b089c4e0914d06335b19eb19",
+      indexName: "mkeithxio",
+      appId: "X2M5FPT6G9",
       contextualSearch: false,
     },
 
@@ -303,8 +301,8 @@ const config: Config = {
         alt: "mkeithX",
         src: "img/logo/spacehub-x-logo-light.png",
         href: "/",
-        height: "35",
-        // width: '60'
+        height: "32",
+        width: '300'
       },
       links: [
         {
