@@ -15,6 +15,7 @@ const sidebars: SidebarsConfig = {
 
   mySidebar: [
     'introduction',
+
     {
       type: "category",
       label: "Getting started",
@@ -32,7 +33,7 @@ const sidebars: SidebarsConfig = {
         description: "Projects, samples, demos and guides."
       }
     },
-
+    'media-embeds',
     {
       type: "category",
       label: "ConTweaks",

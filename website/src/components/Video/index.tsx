@@ -21,8 +21,8 @@ const Video = ({
       };
       maxWidth?: string;
       alt?: string;
-    }) =>
-  type === "youtube" ? (
+    }) => {
+  return type === "youtube" ? (
     <iframe
       width="100%"
       style={{
@@ -51,5 +51,6 @@ const Video = ({
       <source src={src.ogg} title={alt} type="video/ogg" />
     </video>
   ) : null;
+};
 
 export default Video;

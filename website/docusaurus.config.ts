@@ -115,6 +115,8 @@ const config: Config = {
           ],
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
           docItemComponent: "@theme/DocItem",
           docRootComponent: '@theme/DocRoot',
         },
@@ -125,7 +127,7 @@ const config: Config = {
           blogDescription: "News and updates from MKX SpaceHub.",
           routeBasePath: "blog",
           blogSidebarTitle: "What's new",
-          blogSidebarCount: 5,
+          blogSidebarCount: 'ALL',
           include: ["**/*.{md,mdx}"],
 
           exclude: [
@@ -134,7 +136,7 @@ const config: Config = {
             "**/*.test.{js,jsx,ts,tsx}",
             "**/__tests__/**",
           ],
-          postsPerPage: "ALL",
+          postsPerPage: 'ALL',
           blogListComponent: "@theme/BlogListPage",
           blogPostComponent: "@theme/BlogPostPage",
           blogTagsListComponent: "@theme/BlogTagsListPage",
@@ -142,6 +144,9 @@ const config: Config = {
 
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
+          beforeDefaultRemarkPlugins: [],
+          beforeDefaultRehypePlugins: [],
+
 
           feedOptions: {
             type: "all",
