@@ -6,7 +6,7 @@
     "items": [
         {
             "id": "https://mkeithx.github.io/blog/announcing-algolia",
-            "content_html": "<p>Today, I'm thrilled to announce that my <a href=\"https://mkeithx.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">website</a> now features SEARCH functionality, powered by <a href=\"https://docsearch.algolia.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Algolia</a>.</p>\n<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href=\"https://mkeithx.github.io/docs/contweaks/docusaurus/custom-algolia-search\" target=\"_blank\" rel=\"noopener noreferrer\"><strong>this article</strong></a>.</p>",
+            "content_html": "<p>Today, I'm thrilled to announce that my <a href=\"https://mkeithx.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">website</a> now features SEARCH functionality, powered by <a href=\"https://docsearch.algolia.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Algolia</a>.</p>\n<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href=\"https://mkeithx.github.io/blog/announcing-algolia#\"><strong>this article</strong></a>.</p>",
             "url": "https://mkeithx.github.io/blog/announcing-algolia",
             "title": "Announcing Algolia Search",
             "summary": "Today, I'm thrilled to announce that my website now features SEARCH functionality, powered by Algolia.",

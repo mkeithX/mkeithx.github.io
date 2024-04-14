@@ -16,7 +16,7 @@
             <pubDate>Thu, 28 Mar 2024 00:00:00 GMT</pubDate>
             <description><![CDATA[Today, I'm thrilled to announce that my website now features SEARCH functionality, powered by Algolia.]]></description>
             <content:encoded><![CDATA[<p>Today, I'm thrilled to announce that my <a href="https://mkeithx.github.io/" target="_blank" rel="noopener noreferrer">website</a> now features SEARCH functionality, powered by <a href="https://docsearch.algolia.com/" target="_blank" rel="noopener noreferrer">Algolia</a>.</p>
-<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href="https://mkeithx.github.io/docs/contweaks/docusaurus/custom-algolia-search" target="_blank" rel="noopener noreferrer"><strong>this article</strong></a>.</p>]]></content:encoded>
+<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href="https://mkeithx.github.io/blog/announcing-algolia#"><strong>this article</strong></a>.</p>]]></content:encoded>
             <author>email@kitimi.onmicrosoft.com (Keith Tan)</author>
             <category>updates</category>
             <category>docs</category>

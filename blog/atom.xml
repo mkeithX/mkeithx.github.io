@@ -15,7 +15,7 @@
         <updated>2024-03-28T00:00:00.000Z</updated>
         <summary type="html"><![CDATA[Today, I'm thrilled to announce that my website now features SEARCH functionality, powered by Algolia.]]></summary>
         <content type="html"><![CDATA[<p>Today, I'm thrilled to announce that my <a href="https://mkeithx.github.io/" target="_blank" rel="noopener noreferrer">website</a> now features SEARCH functionality, powered by <a href="https://docsearch.algolia.com/" target="_blank" rel="noopener noreferrer">Algolia</a>.</p>
-<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href="https://mkeithx.github.io/docs/contweaks/docusaurus/custom-algolia-search" target="_blank" rel="noopener noreferrer"><strong>this article</strong></a>.</p>]]></content>
+<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href="https://mkeithx.github.io/blog/announcing-algolia#"><strong>this article</strong></a>.</p>]]></content>
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
