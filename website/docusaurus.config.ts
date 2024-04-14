@@ -102,9 +102,6 @@ const config: Config = {
           showLastUpdateTime: true,
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
-          // disableVersioning: false,
-          // editLocalizedFiles: false,
-          // editCurrentVersion: false,
           routeBasePath: "docs",
           include: ["**/*.md", "**/*.mdx"],
           exclude: [
@@ -115,10 +112,6 @@ const config: Config = {
           ],
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
-          beforeDefaultRemarkPlugins: [],
-          beforeDefaultRehypePlugins: [],
-          docItemComponent: "@theme/DocItem",
-          docRootComponent: "@theme/DocRoot",
         },
 
         blog: {
@@ -137,15 +130,9 @@ const config: Config = {
             "**/__tests__/**",
           ],
           postsPerPage: "ALL",
-          blogListComponent: "@theme/BlogListPage",
-          blogPostComponent: "@theme/BlogPostPage",
-          blogTagsListComponent: "@theme/BlogTagsListPage",
-          blogTagsPostsComponent: "@theme/BlogTagsPostsPage",
 
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
-          beforeDefaultRemarkPlugins: [],
-          beforeDefaultRehypePlugins: [],
 
           feedOptions: {
             type: "all",
@@ -174,9 +161,6 @@ const config: Config = {
           mdxPageComponent: "@theme/MDXPage",
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
-
-          beforeDefaultRemarkPlugins: [],
-          beforeDefaultRehypePlugins: [],
         },
 
         theme: {
@@ -196,9 +180,6 @@ const config: Config = {
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         breadcrumbs: true,
-        // disableVersioning: false,
-        // editLocalizedFiles: false,
-        // editCurrentVersion: false,
         sidebarPath: "./sidebarsCosmos.ts",
         include: ["**/*.md", "**/*.mdx"],
         exclude: [
@@ -257,12 +238,29 @@ const config: Config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "mySidebar",
-          label: "Guides",
+          label: "Documentation",
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
-        { to: "blog", label: "What's new", position: "left" },
+        { to: "blog", label: "What's new", position: "right" },
+        {
+          type: 'dropdown',
+          label: 'Demo',
+          position: 'right',
+          items: [
+            {
+              type: 'doc',
+              docId: 'guides/python-starters/python-overview',
+              label: 'Python Starters'
+            },
+            {
+              to: 'projects',
+              label: 'Showcase'
+            },
 
-        { to: "projects", label: "Showcase", position: "right" },
+          ]
+        },
+
+
         {
           type: "dropdown",
           label: "External",
@@ -271,10 +269,11 @@ const config: Config = {
             internetProfiles.kitiplex,
             internetProfiles.iuiu,
             internetProfiles.discussion,
+
             // {
             //   type: 'doc',
             //   label: 'Social',
-            //   docId: 'introduction',
+            //   docId: 'the-keyword',
             // },
             // ... more items
           ],
@@ -314,7 +313,7 @@ const config: Config = {
           items: [
             {
               label: "Guides",
-              to: "docs/guides/",
+              to: "docs",
             },
 
             {

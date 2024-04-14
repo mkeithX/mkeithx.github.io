@@ -1,11 +1,13 @@
 label: Getting Started
 collapsible: true
 collapsed: true
-position: 3
+# position: 3
 link: 
-    type: generated-index
-    description: Projects, samples, demos and guides.
-    slug: /guides
+    type: doc
+    id: guides/website-configuration
+    # type: generated-index
+    # description: Projects, samples, demos and guides.
+    # slug: /guides
 
 
 

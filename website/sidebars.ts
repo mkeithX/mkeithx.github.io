@@ -14,11 +14,12 @@ const sidebars: SidebarsConfig = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
 
   mySidebar: [
-    'introduction',
+    'the-keyword',
+
 
     {
       type: "category",
-      label: "Getting started",
+      label: "Guides",
       items: [
         
         {
@@ -26,13 +27,13 @@ const sidebars: SidebarsConfig = {
           dirName: 'guides',
         },
       ],
-      description: "Projects, samples, demos and guides.",
-      link: {
-        type: "generated-index",
-        slug: '/guides',
-        description: "Projects, samples, demos and guides."
-      }
+
+      // link: {
+      //   type: "doc",
+      //   id: "guides/website-configuration",
+      // }
     },
+    'introduction',
     'media-embeds',
     {
       type: "category",
