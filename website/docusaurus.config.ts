@@ -292,7 +292,7 @@ const config: Config = {
     },
 
     algolia: {
-      apiKey: "55634a57a78abcd476d22a48eb543486",
+      apiKey: "82fefaa9b089c4e0914d06335b19eb19",
       indexName: "mkeithxio",
       appId: "X2M5FPT6G9",
       contextualSearch: false,

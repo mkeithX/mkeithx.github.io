@@ -37,7 +37,7 @@ const FeatureList: FeatureItem[] = [
     description: (
       <>
         Curated list of tips, guides, project notes, and gists curated to
-        provide valuable insights. <Link to={"docs/contweaks"}>Learn more</Link>
+        provide valuable insights. <Link to={"docs"}>Learn more</Link>
         .
       </>
     ),
