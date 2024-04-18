@@ -224,7 +224,7 @@ const config: Config = {
     navbar: {
       // style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      // title: "SpaceHub",
       logo: {
         alt: "SpaceHub Logo",
         src: "img/logo/logo-x-light.png",
@@ -245,7 +245,7 @@ const config: Config = {
         {
           type: 'dropdown',
           label: 'Demo',
-          position: 'right',
+          position: 'left',
           items: [
             {
               type: 'doc',

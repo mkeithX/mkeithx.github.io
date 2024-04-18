@@ -5,18 +5,18 @@ import { Case } from "./_components/ProjectCards";
 
 export const cases: Case[] = [
   {
-    title: "Native Website",
-    website: "https://mkeithx.github.io",
+    title: "MKX SpaceHub",
+    website: "https://bit.ly/mkeithx",
     preview: require("@site/src/data/projects/sc-mkeithx-2.png").default,
     description: (
-      <>My official website powered by Docusaurus TypeScript variant.</>
+      <>A simple documentation website for web developers and physics enthusiasts.</>
     ),
     source: "",
     tags: ["TypeScript", "React", "Python"],
   },
   {
-    title: "Kitiplex",
-    website: "https://kitiplex.github.io",
+    title: "Kitiplex Website",
+    website: "https://bit.ly/kitiplex",
     preview: require("@site/src/data/projects/ms-banner-kitiplex.png").default,
     description: <>Open source projects and samples from Kitimi.</>,
     source: "https://github.com/kitiplex/kitiplex.github.io/tree/archive",
