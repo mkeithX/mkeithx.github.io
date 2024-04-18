@@ -27,11 +27,6 @@ const sidebars: SidebarsConfig = {
           dirName: 'guides',
         },
       ],
-
-      // link: {
-      //   type: "doc",
-      //   id: "guides/website-configuration",
-      // }
     },
     'media-embeds',
     {
