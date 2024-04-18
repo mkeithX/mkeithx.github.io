@@ -57,7 +57,7 @@ export default function Home(): JSX.Element {
   const { description } = customFields as { description: string };
   return (
     <Layout
-      title={description}
+      // title={description}
       description={title}
     >
       <HomepageHeader />

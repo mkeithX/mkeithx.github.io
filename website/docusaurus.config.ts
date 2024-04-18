@@ -76,10 +76,6 @@ const config: Config = {
       crossorigin: "anonymous",
     },
 
-    // {
-    //   href: "https://cdn.jsdelivr.net/npm/@docsearch/css@3",
-    //   rel: "stylesheet",
-    // },
   ],
 
   customFields: {
@@ -249,8 +245,13 @@ const config: Config = {
           items: [
             {
               type: 'doc',
-              docId: 'guides/python-starters/python-overview',
-              label: 'Python Starters'
+              docId: 'demo-overview',
+              label: 'Docs'
+            },
+            {
+              type: 'doc',
+              docId: 'msp-overview',
+              label: 'MSP'
             },
             {
               to: 'projects',
@@ -285,7 +286,7 @@ const config: Config = {
           className: "header-github-link",
         },
         {
-          type: "search", // algolia search
+          type: "search",
           position: "right",
         },
       ],
