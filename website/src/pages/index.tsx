@@ -21,13 +21,13 @@ function HomepageHeader() {
         />
 
         <div className={clsx("hero__subtitle")}>
-          <span className="text-small">{"Exploring the Cosmos 🚀"}</span>
+          <span className="text-small">{"Explore 🚀"}</span>
         </div>
 
         <Heading as="h2" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-              MKX Space<b>Hub</b>.
+              <b>MKX</b> Space<b>Hub</b>.
               {/* {siteConfig.title} */}
               {/* <b>.</b> */}
             </div>

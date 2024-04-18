@@ -48,6 +48,8 @@ const config: Config = {
   title: "MKX SpaceHub",
   tagline:
     "A simple documentation website for web developers and physics enthusiasts.",
+  // tagline:
+  // "Unified documentation website for web development, physics and more.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
   url: "https://mkeithx.github.io",
@@ -234,7 +236,7 @@ const config: Config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "mySidebar",
-          label: "Documentation",
+          label: "Docs",
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
         { to: "blog", label: "What's new", position: "right" },
@@ -246,7 +248,7 @@ const config: Config = {
             {
               type: 'doc',
               docId: 'demo-overview',
-              label: 'Docs'
+              label: 'Demo Docs'
             },
             {
               type: 'doc',
@@ -310,13 +312,16 @@ const config: Config = {
       },
       links: [
         {
-          title: "Docs",
+          title: "Documentation",
           items: [
             {
-              label: "Guides",
+              label: "The Keyword",
               to: "docs",
             },
-
+            {
+              label: "Demo Docs",
+              to: "docs/demo-overview",
+            },
             {
               label: "Cosmos",
               to: "cosmos/overview",
@@ -325,7 +330,7 @@ const config: Config = {
         },
         {
           title: "Connect",
-          items: [internetProfiles.linkedin, internetProfiles.twitter],
+          items: [internetProfiles.linkedin, internetProfiles.twitter, internetProfiles.github],
         },
 
         {
@@ -348,7 +353,7 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["powershell", "python", "java", "bash", "json"],
+      additionalLanguages: ["powershell", "python", "java", "bash", "json", "batch"],
     },
   } satisfies Preset.ThemeConfig,
 };

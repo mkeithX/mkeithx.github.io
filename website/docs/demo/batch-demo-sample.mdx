@@ -3,3 +3,74 @@ title: Batch minis
 description: Batch files examples.
 # 
 ---
+
+### Lock workstation
+
+<details>
+<summary>Sample Code</summary>
+
+```batch
+@echo off
+
+Rundll32.exe User32.dll,LockWorkStation
+```
+
+</details>
+
+
+### Logoff
+
+<details>
+<summary>Sample Code</summary>
+
+```batch
+@echo off
+
+REM Clear all Temporary Internet Files and IE History
+RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8
+RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 1
+
+REM Remove all files from %TEMP%
+sdelete -s %TEMP%\*.*
+
+REM Remove list of Recently opened documents
+sdelete "%USERPROFILE%\Recent\*.*"
+
+REM Clears DNS records and Resets TCP/IP
+ipconfig /flushdns
+
+REM Change directory to where puttylogs.py is located and Execute the Python script
+cd /d "path_to_puttylogs_directory" && python puttylogs.py
+
+REM Log the date/time
+echo %DATE% %TIME% >> %HOMEDRIVE%\logoff.txt
+
+REM Log off my machine
+shutdown -l -f
+```
+
+</details>
+
+### Group policy
+
+
+<details>
+<summary>Sample Code</summary>
+
+```batch
+@echo off
+pushd "%~dp0"
+
+dir /b "%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum" > List.txt
+dir /b "%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum" >> List.txt
+
+for /f %%i in (List.txt) do (
+    dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+)
+
+del List.txt
+
+pause
+```
+
+</details>
