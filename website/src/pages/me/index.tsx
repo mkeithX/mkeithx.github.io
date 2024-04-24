@@ -64,7 +64,7 @@ function About(): JSX.Element {
                   perspective and enhancing my skill set.
                 </p>
                 <p>
-                  Feel free to explore some of
+                  Feel free to explore some of {" "}
                   <Link to={"/projects"}> my projects</Link> or check out{" "}
                   <a target="_blank" rel="noreferrer" href={resumeUrl}>
                     my resume
@@ -73,7 +73,7 @@ function About(): JSX.Element {
                 </p>
                 <p>Thank you!</p>
 
-                <p className="align-center">
+                <p className="text--justify">
                   <Link
                     to={"https://github.com/mkeithx"}
                     className={clsx("mx-3")}

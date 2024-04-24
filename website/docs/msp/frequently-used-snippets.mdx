@@ -38,13 +38,13 @@ This article/page outlines the most frequently used snippets for a Help Desk Coo
 
 
 
-## Tech Notes{#tech-notes}
+## Getting started
 
 
 <details>
-<summary><b>Standard</b> </summary>
+<summary><b>Tech Notes</b> </summary>
 
-See [**probing questions**](#probe)
+
 
 <Tabs>
   <TabItem value="iinfo" label="Initial Info" default>
@@ -66,6 +66,11 @@ How impacting to your work: n/a
 Still able to perform work: n/a
 Other relevant details: n/a
 ```
+:::tip[See [**probing questions**](#probe)]
+
+
+
+:::
 
 </TabItem>
 <TabItem value="inbound" label="Inbound">
@@ -126,7 +131,7 @@ Best,
 <details>
 <summary><b>Acknowledgement</b></summary>
 
-<h4 id="#heading-id">Standard email template for Low and High Priority tickets.</h4>
+<h4 id="##heading-id">Standard email template for Low and High Priority tickets.</h4>
 
 <Tabs>
 <TabItem value="low" label="P3">
@@ -148,7 +153,7 @@ Best,
 
 </TabItem>
 
-<TabItem value="P2/P1" label="P2/P1">
+<TabItem value="P2/P1" label="P2 | P1">
 
 ```md
 Hi ,
@@ -173,7 +178,7 @@ Best,
 </details>
 
 <details>
-<summary>Aux</summary>
+<summary><b>Aux</b></summary>
 
 <Tabs>
 
@@ -237,7 +242,7 @@ Best,
 </details>
 
 <details>
-<summary>Change Request</summary>
+<summary><b>Change Request</b></summary>
 
 
 
@@ -246,7 +251,7 @@ Best,
 
  <TabItem value="appr" label="Approvers">
 
-:::warning[Email for Approvers]
+:::danger[For Approvers]
 
 :::
 
@@ -263,11 +268,12 @@ Best,
 
 ```
 
+
 </TabItem>
 
 <TabItem value="cln" label="Endusers">
 
-:::tip[Email for Endusers]
+:::tip[For End users]
 
 :::
 
@@ -293,7 +299,7 @@ Best,
 </details>
 
 <details>
-<summary>Appointment</summary>
+<summary><b>Appointment</b></summary>
 
 <Tabs>
 <TabItem value="sd" label="Same Day">
@@ -324,6 +330,7 @@ I hope you’re doing well.
 I’m reaching out to inform you that we have set an appointment for the technician to reach out to you on between .
 
 A reminder as well that if there is a need to conduct a remote session, kindly save and close all applications, websites, and documents before the remote connection to prevent data loss.
+
 Thank you.
 
 Best,
@@ -339,7 +346,7 @@ Best,
 ## Flags{#flags}
 
 <details>
-<summary>Followup</summary>
+<summary><b>Follow up</b></summary>
 
 <Tabs
   defaultValue="r1"
@@ -377,7 +384,7 @@ Hi team, a gentle follow-up on this please. Thank you.
 </details>
 
 <details>
-<summary>Update users</summary>
+<summary><b>User update</b></summary>
 
 <Tabs
   defaultValue="r1"
@@ -408,14 +415,13 @@ Hi team, we have successfully marked this user as inactive in our end. Thank you
 </details>
 
 <details>
-<summary>Status</summary>
+<summary><b>Status</b></summary>
 
 <Tabs
   defaultValue="r1"
   values={[
     {label: 'Notif', value: 'r1'},
     {label: 'Callback', value: 'r2'},
-    {label: 'NotSupport', value: 'r3'},
     {label: 'Urgent', value: 'r4'},
   ]}>
   <TabItem value="r1">
@@ -437,14 +443,7 @@ Thank you.
 
 </TabItem>
 
-<TabItem value="r3">
 
-```md
-Hi team, escalating this request as this site is currently not supported. Thank you.
-
-````
-
-</TabItem>
 
 <TabItem value="r4">
 
@@ -456,12 +455,96 @@ Hi team, letting you know about this urgent request is now being handled by our 
 
 </details>
 
+<details>
+<summary><b>Change request</b></summary>
+
+<Tabs
+  defaultValue="r1"
+  values={[
+    {label: 'General', value: 'r1'},
+    {label: 'License', value: 'r2'},
+    {label: 'NotSupport', value: 'r3'},
+  ]}>
+  <TabItem value="r1">
+  
+  ```md
+  Hi team, we've received this request and would like to confirm whether it is safe to proceed. Thank you.
+
+  ```
+
+</TabItem>
+<TabItem value="r2">
+
+```md
+Hi team, we've received this request that requires license and approval. Thank you.
+```
+
+</TabItem>
+
+<TabItem value="r3">
+
+```md
+Hi team, escalating this request as this site is currently not supported. Thank you.
+
+````
+
+</TabItem>
+
+</Tabs>
+
+</details>
+
+<details>
+<summary><b>Escalate</b></summary>
+
+<Tabs
+  defaultValue="r1"
+  values={[
+    {label: 'Dirs', value: 'r1'},
+    {label: 'LoadBal', value: 'r2'},
+    {label: 'NotSupport', value: 'r3'},
+  ]}>
+  <TabItem value="r1">
+  
+  ```md
+  Hi team, escalating this ticket per directive. Thank you.
+
+  ```
+
+</TabItem>
+<TabItem value="r2">
+  
+  ```md
+  Hi team, escalating this ticket due to load balancing. Thank you.
+
+````
+
+</TabItem>
+
+<TabItem value="r3">
+
+```md
+Hi team, escalating this request as this site is currently not supported. Thank you.
+
+````
+
+</TabItem>
+
+</Tabs>
+
+</details>
+
 ## Probe
 
 
-:::tip[Generic probing questions]
+::::note[__Generic probing questions__]
 
 
+Back to [__Tech Notes__](#getting-started)
+
+
+<details>
+<summary>View</summary>
 
 <Tabs>
   <TabItem value="probe" label="Generic">
@@ -498,5 +581,8 @@ Hi team, letting you know about this urgent request is now being handled by our 
 
 </Tabs>
 
-:::
+</details>
+
+
+::::
 

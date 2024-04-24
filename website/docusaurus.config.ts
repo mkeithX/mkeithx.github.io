@@ -247,14 +247,16 @@ const config: Config = {
           items: [
             {
               type: 'doc',
-              docId: 'demo-overview',
-              label: 'Demo Docs'
-            },
-            {
-              type: 'doc',
               docId: 'msp-overview',
               label: 'MSP'
             },
+
+            {
+              type: 'doc',
+              docId: 'demo-overview',
+              label: 'Project Docs'
+            },
+
             {
               to: 'projects',
               label: 'Showcase'
