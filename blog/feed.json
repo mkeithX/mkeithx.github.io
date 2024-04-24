@@ -5,6 +5,19 @@
     "description": "MKX SpaceHub Blog",
     "items": [
         {
+            "id": "https://mkeithx.github.io/blog/tribute-to-shiloh",
+            "content_html": "<p>Today, I want to honor a special dog owned by someone very dear to me. Though I never had the pleasure of meeting this canine friend named Shiloh, I've been touched by countless stories of her playful and loving nature.</p>\n<p>Though she may have crossed the rainbow bridge, her memory lives on in the hearts of those who knew and loved her. Today, I honor her legacy and the special bond shared with her human companions.</p>\n<p>Farewell, dear Shiloh. You may have only been a part of our lives for a short time, but your paw prints will forever be etched in our hearts.</p>\n<p><img decoding=\"async\" loading=\"lazy\" src=\"https://imgur.com/PcmXJp9.png\" alt=\"shiloh\" class=\"img_ev3q\"></p>",
+            "url": "https://mkeithx.github.io/blog/tribute-to-shiloh",
+            "title": "Tribute to Shiloh",
+            "summary": "Today, I want to honor a special dog owned by someone very dear to me. Though I never had the pleasure of meeting this canine friend named Shiloh, I've been touched by countless stories of her playful and loving nature.",
+            "date_modified": "2024-04-10T00:00:00.000Z",
+            "author": {
+                "name": "Keith Tan",
+                "url": "https://github.com/mkeithx"
+            },
+            "tags": []
+        },
+        {
             "id": "https://mkeithx.github.io/blog/announcing-algolia",
             "content_html": "<p>Today, I'm thrilled to announce that my <a href=\"https://mkeithx.github.io/\" target=\"_blank\" rel=\"noopener noreferrer\">website</a> now features SEARCH functionality, powered by <a href=\"https://docsearch.algolia.com/\" target=\"_blank\" rel=\"noopener noreferrer\">Algolia</a>.</p>\n<p>Also, I'm happy to share my custom configuration that includes Crawlers outlined in <a href=\"https://mkeithx.github.io/blog/announcing-algolia#\"><strong>this article</strong></a>.</p>",
             "url": "https://mkeithx.github.io/blog/announcing-algolia",
