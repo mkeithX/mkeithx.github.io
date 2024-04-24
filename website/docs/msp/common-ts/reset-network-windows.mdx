@@ -4,11 +4,17 @@ title: Reset Network Settings on Windows 10 and 11
 sidebar_label: Reset Network Settings
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Reset Network: Windows 10 and 11
 
 If you're experiencing network connectivity issues on your Windows 10 or Windows 11 PC, resetting network settings can often resolve the problem. This process will revert your network configuration to its default state, potentially fixing any misconfigurations or conflicts. Here's how to reset network settings on both Windows 10 and Windows 11:
 
-## Resetting Network Settings on Windows 10
+## Via Settings
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win10" label="Windows 10">
 
 1. **Open Settings**: Click on the Start menu, then select "Settings" (the gear icon).
 
@@ -22,7 +28,8 @@ If you're experiencing network connectivity issues on your Windows 10 or Windows
 
 6. **Restart Your PC**: After the network reset is complete, restart your computer for the changes to take effect.
 
-## Resetting Network Settings on Windows 11
+  </TabItem>
+  <TabItem value="win11" label="Windows 11">
 
 1. **Open Settings**: Click on the Start menu, then select "Settings" (the gear icon).
 
@@ -35,16 +42,8 @@ If you're experiencing network connectivity issues on your Windows 10 or Windows
 5. **Confirmation**: A confirmation dialog will appear. Click on "Yes" to confirm and proceed with the network reset.
 
 6. **Restart Your PC**: After the network reset is complete, restart your computer for the changes to take effect.
-
-## Additional Notes
-
-- **Backup**: Before resetting your network settings, ensure that you have a backup of any important network configurations or settings.
-  
-- **Driver Updates**: After resetting network settings, you may need to update your network adapter drivers to ensure optimal performance.
-
-- **Wi-Fi Passwords**: You'll need to re-enter Wi-Fi passwords and reconfigure any custom network settings after performing a network reset.
-
-By following these steps, you can easily reset network settings on both Windows 10 and Windows 11, helping to resolve network connectivity issues and restoring optimal network performance.
+  </TabItem>
+</Tabs>
 
 
 ## Via Command Prompt
@@ -73,3 +72,23 @@ netsh int ip reset
 ```sh
 netsh winsock reset
 ```
+
+
+
+## Additional Notes
+
+:::tip[Important]
+
+
+
+- **Backup**: Before resetting your network settings, ensure that you have a backup of any important network configurations or settings.
+  
+- **Driver Updates**: After resetting network settings, you may need to update your network adapter drivers to ensure optimal performance.
+
+- **Wi-Fi Passwords**: You'll need to re-enter Wi-Fi passwords and reconfigure any custom network settings after performing a network reset.
+
+
+
+:::
+
+By following these steps, you can easily reset network settings on both Windows 10 and Windows 11, helping to resolve network connectivity issues and restoring optimal network performance.
