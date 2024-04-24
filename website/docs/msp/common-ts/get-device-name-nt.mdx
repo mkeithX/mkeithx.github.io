@@ -1,0 +1,74 @@
+---
+id: get-device-name-nt
+title: Get Device Name in Windows 10 and 11
+# sidebar_label: 
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+
+<!-- In Windows 10, the device name is an identifier for your computer or device on a network. It's helpful to know your device name for various administrative tasks or when connecting to a network. Here's how you can easily find your device name: -->
+
+## Method 1: Using Settings
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win10" label="Windows 10">
+  
+    1. **Open Settings:** Click on the Start menu, then select "Settings" (the gear icon).
+    2. **Navigate to System:** In the Settings window, click on "System."
+    3. **About:** Scroll down on the left sidebar and select "About."
+    4. **Device Name:** Look for the "Device name" under the Device specifications section. This is your device's name.
+  
+  </TabItem>
+  <TabItem value="win11" label="Windows 11">
+  
+    1. **Open Settings:** Click on the Start menu, then select "Settings" (the gear icon).
+    2. **Navigate to System:** In the Settings window, click on "System."
+    3. **About:** Scroll down on the left sidebar and select "About."
+    4. **Device Name:** Look for the "Device name" under the Device specifications section. This is your device's name.
+  
+  </TabItem>
+</Tabs>
+
+## Method 2: Using Command Prompt
+
+1. **Open Command Prompt:** Press `Win + R` keys to open the Run dialog, type `cmd`, and press Enter.
+2. **Run Command:** In the Command Prompt window, type the following command and press Enter:
+
+
+
+
+<Tabs groupId="operating-systems">
+  <TabItem value="win10" label="Windows 10">
+
+```sh
+hostname
+```
+
+  </TabItem>
+  <TabItem value="win11" label="Windows 11">
+
+```sh
+hostname
+```
+
+  </TabItem>
+</Tabs>
+
+## Method 3: Using System Properties
+
+1. **Open System Properties:** Press `Win + Pause/Break` keys to open the System Properties window.
+2. **View Device Name:** In the System Properties window, go to the "Computer Name" tab. You'll find your device name listed under "Full computer name."
+
+
+
+
+<!-- <Tabs groupId="operating-systems">
+  <TabItem value="win10" label="Windows 10">
+    Use Ctrl + V to paste.
+  </TabItem>
+  <TabItem value="win11" label="Windows 11">
+    Use Command + V to paste.
+  </TabItem>
+</Tabs> -->
