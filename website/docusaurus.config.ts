@@ -327,7 +327,7 @@ const config: Config = {
           title: "Documentation",
           items: [
             {
-              label: "The Keyword",
+              label: "Keyword",
               to: "docs",
             },
             {
@@ -342,7 +342,7 @@ const config: Config = {
         },
         {
           title: "Connect",
-          items: [internetProfiles.linkedin, internetProfiles.twitter, internetProfiles.github],
+          items: [internetProfiles.twitter, internetProfiles.linkedin,internetProfiles.github],
         },
 
         {
