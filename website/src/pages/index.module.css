@@ -34,7 +34,7 @@
 
 
  .container {
-  --ifm-container-width: 900px;
+  --ifm-container-width: 996px;
 }
 
 .heroBanner {
@@ -83,10 +83,10 @@
 
 @keyframes kit-in-the-box {
   from {
-    transform: rotate(360deg) scale(1.3);
+    transform: rotate(360deg) scale(1.5);
   }
   to {
-    transform: rotate(-360deg) scale(1.3);
+    transform: rotate(-360deg) scale(1.5);
   }
  }
 

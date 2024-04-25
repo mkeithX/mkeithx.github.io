@@ -6,7 +6,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import BannerLogo from "@site/static/img/banner/orbit-x-z.svg";
+import BannerLogo from "@site/static/img/banner/test-orbit.svg";
 import React from "react";
 
 function HomepageHeader() {
@@ -21,13 +21,18 @@ function HomepageHeader() {
         />
 
         <div className={clsx("hero__subtitle")}>
-          <span className="text-small">{"Explore 🚀"}</span>
+          <span className="text-small">{" 🚀 "}</span>
         </div>
 
-        <Heading as="h2" className="hero__title">
+        <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-              <b>MKX</b> Space<b>Hub</b>.
+               
+
+               MKX <br></br>
+               
+               Space<b>Hub</b>.
+
               {/* {siteConfig.title} */}
               {/* <b>.</b> */}
             </div>
@@ -42,7 +47,7 @@ function HomepageHeader() {
             className="button button--outline button--primary button--lg px-4"
             to="docs"
           >
-            {"Learn more"}
+            {"Explore"}
           </Link>
         </div>
       </div>

@@ -30,7 +30,7 @@
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
- [data-theme='dark'] {
+ /* [data-theme='dark'] {
   --ifm-color-primary: #00a4ef;
   --ifm-color-primary-dark: #0094d7;
   --ifm-color-primary-darker: #008bcb;
@@ -39,22 +39,25 @@
   --ifm-color-primary-lighter: #14b5ff;
   --ifm-color-primary-lightest: #38c0ff;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-} 
+}  */
 
-/* [data-theme='dark'] {
-  --ifm-color-primary: #1da1f2;
-  --ifm-color-primary-dark: #0d94e7;
-  --ifm-color-primary-darker: #0d8cda;
-  --ifm-color-primary-darkest: #0a73b3;
-  --ifm-color-primary-light: #37acf3;
-  --ifm-color-primary-lighter: #43b1f4;
-  --ifm-color-primary-lightest: #6ac1f6;
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
+.docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.1);
+
+}
+
+ 
+/* html[data-theme="dark"] .docusaurus-highlight-code-line {
+  background-color: rgba(0, 0, 0, 0.3);
 } */
 
-/* [data-theme='dark'] {
+
+
+[data-theme='dark'] {
   --ifm-color-primary: #4e89e8;
-} */
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
 
 /* [data-theme='dark'] .purple-text {
   color: plum;
@@ -80,14 +83,8 @@
 }
 
 
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
 
-}
- 
-html[data-theme="dark"] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
-}
+
 
 .header-github-link::before {
   content: '';
@@ -201,9 +198,6 @@ div[class^='announcementBar_'] a:hover {
   );
 }
 
-/* footer {
-  text-align: center;
-} */
 
 @media (max-width: 996px) {
 

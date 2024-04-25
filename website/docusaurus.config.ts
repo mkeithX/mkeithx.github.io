@@ -22,7 +22,7 @@ const internetProfiles = {
   },
 
   twitter: {
-    label: "Twitter",
+    label: "X",
     href: "https://twitter.com/mkeithtan",
   },
 
@@ -195,14 +195,14 @@ const config: Config = {
 
   themeConfig: {
 
-    announcementBar: {
-      id: 'announcementBar_',
-      content:
-        ' 🇵🇭 Test Announcement with icons & emojis. Learn <a target="_blank" rel="noopener noreferrer" href="#">more</a> ⭐',
-      // backgroundColor: '#fafbfc',
-      // textColor: '#091E42',
-      isCloseable: true,
-    },
+    // announcementBar: {
+    //   id: 'announcementBar_',
+    //   content:
+    //     ' 🇵🇭 Test Announcement with icons & emojis. Learn <a target="_blank" rel="noopener noreferrer" href="#">more</a> ⭐',
+    //   // backgroundColor: '#fafbfc',
+    //   // textColor: '#091E42',
+    //   isCloseable: true,
+    // },
 
     colorMode: {
       disableSwitch: false,
@@ -319,7 +319,7 @@ const config: Config = {
         alt: "mkeithX",
         src: "img/logo/spacehub-x-logo-light.png",
         href: "/",
-        height: "32",
+        // height: "32",
         width: "300",
       },
       links: [
