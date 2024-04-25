@@ -194,6 +194,16 @@ const config: Config = {
   ],
 
   themeConfig: {
+
+    announcementBar: {
+      id: 'announcementBar_',
+      content:
+        ' 🇵🇭 Test Announcement with icons & emojis. Learn <a target="_blank" rel="noopener noreferrer" href="#">more</a> ⭐',
+      // backgroundColor: '#fafbfc',
+      // textColor: '#091E42',
+      isCloseable: true,
+    },
+
     colorMode: {
       disableSwitch: false,
       respectPrefersColorScheme: true,
@@ -220,7 +230,7 @@ const config: Config = {
     ],
 
     navbar: {
-      // style: "dark",
+      // style: "primary",
       hideOnScroll: true,
       // title: "SpaceHub",
       logo: {
@@ -321,11 +331,11 @@ const config: Config = {
               to: "docs",
             },
             {
-              label: "Demo Docs",
+              label: "Project Docs",
               to: "docs/demo-overview",
             },
             {
-              label: "Cosmos",
+              label: "Galactic Gazette",
               to: "cosmos/overview",
             },
           ],

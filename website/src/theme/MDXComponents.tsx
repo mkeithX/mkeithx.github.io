@@ -6,6 +6,8 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import MDXComponents from "@theme-original/MDXComponents";
 import Code from '@theme/MDXComponents/Code';
 
+import Highlight from '@site/src/components/Highlight';
+
 library.add(fab, fas);
 
 interface Components {
@@ -14,6 +16,7 @@ interface Components {
 
 const components: Components = {
   ...MDXComponents,
+  Highlight,
   FAIcon: FontAwesomeIcon,
   Code,
 };

@@ -123,10 +123,28 @@ html[data-theme="dark"] .docusaurus-highlight-code-line {
 }
 
 
-div[class^='announcementBar_']{
+/* div[class^='announcementBar_']{
   font-size: 18px;
   font-weight: 600;
   background-color: #20232a !important;
+} */
+
+
+div[class^='announcementBar_'] {
+  font-weight: 500;
+  /* font-size: 18px; */
+  background-color: var(--ifm-background-surface-color);
+  color: var(--ifm-font-color-base);
+}
+
+div[class^='announcementBar_'] a {
+  color: var(--ifm-link-color);
+  text-decoration: inherit;
+}
+
+div[class^='announcementBar_'] a:hover {
+  color: var(--ifm-link-color);
+  text-decoration: none;
 }
 
 /* .alert--danger {
@@ -196,7 +214,6 @@ div[class^='announcementBar_']{
 
 
 
-
 /*  */
 
 /* @media screen and (max-width: 996px) {
@@ -244,3 +261,10 @@ div[class^='announcementBar_']{
   }
 } */
 
+.footer {
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 960px;
+}

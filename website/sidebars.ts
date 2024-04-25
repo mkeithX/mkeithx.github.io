@@ -17,6 +17,7 @@ const sidebars: SidebarsConfig = {
     'the-keyword',
     'website-configuration',
     'deployment',
+    'custom-styling',
 
     {
       type: "category",
