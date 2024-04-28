@@ -41,23 +41,19 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }  */
 
-
-.docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.1);
-
-}
-
- 
-/* html[data-theme="dark"] .docusaurus-highlight-code-line {
-  background-color: rgba(0, 0, 0, 0.3);
-} */
-
-
-
 [data-theme='dark'] {
   --ifm-color-primary: #4e89e8;
+  --ifm-color-primary-dark: #3377e4;
+  --ifm-color-primary-darker: #256ee3;
+  --ifm-color-primary-darkest: #1959c0;
+  --ifm-color-primary-light: #699bec;
+  --ifm-color-primary-lighter: #77a4ed;
+  --ifm-color-primary-lightest: #a0c0f3;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+
+
+
 
 /* [data-theme='dark'] .purple-text {
   color: plum;
@@ -83,7 +79,24 @@
 }
 
 
+.contentTableContainer table {
+  display: table;
+  text-align: left;
+  width: 100%;
+  margin: 0;
+}
 
+.contentTableContainer th:first-child {
+  width: 5%;
+}
+
+.contentTableContainer td:first-child {
+  text-align: right;
+}
+
+.contentTableContainer th:last-child {
+  width: 25%;
+}
 
 
 .header-github-link::before {

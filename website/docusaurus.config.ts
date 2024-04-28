@@ -42,14 +42,12 @@ const internetProfiles = {
   },
 };
 
-// export default async function createConfigAsync() {
+
 const config: Config = {
-  // return {
+
   title: "MKX SpaceHub",
   tagline:
     "A simple documentation website for web developers and physics enthusiasts.",
-  // tagline:
-  // "Unified documentation website for web development, physics and more.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
   url: "https://mkeithx.github.io",
@@ -311,6 +309,9 @@ const config: Config = {
       indexName: "mkeithxio",
       appId: "X2M5FPT6G9",
       contextualSearch: false,
+      searchPagePath: 'search',
+      // insights: true,
+      // placeholder: 'MKX',
     },
 
     footer: {

@@ -11,9 +11,9 @@ export default function Highlight({
     <span
       style={{
         backgroundColor: color,
-        borderRadius: "20px",
+        borderRadius: "15px",
         color: "#fff",
-        padding: "10px",
+        padding: '0.2rem',
       }}
     >
       {children}
