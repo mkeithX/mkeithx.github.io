@@ -13,7 +13,7 @@ export default function Highlight({
         backgroundColor: color,
         borderRadius: "15px",
         color: "#fff",
-        padding: '0.2rem',
+        padding: '0.5rem',
       }}
     >
       {children}

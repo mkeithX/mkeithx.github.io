@@ -255,14 +255,14 @@ const config: Config = {
           items: [
             {
               type: 'doc',
-              docId: 'msp-overview',
+              docId: 'msp',
               label: 'MSP'
             },
 
             {
               type: 'doc',
               docId: 'demo-overview',
-              label: 'Project Docs'
+              label: 'Examples'
             },
 
             {
@@ -336,7 +336,7 @@ const config: Config = {
               to: "docs/demo-overview",
             },
             {
-              label: "Galactic Gazette",
+              label: "Cosmos",
               to: "cosmos/overview",
             },
           ],

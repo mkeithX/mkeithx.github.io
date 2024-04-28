@@ -1,8 +1,0 @@
-label: Kangaroo
-collapsible: true
-collapsed: true
-position: 1
-link:
-    type: generated-index
-    description: Frequently used Snippets, canned responses and other stuff created for testing purposes, aiming to enhance workflow efficiency.
-    slug: adhocs/kangaroo
