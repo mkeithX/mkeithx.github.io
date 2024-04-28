@@ -12,7 +12,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "The Cosmos",
+    title: "Exploring the Cosmos",
     Svg: require("@site/static/img/undraw_stars.svg").default,
     description: (
       <>
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Recents",
+    title: "What's New?",
     Svg: require("@site/static/img/undraw_website.svg").default,
     description: (
       <>

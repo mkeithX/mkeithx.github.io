@@ -81,6 +81,11 @@
   color: var(--ifm-color-primary-dark);
 }
 
+
+.heroSubTitleTextHtml b {
+  color: var(--ifm-color-primary-dark);
+}
+
 @keyframes kit-in-the-box {
   from {
     transform: rotate(360deg) scale(1.5);
