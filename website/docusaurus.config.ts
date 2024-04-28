@@ -8,7 +8,7 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 
-const copyright = `Copyright © ${new Date().getFullYear()} • Keith Tan • Built with Docusaurus.`;
+const copyright = `Copyright © ${new Date().getFullYear()} • Developed by  <a href='https://github.com/mkeithX' target='_blank'><b>Keith Tan</b></a>`;
 
 const internetProfiles = {
   linkedin: {
