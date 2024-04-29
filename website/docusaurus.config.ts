@@ -220,12 +220,12 @@ const config: Config = {
     },
 
     image: "img/banner/social-x.png",
-    metadata: [
-      {
-        name: "og:image",
-        content: "img/banner/social-x.png",
-      },
-    ],
+    // metadata: [
+    //   {
+    //     name: "og:image",
+    //     content: "img/banner/social-x.png",
+    //   },
+    // ],
 
     navbar: {
       // style: "primary",
