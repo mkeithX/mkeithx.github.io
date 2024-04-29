@@ -1,0 +1,134 @@
+---
+title: Conda Cheat Sheet
+# sidebar_label:
+# description:
+# sidebar_position:
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Admonition from "@theme/Admonition";
+
+# QUICK START
+
+:::tip
+
+Creating a new environment is advised for each new project or workflow.
+
+:::
+
+
+## Verifying
+
+
+## Environments
+
+## 
+
+
+# Setting Up Anaconda: A Comprehensive Guide
+
+Anaconda is a powerful tool for managing Python packages and environments, widely used in data science, machine learning, and scientific computing. In this guide, we'll walk through the steps to set up Anaconda on your system.
+
+## What is Anaconda?
+
+Anaconda is a distribution of the Python and R programming languages for scientific computing, data analysis, and machine learning. It includes a package manager, environment manager, and a collection of pre-installed libraries and tools. Anaconda simplifies the process of installing and managing dependencies for data science projects.
+
+## Installation
+
+### Step 1: Download Anaconda
+
+Visit the Anaconda website ([https://www.anaconda.com/products/distribution](https://www.anaconda.com/products/distribution)) and download the appropriate version for your operating system (Windows, macOS, or Linux).
+
+### Step 2: Install Anaconda
+
+Once the download is complete, follow the installation instructions for your operating system. The installation wizard will guide you through the process, allowing you to choose installation options and specify the installation directory.
+
+### Step 3: Verify Installation
+
+After installation, open a terminal or command prompt and type `conda --version`. If Anaconda is installed correctly, you should see the version number displayed in the output.
+
+## Using Anaconda
+
+### Managing Environments
+
+Anaconda allows you to create isolated Python environments, each with its own set of packages and dependencies. This is useful for managing project dependencies and avoiding conflicts between packages.
+
+#### Creating an Environment
+
+To create a new environment, use the following command:
+
+```shell
+conda create --name myenv
+```
+
+Replace `myenv` with the name of your environment. You can also specify the Python version and additional packages to install:
+
+```shell
+conda create --name myenv python=3.8 numpy pandas
+```
+
+#### Activating an Environment
+
+To activate an environment, use the following command:
+
+```shell
+conda activate myenv
+```
+
+#### Deactivating an Environment
+
+To deactivate the current environment, simply use the following command:
+
+```shell
+conda deactivate
+```
+
+### Installing Packages
+
+Anaconda comes with its own package manager called `conda`, which makes it easy to install, update, and remove packages.
+
+#### Installing a Package
+
+To install a package, use the following command:
+
+```shell
+conda install package_name
+```
+
+Replace `package_name` with the name of the package you want to install.
+
+#### Updating a Package
+
+To update a package to the latest version, use the following command:
+
+```shell
+conda update package_name
+```
+
+#### Removing a Package
+
+To remove a package, use the following command:
+
+```shell
+conda remove package_name
+```
+
+### Managing Environments with Anaconda Navigator
+
+Anaconda Navigator is a graphical user interface (GUI) that allows you to manage environments, packages, and projects using a visual interface.
+
+#### Launching Anaconda Navigator
+
+To launch Anaconda Navigator, simply type the following command in your terminal or command prompt:
+
+```shell
+anaconda-navigator
+```
+
+## Conclusion
+
+Setting up Anaconda provides a powerful environment for Python development, especially for data science and machine learning projects. By following the steps outlined in this guide, you can quickly get started with Anaconda and take advantage of its features for managing environments and packages.
+```
+
+Feel free to adjust the content or add more details as needed!
