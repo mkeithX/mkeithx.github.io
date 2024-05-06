@@ -5,4 +5,4 @@ This repository contains project samples including the website configuration and
 
 ---
 
-🎉 Support this project with ⭐ on [GitHub](https://github.com/mkeithX/mkeithx.github.io). 🙏
+Give this project a __[star⭐](https://github.com/mkeithX/mkeithx.github.io)__
