@@ -1,0 +1,108 @@
+---
+title: Python Starters
+description: Basic Python code examples for all users.
+# sidebar_position: 1.2
+sidebar_label: Python Starters
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+Basic Python code examples for all users.
+
+## Run locally
+
+This require latest version of [Python 3.10](https://www.python.org/downloads/), [Git](https://git-scm.com/downloads) and your fav IDE ([VSCode](https://code.visualstudio.com/).)
+
+### Installation
+
+#### Clone Repo
+
+```bash
+git clone https://github.com/mkeithX/python-starters.git
+```
+
+```bash
+cd python-starters
+```
+
+#### Setup Virtual Environment
+
+<Tabs>
+  <TabItem value="nt" label="Windows" default>
+    
+```bash
+py -m venv .venv
+```
+```bash
+.venv\Scripts\activate
+```
+  </TabItem>
+  <TabItem value="ln" label="Unix">
+
+```bash
+python3 -m venv .venv
+```
+
+```bash
+source .venv/bin/activate
+```
+
+  </TabItem>
+</Tabs>
+
+#### Managing Dependencies
+
+ <Tabs>
+  <TabItem value="nt" label="Windows" default>
+
+```bash
+py -m pip install --upgrade pip
+```
+
+```bash
+py -m pip install --upgrade -r requirements.txt
+```
+
+  </TabItem>
+  <TabItem value="ln" label="Unix">
+
+```bash
+python3 -m pip install --upgrade pip
+```
+
+```bash
+python3 -m pip install --upgrade -r requirements.txt
+```
+
+  </TabItem>
+</Tabs>
+
+## What's inside
+
+
+<details>
+<summary>Show</summary>
+
+
+| Title                        | Description                                                                                       |
+| :--------------------------- | ------------------------------------------------------------------------------------------------- |
+| Fibonacci sequence generator | Generates sequence of numbers, in which every term in the sequence is the sum of terms before it. |
+| BMI Calculator               | Determines whether you're Normal, Overweight or Obese.                                            |
+| Cipher-Decipher              | Encrypt or Decrypt messeges using Caesar Cipher Algorithm.                                        |
+| Password Generator           | Generates random passwords with three complexity levels.                                          |
+| Video downloader             | Simple Video Downloader.                                                                          |
+| Countdown timer              |                                                                                                   |
+| QR Code generator            |                                                                                                   |
+| Word guess game              |                                                                                                   |
+| Currency Converter           |                                                                                                   |
+</details>
+
+<!-- <Tabs>
+  <TabItem value="nt" label="Windows" default>
+    This is an apple 🍎
+  </TabItem>
+  <TabItem value="ln" label="Unix">
+    This is an orange 🍊
+  </TabItem>
+</Tabs> -->
