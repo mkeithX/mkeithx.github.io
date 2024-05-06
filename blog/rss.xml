@@ -4,11 +4,29 @@
         <title>MKX SpaceHub Blog</title>
         <link>https://mkeithx.github.io/blog</link>
         <description>MKX SpaceHub Blog</description>
-        <lastBuildDate>Sun, 28 Apr 2024 00:00:00 GMT</lastBuildDate>
+        <lastBuildDate>Mon, 06 May 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
         <copyright>Copyright © 2024 • Developed by  &lt;a href='https://github.com/mkeithX' target='_blank'&gt;&lt;b&gt;Keith Tan&lt;/b&gt;&lt;/a&gt;</copyright>
+        <item>
+            <title><![CDATA[Python Starters]]></title>
+            <link>https://mkeithx.github.io/blog/python-starters</link>
+            <guid>https://mkeithx.github.io/blog/python-starters</guid>
+            <pubDate>Mon, 06 May 2024 00:00:00 GMT</pubDate>
+            <description><![CDATA[A collection of basic Python code examples suitable for users of all levels.]]></description>
+            <content:encoded><![CDATA[<p>Today, I'm thrilled to announce the launch of my newest project, <a href="https://github.com/mkeithX/python-starters" target="_blank" rel="noopener noreferrer">Python Starters</a>: A collection of basic Python code examples suitable for users of all levels.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="whats-included">What's Included<a href="https://mkeithx.github.io/blog/python-starters#whats-included" class="hash-link" aria-label="Direct link to What's Included" title="Direct link to What's Included">​</a></h2>
+<p>This collection contains fundamental Python concepts, ranging from basic data types and control structures to more advanced topics such as object-oriented programming, web scraping, and basic algorithms.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="how-to-get-started">How to Get Started<a href="https://mkeithx.github.io/blog/python-starters#how-to-get-started" class="hash-link" aria-label="Direct link to How to Get Started" title="Direct link to How to Get Started">​</a></h2>
+<p>The projects requires minimal setup and works best with <a href="https://code.visualstudio.com/" target="_blank" rel="noopener noreferrer">VSCode</a>. Visit <a href="https://mkeithx.github.io/docs/demo/python-starters" target="_blank" rel="noopener noreferrer">this article</a> to learn more.</p>
+<h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="support">Support<a href="https://mkeithx.github.io/blog/python-starters#support" class="hash-link" aria-label="Direct link to Support" title="Direct link to Support">​</a></h2>
+<p>If you like <strong>Python Starters</strong>, git it a <a href="https://github.com/mkeithX/python-starters" target="_blank" rel="noopener noreferrer">star ⭐</a>.</p>
+<p>Developed by Keith under MIT License.</p>]]></content:encoded>
+            <author>email@kitimi.onmicrosoft.com (Keith Tan)</author>
+            <category>updates</category>
+            <category>docs</category>
+        </item>
         <item>
             <title><![CDATA[The SpaceHub]]></title>
             <link>https://mkeithx.github.io/blog/the-spacehub</link>
