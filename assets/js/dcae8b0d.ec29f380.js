@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[696],{7997:e=>{e.exports=JSON.parse('{"permalink":"/blog/tags/planets","page":1,"postsPerPage":1,"totalPages":1,"totalCount":1,"blogDescription":"News and updates from MKX SpaceHub.","blogTitle":"Recents"}')}}]);
