@@ -4,7 +4,7 @@ Thank you for considering contributing to our project! Before you start, please 
 
 ### Code of Conduct
 
-Please adhere to our [Code of Conduct](../community/code-of-conduct) to ensure a welcoming and inclusive environment for everyone.
+Please adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md) to ensure a welcoming and inclusive environment for everyone.
 
 ### Getting Started
 

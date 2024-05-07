@@ -1,0 +1,57 @@
+name: " 🐞 Bug Report"
+description: "Submit a bug report to help us improve"
+labels: 
+  - bug 
+  - 'status: needs triage'
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Thanks for taking the time to fill out this bug report!
+
+        Prior to submitting your issues, consider the following:
+        - Is it evident that this is indeed an issue?
+        - Do you possess fundamental insights into the potential areas of malfunction?
+        - Could the problem be attributed to errors on your part?
+
+  - type: checkboxes
+    attributes:
+      label: Is there an existing issue for this?
+      description: Please search to see if an issue already exists for the bug you encountered.
+      options:
+        - label: "I have searched the existing issues"
+          required: true
+
+  - type: input
+    attributes:
+      label: Bug description
+      description: "A description of the 🐛 bug."
+      placeholder: "A concise description of what you're experiencing."
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Steps To Reproduce
+      description: "Steps to reproduce the behavior."
+      placeholder: |
+        1. In this environment...
+        2. With this config...
+        3. Run '...'
+        4. See error...
+    validations:
+      required: true
+  
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: "By submitting this issue, you agree to follow our [Code of Conduct](https://kitiplex.github.io/community/code-of-conduct)"
+      options:
+        - label: "I agree to follow this project's Code of Conduct"
+          required: true
+
+  - type: markdown
+    attributes:
+      value: "**Happy coding!**"

@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
+    name: Deploy to GitHub Pages 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -21,14 +21,14 @@ jobs:
         with:
           node-version: 20
 
-      - name: Install dependencies
+      - name: Install dependencies ⚙️
         run: |
           cd website
           npm install 
           npm run build
 
       
-      - name: Deploy to GitHub Pages
+      - name: Deploy to GitHub Pages 🚀
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
