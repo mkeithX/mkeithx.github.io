@@ -56,7 +56,7 @@ const config: Config = {
     "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
-  url: process.env.URL,
+  url: "https://mkeithx.github.io",
   baseUrl: '/',
   organizationName: 'mkeithX',
   projectName: 'mkeithx.github.io',
