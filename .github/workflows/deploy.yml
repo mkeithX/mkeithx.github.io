@@ -1,17 +1,13 @@
 name: Deploy to GitHub Pages
 
 on:
-
-workflow_dispatch:
-
   push:
     branches:
       - main
 
+
 permissions:
   contents: write
-
-pull_request:
 
 jobs:
   deploy:
@@ -31,9 +27,11 @@ jobs:
           npm install 
           npm run build
 
+      
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v4
+        uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
+       
           publish_dir: website/build
+      
