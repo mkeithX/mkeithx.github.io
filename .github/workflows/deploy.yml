@@ -2,12 +2,14 @@ name: GitHub Pages
 
 on:
   workflow_dispatch:
+
   push:
     branches:
       - main
     paths:
       - ".github/workflows/deploy.yml"
       - "website/**"
+
   pull_request:
 
 jobs:
@@ -29,15 +31,12 @@ jobs:
         uses: actions/setup-node@v4
         with:
           node-version: 20
-          cache: npm
-
 
       - name: Install dependencies
         run: |
           cd website
           npm install 
           npm run build
-
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
