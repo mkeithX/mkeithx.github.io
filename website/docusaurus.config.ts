@@ -8,59 +8,25 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 
-import 'dotenv/config';
+import "dotenv/config";
+import { socialProfiles } from "./socialProfiles";
 
 // const isDev = process.env.NODE_ENV === 'development';
 // const baseUrl = process.env.BASE_URL ?? '/';
 
-
 const copyright = `Copyright © ${new Date().getFullYear()} • Developed by  <a href='https://github.com/mkeithX' target='_blank'><b>Keith Tan</b></a>`;
 
-const internetProfiles = {
-  linkedin: {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/mkeithtan",
-  },
-
-  github: {
-    label: "GitHub",
-    href: "https://github.com/mkeithx",
-  },
-
-  twitter: {
-    label: "X",
-    href: "https://twitter.com/mkeithtan",
-  },
-
-  kitiplex: {
-    label: "Kitiplex",
-    href: "https://kitiplex.github.io/",
-  },
-
-  iuiu: {
-    label: "IUIU",
-    href: "https://kitiplex.github.io/iuiu",
-  },
-
-  discussion: {
-    label: "Discussion",
-    href: "https://github.com/kitiplex/iuiu/issues/new/choose",
-  },
-};
-
-
 const config: Config = {
-
   title: "MKX SpaceHub",
   tagline:
     "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
   url: "https://mkeithx.github.io",
-  baseUrl: '/',
-  organizationName: 'mkeithX',
-  projectName: 'mkeithx.github.io',
-  deploymentBranch: 'gh-pages',
+  baseUrl: "/",
+  organizationName: "mkeithX",
+  projectName: "mkeithx.github.io",
+  deploymentBranch: "gh-pages",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
@@ -81,12 +47,11 @@ const config: Config = {
         "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
       crossorigin: "anonymous",
     },
-
   ],
 
   customFields: {
-    description: 'SpaceHub for all Mankind.',
-    teamEmail: process.env.GIT_USER_EMAIL
+    description: "SpaceHub for all Mankind.",
+    teamEmail: process.env.GIT_USER_EMAIL,
   },
 
   i18n: {
@@ -168,7 +133,22 @@ const config: Config = {
 
         theme: {
           customCss: ["./src/css/custom.css"],
+          
         },
+        
+          sitemap: {
+            lastmod: 'date',
+            changefreq: 'weekly',
+            priority: 0.5,
+            ignorePatterns: ['/tags/**'],
+            filename: 'sitemap.xml',
+            createSitemapItems: async (params) => {
+              const {defaultCreateSitemapItems, ...rest} = params;
+              const items = await defaultCreateSitemapItems(rest);
+              return items.filter((item) => !item.url.includes('/page/'));
+            },
+          },
+        
       } satisfies Preset.Options,
     ],
   ],
@@ -199,7 +179,6 @@ const config: Config = {
   ],
 
   themeConfig: {
-
     // announcementBar: {
     //   id: 'announcementBar_',
     //   content:
@@ -256,39 +235,37 @@ const config: Config = {
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
         { to: "blog", label: "What's new", position: "right" },
         {
-          type: 'dropdown',
-          label: 'Demo',
-          position: 'left',
+          type: "dropdown",
+          label: "Demo",
+          position: "left",
           items: [
             {
-              type: 'doc',
-              docId: 'msp',
-              label: 'MSP'
+              type: "doc",
+              docId: "msp",
+              label: "MSP",
             },
 
             {
-              type: 'doc',
-              docId: 'demo-overview',
-              label: 'Examples'
+              type: "doc",
+              docId: "demo-overview",
+              label: "Examples",
             },
 
             {
-              to: 'projects',
-              label: 'Showcase'
+              to: "projects",
+              label: "Showcase",
             },
-
-          ]
+          ],
         },
-
 
         {
           type: "dropdown",
           label: "External",
           position: "right",
           items: [
-            internetProfiles.kitiplex,
-            internetProfiles.iuiu,
-            internetProfiles.discussion,
+            socialProfiles.kitiplex,
+            socialProfiles.iuiu,
+            socialProfiles.discussion,
 
             // {
             //   type: 'doc',
@@ -316,7 +293,7 @@ const config: Config = {
       indexName: "mkeithxio",
       appId: "X2M5FPT6G9",
       contextualSearch: false,
-      searchPagePath: 'search',
+      searchPagePath: "search",
       insights: true,
       // placeholder: 'MKX',
     },
@@ -350,7 +327,11 @@ const config: Config = {
         },
         {
           title: "Connect",
-          items: [internetProfiles.twitter, internetProfiles.linkedin,internetProfiles.github],
+          items: [
+            socialProfiles.twitter,
+            socialProfiles.linkedin,
+            socialProfiles.github,
+          ],
         },
 
         {
@@ -373,7 +354,15 @@ const config: Config = {
     prism: {
       theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
-      additionalLanguages: ["powershell", "python", "java", "bash", "json", "batch"],
+      additionalLanguages: [
+        "powershell",
+        "python",
+        "java",
+        "bash",
+        "json",
+        "batch",
+        "yaml",
+      ],
     },
   } satisfies Preset.ThemeConfig,
 };
