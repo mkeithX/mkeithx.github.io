@@ -1,34 +1,27 @@
-name: GitHub Pages
+name: Deploy to GitHub Pages
 
 on:
-  workflow_dispatch:
+
+workflow_dispatch:
 
   push:
     branches:
       - main
-    paths:
-      - ".github/workflows/deploy.yml"
-      - "website/**"
 
-  pull_request:
+permissions:
+  contents: write
+
+pull_request:
 
 jobs:
-  build-and-deploy-website:
-    name: "Build and Deploy website"
+  deploy:
+    name: Deploy to GitHub Pages
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-    defaults:
-      run:
-        working-directory: website
-
     steps:
       - uses: actions/checkout@v4
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
         with:
           node-version: 20
 
@@ -40,9 +33,7 @@ jobs:
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
-
-        if: github.ref == 'refs/heads/main'
-
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
           publish_dir: website/build
