@@ -10,8 +10,8 @@ import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 
 import 'dotenv/config';
 
-const isDev = process.env.NODE_ENV === 'development';
-const baseUrl = process.env.BASE_URL ?? '/';
+// const isDev = process.env.NODE_ENV === 'development';
+// const baseUrl = process.env.BASE_URL ?? '/';
 
 
 const copyright = `Copyright © ${new Date().getFullYear()} • Developed by  <a href='https://github.com/mkeithX' target='_blank'><b>Keith Tan</b></a>`;
@@ -57,10 +57,10 @@ const config: Config = {
   favicon: "icons/favicon.ico",
   // titleDelimiter: '•',
   url: process.env.URL,
-  baseUrl,
-  organizationName: process.env.ORGANIZATION_NAME,
-  projectName: process.env.PROJECT_NAME,
-  deploymentBranch: process.env.DEPLOYMENT_BRANCH,
+  baseUrl: '/',
+  organizationName: 'mkeithX',
+  projectName: 'mkeithx.github.io',
+  deploymentBranch: 'gh-pages',
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
@@ -85,7 +85,7 @@ const config: Config = {
   ],
 
   customFields: {
-    description: process.env.DESCRIPTION,
+    description: 'SpaceHub for all Mankind.',
     teamEmail: process.env.GIT_USER_EMAIL
   },
 
