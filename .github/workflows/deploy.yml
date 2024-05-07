@@ -40,13 +40,20 @@ jobs:
       pages: write # to deploy to Pages
       id-token: write # to verify the deployment originates from an appropriate source
 
-    # Deploy to the github-pages environment
-    environment:
-      name: github-pages
-      url: ${{ steps.deployment.outputs.page_url }}
+    
+    - name: Deploy to GitHub Pages 🚀
+      uses: peaceiris/actions-gh-pages@v3
+      with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+       
+          publish_dir: website/build
+    # # Deploy to the github-pages environment
+    # environment:
+    #   name: github-pages
+    #   url: ${{ steps.deployment.outputs.page_url }}
 
-    runs-on: ubuntu-latest
-    steps:
-      - name: Deploy to GitHub Pages
-        id: deployment
-        uses: actions/deploy-pages@v4
+    # runs-on: ubuntu-latest
+    # steps:
+    #   - name: Deploy to GitHub Pages
+    #     id: deployment
+    #     uses: actions/deploy-pages@v4
