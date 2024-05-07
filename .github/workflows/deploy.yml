@@ -1,59 +1,46 @@
-name: Deploy to GitHub Pages
+name: GitHub Pages
 
 on:
   push:
     branches:
       - main
-    # Review gh actions docs if you want to further define triggers, paths, etc
-    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'website/**'
+  pull_request:
 
 jobs:
-  build:
-    name: Build Docusaurus
+  deploy:
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    defaults:
+      run:
+        working-directory: website
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies ⚙️
-        run: |
-          cd website
-          npm install 
-          npm run build
-
-
-      - name: Upload Build Artifact
-        uses: actions/upload-pages-artifact@v3
+      - name: Cache dependencies
+        uses: actions/cache@v3
         with:
-          path: website/build
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
 
-  deploy:
-    name: Deploy to GitHub Pages
-    needs: build
+      - run: npm ci
+      - run: npm run build
 
-    # Grant GITHUB_TOKEN the permissions required to make a Pages deployment
-    permissions:
-      pages: write # to deploy to Pages
-      id-token: write # to verify the deployment originates from an appropriate source
-
-    
-    - name: Deploy to GitHub Pages 🚀
-      uses: peaceiris/actions-gh-pages@v3
-      with:
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-       
-          publish_dir: website/build
-    # # Deploy to the github-pages environment
-    # environment:
-    #   name: github-pages
-    #   url: ${{ steps.deployment.outputs.page_url }}
-
-    # runs-on: ubuntu-latest
-    # steps:
-    #   - name: Deploy to GitHub Pages
-    #     id: deployment
-    #     uses: actions/deploy-pages@v4
+          publish_dir: ./website/build
