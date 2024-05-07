@@ -5,7 +5,19 @@
 
 version: 2
 updates:
-  - package-ecosystem: "" # See documentation for possible values
-    directory: "webite/**" # Location of package manifests
+  - package-ecosystem: github-actions
+    directory: '/'
     schedule:
-      interval: "weekly"
+      interval: weekly
+    open-pull-requests-limit: 99
+    labels:
+      - 'pr: dependencies'
+  - package-ecosystem: 'npm'
+    directory: '/'
+    schedule:
+      interval: 'daily'
+    # Disable version updates for npm dependencies
+    # https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates#overriding-the-default-behavior-with-a-configuration-file
+    open-pull-requests-limit: 0
+    labels:
+      - 'pr: dependencies'
