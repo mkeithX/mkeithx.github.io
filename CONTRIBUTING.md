@@ -1,10 +1,7 @@
-## Contribution Guidelines
+## Contributing to MKX SpaceHub
 
-Thank you for considering contributing to our project! Before you start, please take a moment to review the following guidelines:
+Thank you for considering contributing to this project. Before you start, please take noted that **MKX SpaceHub**™ has adopted  a [**CODE OF CONDUCT**](../community/code-of-conduct) that all project participants are expected to adhere to. This is to ensure a welcoming and inclusive environment for everyone.
 
-### Code of Conduct
-
-Please adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md) to ensure a welcoming and inclusive environment for everyone.
 
 ### Getting Started
 
@@ -37,7 +34,7 @@ Please adhere to our [Code of Conduct](./CODE_OF_CONDUCT.md) to ensure a welcomi
 ### Documentation
 
 1. Update the documentation if your changes introduce new features or modify existing ones.
-2. Ensure that the README file is kept up-to-date.
+2. Ensure that the [README](#) file is kept up-to-date.
 
 ### Bug Reports and Feature Requests
 

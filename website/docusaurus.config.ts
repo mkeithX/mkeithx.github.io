@@ -176,6 +176,28 @@ const config: Config = {
         docItemComponent: "@theme/DocItem",
       } as DocsOptions,
     ],
+    [
+      "content-docs",
+      {
+        id: "community",
+        path: "community",
+        routeBasePath: "community",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
+        breadcrumbs: true,
+        sidebarPath: "./sidebarsCommunity.ts",
+        include: ["**/*.md", "**/*.mdx"],
+        exclude: [
+          "**/_*.{js,jsx,ts,tsx,md,mdx}",
+          "**/_*/**",
+          "**/*.test.{js,jsx,ts,tsx}",
+          "**/__tests__/**",
+        ],
+        remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
+        rehypePlugins: [rehypeKatex],
+        docItemComponent: "@theme/DocItem",
+      } as DocsOptions,
+    ],
   ],
 
   themeConfig: {
@@ -234,6 +256,8 @@ const config: Config = {
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
         { to: "blog", label: "What's new", position: "right" },
+
+
         {
           type: "dropdown",
           label: "Demo",
@@ -257,11 +281,16 @@ const config: Config = {
             },
           ],
         },
-
+        {
+          to: '/community/overview',
+          label: 'Community',
+          position: 'right'
+        },
         {
           type: "dropdown",
           label: "External",
           position: "right",
+          
           items: [
             socialProfiles.kitiplex,
             socialProfiles.iuiu,
