@@ -286,6 +286,20 @@ const config: Config = {
           label: 'Community',
           position: 'right'
         },
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        //   dropdownItemsAfter: [
+        //     {
+        //       type: 'html',
+        //       value: '<hr style="margin: 0.3rem 0;">',
+        //     },
+        //     {
+        //       href: 'https://bit.ly/mkeithx',
+        //       label: 'i8ln Coming Soon',
+        //     },
+        //   ],
+        // },
         {
           type: "dropdown",
           label: "External",

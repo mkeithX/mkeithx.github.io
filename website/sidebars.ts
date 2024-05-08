@@ -15,6 +15,18 @@ const sidebars: SidebarsConfig = {
 
   mySidebar: [
     "the-keyword",
+    "policy-and-guidelines",
+    {
+      label: "Website Configuration",
+      type: "category",
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: "doc",
+        id: "website-configuration",
+      },
+      items: ["deployment", "custom-styling", "custom-algolia"],
+    },
 
     {
       type: "category",
@@ -27,17 +39,7 @@ const sidebars: SidebarsConfig = {
       ],
     },
 
-    {
-      label: "Website Configuration",
-      type: "category",
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: "website-configuration",
-      },
-      items: ["deployment", "custom-styling", "custom-algolia"],
-    },
+    
 
     "media-embeds",
   ],
