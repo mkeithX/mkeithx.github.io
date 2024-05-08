@@ -5,7 +5,7 @@ This repository contains project samples including the website configuration and
 
 ---
 
-[![GitHub Pages](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/deploy.yml)
+[![GitHub Pages](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/deploy.yml/badge.svg?branch=main)](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/deploy.yml)
 [![CodeQL](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/codeql.yml/badge.svg)](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/codeql.yml)
 
 <!-- 
