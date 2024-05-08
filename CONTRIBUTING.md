@@ -1,12 +1,20 @@
 ## Contributing to MKX SpaceHub
 
-Thank you for considering contributing to this project. Before you start, please take noted that **MKX SpaceHub**™ has adopted  a [**CODE OF CONDUCT**](../community/code-of-conduct) that all project participants are expected to adhere to. This is to ensure a welcoming and inclusive environment for everyone.
+Thank you for considering contributing to this project. Before you start, please take noted that this project has adopted a [**CODE OF CONDUCT**](../community/code-of-conduct) that every project participants are expected to adhere to. This is to ensure a welcoming and inclusive environment for everyone.
 
 
 ### Getting Started
 
 1. Fork the repository and clone it locally.
-2. Create a new branch for your contribution: `git checkout -b feature/my-awesome-feature`.
+
+```bash
+git clone https://github.com/mkeithX/mkeithx.github.io.git
+```
+2. Create a new branch for your contribution: 
+
+```bash
+git checkout -b feature/my-awesome-feature
+```
 3. Install dependencies and set up the project following the provided instructions.
 
 ### Making Changes

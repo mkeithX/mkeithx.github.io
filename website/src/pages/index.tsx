@@ -52,7 +52,7 @@ function HomepageHeader() {
             className="button button--outline button--primary button--lg px-4"
             to="docs"
           >
-            {"Explore"}
+            {"Explore 🚀"}
           </Link>
         </div>
       </div>
