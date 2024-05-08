@@ -44,6 +44,10 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
+      
+      - name: Algolia Crawler Automatic Crawl
+        uses: algolia/algoliasearch-crawler-github-actions@v1.1.10
+            
 
       # - name: Algolia crawler creation and crawl
       #   uses: algolia/algoliasearch-crawler-github-actions@v1.0.10
