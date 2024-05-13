@@ -5,9 +5,29 @@ import { Case } from "./_components/ProjectCards";
 
 export const cases: Case[] = [
   {
+    title: "Python Starters",
+    website: "./docs/demo/python-starters",
+    preview: require("@site/src/data/projects/default-x.png").default,
+    description: (
+      <>A collection of basic python code examples for starters. This project requires minimal setup and works best with VSCode.</>
+    ),
+    source: "https://github.com/mkeithX/python-starters",
+    tags: ["React", "Python"],
+  },
+  {
+    title: "Batch Minis",
+    website: "./docs/demo/batch-demo-sample",
+    preview: require("@site/src/data/projects/default-x.png").default,
+    description: (
+      <>A collection of basic batch code examples for starters.</>
+    ),
+    source: "https://github.com/mkeithX/mkeithx.github.io/tree/main/examples/batch-starters",
+    tags: ["Batch",],
+  },
+  {
     title: "MKX SpaceHub",
     website: "https://bit.ly/mkeithx",
-    preview: require("@site/src/data/projects/sc-mkeithx-2.png").default,
+    preview: require("@site/src/data/projects/default-x.png").default,
     description: (
       <>A simple documentation website for web developers and physics enthusiasts.</>
     ),

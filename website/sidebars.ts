@@ -15,6 +15,7 @@ const sidebars: SidebarsConfig = {
 
   mySidebar: [
     "the-keyword",
+    "contributing",
     "policy-and-guidelines",
     {
       label: "Website Configuration",

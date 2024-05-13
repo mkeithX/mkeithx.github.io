@@ -63,7 +63,7 @@ function ProjectCard(props: Case) {
             className="button button--primary button--block"
             onClick={() => window.open(props.website)}
           >
-            Visit
+            Docs
           </button>
           {props.source && (
             <button

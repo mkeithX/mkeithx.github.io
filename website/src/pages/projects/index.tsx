@@ -6,9 +6,9 @@ import { cases } from "./_data";
 
 function ProjectHeader() {
   return (
-    <section className="margin-top--lg margin-bottom--lg text--center">
-      <h1>My projects</h1>
-      <p>List of projects that I'm Involved with</p>
+    <section className="margin-top--sm margin-bottom--lg text--center">
+      <h1>Welcome</h1>
+      <p>This section highlights some of the <b>projects</b> and <b>demos</b>  I've authored and contributed to.</p>
       {/* <a
         className="button button--primary"
         href="https://github.com/mkeithX"

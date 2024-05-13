@@ -204,9 +204,9 @@ const config: Config = {
     // announcementBar: {
     //   id: 'announcementBar_',
     //   content:
-    //     ' 🇵🇭 Test Announcement with icons & emojis. Learn <a target="_blank" rel="noopener noreferrer" href="#">more</a> ⭐',
-    //   // backgroundColor: '#fafbfc',
-    //   // textColor: '#091E42',
+    //     'Test Announcement with icons & emojis. Learn <a target="_blank" rel="noopener noreferrer" href="#">more</a> ⭐',
+    //   backgroundColor: '#fafbfc',
+    //   textColor: '#091E42',
     //   isCloseable: true,
     // },
 
@@ -255,37 +255,48 @@ const config: Config = {
           label: "Docs",
         },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
+        {
+          type: "doc",
+          docId: "msp",
+          label: "MSP",
+        },
+        {
+          to: 'projects',
+          label: 'Showcase',
+          position: 'right'
+        },
         { to: "blog", label: "What's new", position: "right" },
 
 
-        {
-          type: "dropdown",
-          label: "Demo",
-          position: "left",
-          items: [
-            {
-              type: "doc",
-              docId: "msp",
-              label: "MSP",
-            },
+        // {
+        //   type: "dropdown",
+        //   label: "Demo",
+        //   position: "left",
+        //   items: [
+        //     {
+        //       type: "doc",
+        //       docId: "msp",
+        //       label: "MSP",
+        //     },
 
-            {
-              type: "doc",
-              docId: "demo-overview",
-              label: "Examples",
-            },
+        //     {
+        //       type: "doc",
+        //       docId: "demo-overview",
+        //       label: "Examples",
+        //     },
 
-            {
-              to: "projects",
-              label: "Showcase",
-            },
-          ],
-        },
-        {
-          to: '/community/overview',
-          label: 'Community',
-          position: 'right'
-        },
+        //     {
+        //       to: "projects",
+        //       label: "Showcase",
+        //     },
+        //   ],
+        // },
+        // {
+        //   to: '/community/overview',
+        //   label: 'Community',
+        //   position: 'right'
+        // },
+
         // {
         //   type: 'localeDropdown',
         //   position: 'right',
@@ -295,29 +306,63 @@ const config: Config = {
         //       value: '<hr style="margin: 0.3rem 0;">',
         //     },
         //     {
-        //       href: 'https://bit.ly/mkeithx',
+        //       href: '/',
         //       label: 'i8ln Coming Soon',
         //     },
         //   ],
         // },
-        {
-          type: "dropdown",
-          label: "External",
-          position: "right",
+        // {
+        //   type: "dropdown",
+        //   label: "External",
+        //   position: "right",
           
-          items: [
-            socialProfiles.kitiplex,
-            socialProfiles.iuiu,
-            socialProfiles.discussion,
+        //   items: [
+        //     {
+        //       to: 'projects',
+        //       label: 'Showcase',
+        //       // position: 'right'
+        //     },
+        //     {
+        //       type: 'html',
+        //       value: '<hr style="margin: 0.3rem 0;">',
+        //     },                       
+        //     socialProfiles.kitiplex,
+        //     socialProfiles.iuiu,
+        //     socialProfiles.discussion,
 
-            // {
-            //   type: 'doc',
-            //   label: 'Social',
-            //   docId: 'the-keyword',
-            // },
-            // ... more items
-          ],
-        },
+        //     // {
+        //     //   type: 'doc',
+        //     //   label: 'Social',
+        //     //   docId: 'the-keyword',
+        //     // },
+        //     // ... more items
+        //   ],
+        // },
+        // {
+        //   type: 'dropdown',
+        //   label: 'More',
+        //   position: 'right',
+        //   items: [
+
+        //     {
+        //       to: 'projects',
+        //       label: 'Showcase',
+        //       // position: 'right'
+        //     },
+        //     {
+        //       type: 'html',
+        //       value: '<hr style="margin: 0.3rem 0;">',
+        //     },
+        //     {
+        //       label: 'Facebook',
+        //       href: 'https://www.facebook.com',
+        //     },
+        //     {
+        //       label: 'X',
+        //       href: 'https://www.x.com',
+        //     },
+        //   ],
+        // },
         {
           href: "https://github.com/mkeithx",
           "aria-label": "GitHub",
