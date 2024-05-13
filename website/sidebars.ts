@@ -16,6 +16,7 @@ const sidebars: SidebarsConfig = {
   mySidebar: [
     "the-keyword",
     "contributing",
+    "ms365-at-kitiplex",
     "policy-and-guidelines",
     {
       label: "Website Configuration",
