@@ -3,6 +3,7 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebars: SidebarsConfig = {
   cosmicSidebar: [
     "cosmos-overview",
+    "unsolved-physics",
     "may-the-force",
     {
       type: "category",

@@ -254,12 +254,12 @@ const config: Config = {
           sidebarId: "mySidebar",
           label: "Docs",
         },
-        { to: "cosmos/overview", label: "Cosmos", position: "left" },
         {
           type: "doc",
           docId: "msp",
           label: "MSP",
         },
+        { to: "cosmos/overview", label: "The Universe", position: "left" },
         {
           to: 'projects',
           label: 'Showcase',
@@ -364,7 +364,7 @@ const config: Config = {
         //   ],
         // },
         {
-          href: "https://github.com/mkeithx",
+          href: "https://github.com/mkeithX/mkeithx.github.io",
           "aria-label": "GitHub",
           position: "right",
           className: "header-github-link",
@@ -408,7 +408,7 @@ const config: Config = {
               to: "projects",
             },
             {
-              label: "Cosmos",
+              label: "The Universe",
               to: "cosmos/overview",
             },
           ],
@@ -417,6 +417,7 @@ const config: Config = {
           title: "Connect",
           items: [
             socialProfiles.twitter,
+            socialProfiles.facebook,
             socialProfiles.linkedin,
             socialProfiles.github,
           ],
