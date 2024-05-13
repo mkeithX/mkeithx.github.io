@@ -397,15 +397,15 @@ const config: Config = {
       },
       links: [
         {
-          title: "Documentation",
+          title: "Docs",
           items: [
             {
               label: "Keyword",
               to: "docs",
             },
             {
-              label: "Project Docs",
-              to: "docs/demo-overview",
+              label: "Projects",
+              to: "projects",
             },
             {
               label: "Cosmos",
