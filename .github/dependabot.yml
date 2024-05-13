@@ -15,9 +15,7 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/website'
     schedule:
-      interval: 'daily'
-    # Disable version updates for npm dependencies
-    # https://docs.github.com/en/code-security/dependabot/dependabot-security-updates/configuring-dependabot-security-updates#overriding-the-default-behavior-with-a-configuration-file
+      interval: 'daily' 
     open-pull-requests-limit: 0
     labels:
       - 'pr: dependencies'
