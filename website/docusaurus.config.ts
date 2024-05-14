@@ -14,14 +14,14 @@ import { socialProfiles } from "./socialProfiles";
 // const isDev = process.env.NODE_ENV === 'development';
 // const baseUrl = process.env.BASE_URL ?? '/';
 
-const copyright = `Copyright © ${new Date().getFullYear()} • Developed by  <a href='me' target='_blank'><b>Keith Tan</b></a>`;
+const copyright = `Copyright © ${new Date().getFullYear()} • Designed by  <a href='me' target='_blank'>Keith Tan<b></b></a> `;
 
 const config: Config = {
   title: "SpaceHub",
   tagline:
     "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
-  // titleDelimiter: '•',
+  titleDelimiter: '•',
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX",
@@ -289,7 +289,7 @@ const config: Config = {
         src: "img/logo/spacehub-x-logo-light.png",
         href: "/",
         // height: "32",
-        width: "300",
+        width: "250",
       },
       links: [
         {
