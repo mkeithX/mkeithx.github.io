@@ -19,7 +19,7 @@ export default function IframeWindow({url}: {url: string}): JSX.Element {
         <iframe
           src={url}
           title={url}
-          style={{display: 'block', width: '100%', height: 300}}
+          style={{display: 'block', width: '100%', height: 350}}
         />
       </BrowserWindow>
     </div>
