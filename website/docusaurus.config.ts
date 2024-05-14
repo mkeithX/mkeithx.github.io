@@ -14,10 +14,10 @@ import { socialProfiles } from "./socialProfiles";
 // const isDev = process.env.NODE_ENV === 'development';
 // const baseUrl = process.env.BASE_URL ?? '/';
 
-const copyright = `Copyright © ${new Date().getFullYear()} • Developed by  <a href='https://github.com/mkeithX' target='_blank'><b>Keith Tan</b></a>`;
+const copyright = `Copyright © ${new Date().getFullYear()} • Developed by  <a href='me' target='_blank'><b>Keith Tan</b></a>`;
 
 const config: Config = {
-  title: "MKX SpaceHub",
+  title: "SpaceHub",
   tagline:
     "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
@@ -51,6 +51,7 @@ const config: Config = {
 
   customFields: {
     description: "SpaceHub for all Mankind.",
+    customTagline: "Building the Web",
     teamEmail: process.env.GIT_USER_EMAIL,
   },
 
@@ -133,22 +134,20 @@ const config: Config = {
 
         theme: {
           customCss: ["./src/css/custom.css"],
-          
         },
-        
-          sitemap: {
-            lastmod: 'date',
-            changefreq: 'weekly',
-            priority: 0.5,
-            ignorePatterns: ['/tags/**'],
-            filename: 'sitemap.xml',
-            createSitemapItems: async (params) => {
-              const {defaultCreateSitemapItems, ...rest} = params;
-              const items = await defaultCreateSitemapItems(rest);
-              return items.filter((item) => !item.url.includes('/page/'));
-            },
+
+        sitemap: {
+          lastmod: "date",
+          changefreq: "weekly",
+          priority: 0.5,
+          ignorePatterns: ["/tags/**"],
+          filename: "sitemap.xml",
+          createSitemapItems: async (params) => {
+            const { defaultCreateSitemapItems, ...rest } = params;
+            const items = await defaultCreateSitemapItems(rest);
+            return items.filter((item) => !item.url.includes("/page/"));
           },
-        
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -211,8 +210,9 @@ const config: Config = {
     // },
 
     colorMode: {
+      defaultMode: 'light',
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
 
     docs: {
@@ -228,12 +228,6 @@ const config: Config = {
     },
 
     image: "img/banner/social-x.png",
-    // metadata: [
-    //   {
-    //     name: "og:image",
-    //     content: "img/banner/social-x.png",
-    //   },
-    // ],
 
     navbar: {
       // style: "primary",
@@ -244,8 +238,8 @@ const config: Config = {
         src: "img/logo/logo-x-light.png",
         srcDark: "img/logo/logo-x-dark.png",
         target: "_self",
-        width: 180,
-        height: 32,
+        // width: 200,
+        height: 50,
       },
       items: [
         {
@@ -261,113 +255,16 @@ const config: Config = {
         },
         { to: "cosmos/overview", label: "The Universe", position: "left" },
         {
-          to: 'projects',
-          label: 'Showcase',
-          position: 'right'
+          to: "projects",
+          label: "Showcase",
+          position: "right",
         },
         { to: "blog", label: "What's new", position: "right" },
-
-
-        // {
-        //   type: "dropdown",
-        //   label: "Demo",
-        //   position: "left",
-        //   items: [
-        //     {
-        //       type: "doc",
-        //       docId: "msp",
-        //       label: "MSP",
-        //     },
-
-        //     {
-        //       type: "doc",
-        //       docId: "demo-overview",
-        //       label: "Examples",
-        //     },
-
-        //     {
-        //       to: "projects",
-        //       label: "Showcase",
-        //     },
-        //   ],
-        // },
-        // {
-        //   to: '/community/overview',
-        //   label: 'Community',
-        //   position: 'right'
-        // },
-
-        // {
-        //   type: 'localeDropdown',
-        //   position: 'right',
-        //   dropdownItemsAfter: [
-        //     {
-        //       type: 'html',
-        //       value: '<hr style="margin: 0.3rem 0;">',
-        //     },
-        //     {
-        //       href: '/',
-        //       label: 'i8ln Coming Soon',
-        //     },
-        //   ],
-        // },
-        // {
-        //   type: "dropdown",
-        //   label: "External",
-        //   position: "right",
-          
-        //   items: [
-        //     {
-        //       to: 'projects',
-        //       label: 'Showcase',
-        //       // position: 'right'
-        //     },
-        //     {
-        //       type: 'html',
-        //       value: '<hr style="margin: 0.3rem 0;">',
-        //     },                       
-        //     socialProfiles.kitiplex,
-        //     socialProfiles.iuiu,
-        //     socialProfiles.discussion,
-
-        //     // {
-        //     //   type: 'doc',
-        //     //   label: 'Social',
-        //     //   docId: 'the-keyword',
-        //     // },
-        //     // ... more items
-        //   ],
-        // },
-        // {
-        //   type: 'dropdown',
-        //   label: 'More',
-        //   position: 'right',
-        //   items: [
-
-        //     {
-        //       to: 'projects',
-        //       label: 'Showcase',
-        //       // position: 'right'
-        //     },
-        //     {
-        //       type: 'html',
-        //       value: '<hr style="margin: 0.3rem 0;">',
-        //     },
-        //     {
-        //       label: 'Facebook',
-        //       href: 'https://www.facebook.com',
-        //     },
-        //     {
-        //       label: 'X',
-        //       href: 'https://www.x.com',
-        //     },
-        //   ],
-        // },
         {
-          href: "https://github.com/mkeithX/mkeithx.github.io",
-          "aria-label": "GitHub",
-          position: "right",
-          className: "header-github-link",
+          href: 'https://github.com/mkeithX/mkeithx.github.io',
+          position: 'right',
+          className: 'header-github-link',
+          'aria-label': 'GitHub repository',
         },
         {
           type: "search",
@@ -383,7 +280,6 @@ const config: Config = {
       contextualSearch: false,
       searchPagePath: "search",
       insights: true,
-      // placeholder: 'MKX',
     },
 
     footer: {
@@ -427,12 +323,12 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Latest",
+              label: "Blog",
               to: "blog/",
             },
             {
-              label: "Nutshell",
-              to: "me/",
+              label: "Contribute",
+              to: "docs/contributing",
             },
           ],
         },

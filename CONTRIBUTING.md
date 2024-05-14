@@ -1,51 +1,70 @@
-## Contributing to MKX SpaceHub
+# Introduction
 
-Thank you for considering contributing to this project. Before you start, please take noted that this project has adopted a [**CODE OF CONDUCT**](../community/code-of-conduct) that every project participants are expected to adhere to. This is to ensure a welcoming and inclusive environment for everyone.
+Thank you for considering contributing to our project! We appreciate your interest and effort. To maintain a healthy and welcoming community, we have some guidelines in place for contributing.
 
+## Code of Conduct
 
-### Getting Started
+We expect all contributors to adhere to our [Code of Conduct](../community/code-of-conduct) to ensure a positive and inclusive environment for everyone.
 
-1. Fork the repository and clone it locally.
+## How to Contribute
+
+1. Fork the repository to your GitHub account.
+2. Clone the forked repository to your local machine.
+3. Create a new branch for your feature or bug fix:
 
 ```bash
-git clone https://github.com/mkeithX/mkeithx.github.io.git
+git checkout -b feature/your-feature-name
 ```
-2. Create a new branch for your contribution: 
+4. Make your changes and commit them with descriptive commit messages:
+
 
 ```bash
-git checkout -b feature/my-awesome-feature
+git commit -m 'Add some feature'
 ```
-3. Install dependencies and set up the project following the provided instructions.
+5. Push your changes to your forked repository:
 
-### Making Changes
+```bash
+git push origin feature/your-feature-name
+```
 
-1. Ensure that your code follows our coding standards.
-2. Keep commit messages clear and concise, following the [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/) specification.
-3. If your contribution addresses an existing issue, reference it in your commit message using keywords like "Fixes #123" or "Resolves #456."
+6. Open a pull request (PR) against the main repository's `main` branch.
+7. Ensure that your PR includes a clear description of the changes made and any relevant information.
+8. Our team will review your PR, provide feedback, and merge it if everything looks good.
 
-### Testing
+## Development
 
-1. Run the existing test suite and add new tests for your changes.
-2. Ensure that all tests pass before submitting your pull request.
+**MKXSpacehub** depends on GitHub as its main source of information. 
 
-### Submitting Changes
+### Code Conventions
 
-1. Push your changes to your forked repository.
-2. Submit a pull request against the `main` branch of the original repository.
-3. Provide a clear and detailed description of your changes in the pull request.
+Follow the existing code style and formatting conventions.
 
-#### Code Reviews
 
-1. Be open to feedback and be willing to make changes if necessary.
-2. Respond to comments in a timely manner and engage in discussions about your code.
+### Semantic Commit Messages
 
-### Documentation
+Write clear and concise commit messages and PR descriptions.
 
-1. Update the documentation if your changes introduce new features or modify existing ones.
-2. Ensure that the [README](#) file is kept up-to-date.
+- `feat`: a new API or behavior for the end user.
+- `fix`: a bug fix for the end user.
+- `docs`: a change to the website or other Markdown documents in our repo.
+- `refactor`: a change to production code that leads to no behavior difference, e.g. splitting files, renaming internal variables, improving code style...
+- `test` adding missing tests, refactoring tests; no production code change.
+- `chore`: upgrading dependencies, releasing new versions... Chores that are regularly done for maintenance purposes.
+- `misc`: anything else that doesn't change production code, yet is not test or chore. e.g. updating GitHub actions workflow.
 
-### Bug Reports and Feature Requests
+## Pull request
 
-If you encounter bugs or have ideas for new features, please open an issue with a clear description and, if applicable, steps to reproduce the problem.
+- Keep your changes focused and atomic, addressing one issue per PR.
+- Write clear and concise commit messages and PR descriptions.
+- Test your changes thoroughly and ensure they don't introduce any regressions.
+- Be respectful and considerate towards other contributors.
 
-Thank you for contributing! We appreciate your time and effort in making our project better.
+## Issues
+
+If you find a bug, have a suggestion, or want to request a new feature, feel free to open an issue in the repository. Make sure to provide as much detail as possible to help us understand and address the issue efficiently.
+
+## Feedback
+
+We welcome feedback on how we can improve our guidelines or the contribution process itself. If you have any suggestions, please let us know by opening an issue or reaching out to us directly.
+
+Thank you for contributing!

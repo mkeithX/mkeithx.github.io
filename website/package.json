@@ -15,7 +15,7 @@
     "typecheck": "tsc",
     "build:local": "docusaurus build && docusaurus serve",
     "serve:local":"docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
-    "start:local": "docusaurus start --host 0.0.0.0 --no-open"
+    "start:local": "npm run docusaurus start -- --host 0.0.0.0 --no-open"
     
   },
   "dependencies": {
