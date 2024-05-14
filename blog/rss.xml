@@ -1,14 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
 <rss version="2.0" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/">
     <channel>
-        <title>MKX SpaceHub Blog</title>
+        <title>SpaceHub Blog</title>
         <link>https://mkeithx.github.io/blog</link>
-        <description>MKX SpaceHub Blog</description>
+        <description>SpaceHub Blog</description>
         <lastBuildDate>Mon, 06 May 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
-        <copyright>Copyright © 2024 • Developed by  &lt;a href='https://github.com/mkeithX' target='_blank'&gt;&lt;b&gt;Keith Tan&lt;/b&gt;&lt;/a&gt;</copyright>
+        <copyright>Copyright © 2024 • Developed by  &lt;a href='me' target='_blank'&gt;&lt;b&gt;Keith Tan&lt;/b&gt;&lt;/a&gt;</copyright>
         <item>
             <title><![CDATA[Python Starters]]></title>
             <link>https://mkeithx.github.io/blog/python-starters</link>

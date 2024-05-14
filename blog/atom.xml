@@ -1,13 +1,13 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkeithx.github.io/blog</id>
-    <title>MKX SpaceHub Blog</title>
+    <title>SpaceHub Blog</title>
     <updated>2024-05-06T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkeithx.github.io/blog"/>
-    <subtitle>MKX SpaceHub Blog</subtitle>
+    <subtitle>SpaceHub Blog</subtitle>
     <icon>https://mkeithx.github.io/icons/favicon.ico</icon>
-    <rights>Copyright © 2024 • Developed by  &lt;a href='https://github.com/mkeithX' target='_blank'&gt;&lt;b&gt;Keith Tan&lt;/b&gt;&lt;/a&gt;</rights>
+    <rights>Copyright © 2024 • Developed by  &lt;a href='me' target='_blank'&gt;&lt;b&gt;Keith Tan&lt;/b&gt;&lt;/a&gt;</rights>
     <entry>
         <title type="html"><![CDATA[Python Starters]]></title>
         <id>https://mkeithx.github.io/blog/python-starters</id>
