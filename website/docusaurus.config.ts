@@ -104,21 +104,23 @@ const config: Config = {
           blogDescription: "News and updates from MKX SpaceHub.",
           routeBasePath: "blog",
           blogSidebarTitle: "What's new",
-          blogSidebarCount: "ALL",
-          ...commonDocsPluginConfig,
-          postsPerPage: "ALL",
+          blogSidebarCount: 5,
+          showLastUpdateAuthor: false,
+          showLastUpdateTime: false,
+          ...admonitionsConfig,
+          postsPerPage: 5,
 
           feedOptions: {
             type: "all",
             copyright,
-            createFeedItems: async (params) => {
-              const { blogPosts, defaultCreateFeedItems, ...rest } = params;
-              return defaultCreateFeedItems({
-                // keep only the 10 most recent blog posts in the feed
-                blogPosts: blogPosts.filter((_item, index) => index < 10),
-                ...rest,
-              });
-            },
+            // createFeedItems: async (params) => {
+            //   const { blogPosts, defaultCreateFeedItems, ...rest } = params;
+            //   return defaultCreateFeedItems({
+            //     // keep only the 10 most recent blog posts in the feed
+            //     blogPosts: blogPosts.filter((_item, index) => index < 10),
+            //     ...rest,
+            //   });
+            // },
           },
         } satisfies BlogOptions,
 
@@ -135,15 +137,16 @@ const config: Config = {
 
         sitemap: {
           lastmod: "date",
-          changefreq: "weekly",
-          priority: 0.5,
-          ignorePatterns: ["/tags/**"],
-          filename: "sitemap.xml",
-          createSitemapItems: async (params) => {
-            const { defaultCreateSitemapItems, ...rest } = params;
-            const items = await defaultCreateSitemapItems(rest);
-            return items.filter((item) => !item.url.includes("/page/"));
-          },
+          changefreq: null,
+          priority: null,
+          // ignorePatterns: ["/tags/**"],
+          ignorePatterns: ['/tests/{blog,pages}/**','/tags/**'],
+          // filename: "sitemap.xml",
+          // createSitemapItems: async (params) => {
+          //   const { defaultCreateSitemapItems, ...rest } = params;
+          //   const items = await defaultCreateSitemapItems(rest);
+          //   return items.filter((item) => !item.url.includes("/page/"));
+          // },
         },
       } satisfies Preset.Options,
     ],
