@@ -10,11 +10,11 @@
   display: flex;
   background-color: var(--kiti-dark-pale);
   height: 25rem;
- }* /
+ }
+  */
+
+
  
-
-
- */
  .main {
   padding: 12px;
 }
@@ -55,7 +55,7 @@
   overflow: hidden;
   background: #111317;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 7.5vw), 0 100%);
-  height: 34rem;
+  height: 36rem;
 }
 
 

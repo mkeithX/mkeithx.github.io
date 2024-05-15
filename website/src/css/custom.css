@@ -335,6 +335,34 @@ html[data-theme='dark'] .alert--discord {
   --ifm-alert-border-color: #5865F2;
 }
 
+.alert--docusaurus {
+  --ifm-alert-background-color: rgba(43, 253, 71, 0.5);
+  --ifm-alert-background-color-highlight: rgba(10, 133, 6, 0.15);
+  --ifm-alert-foreground-color: rgb(65, 63, 63);
+  --ifm-alert-border-color: #e5ff00;
+}
+
+html[data-theme='dark'] .alert--docusaurus {
+  --ifm-alert-background-color: rgba(43, 253, 71, 0.5);
+  --ifm-alert-background-color-highlight: rgba(10, 133, 6, 0.15);
+  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-border-color: #e5ff00;
+}
+
+.alert--release {
+  --ifm-alert-background-color: rgba(242, 193, 78, 0.5);
+  --ifm-alert-background-color-highlight: rgba(242, 193, 78, 0.15);
+  --ifm-alert-foreground-color: rgb(66,69,73);
+  --ifm-alert-border-color: #F2C14E;
+}
+
+html[data-theme='dark'] .alert--release {
+  --ifm-alert-background-color: rgba(242, 193, 78, 0.5);
+  --ifm-alert-background-color-highlight: rgba(242, 193, 78, 0.15);
+  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-border-color: #F2C14E;
+}
+
 .banner {
   padding: 4rem;
 }

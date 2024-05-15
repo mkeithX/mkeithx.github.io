@@ -6,9 +6,9 @@ import AdmonitionTypeCaution from '@theme/Admonition/Type/Caution';
 import AdmonitionTypeDanger from '@theme/Admonition/Type/Danger';
 import AdmonitionTypeDiscord from './Type/Discord';
 import AdmonitionTypeSecurity from './Type/Security';
-// import AdmonitionTypeRelease from './Type/Release';
+import AdmonitionTypeRelease from './Type/Release';
 import AdmonitionTypeCredit from './Type/Credit';
-// import AdmonitionTypeDocusaurus from './Type/Docusaurus';
+import AdmonitionTypeDocusaurus from './Type/Docusaurus';
 import type AdmonitionTypes from '@theme/Admonition/Types';
 import type {Props} from '@theme/Admonition';
 
@@ -19,9 +19,9 @@ const admonitionTypes: typeof AdmonitionTypes = {
   caution: AdmonitionTypeCaution,
   danger: AdmonitionTypeDanger,
   security: AdmonitionTypeSecurity,
-//   release: AdmonitionTypeRelease,
+  release: AdmonitionTypeRelease,
   credit: AdmonitionTypeCredit,
-//   docusaurus: AdmonitionTypeDocusaurus,
+  docusaurus: AdmonitionTypeDocusaurus,
   discord: AdmonitionTypeDiscord,
 };
 

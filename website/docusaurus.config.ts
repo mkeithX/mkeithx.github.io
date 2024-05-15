@@ -26,6 +26,8 @@ const admonitionsConfig = {
       "security",
       "credit",
       "discord",
+      "docusaurus",
+      "release"
     ],
   },
 };
@@ -231,7 +233,7 @@ const config: Config = {
           docId: "msp",
           label: "MSP",
         },
-        { to: "cosmos/overview", label: "The Universe", position: "left" },
+        { to: "cosmos/overview", label: "Cosmos", position: "left" },
         {
           to: "projects",
           label: "Showcase",
