@@ -8,11 +8,7 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 
-import "dotenv/config";
 import { socialProfiles } from "./socialProfiles";
-
-// const isDev = process.env.NODE_ENV === 'development';
-// const baseUrl = process.env.BASE_URL ?? '/';
 
 const copyright = `Copyright © ${new Date().getFullYear()} • Designed by  <a href='me' target='_blank'>Keith Tan<b></b></a> `;
 
@@ -32,7 +28,19 @@ const admonitionsConfig = {
       "discord",
     ],
   },
-}
+};
+
+const remarkPluginsConfig = {
+  remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
+  rehypePlugins: [rehypeKatex],
+};
+
+const commonDocsPluginConfig = {
+  showLastUpdateAuthor: false,
+  showLastUpdateTime: true,
+  ...admonitionsConfig,
+  ...remarkPluginsConfig,
+};
 
 const config: Config = {
   title: "SpaceHub",
@@ -70,7 +78,6 @@ const config: Config = {
   customFields: {
     description: "SpaceHub for all Mankind.",
     customTagline: "Building the Web",
-    teamEmail: process.env.GIT_USER_EMAIL,
   },
 
   i18n: {
@@ -85,21 +92,10 @@ const config: Config = {
       {
         docs: {
           path: "docs",
-          showLastUpdateAuthor: false,
-          showLastUpdateTime: true,
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
-          include: ["**/*.md", "**/*.mdx"],
-          exclude: [
-            "**/_*.{js,jsx,ts,tsx,md,mdx}",
-            "**/_*/**",
-            "**/*.test.{js,jsx,ts,tsx}",
-            "**/__tests__/**",
-          ],
-          remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
-          rehypePlugins: [rehypeKatex],
-          ...admonitionsConfig,
+          ...commonDocsPluginConfig,
         },
 
         blog: {
@@ -109,19 +105,8 @@ const config: Config = {
           routeBasePath: "blog",
           blogSidebarTitle: "What's new",
           blogSidebarCount: "ALL",
-          include: ["**/*.{md,mdx}"],
-
-          exclude: [
-            "**/_*.{js,jsx,ts,tsx,md,mdx}",
-            "**/_*/**",
-            "**/*.test.{js,jsx,ts,tsx}",
-            "**/__tests__/**",
-          ],
-
+          ...commonDocsPluginConfig,
           postsPerPage: "ALL",
-
-          remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
-          rehypePlugins: [rehypeKatex],
 
           feedOptions: {
             type: "all",
@@ -140,18 +125,8 @@ const config: Config = {
         pages: {
           path: "src/pages",
           routeBasePath: "",
-          include: ["**/*.{js,jsx,ts,tsx,md,mdx}"],
-          exclude: [
-            "**/_*.{js,jsx,ts,tsx,md,mdx}",
-            "**/_*/**",
-            "**/*.test.{js,jsx,ts,tsx}",
-            "**/__tests__/**",
-          ],
-
-          mdxPageComponent: "@theme/MDXPage",
-          remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
-          rehypePlugins: [rehypeKatex],
-          ...admonitionsConfig,
+          ...commonDocsPluginConfig,
+          // mdxPageComponent: "@theme/MDXPage",
         },
 
         theme: {
@@ -181,22 +156,9 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        showLastUpdateAuthor: false,
-        showLastUpdateTime: true,
         breadcrumbs: true,
+        ...commonDocsPluginConfig,
         sidebarPath: "./sidebarsCosmos.ts",
-
-        include: ["**/*.md", "**/*.mdx"],
-        exclude: [
-          "**/_*.{js,jsx,ts,tsx,md,mdx}",
-          "**/_*/**",
-          "**/*.test.{js,jsx,ts,tsx}",
-          "**/__tests__/**",
-        ],
-        remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
-        rehypePlugins: [rehypeKatex],
-        docItemComponent: "@theme/DocItem",
-        ...admonitionsConfig,
       } as DocsOptions,
     ],
     [
@@ -205,21 +167,9 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        showLastUpdateAuthor: false,
-        showLastUpdateTime: true,
         breadcrumbs: true,
         sidebarPath: "./sidebarsCommunity.ts",
-        include: ["**/*.md", "**/*.mdx"],
-        exclude: [
-          "**/_*.{js,jsx,ts,tsx,md,mdx}",
-          "**/_*/**",
-          "**/*.test.{js,jsx,ts,tsx}",
-          "**/__tests__/**",
-        ],
-        remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
-        rehypePlugins: [rehypeKatex],
-        docItemComponent: "@theme/DocItem",
-        ...admonitionsConfig,
+        ...commonDocsPluginConfig,
       } as DocsOptions,
     ],
   ],
