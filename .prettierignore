@@ -1,9 +1,9 @@
-# dist
-# node_modules
-# .yarn
-# build
-# coverage
-# .docusaurus
+dist
+node_modules
+.yarn
+build
+coverage
+.docusaurus
 
 
 
@@ -21,8 +21,8 @@
 # website/docusaurus.config.js
 # website/versioned_sidebars/*.json
 
-# examples/
-# website/static/
+examples/
+website/static/
 
 # website/changelog
 # # website/

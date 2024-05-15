@@ -110,6 +110,7 @@ const config: Config = {
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
           ...admonitionsConfig,
+          ...remarkPluginsConfig,
           postsPerPage: 5,
 
           feedOptions: {
@@ -284,7 +285,7 @@ const config: Config = {
               to: "projects",
             },
             {
-              label: "The Universe",
+              label: "Cosmos",
               to: "cosmos/overview",
             },
           ],
