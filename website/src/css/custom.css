@@ -295,3 +295,47 @@ div[class^='announcementBar_'] a:hover {
 .footer .container {
   max-width: 960px;
 }
+
+.alert--security {
+  --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
+  --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
+  --ifm-alert-foreground-color: rgb(66,69,73);
+  --ifm-alert-border-color: #d4351c;
+}
+
+html[data-theme='dark'] .alert--security {
+  --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
+  --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
+  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-border-color: #d4351c;
+}
+
+
+.alert--credit {
+  --ifm-alert-background-color: rgba(181, 127, 12, 0.5);
+  --ifm-alert-background-color-highlight: rgba(181, 127, 12, 0.15);
+  --ifm-alert-foreground-color: rgb(66,69,73);
+  --ifm-alert-border-color: #B57F0C;
+}
+
+html[data-theme='dark'] .alert--credit {
+  --ifm-alert-background-color: rgba(181, 127, 12, 0.5);
+  --ifm-alert-background-color-highlight: rgba(181, 127, 12, 0.15);
+  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-border-color: #B57F0C;
+}
+
+
+.alert--discord {
+  --ifm-alert-background-color: rgba(114, 137, 218, 0.5);
+  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
+  --ifm-alert-foreground-color: rgb(66,69,73);
+  --ifm-alert-border-color: #5865F2;
+}
+
+html[data-theme='dark'] .alert--discord {
+  --ifm-alert-background-color: rgba(114, 137, 218, 0.5);
+  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
+  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-border-color: #5865F2;
+}

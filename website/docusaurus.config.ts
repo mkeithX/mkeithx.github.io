@@ -16,12 +16,30 @@ import { socialProfiles } from "./socialProfiles";
 
 const copyright = `Copyright © ${new Date().getFullYear()} • Designed by  <a href='me' target='_blank'>Keith Tan<b></b></a> `;
 
+const admonitionsConfig = {
+  admonitions: {
+    keywords: [
+      "info",
+      "success",
+      "danger",
+      "note",
+      "tip",
+      "warning",
+      "important",
+      "caution",
+      "security",
+      "credit",
+      "discord",
+    ],
+  },
+}
+
 const config: Config = {
   title: "SpaceHub",
   tagline:
     "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
-  titleDelimiter: '•',
+  titleDelimiter: "•",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX",
@@ -81,6 +99,7 @@ const config: Config = {
           ],
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
+          ...admonitionsConfig,
         },
 
         blog: {
@@ -98,6 +117,7 @@ const config: Config = {
             "**/*.test.{js,jsx,ts,tsx}",
             "**/__tests__/**",
           ],
+
           postsPerPage: "ALL",
 
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
@@ -127,9 +147,11 @@ const config: Config = {
             "**/*.test.{js,jsx,ts,tsx}",
             "**/__tests__/**",
           ],
+
           mdxPageComponent: "@theme/MDXPage",
           remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
           rehypePlugins: [rehypeKatex],
+          ...admonitionsConfig,
         },
 
         theme: {
@@ -163,6 +185,7 @@ const config: Config = {
         showLastUpdateTime: true,
         breadcrumbs: true,
         sidebarPath: "./sidebarsCosmos.ts",
+
         include: ["**/*.md", "**/*.mdx"],
         exclude: [
           "**/_*.{js,jsx,ts,tsx,md,mdx}",
@@ -173,6 +196,7 @@ const config: Config = {
         remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
         rehypePlugins: [rehypeKatex],
         docItemComponent: "@theme/DocItem",
+        ...admonitionsConfig,
       } as DocsOptions,
     ],
     [
@@ -195,6 +219,7 @@ const config: Config = {
         remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
         rehypePlugins: [rehypeKatex],
         docItemComponent: "@theme/DocItem",
+        ...admonitionsConfig,
       } as DocsOptions,
     ],
   ],
@@ -210,7 +235,7 @@ const config: Config = {
     // },
 
     colorMode: {
-      defaultMode: 'dark',
+      defaultMode: "dark",
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
@@ -261,10 +286,10 @@ const config: Config = {
         },
         { to: "blog", label: "What's new", position: "right" },
         {
-          href: 'https://github.com/mkeithX/mkeithx.github.io',
-          position: 'right',
-          className: 'header-github-link',
-          'aria-label': 'GitHub repository',
+          href: "https://github.com/mkeithX/mkeithx.github.io",
+          position: "right",
+          className: "header-github-link",
+          "aria-label": "GitHub repository",
         },
         {
           type: "search",
