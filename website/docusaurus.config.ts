@@ -67,7 +67,7 @@ const config: Config = {
       {
         docs: {
           path: "docs",
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
@@ -159,7 +159,7 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        showLastUpdateAuthor: true,
+        showLastUpdateAuthor: false,
         showLastUpdateTime: true,
         breadcrumbs: true,
         sidebarPath: "./sidebarsCosmos.ts",
@@ -181,7 +181,7 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        showLastUpdateAuthor: true,
+        showLastUpdateAuthor: false,
         showLastUpdateTime: true,
         breadcrumbs: true,
         sidebarPath: "./sidebarsCommunity.ts",

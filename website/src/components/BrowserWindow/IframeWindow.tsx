@@ -10,7 +10,7 @@ export default function IframeWindow({url}: {url: string}): JSX.Element {
         url={url}
         style={{
           minWidth: 'min(100%,45vw)',
-          width: 800,
+          width: 996,
           maxWidth: '100%',
           overflow: 'hidden',
         }}
