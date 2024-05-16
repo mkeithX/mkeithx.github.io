@@ -106,12 +106,12 @@ const config: Config = {
           blogDescription: "News and updates from MKX SpaceHub.",
           routeBasePath: "blog",
           blogSidebarTitle: "What's new",
-          blogSidebarCount: 5,
+          blogSidebarCount: 'ALL',
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
           ...admonitionsConfig,
           ...remarkPluginsConfig,
-          postsPerPage: 5,
+          postsPerPage: 'ALL',
 
           feedOptions: {
             type: "all",
