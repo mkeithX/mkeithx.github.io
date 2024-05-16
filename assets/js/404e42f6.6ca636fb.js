@@ -1,0 +1,1 @@
+"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[7960],{1678:e=>{e.exports=JSON.parse('{"metadata":{"permalink":"/blog/page/2","page":2,"postsPerPage":5,"totalPages":2,"totalCount":7,"previousPage":"/blog","blogDescription":"News and updates from MKX SpaceHub.","blogTitle":"Recents"}}')}}]);
