@@ -19,7 +19,7 @@ const sidebars: SidebarsConfig = {
     "ms365-at-kitiplex",
     "policy-and-guidelines",
     {
-      label: "Website Configuration",
+      label: "Configuration",
       type: "category",
       collapsed: true,
       collapsible: true,
