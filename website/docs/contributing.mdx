@@ -80,38 +80,33 @@ Examples of unacceptable behavior include:
 
 **MKXSpacehub** depends on GitHub as its main source of information. All pull requests will be checked by the continuous integration system, GitHub actions.
 
-<!-- [![GitHub Pages](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/deploy.yml/badge.svg)](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/deploy.yml)
-[![CodeQL](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/codeql.yml/badge.svg)](https://github.com/mkeithX/mkeithx.github.io/actions/workflows/codeql.yml)  -->
-![pages](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/deploy.yml?label=Build&color=%236E9F18
+![website_status](https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io%2F&style=for-the-badge&label=Website)
+![build_status](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/deploy.yml?style=for-the-badge)
+![issues](https://img.shields.io/github/issues/mkeithx/mkeithx.github.io?style=for-the-badge
 )
-![Commit](https://img.shields.io/github/commit-activity/w/mkeithX/mkeithx.github.io
-)
-![License](https://img.shields.io/github/license/mkeithx/mkeithx.github.io?logo=MIT&label=License&color=orange
-)
-![Website](https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io%2F&up_message=UP&up_color=%236E9F18&down_message=DOWN&down_color=%23EB1F1F&label=Website)
-![Issues](https://img.shields.io/github/issues/mkeithx/mkeithx.github.io
-)
+![lic](https://img.shields.io/github/license/mkeithx/mkeithx.github.io?style=for-the-badge&color=orange)
 
-## How to Contribute
+## Contribute
 
 1. Fork the repository to your GitHub account.
 2. Clone the forked repository to your local machine.
 3. Create a new branch for your feature or bug fix:
 
+
 ```bash
-git checkout -b feature/your-feature-name
+git switch -c <'feature/your-feature-name'>
 ```
 
 4. Make your changes and commit them with descriptive commit messages:
 
 ```bash
-git commit -m 'Add some feature'
+git commit -m 'feat:Add some feature'
 ```
 
 5. Push your changes to your forked repository:
 
 ```bash
-git push origin feature/your-feature-name
+git push -u origin <'feature/your-feature-name'>
 ```
 
 6. Open a pull request (PR) against the main repository's `main` branch.
