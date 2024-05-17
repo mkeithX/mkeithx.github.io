@@ -78,7 +78,7 @@ const config: Config = {
   ],
 
   customFields: {
-    description: "SpaceHub for all Mankind.",
+    description: "A documentation website representing humanity from Dimension C-137 and beyond.",
     customTagline: "Building the Web",
   },
 
