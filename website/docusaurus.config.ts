@@ -178,6 +178,17 @@ const config: Config = {
         ...commonDocsPluginConfig,
       } as DocsOptions,
     ],
+    [
+      "content-docs",
+      {
+        id: "msp",
+        path: "msp",
+        routeBasePath: "msp",
+        breadcrumbs: true,
+        sidebarPath: "./sidebarsMsp.ts",
+        ...commonDocsPluginConfig,
+      } as DocsOptions,
+    ],
   ],
 
   themeConfig: {
@@ -229,11 +240,7 @@ const config: Config = {
           sidebarId: "mySidebar",
           label: "Docs",
         },
-        {
-          type: "doc",
-          docId: "msp",
-          label: "MSP",
-        },
+        { to: "msp", label: "MSP", position: "left" },
         { to: "cosmos/overview", label: "Cosmos", position: "left" },
         {
           to: "projects",
