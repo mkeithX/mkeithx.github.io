@@ -59,13 +59,13 @@ const config: Config = {
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
 
-  scripts: [
-    {
-      src: "https://X2M5FPT6G9-dsn.algolia.net",
-      rel: "preconnect",
-      crossorigin: true,
-    },
-  ],
+  // scripts: [
+  //   {
+  //     src: "https://X2M5FPT6G9-dsn.algolia.net",
+  //     rel: "preconnect",
+  //     crossorigin: true,
+  //   },
+  // ],
 
   stylesheets: [
     {
@@ -240,8 +240,14 @@ const config: Config = {
           sidebarId: "mySidebar",
           label: "Docs",
         },
+        {
+          type: "docSidebar",
+          position: "left",
+          sidebarId: "repoSidebar",
+          label: "Repo",
+        },
         { to: "msp", label: "MSP", position: "left" },
-        { to: "cosmos", label: "Cosmos", position: "left" },
+        { to: "cosmos", label: "Universe", position: "left" },
         {
           to: "projects",
           label: "Showcase",

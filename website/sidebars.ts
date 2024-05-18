@@ -16,8 +16,6 @@ const sidebars: SidebarsConfig = {
   mySidebar: [
     "the-keyword",
     "contributing",
-    "ms365-at-kitiplex",
-    // "policy-and-guidelines",
     {
       label: "Configuration",
       type: "category",
@@ -48,6 +46,7 @@ const sidebars: SidebarsConfig = {
 
   demoSidebar: [
     "demo-overview",
+    // "demo/flask-tutorial-demo",
     {
       type: "category",
       label: "Samples",
@@ -59,6 +58,19 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+
+  repoSidebar: [
+    "repo/overview",
+    {
+      type: 'category',
+      label: 'Examples',
+      items: [
+        'repo/flask-tutorials',
+        'repo/python-starters'
+      ]
+    }
+
+  ]
 
 
   // But you can create a sidebar manually

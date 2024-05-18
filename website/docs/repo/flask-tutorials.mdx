@@ -1,0 +1,77 @@
+---
+title: Flask tutorial - Demo
+# slug: 
+description: Building a web application with Python.
+# sidebar_label: 
+# image: 
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+Building a web application with Python.
+
+## Installation
+
+To get started, follow these steps to run the app on your local machine.
+
+### Cloning the Repository
+
+```bash
+git clone https://github.com/mkeithX/flask-tutorial-demo.git
+```
+
+```bash
+cd flask-tutorial-demo
+```
+
+### Setting Up the Virtual Environment
+
+
+<Tabs>
+  <TabItem value="nt" label="Windows" default>
+    
+```bash
+py -m venv .venv
+```
+```bash
+.venv\Scripts\activate
+```
+  </TabItem>
+  <TabItem value="ln" label="Unix">
+
+```bash
+python3 -m venv .venv
+```
+
+```bash
+source .venv/bin/activate
+```
+
+  </TabItem>
+</Tabs>
+
+
+### Running the Application
+
+Start by making a copy of `.env.example` in your app directory.
+
+```bash
+cp .env.example .env
+```
+
+Then, initialize the database and run the application.
+
+```bash
+flask init-db
+```
+
+```bash
+flask run
+```
+
+**Congratulations!**
+
+---
+If you find this repo helpful, 🙏 show your [support by giving](https://github.com/mkeithX/flask-tutorial-demo) it a ⭐.
+
