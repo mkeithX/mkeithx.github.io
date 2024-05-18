@@ -241,7 +241,7 @@ const config: Config = {
           label: "Docs",
         },
         { to: "msp", label: "MSP", position: "left" },
-        { to: "cosmos/overview", label: "Cosmos", position: "left" },
+        { to: "cosmos", label: "Cosmos", position: "left" },
         {
           to: "projects",
           label: "Showcase",
@@ -293,7 +293,7 @@ const config: Config = {
             },
             {
               label: "Cosmos",
-              to: "cosmos/overview",
+              to: "cosmos",
             },
           ],
         },
