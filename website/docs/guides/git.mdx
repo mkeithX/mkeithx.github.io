@@ -1,0 +1,100 @@
+---
+title: Git
+# slug: 
+description: Version Control - Git
+# sidebar_label: 
+# sidebar_position: 
+# image: 
+---
+
+# Setup
+
+```js title=".gitconfig"
+# ~/.gitconfig
+
+# First things first, always set up your user info.
+// highlight-start
+
+[user]
+name = my_username
+email = my_email@example.com
+
+// highlight-end
+
+# Display colours in the console
+[color]
+ui = auto
+branch = auto
+status = auto
+
+# Always rebase when using `git pull`, except for `main, master, develop` branches.
+[branch]
+autosetuprebase = always
+
+[branch "main"]
+rebase = false
+
+[branch "master"]
+rebase = false
+
+[branch "develop"]
+rebase = false
+
+
+
+# Automatically set up remote tracking branches for all new local branches.
+
+
+
+[push]
+autoSetupRemote = true
+
+# Important setting in windows that allows working on both Windows and cross-platform projects
+[core]
+eol = native
+autocrlf = input
+
+# Common typos and aliases for long commands
+[alias]
+chekcout = checkout
+ocmmit = commit
+statsu = status
+sttaus = status
+fa = fetch --all
+pushf = push --force-with-lease
+stsah = stash
+
+# Common LFS Settings
+[filter "lfs"]
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+clean = git-lfs clean -- %f
+
+# How private registries are handled
+[credential "https://my_company_vcs.example.com"]
+provider = generic
+```
+
+## Basic workflow
+
+### Create a local branch
+
+```bash
+git checkout -b my-feature
+```
+
+### Make changes
+
+```bash
+git commit -m "feat: my feature description"
+```
+
+### Push changes
+
+```bash
+git push
+```
+```bash
+git push -u origin my-feature
+```
