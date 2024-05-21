@@ -6,7 +6,7 @@ import { Case } from "./_components/ProjectCards";
 export const cases: Case[] = [
   {
     title: "Python Starters",
-    website: "./docs/demo/python-starters",
+    website: "./docs/repo/python-starters",
     preview: require("@site/src/data/projects/default-x.png").default,
     description: (
       <>A collection of basic python code examples for starters. This project requires minimal setup and works best with VSCode.</>
@@ -16,7 +16,7 @@ export const cases: Case[] = [
   },
   {
     title: "Batch Minis",
-    website: "./docs/demo/batch-demo-sample",
+    website: "./docs/guides/batch-sample",
     preview: require("@site/src/data/projects/default-x.png").default,
     description: (
       <>A collection of basic batch code examples for starters.</>

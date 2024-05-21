@@ -2,7 +2,7 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 const sidebars: SidebarsConfig = {
   cosmicSidebar: [
-    "introduction",
+    "index",
     "forces-and-mysteries",
     {
       type: "category",
@@ -11,7 +11,7 @@ const sidebars: SidebarsConfig = {
       collapsible: true,
       link: {
         type: 'doc',
-        id: 'solar-system/overview',
+        id: 'solar-system/index',
       },
       items: [
         'solar-system/sun',
@@ -22,7 +22,7 @@ const sidebars: SidebarsConfig = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'solar-system/planets/overview',
+            id: 'solar-system/planets/index',
           },
           items: [
             'solar-system/planets/mercury',
@@ -37,7 +37,6 @@ const sidebars: SidebarsConfig = {
             'solar-system/planets/planet-x'
           ]
         },
-        // 'solar-system/moons/moons-overview',
         {
           type: 'category',
           label: 'Moons',
@@ -45,7 +44,7 @@ const sidebars: SidebarsConfig = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'solar-system/moons/moons-overview',
+            id: 'solar-system/moons/index',
           },
           items: [
             'solar-system/moons/phases-of-the-moon',
@@ -59,7 +58,7 @@ const sidebars: SidebarsConfig = {
           collapsible: true,
           link: {
             type: 'doc',
-            id: 'solar-system/comets-and-asteroids/overview'
+            id: 'solar-system/comets-and-asteroids/index'
           },
           items: [
             'solar-system/comets-and-asteroids/halleys-comet',

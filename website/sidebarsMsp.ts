@@ -7,7 +7,7 @@ const sidebars: SidebarsConfig = {
         {
             type: "category",
             label: "Clients",
-            collapsed: false,
+            collapsed: true,
             collapsible: true,
             items: [
                 'clients/kitimi-platforms',
