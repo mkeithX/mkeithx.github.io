@@ -7,7 +7,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "The Solar System",
-      collapsed: true,
+      collapsed: false,
       collapsible: true,
       link: {
         type: 'doc',

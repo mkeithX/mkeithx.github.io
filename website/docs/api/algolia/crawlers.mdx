@@ -1,28 +1,34 @@
 ---
 title: Crawlers
+description: Algolia Crawlers
 ---
 
 ```yml
 new Crawler({
+  // highlight-start
   appId: "<YOUR-APP-ID>",
   apiKey: "<YOU-API-KEY>",
+   // highlight-end
   rateLimit: 8,
   maxDepth: 10,
   maxUrls: 5000,
   renderJavaScript: false,
-  startUrls: ["https://mkeithx.github.io"],
-  sitemaps: ["https://mkeithx.github.io/sitemap.xml"],
+  startUrls: ["https://YOUR_WEBSITE_URL"],
+  sitemaps: ["https://YOUR_WEBSITE_URL/sitemap.xml"],
   ignoreCanonicalTo: true,
   discoveryPatterns: ["https://YOUR_WEBSITE_URL/**"],
+# Optional
+      // highlight-start
   exclusionPatterns: [
-    "https://mkeithx.github.io/FOO",
-    "https://mkeithx.github.io/BAR",
+    "https://YOUR_WEBSITE_URL/FOO",
+    "https://YOUR_WEBSITE_URL/BAR",
   ],
+      // highlight-end
   schedule: "every 2 day at 6:00 am",
   actions: [
     {
-      indexName: "mkeithxio",
-      pathsToMatch: ["https://mkeithx.github.io/**"],
+      indexName: "<YOUR_INDEX_NAME>",
+      pathsToMatch: ["https://YOUR_WEBSITE_URL/**"],
       recordExtractor: ({ $, helpers }) => {
         // priority order: deepest active sub list header -> navbar active item -> 'Documentation'
         const lvl0 =
@@ -55,7 +61,7 @@ new Crawler({
   ],
   safetyChecks: { beforeIndexPublishing: { maxLostRecordsPercentage: 30 } },
   initialIndexSettings: {
-    mkeithxio: {
+    YOUR_INDEX_NAME: {
       attributesForFaceting: ["type", "lang"],
       attributesToRetrieve: [
         "hierarchy",

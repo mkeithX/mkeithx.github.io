@@ -32,7 +32,7 @@ const admonitionsConfig = {
   },
 };
 
-const remarkPluginsConfig = {
+const commonRemarkPluginsConfig = {
   remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
   rehypePlugins: [rehypeKatex],
 };
@@ -41,7 +41,7 @@ const commonDocsPluginConfig = {
   showLastUpdateAuthor: false,
   showLastUpdateTime: true,
   ...admonitionsConfig,
-  ...remarkPluginsConfig,
+  ...commonRemarkPluginsConfig,
 };
 
 const config: Config = {
@@ -110,7 +110,7 @@ const config: Config = {
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
           ...admonitionsConfig,
-          ...remarkPluginsConfig,
+          ...commonRemarkPluginsConfig,
           postsPerPage: 'ALL',
 
           feedOptions: {
@@ -238,22 +238,10 @@ const config: Config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "mySidebar",
-          label: "Docs",
+          label: "Documentation",
         },
-        // {
-        //   type: "docSidebar",
-        //   position: "left",
-        //   sidebarId: "repoSidebar",
-        //   label: "Projects",
-        // },
-        {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "apiSidebar",
-          label: "API",
-        },
-        { to: "msp", label: "MSP", position: "left" },
         { to: "cosmos", label: "Universe", position: "left" },
+        { to: "msp", label: "MSP", position: "left" },
         {
           to: "projects",
           label: "Showcase",

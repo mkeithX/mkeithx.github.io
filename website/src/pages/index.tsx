@@ -23,8 +23,8 @@ function HomepageHeader() {
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
             {/* {"🚀 "} */}
-            {/* Space<b>Hub</b> <br></br> */}
-            C-<b>137</b> <br></br>
+            Space<b>Hub</b> <br></br>
+            {/* C-<b>137</b> <br></br> */}
           </span>
         </div>
 
