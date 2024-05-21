@@ -63,12 +63,13 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { title, customFields, tagline, },
+    siteConfig: { title, customFields, tagline},
   } = useDocusaurusContext();
-  const { customTagline } = customFields as { customTagline: string };
+  const { custom_tagline } = customFields as { custom_tagline: string };
+  const {description} = customFields as {description: string};
   return (
     <Layout
-      title={customTagline}
+      title={custom_tagline}
       description={title}
     >
       <HomepageHeader />

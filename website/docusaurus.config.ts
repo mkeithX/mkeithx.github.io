@@ -79,7 +79,7 @@ const config: Config = {
 
   customFields: {
     description: "A documentation website representing humanity from Dimension C-137 and beyond.",
-    customTagline: "Building the Web",
+    custom_tagline: "Building the Web",
   },
 
   i18n: {
