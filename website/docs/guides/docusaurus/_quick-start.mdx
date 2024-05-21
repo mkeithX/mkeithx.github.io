@@ -1,0 +1,90 @@
+---
+# title:  Docusaurus
+sidebar_label: Docusaurus - Quick start
+# slug: docusaurus/quickstart
+sidebar_position: 0
+# id: docusaurus-quickstart
+# hide_title: true
+unlisted: true
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+
+
+# Quick start
+
+This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
+
+
+
+
+
+### Installation
+
+```bash npm2yarn
+npm install
+```
+
+### Local Development
+
+```bash npm2yarn
+npm run start
+```
+
+This command starts a local development server and opens up a browser window. Most changes are reflected live without having to restart the server.
+
+### Build
+
+```bash npm2yarn
+npm run build
+```
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service.
+
+### Deployment
+
+<Tabs>
+  <TabItem value="ssh" label="Using SSH" default>
+
+```sh
+USE_SSH=true yarn deploy
+```
+
+  </TabItem>
+  <TabItem value="no_ssh" label="Not using SSH">
+
+```sh
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+  </TabItem>
+
+</Tabs>
+
+If you are using GitHub pages for hosting, this command is a convenient way to build the website and push to the `gh-pages` branch.
+
+<Tabs>
+  <TabItem value="bash" label="Bash" default>
+
+```bash
+GIT_USER=<GITHUB_USERNAME> yarn deploy
+```
+
+  </TabItem>
+  <TabItem value="win" label="Windows">
+
+```bash
+cmd /C "set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy"
+```
+
+  </TabItem>
+  <TabItem value="pwsh" label="Powershell">
+
+```bash
+cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy'
+```
+
+  </TabItem>
+</Tabs>

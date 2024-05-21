@@ -32,7 +32,7 @@ const admonitionsConfig = {
   },
 };
 
-const remarkPluginsConfig = {
+const commonRemarkPluginsConfig = {
   remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
   rehypePlugins: [rehypeKatex],
 };
@@ -41,7 +41,7 @@ const commonDocsPluginConfig = {
   showLastUpdateAuthor: false,
   showLastUpdateTime: true,
   ...admonitionsConfig,
-  ...remarkPluginsConfig,
+  ...commonRemarkPluginsConfig,
 };
 
 const config: Config = {
@@ -59,13 +59,13 @@ const config: Config = {
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
 
-  scripts: [
-    {
-      src: "https://X2M5FPT6G9-dsn.algolia.net",
-      rel: "preconnect",
-      crossorigin: true,
-    },
-  ],
+  // scripts: [
+  //   {
+  //     src: "https://X2M5FPT6G9-dsn.algolia.net",
+  //     rel: "preconnect",
+  //     crossorigin: true,
+  //   },
+  // ],
 
   stylesheets: [
     {
@@ -110,7 +110,7 @@ const config: Config = {
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
           ...admonitionsConfig,
-          ...remarkPluginsConfig,
+          ...commonRemarkPluginsConfig,
           postsPerPage: 'ALL',
 
           feedOptions: {
@@ -178,6 +178,17 @@ const config: Config = {
         ...commonDocsPluginConfig,
       } as DocsOptions,
     ],
+    [
+      "content-docs",
+      {
+        id: "msp",
+        path: "msp",
+        routeBasePath: "msp",
+        breadcrumbs: true,
+        sidebarPath: "./sidebarsMsp.ts",
+        ...commonDocsPluginConfig,
+      } as DocsOptions,
+    ],
   ],
 
   themeConfig: {
@@ -208,7 +219,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "img/banner/social-x.png",
+    image: "/img/banner/social-x.png",
 
     navbar: {
       // style: "primary",
@@ -227,14 +238,10 @@ const config: Config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "mySidebar",
-          label: "Docs",
+          label: "Documentation",
         },
-        {
-          type: "doc",
-          docId: "msp",
-          label: "MSP",
-        },
-        { to: "cosmos/overview", label: "Cosmos", position: "left" },
+        { to: "cosmos", label: "Universe", position: "left" },
+        { to: "msp", label: "MSP", position: "left" },
         {
           to: "projects",
           label: "Showcase",
@@ -286,7 +293,7 @@ const config: Config = {
             },
             {
               label: "Cosmos",
-              to: "cosmos/overview",
+              to: "cosmos",
             },
           ],
         },

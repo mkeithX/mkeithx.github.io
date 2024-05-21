@@ -1,0 +1,50 @@
+---
+title: Configuration
+description: MKX SpaceHub website configuration.
+# sidebar_label: Configuration
+# sidebar_position: 1
+---
+
+import Admonition from "@theme/Admonition";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+
+This article outlines the custom configuration powering this website.
+
+:::docusaurus[important]
+This website is built using [Docusaurus TypeScript](https://docusaurus.io/docs/typescript-support#initialization) variant for various reasons including code consistency and capturing obvious mistakes early.
+
+:::
+
+
+## Installation
+
+
+passing the ```--typescript``` flag.
+
+```bash
+npx create-docusaurus@latest my-website classic --typescript
+```
+
+
+Go to directory ``cd my-website`` the run the ff. command to start a local development server
+
+```bash npm2yarn
+npm run start
+```
+
+## Build
+
+
+This command generates static content into the `build` directory and can be served using any static contents hosting service
+
+```bash npm2yarn
+npm run build
+```
+
+Alternatively, you can also run the following:
+
+```sh npm2yarn
+npm run build && npm run serve
+```

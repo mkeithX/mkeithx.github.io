@@ -1,0 +1,96 @@
+---
+title: CLI
+sidebar_label: CLI
+---
+
+import Admonition from "@theme/Admonition";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+
+## Get started
+
+
+## Test locally
+
+To ensure smooth deployment, let's build the static files for production. Run either of the following:
+
+```bash npm2yarn
+npm run build
+```
+
+```bash npm2yarn
+npm run build && npm run serve
+```
+
+```bash npm2yarn
+npm run build && npm run serve -- --build --port 80 --host 0.0.0.0
+```
+
+
+## CLI
+
+Using the ``docusaurus build`` command is a convenient way to build the website and push to the gh-pages branch. Note that the following configuration is **REQUIRED**.
+
+
+```tsx title="docusaurus.config.ts"
+const config: Config =  {
+  // ...
+  url: 'https://your-website-url.com',
+  baseUrl: '/',
+  projectName: 'you-project-name.github.io',
+  organizationName: 'your-organization-name',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
+  // ...
+};
+```
+
+<Tabs>
+  <TabItem value="bash" label="Bash" default>
+
+```bash
+GIT_USER=<GITHUB_USERNAME> yarn deploy
+```
+
+  </TabItem>
+  <TabItem value="win" label="Windows">
+
+```bash
+cmd /C "set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy"
+```
+
+  </TabItem>
+  <TabItem value="pwsh" label="Powershell">
+
+```bash
+cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy'
+```
+
+  </TabItem>
+</Tabs>
+
+
+
+
+
+
+## SSH Deployment
+
+<Tabs>
+  <TabItem value="ssh" label="Using SSH" default>
+
+```sh
+USE_SSH=true yarn deploy
+```
+
+  </TabItem>
+  <TabItem value="no_ssh" label="Not using SSH">
+
+```sh
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+  </TabItem>
+
+</Tabs>

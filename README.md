@@ -12,6 +12,8 @@
 ![website_status](https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io%2F&style=for-the-badge&label=Website)
 ![build_status](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/deploy.yml?style=for-the-badge)
 ![issues](https://img.shields.io/github/issues/mkeithx/mkeithx.github.io?style=for-the-badge)
+![pr](https://img.shields.io/github/issues-pr/mkeithx/mkeithx.github.io?style=for-the-badge
+)
 ![lic](https://img.shields.io/github/license/mkeithx/mkeithx.github.io?style=for-the-badge&color=orange)
 
 </div>
