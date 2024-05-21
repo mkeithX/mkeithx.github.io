@@ -219,7 +219,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "/img/banner/social-x.png",
+    image: "/img/banner/social-space-new.png",
 
     navbar: {
       // style: "primary",
