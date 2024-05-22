@@ -2,9 +2,6 @@
 
 To foster a positive and inclusive community, **MKX SpaceHub**™ has established a [**Code of Conduct**](https://kitiplex.github.io/community/code-of-conduct) for all participants to follow. Please review the summarized guidelines to understand what behaviors are expected and unacceptable.
 
-<details>
-<summary><b>Guidelines</b></summary>
-
 
 ## Core Values
 
@@ -16,8 +13,6 @@ To foster a positive and inclusive community, **MKX SpaceHub**™ has establishe
 
 ## Expected Behavior
 
-In this community, we expect all participants to:
-
 - Be respectful towards others, regardless of differences.
 - Listen actively and considerately to others' perspectives.
 - Provide constructive feedback and criticism.
@@ -25,16 +20,12 @@ In this community, we expect all participants to:
 
 ## Unacceptable Behavior
 
-Examples of unacceptable behavior include:
-
 - Offensive comments related to personal characteristics.
 - Harassment, intimidation, or discrimination in any form.
 - Disruptive behavior that hinders productive discussion.
 - Any form of unwelcome attention or advances.
 
 Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue or assessing patches and features.
-
-</details>
 
 
 ## Development process
