@@ -12,20 +12,20 @@ body:
         This template is strictly for documentation-related issues. We ensure our content's accuracy by citing trusted sources like NASA, Wikipedia, and other documentation, including Python and Microsoft. Additionally, we use AI to assist us in creating content faster and more effectively.
 
         ---
+
   - type: dropdown
     id: issue
     attributes:
       label: Issue category
-      multiple: true
+      multiple: false
       options:
-        - Undocumented API
-        - Elaboration needed on a particular topic
-        - Outdated or incorrect information
-        - Formatting or readability improvement
-        - Others
+        - label: Undocumented API
+        - label: Elaboration needed on a particular topic
+        - label: Outdated or incorrect information
+        - label: Formatting or readability improvement
+        - label: Others
     validations:
-      required: true
-        
+      required: true     
 
   - type: textarea
     attributes:
@@ -38,21 +38,22 @@ body:
     attributes:
       label: Links
       description: Relevant urls and/or hyperlinks.
-      placeholder: 
+      placeholder: URLs or hyperlinks
     validations:
       required: false  
 
   - type: textarea
     attributes:
       label: Steps To Reproduce
-      description: Steps taken you've done so far.
+      description: Steps you've taken so far.
       placeholder: |
-        1. 
-        2. 
-        3. 
-        4. 
+        1. I've checked ...
+        2. Also validated through ...
+        3. Including this ...
+        4. To support this ...
     validations:
       required: true
+
 
   - type: textarea
     id: logs
