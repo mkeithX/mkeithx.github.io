@@ -25,4 +25,4 @@ body:
       options:
         - label: I have read the Contributing Guidelines on issues.
           required: true
-          url: https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#documentation
+          url: https://mkeithx.github.io/docs/contributing#contribute
