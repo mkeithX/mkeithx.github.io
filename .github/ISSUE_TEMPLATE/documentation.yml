@@ -1,6 +1,8 @@
 name: 📚 Documentation
 description: Report an issue related to documentation
 labels: [documentation, 'status: needs triage']
+assignees:
+  - mkeithX
 body:
   - type: markdown
     attributes:
@@ -10,29 +12,20 @@ body:
         This template is strictly for documentation-related issues. We ensure our content's accuracy by citing trusted sources like NASA, Wikipedia, and other documentation, including Python and Microsoft. Additionally, we use AI to assist us in creating content faster and more effectively.
 
         ---
-
-  - type: checkboxes
+  - type: dropdown
+    id: issue
     attributes:
-      label: Type of Documentation Issue
+      label: Issue category
+      multiple: true
       options:
-        - label: Undocumented API
-          required: false
-        - label: Elaboration needed on a particular topic
-          required: false
-        - label: Outdated or incorrect information
-          required: false
-        - label: Formatting or readability improvement
-          required: false
-        - label: Others
-          required: false
-
-  - type: input
-    attributes:
-      label: Issue Summary
-      description: Summary
-      placeholder: A concise description of what you're experiencing.
+        - Undocumented API
+        - Elaboration needed on a particular topic
+        - Outdated or incorrect information
+        - Formatting or readability improvement
+        - Others
     validations:
-      required: true          
+      required: true
+        
 
   - type: textarea
     attributes:
@@ -41,15 +34,23 @@ body:
     validations:
       required: true
 
+  - type: input
+    attributes:
+      label: Links
+      description: Relevant urls and/or hyperlinks.
+      placeholder: 
+    validations:
+      required: false  
+
   - type: textarea
     attributes:
       label: Steps To Reproduce
       description: Steps taken you've done so far.
       placeholder: |
-        1. In this environment...
-        2. With this config...
-        3. Run '...'
-        4. See error...
+        1. 
+        2. 
+        3. 
+        4. 
     validations:
       required: true
 
