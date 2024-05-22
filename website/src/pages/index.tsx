@@ -8,6 +8,8 @@ import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 import BannerLogo from "@site/static/img/banner/test-orbit.svg";
 import React from "react";
+import TopBanner from '@site/src/components/TopBanner';
+
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -33,7 +35,8 @@ function HomepageHeader() {
             <div className="hero__title mb-3">
               Building the <b>Web</b>.<br></br>
               {/* Physics<b>.</b> <br></br> */}
-              Exploring the <b>Cosmos</b>.{/* {siteConfig.title} */}
+              Exploring the <b>Cosmos</b>.
+              {/* {siteConfig.title} */}
               {/* <b>.</b> */}
             </div>
           </span>
@@ -72,7 +75,9 @@ export default function Home(): JSX.Element {
       title={custom_tagline}
       description={title}
     >
+      {/* <TopBanner /> */}
       <HomepageHeader />
+
       <main>
         <HomepageFeatures />
       </main>

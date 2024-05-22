@@ -10,6 +10,7 @@ import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 
 import { socialProfiles } from "./socialProfiles";
 
+
 const copyright = `Copyright © ${new Date().getFullYear()} • Designed by  <a href='me' target='_blank'>Keith Tan<b></b></a> `;
 
 const admonitionsConfig = {
@@ -49,7 +50,7 @@ const config: Config = {
   tagline:
     "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
-  titleDelimiter: "•",
+  // titleDelimiter: "•",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX",
@@ -59,13 +60,6 @@ const config: Config = {
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
 
-  // scripts: [
-  //   {
-  //     src: "https://X2M5FPT6G9-dsn.algolia.net",
-  //     rel: "preconnect",
-  //     crossorigin: true,
-  //   },
-  // ],
 
   stylesheets: [
     {
@@ -116,14 +110,6 @@ const config: Config = {
           feedOptions: {
             type: "all",
             copyright,
-            // createFeedItems: async (params) => {
-            //   const { blogPosts, defaultCreateFeedItems, ...rest } = params;
-            //   return defaultCreateFeedItems({
-            //     // keep only the 10 most recent blog posts in the feed
-            //     blogPosts: blogPosts.filter((_item, index) => index < 10),
-            //     ...rest,
-            //   });
-            // },
           },
         } satisfies BlogOptions,
 
@@ -135,7 +121,7 @@ const config: Config = {
         },
 
         theme: {
-          customCss: ["./src/css/custom.css"],
+          customCss: "./src/css/custom.css",
         },
 
         sitemap: {
@@ -144,20 +130,16 @@ const config: Config = {
           priority: null,
           // ignorePatterns: ["/tags/**"],
           ignorePatterns: ['/tests/{blog,pages}/**','/tags/**'],
-          // filename: "sitemap.xml",
-          // createSitemapItems: async (params) => {
-          //   const { defaultCreateSitemapItems, ...rest } = params;
-          //   const items = await defaultCreateSitemapItems(rest);
-          //   return items.filter((item) => !item.url.includes("/page/"));
-          // },
         },
       } satisfies Preset.Options,
     ],
   ],
 
   plugins: [
+    './src/plugins/featureRequests/FeatureRequestsPlugin.js',
     [
       "content-docs",
+
       {
         id: "cosmos",
         path: "cosmos",
@@ -189,7 +171,9 @@ const config: Config = {
         ...commonDocsPluginConfig,
       } as DocsOptions,
     ],
+
   ],
+  
 
   themeConfig: {
     // announcementBar: {
@@ -224,30 +208,32 @@ const config: Config = {
     navbar: {
       // style: "primary",
       hideOnScroll: true,
-      // title: "SpaceHub",
+      // title: "MKX",
       logo: {
         alt: "SpaceHub Logo",
         src: "img/logo/logo-x-light.png",
         srcDark: "img/logo/logo-x-dark.png",
         target: "_self",
-        // width: 200,
-        height: 50,
+        // width: 320,
+        // height: 300,
       },
       items: [
         {
           type: "docSidebar",
           position: "left",
           sidebarId: "mySidebar",
-          label: "Documentation",
+          label: "Docs",
         },
         { to: "cosmos", label: "Universe", position: "left" },
         { to: "msp", label: "MSP", position: "left" },
         {
           to: "projects",
           label: "Showcase",
-          position: "right",
+          position: "left",
         },
+
         { to: "blog", label: "What's new", position: "right" },
+        { to: "/feature-requests", label: "Feedback", position: "right" },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -325,7 +311,7 @@ const config: Config = {
       copyright,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.vsLight,
       darkTheme: prismThemes.dracula,
       additionalLanguages: [
         "powershell",
