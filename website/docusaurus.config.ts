@@ -59,13 +59,6 @@ const config: Config = {
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
 
-  // scripts: [
-  //   {
-  //     src: "https://X2M5FPT6G9-dsn.algolia.net",
-  //     rel: "preconnect",
-  //     crossorigin: true,
-  //   },
-  // ],
 
   stylesheets: [
     {
@@ -116,14 +109,6 @@ const config: Config = {
           feedOptions: {
             type: "all",
             copyright,
-            // createFeedItems: async (params) => {
-            //   const { blogPosts, defaultCreateFeedItems, ...rest } = params;
-            //   return defaultCreateFeedItems({
-            //     // keep only the 10 most recent blog posts in the feed
-            //     blogPosts: blogPosts.filter((_item, index) => index < 10),
-            //     ...rest,
-            //   });
-            // },
           },
         } satisfies BlogOptions,
 
@@ -135,7 +120,7 @@ const config: Config = {
         },
 
         theme: {
-          customCss: ["./src/css/custom.css"],
+          customCss: "./src/css/custom.css",
         },
 
         sitemap: {
@@ -144,12 +129,6 @@ const config: Config = {
           priority: null,
           // ignorePatterns: ["/tags/**"],
           ignorePatterns: ['/tests/{blog,pages}/**','/tags/**'],
-          // filename: "sitemap.xml",
-          // createSitemapItems: async (params) => {
-          //   const { defaultCreateSitemapItems, ...rest } = params;
-          //   const items = await defaultCreateSitemapItems(rest);
-          //   return items.filter((item) => !item.url.includes("/page/"));
-          // },
         },
       } satisfies Preset.Options,
     ],
