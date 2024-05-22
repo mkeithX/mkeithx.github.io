@@ -110,9 +110,15 @@ const sidebars: SidebarsConfig = {
           type: 'link',
           label: 'Showcase',
           href: '/projects'
-        }
+        },
+
       ],
     },
+    // {
+    //   type: 'link',
+    //   href: '/feature-requests',
+    //   label: 'Feature Requests',
+    // },
     'contributing',
     "media-embeds",
   ],
