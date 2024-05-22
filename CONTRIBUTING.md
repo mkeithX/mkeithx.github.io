@@ -99,11 +99,9 @@ More about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 
 ## Issues
 
-If you find a bug, have a suggestion, or want to request a new feature, feel free to open an [issue](https://github.com/mkeithX/mkeithx.github.io/issues) in the repository.
+If you discover a bug, have a suggestion, or wish to request a new feature, please feel free to [open an issue](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose).
 
-**IMPORTANT**: 
-Please visit [Docusaurus website](https://docusaurus.io/community/contributing#issues) for issues related to infrastructure.
-
+IMPORTANT: For issues related to infrastructure, please visit the [Docusaurus website](https://docusaurus.io/community/contributing#issues).
 
 
 

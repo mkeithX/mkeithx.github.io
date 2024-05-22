@@ -5,30 +5,34 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Documentation Issue
+        ## IMPORTANT
 
-        **Description**
-
-        Please provide a clear and concise description of the documentation issue.
-
-        **Type of Documentation Issue**
-
-        - [ ] Undocumented API
-        - [ ] Elaboration needed on a particular topic
-        - [ ] Outdated or incorrect information
-        - [ ] Formatting or readability improvement
-        - [ ] Other (please specify): 
-
-        **Expected Behavior**
-
-        Describe the expected behavior or outcome after resolving this documentation issue.
-
-        **Additional Context**
-
-        Add any other context about the problem here.
+        This template is strictly for documentation-related issues. We ensure our content's accuracy by citing trusted sources like NASA, Wikipedia, and other documentation, including Python and Microsoft. Additionally, we use AI to assist us in creating content faster and more effectively.
 
         ---
-        ℹ️ **Note:** Please make sure you have read and understood the [Contributing Guidelines](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md) before submitting this issue.
+
+  - type: checkboxes
+    attributes:
+      label: Type of Documentation Issue
+      options:
+        - label: Undocumented API
+          required: false
+        - label: Elaboration needed on a particular topic
+          required: false
+        - label: Outdated or incorrect information
+          required: false
+        - label: Formatting or readability improvement
+          required: false
+        - label: Others
+          required: false
+
+  - type: input
+    attributes:
+      label: Issue Summary
+      description: Summary
+      placeholder: A concise description of what you're experiencing.
+    validations:
+      required: true          
 
   - type: textarea
     attributes:
@@ -37,12 +41,30 @@ body:
     validations:
       required: true
 
-  - type: checkboxes
+  - type: textarea
     attributes:
-      label: Type of Documentation Issue
+      label: Steps To Reproduce
+      description: Steps taken you've done so far.
+      placeholder: |
+        1. In this environment...
+        2. With this config...
+        3. Run '...'
+        4. See error...
+    validations:
+      required: true
+
+  - type: textarea
+    id: logs
+    attributes:
+      label: Relevant log output
+      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      render: shell
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md)
       options:
-        - label: Undocumented API
-        - label: Elaboration needed on a particular topic
-        - label: Outdated or incorrect information
-        - label: Formatting or readability improvement
-        - label: Other (please specify)
+        - label: I agree to follow this project's Code of Conduct.
+          required: true
