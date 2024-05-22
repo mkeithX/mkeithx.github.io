@@ -1,5 +1,5 @@
 name: 📚 Documentation
-description: Report an issue related to documentation
+description: Report docs related issue.
 labels: [documentation, 'status: needs triage']
 body:
   - type: markdown
@@ -7,13 +7,10 @@ body:
       value: |
         This template is strictly used for documentation requests, including:
 
-        - Documenting undocumented APIs;
-        - Elaborating on a particular topic;
-        - Updating external links;
-        - anything else that doesn't require touching the codebase itself.
-
-
-
+        - Documenting undocumented APIs.
+        - Elaborating on a particular topic.
+        - Updating external links.
+        - Anything else that doesn't require touching the codebase itself.
 
   - type: textarea
     attributes:
@@ -22,9 +19,10 @@ body:
     validations:
       required: true
 
-   - type: checkboxes
+  - type: checkboxes
     attributes:
-      label: I have read and understand the Contributing Guidelines.
+      label: Read and understand the Contributing Guidelines
       options:
-        - label: I have read the [Contributing Guidelines on issues](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#documentation).
+        - label: I have read the Contributing Guidelines on issues.
           required: true
+          url: https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#documentation
