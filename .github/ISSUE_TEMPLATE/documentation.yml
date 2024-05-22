@@ -19,11 +19,11 @@ body:
       label: Issue category
       multiple: false
       options:
-        Undocumented API
-        Elaboration needed on a particular topic
-        Outdated or incorrect information
-        Formatting or readability improvement
-        Others
+        - Undocumented API
+        - Elaboration needed on a particular topic
+        - Outdated or incorrect information
+        - Formatting or readability improvement
+        - Others
     validations:
       required: true     
 
