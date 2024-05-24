@@ -1,4 +1,3 @@
-
 import path from 'path';
 import {normalizeUrl, posixPath} from '@docusaurus/utils';
 
