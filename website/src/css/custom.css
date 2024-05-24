@@ -75,7 +75,9 @@
   --ifm-color-primary-light: #08b1ff;
   --ifm-color-primary-lighter: #14b5ff;
   --ifm-color-primary-lightest: #38c0ff;
+
   --site-color-feedback-background: #2a2929;
+  --ifm-background-surface-color: var(--kiti-dark-pale) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
@@ -84,8 +86,21 @@
   color: plum;
 } */
 
+.navbar.navbar--dark {
+  background-color: var(--kiti-dark);
+}
+
+
 .navbar__title {
   display: none;
+}
+
+.navbar__brand {
+  margin-right: 3;
+}
+
+.navbar__logo {
+  height: 1.25rem;
 }
 
 .navbar .navbar__items {
@@ -139,13 +154,18 @@
   background-color: var(--ifm-navbar-link-hover-color);
 }
 
-.navbar.navbar--dark {
-  background-color: var(--kiti-dark);
-}
 
 
 .footer--dark {
   --ifm-footer-background-color: #20232a;
+}
+
+.footer {
+  text-align: center;
+}
+
+.footer .container {
+  max-width: 996px;
 }
 
 
@@ -288,13 +308,6 @@ html[data-red-border] div#__docusaurus {
   }
 } */
 
-.footer {
-  text-align: center;
-}
-
-.footer .container {
-  max-width: 996px;
-}
 
 .alert--security {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);

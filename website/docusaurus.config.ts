@@ -206,15 +206,16 @@ const config: Config = {
     image: "/img/banner/social-space-new.png",
 
     navbar: {
-      // style: "primary",
+      // style: "dark",
       hideOnScroll: true,
-      // title: "MKX",
+      title: "",
       logo: {
-        alt: "SpaceHub Logo",
-        src: "img/logo/logo-x-light.png",
-        srcDark: "img/logo/logo-x-dark.png",
+        alt: "nav-logo",
+        // src: "img/logo/logo-rnd-x.png",
+        src: "img/logo/spacehub-x-logo-dark-test.png",
+        srcDark: "img/logo/spacehub-x-logo-light-test.png",
         target: "_self",
-        // width: 320,
+        // width: 100,
         // height: 300,
       },
       items: [
