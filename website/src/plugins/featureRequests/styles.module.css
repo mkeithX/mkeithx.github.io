@@ -1,6 +1,12 @@
 .main {
   padding: var(--ifm-spacing-horizontal);
-  border-radius: 4px;
+  margin-top: auto;
+  border-radius: 10px;
   background: var(--site-color-feedback-background);
   min-height: 500px;
+}
+@media screen and (max-width: 996px) {
+  .main {
+    padding: 2rem;
+  }
 }
