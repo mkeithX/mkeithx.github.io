@@ -52,7 +52,6 @@
    --docusaurus-highlighted-code-line-bg: #0d4034;
  }
  
- /* Exograph logo already has the word "Exograph" in it. So hide the title added by Docusaurus */
  .navbar__title {
    display: none;
  }
