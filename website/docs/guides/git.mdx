@@ -11,6 +11,13 @@ sidebar_position: 1
 
 ## Basic workflow
 
+<details>
+<summary>Show</summary>
+
+ <div>
+
+ <div>This outlines the basic <code>.git</code> workflow.</div>
+
 - **Create a local branch**
 
 ```bash
@@ -31,8 +38,18 @@ git push
 ```bash
 git push -u origin my-feature
 ```
+ </div>
+</details>
 
 ## Using `git switch`
+
+<details>
+<summary>Show</summary>
+
+<div>
+<div>`git switch` enhances branch management in Git, making it easier to switch between, create, and merge branches.</div>
+
+
 
 1. **Switch to an Existing Branch**
 ```bash
@@ -85,16 +102,42 @@ git branch -d new-feature
 ```bash
 git push origin --delete new-feature
 ```
+</div>
 
-`git switch` enhances branch management in Git, making it easier to switch between, create, and merge branches.
+</details>
 
 
-## Configuration 
 
-### ``.gitconfig``
+
+
+
+## ``.gitconfig`` 
+
+### Basic
 
 <details>
-<summary>Configuring .gitconfig</summary>
+<summary>Show</summary>
+
+```js title=".gitconfig
+[user]
+    name = my_username
+    email = my_email@example.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[core]
+	editor = code
+```
+
+
+</details>
+
+
+### Extended
+
+<details>
+<summary>Show</summary>
 
 
 ```js title=".gitconfig"
