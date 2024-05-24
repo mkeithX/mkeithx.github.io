@@ -76,15 +76,15 @@ Follow the existing code style and formatting conventions.
 
 Write clear and concise commit messages and PR descriptions.
 
-| Type     | Description                                                                  | Example                                                                |
+| Type     | Description                                                                  | Example Commit message                                                               |
 | :-------- | ---------------------------------------------------------------------------- | ---------------------------------------------------------------------- |
 | `feat`     | A new API or behavior for the end user.                                      | _Added a feature to allow users to upload profile pictures._             |
-| `fix`      | A bug fix for the end user.                                                  | Resolved issue where login button was not clickable on mobile devices. |
-| `docs`     | A change to the website or other Markdown documents in our repo.             | Updated installation guide with additional troubleshooting steps.      |
-| `refactor` | A change to production code that leads to no behavior difference.            | Refactored code to improve readability and maintainability.            |
-| `test`     | Adding missing tests, refactoring tests; no production code change.          | Added unit tests for user authentication module.                       |
-| `chore`    | Upgrading dependencies, releasing new versions, maintenance tasks.           | Updated package.json with latest dependency versions.                  |
-| `misc`     | Anything else that doesn't change production code, yet is not test or chore. | Updated GitHub Actions workflow to include code linting.               |
+| `fix`      | A bug fix for the end user.                                                  | _Resolved issue where login button was not clickable on mobile devices._ |
+| `docs`     | A change to the website or other Markdown documents in our repo.             | _Updated installation guide with additional troubleshooting steps._      |
+| `refactor` | A change to production code that leads to no behavior difference.            | _Refactored code to improve readability and maintainability._            |
+| `test`     | Adding missing tests, refactoring tests; no production code change.          | _Added unit tests for user authentication module._                       |
+| `chore`    | Upgrading dependencies, releasing new versions, maintenance tasks.           | _Updated package.json with latest dependency versions._                |
+| `misc`     | Anything else that doesn't change production code, yet is not test or chore. | _Updated GitHub Actions workflow to include code linting._               |
 
 
 
@@ -107,4 +107,4 @@ IMPORTANT: For issues related to infrastructure, please visit the [Docusaurus we
 
 ## Licensing
 
-By contributing to **MKEITHX Website**, you agree that your contributions will be licensed under its MIT license. 
+By contributing to **MKEITHX Website**, you agree that your contributions will be under its [MIT license](https://github.com/mkeithX/mkeithx.github.io/blob/main/LICENSE). 
