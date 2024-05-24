@@ -7,10 +7,140 @@ sidebar_position: 1
 # image: 
 ---
 
-# Setup
+
+
+## Basic workflow
+
+<details>
+<summary>Show</summary>
+
+ <div>
+
+ <div>This outlines the basic <code>.git</code> workflow.</div>
+
+- **Create a local branch**
+
+```bash
+git checkout -b my-feature
+```
+
+- **Make changes**
+
+```bash
+git commit -m "feat: my feature description"
+```
+
+- **Push changes**
+
+```bash
+git push
+```
+```bash
+git push -u origin my-feature
+```
+ </div>
+</details>
+
+## Using `git switch`
+
+<details>
+<summary>Show</summary>
+
+<div>
+<div>`git switch` enhances branch management in Git, making it easier to switch between, create, and merge branches.</div>
+
+
+
+1. **Switch to an Existing Branch**
+```bash
+git switch branch-name
+```
+
+2. **Create and Switch to a New Branch**
+```bash
+git switch -c new-branch-name
+```
+3. **Work on Your Branch**
+```bash
+git add .
+```
+```bash
+git commit -m "Describe your changes"
+```
+
+4. **Push Your Branch to Remote**
+```bash
+git push -u origin new-branch-name
+```
+
+5. **Merge Changes from Another Branch**
+```bash
+git switch your-branch
+```
+```bash
+git merge main
+```
+
+6. **Resolve Conflicts (if any)**
+
+```bash
+git add .
+```
+```bash
+git commit -m "Resolved merge conflicts"
+```
+
+7. **Switch Back to Another Branch**
+```bash
+git switch main
+```
+
+8. **Clean Up**
+```bash
+git branch -d new-feature
+```
+```bash
+git push origin --delete new-feature
+```
+</div>
+
+</details>
+
+
+
+
+
+
+## ``.gitconfig`` 
+
+### Basic
+
+<details>
+<summary>Show</summary>
+
+```js title=".gitconfig
+[user]
+    name = my_username
+    email = my_email@example.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[core]
+	editor = code
+```
+
+
+</details>
+
+
+### Extended
+
+<details>
+<summary>Show</summary>
+
 
 ```js title=".gitconfig"
-# ~/.gitconfig
 
 # First things first, always set up your user info.
 // highlight-start
@@ -76,25 +206,4 @@ clean = git-lfs clean -- %f
 provider = generic
 ```
 
-## Basic workflow
-
-### Create a local branch
-
-```bash
-git checkout -b my-feature
-```
-
-### Make changes
-
-```bash
-git commit -m "feat: my feature description"
-```
-
-### Push changes
-
-```bash
-git push
-```
-```bash
-git push -u origin my-feature
-```
+</details>
