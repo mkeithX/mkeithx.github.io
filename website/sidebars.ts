@@ -23,7 +23,7 @@ const sidebars: SidebarsConfig = {
         slug: 'getting-started',
         description: 'This section covers the following:'
       },
-      collapsed: true,
+      collapsed: false,
       items: [
         'configuration',
         {
@@ -106,12 +106,7 @@ const sidebars: SidebarsConfig = {
       items: [
         "repo/python-starters",
         "repo/flask-tutorials",
-        {
-          type: 'link',
-          label: 'Showcase',
-          href: '/projects'
-        },
-
+        "repo/django-custom-user",
       ],
     },
     // {
@@ -119,8 +114,7 @@ const sidebars: SidebarsConfig = {
     //   href: '/feature-requests',
     //   label: 'Feature Requests',
     // },
-    'contributing',
-    "media-embeds",
+    // 'contributing',
   ],
 
 

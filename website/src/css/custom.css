@@ -7,7 +7,6 @@
 /* You can override the default Infima variables here. */
 
 
-
 :root {
   /*
   See css var + hsl color palette technique:
@@ -16,12 +15,14 @@
    --ifm-heading-font-weight: 600;
    --ifm-font-weight-semibold: 600;
  
-  --site-primary-hue-saturation: 208 80%;
+  --site-primary-hue-saturation: 203 80%;
   --site-primary-hue-saturation: 198 180%;
+  
   --site-color-feedback-background: #f0f8ff;
-  --docusaurus-highlighted-code-line-bg: rgb(0 0 0 / 10%);
+
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
   --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
+
 }
 
 [data-theme='light'] {
@@ -30,20 +31,28 @@
   --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 23%);
   --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 17%);
 
-  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 39%);
+  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 36%);
   --ifm-color-primary-lighter: hsl(var(--site-primary-hue-saturation-light) 47%);
   --ifm-color-primary-lightest: hsl(var(--site-primary-hue-saturation-light) 58%);
+  
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 }
 
 [data-theme='dark'] {
-  --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 100%);
+  --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 45%);
   --ifm-color-primary-dark: hsl(var(--site-primary-hue-saturation) 41%);
   --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 38%);
   --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 32%);
 
-  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 54%);
-  --ifm-color-primary-lighter: hsl(var(--site-primary-hue-saturation-light) 62%);
-  --ifm-color-primary-lightest: hsl(var(--site-primary-hue-saturation-light) 73%);
+  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light)54%);
+  --ifm-color-primary-lighter: hsl(
+    var(--site-primary-hue-saturation-light) 62%
+  );
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+  --ifm-color-primary-lightest: hsl(
+    var(--site-primary-hue-saturation-light) 73%
+  );
+  
 }
 
 
@@ -68,15 +77,18 @@
   background-clip: text;
   -webkit-text-fill-color: transparent; */
 }
-
-
-.navbar__brand {
-  margin-right: 2rem;
+.dropdown-separator {
+  margin: 0.3rem 0;
 }
 
-/* .navbar__logo {
-  height: 2.5rem;
-} */
+.navbar__brand {
+  margin-right: 1.2rem;
+}
+
+.navbar__logo {
+  /* height: 2.5rem; */
+  width: 170px;
+}
 
 .navbar .navbar__items {
   flex: auto;
@@ -114,45 +126,9 @@
 }
 
 
-html[data-theme='dark'] {
-  --site-color-feedback-background: #2a2929;
-  --docusaurus-highlighted-code-line-bg: rgb(66 66 66 / 35%);
-}
 
 
-[data-theme='light'] {
-  --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 30%);
-  --ifm-color-primary-dark: hsl(var(--site-primary-hue-saturation) 26%);
-  --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 23%);
-  --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 17%);
 
-  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 39%);
-  --ifm-color-primary-lighter: hsl(
-    var(--site-primary-hue-saturation-light) 47%
-  );
-  --ifm-color-primary-lightest: hsl(
-    var(--site-primary-hue-saturation-light) 58%
-  );
-}
-
-/*
- * This selector will be dynamically replaced by the color generator. Don't put
- * other properties here.
- */
-[data-theme='dark'] {
-  --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 45%);
-  --ifm-color-primary-dark: hsl(var(--site-primary-hue-saturation) 41%);
-  --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 38%);
-  --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 32%);
-
-  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 54%);
-  --ifm-color-primary-lighter: hsl(
-    var(--site-primary-hue-saturation-light) 62%
-  );
-  --ifm-color-primary-lightest: hsl(
-    var(--site-primary-hue-saturation-light) 73%
-  );
-}
 
 .header-github-link::before {
   content: '';
@@ -222,8 +198,8 @@ div[class^='announcementBar_'] a:hover {
 [data-theme='light'] .DocSearch {
   /* --docsearch-primary-color: var(--ifm-color-primary); */
   /* --docsearch-text-color: var(--ifm-font-color-base); */
-  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  --docsearch-muted-color: var(--ifm-color-emphasis-700);
+  --docsearch-container-background: rgb(94 100 112 / 70%);
   /* Modal */
   --docsearch-modal-background: var(--ifm-color-secondary-lighter);
   /* Search box */
@@ -240,7 +216,7 @@ div[class^='announcementBar_'] a:hover {
 [data-theme='dark'] .DocSearch {
   --docsearch-text-color: var(--ifm-font-color-base);
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  --docsearch-container-background: rgb(47 55 69 / 70%);
   /* Modal */
   --docsearch-modal-background: var(--ifm-background-color);
   /* Search box */
@@ -252,10 +228,13 @@ div[class^='announcementBar_'] a:hover {
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
   /* Footer */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(-26.5deg,
-      var(--ifm-color-emphasis-200) 0%,
-      var(--ifm-color-emphasis-100) 100%);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
 }
+
 
 
 @media (max-width: 996px) {

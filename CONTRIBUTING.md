@@ -1,4 +1,4 @@
-# Contributing to MKEITHX Website
+# Contributing to `mkeithX`.
 
 To foster a positive and inclusive community, **MKX SpaceHub**™ has established a [**Code of Conduct**](https://kitiplex.github.io/community/code-of-conduct) for all participants to follow. Please review the summarized guidelines to understand what behaviors are expected and unacceptable.
 

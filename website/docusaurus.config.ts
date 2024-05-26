@@ -226,15 +226,44 @@ const config: Config = {
           label: "Docs",
         },
         { to: "cosmos", label: "Universe", position: "left" },
-        { to: "msp", label: "MSP", position: "left" },
+        // { to: "/community", label: "Community", position: "left" },
         {
-          to: "projects",
-          label: "Showcase",
-          position: "left",
+          type: 'dropdown',
+          label: 'Resources',
+          position: 'left',
+          items: [
+            {
+              to: '/community',
+              label: "Contributing"
+            },
+            {
+              to: '/msp',
+              label: 'MSP'
+            },
+            {
+              to: '/projects',
+              label: 'Showcase'
+            },
+            {
+              type: 'html',
+              value: '<hr class="dropdown-separator">',
+            },
+            {
+              label: 'Facebook',
+              href: 'https://www.facebook.com',
+            },
+
+          ],
         },
+        // { to: "msp", label: "MSP", position: "left" },
+
 
         { to: "blog", label: "What's new", position: "right" },
-        { to: "/feature-requests", label: "Feedback", position: "right" },
+        // {
+        //   to: "projects",
+        //   label: "Showcase",
+        //   position: "right",
+        // },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -302,8 +331,12 @@ const config: Config = {
               to: "blog/",
             },
             {
-              label: "Contribute",
-              to: "docs/contributing",
+              label: "Community",
+              to: "community",
+            },
+            {
+              label: "mkeithX",
+              to: "/me",
             },
           ],
         },
