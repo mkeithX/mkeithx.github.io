@@ -3,7 +3,7 @@
     MKX SpaceHub
     <br />
     <br />
-    <a href="https://mkeithx.github.io" target='_blank'>
+    <a href="https://mkeithx.github.io" target="_blank" rel="noopener noreferrer">
       <img src="https://imgur.com/vibmxY7.png" alt="mkeithX">
     </a>
   </h1>
