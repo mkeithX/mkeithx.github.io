@@ -1,9 +1,9 @@
 <div align="center">
-  <h1 align="center">
+  <h1 align="start">
     MKX SpaceHub
     <br />
     <br />
-    <a href="https://mkeithx.github.io">
+    <a href="https://mkeithx.github.io" target='_blank'>
       <img src="https://imgur.com/vibmxY7.png" alt="mkeithX">
     </a>
   </h1>
@@ -13,7 +13,7 @@
 
 
 
-<p align="center">
+<div align="center">
 
 ![website_status](https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io%2F&style=for-the-badge&label=Website)
 ![build_status](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/deploy.yml?style=for-the-badge)
@@ -23,7 +23,7 @@
 )
 ![lic](https://img.shields.io/github/license/mkeithx/mkeithx.github.io?style=for-the-badge&color=orange)
 
-</p>
+</div>
 
 ## Introduction
 
