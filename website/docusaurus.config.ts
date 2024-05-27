@@ -226,19 +226,15 @@ const config: Config = {
           label: "Docs",
         },
         { to: "cosmos", label: "Universe", position: "left" },
-        // { to: "/community", label: "Community", position: "left" },
+        { to: "/msp", label: "MSP", position: "left" },
         {
           type: 'dropdown',
           label: 'Resources',
-          position: 'left',
+          position: 'right',
           items: [
             {
               to: '/community',
-              label: "Contributing"
-            },
-            {
-              to: '/msp',
-              label: 'MSP'
+              label: "Community"
             },
             {
               to: '/projects',
@@ -249,9 +245,10 @@ const config: Config = {
               value: '<hr class="dropdown-separator">',
             },
             {
-              label: 'Facebook',
-              href: 'https://www.facebook.com',
+              label: 'NASA',
+              href: 'https://eyes.nasa.gov/apps/solar-system/#/home'
             },
+            socialProfiles.kitiplex,            
 
           ],
         },

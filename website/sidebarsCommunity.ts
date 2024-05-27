@@ -28,11 +28,6 @@ const sidebars: SidebarsConfig = {
       label: 'Showcase',
       href: '/projects'
     },
-    {
-      type: 'link',
-      label: 'MSP',
-      href: '/msp'
-    },
   ],
 
   // But you can create a sidebar manually
