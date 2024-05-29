@@ -174,7 +174,7 @@ const config: Config = {
     [
       'vercel-analytics',
       {
-        debug: true,
+        debug: false,
         mode: 'auto',
       },
     ],
