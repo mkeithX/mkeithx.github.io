@@ -54,7 +54,8 @@
   text-align: left;
   position: relative;
   overflow: hidden;
-  background: #111317;
+  background-color: var(--ifm-site-dark);
+  /* background: #111317; */
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8vw), 0 100%);
   height: 36rem;
 }
@@ -69,8 +70,8 @@
 
 @media screen and (max-width: 996px) {
   .heroBanner {
-    padding-left: 20px;
-    padding-right: 20px;
+    padding-left: 12px;
+    padding-right: 12px;
   }
 }
 

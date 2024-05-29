@@ -23,7 +23,7 @@ const sidebars: SidebarsConfig = {
         slug: 'getting-started',
         description: 'This section covers the following:'
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         'configuration',
         {
@@ -80,7 +80,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Guides",
-      collapsed: true,
+      collapsed: false,
       collapsible: true,
       link: {
         type: 'generated-index',
@@ -97,7 +97,7 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-// repo
+    // repo
     {
       type: "category",
       label: "Examples",
@@ -109,28 +109,27 @@ const sidebars: SidebarsConfig = {
         "repo/django-custom-user",
       ],
     },
-    // {
-    //   type: 'link',
-    //   href: '/feature-requests',
-    //   label: 'Feature Requests',
-    // },
-    // 'contributing',
-  ],
 
-
-
-  // But you can create a sidebar manually
-  /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
     {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
+      type: "category",
+      label: "Cheat Sheets",
+      collapsed: true,
+      collapsible: true,
+      link: {
+        type: 'generated-index',
+        slug: '/cheat-sheets',
+        description: "Gists, references and more."
+      },
+      items: [
+        "cheat-sheets/windows",
+        "cheat-sheets/git",
+        "cheat-sheets/conda",
+        "cheat-sheets/batch",
+        // "cheat-sheets/django",
+      ],
     },
   ],
-   */
+
 };
 
 export default sidebars;

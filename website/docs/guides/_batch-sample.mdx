@@ -1,0 +1,135 @@
+---
+title: Batch
+description: Batch examples.
+---
+
+### Lock workstation
+
+<details>
+<summary>View</summary>
+
+```batch
+@echo off
+
+Rundll32.exe User32.dll,LockWorkStation
+```
+
+</details>
+
+
+### Logoff
+
+<details>
+<summary>View</summary>
+
+```batch
+@echo off
+
+REM Clear all Temporary Internet Files and IE History
+RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 8
+RunDll32.exe InetCpl.cpl,ClearMyTracksByProcess 1
+
+REM Remove all files from %TEMP%
+sdelete -s %TEMP%\*.*
+
+REM Remove list of Recently opened documents
+sdelete "%USERPROFILE%\Recent\*.*"
+
+REM Clears DNS records and Resets TCP/IP
+ipconfig /flushdns
+
+REM Change directory to where puttylogs.py is located and Execute the Python script
+cd /d "path_to_puttylogs_directory" && python puttylogs.py
+
+REM Log the date/time
+echo %DATE% %TIME% >> %HOMEDRIVE%\logoff.txt
+
+REM Log off my machine
+shutdown -l -f
+```
+
+</details>
+
+### Group policy
+
+
+<details>
+<summary>View</summary>
+
+```batch
+@echo off
+pushd "%~dp0"
+
+dir /b "%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientExtensions-Package~3*.mum" > List.txt
+dir /b "%SystemRoot%\servicing\Packages\Microsoft-Windows-GroupPolicy-ClientTools-Package~3*.mum" >> List.txt
+
+for /f %%i in (List.txt) do (
+    dism /online /norestart /add-package:"%SystemRoot%\servicing\Packages\%%i"
+)
+
+del List.txt
+
+pause
+```
+
+</details>
+
+
+### Folder locker
+
+<details>
+<summary>View</summary>
+
+```batch
+@ECHO OFF
+title Folder Locker
+
+REM Set variables
+set "LOCKER_FOLDER=Locker"
+set "LOCKER_FILE=Control Panel.{21EC2020-3AEA-1069-A2DD-08002B30309D}"
+set "PASSWORD=12345"
+
+REM Main logic
+if EXIST "%LOCKER_FILE%" goto UNLOCK
+if NOT EXIST %LOCKER_FOLDER% goto MDLOCKER
+
+:CONFIRM
+echo Are you sure you want to lock the folder? (Y/N)
+set /p "cho=>"
+if /I "%cho%"=="Y" goto LOCK
+if /I "%cho%"=="N" goto END
+echo Invalid choice.
+goto CONFIRM
+
+:LOCK
+ren %LOCKER_FOLDER% "%LOCKER_FILE%"
+attrib +h +s "%LOCKER_FILE%"
+echo Folder locked successfully.
+goto END
+
+:UNLOCK
+echo Enter password to unlock folder:
+set /p "pass=>"
+if "%pass%"=="%PASSWORD%" (
+    attrib -h -s "%LOCKER_FILE%"
+    ren "%LOCKER_FILE%" %LOCKER_FOLDER%
+    echo Folder unlocked successfully.
+) else (
+    echo Invalid password.
+    goto FAIL
+)
+goto END
+
+:FAIL
+echo Invalid password.
+goto END
+
+:MDLOCKER
+md %LOCKER_FOLDER%
+echo Locker created successfully.
+goto END
+
+:END
+```
+
+</details>

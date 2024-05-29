@@ -46,9 +46,9 @@ const commonDocsPluginConfig = {
 };
 
 const config: Config = {
-  title: "SpaceHub",
+  title: "mkeithx",
   tagline:
-    "A simple documentation website for web developers and physics enthusiasts.",
+    "Handbook for IT Helpdesk and Developers.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: "•",
   url: "https://mkeithx.github.io",
@@ -73,7 +73,7 @@ const config: Config = {
 
   customFields: {
     description: "A documentation website representing humanity from Dimension C-137 and beyond.",
-    custom_tagline: "Building the Web",
+    custom_tagline: "Building the web",
   },
 
   i18n: {
@@ -171,19 +171,17 @@ const config: Config = {
         ...commonDocsPluginConfig,
       } as DocsOptions,
     ],
-
+    [
+      'vercel-analytics',
+      {
+        debug: false,
+        mode: 'auto',
+      },
+    ],
   ],
   
 
   themeConfig: {
-    // announcementBar: {
-    //   id: 'announcementBar_',
-    //   content:
-    //     'Test Announcement with icons & emojis. Learn <a target="_blank" rel="noopener noreferrer" href="#">more</a> ⭐',
-    //   backgroundColor: '#fafbfc',
-    //   textColor: '#091E42',
-    //   isCloseable: true,
-    // },
 
     colorMode: {
       defaultMode: "dark",
@@ -203,20 +201,23 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "/img/banner/social-space-new.png",
-
+    image: "img/banner/social-space-new.png",
+    // metadata: [
+    //   {name: 'twitter:card', content: 'summary_large_image'},
+    // ],
     navbar: {
-      // style: "dark",
+      style: "dark",
       hideOnScroll: true,
-      title: "",
+      title: "mkeithx",
       logo: {
-        alt: "SpaceHub",
+        alt: "SiteLogo",
         // src: "img/logo/spacehub-x-logo.png",
-        src: "img/logo/logo-x-light.png",
-        srcDark: "img/logo/logo-x-dark.png",
+        src: "img/logo/logo-rnd-x.png",
+        // src: "img/logo/logo-x-light.png",
+        // srcDark: "img/logo/logo-x-dark.png",
         target: "_self",
-        // width: 100,
-        // height: 300,
+        width: 32,
+        height: 32,
       },
       items: [
         {
@@ -225,47 +226,43 @@ const config: Config = {
           sidebarId: "mySidebar",
           label: "Docs",
         },
-        { to: "cosmos", label: "Universe", position: "left" },
-        // { to: "/community", label: "Community", position: "left" },
+        { to: "cosmos", label: "Space", position: "left" },
+        { to: "blog", label: "What's new", position: "left" },
         {
           type: 'dropdown',
-          label: 'Resources',
-          position: 'left',
+          label: 'More',
+          position: 'right',
           items: [
             {
               to: '/community',
-              label: "Contributing"
+              label: "Community"
             },
             {
-              to: '/msp',
-              label: 'MSP'
+              to: 'blog/tags',
+              label: "Tags"
             },
             {
               to: '/projects',
               label: 'Showcase'
             },
             {
+              to: '/msp',
+              label: 'MSP'
+            },
+            {
               type: 'html',
               value: '<hr class="dropdown-separator">',
             },
             {
-              label: 'Facebook',
-              href: 'https://www.facebook.com',
+              label: 'NASA',
+              href: 'https://eyes.nasa.gov/apps/solar-system/#/home'
             },
+            socialProfiles.kitiplex,            
 
           ],
         },
-        // { to: "msp", label: "MSP", position: "left" },
-
-
-        { to: "blog", label: "What's new", position: "right" },
-        // {
-        //   to: "projects",
-        //   label: "Showcase",
-        //   position: "right",
-        // },
         {
-          href: "https://github.com/mkeithX/mkeithx.github.io",
+          href: "https://github.com/mkeithX",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
@@ -289,11 +286,12 @@ const config: Config = {
     footer: {
       style: "dark",
       logo: {
-        alt: "mkeithX",
-        src: "img/logo/spacehub-x-logo-light.png",
+        alt: "footerLogo",
+        src: "img/logo/mkx-x-raw.png",
         href: "/",
-        // height: "32",
-        width: "250",
+        height: "60",
+        width: "230",
+        
       },
       links: [
         {
@@ -304,13 +302,14 @@ const config: Config = {
               to: "docs",
             },
             {
-              label: "Projects",
-              to: "projects",
-            },
-            {
-              label: "Cosmos",
+              label: "Space",
               to: "cosmos",
             },
+            {
+              label: "Guides",
+              to: "docs/cheat-sheets",
+            },
+
           ],
         },
         {
@@ -319,7 +318,6 @@ const config: Config = {
             socialProfiles.twitter,
             socialProfiles.facebook,
             socialProfiles.linkedin,
-            socialProfiles.github,
           ],
         },
 
@@ -327,16 +325,12 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "blog/",
+              label: "Updates",
+              to: "blog",
             },
             {
               label: "Community",
               to: "community",
-            },
-            {
-              label: "mkeithX",
-              to: "/me",
             },
           ],
         },
@@ -345,7 +339,7 @@ const config: Config = {
       copyright,
     },
     prism: {
-      theme: prismThemes.vsLight,
+      theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: [
         "powershell",

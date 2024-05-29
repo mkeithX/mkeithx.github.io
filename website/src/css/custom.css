@@ -6,88 +6,67 @@
 
 /* You can override the default Infima variables here. */
 
-
 :root {
-  /*
-  See css var + hsl color palette technique:
-  https://blog.maximeheckel.com/posts/the-power-of-composition-with-css-variables/
-   */
-   --ifm-heading-font-weight: 600;
-   --ifm-font-weight-semibold: 600;
- 
-  --site-primary-hue-saturation: 203 80%;
-  --site-primary-hue-saturation: 198 180%;
+  --ifm-color-primary: #0d79c3;
+  --ifm-color-primary-dark: #0c6daf;
+  --ifm-color-primary-darker: #0b67a6;
+  --ifm-color-primary-darkest: #095589;
+  --ifm-color-primary-light: #0e85d7;
+  --ifm-color-primary-lighter: #0f8be0;
+  --ifm-color-primary-lightest: #1e9bf0;
+  --ifm-background-color: #f5f8fa;
+  --ifm-site-dark: #111317;
   
-  --site-color-feedback-background: #f0f8ff;
+  --ifm-code-font-size: 95%;
+  --ifm-heading-font-weight: 600;
+  --ifm-font-weight-semibold: 600;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
+
+  /* --site-color-feedback-background: #f0f8ff; */
 
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
   --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
-
 }
 
-[data-theme='light'] {
-  --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 30%);
-  --ifm-color-primary-dark: hsl(var(--site-primary-hue-saturation) 26%);
-  --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 23%);
-  --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 17%);
-
-  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light) 36%);
-  --ifm-color-primary-lighter: hsl(var(--site-primary-hue-saturation-light) 47%);
-  --ifm-color-primary-lightest: hsl(var(--site-primary-hue-saturation-light) 58%);
-  
-  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-}
-
+/* For readability concerns, you should choose a lighter palette in dark mode. */
 [data-theme='dark'] {
-  --ifm-color-primary: hsl(var(--site-primary-hue-saturation) 45%);
-  --ifm-color-primary-dark: hsl(var(--site-primary-hue-saturation) 41%);
-  --ifm-color-primary-darker: hsl(var(--site-primary-hue-saturation) 38%);
-  --ifm-color-primary-darkest: hsl(var(--site-primary-hue-saturation) 32%);
-
-  --ifm-color-primary-light: hsl(var(--site-primary-hue-saturation-light)54%);
-  --ifm-color-primary-lighter: hsl(
-    var(--site-primary-hue-saturation-light) 62%
-  );
+  --ifm-color-primary: #1da1f2;
+  --ifm-color-primary-dark: #0d94e7;
+  --ifm-color-primary-darker: #0d8cda;
+  --ifm-color-primary-darkest: #0a73b3;
+  --ifm-color-primary-light: #37acf3;
+  --ifm-color-primary-lighter: #43b1f4;
+  --ifm-color-primary-lightest: #6ac1f6;
+  /* --ifm-background-color: #14171a; */
+  --ifm-background-surface-color: #14171a !important;
+  --ifm-background-color: var(--ifm-background-surface-color) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-color-primary-lightest: hsl(
-    var(--site-primary-hue-saturation-light) 73%
-  );
-  
+}
+.navbar__logo {
+  /* width: 40px; */
+  height: 34px;
+  transition: transform 0.5s;
 }
 
-
-/* [data-theme='dark'] .purple-text {
-  color: plum;
-} */
-
-
-
-
-/* .navbar__title {
-  display: none;
-} */
+.navbar__brand:hover .navbar__logo {
+  transform: rotate(360deg) scale(1.0);
+}
 
 .navbar__title {
-  font-size: 1.5em;
-  font-weight: bold;
-  /* background: linear-gradient(90deg,
-      rgb(131 58 180 / 100%) 0%,
-      rgba(32, 188, 245, 0.986) 50%,
-      rgb(69, 252, 139) 100%);
-  background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  /* font-size: 1.2em; */
+  font-weight:bolder;
 }
 .dropdown-separator {
   margin: 0.3rem 0;
 }
 
 .navbar__brand {
-  margin-right: 1.2rem;
+  margin-right: 3rem;
 }
 
 .navbar__logo {
-  /* height: 2.5rem; */
-  width: 170px;
+  height: 2.0rem;
+  /* width: 150px; */
 }
 
 .navbar .navbar__items {
@@ -99,6 +78,9 @@
   align-items: center;
 }
 
+.navbar.navbar--dark {
+  background-color: var(--ifm-site-dark);
+}
 
 /* Header Dropdown Menu */
 .dropdown__link {
@@ -170,12 +152,6 @@
 }
 
 
-/* div[class^='announcementBar_']{
-  font-size: 18px;
-  font-weight: 600;
-  background-color: #20232a !important;
-} */
-
 
 div[class^='announcementBar_'] {
   font-weight: 500;
@@ -215,8 +191,8 @@ div[class^='announcementBar_'] a:hover {
 
 [data-theme='dark'] .DocSearch {
   --docsearch-text-color: var(--ifm-font-color-base);
-  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  --docsearch-container-background: rgb(47 55 69 / 70%);
+  --docsearch-muted-color: var(--ifm-color-secondary-lighter);
+  --docsearch-container-background: rgb(47 55 69 / 90%);
   /* Modal */
   --docsearch-modal-background: var(--ifm-background-color);
   /* Search box */
