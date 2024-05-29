@@ -77,22 +77,10 @@ const sidebars: SidebarsConfig = {
         }
       ],
     },
-    // repo
-    {
-      type: "category",
-      label: "Examples",
-      collapsed: true,
-      collapsible: true,
-      items: [
-        "repo/python-starters",
-        "repo/flask-tutorials",
-        "repo/django-custom-user",
-      ],
-    },
     {
       type: "category",
       label: "Guides",
-      collapsed: true,
+      collapsed: false,
       collapsible: true,
       link: {
         type: 'generated-index',
@@ -109,10 +97,23 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    // repo
+    {
+      type: "category",
+      label: "Examples",
+      collapsed: true,
+      collapsible: true,
+      items: [
+        "repo/python-starters",
+        "repo/flask-tutorials",
+        "repo/django-custom-user",
+      ],
+    },
+
     {
       type: "category",
       label: "Cheat Sheets",
-      collapsed: false,
+      collapsed: true,
       collapsible: true,
       link: {
         type: 'generated-index',
@@ -127,29 +128,8 @@ const sidebars: SidebarsConfig = {
         // "cheat-sheets/django",
       ],
     },
-
-    // {
-    //   type: 'link',
-    //   href: '/feature-requests',
-    //   label: 'Feature Requests',
-    // },
-    // 'contributing',
   ],
 
-
-
-  // But you can create a sidebar manually
-  /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-   */
 };
 
 export default sidebars;

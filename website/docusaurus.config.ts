@@ -182,14 +182,6 @@ const config: Config = {
   
 
   themeConfig: {
-    // announcementBar: {
-    //   id: 'announcementBar_',
-    //   content:
-    //     'Test Announcement with icons & emojis. Learn <a target="_blank" rel="noopener noreferrer" href="#">more</a> ⭐',
-    //   backgroundColor: '#fafbfc',
-    //   textColor: '#091E42',
-    //   isCloseable: true,
-    // },
 
     colorMode: {
       defaultMode: "dark",
@@ -295,10 +287,10 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/spacehub-x-logo-light.png",
+        src: "img/logo/mkx-x-raw.png",
         href: "/",
-        height: "32",
-        // width: "300",
+        height: "65",
+        width: "270",
         
       },
       links: [

@@ -152,12 +152,6 @@
 }
 
 
-/* div[class^='announcementBar_']{
-  font-size: 18px;
-  font-weight: 600;
-  background-color: #20232a !important;
-} */
-
 
 div[class^='announcementBar_'] {
   font-weight: 500;
