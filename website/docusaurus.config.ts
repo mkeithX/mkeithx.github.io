@@ -48,7 +48,7 @@ const commonDocsPluginConfig = {
 const config: Config = {
   title: "mkeithx",
   tagline:
-    "A simple documentation website for web developers and physics enthusiasts.",
+    "Handbook for IT Helpdesk and Developers.",
   favicon: "icons/favicon.ico",
   // titleDelimiter: "•",
   url: "https://mkeithx.github.io",
@@ -73,7 +73,7 @@ const config: Config = {
 
   customFields: {
     description: "A documentation website representing humanity from Dimension C-137 and beyond.",
-    custom_tagline: "Docs made easy",
+    custom_tagline: "Building the web",
   },
 
   i18n: {
@@ -289,8 +289,8 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/mkx-x-raw.png",
         href: "/",
-        height: "65",
-        width: "270",
+        height: "60",
+        width: "230",
         
       },
       links: [
@@ -306,7 +306,7 @@ const config: Config = {
               to: "cosmos",
             },
             {
-              label: "Cheat Sheets",
+              label: "Guides",
               to: "docs/cheat-sheets",
             },
 

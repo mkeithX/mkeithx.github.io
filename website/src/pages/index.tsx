@@ -25,7 +25,7 @@ function HomepageHeader() {
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
             {/* {"🚀 "} */}
-            mkeith<b>X</b> <br></br>
+            <b>MKX</b> <br></br>
             {/* C-<b>137</b> <br></br> */}
           </span>
         </div>
@@ -33,23 +33,20 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-            Docs<br></br> <b>Gui</b>des 
+              Building the <b>Web</b>.<br></br>
               {/* Physics<b>.</b> <br></br> */}
-              <br></br>
-              for h<b>u</b>mans.<br></br>
+              {/* Exploring the <b>Cosmos</b>. */}
               
-
-              {/* {siteConfig.title} */}
               {/* <b>.</b> */}
             </div>
           </span>
         </Heading>
 
         <div className="hero__subtitle mb-3">
-          {" "}
-          <span className={styles.heroSubTitleTextHtml}>
-            {/* Representing humanity from dimension <b>C-137</b>. */}
-          </span>
+        {siteConfig.tagline}
+          {/* <span className={styles.heroSubTitleTextHtml}>
+            <b>Hub</b> for IT Developers and Physics enthusiast.
+          </span> */}
         </div>
 
         <br></br>
