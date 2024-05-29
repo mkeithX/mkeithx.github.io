@@ -46,7 +46,7 @@ const commonDocsPluginConfig = {
 };
 
 const config: Config = {
-  title: "SpaceHub",
+  title: "mkeithx",
   tagline:
     "A simple documentation website for web developers and physics enthusiasts.",
   favicon: "icons/favicon.ico",
@@ -73,7 +73,7 @@ const config: Config = {
 
   customFields: {
     description: "A documentation website representing humanity from Dimension C-137 and beyond.",
-    custom_tagline: "Building the Web",
+    custom_tagline: "Docs made easy",
   },
 
   i18n: {
@@ -234,12 +234,11 @@ const config: Config = {
           sidebarId: "mySidebar",
           label: "Docs",
         },
-        { to: "cosmos", label: "SpaceHub", position: "left" },
-        { to: "/msp", label: "MSP", position: "left" },
-        { to: "blog", label: "Blog", position: "left" },
+        { to: "cosmos", label: "Space", position: "left" },
+        { to: "blog", label: "What's new", position: "left" },
         {
           type: 'dropdown',
-          label: 'Resources',
+          label: 'More',
           position: 'right',
           items: [
             {
@@ -247,8 +246,16 @@ const config: Config = {
               label: "Community"
             },
             {
+              to: 'blog/tags',
+              label: "Tags"
+            },
+            {
               to: '/projects',
               label: 'Showcase'
+            },
+            {
+              to: '/msp',
+              label: 'MSP'
             },
             {
               type: 'html',
@@ -287,11 +294,11 @@ const config: Config = {
     footer: {
       style: "dark",
       logo: {
-        alt: "mkeithX",
+        alt: "footerLogo",
         src: "img/logo/spacehub-x-logo-light.png",
         href: "/",
         height: "32",
-        width: "250",
+        // width: "300",
         
       },
       links: [
@@ -303,13 +310,14 @@ const config: Config = {
               to: "docs",
             },
             {
+              label: "Space",
+              to: "cosmos",
+            },
+            {
               label: "Cheat Sheets",
               to: "docs/cheat-sheets",
             },
-            {
-              label: "Cosmos",
-              to: "cosmos",
-            },
+
           ],
         },
         {
@@ -325,16 +333,12 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Blog",
-              to: "blog/",
+              label: "Updates",
+              to: "blog",
             },
             {
               label: "Community",
               to: "community",
-            },
-            {
-              label: "mkeithX",
-              to: "/me",
             },
           ],
         },
