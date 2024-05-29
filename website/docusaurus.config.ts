@@ -171,7 +171,13 @@ const config: Config = {
         ...commonDocsPluginConfig,
       } as DocsOptions,
     ],
-
+    [
+      'vercel-analytics',
+      {
+        debug: true,
+        mode: 'auto',
+      },
+    ],
   ],
   
 
