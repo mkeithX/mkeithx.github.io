@@ -15,18 +15,8 @@ export const cases: Case[] = [
     tags: ["React", "Python"],
   },
   {
-    title: "Batch Minis",
-    website: "./docs/guides/batch-sample",
-    preview: require("@site/src/data/projects/default-x.png").default,
-    description: (
-      <>A collection of basic batch code examples for starters.</>
-    ),
-    source: "https://github.com/mkeithX/mkeithx.github.io/tree/main/examples/batch-starters",
-    tags: ["Batch",],
-  },
-  {
     title: "MKX SpaceHub",
-    website: "https://bit.ly/mkeithx",
+    website: "https://mkeithx.github.io/",
     preview: require("@site/src/data/projects/default-x.png").default,
     description: (
       <>A simple documentation website for web developers and physics enthusiasts.</>
