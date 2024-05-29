@@ -42,7 +42,15 @@
   --ifm-background-color: var(--ifm-background-surface-color) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
+.navbar__logo {
+  /* width: 40px; */
+  height: 34px;
+  transition: transform 0.5s;
+}
 
+.navbar__brand:hover .navbar__logo {
+  transform: rotate(360deg) scale(1.0);
+}
 
 .navbar__title {
   /* font-size: 1.2em; */

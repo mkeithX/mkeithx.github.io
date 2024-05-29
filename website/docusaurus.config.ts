@@ -209,21 +209,23 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "/img/banner/social-space-new.png",
-
+    image: "img/banner/social-space-new.png",
+    // metadata: [
+    //   {name: 'twitter:card', content: 'summary_large_image'},
+    // ],
     navbar: {
       style: "dark",
       hideOnScroll: true,
       title: "mkeithx",
       logo: {
-        alt: "SpaceHub",
+        alt: "SiteLogo",
         // src: "img/logo/spacehub-x-logo.png",
         src: "img/logo/logo-rnd-x.png",
         // src: "img/logo/logo-x-light.png",
         // srcDark: "img/logo/logo-x-dark.png",
         target: "_self",
-        // width: 100,
-        // height: 300,
+        width: 32,
+        height: 32,
       },
       items: [
         {
@@ -260,15 +262,8 @@ const config: Config = {
 
           ],
         },
-        // { to: "msp", label: "MSP", position: "left" },
-
-        // {
-        //   to: "projects",
-        //   label: "Showcase",
-        //   position: "right",
-        // },
         {
-          href: "https://github.com/mkeithX/mkeithx.github.io",
+          href: "https://github.com/mkeithX",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
@@ -295,8 +290,9 @@ const config: Config = {
         alt: "mkeithX",
         src: "img/logo/spacehub-x-logo-light.png",
         href: "/",
-        // height: "32",
+        height: "32",
         width: "250",
+        
       },
       links: [
         {
@@ -307,8 +303,8 @@ const config: Config = {
               to: "docs",
             },
             {
-              label: "Projects",
-              to: "projects",
+              label: "Cheat Sheets",
+              to: "docs/cheat-sheets",
             },
             {
               label: "Cosmos",
@@ -322,7 +318,6 @@ const config: Config = {
             socialProfiles.twitter,
             socialProfiles.facebook,
             socialProfiles.linkedin,
-            socialProfiles.github,
           ],
         },
 

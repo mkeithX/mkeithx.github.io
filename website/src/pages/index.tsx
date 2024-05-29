@@ -33,9 +33,11 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-            <b>Docs</b> | Guides:<br></br>
+            Docs<br></br> <b>Gui</b>des 
               {/* Physics<b>.</b> <br></br> */}
-              Made easy <b></b> for H<b>u</b>mans.<br></br>
+              <br></br>
+              for h<b>u</b>mans.<br></br>
+              
 
               {/* {siteConfig.title} */}
               {/* <b>.</b> */}
@@ -57,7 +59,7 @@ function HomepageHeader() {
             className="button button--outline button--primary button--lg px-4"
             to="docs"
           >
-            {"Learn more"}
+            {"Explore"}
           </Link>
         </div>
       </div>
