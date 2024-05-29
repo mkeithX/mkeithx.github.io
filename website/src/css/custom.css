@@ -45,8 +45,8 @@
 
 
 .navbar__title {
-  font-size: 1.2em;
-  /* font-weight: bold; */
+  /* font-size: 1.2em; */
+  font-weight:bolder;
 }
 .dropdown-separator {
   margin: 0.3rem 0;
@@ -57,7 +57,7 @@
 }
 
 .navbar__logo {
-  height: 2.5rem;
+  height: 2.0rem;
   /* width: 150px; */
 }
 

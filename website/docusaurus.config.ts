@@ -214,7 +214,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      title: "mkeithx",
       logo: {
         alt: "SpaceHub",
         // src: "img/logo/spacehub-x-logo.png",
@@ -232,9 +232,9 @@ const config: Config = {
           sidebarId: "mySidebar",
           label: "Docs",
         },
-        { to: "cosmos", label: "Universe", position: "left" },
+        { to: "cosmos", label: "SpaceHub", position: "left" },
         { to: "/msp", label: "MSP", position: "left" },
-        { to: "blog", label: "What's new", position: "right" },
+        { to: "blog", label: "Blog", position: "left" },
         {
           type: 'dropdown',
           label: 'Resources',
