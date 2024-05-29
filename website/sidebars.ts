@@ -23,7 +23,7 @@ const sidebars: SidebarsConfig = {
         slug: 'getting-started',
         description: 'This section covers the following:'
       },
-      collapsed: false,
+      collapsed: true,
       items: [
         'configuration',
         {
@@ -77,6 +77,18 @@ const sidebars: SidebarsConfig = {
         }
       ],
     },
+    // repo
+    {
+      type: "category",
+      label: "Examples",
+      collapsed: true,
+      collapsible: true,
+      items: [
+        "repo/python-starters",
+        "repo/flask-tutorials",
+        "repo/django-custom-user",
+      ],
+    },
     {
       type: "category",
       label: "Guides",
@@ -97,18 +109,25 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-// repo
     {
       type: "category",
-      label: "Examples",
-      collapsed: true,
+      label: "Cheat Sheets",
+      collapsed: false,
       collapsible: true,
+      link: {
+        type: 'generated-index',
+        slug: '/cheat-sheets',
+        description: "Gists, references and more."
+      },
       items: [
-        "repo/python-starters",
-        "repo/flask-tutorials",
-        "repo/django-custom-user",
+        "cheat-sheets/windows",
+        "cheat-sheets/git",
+        "cheat-sheets/conda",
+        "cheat-sheets/batch",
+        // "cheat-sheets/django",
       ],
     },
+
     // {
     //   type: 'link',
     //   href: '/feature-requests',

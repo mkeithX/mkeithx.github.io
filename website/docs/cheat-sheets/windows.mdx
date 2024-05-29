@@ -1,0 +1,81 @@
+---
+title: Windows
+description: CLI - NT
+# sidebar_position: 1
+---
+
+
+Get device name
+
+```sh
+hostname
+```
+
+## Network
+
+<details>
+<summary>Network reset</summary>
+
+```bash
+ipconfig /release
+```
+```bash
+ipconfig /flushdns
+```
+```bash
+ipconfig /renew
+```
+:::caution[Optional]
+
+Continue these two commands if you want to reset your network completely.
+
+:::
+
+
+```bash
+netsh int ip reset
+```
+```bash
+netsh winsock reset
+```
+Restart computer.
+
+</details>
+
+<details>
+<summary>Reports</summary>
+
+```bash
+netsh interface show interface
+```
+```bash
+netsh wlan show wlanreport
+```
+```bash
+netsh interface ip show dnsservers
+```
+
+</details>
+
+
+
+
+
+## Enable/Disable `admin`
+
+```bash
+net user administrator /active:yes
+```
+```bash
+net user administrator /active:no
+```
+
+## Local Machine
+
+
+```bash
+DISM /Online /Cleanup-Image /ScanHealth
+```
+```bash
+DISM /Online /Cleanup /RestoreHealth
+```

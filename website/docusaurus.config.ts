@@ -227,6 +227,7 @@ const config: Config = {
         },
         { to: "cosmos", label: "Universe", position: "left" },
         { to: "/msp", label: "MSP", position: "left" },
+        { to: "blog", label: "What's new", position: "right" },
         {
           type: 'dropdown',
           label: 'Resources',
@@ -254,8 +255,6 @@ const config: Config = {
         },
         // { to: "msp", label: "MSP", position: "left" },
 
-
-        { to: "blog", label: "What's new", position: "right" },
         // {
         //   to: "projects",
         //   label: "Showcase",
