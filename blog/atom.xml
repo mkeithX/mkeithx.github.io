@@ -1,11 +1,11 @@
 <?xml version="1.0" encoding="utf-8"?>
 <feed xmlns="http://www.w3.org/2005/Atom">
     <id>https://mkeithx.github.io/blog</id>
-    <title>SpaceHub Blog</title>
+    <title>mkeithx Blog</title>
     <updated>2024-05-16T00:00:00.000Z</updated>
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkeithx.github.io/blog"/>
-    <subtitle>SpaceHub Blog</subtitle>
+    <subtitle>mkeithx Blog</subtitle>
     <icon>https://mkeithx.github.io/icons/favicon.ico</icon>
     <rights>Copyright © 2024 • Designed by  &lt;a href='me' target='_blank'&gt;Keith Tan&lt;b&gt;&lt;/b&gt;&lt;/a&gt; </rights>
     <entry>
@@ -18,7 +18,7 @@
 <p>Announcing some changes and updates in preparation for the Next Big Thing. Let's go sago!</p>
 <p><img decoding="async" loading="lazy" src="https://imgur.com/miCA1IV.png" alt="image" class="img_ev3q"></p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="community-guideline-for-contributors">Community Guideline for Contributors<a href="https://mkeithx.github.io/blog/mid-year-upgrades-2024#community-guideline-for-contributors" class="hash-link" aria-label="Direct link to Community Guideline for Contributors" title="Direct link to Community Guideline for Contributors">​</a></h2>
-<p>The community across all my projects holds significant importance, which is why I'm introducing the first set of <a href="https://mkeithx.github.io/docs/contributing">guidelines</a> for contributors. This guideline outlines what actions will and will not be tolerated. By setting clear standards, I aim to create a welcoming and inclusive environment where everyone feels valued and respected.</p>
+<p>The community across all my projects holds significant importance, which is why I'm introducing the first set of <a href="https://mkeithx.github.io/community">guidelines</a> for contributors. This guideline outlines what actions will and will not be tolerated. By setting clear standards, I aim to create a welcoming and inclusive environment where everyone feels valued and respected.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="joining-a-new-collaboration">Joining a New Collaboration<a href="https://mkeithx.github.io/blog/mid-year-upgrades-2024#joining-a-new-collaboration" class="hash-link" aria-label="Direct link to Joining a New Collaboration" title="Direct link to Joining a New Collaboration">​</a></h2>
 <p>This exciting collaboration opens up a whole new world of opportunities for cooperation, innovation, and growth. With their support and resources, I'm looking forward to the possibilities that lie ahead and how they'll benefit my projects.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="revamping-website-configuration">Revamping Website Configuration<a href="https://mkeithx.github.io/blog/mid-year-upgrades-2024#revamping-website-configuration" class="hash-link" aria-label="Direct link to Revamping Website Configuration" title="Direct link to Revamping Website Configuration">​</a></h2>
