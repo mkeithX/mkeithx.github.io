@@ -206,14 +206,15 @@ const config: Config = {
     image: "/img/banner/social-space-new.png",
 
     navbar: {
-      // style: "dark",
+      style: "dark",
       hideOnScroll: true,
-      title: "",
+      title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
         // src: "img/logo/spacehub-x-logo.png",
-        src: "img/logo/logo-x-light.png",
-        srcDark: "img/logo/logo-x-dark.png",
+        src: "img/logo/logo-rnd-x.png",
+        // src: "img/logo/logo-x-light.png",
+        // srcDark: "img/logo/logo-x-dark.png",
         target: "_self",
         // width: 100,
         // height: 300,
@@ -341,7 +342,7 @@ const config: Config = {
       copyright,
     },
     prism: {
-      theme: prismThemes.vsLight,
+      theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: [
         "powershell",
