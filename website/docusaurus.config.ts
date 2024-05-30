@@ -11,7 +11,7 @@ import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 import { socialProfiles } from "./socialProfiles";
 
 
-const copyright = `Copyright © ${new Date().getFullYear()} • Designed by  <a href='me' target='_blank'>Keith Tan<b></b></a> `;
+const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>. `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -230,7 +230,7 @@ const config: Config = {
         { to: "blog", label: "What's new", position: "left" },
         {
           type: 'dropdown',
-          label: 'More',
+          label: 'Resources',
           position: 'right',
           items: [
             {
@@ -247,7 +247,7 @@ const config: Config = {
             },
             {
               to: '/msp',
-              label: 'MSP'
+              label: 'MSP ⚠️'
             },
             {
               type: 'html',
@@ -315,14 +315,6 @@ const config: Config = {
 
           ],
         },
-        {
-          title: "Connect",
-          items: [
-            socialProfiles.twitter,
-            socialProfiles.facebook,
-            socialProfiles.linkedin,
-          ],
-        },
 
         {
           title: "More",
@@ -335,6 +327,31 @@ const config: Config = {
               label: "Community",
               to: "community",
             },
+            {
+              label: "Press",
+              to: "community",
+            },
+          ],
+        },
+        {
+          title: "Connect",
+          items: [
+            socialProfiles.twitter,
+            socialProfiles.facebook,
+            socialProfiles.linkedin,
+          ],
+        },
+        {
+          title: "Support",
+          items: [
+            {
+              label: 'Feature request',
+              href: '/feature-requests'
+            },
+            {
+              label: 'Meta',
+              href: 'https://opensource.fb.com/'
+            }
           ],
         },
       ],
