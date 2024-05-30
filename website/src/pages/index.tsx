@@ -25,17 +25,17 @@ function HomepageHeader() {
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
             {/* {"🚀 "} */}
-            <b>MKX</b> <br></br>
             {/* C-<b>137</b> <br></br> */}
+            Docs <b>|</b> Guides
           </span>
         </div>
 
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-              Building the <b>Web</b>.<br></br>
+              Tech <b>Support</b> & <b>Dev</b>elopers.
               {/* Physics<b>.</b> <br></br> */}
-              {/* Exploring the <b>Cosmos</b>. */}
+              
               
               {/* <b>.</b> */}
             </div>
@@ -43,10 +43,10 @@ function HomepageHeader() {
         </Heading>
 
         <div className="hero__subtitle mb-3">
-        {siteConfig.tagline}
-          {/* <span className={styles.heroSubTitleTextHtml}>
-            <b>Hub</b> for IT Developers and Physics enthusiast.
-          </span> */}
+        {/* {siteConfig.tagline} */}
+          <span className={styles.heroSubTitleTextHtml}>
+            Built for <b>Humans</b>.
+          </span>
         </div>
 
         <br></br>
@@ -75,11 +75,12 @@ export default function Home(): JSX.Element {
       title={custom_tagline}
       description={title}
     >
-      {/* <TopBanner /> */}
+
       <HomepageHeader />
 
       <main>
         <HomepageFeatures />
+        {/* <TopBanner /> */}
       </main>
     </Layout>
   );

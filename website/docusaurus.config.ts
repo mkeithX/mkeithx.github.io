@@ -289,8 +289,8 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/mkx-x-raw.png",
         href: "/",
-        height: "60",
-        width: "230",
+        height: "50",
+        width: "200",
         
       },
       links: [

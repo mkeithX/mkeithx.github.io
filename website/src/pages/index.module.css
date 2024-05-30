@@ -3,15 +3,7 @@
  * and scoped locally.
  */
 
- /* .heroBanner {
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  background-color: var(--kiti-dark-pale);
-  height: 25rem;
- }
-  */
+
 
 
  
@@ -24,9 +16,9 @@
   font-size: 20px;
 }
 
-.contents {
+/* .contents {
   color: #ccc;
-}
+} */
 
 
  .section {
@@ -42,6 +34,7 @@
   height: auto;
   display: block;
   pointer-events: none;
+  
  }
 
 
@@ -49,22 +42,33 @@
   --ifm-container-width: 996px;
 }
 
+ /* .heroBanner {
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  display: flex;
+  background-color: var(--kiti-dark-pale);
+  height: 25rem;
+ }
+  */
+
 .heroBanner {
-  padding: 10rem 0; /* Adjust the padding to control the height */
+  /* padding: 10rem 0; */
   text-align: left;
   position: relative;
   overflow: hidden;
   background-color: var(--ifm-site-dark);
-  /* background: #111317; */
+  /* display: flex; */
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8vw), 0 100%);
   height: 36rem;
+  
 }
 
 
 
  @media (prefers-reduced-motion: no-preference) {
   .heroBannerLogo {
-    animation: kit-in-the-box infinite 60s linear;
+    animation: kit-in-the-box infinite 75s linear;
   }
  }
 
@@ -92,6 +96,7 @@
 
 .heroTitleTextHtml b {
   color: var(--ifm-color-primary-dark);
+  
 }
 
 
