@@ -26,7 +26,7 @@ function HomepageHeader() {
           <span className={styles.heroSubTitleTextHtml}>
             {/* {"🚀 "} */}
             {/* C-<b>137</b> <br></br> */}
-            Docs <b>|</b> Guides
+            Handbook <b>|</b>
           </span>
         </div>
 

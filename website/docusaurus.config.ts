@@ -48,9 +48,9 @@ const commonDocsPluginConfig = {
 const config: Config = {
   title: "mkeithx",
   tagline:
-    "Handbook for IT Helpdesk and Developers.",
+    "Handbook for Tech Support and Developers.",
   favicon: "icons/favicon.ico",
-  // titleDelimiter: "•",
+  titleDelimiter: "•",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX",
@@ -117,7 +117,7 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           ...commonDocsPluginConfig,
-          // mdxPageComponent: "@theme/MDXPage",
+          mdxPageComponent: "@theme/MDXPage",
         },
 
         theme: {
@@ -257,7 +257,10 @@ const config: Config = {
               label: 'NASA',
               href: 'https://eyes.nasa.gov/apps/solar-system/#/home'
             },
-            socialProfiles.kitiplex,            
+            {
+              label: 'React',
+              href: 'https://react.dev/',
+            },      
 
           ],
         },
