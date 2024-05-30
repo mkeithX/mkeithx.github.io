@@ -11,6 +11,38 @@ type FeatureItem = {
 };
 
 const FeatureList: FeatureItem[] = [
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/logo/Microsoft_icon.svg").default,
+  //   description: (
+  //     <>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/logo/docusaurus-logo.svg").default,
+  //   description: (
+  //     <>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/logo/vscode.svg").default,
+  //   description: (
+  //     <>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/logo/react-logo.svg").default,
+  //   description: (
+  //     <>
+  //     </>
+  //   ),
+  // },
   {
     title: "Exploring the Cosmos",
     Svg: require("@site/static/img/undraw_stars.svg").default,
@@ -23,7 +55,7 @@ const FeatureList: FeatureItem[] = [
   },
   {
     title: "What's New?",
-    Svg: require("@site/static/img/undraw_website.svg").default,
+    Svg: require("@site/static/img/undraw_teaching.svg").default,
     description: (
       <>
         Updates, releases, bulletins and all other stuff.
@@ -42,6 +74,7 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
+  
 ];
 
 function Feature({ title, Svg, description }: FeatureItem) {

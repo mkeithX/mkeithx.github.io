@@ -6,7 +6,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import BannerLogo from "@site/static/img/banner/test-orbit.svg";
+import BannerLogo from "@site/static/img/banner/atom-z.svg";
 import React from "react";
 import TopBanner from '@site/src/components/TopBanner';
 
@@ -26,18 +26,16 @@ function HomepageHeader() {
           <span className={styles.heroSubTitleTextHtml}>
             {/* {"🚀 "} */}
             {/* C-<b>137</b> <br></br> */}
-            Handbook <b>|</b>
+            {/* Docs <b>|</b> Guides */}
+            Open Source <b>|</b>
           </span>
         </div>
 
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-              Tech <b>Support</b> & <b>Dev</b>elopers.
-              {/* Physics<b>.</b> <br></br> */}
-              
-              
-              {/* <b>.</b> */}
+            Docs, <b>gui</b>des for <br></br>
+             <b>Dev</b>elopers & <b>Tech</b> Support.
             </div>
           </span>
         </Heading>
@@ -45,7 +43,7 @@ function HomepageHeader() {
         <div className="hero__subtitle mb-3">
         {/* {siteConfig.tagline} */}
           <span className={styles.heroSubTitleTextHtml}>
-            Built for <b>Humans</b>.
+            Built by <b>Humans</b>.
           </span>
         </div>
 
