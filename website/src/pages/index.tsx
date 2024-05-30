@@ -34,8 +34,8 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-            Docs, <b>gui</b>des for <br></br>
-             <b>Dev</b>elopers & <b>Tech</b> Support.
+            Docs for <b>IT Dev</b>elopers, <br></br>
+            <b> Help</b>desk, and <b>Astro</b>nomers.
             </div>
           </span>
         </Heading>
@@ -43,7 +43,7 @@ function HomepageHeader() {
         <div className="hero__subtitle mb-3">
         {/* {siteConfig.tagline} */}
           <span className={styles.heroSubTitleTextHtml}>
-            Built by <b>Humans</b>.
+            {/* Built by <b>Humans</b>. */}
           </span>
         </div>
 

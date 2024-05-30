@@ -37,7 +37,23 @@ const FeatureList: FeatureItem[] = [
   // },
   // {
   //   title: "",
-  //   Svg: require("@site/static/img/logo/react-logo.svg").default,
+  //   Svg: require("@site/static/img/space/NASA_logo.svg").default,
+  //   description: (
+  //     <>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/space/spacex.svg").default,
+  //   description: (
+  //     <>
+  //     </>
+  //   ),
+  // },
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/space/jpl.svg").default,
   //   description: (
   //     <>
   //     </>

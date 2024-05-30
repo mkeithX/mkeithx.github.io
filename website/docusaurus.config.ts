@@ -48,7 +48,7 @@ const commonDocsPluginConfig = {
 const config: Config = {
   title: "mkeithx",
   tagline:
-    "Handbook for Tech Support and Developers.",
+    "Docs for IT Developers, Helpdesk and Astronomers.",
   favicon: "icons/favicon.ico",
   titleDelimiter: "•",
   url: "https://mkeithx.github.io",
