@@ -242,10 +242,6 @@ const config: Config = {
               label: "Tags"
             },
             {
-              to: '/projects',
-              label: 'Showcase'
-            },
-            {
               to: '/msp',
               label: 'MSP ⚠️'
             },
@@ -319,20 +315,20 @@ const config: Config = {
           title: "Info",
           items: [
             {
-              label: "Updates",
+              label: "Blog",
               to: "blog",
             },
             {
-              label: "Community",
-              to: "community",
+              label: "Tags",
+              to: "blog/tags",
             },
             // {
             //   label: 'Feature request',
             //   href: '/feature-requests'
             // },
             {
-              label: "Press",
-              to: "community",
+              label: "Kitiplex",
+              to: "community/kitiplex",
             },
           ],
         },
