@@ -116,8 +116,8 @@ const config: Config = {
         pages: {
           path: "src/pages",
           routeBasePath: "",
-          ...commonDocsPluginConfig,
-          mdxPageComponent: "@theme/MDXPage",
+          showLastUpdateTime: false,
+          ...commonRemarkPluginsConfig,
         },
 
         theme: {
@@ -211,10 +211,7 @@ const config: Config = {
       title: "mkeithx",
       logo: {
         alt: "SiteLogo",
-        // src: "img/logo/spacehub-x-logo.png",
         src: "img/logo/logo-rnd-x.png",
-        // src: "img/logo/logo-x-light.png",
-        // srcDark: "img/logo/logo-x-dark.png",
         target: "_self",
         width: 32,
         height: 32,
@@ -236,10 +233,6 @@ const config: Config = {
             {
               to: '/community',
               label: "Community"
-            },
-            {
-              to: 'community/kitiplex',
-              label: "Kitiplex"
             },
             {
               to: '/msp',
