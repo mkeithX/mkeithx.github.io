@@ -301,10 +301,6 @@ const config: Config = {
           title: "Docs",
           items: [
             {
-              label: "Keyword",
-              to: "docs",
-            },
-            {
               label: "Space",
               to: "cosmos",
             },
@@ -312,12 +308,15 @@ const config: Config = {
               label: "Guides",
               to: "docs/cheat-sheets",
             },
-
+            {
+              label: "Keyword",
+              to: "docs",
+            },
           ],
         },
 
         {
-          title: "More",
+          title: "Info",
           items: [
             {
               label: "Updates",
@@ -327,6 +326,10 @@ const config: Config = {
               label: "Community",
               to: "community",
             },
+            // {
+            //   label: 'Feature request',
+            //   href: '/feature-requests'
+            // },
             {
               label: "Press",
               to: "community",
@@ -342,15 +345,19 @@ const config: Config = {
           ],
         },
         {
-          title: "Support",
+          title: "More",
           items: [
             {
-              label: 'Feature request',
-              href: '/feature-requests'
+              label: 'Netlify',
+              href: 'https://www.netlify.com/'
             },
             {
-              label: 'Meta',
-              href: 'https://opensource.fb.com/'
+              label: 'Vercel',
+              href: 'https://vercel.com/'
+            },
+            {
+              label: 'FB Developers',
+              href: 'https://developers.facebook.com/'
             }
           ],
         },
