@@ -118,6 +118,8 @@ const config: Config = {
           routeBasePath: "",
           showLastUpdateTime: false,
           ...commonRemarkPluginsConfig,
+          ...admonitionsConfig,
+          mdxPageComponent: '@theme/MDXPage',
         },
 
         theme: {
