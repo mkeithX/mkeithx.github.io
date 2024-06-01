@@ -43,16 +43,17 @@ function About(): JSX.Element {
                 <h2>I'm Keith</h2>
                 <p>
                   {" "}
-                  an independent web developer and IT analyst, passionate about
-                  crafting innovative solutions for businesses and contributing
-                  to the open-source community. Beyond coding, I take pride in
+                  I'm an independent Software Developer and Help Desk Analyst, with a soft spot for Python, React and M365.
+                  In simple terms, I build website and fix printers too. 😄
+
+                  Outside of work, I take pride in
                   being a loving husband, a devoted dad, and yet, a stubburn
                   brother.
+                  <br></br>
                 </p>
                 <p>
                   My coding journey is intertwined with my love for pizza and my
-                  fascination to the cosmos. Despite never dreaming of becoming
-                  a software developer initially, I've embraced this path
+                  fascination to the cosmos. Despite never dreaming of being part of the IT industry, I've embraced this path
                   wholeheartedly.
                 </p>
                 <p>
@@ -64,8 +65,8 @@ function About(): JSX.Element {
                   perspective and enhancing my skill set.
                 </p>
                 <p>
-                  Feel free to explore some of {" "}
-                  <Link to={"/projects"}> my projects</Link> or check out{" "}
+                  Feel free to explore {" "}
+                  <Link to={"/cosmos"}> this website</Link> or check out{" "}
                   <a target="_blank" rel="noreferrer" href={resumeUrl}>
                     my resume
                   </a>

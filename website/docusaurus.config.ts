@@ -174,7 +174,7 @@ const config: Config = {
     [
       'vercel-analytics',
       {
-        debug: false,
+        debug: true,
         mode: 'auto',
       },
     ],
@@ -238,8 +238,8 @@ const config: Config = {
               label: "Community"
             },
             {
-              to: 'blog/tags',
-              label: "Tags"
+              to: 'community/kitiplex',
+              label: "Kitiplex"
             },
             {
               to: '/msp',
