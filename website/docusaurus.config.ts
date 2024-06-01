@@ -201,7 +201,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "img/banner/social-space-new.png",
+    image: "img/social-banner.png",
     // metadata: [
     //   {name: 'twitter:card', content: 'summary_large_image'},
     // ],
