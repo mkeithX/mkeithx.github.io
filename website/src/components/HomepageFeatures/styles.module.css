@@ -9,3 +9,8 @@
   height: 200px;
   width: 200px;
 }
+
+.heroTitleTextHtml b {
+  color: var(--ifm-color-primary-dark);
+  
+}

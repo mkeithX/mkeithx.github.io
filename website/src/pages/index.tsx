@@ -6,7 +6,7 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import BannerLogo from "@site/static/img/banner/test-orbit.svg";
+import BannerLogo from "@site/static/img/banner/atom-z.svg";
 import React from "react";
 import TopBanner from '@site/src/components/TopBanner';
 
@@ -25,28 +25,26 @@ function HomepageHeader() {
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
             {/* {"🚀 "} */}
-            <b>MKX</b> <br></br>
             {/* C-<b>137</b> <br></br> */}
+            {/* Docs <b>|</b> Guides */}
+            Open Source <b>|</b>
           </span>
         </div>
 
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-              Building the <b>Web</b>.<br></br>
-              {/* Physics<b>.</b> <br></br> */}
-              {/* Exploring the <b>Cosmos</b>. */}
-              
-              {/* <b>.</b> */}
+            Docs for <b>IT Dev</b>elopers, <br></br>
+            <b> Help</b>desk, and <b>Astro</b>nomers.
             </div>
           </span>
         </Heading>
 
         <div className="hero__subtitle mb-3">
-        {siteConfig.tagline}
-          {/* <span className={styles.heroSubTitleTextHtml}>
-            <b>Hub</b> for IT Developers and Physics enthusiast.
-          </span> */}
+        {/* {siteConfig.tagline} */}
+          <span className={styles.heroSubTitleTextHtml}>
+            {/* Built by <b>Humans</b>. */}
+          </span>
         </div>
 
         <br></br>
@@ -75,11 +73,12 @@ export default function Home(): JSX.Element {
       title={custom_tagline}
       description={title}
     >
-      {/* <TopBanner /> */}
+
       <HomepageHeader />
 
       <main>
         <HomepageFeatures />
+        {/* <TopBanner /> */}
       </main>
     </Layout>
   );

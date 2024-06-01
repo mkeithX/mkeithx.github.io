@@ -11,7 +11,7 @@ import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 import { socialProfiles } from "./socialProfiles";
 
 
-const copyright = `Copyright © ${new Date().getFullYear()} • Designed by  <a href='me' target='_blank'>Keith Tan<b></b></a> `;
+const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>. `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -48,9 +48,9 @@ const commonDocsPluginConfig = {
 const config: Config = {
   title: "mkeithx",
   tagline:
-    "Handbook for IT Helpdesk and Developers.",
+    "Docs for IT Developers, Helpdesk and Astronomers.",
   favicon: "icons/favicon.ico",
-  // titleDelimiter: "•",
+  titleDelimiter: "•",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX",
@@ -117,7 +117,7 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           ...commonDocsPluginConfig,
-          // mdxPageComponent: "@theme/MDXPage",
+          mdxPageComponent: "@theme/MDXPage",
         },
 
         theme: {
@@ -201,7 +201,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "img/banner/social-space-new.png",
+    image: "img/banner/social-card.png",
     // metadata: [
     //   {name: 'twitter:card', content: 'summary_large_image'},
     // ],
@@ -230,7 +230,7 @@ const config: Config = {
         { to: "blog", label: "What's new", position: "left" },
         {
           type: 'dropdown',
-          label: 'More',
+          label: 'Resources',
           position: 'right',
           items: [
             {
@@ -242,12 +242,8 @@ const config: Config = {
               label: "Tags"
             },
             {
-              to: '/projects',
-              label: 'Showcase'
-            },
-            {
               to: '/msp',
-              label: 'MSP'
+              label: 'MSP ⚠️'
             },
             {
               type: 'html',
@@ -257,7 +253,10 @@ const config: Config = {
               label: 'NASA',
               href: 'https://eyes.nasa.gov/apps/solar-system/#/home'
             },
-            socialProfiles.kitiplex,            
+            {
+              label: 'React',
+              href: 'https://react.dev/',
+            },      
 
           ],
         },
@@ -289,18 +288,14 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/mkx-x-raw.png",
         href: "/",
-        height: "60",
-        width: "230",
+        height: "50",
+        width: "200",
         
       },
       links: [
         {
           title: "Docs",
           items: [
-            {
-              label: "Keyword",
-              to: "docs",
-            },
             {
               label: "Space",
               to: "cosmos",
@@ -309,7 +304,32 @@ const config: Config = {
               label: "Guides",
               to: "docs/cheat-sheets",
             },
+            {
+              label: "Keyword",
+              to: "docs",
+            },
+          ],
+        },
 
+        {
+          title: "Info",
+          items: [
+            {
+              label: "Blog",
+              to: "blog",
+            },
+            {
+              label: "Tags",
+              to: "blog/tags",
+            },
+            // {
+            //   label: 'Feature request',
+            //   href: '/feature-requests'
+            // },
+            {
+              label: "Kitiplex",
+              to: "community/kitiplex",
+            },
           ],
         },
         {
@@ -320,18 +340,21 @@ const config: Config = {
             socialProfiles.linkedin,
           ],
         },
-
         {
           title: "More",
           items: [
             {
-              label: "Updates",
-              to: "blog",
+              label: 'Netlify',
+              href: 'https://www.netlify.com/'
             },
             {
-              label: "Community",
-              to: "community",
+              label: 'Vercel',
+              href: 'https://vercel.com/'
             },
+            {
+              label: 'FB Developers',
+              href: 'https://developers.facebook.com/'
+            }
           ],
         },
       ],

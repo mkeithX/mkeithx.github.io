@@ -37,7 +37,7 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
-  /* --ifm-background-color: #14171a; */
+  --ifm-background-color: #14171a;
   --ifm-background-surface-color: #14171a !important;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
@@ -109,6 +109,16 @@
 
 
 
+.winstore {
+  width: 200px;
+  border-radius: 12px;
+  /* margin-top: 25px; */
+}
+
+.logoBadge {
+  width: 200px;
+  height: 120px;
+}
 
 
 
@@ -360,3 +370,39 @@ html[data-theme='dark'] .alert--release {
     padding: 2rem;
   }
 }
+
+div.theme-admonition.theme-admonition-tip.alert.alert--success {
+  background-color: #9ccfd8;
+  border-color: #56949f;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-tip {
+  color: #102445;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-tip svg {
+  fill: #102445;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-tip a {
+  color: #102445;
+}
+
+/* admon - info */
+/* 
+div.theme-admonition.theme-admonition-info.alert.alert--info {
+  background-color: #9ccfd8;
+  border-color: #56949f;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-info {
+  color: #102445;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-info svg {
+  fill: #102445;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-info a {
+  color: #102445;
+} */

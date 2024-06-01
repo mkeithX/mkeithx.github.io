@@ -15,7 +15,7 @@ export const socialProfiles = {
   },
   facebook: {
     label: "Facebook",
-    href: "https://fb.com/mkeithtan",
+    href: "https://fb.com/mkeithx",
   },
 
   kitiplex: {
