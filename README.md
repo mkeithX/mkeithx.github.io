@@ -1,15 +1,8 @@
-<div align="center">
-  <h1 align="start">
-    mkeithx website
-    <br />
-    <br />
-    <a href="https://mkeithx.github.io" target="_blank" rel="noopener noreferrer">
-      <img src="./assets/social-card.png" alt="mkeithX">
-    </a>
-  </h1>
-</div>
 
 
+# [mkeithx website](https://mkeithx.github.io/)
+
+![mkeithX](./assets/github-banner.png)
 
 
 
