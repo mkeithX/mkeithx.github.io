@@ -115,6 +115,10 @@
   /* margin-top: 25px; */
 }
 
+.logoBadge {
+  width: 200px;
+}
+
 
 
 .header-github-link::before {
@@ -382,3 +386,22 @@ html[data-theme="dark"] div.theme-admonition.theme-admonition-tip svg {
 html[data-theme="dark"] div.theme-admonition.theme-admonition-tip a {
   color: #102445;
 }
+
+/* admon - info */
+/* 
+div.theme-admonition.theme-admonition-info.alert.alert--info {
+  background-color: #9ccfd8;
+  border-color: #56949f;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-info {
+  color: #102445;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-info svg {
+  fill: #102445;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-info a {
+  color: #102445;
+} */
