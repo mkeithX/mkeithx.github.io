@@ -1,10 +1,10 @@
 <div align="center">
   <h1 align="start">
-    MKX SpaceHub
+    mkeithx website
     <br />
     <br />
     <a href="https://mkeithx.github.io" target="_blank" rel="noopener noreferrer">
-      <img src="https://imgur.com/vibmxY7.png" alt="mkeithX">
+      <img src="./assets/social-card.png" alt="mkeithX">
     </a>
   </h1>
 </div>
@@ -21,13 +21,15 @@
 )
 ![pr](https://img.shields.io/github/issues-pr/mkeithx/mkeithx.github.io?style=for-the-badge
 )
-![lic](https://img.shields.io/github/license/mkeithx/mkeithx.github.io?style=for-the-badge&color=orange)
+
 
 </div>
 
 ## Introduction
 
-[**MKX SpaceHub**](https://mkeithx.github.io/)™ a project built with Docusaurus that aims create an intuitive and comprehensive Knowledge Base Portal, providing valuable and accessible resources for all. [Learn more](https://mkeithx.github.io/docs).
+A project built with Docusaurus that aims create an intuitive and comprehensive Knowledge Base Portal, providing valuable and accessible resources for IT Developers, Help desk and Astronomers. 
+
+<!-- [**MKX SpaceHub**](https://mkeithx.github.io/)™ a project built with Docusaurus that aims create an intuitive and comprehensive Knowledge Base Portal, providing valuable and accessible resources for all. [Learn more](https://mkeithx.github.io/docs). -->
 
 ## Contents
 
@@ -36,6 +38,10 @@
 **Topics**: Highlighting scientific discoveries, technological advancements, and influential figures in physics, astronomy, and space exploration.
 
 **Blog**: Consists of personal blog entries and announcements.
+
+## Contributing
+
+To foster a positive and inclusive community, MKX SpaceHub™ has established a Code of Conduct for all participants to follow. [Read the docs](https://mkeithx.github.io/community) for further info.
 
 ---
 
