@@ -10,6 +10,7 @@ import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 
 import { socialProfiles } from "./socialProfiles";
 
+require("dotenv").config()
 
 const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>. `;
 
@@ -74,6 +75,10 @@ const config: Config = {
   customFields: {
     description: "A documentation website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
+    GIT_USER: process.env.GIT_USER,
+    USE_SSH: process.env.USE_SSH,
+    GIT_USER_NAME: process.env.GIT_USER_NAME,
+    GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
 
   i18n: {
