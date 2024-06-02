@@ -27,56 +27,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'configuration',
         'deployment',
-        'search',
-        // {
-        //   type: 'category',
-        //   label: 'API',
-        //   link: {
-        //     type: 'doc',
-        //     id: 'api/index',
-        //   },
-        //   items: [
-            
-        //     {
-        //       type: 'category',
-        //       label: 'Deployment',
-        //       collapsed: true,
-        //       link: {
-        //         type: 'generated-index',
-        //         slug: 'api/deployment'
-        //       },
-        //       items: [
-        //         'api/deployment/cli',
-        //         'api/deployment/github-actions'
-        //       ]
-        //     },
-        //     {
-        //       type: 'category',
-        //       label: 'Styling',
-        //       collapsed: true,
-        //       link: {
-        //         type: 'generated-index',
-        //         slug: 'api/styling'
-        //       },
-        //       items: [
-        //         'api/styling/mdx-react',
-        //       ]
-        //     },
-        //     {
-        //       type: 'category',
-        //       label: 'Algolia',
-        //       collapsed: true,
-        //       link: {
-        //         type: 'generated-index',
-        //         slug: 'api/algolia',
-        //       },
-        //       items: [
-        //         'api/algolia/docsearch',
-        //         'api/algolia/crawlers',
-        //       ]
-        //     }
-        //   ],
-        // }
+        'algolia',
       ],
     },
     {

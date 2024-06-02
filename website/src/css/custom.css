@@ -14,7 +14,7 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
-  --ifm-background-color: #f5f5fa;
+  --ifm-background-color: #c2c2c2;
   
   --ifm-site-dark: #111317;
 
@@ -61,9 +61,9 @@
   font-size: 1.2em;
   font-weight: bolder;
   background: linear-gradient(90deg,
-      rgb(131 58 180 / 100%) 0%,
-      rgba(32, 188, 245, 0.986) 50%,
-      rgb(69, 252, 139) 100%);
+      rgb(140, 54, 198) 0%,
+      rgba(56, 202, 255, 0.986) 50%,
+      rgb(88, 253, 151) 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
@@ -154,7 +154,7 @@
 
 
 .footer--dark {
-  --ifm-footer-background-color: #20232a;
+  --ifm-footer-background-color: #1e2126;
 }
 
 .footer {
