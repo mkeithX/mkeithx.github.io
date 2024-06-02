@@ -97,11 +97,11 @@ GIT_USER=<Your GitHub username> yarn deploy
 
 ## GitHub Actions
 
-### Template 1
 
+<Tabs>
+  <TabItem value="depOne" label="Template 1" default>
 
 ```yml title=".github/workflows/deploy.yml"
-
 name: Deploy to GitHub Pages
 
 on:
@@ -123,28 +123,27 @@ jobs:
           fetch-depth: 0
       - uses: actions/setup-node@v4
         with:
-          node-version: 18
+          node-version: 20
 
       - name: Install dependencies
         run: |
-        // highlight-start
           cd website
           npm install
           npm run build
-// highlight-end
 
       - name: Deploy to GitHub Pages
-        uses: peaceiris/actions-gh-pages@v3
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
 
           publish_dir: website/build
 ```
 
-### Template 2
+  </TabItem>
+  <TabItem value="depTwo" label="Template 2">
 
 
-```yml
+```yml title=".github/workflows/deploy.yml"
 name: GitHub Pages
 
 on:
@@ -193,3 +192,44 @@ jobs:
           publish_dir: ./website/build
       
 ```
+
+  </TabItem>
+  <TabItem value="testDep" label="Test Deployment">
+
+
+```yml title=".github/workflows/test-deploy.yml"
+name: Test deployment
+
+on:
+  pull_request:
+    branches:
+      - main
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+
+jobs:
+  test-deploy:
+    name: Test deployment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          cd website
+          npm install
+          npm run build
+          ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
+
