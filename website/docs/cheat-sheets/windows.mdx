@@ -1,10 +1,15 @@
 ---
 title: Windows
-description: CLI - NT
+description: Windows - Frequently used Commands
 # sidebar_position: 1
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
 **Download the [Windows Terminal](https://github.com/microsoft/terminal)**.
+
+
 
 <a href="ms-windows-store://pdp/?productid=9n0dx20hk701" target="_blank">
   <img
@@ -14,24 +19,79 @@ description: CLI - NT
   />
 </a>
 
-## Frequently used
-
-Get device name
-
 ```sh
 hostname
 ```
 
-```bash
-ipconfig /all
+## Frequently used
+
+###  ``PowerShell_Editions``
+
+<Tabs>
+  <TabItem value="pwshedition" label="Pwsh Edition" default>
+
+```sh
+$PSEdition
 ```
+
+  </TabItem>
+  <TabItem value="pwshversionA" label="Version table">
 
 ```sh
 $PSVersiontable
 ```
+
+
+  </TabItem>
+  <TabItem value="pwshversionB" label="Build version">
+
 ```sh
-$host.version
+$PSVersiontable.PSVersion
 ```
+
+  </TabItem>
+</Tabs>
+
+
+### `Network_info`
+
+<Tabs>
+  <TabItem value="cmd" label="cmd" default>
+
+```sh
+ipconfig /all
+```
+
+  </TabItem>
+  <TabItem value="pwsh" label="PowerShell">
+
+```sh
+Get-NetIPConfiguration
+```
+
+  </TabItem>
+</Tabs>
+
+### `Enable/Disable Admin`
+
+<Tabs>
+  <TabItem value="enable" label="Enable admin" default>
+
+```sh
+net user administrator /active:yes
+```
+
+  </TabItem>
+  <TabItem value="disable" label="Disable admin">
+
+```sh
+net user administrator /active:no
+```
+
+  </TabItem>
+</Tabs>
+
+
 
 ## Network
 
@@ -79,18 +139,6 @@ netsh interface ip show dnsservers
 
 </details>
 
-
-
-
-
-## Enable/Disable `admin`
-
-```bash
-net user administrator /active:yes
-```
-```bash
-net user administrator /active:no
-```
 
 ## Local Machine
 
