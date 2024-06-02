@@ -118,6 +118,8 @@ const config: Config = {
           routeBasePath: "",
           showLastUpdateTime: false,
           ...commonRemarkPluginsConfig,
+          ...admonitionsConfig,
+          mdxPageComponent: '@theme/MDXPage',
         },
 
         theme: {
@@ -171,13 +173,7 @@ const config: Config = {
         ...commonDocsPluginConfig,
       } as DocsOptions,
     ],
-    [
-      'vercel-analytics',
-      {
-        debug: true,
-        mode: 'auto',
-      },
-    ],
+    
   ],
   
 
