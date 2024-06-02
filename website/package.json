@@ -13,7 +13,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "dev": "docusaurus start",
+    "dev": "npm run docusaurus start",
     "build:local": "docusaurus build && docusaurus serve",
     "deploy:gh": "cmd /C set \"GIT_USER=%GIT_USER%\" && npm run deploy",
     "serve:local": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",

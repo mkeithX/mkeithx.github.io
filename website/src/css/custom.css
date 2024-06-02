@@ -17,6 +17,8 @@
   --ifm-background-color: #f5f5fa;
   
   --ifm-site-dark: #111317;
+
+  /* --ifm-shadow--md: 9px; */
   
   --ifm-code-font-size: 95%;
   --ifm-heading-font-weight: 600;
@@ -25,8 +27,8 @@
 
   /* --site-color-feedback-background: #f0f8ff; */
 
-  --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
-  --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
+  --ifm-breadcrumb-color-active: var(--ifm-color-primary-dark) !important;
+  --ifm-menu-color-active: var(--ifm-color-primary-dark) !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -41,6 +43,7 @@
 
   --ifm-background-color: #14171a;
   --ifm-background-surface-color: #14171a !important;
+  
   --ifm-background-color: var(--ifm-background-surface-color) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
@@ -55,8 +58,14 @@
 }
 
 .navbar__title {
-  /* font-size: 1.2em; */
-  font-weight:bolder;
+  font-size: 1.2em;
+  font-weight: bolder;
+  background: linear-gradient(90deg,
+      rgb(131 58 180 / 100%) 0%,
+      rgba(32, 188, 245, 0.986) 50%,
+      rgb(69, 252, 139) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 .dropdown-separator {
   margin: 0.3rem 0;
@@ -369,11 +378,11 @@ html[data-theme='dark'] .alert--release {
 }
 
 /** In mobile view, reduce the padding */
-@media screen and (max-width: 996px) {
+/* @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
-}
+} */
 
 div.theme-admonition.theme-admonition-tip.alert.alert--success {
   background-color: #9ccfd8;

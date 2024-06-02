@@ -203,9 +203,6 @@ const config: Config = {
     },
 
     image: "img/banner/social-card.png",
-    // metadata: [
-    //   {name: 'twitter:card', content: 'summary_large_image'},
-    // ],
     navbar: {
       style: "dark",
       hideOnScroll: true,
@@ -222,7 +219,7 @@ const config: Config = {
           type: "docSidebar",
           position: "left",
           sidebarId: "mySidebar",
-          label: "Docs",
+          label: "Documentation",
         },
         { to: "cosmos", label: "Space", position: "left" },
         { to: "blog", label: "What's new", position: "left" },
@@ -316,10 +313,7 @@ const config: Config = {
               label: "Tags",
               to: "blog/tags",
             },
-            // {
-            //   label: 'Feature request',
-            //   href: '/feature-requests'
-            // },
+
             {
               label: "Kitiplex",
               to: "community/kitiplex",
