@@ -27,7 +27,7 @@ Get from your favorite package managers.
 
 <Tabs>
 
-  <TabItem value="winget" label="Winget">
+  <TabItem value="winget" label="Winget" default>
 
 ```sh
 winget install --id Microsoft.WindowsTerminal -e
@@ -35,7 +35,7 @@ winget install --id Microsoft.WindowsTerminal -e
 
 
   </TabItem>
-  <TabItem value="choco" label="Chocolatey" default>
+  <TabItem value="choco" label="Chocolatey">
 
 ```sh
 choco install microsoft-windows-terminal
@@ -82,14 +82,14 @@ $PSVersiontable.PSVersion
 ### `Network_info`
 
 <Tabs>
-  <TabItem value="pwsh" label="PowerShell">
+  <TabItem value="pwsh" label="PowerShell" default>
 
 ```sh
 Get-NetIPConfiguration
 ```
 
   </TabItem>
-  <TabItem value="cmd" label="CMD" default>
+  <TabItem value="cmd" label="CMD">
 
 ```sh
 ipconfig /all

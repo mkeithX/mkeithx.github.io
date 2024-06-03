@@ -8,11 +8,15 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 
-import { socialProfiles } from "./socialProfiles";
 
-require("dotenv").config()
+import { socialProfiles } from "./social.json";
+
+require('dotenv').config()
+
+// console.log(process.env)
 
 const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>. `;
+
 
 const admonitionsConfig = {
   admonitions: {
@@ -34,16 +38,16 @@ const admonitionsConfig = {
   },
 };
 
-const commonRemarkPluginsConfig = {
+const commonRemarkConfig = {
   remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
   rehypePlugins: [rehypeKatex],
 };
 
-const commonDocsPluginConfig = {
+const commonDocsConfig = {
   showLastUpdateAuthor: false,
   showLastUpdateTime: true,
   ...admonitionsConfig,
-  ...commonRemarkPluginsConfig,
+  ...commonRemarkConfig,
 };
 
 const config: Config = {
@@ -54,12 +58,22 @@ const config: Config = {
   titleDelimiter: "•",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
-  organizationName: "mkeithX",
-  projectName: "mkeithx.github.io",
-  deploymentBranch: "gh-pages",
+  organizationName: process.env.ORGANIZATION_NAME,
+  projectName: process.env.PROJECT_NAME,
+  deploymentBranch: process.env.DEPLOYMENT_BRANCH,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "throw",
   trailingSlash: false,
+
+
+  customFields: {
+    description: "A documentation website representing humanity from Dimension C-137 and beyond.",
+    custom_tagline: "Building the web",
+    GIT_USER: process.env.GIT_USER,
+    USE_SSH: process.env.USE_SSH,
+    GIT_USER_NAME: process.env.GIT_USER_NAME,
+    GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
+  },
 
 
   stylesheets: [
@@ -72,14 +86,6 @@ const config: Config = {
     },
   ],
 
-  customFields: {
-    description: "A documentation website representing humanity from Dimension C-137 and beyond.",
-    custom_tagline: "Building the web",
-    GIT_USER: process.env.GIT_USER,
-    USE_SSH: process.env.USE_SSH,
-    GIT_USER_NAME: process.env.GIT_USER_NAME,
-    GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
-  },
 
   i18n: {
     defaultLocale: "en",
@@ -96,7 +102,7 @@ const config: Config = {
           breadcrumbs: true,
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
-          ...commonDocsPluginConfig,
+          ...commonDocsConfig,
         },
 
         blog: {
@@ -109,7 +115,7 @@ const config: Config = {
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
           ...admonitionsConfig,
-          ...commonRemarkPluginsConfig,
+          ...commonRemarkConfig,
           postsPerPage: 'ALL',
 
           feedOptions: {
@@ -122,7 +128,7 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
-          ...commonRemarkPluginsConfig,
+          ...commonRemarkConfig,
           ...admonitionsConfig,
           mdxPageComponent: '@theme/MDXPage',
         },
@@ -135,7 +141,6 @@ const config: Config = {
           lastmod: "date",
           changefreq: null,
           priority: null,
-          // ignorePatterns: ["/tags/**"],
           ignorePatterns: ['/tests/{blog,pages}/**','/tags/**'],
         },
       } satisfies Preset.Options,
@@ -152,7 +157,7 @@ const config: Config = {
         path: "cosmos",
         routeBasePath: "cosmos",
         breadcrumbs: true,
-        ...commonDocsPluginConfig,
+        ...commonDocsConfig,
         sidebarPath: "./sidebarsCosmos.ts",
       } as DocsOptions,
     ],
@@ -164,7 +169,7 @@ const config: Config = {
         routeBasePath: "community",
         breadcrumbs: true,
         sidebarPath: "./sidebarsCommunity.ts",
-        ...commonDocsPluginConfig,
+        ...commonDocsConfig,
       } as DocsOptions,
     ],
     [
@@ -175,7 +180,7 @@ const config: Config = {
         routeBasePath: "msp",
         breadcrumbs: true,
         sidebarPath: "./sidebarsMsp.ts",
-        ...commonDocsPluginConfig,
+        ...commonDocsConfig,
       } as DocsOptions,
     ],
     
