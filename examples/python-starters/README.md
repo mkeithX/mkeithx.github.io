@@ -52,4 +52,4 @@ py -m pip install --upgrade -r requirements.txt
 
 ## Additional Documentation and Acknowledgments
 
-Read the [docs](https://mkeithx.github.io/docs/demo/python-minis-sample) to learn more.
+Read the [docs](https://mkeithx.github.io/docs/repo/python-starters) to learn more.

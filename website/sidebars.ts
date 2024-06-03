@@ -56,6 +56,10 @@ const sidebars: SidebarsConfig = {
       label: "Examples",
       collapsed: true,
       collapsible: true,
+      link: {
+        type: 'doc',
+        id: 'repo/index'
+      },
       items: [
         "repo/python-starters",
         "repo/flask-tutorials",
