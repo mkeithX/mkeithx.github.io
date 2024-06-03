@@ -1,0 +1,235 @@
+---
+title: Deployment
+# description: 
+---
+
+import Admonition from "@theme/Admonition";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+This article outlines deployment configuration of this website.
+
+## Get started
+
+
+To ensure smooth deployment, let's build the static files for production. Run either of the following:
+
+```bash npm2yarn
+npm run build
+```
+
+```bash npm2yarn
+npm run build && npm run serve
+```
+
+```bash npm2yarn
+npm run build && npm run serve -- --build --port 80 --host 0.0.0.0
+```
+
+
+## CLI
+
+Using the ``docusaurus build`` command is a convenient way to build the website and push to the gh-pages branch. Note that the following configuration is **REQUIRED**.
+
+
+```tsx title="docusaurus.config.ts"
+const config: Config =  {
+  // ...
+  url: 'https://your-website-url.com',
+  baseUrl: '/',
+  projectName: 'you-project-name.github.io',
+  organizationName: 'your-organization-name',
+  deploymentBranch: 'gh-pages',
+  trailingSlash: false,
+  // ...
+};
+```
+
+<Tabs>
+  <TabItem value="bash" label="Bash" default>
+
+```bash
+GIT_USER=<GITHUB_USERNAME> yarn deploy
+```
+
+  </TabItem>
+  <TabItem value="win" label="Windows">
+
+```bash
+cmd /C "set "GIT_USER=<GITHUB_USERNAME>" && yarn deploy"
+```
+
+  </TabItem>
+  <TabItem value="pwsh" label="Powershell">
+
+```bash
+cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && npm run deploy'
+```
+
+  </TabItem>
+</Tabs>
+
+
+
+
+
+
+## SSH Deployment
+
+<Tabs>
+  <TabItem value="ssh" label="Using SSH" default>
+
+```sh
+USE_SSH=true yarn deploy
+```
+
+  </TabItem>
+  <TabItem value="no_ssh" label="Not using SSH">
+
+```sh
+GIT_USER=<Your GitHub username> yarn deploy
+```
+
+  </TabItem>
+
+</Tabs>
+
+
+## GitHub Actions
+
+
+<Tabs>
+  <TabItem value="depOne" label="Template 1" default>
+
+```yml title=".github/workflows/deploy.yml"
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+
+
+permissions:
+  contents: write
+
+jobs:
+  deploy:
+    name: Deploy to GitHub Pages
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          cd website
+          npm install
+          npm run build
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+
+          publish_dir: website/build
+```
+
+  </TabItem>
+  <TabItem value="depTwo" label="Template 2">
+
+
+```yml title=".github/workflows/deploy.yml"
+name: GitHub Pages
+
+on:
+  push:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'website/**'
+  pull_request:
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    defaults:
+      run:
+        working-directory: website
+    steps:
+      - uses: actions/checkout@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Cache dependencies
+        uses: actions/cache@v4
+        with:
+          path: ~/.npm
+          key: ${{ runner.os }}-node-${{ hashFiles('**/package-lock.json') }}
+          restore-keys: |
+            ${{ runner.os }}-node-
+
+      - run: npm ci
+      - run: npm run build
+
+      - name: Deploy
+        uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: ./website/build
+      
+```
+
+  </TabItem>
+  <TabItem value="testDep" label="Test Deployment">
+
+
+```yml title=".github/workflows/test-deploy.yml"
+name: Test deployment
+
+on:
+  pull_request:
+    branches:
+      - main
+    # Review gh actions docs if you want to further define triggers, paths, etc
+    # https://docs.github.com/en/actions/using-workflows/workflow-syntax-for-github-actions#on
+
+jobs:
+  test-deploy:
+    name: Test deployment
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
+
+      - name: Install dependencies
+        run: |
+          cd website
+          npm install
+          npm run build
+          ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
+

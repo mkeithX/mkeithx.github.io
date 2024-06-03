@@ -14,9 +14,11 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
-  --ifm-background-color: #f5f5fa;
+  --ifm-background-color: #c2c2c2;
   
   --ifm-site-dark: #111317;
+
+  /* --ifm-shadow--md: 9px; */
   
   --ifm-code-font-size: 95%;
   --ifm-heading-font-weight: 600;
@@ -25,8 +27,8 @@
 
   /* --site-color-feedback-background: #f0f8ff; */
 
-  --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
-  --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
+  --ifm-breadcrumb-color-active: var(--ifm-color-primary-dark) !important;
+  --ifm-menu-color-active: var(--ifm-color-primary-dark) !important;
 }
 
 /* For readability concerns, you should choose a lighter palette in dark mode. */
@@ -41,6 +43,7 @@
 
   --ifm-background-color: #14171a;
   --ifm-background-surface-color: #14171a !important;
+  
   --ifm-background-color: var(--ifm-background-surface-color) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
@@ -56,14 +59,20 @@
 
 .navbar__title {
   /* font-size: 1.2em; */
-  font-weight:bolder;
+  font-weight: bolder;
+  /* background: linear-gradient(90deg,
+      rgb(164, 81, 219) 0%,
+      rgba(56, 202, 255, 0.986) 50%,
+      rgb(88, 253, 151) 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent; */
 }
 .dropdown-separator {
   margin: 0.3rem 0;
 }
 
 .navbar__brand {
-  margin-right: 3rem;
+  margin-right: 2rem;
 }
 
 .navbar__logo {
@@ -112,14 +121,16 @@
 
 
 .winstore {
-  width: 200px;
+  width: 180px;
   border-radius: 12px;
   /* margin-top: 25px; */
+  margin-bottom: 0rem;
 }
 
 .logoBadge {
-  width: 300px;
-  height: 130px;
+  width: 280px;
+  height: 120px;
+  margin-bottom: 1rem;
   /* margin-left: 5px; */
 
 }
@@ -145,7 +156,7 @@
 
 
 .footer--dark {
-  --ifm-footer-background-color: #20232a;
+  --ifm-footer-background-color: #1e2126;
 }
 
 .footer {
@@ -369,11 +380,11 @@ html[data-theme='dark'] .alert--release {
 }
 
 /** In mobile view, reduce the padding */
-@media screen and (max-width: 996px) {
+/* @media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
-}
+} */
 
 div.theme-admonition.theme-admonition-tip.alert.alert--success {
   background-color: #9ccfd8;

@@ -1,10 +1,19 @@
 ---
 title: Windows
-description: CLI - NT
+description: Windows - Frequently used Commands
 # sidebar_position: 1
 ---
 
-**Download the [Windows Terminal](https://github.com/microsoft/terminal)**.
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import WinTerm from '@site/static/img/logo/Windows_Terminal_logo.svg';
+
+Recommend to have `Windows Terminal` and `PowerShell Core` installed in your system.
+
+## Download
+
+### `Windows Terminal`
 
 <a href="ms-windows-store://pdp/?productid=9n0dx20hk701" target="_blank">
   <img
@@ -14,24 +23,110 @@ description: CLI - NT
   />
 </a>
 
-## Frequently used
+Get from your favorite package managers.
 
-Get device name
+<Tabs>
+
+  <TabItem value="winget" label="Winget">
 
 ```sh
-hostname
+winget install --id Microsoft.WindowsTerminal -e
 ```
 
-```bash
-ipconfig /all
+
+  </TabItem>
+  <TabItem value="choco" label="Chocolatey" default>
+
+```sh
+choco install microsoft-windows-terminal
 ```
+  </TabItem>
+
+</Tabs>
+
+<!-- 
+```sh
+hostname
+``` -->
+
+## Start
+
+###  ``PowerShell_Core - Version``
+
+<Tabs>
+  <TabItem value="pwshedition" label="Edition" default>
+
+```sh
+$PSEdition
+```
+
+  </TabItem>
+  <TabItem value="pwshversionA" label="Version">
 
 ```sh
 $PSVersiontable
 ```
+
+
+  </TabItem>
+  <TabItem value="pwshversionB" label="Build">
+
 ```sh
-$host.version
+$PSVersiontable.PSVersion
 ```
+
+  </TabItem>
+</Tabs>
+
+
+### `Network_info`
+
+<Tabs>
+  <TabItem value="pwsh" label="PowerShell">
+
+```sh
+Get-NetIPConfiguration
+```
+
+  </TabItem>
+  <TabItem value="cmd" label="CMD" default>
+
+```sh
+ipconfig /all
+```
+
+  </TabItem>
+
+</Tabs>
+
+### `Enable/Disable Admin`
+
+<Tabs>
+  <TabItem value="enable" label="Enable" default>
+
+```sh
+net user administrator /active:yes
+```
+
+  </TabItem>
+  <TabItem value="disable" label="Disable">
+
+```sh
+net user administrator /active:no
+```
+
+  </TabItem>
+
+  <TabItem value="lists" label="List">
+
+```sh
+net user
+```
+
+  </TabItem>
+</Tabs>
+
+
 
 ## Network
 
@@ -80,24 +175,32 @@ netsh interface ip show dnsservers
 </details>
 
 
+## PC Health
+
+### ``DISM_Repair and SFC``
 
 
-
-## Enable/Disable `admin`
-
-```bash
-net user administrator /active:yes
-```
-```bash
-net user administrator /active:no
-```
-
-## Local Machine
+<Tabs>
+  <TabItem value="scn" label="Scan" default>
 
 
-```bash
+```sh
 DISM /Online /Cleanup-Image /ScanHealth
 ```
-```bash
+
+  </TabItem>
+  <TabItem value="rest" label="Restore">
+
+```sh
 DISM /Online /Cleanup /RestoreHealth
 ```
+
+  </TabItem>
+  <TabItem value="sfc" label="SFC">
+
+```sh
+SFC /scannow
+```
+
+  </TabItem>
+</Tabs>
