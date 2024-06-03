@@ -1,1 +1,0 @@
-"use strict";(self.webpackChunkwebsite=self.webpackChunkwebsite||[]).push([[8142],{9731:e=>{e.exports=JSON.parse('{"categoryGeneratedIndex":{"title":"Deployment","slug":"api/deployment","permalink":"/docs/api/deployment","sidebar":"mySidebar","navigation":{"previous":{"title":"API","permalink":"/docs/api/"},"next":{"title":"CLI","permalink":"/docs/api/deployment/cli"}}}}')}}]);
