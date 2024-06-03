@@ -58,14 +58,14 @@
 }
 
 .navbar__title {
-  font-size: 1.2em;
+  /* font-size: 1.2em; */
   font-weight: bolder;
-  background: linear-gradient(90deg,
-      rgb(140, 54, 198) 0%,
+  /* background: linear-gradient(90deg,
+      rgb(164, 81, 219) 0%,
       rgba(56, 202, 255, 0.986) 50%,
       rgb(88, 253, 151) 100%);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 .dropdown-separator {
   margin: 0.3rem 0;
@@ -124,7 +124,7 @@
   width: 180px;
   border-radius: 12px;
   /* margin-top: 25px; */
-  margin-bottom: 1rem;
+  margin-bottom: 0rem;
 }
 
 .logoBadge {

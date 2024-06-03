@@ -7,9 +7,13 @@ description: Windows - Frequently used Commands
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-**Download the [Windows Terminal](https://github.com/microsoft/terminal)**.
+import WinTerm from '@site/static/img/logo/Windows_Terminal_logo.svg';
 
+Recommend to have `Windows Terminal` and `PowerShell Core` installed in your system.
 
+## Download
+
+### `Windows Terminal`
 
 <a href="ms-windows-store://pdp/?productid=9n0dx20hk701" target="_blank">
   <img
@@ -19,23 +23,45 @@ import TabItem from '@theme/TabItem';
   />
 </a>
 
-```sh
-hostname
-```
-
-## Frequently used
-
-###  ``PowerShell_Editions``
+Get from your favorite package managers.
 
 <Tabs>
-  <TabItem value="pwshedition" label="Pwsh Edition" default>
+
+  <TabItem value="winget" label="Winget">
+
+```sh
+winget install --id Microsoft.WindowsTerminal -e
+```
+
+
+  </TabItem>
+  <TabItem value="choco" label="Chocolatey" default>
+
+```sh
+choco install microsoft-windows-terminal
+```
+  </TabItem>
+
+</Tabs>
+
+<!-- 
+```sh
+hostname
+``` -->
+
+## Start
+
+###  ``PowerShell_Core - Version``
+
+<Tabs>
+  <TabItem value="pwshedition" label="Edition" default>
 
 ```sh
 $PSEdition
 ```
 
   </TabItem>
-  <TabItem value="pwshversionA" label="Version table">
+  <TabItem value="pwshversionA" label="Version">
 
 ```sh
 $PSVersiontable
@@ -43,7 +69,7 @@ $PSVersiontable
 
 
   </TabItem>
-  <TabItem value="pwshversionB" label="Build version">
+  <TabItem value="pwshversionB" label="Build">
 
 ```sh
 $PSVersiontable.PSVersion
@@ -56,13 +82,6 @@ $PSVersiontable.PSVersion
 ### `Network_info`
 
 <Tabs>
-  <TabItem value="cmd" label="cmd" default>
-
-```sh
-ipconfig /all
-```
-
-  </TabItem>
   <TabItem value="pwsh" label="PowerShell">
 
 ```sh
@@ -70,22 +89,38 @@ Get-NetIPConfiguration
 ```
 
   </TabItem>
+  <TabItem value="cmd" label="CMD" default>
+
+```sh
+ipconfig /all
+```
+
+  </TabItem>
+
 </Tabs>
 
 ### `Enable/Disable Admin`
 
 <Tabs>
-  <TabItem value="enable" label="Enable admin" default>
+  <TabItem value="enable" label="Enable" default>
 
 ```sh
 net user administrator /active:yes
 ```
 
   </TabItem>
-  <TabItem value="disable" label="Disable admin">
+  <TabItem value="disable" label="Disable">
 
 ```sh
 net user administrator /active:no
+```
+
+  </TabItem>
+
+  <TabItem value="lists" label="List">
+
+```sh
+net user
 ```
 
   </TabItem>
@@ -140,12 +175,32 @@ netsh interface ip show dnsservers
 </details>
 
 
-## Local Machine
+## PC Health
+
+### ``DISM_Repair and SFC``
 
 
-```bash
+<Tabs>
+  <TabItem value="scn" label="Scan" default>
+
+
+```sh
 DISM /Online /Cleanup-Image /ScanHealth
 ```
-```bash
+
+  </TabItem>
+  <TabItem value="rest" label="Restore">
+
+```sh
 DISM /Online /Cleanup /RestoreHealth
 ```
+
+  </TabItem>
+  <TabItem value="sfc" label="SFC">
+
+```sh
+SFC /scannow
+```
+
+  </TabItem>
+</Tabs>

@@ -8,8 +8,7 @@ import Heading from "@theme/Heading";
 import styles from "./index.module.css";
 import BannerLogo from "@site/static/img/banner/atom-z.svg";
 import React from "react";
-import TopBanner from '@site/src/components/TopBanner';
-
+import TopBanner from "@site/src/components/TopBanner";
 
 function HomepageHeader() {
   const { siteConfig } = useDocusaurusContext();
@@ -34,16 +33,16 @@ function HomepageHeader() {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-            Docs for <b>IT Dev</b>elopers, <br></br>
-            <b> Help</b>desk, and <b>Astro</b>nomers.
+              Docs for <b>IT Dev</b>elopers, <br></br>
+              <b> Help</b>desk, and <b>Astro</b>nomers.
             </div>
           </span>
         </Heading>
 
         <div className="hero__subtitle mb-3">
-        {/* {siteConfig.tagline} */}
+          {/* {siteConfig.tagline} */}
           <span className={styles.heroSubTitleTextHtml}>
-            {/* Built by <b>Humans</b>. */}
+            {/* {siteConfig.tagline} */}
           </span>
         </div>
 
@@ -64,21 +63,17 @@ function HomepageHeader() {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { title, customFields, tagline},
+    siteConfig: { title, customFields, tagline },
   } = useDocusaurusContext();
   const { custom_tagline } = customFields as { custom_tagline: string };
-  const {description} = customFields as {description: string};
+  const { description } = customFields as { description: string };
   return (
-    <Layout
-      title={custom_tagline}
-      description={title}
-    >
+    <Layout title={custom_tagline} description={title}>
 
+      {/* <TopBanner /> */}
       <HomepageHeader />
-
       <main>
         <HomepageFeatures />
-        {/* <TopBanner /> */}
       </main>
     </Layout>
   );
