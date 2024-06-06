@@ -235,7 +235,7 @@ const config: Config = {
           items: [
             {
               to: '/community',
-              label: "Community"
+              label: "Resources"
             },
             {
               to: '/msp',
