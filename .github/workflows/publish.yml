@@ -1,16 +1,19 @@
 on: [push]
+
 jobs:
-  deploy:
+  publish:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
-    name: Deploy to Cloudflare Pages
+    name: Publish to Cloudflare Pages
     steps:
       - name: Checkout
         uses: actions/checkout@v3
+
+        
       # Run your project's build step
-      - name: Build
+      - name: Publish to Cloudflare Pages
         run: |
             cd website
             npm install && npm run build
@@ -21,4 +24,5 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: mkeithx # e.g. 'my-project'
           directory: website/build # e.g. 'dist'
+          branch: main
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
