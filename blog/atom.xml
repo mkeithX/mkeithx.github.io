@@ -52,11 +52,11 @@
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
-            <uri>https://mkeithx.github.io/me</uri>
+            <uri>https://x.com/mkeithtan</uri>
         </author>
-        <category label="upgrade" term="upgrade"/>
-        <category label="update" term="update"/>
-        <category label="docs" term="docs"/>
+        <category label="Upgrade" term="Upgrade"/>
+        <category label="Update" term="Update"/>
+        <category label="Documentation" term="Documentation"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Python Starters]]></title>
@@ -75,10 +75,10 @@
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
-            <uri>https://mkeithx.github.io/me</uri>
+            <uri>https://x.com/mkeithtan</uri>
         </author>
-        <category label="updates" term="updates"/>
-        <category label="docs" term="docs"/>
+        <category label="Updates" term="Updates"/>
+        <category label="Documentation" term="Documentation"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[The SpaceHub]]></title>
@@ -99,10 +99,10 @@
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
-            <uri>https://mkeithx.github.io/me</uri>
+            <uri>https://x.com/mkeithtan</uri>
         </author>
-        <category label="updates" term="updates"/>
-        <category label="docs" term="docs"/>
+        <category label="Updates" term="Updates"/>
+        <category label="Documentation" term="Documentation"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Announcing Algolia Search]]></title>
@@ -115,10 +115,10 @@
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
-            <uri>https://mkeithx.github.io/me</uri>
+            <uri>https://x.com/mkeithtan</uri>
         </author>
-        <category label="updates" term="updates"/>
-        <category label="docs" term="docs"/>
+        <category label="Updates" term="Updates"/>
+        <category label="Documentation" term="Documentation"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[About Sitemaps]]></title>
@@ -181,10 +181,10 @@
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
-            <uri>https://mkeithx.github.io/me</uri>
+            <uri>https://x.com/mkeithtan</uri>
         </author>
-        <category label="post" term="post"/>
-        <category label="docs" term="docs"/>
+        <category label="Post" term="Post"/>
+        <category label="Documentation" term="Documentation"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[APIs & Configurations]]></title>
@@ -210,12 +210,12 @@
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
-            <uri>https://mkeithx.github.io/me</uri>
+            <uri>https://x.com/mkeithtan</uri>
         </author>
-        <category label="api" term="api"/>
-        <category label="configs" term="configs"/>
-        <category label="software" term="software"/>
-        <category label="development" term="development"/>
+        <category label="Api" term="Api"/>
+        <category label="Configs" term="Configs"/>
+        <category label="Software" term="Software"/>
+        <category label="Development" term="Development"/>
     </entry>
     <entry>
         <title type="html"><![CDATA[Welcome]]></title>
@@ -230,13 +230,13 @@
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
-            <uri>https://mkeithx.github.io/me</uri>
+            <uri>https://x.com/mkeithtan</uri>
         </author>
-        <category label="MKXSpaceHub" term="MKXSpaceHub"/>
-        <category label="mkeithx" term="mkeithx"/>
-        <category label="mkeithX" term="mkeithX"/>
-        <category label="Keith Tan" term="Keith Tan"/>
-        <category label="mkeithx.github.io" term="mkeithx.github.io"/>
-        <category label="welcome" term="welcome"/>
+        <category label="Mkxspacehub" term="Mkxspacehub"/>
+        <category label="Mkeithx" term="Mkeithx"/>
+        <category label="Mkeithx" term="Mkeithx"/>
+        <category label="Keith tan" term="Keith tan"/>
+        <category label="Mkeithx.github.io" term="Mkeithx.github.io"/>
+        <category label="Welcome" term="Welcome"/>
     </entry>
 </feed>
