@@ -56,7 +56,7 @@ const config: Config = {
     "Docs for IT Developers, Helpdesk and Astronomers.",
   favicon: "icons/favicon.ico",
   titleDelimiter: "•",
-  url: "https://mkeithx.pages.dev",
+  url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: process.env.ORGANIZATION_NAME,
   projectName: process.env.PROJECT_NAME,
