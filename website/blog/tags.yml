@@ -1,0 +1,32 @@
+welcome:
+  description: "Introducing mkeithx website."
+  label: Welcome
+updates:
+  description: "Posts about new updates"
+  label: Updates
+  permalink: /updates
+docs:
+  description: "Posts about documentation"
+  label: Documentation
+release:
+  description: "Posts about recent releases"
+  label: Release
+  permalink: /release
+tribute:
+unlisted:
+MKXSpaceHub:
+mkeithx:
+mkeithX:
+Keith Tan:
+mkeithx.github.io:
+solar-system:
+space:
+astronomy:
+planets:
+api:
+post:
+configs:
+software:
+development:
+upgrade:
+update:

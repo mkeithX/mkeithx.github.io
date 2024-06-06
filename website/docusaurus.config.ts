@@ -230,7 +230,7 @@ const config: Config = {
         { to: "blog", label: "What's new", position: "left" },
         {
           type: 'dropdown',
-          label: 'Resources',
+          label: 'Community',
           position: 'right',
           items: [
             {
@@ -337,8 +337,8 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: 'Netlify',
-              href: 'https://www.netlify.com/'
+              label: 'Cloudflare',
+              href: 'https://dash.cloudflare.com/login'
             },
             {
               label: 'Vercel',

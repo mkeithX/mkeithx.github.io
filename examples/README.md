@@ -28,9 +28,5 @@ Jupyter Notebook is an open-source web application that allows you to create and
 - ✅ **Education**: Jupyter Notebooks are widely used in education for teaching programming, data science, and other subjects. They provide an interactive and engaging way for students to learn and experiment with code.
 
 
-
-
-## Thank you
-
-Support me with a ⭐ on [GitHub](https://github.com/mkeithX/mkeithx.github.io) 🙏
+Learn [more](https://mkeithx.pages.dev).
 
