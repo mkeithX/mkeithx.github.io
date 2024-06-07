@@ -6,8 +6,8 @@
 
 
 
- 
- .main {
+
+.main {
   padding: 12px;
 }
 
@@ -21,12 +21,12 @@
 } */
 
 
- .section {
+.section {
   padding: 40px 0;
-} 
+}
 
 
- .heroBannerLogo {
+.heroBannerLogo {
   max-width: 38%;
   margin-top: 20px;
   animation-name: kit-in-the-box;
@@ -34,15 +34,15 @@
   height: auto;
   display: block;
   pointer-events: none;
-  
- }
+
+}
 
 
- .container {
+.container {
   --ifm-container-width: 996px;
 }
 
- /* .heroBanner {
+/* .heroBanner {
   text-align: left;
   position: relative;
   overflow: hidden;
@@ -59,18 +59,18 @@
   overflow: hidden;
   background-color: var(--ifm-site-dark);
   /* display: flex; */
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8vw), 0 100%);
+  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8vw), 0 100%); */
   height: 36rem;
-  
+
 }
 
 
 
- @media (prefers-reduced-motion: no-preference) {
+@media (prefers-reduced-motion: no-preference) {
   .heroBannerLogo {
     animation: kit-in-the-box infinite 60s linear;
   }
- }
+}
 
 @media screen and (max-width: 996px) {
   .heroBanner {
@@ -95,9 +95,14 @@
 
 
 .heroTitleTextHtml b {
-  color: var(--ifm-color-primary-dark);
-  
+  /* color: var(--ifm-color-primary-dark); */
+  color: transparent;
+  background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #cdd55c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
 }
+
+
 
 
 .heroSubTitleTextHtml b {
@@ -108,9 +113,8 @@
   from {
     transform: rotate(360deg) scale(1.5);
   }
+
   to {
     transform: rotate(-360deg) scale(1.5);
   }
- }
-
-
+}

@@ -55,7 +55,7 @@ const config: Config = {
   tagline:
     "Docs for IT Developers, Helpdesk and Astronomers.",
   favicon: "icons/favicon.ico",
-  titleDelimiter: "•",
+  // titleDelimiter: "•",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: process.env.ORGANIZATION_NAME,
@@ -67,8 +67,10 @@ const config: Config = {
 
 
   customFields: {
-    description: "A documentation website representing humanity from Dimension C-137 and beyond.",
+    description: "Website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
+    hero_header: "Open Source",
+    hero_footer: "Building the web.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -226,10 +228,10 @@ const config: Config = {
       title: "mkeithx",
       logo: {
         alt: "SiteLogo",
-        src: "img/logo/logo-rnd-x.png",
+        src: "img/logo/x_code.png",
         target: "_self",
-        width: 32,
-        height: 32,
+        // width: 32,
+        // height: 32,
       },
       items: [
         {

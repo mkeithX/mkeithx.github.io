@@ -12,68 +12,67 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "",
-    Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
-    description: <></>,
-  },
-  {
-    title: "",
-    Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
-    description: <></>,
+    title: "Docs Made Easy",
+    Svg: require("@site/static/img/undraw_experience_design.svg").default,
+    description: (
+      <>
+       Explore our platform where creating and managing documentation becomes effortlessly intuitive.
+      </>
+    ),
   },
 
   {
-    title: "",
-    Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
-    description: <></>,
+    title: "Built with React",
+    Svg: require("@site/static/img/undraw_react.svg").default,
+    description: (
+      <>
+       Leveraging React's component-based architecture ensuring fast performance and dynamic content.
+
+      </>
+    ),
   },
+
+  {
+    title: "Powered by MDX",
+    Svg: require("@site/static/img/undraw_experience.svg").default,
+    description: (
+      <>
+      For dynamic content integration, ensuring a seamless and engaging user experience.
+      </>
+    ),
+  },
+
+
+
   // {
   //   title: "",
-  //   Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
+  //   Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
+  //   description: <></>,
+  // },
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
+  //   description: <></>,
+  // },
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
   //   description: <></>,
   // },
 
   // {
   //   title: "",
   //   Svg: require("@site/static/img/logo/kitimi-2.svg").default,
-  //   description: (
-  //     <>
-  //     </>
-  //   ),
+  //   description: <></>,
   // },
+  // {
+  //   title: "",
+  //   Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
+  //   description: <></>,
+  // },
+  
 
-  // {
-  //   title: "Space",
-  //   Svg: require("@site/static/img/undraw_taken.svg").default,
-  //   description: (
-  //     <>
-  //       Embark on a cosmic journey with my articles{" "}
-  //       <Link to={"cosmos"}>about the universe</Link>.
-  //     </>
-  //   ),
-  // },
 
-  // {
-  //   title: "Guides",
-  //   Svg: require("@site/static/img/undraw_code_review.svg").default,
-  //   description: (
-  //     <>
-  //       Curated list of tips, guides, project notes, and gists curated to
-  //       provide valuable insights. <Link to={"docs"}>Learn more</Link>
-  //       .
-  //     </>
-  //   ),
-  // },
-  // {
-  //   title: "Recents",
-  //   Svg: require("@site/static/img/undraw_teaching.svg").default,
-  //   description: (
-  //     <>
-  //       Updates, releases, bulletins and all other stuff.
-  //       <Link to={"blog"}> Learn more.</Link>
-  //     </>
-  //   ),
-  // },
 ];
 
 function Feature({ title, Svg, description }: FeatureItem) {
@@ -92,7 +91,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
+    <section className={clsx (styles.features)}>
       <div className="container text--center">
         {/* <h2 className={styles.heroTitleTextHtml}>
           <b>Feat</b>uring
