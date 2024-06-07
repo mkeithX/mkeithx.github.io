@@ -135,8 +135,10 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-
           publish_dir: website/build
+          // highlight-start
+          cname: yourapp.pages.dev # Optional: For Cloudflare deployment
+          // highlight-end
 ```
 
   </TabItem>
@@ -224,6 +226,7 @@ jobs:
           cd website
           npm install
           npm run build
+
           ```
 
   </TabItem>

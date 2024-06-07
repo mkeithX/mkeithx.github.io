@@ -84,8 +84,21 @@ const config: Config = {
         "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
       crossorigin: "anonymous",
     },
+
   ],
 
+  scripts: [
+    {
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js',
+      async: true,
+    },
+    {
+      src: "https://X2M5FPT6G9-dsn.algolia.net",
+      rel: "preconnect",
+      crossorigin: "anonymous",
+      async: true,
+    },
+  ],
 
   i18n: {
     defaultLocale: "en",
@@ -188,7 +201,6 @@ const config: Config = {
   
 
   themeConfig: {
-
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
@@ -227,7 +239,7 @@ const config: Config = {
           label: "Documentation",
         },
         { to: "cosmos", label: "Space", position: "left" },
-        { to: "blog", label: "What's new", position: "left" },
+        { to: "blog", label: "Blog", position: "left" },
         {
           type: 'dropdown',
           label: 'Community',
@@ -239,7 +251,7 @@ const config: Config = {
             },
             {
               to: '/msp',
-              label: 'MSP ⚠️'
+              label: 'MSP'
             },
             {
               type: 'html',
