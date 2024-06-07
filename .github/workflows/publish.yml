@@ -62,7 +62,7 @@ jobs:
 
     steps:
       - name: Checkout
-        uses: actions/checkout@v4
+        uses: actions/checkout@v3
         with:
           ref: ${{ github.event.pull_request.head.sha || github.ref }}
           fetch-depth: 0
@@ -93,66 +93,5 @@ jobs:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           projectName: mkeithx
           directory: build
+          workingDirectory: website
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-
-      - name: Create commit comment
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-        uses: peter-evans/commit-comment@v2
-        with:
-          body: |
-            ### ⚡ Successfully deployed to Cloudflare Pages!
-            | <span aria-hidden="true">🔨</span> **Latest commit** | ${{ github.event.pull_request.head.sha || github.sha }} |
-            | <span aria-hidden="true">🔍</span> **Latest deploy log** | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
-            | <span aria-hidden="true">😎</span> **Deploy preview URL** | [${{ steps.cloudflare-pages-deploy.outputs.url }}](${{ steps.cloudflare-pages-deploy.outputs.url }}) |
-            | <span aria-hidden="true">🌳</span> **Environment** | ${{ steps.cloudflare-pages-deploy.outputs.environment }} |
-
-      - name: Create PR comment
-        if: ${{ github.event_name == 'pull_request' || github.event_name == 'pull_request_target' }}
-        uses: mshick/add-pr-comment@v2
-        with:
-          message: |
-            ### ⚡ Successfully deployed to Cloudflare Pages!
-            | <span aria-hidden="true">🔨</span> **Latest commit** | ${{ github.event.pull_request.head.sha || github.sha }} |
-            | <span aria-hidden="true">🔍</span> **Latest deploy log** | ${{ github.server_url }}/${{ github.repository }}/actions/runs/${{ github.run_id }} |
-            | <span aria-hidden="true">😎</span> **Deploy preview URL** | [${{ steps.cloudflare-pages-deploy.outputs.url }}](${{ steps.cloudflare-pages-deploy.outputs.url }}) |
-            | <span aria-hidden="true">🌳</span> **Environment** | ${{ steps.cloudflare-pages-deploy.outputs.environment }} |
-
-      - name: Remove label
-        if: ${{ github.event_name == 'pull_request_target' && contains(github.event.label.name, '🚀request-deploy') }}
-        uses: actions/github-script@v6
-        with:
-          github-token: ${{ secrets.GITHUB_TOKEN }}
-          script: |
-            github.rest.issues.removeLabel({
-              issue_number: context.issue.number,
-              owner: context.repo.owner,
-              repo: context.repo.repo,
-              name: ['🚀request-deploy']
-            })
-
-  # Comment on PR from the fork
-  comment:
-    name: Comment
-    runs-on: ubuntu-latest
-
-    # pull_request_target opened event from forked repo
-    if: ${{
-      github.event_name == 'pull_request_target' &&
-      github.event.action == 'opened' &&
-      github.event.pull_request.head.repo.fork == true
-      }}
-
-    steps:
-      - name: Create PR comment
-        run: |
-          cat << EOF > comment.md
-          # ⚠️ Deployments require the '🚀request-deploy' label
-
-          This repository is a forked repository. For security reasons, deployments from forked repositories are not automatic.
-          
-          To request a deployment, add the '🚀request-deploy' label to this pull request. (Only some members can add labels).
-          EOF
-
-          gh pr comment ${{ github.event.number }} -R ${{ github.repository }} -F comment.md
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
