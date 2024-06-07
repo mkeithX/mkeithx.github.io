@@ -95,11 +95,11 @@
 
 
 .heroTitleTextHtml b {
-  /* color: var(--ifm-color-primary-dark); */
-  color: transparent;
+  color: var(--ifm-color-primary-dark);
+  /* color: transparent;
   background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #cdd55c 100%);
   -webkit-background-clip: text;
-  background-clip: text;
+  background-clip: text; */
 }
 
 
