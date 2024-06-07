@@ -39,7 +39,7 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-website-
 
-      # - run: corepack enable
+      - run: corepack enable
 
       - run: yarn install --frozen-lockfile
       - run: yarn build
