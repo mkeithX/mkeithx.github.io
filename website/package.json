@@ -45,8 +45,7 @@
     "@docusaurus/types": "^3.4.0",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.78",
-    "typescript": "5.4.3",
-    "wrangler": "^3.59.0"
+    "typescript": "5.4.3"
   },
   "browserslist": {
     "production": [
@@ -62,5 +61,6 @@
   },
   "engines": {
     "node": ">=18.0"
-  }
+  },
+  "packageManager": "yarn@4.2.2"
 }
