@@ -68,7 +68,9 @@ jobs:
           fetch-depth: 0
 
       - name: Remove built-in Yarn
-        run: npm uninstall -g yarn
+        run: |
+          cd website
+          npm uninstall -g yarn
 
       - name: Enable Corepack
         run: corepack enable
@@ -80,10 +82,14 @@ jobs:
           cache: 'yarn'
 
       - name: Install dependencies
-        run: yarn install --immutable --check-cache
+        run: |
+          cd website
+          yarn install --immutable --check-cache
 
       - name: Build website
-        run: yarn build
+        run: |
+          cd website
+          yarn build
 
       - name: Publish to Cloudflare Pages
         id: cloudflare-pages-deploy
