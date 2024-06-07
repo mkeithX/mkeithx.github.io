@@ -6,23 +6,41 @@ description: Project docs from mkeithx.
 import DocCardList from '@theme/DocCardList';
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
+import Video from "/src/components/Video";
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import BrowserWindow from '@site/src/components/BrowserWindow';
 
-This section covers various projects documentation from [mkeithX](https://github.com/mkeithX) with minimal setup required and works best with [VSCode](https://code.visualstudio.com/). 
+
+import KitiplexLogo from '@site/static/img/undraw_server_down.svg';
+
+
+<KitiplexLogo  className="logoBadge" />
+
+Project docs with minimal configuration.
 
 
 
 <DocCardList />
 
-<details>
-<summary>Basic knowledge of the following is assumed:</summary>
+
+
+<BrowserWindow>
+
+Basic knowledge of the following languages is assumed
+
+[![Python](https://skillicons.dev/icons?i=python)](https://www.python.org/downloads/)
+[![Js](https://skillicons.dev/icons?i=javascript)](https://git-scm.com/downloads)
+[![Git](https://skillicons.dev/icons?i=git)](https://git-scm.com/downloads)
 
 
 <Tabs>
 <TabItem value="py" label="Python">
 
 ```py
-msg = "Hello, world!"
-print(msg)
+def say_hello():
+    print("Hello, World!")
+
+say_hello()
 ```
 
 </TabItem>
@@ -48,8 +66,8 @@ git push -u origin main
 
 </Tabs>
 
-</details>
 
+</BrowserWindow>
 
 
 

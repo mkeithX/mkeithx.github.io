@@ -1,13 +1,11 @@
 ---
 title: Git
-# slug: 
+# slug:
 description: Version Control - Git
-# sidebar_label: 
+# sidebar_label:
 sidebar_position: 1
-# image: 
+# image:
 ---
-
-
 
 ## Basic workflow
 
@@ -16,7 +14,11 @@ sidebar_position: 1
 
  <div>
 
- <div>This outlines the basic <code>.git</code> workflow.</div>
+{" "}
+
+<div>
+  This outlines the basic <code>.git</code> workflow.
+</div>
 
 - **Create a local branch**
 
@@ -35,9 +37,11 @@ git commit -m "feat: my feature description"
 ```bash
 git push
 ```
+
 ```bash
 git push -u origin my-feature
 ```
+
  </div>
 </details>
 
@@ -49,34 +53,40 @@ git push -u origin my-feature
 <div>
 <div>`git switch` enhances branch management in Git, making it easier to switch between, create, and merge branches.</div>
 
-
-
 1. **Switch to an Existing Branch**
+
 ```bash
 git switch branch-name
 ```
 
 2. **Create and Switch to a New Branch**
+
 ```bash
 git switch -c new-branch-name
 ```
+
 3. **Work on Your Branch**
+
 ```bash
 git add .
 ```
+
 ```bash
 git commit -m "Describe your changes"
 ```
 
 4. **Push Your Branch to Remote**
+
 ```bash
 git push -u origin new-branch-name
 ```
 
 5. **Merge Changes from Another Branch**
+
 ```bash
 git switch your-branch
 ```
+
 ```bash
 git merge main
 ```
@@ -86,32 +96,32 @@ git merge main
 ```bash
 git add .
 ```
+
 ```bash
 git commit -m "Resolved merge conflicts"
 ```
 
 7. **Switch Back to Another Branch**
+
 ```bash
 git switch main
 ```
 
 8. **Clean Up**
+
 ```bash
 git branch -d new-feature
 ```
+
 ```bash
 git push origin --delete new-feature
 ```
+
 </div>
 
 </details>
 
-
-
-
-
-
-## ``.gitconfig`` 
+## `.gitconfig`
 
 ### Basic
 
@@ -130,15 +140,12 @@ git push origin --delete new-feature
 	editor = code
 ```
 
-
 </details>
-
 
 ### Extended
 
 <details>
 <summary>Show</summary>
-
 
 ```js title=".gitconfig"
 
@@ -207,3 +214,5 @@ provider = generic
 ```
 
 </details>
+
+

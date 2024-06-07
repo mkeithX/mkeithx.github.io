@@ -6,6 +6,7 @@ description: CLI - Conda
 ## Test
 
 <table>
+
 <tr>
 <th>Description</th>
 <th>Command</th>
@@ -13,7 +14,7 @@ description: CLI - Conda
 
 <tr>
 <td>
-update conda in base environment
+Update `conda` in base environment
 </td>
 <td>
 
@@ -26,7 +27,7 @@ conda update --all -n base
 
 <tr>
 <td>
- verify conda install and check version 
+ Verify `conda` install and check version 
 </td>
 <td>
 
@@ -38,7 +39,7 @@ conda info
 </tr>
 <tr>
 <td>
-list installed of packages
+List installed of packages
 </td>
 <td>
 
@@ -51,7 +52,7 @@ conda env list
 </tr>
 <tr>
 <td>
-create a new environment. The quick brown fox jumps over the lazy dog.
+Create a new environment (myenv).
 </td>
 <td>
 
@@ -60,7 +61,32 @@ conda create --name myenv
 ```
 
 </td>
+</tr>
 
+<tr>
+<td>
+Update environment in (myenv).
+</td>
+<td>
+
+```bash
+conda update --all -n myenv
+```
+
+</td>
+</tr>
+
+<tr>
+<td>
+Remove all unused files
+</td>
+<td>
+
+```bash
+conda clean --all
+```
+
+</td>
 </tr>
 
 </table>

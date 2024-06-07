@@ -55,7 +55,7 @@ const config: Config = {
   tagline:
     "Docs for IT Developers, Helpdesk and Astronomers.",
   favicon: "icons/favicon.ico",
-  titleDelimiter: "•",
+  // titleDelimiter: "•",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: process.env.ORGANIZATION_NAME,
@@ -67,8 +67,10 @@ const config: Config = {
 
 
   customFields: {
-    description: "A documentation website representing humanity from Dimension C-137 and beyond.",
+    description: "Website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
+    hero_header: "Open Source",
+    hero_footer: "Building the web.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -84,8 +86,21 @@ const config: Config = {
         "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
       crossorigin: "anonymous",
     },
+
   ],
 
+  scripts: [
+    {
+      src: 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js',
+      async: true,
+    },
+    {
+      src: "https://X2M5FPT6G9-dsn.algolia.net",
+      rel: "preconnect",
+      crossorigin: "anonymous",
+      async: true,
+    },
+  ],
 
   i18n: {
     defaultLocale: "en",
@@ -188,7 +203,6 @@ const config: Config = {
   
 
   themeConfig: {
-
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
@@ -214,10 +228,10 @@ const config: Config = {
       title: "mkeithx",
       logo: {
         alt: "SiteLogo",
-        src: "img/logo/logo-rnd-x.png",
+        src: "img/logo/x_code.png",
         target: "_self",
-        width: 32,
-        height: 32,
+        // width: 32,
+        // height: 32,
       },
       items: [
         {
@@ -227,7 +241,7 @@ const config: Config = {
           label: "Documentation",
         },
         { to: "cosmos", label: "Space", position: "left" },
-        { to: "blog", label: "What's new", position: "left" },
+        { to: "blog", label: "Blog", position: "left" },
         {
           type: 'dropdown',
           label: 'Community',
@@ -239,7 +253,7 @@ const config: Config = {
             },
             {
               to: '/msp',
-              label: 'MSP ⚠️'
+              label: 'MSP'
             },
             {
               type: 'html',
