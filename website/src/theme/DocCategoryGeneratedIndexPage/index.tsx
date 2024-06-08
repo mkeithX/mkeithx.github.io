@@ -15,11 +15,11 @@ function HintFooter() {
         values={{
           guideLink: (
             <Link to={`${docPath}#`}>
-              <Translate>navigate to this article</Translate>
+              <Translate>Navigate to this article</Translate>
             </Link>
           ),
         }}>
-        {'For default configuration, {guideLink} to learn more.'}
+        {'💡Looking for default configuration? {guideLink} to learn more.'}
       </Translate>
     </p>
   );
