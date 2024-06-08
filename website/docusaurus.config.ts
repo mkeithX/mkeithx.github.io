@@ -94,12 +94,6 @@ const config: Config = {
       src: 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js',
       async: true,
     },
-    {
-      src: "https://X2M5FPT6G9-dsn.algolia.net",
-      rel: "preconnect",
-      crossorigin: "anonymous",
-      async: true,
-    },
   ],
 
   i18n: {

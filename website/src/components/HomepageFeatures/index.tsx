@@ -16,7 +16,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_experience_design.svg").default,
     description: (
       <>
-       Explore our platform where creating and managing documentation becomes effortlessly intuitive.
+        Experience the seamless ease and intuitive functionality when it comes
+        to creating and managing docs.
       </>
     ),
   },
@@ -26,8 +27,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_react.svg").default,
     description: (
       <>
-       Leveraging React's component-based architecture ensuring fast performance and dynamic content.
-
+        Leveraging React's component-based architecture ensuring fast
+        performance and dynamic content.
       </>
     ),
   },
@@ -37,12 +38,11 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_experience.svg").default,
     description: (
       <>
-      For dynamic content integration, ensuring a seamless and engaging user experience.
+        For dynamic content integration, ensuring a seamless and engaging user
+        experience.
       </>
     ),
   },
-
-
 
   // {
   //   title: "",
@@ -70,9 +70,6 @@ const FeatureList: FeatureItem[] = [
   //   Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
   //   description: <></>,
   // },
-  
-
-
 ];
 
 function Feature({ title, Svg, description }: FeatureItem) {
@@ -91,7 +88,7 @@ function Feature({ title, Svg, description }: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={clsx (styles.features)}>
+    <section className={clsx(styles.features)}>
       <div className="container text--center">
         {/* <h2 className={styles.heroTitleTextHtml}>
           <b>Feat</b>uring
