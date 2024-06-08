@@ -1,14 +1,14 @@
 version: 2
 updates:
-  - package-ecosystem: github-actions
+  - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: weekly
+      interval: 'daily'
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
   - package-ecosystem: 'npm'
-    directory: '/'
+    directory: '/website'
     schedule:
       interval: 'daily' 
     open-pull-requests-limit: 0
