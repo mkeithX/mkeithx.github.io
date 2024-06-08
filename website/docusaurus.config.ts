@@ -7,6 +7,7 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
+import type {Options as IdealImageOptions} from '@docusaurus/plugin-ideal-image';
 
 
 import { socialProfiles } from "./social.json";
@@ -192,7 +193,17 @@ const config: Config = {
         ...commonDocsConfig,
       } as DocsOptions,
     ],
-    
+
+    [
+      'ideal-image',
+
+      {
+        quality: 100,
+        max: 1030,
+        min: 640,
+        steps: 2,
+      } satisfies IdealImageOptions,
+    ],
   ],
   
 
