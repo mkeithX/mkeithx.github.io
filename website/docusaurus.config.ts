@@ -198,10 +198,11 @@ const config: Config = {
       'ideal-image',
 
       {
-        quality: 100,
-        max: 1030,
+        quality: 70,
+        max: 1080,
         min: 640,
         steps: 2,
+        disableInDev: true,
       } satisfies IdealImageOptions,
     ],
   ],
@@ -295,7 +296,7 @@ const config: Config = {
       appId: "X2M5FPT6G9",
       contextualSearch: false,
       searchPagePath: "search",
-      insights: true,
+      insights: false,
     },
 
     footer: {

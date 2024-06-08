@@ -10,9 +10,12 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 
-Docusaurus default configuration.
 
 ## `docusaurus.config`
+
+<details>
+<summary>Default configuration</summary>
+
 
 <Tabs>
   <TabItem value="js" label="JavaScript" default>
@@ -303,7 +306,17 @@ export default config;
   </TabItem>
 </Tabs>
 
+
+
+</details>
+
+
+
 ## `sidebars`
+
+<details>
+<summary>Default sidebars</summary>
+
 
 <Tabs>
   <TabItem value="js" label="JavaScript" default>
@@ -385,3 +398,45 @@ export default sidebars;
   </TabItem>
 
 </Tabs>
+
+</details>
+
+## Troubleshoot
+Resolve issues caused by mismatching cached dependencies - especially during upgrades.
+
+### Step one
+
+Clear all generated assets, caches and build artifacts:
+
+```bash npm2yarn
+npm run clear
+```
+### Step two
+
+Remove `node_modules` and the lock file(s):
+
+<Tabs>
+
+  <TabItem value="bash" label="Bash" default>
+
+```bash
+rm -rf node_modules yarn.lock package-lock.json
+```
+
+
+  </TabItem>
+  <TabItem value="pwsh" label="PowerShell">
+
+```sh
+@('node_modules','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
+```
+  </TabItem>
+
+</Tabs>
+
+### Step three
+Reinstall packages:
+
+```bash npm2yarn
+npm install
+```
