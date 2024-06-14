@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkeithx.github.io/blog"/>
     <subtitle>mkeithx Blog</subtitle>
-    <icon>https://mkeithx.github.io/icons/favicon.ico</icon>
+    <icon>https://mkeithx.github.io/icons/favicon/slash-dark.ico</icon>
     <rights>Copyright © 2024 • &lt;a href='me' target='_blank'&gt;&lt;b&gt;Keith Tan&lt;/b&gt;&lt;/a&gt; and &lt;a href='#' target='_blank'&gt;&lt;b&gt;Contributors&lt;/b&gt;&lt;/a&gt;. </rights>
     <entry>
         <title type="html"><![CDATA[Mid-year upgrades]]></title>
