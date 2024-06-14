@@ -83,6 +83,7 @@ const sidebars: SidebarsConfig = {
         "cheat-sheets/git",
         "cheat-sheets/conda",
         "cheat-sheets/batch",
+        "cheat-sheets/mdx-react",
         // "cheat-sheets/django",
       ],
     },

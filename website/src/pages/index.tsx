@@ -18,6 +18,7 @@ function HomepageHeader(): JSX.Element {
   const { description } = customFields as { description: string };
   const { hero_header } = customFields as { hero_header: string};
   const { hero_footer } = customFields as { hero_footer: string};
+  const { custom_footer } = customFields as { custom_footer: string};
   return (
     <header className={clsx("hero hero--dark", styles.heroBanner)}>
       <div className="container">
@@ -44,9 +45,10 @@ function HomepageHeader(): JSX.Element {
         </Heading>
 
         <div className="hero__subtitle mb-3">
-          {/* {siteConfig.tagline} */}
-          <span className={styles.heroSubTitleTextHtml}>
+    
+          <span className={styles.heroCustomSubTitleHtml}>
           {/* {hero_footer} */}
+          <b>{hero_footer}</b>
           </span>
         </div>
 
