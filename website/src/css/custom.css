@@ -126,11 +126,17 @@
 
 .logoBadge {
   width: 280px;
-  height: 120px;
+  height: 100px;
   margin-bottom: 1rem;
-  /* margin-left: 5px; */
+  /* display: flex; */
+  margin-left: 5px;
 
 }
+/* .logoBadge {
+  width: 280px;
+  height: 100px;
+  margin: 0 auto 1rem;
+} */
 
 
 
