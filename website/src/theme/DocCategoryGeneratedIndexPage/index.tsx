@@ -19,7 +19,7 @@ function HintFooter() {
             </Link>
           ),
         }}>
-        {'💡Looking for default configuration? {guideLink} to learn more.'}
+        {'Looking for default configuration? {guideLink} to learn more.'}
       </Translate>
     </p>
   );

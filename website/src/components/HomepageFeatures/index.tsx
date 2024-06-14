@@ -16,8 +16,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_experience_design.svg").default,
     description: (
       <>
-        Experience the seamless ease and intuitive functionality when it comes
-        to creating and managing docs.
+        Experience the seamless ease and intuitive functionality on both creating and managing docs.
       </>
     ),
   },

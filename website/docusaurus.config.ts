@@ -55,7 +55,7 @@ const config: Config = {
   title: "mkeithx",
   tagline:
     "Docs for IT Developers, Helpdesk and Astronomers.",
-  favicon: "icons/favicon.ico",
+  favicon: "icons/favicon/slash-dark.ico",
   // titleDelimiter: "•",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
@@ -70,6 +70,7 @@ const config: Config = {
   customFields: {
     description: "Website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
+    custom_footer: "Building the web with mkeithx.",
     hero_header: "Open Source",
     hero_footer: "Building the web.",
     GIT_USER: process.env.GIT_USER,
@@ -200,7 +201,7 @@ const config: Config = {
       {
         quality: 70,
         max: 1080,
-        min: 640,
+        // min: 340,
         steps: 2,
         disableInDev: true,
       } satisfies IdealImageOptions,

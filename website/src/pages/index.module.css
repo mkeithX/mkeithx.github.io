@@ -103,7 +103,14 @@
 }
 
 
-
+.heroCustomSubTitleHtml b {
+  color: var(--ifm-color-primary-dark);
+  color: transparent;
+  /* background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #cdd55c 100%); */
+  background: linear-gradient(90deg, #cdd55c 0%, #00ff88 50%, #1da1f2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+}
 
 .heroSubTitleTextHtml b {
   color: var(--ifm-color-primary-dark);
