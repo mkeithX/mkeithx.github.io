@@ -199,11 +199,11 @@ const config: Config = {
       'ideal-image',
 
       {
-        quality: 70,
+        quality: 85,
         max: 1080,
-        // min: 340,
-        steps: 2,
-        disableInDev: true,
+        min: 680,
+        steps: 4,
+        disableInDev: false,
       } satisfies IdealImageOptions,
     ],
   ],
