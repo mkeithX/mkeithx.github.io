@@ -20,7 +20,7 @@ const deploymentBranch = process.env.DEPLOYMENT_BRANCH || 'gh-pages';
 
 // const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>.`;
 
-const copyright =  `Copyright © ${new Date().getFullYear()} · Keith Tan · All rights reserved.<br>Built with Docusaurus.`;
+const copyright =  `© ${new Date().getFullYear()} · Keith Tan · All rights reserved · <br>Built with Docusaurus.`;
 
 const admonitionsConfig = {
   admonitions: {
@@ -48,7 +48,7 @@ const config: Config = {
   title: "mkeithx",
   tagline: "Docs for IT Developers, Helpdesk and Astronomers.",
   favicon: "icons/favicon/slash-dark.ico",
-  titleDelimiter: "|",
+  titleDelimiter: " | ",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName,
@@ -59,7 +59,8 @@ const config: Config = {
   trailingSlash: false,
   staticDirectories: [
     'static',
-    path.join(__dirname,'assets')
+    path.join(__dirname,'../assets'),
+    path.join(__dirname,'../public'),
   ],
   
   customFields: {
@@ -105,7 +106,7 @@ const config: Config = {
         docs: {
           path: "docs",
           breadcrumbs: true,
-          sidebarPath: "./sidebars.ts",
+          sidebarPath: "sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
         },
@@ -169,7 +170,7 @@ const config: Config = {
         routeBasePath: "cosmos",
         breadcrumbs: true,
         ...commonDocsConfig,
-        sidebarPath: "./sidebarsCosmos.ts",
+        sidebarPath: "sidebarsCosmos.ts",
       } as DocsOptions,
     ],
     [
@@ -179,7 +180,7 @@ const config: Config = {
         path: "community",
         routeBasePath: "community",
         breadcrumbs: true,
-        sidebarPath: "./sidebarsCommunity.ts",
+        sidebarPath: "sidebarsCommunity.ts",
         ...commonDocsConfig,
       } as DocsOptions,
     ],
@@ -190,7 +191,7 @@ const config: Config = {
         path: "msp",
         routeBasePath: "msp",
         breadcrumbs: true,
-        sidebarPath: "./sidebarsMsp.ts",
+        sidebarPath: "sidebarsMsp.ts",
         ...commonDocsConfig,
       } as DocsOptions,
     ],
@@ -261,8 +262,9 @@ const config: Config = {
           sidebarId: "mySidebar",
           label: "Documentation",
         },
-        { to: "cosmos", label: "Space", position: "left" },
-        { to: "blog", label: "Blog", position: "left" },
+        { to: "/cosmos", label: "Space", position: "left" },
+        { to: "/blog", label: "Blog", position: "left" },
+        { to: "projects", label: "Projects", position: "left" },
         {
           type: 'dropdown',
           label: 'Community',
@@ -330,15 +332,15 @@ const config: Config = {
           items: [
             {
               label: "Space",
-              to: "cosmos",
+              to: "/cosmos",
             },
             {
               label: "Guides",
-              to: "docs/cheat-sheets",
+              to: "/docs/cheat-sheets",
             },
             {
               label: "Keyword",
-              to: "docs",
+              to: "/docs",
             },
           ],
         },
@@ -348,16 +350,16 @@ const config: Config = {
           items: [
             {
               label: "Blog",
-              to: "blog",
+              to: "/blog",
             },
             {
               label: "Tags",
-              to: "blog/tags",
+              to: "/blog/tags",
             },
 
             {
               label: "Kitiplex",
-              to: "community/kitiplex",
+              to: "/community/kitiplex",
             },
           ],
         },
