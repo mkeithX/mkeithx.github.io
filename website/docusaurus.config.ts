@@ -1,3 +1,4 @@
+import path from 'path';
 import { themes as prismThemes } from "prism-react-renderer";
 import { Config } from "@docusaurus/types";
 import * as Preset from "@docusaurus/preset-classic";
@@ -55,6 +56,10 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
+  staticDirectories: [
+    'static',
+    path.join(__dirname,'assets')
+  ],
   
   customFields: {
     description: "Website representing humanity from Dimension C-137 and beyond.",
