@@ -3,10 +3,12 @@ title: Windows
 description: Windows - Frequently used Commands
 ---
 
-import Tabs from '@theme/Tabs';
-import TabItem from '@theme/TabItem';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-import WinTerm from '@site/static/img/logo/Windows_Terminal_logo.svg';
+import Image from '@theme/IdealImage';
+
+import WinTerm from "@site/static/img/logo/Windows_Terminal_logo.svg";
 
 Recommend to have `Windows Terminal` and `PowerShell Core` installed in your system.
 
@@ -15,12 +17,10 @@ Recommend to have `Windows Terminal` and `PowerShell Core` installed in your sys
 ### `Windows Terminal`
 
 <a href="ms-windows-store://pdp/?productid=9n0dx20hk701" target="_blank">
-  <img
-    src={require('/img/winstore.png').default}
-    alt="Windows Store Link"
-    className="winstore"
-  />
+<Image img={require('/img/winstore.png')} className="winstore" />
 </a>
+
+
 
 Get from your favorite package managers.
 
@@ -32,25 +32,25 @@ Get from your favorite package managers.
 winget install --id Microsoft.WindowsTerminal -e
 ```
 
-
   </TabItem>
   <TabItem value="choco" label="Chocolatey">
 
 ```sh
 choco install microsoft-windows-terminal
 ```
+
   </TabItem>
 
 </Tabs>
 
-<!-- 
+<!--
 ```sh
 hostname
 ``` -->
 
 ## Start
 
-###  ``PowerShell_Core - Version``
+### `PowerShell_Core - Version`
 
 <Tabs>
   <TabItem value="pwshedition" label="Edition" default>
@@ -66,7 +66,6 @@ $PSEdition
 $PSVersiontable
 ```
 
-
   </TabItem>
   <TabItem value="pwshversionB" label="Build">
 
@@ -76,7 +75,6 @@ $PSVersiontable.PSVersion
 
   </TabItem>
 </Tabs>
-
 
 ### `Network_info`
 
@@ -125,8 +123,6 @@ net user
   </TabItem>
 </Tabs>
 
-
-
 ## Troubleshoot
 
 ### Network
@@ -137,25 +133,29 @@ net user
 ```bash
 ipconfig /release
 ```
+
 ```bash
 ipconfig /flushdns
 ```
+
 ```bash
 ipconfig /renew
 ```
+
 :::caution[Optional]
 
 Continue these two commands if you want to reset your network completely.
 
 :::
 
-
 ```bash
 netsh int ip reset
 ```
+
 ```bash
 netsh winsock reset
 ```
+
 Restart computer.
 
 ```sh
@@ -170,24 +170,23 @@ Restart-Comuputer
 ```bash
 netsh interface show interface
 ```
+
 ```bash
 netsh wlan show wlanreport
 ```
+
 ```bash
 netsh interface ip show dnsservers
 ```
 
 </details>
 
-
 ## PC Health
 
-### ``DISM_Repair and SFC``
-
+### `DISM_Repair and SFC`
 
 <Tabs>
   <TabItem value="scn" label="Scan" default>
-
 
 ```sh
 DISM /Online /Cleanup-Image /ScanHealth

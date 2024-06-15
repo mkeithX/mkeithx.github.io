@@ -1,40 +1,33 @@
+import path from 'path';
 import { themes as prismThemes } from "prism-react-renderer";
-import type { Config } from "@docusaurus/types";
-import type * as Preset from "@docusaurus/preset-classic";
+import { Config } from "@docusaurus/types";
+import * as Preset from "@docusaurus/preset-classic";
+import { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
+import { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
+import type {Options as PageOptions} from '@docusaurus/plugin-content-pages';
+import { Options as IdealImageOptions } from '@docusaurus/plugin-ideal-image';
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
-
-import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
-import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
-import type {Options as IdealImageOptions} from '@docusaurus/plugin-ideal-image';
-
-
 import { socialProfiles } from "./social.json";
 
 require('dotenv').config()
 
 // console.log(process.env)
+const organizationName = process.env.ORGANIZATION_NAME || 'mkeithX';
+const projectName = process.env.PROJECT_NAME || 'mkeithx.github.io';
+const deploymentBranch = process.env.DEPLOYMENT_BRANCH || 'gh-pages';
 
-const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>. `;
+// const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>.`;
 
+const copyright =  `Copyright © ${new Date().getFullYear()} · Keith Tan · All rights reserved.<br>Built with Docusaurus.`;
 
 const admonitionsConfig = {
   admonitions: {
     keywords: [
-      "info",
-      "success",
-      "danger",
-      "note",
-      "tip",
-      "warning",
-      "important",
-      "caution",
-      "security",
-      "credit",
-      "discord",
-      "docusaurus",
-      "release"
+      "info", "success", "danger", "note", "tip", "warning",
+      "important", "caution", "security", "credit", "discord",
+      "docusaurus", "release"
     ],
   },
 };
@@ -53,20 +46,22 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline:
-    "Docs for IT Developers, Helpdesk and Astronomers.",
+  tagline: "Docs for IT Developers, Helpdesk and Astronomers.",
   favicon: "icons/favicon/slash-dark.ico",
-  // titleDelimiter: "•",
+  titleDelimiter: "|",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
-  organizationName: process.env.ORGANIZATION_NAME,
-  projectName: process.env.PROJECT_NAME,
-  deploymentBranch: process.env.DEPLOYMENT_BRANCH,
+  organizationName,
+  projectName,
+  deploymentBranch,
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "throw",
+  onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
-
-
+  staticDirectories: [
+    'static',
+    path.join(__dirname,'assets')
+  ],
+  
   customFields: {
     description: "Website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
@@ -78,7 +73,6 @@ const config: Config = {
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
-
 
   stylesheets: [
     {
@@ -118,10 +112,10 @@ const config: Config = {
 
         blog: {
           path: "blog",
-          blogTitle: "Recents",
-          blogDescription: "News and updates from MKX SpaceHub.",
+          blogTitle: "Blog",
+          blogDescription: "Recent updates from mkeithx.",
           routeBasePath: "blog",
-          blogSidebarTitle: "What's new",
+          blogSidebarTitle: "Recent updates",
           blogSidebarCount: 'ALL',
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
@@ -138,11 +132,17 @@ const config: Config = {
         pages: {
           path: "src/pages",
           routeBasePath: "",
+          exclude: [
+            '**/_*.{js,jsx,ts,tsx,md,mdx}',
+            '**/_*/**',
+            '**/*.test.{js,jsx,ts,tsx}',
+            '**/__tests__/**',
+          ],
           showLastUpdateTime: false,
           ...commonRemarkConfig,
           ...admonitionsConfig,
           mdxPageComponent: '@theme/MDXPage',
-        },
+        } satisfies PageOptions,
 
         theme: {
           customCss: "./src/css/custom.css",
@@ -197,13 +197,12 @@ const config: Config = {
 
     [
       'ideal-image',
-
       {
-        quality: 70,
-        max: 1080,
-        // min: 340,
-        steps: 2,
-        disableInDev: true,
+        quality: 85,
+        max: 1980,
+        min: 680,
+        steps: 4,
+        disableInDev: false,
       } satisfies IdealImageOptions,
     ],
   ],
@@ -229,6 +228,21 @@ const config: Config = {
     },
 
     image: "img/banner/social-card.png",
+    metadata: [
+      {
+        name: 'description',
+        description: 'Building the web with mkeithx.'
+      },
+      {
+        name: 'keywords',
+        content: 'web-dev,mkeithx,keith,keith tan,python,docusaurus,react'
+      },
+      {
+        name: "twitter:card",
+        content: "summary",
+      },
+
+    ],
     navbar: {
       style: "dark",
       hideOnScroll: true,
@@ -297,7 +311,7 @@ const config: Config = {
       appId: "X2M5FPT6G9",
       contextualSearch: false,
       searchPagePath: "search",
-      insights: false,
+      insights: true,
     },
 
     footer: {
@@ -330,7 +344,7 @@ const config: Config = {
         },
 
         {
-          title: "Info",
+          title: "More",
           items: [
             {
               label: "Blog",
@@ -356,7 +370,7 @@ const config: Config = {
           ],
         },
         {
-          title: "More",
+          title: "Dev",
           items: [
             {
               label: 'Cloudflare',

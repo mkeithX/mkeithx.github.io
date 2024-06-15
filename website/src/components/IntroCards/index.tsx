@@ -1,56 +1,90 @@
 import clsx from "clsx";
 import Heading from "@theme/Heading";
-import React from "react";
 import styles from "./styles.module.css";
-import useBaseUrl from "@docusaurus/useBaseUrl";
+import React from "react";
+import Link from "@docusaurus/Link";
 
 type FeatureItem = {
-  imageUrl: string;
-  scale: number; // New property for image scale
+
+  Svg: React.ComponentType<React.ComponentProps<"svg">>;
 };
 
 const FeatureList: FeatureItem[] = [
+
   {
-    imageUrl: require("@site/static/img/logo/mkx-x-raw.png").default,
-    scale: .90, // Adjust scale as needed
+    
+    Svg: require("@site/static/img/logo/kitimi-svg-banner.svg").default,
+
+  },
+  
+   {
+    
+    Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
+
   },
   {
-    imageUrl: require("@site/static/img/react-logo.png").default,
-    scale: .60, // Adjust scale as needed
+    
+    Svg: require("@site/static/img/logo/meta_opensource.svg").default,
+
+  },
+
+  {
+    
+    Svg: require("@site/static/img/logo/GitHub-Word.svg").default,
+
+  },
+
+  // {
+    
+  //   Svg: require("@site/static/img/space/NASA_logo.svg").default,
+
+  // },
+  // {
+    
+  //   Svg: require("@site/static/img/space/spacex.svg").default,
+
+  // },
+  {
+    
+    Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
+
   },
   {
-    imageUrl: require("@site/static/img/logo/logo-xpr.png").default,
-    scale: .54, // Adjust scale as needed
+    
+    Svg: require("@site/static/img/logo/Cloudflare.svg").default,
+
   },
+
+  // {
+    
+  //   Svg: require("@site/static/img/logo/docusaurus-logo.svg").default,
+
+  // },
+
+
+
 ];
 
-function Feature({ imageUrl, scale }: FeatureItem) {
-  const imgUrl = useBaseUrl(imageUrl);
+function Feature({Svg, }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
-      {imgUrl && (
-        <div className="text--center">
-          <img
-            className={styles.featureSvg}
-            src={imgUrl}
-            alt=""
-            height={100 * scale} // Scale the height
-            width={100 * scale}  // Scale the width
-          />
-        </div>
-      )}
-
-      <div className="text--center padding-horiz--md">
-        {/* Removed Heading component */}
+      <div className="text--center">
+        <Svg className={styles.featureSvg} role="img" />
       </div>
+
     </div>
   );
 }
 
-function IntroCards(): JSX.Element {
+export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={styles.features}>
-      <div className="container">
+    <section className={clsx(styles.features)}>
+      <div className="container text--center">
+        {/* <h2 className={clsx(styles.heroTitleTextHtml)}>
+          {"Featuring"}
+        </h2> */}
+        
+
         <div className="row">
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
@@ -60,5 +94,3 @@ function IntroCards(): JSX.Element {
     </section>
   );
 }
-
-export default IntroCards;
