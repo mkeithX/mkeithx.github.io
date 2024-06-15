@@ -10,13 +10,13 @@ const projects: ProjectData[] = [
     description:
       "A collection of basic python code examples for starters.",
     url: "https://github.com/mkeithX/python-starters",
-    image: require(`${dataDir}/ms-banner-kitiplex.png`),
+    image: require(`${dataDir}/default.png`),
   },
   {
     title: "MKX Website",
     description: "A unified docs for IT Developers and Astronomers.",
-    url: "https://capact.io",
-    image: require(`${dataDir}/ms-banner-kitiplex.png`),
+    url: "https://mkeithx.pages.dev",
+    image: require(`${dataDir}/default.png`),
 
   },
   {
@@ -37,7 +37,7 @@ const projects: ProjectData[] = [
     title: "Flask Tutorial - Demo",
     description: "Building web application with Python.",
     url: "https://github.com/mkeithX/flask-tutorial-demo",
-    image: require(`${dataDir}/ms-banner-kitiplex.png`),
+    image: require(`${dataDir}/default.png`),
 
   },
 ];
