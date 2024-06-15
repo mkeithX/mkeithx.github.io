@@ -18,8 +18,9 @@ const organizationName = process.env.ORGANIZATION_NAME || 'mkeithX';
 const projectName = process.env.PROJECT_NAME || 'mkeithx.github.io';
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH || 'gh-pages';
 
-const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>.`;
+// const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>.`;
 
+const copyright =  `Copyright © ${new Date().getFullYear()} · Keith Tan · All rights reserved.<br>Built with Docusaurus.`;
 
 const admonitionsConfig = {
   admonitions: {
@@ -47,7 +48,7 @@ const config: Config = {
   title: "mkeithx",
   tagline: "Docs for IT Developers, Helpdesk and Astronomers.",
   favicon: "icons/favicon/slash-dark.ico",
-  // titleDelimiter: "•",
+  titleDelimiter: "|",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName,
@@ -196,10 +197,9 @@ const config: Config = {
 
     [
       'ideal-image',
-
       {
         quality: 85,
-        max: 1080,
+        max: 1980,
         min: 680,
         steps: 4,
         disableInDev: false,
@@ -228,6 +228,21 @@ const config: Config = {
     },
 
     image: "img/banner/social-card.png",
+    metadata: [
+      {
+        name: 'description',
+        description: 'Building the web with mkeithx.'
+      },
+      {
+        name: 'keywords',
+        content: 'web-dev,mkeithx,keith,keith tan,python,docusaurus,react'
+      },
+      {
+        name: "twitter:card",
+        content: "summary",
+      },
+
+    ],
     navbar: {
       style: "dark",
       hideOnScroll: true,
@@ -329,7 +344,7 @@ const config: Config = {
         },
 
         {
-          title: "Info",
+          title: "More",
           items: [
             {
               label: "Blog",
@@ -355,7 +370,7 @@ const config: Config = {
           ],
         },
         {
-          title: "More",
+          title: "Dev",
           items: [
             {
               label: 'Cloudflare',

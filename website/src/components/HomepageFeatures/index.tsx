@@ -43,32 +43,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
 
-  // {
-  //   title: "",
-  //   Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
-  //   description: <></>,
-  // },
-  // {
-  //   title: "",
-  //   Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
-  //   description: <></>,
-  // },
-  // {
-  //   title: "",
-  //   Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
-  //   description: <></>,
-  // },
 
-  // {
-  //   title: "",
-  //   Svg: require("@site/static/img/logo/kitimi-2.svg").default,
-  //   description: <></>,
-  // },
-  // {
-  //   title: "",
-  //   Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
-  //   description: <></>,
-  // },
 ];
 
 function Feature({ title, Svg, description }: FeatureItem) {
