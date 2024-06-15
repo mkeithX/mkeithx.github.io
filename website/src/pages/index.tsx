@@ -60,7 +60,7 @@ function HomepageHeader(): JSX.Element {
         <div className={styles.buttons}>
           <Link
             className="button button--outline button--primary button--lg"
-            to="docs"
+            to="/docs"
           >
             {"Explore"}
           </Link>

@@ -25,7 +25,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'link',
-      label: 'Showcase',
+      label: 'Projects',
       href: '/projects'
     },
   ],
