@@ -8,7 +8,7 @@ const projects: ProjectData[] = [
   {
     title: "Python Starters",
     description:
-      "A collection of basic python code examples for starters.",
+      "Basic Python examples for starters.",
     url: "https://github.com/mkeithX/python-starters",
     image: require(`${dataDir}/default.png`),
   },

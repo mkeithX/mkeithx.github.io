@@ -82,8 +82,9 @@ export default function Home(): JSX.Element {
   } = useDocusaurusContext();
   const { custom_tagline } = customFields as { custom_tagline: string };
   const { description } = customFields as { description: string };
+  const { custom_footer } = customFields as { custom_footer: string};
   return (
-    <Layout title={custom_tagline} description={title}>
+    <Layout title={custom_tagline} description={tagline}>
       {/* <TopBanner /> */}
       <HomepageHeader />
       <main>

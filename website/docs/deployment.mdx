@@ -32,7 +32,7 @@ npm run build && npm run serve -- --build --port 80 --host 0.0.0.0
 Using the ``docusaurus build`` command is a convenient way to build the website and push to the gh-pages branch. Note that the following configuration is **REQUIRED**.
 
 
-```tsx title="docusaurus.config.ts"
+```tsx title="docusaurus.config.ts" showLineNumbers
 const config: Config =  {
   // ...
   url: 'https://your-website-url.com',
@@ -101,7 +101,7 @@ GIT_USER=<Your GitHub username> yarn deploy
 <Tabs>
   <TabItem value="depOne" label="Template 1" default>
 
-```yml title=".github/workflows/deploy.yml"
+```yml title=".github/workflows/deploy.yml" {35} showLineNumbers
 name: Deploy to GitHub Pages
 
 on:
@@ -136,16 +136,14 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: website/build
-          // highlight-start
           cname: yourapp.pages.dev # Optional: For Cloudflare deployment
-          // highlight-end
 ```
 
   </TabItem>
   <TabItem value="depTwo" label="Template 2">
 
 
-```yml title=".github/workflows/deploy.yml"
+```yml title=".github/workflows/deploy.yml" showLineNumbers
 name: GitHub Pages
 
 on:
@@ -199,7 +197,7 @@ jobs:
   <TabItem value="testDep" label="Test Deployment">
 
 
-```yml title=".github/workflows/test-deploy.yml"
+```yml title=".github/workflows/test-deploy.yml" showLineNumbers
 name: Test deployment
 
 on:

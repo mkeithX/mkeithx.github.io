@@ -1,9 +1,8 @@
 import clsx from "clsx";
 import React, { FunctionComponent } from "react";
 import Image from "@theme/IdealImage";
-
-import DiscoverIcon from "./icon-discover.svg"
 import styles from "./styles.module.css";
+
 
 export interface ProjectData {
   title: string;
@@ -35,10 +34,8 @@ export const Project: FunctionComponent<ProjectData> = ({
             target="_blank"
             className="button button--primary button--outline"
           >
-            <span className="button__icon">
-              <DiscoverIcon />
-            </span>
-            {"Explore"}
+
+            {"Learn more"}
           </a>
         </div>
       </div>

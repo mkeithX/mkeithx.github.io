@@ -1,20 +1,77 @@
 ---
 title: MDX and React
-sidebar_label: MDX
-description: Guide for custom styling.
+description: Guide for custom styling using MDX and React.
 ---
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 import Admonition from "@theme/Admonition";
+import Video from "/src/components/Video";
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import {useLocation} from '@docusaurus/router';
 
-Guide for custom styling using MDX and React.
+
+[MDX](https://mdxjs.com/) allows React components inside Markdown making it more interactive:
+
+<BrowserWindow >
+
+```jsx showLineNumbers
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '20px',
+      color: '#fff',
+      padding: '10px',
+      cursor: 'pointer',
+    }}
+    onClick={() => {
+      alert(`You clicked the color ${color} with label ${children}`)
+    }}>
+    {children}
+  </span>
+);
+
+This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+
+This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+```
+
+export const Highlight = ({ children, color }) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: "20px",
+      color: "#fff",
+      padding: "10px",
+      cursor: "pointer",
+    }}
+    onClick={() => {
+      alert(`You clicked the color ${color} with label ${children}`);
+    }}
+  >
+    {children}
+  </span>
+);
+
+This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+
+This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+
+</BrowserWindow>
 
 ## Custom Highlight
 
 To render the custom highlights:
 
-```tsx title="src/components/Highlight/index.tsx"
+<BrowserWindow >
+
+
+
+
+
+```tsx title="src/components/Highlight/index.tsx" showLineNumbers
 import React, { type ReactNode } from "react";
 
 export default function Highlight({
@@ -57,6 +114,7 @@ And so on..
 
 - #41B883 <Highlight color="#41B883">Fresh Green</Highlight>
 
+</BrowserWindow>
 
 ## Icons
 
@@ -74,12 +132,13 @@ npm install --save @fontawesome/fontawesome-svg-core @fontawesome/free-solid-svg
 npm install --save @fontawesome/free-regular-svg-icons @fontawesome/free-brands-svg-icons
 ```
 
+<BrowserWindow >
 
 
 <Tabs>
   <TabItem value="js" label="JavaScript" default>
 
-```js title="src/theme/MDXComponents.js"
+```js title="src/theme/MDXComponents.js" showLineNumbers
 import React from "react";
 // Import the original mapper
 import MDXComponents from "@theme-original/MDXComponents";
@@ -100,7 +159,7 @@ export default {
   </TabItem>
   <TabItem value="tsx" label="TypeScript">
 
-  ```tsx title="src/theme/MDXComponents.tsx"
+  ```tsx title="src/theme/MDXComponents.tsx" showLineNumbers
   import React from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { library } from "@fortawesome/fontawesome-svg-core";
@@ -130,39 +189,101 @@ export default components;
 
 </Tabs>
 
+</BrowserWindow>
 
 
-```bash title="Rendering Font Awesome Icons"
-<FAIcon icon="fa-brands fa-github" size="4x" />
 
-# highlight-start
-<FAIcon icon="fa-brands fa-x-twitter" size="4x" />
-# highlight-end
+<Tabs>
+  <TabItem value="js" label="JavaScript" default>
 
-<FAIcon icon="fa-brands fa-youtube" size="4x" />
+```js title="src/theme/MDXComponents.js" showLineNumbers
+import React from "react";
+// Import the original mapper
+import MDXComponents from "@theme-original/MDXComponents";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
 
-<FAIcon icon="fa-brands fa-linkedin" size="4x" />
+library.add(fab, fas);
 
-<FAIcon icon="fa-brands fa-python" size="4x" />
-
-<FAIcon icon="fa-brands fa-js" size="4x" />
-
-<FAIcon icon="fa-brands fa-react" size="4x" />
+export default {
+  ...MDXComponents,
+  FAIcon: FontAwesomeIcon, // Make the FontAwesomeIcon component available in MDX as <icon />.
+};
 ```
 
-<FAIcon icon="fa-brands fa-github" size="4x" />
 
-<FAIcon icon="fa-brands fa-x-twitter" size="4x" />
+  </TabItem>
+  <TabItem value="tsx" label="TypeScript">
 
-<FAIcon icon="fa-brands fa-youtube" size="4x" />
+  ```tsx title="src/theme/MDXComponents.tsx" showLineNumbers
+  import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import MDXComponents from "@theme-original/MDXComponents";
+import Code from '@theme/MDXComponents/Code';
 
-<FAIcon icon="fa-brands fa-linkedin" size="4x" />
+library.add(fab, fas);
 
-<FAIcon icon="fa-brands fa-python" size="4x" />
+interface Components {
+  [key: string]: React.ComponentType<any>;
+}
 
-<FAIcon icon="fa-brands fa-js" size="4x" />
+const components: Components = {
+  ...MDXComponents,
+  FAIcon: FontAwesomeIcon,
+  Code,
+};
 
-<FAIcon icon="fa-brands fa-react" size="4x" />
+export default components;
+```
+
+
+
+  </TabItem>
+
+</Tabs>
+
+<BrowserWindow >
+
+
+```bash title="Rendering Font Awesome Icons" showLineNumbers
+<FAIcon icon="fa-brands fa-github" size="3x" />
+
+# highlight-start
+<FAIcon icon="fa-brands fa-x-twitter" size="3x" />
+# highlight-end
+
+<FAIcon icon="fa-brands fa-youtube" size="3x" />
+
+<FAIcon icon="fa-brands fa-linkedin" size="3x" />
+
+<FAIcon icon="fa-brands fa-python" size="3x" />
+
+<FAIcon icon="fa-brands fa-js" size="3x" />
+
+<FAIcon icon="fa-brands fa-react" size="3x" />
+```
+
+<FAIcon icon="fa-brands fa-github" size="3x" />
+
+<FAIcon icon="fa-brands fa-x-twitter" size="3x" />
+
+<FAIcon icon="fa-brands fa-youtube" size="3x" />
+
+<FAIcon icon="fa-brands fa-linkedin" size="3x" />
+
+<FAIcon icon="fa-brands fa-python" size="3x" />
+
+<FAIcon icon="fa-brands fa-js" size="3x" />
+
+<FAIcon icon="fa-brands fa-react" size="3x" />
+
+</BrowserWindow>
+
 
 
 
@@ -171,6 +292,12 @@ export default components;
 ## Custom Admonitions
 
 To render these custom admonition in your ``.mdx``, put ``import Admonition from "@theme/Admonition";`` 
+
+
+
+
+
+<BrowserWindow >
 
 ### JSX
 
@@ -194,4 +321,51 @@ To render these custom admonition in your ``.mdx``, put ``import Admonition from
   Use plugins to introduce shorter syntax for the most commonly used JSX
   elements in your project.
 </Admonition>
+
+### Swizzle
+
+:::tip
+
+Custom tip
+
+:::
+
+:::security
+
+This is a security warning
+
+:::
+
+:::caution
+This is a security warning
+:::
+
+:::credit
+The quick credit.
+:::
+
+:::discord
+Discord 
+:::
+
+:::docusaurus
+Discord 
+:::
+
+:::release
+Release Test
+::: 
+
+</BrowserWindow>
+
+### HTML Embeds
+
+<BrowserWindow >
+
+<pre>
+  <b>Input: </b>1 2 3 4{'\n'}
+  <b>Output: </b>"366300745"{'\n'}
+</pre>
+
+</BrowserWindow>
 

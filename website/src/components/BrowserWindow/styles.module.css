@@ -1,14 +1,14 @@
 
 .browserWindow {
-  border: 3px solid var(--ifm-color-emphasis-200);
+  border: 3px solid var(--ifm-color-emphasis-300);
   border-radius: var(--ifm-global-radius);
-  box-shadow: var(--ifm-global-shadow-lw);
+  box-shadow: var(--ifm-global-shadow-md);
   margin-bottom: var(--ifm-leading);
 }
 
 .browserWindowHeader {
   align-items: center;
-  background: var(--ifm-color-emphasis-200);
+  background: var(--ifm-color-emphasis-300);
   display: flex;
   padding: 0.5rem 1rem;
 }
@@ -44,7 +44,7 @@
 }
 
 [data-theme='dark'] .browserWindowAddressBar {
-  color: var(--ifm-color-gray-300);
+  color: var(--ifm-color-gray-400);
 }
 
 .dot {

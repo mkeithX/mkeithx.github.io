@@ -3,6 +3,11 @@ title: Algolia
 description: Adding Algolia DocSearch.
 ---
 
+import Video from "/src/components/Video";
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import {useLocation} from '@docusaurus/router';
+
 This article guides you through adding Algolia Search to Docusaurus `v3`, assuming you already have an active  [Algolia account](https://www.algolia.com/).
 
 ## Configuration
@@ -11,7 +16,10 @@ This article guides you through adding Algolia Search to Docusaurus `v3`, assumi
 
 Add the following Algolia search configuration:
 
-```js title="docusaurus.config.js"
+<BrowserWindow >
+
+
+```js title="docusaurus.config.js" showLineNumbers
 module.exports = {
   ...
   algolia: {
@@ -23,6 +31,9 @@ module.exports = {
 };
 ```
 
+</BrowserWindow>
+
+
 ### Custom
 
 In this method, we will extend Algolia search React component by utilizing the [Swizzle](https://docusaurus.io/docs/swizzling) method:
@@ -30,7 +41,10 @@ In this method, we will extend Algolia search React component by utilizing the [
 
 Add the following on your site configuration:
 
-```tsx title="docusaurus.config.ts"
+<BrowserWindow >
+
+
+```tsx title="docusaurus.config.ts" {8-14} showLineNumbers
 import type { Config } from "@docusaurus/types";
 import type * as Preset from "@docusaurus/preset-classic";
 
@@ -38,7 +52,7 @@ const config: Config = {
   title: "My Site",
   favicon: "img/favicon.ico",
 
-  // highlight-start
+
   scripts: [
     {
       src: "https://YOUR_APP_ID-dsn.algolia.net",
@@ -46,13 +60,16 @@ const config: Config = {
       crossorigin: true,
     },
   ],
-  // highlight-end
+
 
   /* Your site config here */
 };
 
 export default config;
 ```
+
+
+</BrowserWindow>
 
 
 **JavaScript**
@@ -68,11 +85,13 @@ npm run swizzle @docusaurus/theme-classic SearchBar --typescript
 
 Choose the ``--wrap`` option and add the following configuration in your ``src/theme/SearchBar``:
 
+<BrowserWindow >
+
 
 <Tabs>
   <TabItem value="js" label="JavaScript" default>
 
-```js title="src/theme/SearchBar.js"
+```js title="src/theme/SearchBar.js" showLineNumbers
 import React from "react";
 import SearchBar from "@theme-original/SearchBar";
 import type SearchBarType from "@theme/SearchBar";
@@ -97,7 +116,7 @@ export default function SearchBarWrapper(props) {
   </TabItem>
   <TabItem value="tsx" label="TypeScript">
 
-  ```tsx title="src/theme/SearchBar.tsx"
+  ```tsx title="src/theme/SearchBar.tsx" showLineNumbers
 import React from "react";
 import SearchBar from "@theme-original/SearchBar";
 import type SearchBarType from "@theme/SearchBar";
@@ -123,6 +142,9 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
 
 </Tabs>
 
+</BrowserWindow>
+
+
 :::tip
 
 Visit [documentation](https://docsearch.algolia.com/) to learn more.
@@ -134,7 +156,7 @@ Visit [documentation](https://docsearch.algolia.com/) to learn more.
 Docusaurus highly recommends to use the official v3 crawler configuration. 
 
 <details>
-<summary>Configurations</summary>
+<summary>Crawlers template</summary>
 
 
 
@@ -142,7 +164,7 @@ Docusaurus highly recommends to use the official v3 crawler configuration.
   <TabItem value="default" label="Default" default>
 
 
-```js
+```js showLineNumbers
 new Crawler({
   appId: 'YOUR_APP_ID',
   apiKey: 'YOUR_API_KEY',
@@ -253,12 +275,10 @@ new Crawler({
   <TabItem value="custom" label="Custom">
 
 
-```js
+```js {2-3} showLineNumbers
 new Crawler({
-  // highlight-start
   appId: "<YOUR-APP-ID>",
   apiKey: "<YOU-API-KEY>",
-   // highlight-end
   rateLimit: 8,
   maxDepth: 10,
   maxUrls: 5000,

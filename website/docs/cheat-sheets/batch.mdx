@@ -4,26 +4,31 @@ description: Batch examples.
 sidebar_position: 2
 ---
 
+import Video from "/src/components/Video";
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import {useLocation} from '@docusaurus/router';
+
 ### Lock workstation
 
-<details>
-<summary>Sample Code</summary>
+<BrowserWindow >
 
-```batch
+```batch showLineNumbers
 @echo off
 
 Rundll32.exe User32.dll,LockWorkStation
 ```
 
-</details>
+</BrowserWindow>
+
 
 
 ### Logoff
 
-<details>
-<summary>Sample Code</summary>
+<BrowserWindow >
 
-```batch
+
+```batch showLineNumbers
 @echo off
 
 REM Clear all Temporary Internet Files and IE History
@@ -49,15 +54,15 @@ REM Log off my machine
 shutdown -l -f
 ```
 
-</details>
+</BrowserWindow>
+
+
 
 ### Group policy
 
+<BrowserWindow >
 
-<details>
-<summary>Sample Code</summary>
-
-```batch
+```batch showLineNumbers
 @echo off
 pushd "%~dp0"
 
@@ -73,15 +78,14 @@ del List.txt
 pause
 ```
 
-</details>
+</BrowserWindow>
 
 
 ### Folder locker
 
-<details>
-<summary>Sample Code</summary>
+<BrowserWindow >
 
-```batch
+```batch showLineNumbers
 @ECHO OFF
 title Folder Locker
 
@@ -133,4 +137,4 @@ goto END
 :END
 ```
 
-</details>
+</BrowserWindow>

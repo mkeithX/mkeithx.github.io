@@ -15,7 +15,7 @@ interface Props {
 export default function BrowserWindow({
   children,
   minHeight,
-  url = 'http://localhost:3000',
+  url = 'https://mkeithx.pages.dev',
   style,
   bodyStyle,
 }: Props): JSX.Element {

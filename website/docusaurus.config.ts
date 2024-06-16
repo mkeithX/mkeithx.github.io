@@ -44,9 +44,9 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline: "Docs for IT Developers, Helpdesk and Astronomers.",
+  tagline: "Unified Docs for IT Developers and Astronomers.",
   favicon: "icons/favicon/slash-dark.ico",
-  titleDelimiter: " | ",
+  // titleDelimiter: " ⚡️ ",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName,
@@ -225,7 +225,7 @@ const config: Config = {
       maxHeadingLevel: 5,
     },
 
-    image: "img/banner/social-card.png",
+    image: "img/mkx-social.png",
     metadata: [
       {
         name: 'description',
