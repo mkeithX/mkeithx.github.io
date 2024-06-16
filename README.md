@@ -1,19 +1,28 @@
-# [mkeithx website](https://mkeithx.github.io/)
-
-<p align="center">
-    <a href="https://mkeithx.github.io">
-    <img align="center" src="./assets/github-banner.png"/>
+<div align="center">
+  <h1 align="center">
+    mkeithx website
+    <br />
+    <br />
+    <a href="https://mkeithx.pages.dev">
+      <img src="./public/img/github-banner.png" alt="mkeithx">
     </a>
-</p>
+  </h1>
+</div>
 
 <div align="center">
 
-![website_status](https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io%2F&style=for-the-badge&label=Website)
-![build_status](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/deploy.yml?style=for-the-badge)
-![issues](https://img.shields.io/github/issues/mkeithx/mkeithx.github.io?style=for-the-badge)
-![pr](https://img.shields.io/github/issues-pr/mkeithx/mkeithx.github.io?style=for-the-badge)
+<img alt="cf" src="https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.pages.dev&style=for-the-badge&logo=cloudflare%20pages&label=cloudflare%20">
+<img alt="gh" src="https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io&style=for-the-badge&logo=github&label=github">
+<img alt="GitHub deployments" src="https://img.shields.io/github/deployments/mkeithx/mkeithx.github.io/github-pages?style=for-the-badge&label=Build">
+
+<img alt="Issues" src="https://img.shields.io/github/issues/mkeithx/mkeithx.github.io?style=for-the-badge">
+<img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/mkeithx/mkeithx.github.io?style=for-the-badge">
 
 </div>
+
+<!-- <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/mkeithtan?style=social"> -->
+
+
 
 ## Introduction
 This repo contains the website configuration and documentation powering the [mkeithx website](https://mkeithx.github.io).
@@ -61,5 +70,5 @@ To foster a positive and inclusive community, this has established a Code of Con
 
 ---
 
-> _"A documentation website representing humanity from **Dimension C-137**."_
-> 🚀
+> _A documentation website representing humanity from Dimension C-137 🚀_
+> 

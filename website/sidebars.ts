@@ -25,7 +25,7 @@ const sidebars: SidebarsConfig = {
       },
       collapsed: false,
       items: [
-        'initialization',
+        'installation',
         'configuration',
         'deployment',
         'algolia',

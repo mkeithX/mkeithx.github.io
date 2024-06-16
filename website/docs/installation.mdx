@@ -1,0 +1,92 @@
+---
+title: Installation
+description: How to install from scratch.
+---
+
+import Admonition from "@theme/Admonition";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+This article explains how this website was built from scratch. I chose the [Docusaurus TypeScript variant](https://docusaurus.io/docs/typescript-support#initialization) based on the project's scope.
+
+## Initialization
+Docusaurus requires [Node.js](https://nodejs.org/en/download/package-manager) version 18 or up. I use [npm](https://docs.npmjs.com/) as the package manager. 
+
+```bash
+npx create-docusaurus@latest website classic --typescript
+```
+
+
+```bash npm2yarn
+npm run start
+```
+
+## Using `Yarn`
+
+:::security[important]
+Installing Yarn globally is **NOT** recommended.
+:::
+
+
+Instead, we can use [Corepack](https://yarnpkg.com/corepack), which enables us to define our preferred package manager and its version in the `package.json` file.
+
+```bash
+corepack enable
+```
+
+```bash
+yarn set version stable
+```
+
+```bash
+yarn install
+```
+
+```bash
+yarn start
+```
+
+:::docusaurus[tip]
+
+If you ran into an error, you can follow the [troubleshooting guide](/docs/configuration#troubleshoot) and create a `yarn.lock` file:
+
+
+
+<Tabs groupId="shell">
+  <TabItem value="bash" label="Bash">
+  
+  ```bash
+ni yarn.lock
+```
+  
+  </TabItem>
+  <TabItem value="cmd" label="CMD">
+  
+  ```bash
+  echo. > yarn.lock
+  ```
+  
+  </TabItem>
+  <TabItem value="pwsh" label="PowerShell">
+  
+  ```bash
+  New-Item yarn.lock -ItemType File
+```
+  
+  </TabItem>
+</Tabs>
+
+:::
+
+## Run locally
+
+
+```bash npm2yarn
+npm run build
+```
+
+Alternatively, you can also run the following:
+
+```sh npm2yarn
+npm run build && npm run serve
+```

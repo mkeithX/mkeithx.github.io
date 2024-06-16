@@ -18,9 +18,7 @@ const organizationName = process.env.ORGANIZATION_NAME || 'mkeithX';
 const projectName = process.env.PROJECT_NAME || 'mkeithx.github.io';
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH || 'gh-pages';
 
-// const copyright = `Copyright © ${new Date().getFullYear()} • <a href='me' target='_blank'><b>Keith Tan</b></a> and <a href='#' target='_blank'><b>Contributors</b></a>.`;
-
-const copyright =  `© ${new Date().getFullYear()} · Keith Tan · All rights reserved · <br>Built with Docusaurus.`;
+const copyright =  `© ${new Date().getFullYear()} · Keith Tan · All rights reserved · <br> Built with Docusaurus `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -59,7 +57,6 @@ const config: Config = {
   trailingSlash: false,
   staticDirectories: [
     'static',
-    path.join(__dirname,'../assets'),
     path.join(__dirname,'../public'),
   ],
   
