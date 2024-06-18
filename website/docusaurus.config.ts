@@ -197,25 +197,33 @@ const config: Config = {
     [
       'ideal-image',
       {
-        quality: 85,
-        max: 1980,
-        min: 680,
-        steps: 4,
+        quality: 70, // 85
+        max: 1030, // 1980
+        min: 680, // 680
+        steps: 2, // 4
         disableInDev: false,
       } satisfies IdealImageOptions,
     ],
     [
       'client-redirects',
       {
-        fromExtensions: ['html'],
-        createRedirects(routePath) {
-          // Redirect to /docs from /docs/introduction (now docs root doc)
-          if (routePath === '/docs' || routePath === '/docs/') {
-            return [`${routePath}/the-keyword`];
-          }
-          return [];
-        },
-      }
+        // fromExtensions: ['html'],
+        // createRedirects(routePath) {
+        //   // Redirect to /docs from /docs/the-keyword (now docs root doc)
+        //   if (routePath === '/docs' || routePath === '/docs/') {
+        //     return [`${routePath}/the-keyword`];
+        //   }
+        //   return undefined;
+        // },
+        redirects: [
+          {
+            from: ['/docs/resources', '/docs/next/resources'],
+            to: '/community',
+          },
+
+        ],
+        
+      } satisfies ClientRedirectsOptions,
     ],
   ],
   
