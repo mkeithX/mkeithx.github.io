@@ -43,26 +43,16 @@ function About(): JSX.Element {
                 <h2>I'm Keith</h2>
                 <p>
                   {" "}
-                  I'm an independent Software Developer and Help Desk Analyst, with a soft spot for Python, React and M365.
-                  In simple terms, I build website and fix printers too. 😄
+                  I'm an independent Software Developer and Help Desk Analyst with a soft spot for Python, React, and M365. In simple terms, I build websites and fix printers too. 😄 
 
-                  Outside of work, I take pride in
-                  being a loving husband, a devoted dad, and yet, a stubburn
-                  brother.
+                  Outside of work, I take pride in being a loving husband and devoted dad, yet admittedly, a stubborn brother.
                   <br></br>
                 </p>
                 <p>
-                  My coding journey is intertwined with my love for pizza and my
-                  fascination to the cosmos. Despite never dreaming of being part of the IT industry, I've embraced this path
-                  wholeheartedly.
+                My coding journey is intertwined with my love for pizza and fascination with the cosmos. Despite never dreaming of being part of the IT industry, I've embraced this path wholeheartedly.
                 </p>
                 <p>
-                  I graduated with a degree in Information Technology, which has
-                  provided me with a solid foundation for my career in the tech
-                  industry. Along the way, I've had the opportunity to work
-                  closely with range of professionals, including civil
-                  engineers, business specialists, and lawyers, expanding my
-                  perspective and enhancing my skill set.
+                I graduated with a degree in Information Technology, which has provided me with a solid foundation for my career in the tech industry. Along the way, I've had the opportunity to work closely with a range of professionals, including civil engineers, business specialists, and lawyers, expanding my perspective and enhancing my skill set.
                 </p>
                 <p>
                   Feel free to explore {" "}

@@ -3,6 +3,17 @@ import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
 
+import {
+  FontAwesomeIcon,
+  FontAwesomeIconProps,
+} from "@fortawesome/react-fontawesome";
+
+import {
+  faGithub,
+  faLinkedin,
+  faXTwitter,
+} from "@fortawesome/free-brands-svg-icons";
+
 function WebsiteLink({ to, children }: { to: string; children?: ReactNode }) {
   return (
     <Link to={to}>
@@ -17,7 +28,7 @@ type ProfileProps = {
   className?: string;
   name: string;
   subTitle: string;
-//   children: ReactNode;
+  //   children: ReactNode;
   githubUrl: string;
   twitterUrl?: string;
 };
@@ -26,7 +37,7 @@ function TeamProfileCard({
   className,
   name,
   subTitle,
-//   children,
+  //   children,
   githubUrl,
   twitterUrl,
 }: ProfileProps) {
@@ -50,13 +61,13 @@ function TeamProfileCard({
         <div className="card__footer">
           <div className="button-group button-group--block">
             {githubUrl && (
-              <Link className="button button--secondary" href={githubUrl}>
-                GitHub
+              <Link className="button button--sm button--secondary" href={githubUrl}>
+                <FontAwesomeIcon icon={faGithub} size="2x"></FontAwesomeIcon>
               </Link>
             )}
             {twitterUrl && (
-              <Link className="button button--secondary" href={twitterUrl}>
-                Twitter
+              <Link className="button button--sm button--secondary" href={twitterUrl}>
+                <FontAwesomeIcon icon={faXTwitter} size="2x"></FontAwesomeIcon>
               </Link>
             )}
           </div>
@@ -98,8 +109,7 @@ export function CoreTeamRow(): JSX.Element {
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/JoeiX"
         twitterUrl="https://twitter.com/angajoei"
-      >
-      </TeamProfileCardCol>
+      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="PriMx"
@@ -115,16 +125,14 @@ export function CoreTeamRow(): JSX.Element {
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/botgina"
         twitterUrl="https://twitter.com/"
-      >
-      </TeamProfileCardCol>
+      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="Kiti"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/kitimi88"
         twitterUrl="https://twitter.com/"
-      >
-      </TeamProfileCardCol>
+      ></TeamProfileCardCol>
     </div>
   );
 }
@@ -137,32 +145,28 @@ export function ContributorsTeamRow(): JSX.Element {
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/topsykretts8520"
         twitterUrl="https://twitter.com/"
-      >
-      </TeamProfileCardCol>
+      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="MeganB"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/MeganB143"
         twitterUrl="#"
-      >
-      </TeamProfileCardCol>
+      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="Johanna Lorenz"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/JLorenz143"
         twitterUrl="https://twitter.com/"
-      >
-      </TeamProfileCardCol>
+      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="Miriam G"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/MiriamG416"
         twitterUrl="https://twitter.com/"
-      >
-      </TeamProfileCardCol>
+      ></TeamProfileCardCol>
     </div>
   );
 }
