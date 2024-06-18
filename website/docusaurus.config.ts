@@ -6,6 +6,7 @@ import { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 import type {Options as PageOptions} from '@docusaurus/plugin-content-pages';
 import { Options as IdealImageOptions } from '@docusaurus/plugin-ideal-image';
+import type {Options as ClientRedirectsOptions} from '@docusaurus/plugin-client-redirects';
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
@@ -202,6 +203,19 @@ const config: Config = {
         steps: 4,
         disableInDev: false,
       } satisfies IdealImageOptions,
+    ],
+    [
+      'client-redirects',
+      {
+        fromExtensions: ['html'],
+        createRedirects(routePath) {
+          // Redirect to /docs from /docs/introduction (now docs root doc)
+          if (routePath === '/docs' || routePath === '/docs/') {
+            return [`${routePath}/the-keyword`];
+          }
+          return [];
+        },
+      }
     ],
   ],
   
