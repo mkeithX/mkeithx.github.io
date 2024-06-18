@@ -6,6 +6,7 @@ import { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 import type {Options as PageOptions} from '@docusaurus/plugin-content-pages';
 import { Options as IdealImageOptions } from '@docusaurus/plugin-ideal-image';
+import type {Options as ClientRedirectsOptions} from '@docusaurus/plugin-client-redirects';
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
@@ -196,12 +197,33 @@ const config: Config = {
     [
       'ideal-image',
       {
-        quality: 85,
-        max: 1980,
-        min: 680,
-        steps: 4,
+        quality: 70, // 85
+        max: 1030, // 1980
+        min: 680, // 680
+        steps: 2, // 4
         disableInDev: false,
       } satisfies IdealImageOptions,
+    ],
+    [
+      'client-redirects',
+      {
+        // fromExtensions: ['html'],
+        // createRedirects(routePath) {
+        //   // Redirect to /docs from /docs/the-keyword (now docs root doc)
+        //   if (routePath === '/docs' || routePath === '/docs/') {
+        //     return [`${routePath}/the-keyword`];
+        //   }
+        //   return undefined;
+        // },
+        redirects: [
+          {
+            from: ['/docs/resources', '/docs/next/resources'],
+            to: '/community',
+          },
+
+        ],
+        
+      } satisfies ClientRedirectsOptions,
     ],
   ],
   
