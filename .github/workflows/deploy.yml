@@ -51,6 +51,9 @@ jobs:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
 
+      - name: Sleep 30s
+        run: sleep 30
+
       - name: Algolia crawler creation and crawl
         uses: algolia/algoliasearch-crawler-github-actions@v1.0.10
         id: algolia_crawler
