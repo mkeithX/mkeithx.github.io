@@ -66,6 +66,6 @@ jobs:
             crawler-name: 'mkeithxio'
             algolia-app-id: ${{ secrets.ALGOLIA_APP_ID }}
             algolia-api-key: ${{ secrets.ALGOLIA_API_KEY }}
-            site-url: 'https://mkeithx.github.io/'
+            site-url: 'https://mkeithx.github.io'
             override-config: true
             github-token: ${{ github.token }}
