@@ -276,11 +276,17 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "mySidebar",
-          label: "Documentation",
+          type: 'doc',
+          position: 'left',
+          docId: 'keyword',
+          label: 'Documentation'
         },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'helpdesk',
+        //   position: 'left',
+        //   label: 'Helpdesk'
+        // },
         { to: "/cosmos", label: "Space", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "projects", label: "Projects", position: "left" },
