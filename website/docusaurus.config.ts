@@ -161,7 +161,6 @@ const config: Config = {
     './src/plugins/featureRequests/FeatureRequestsPlugin.js',
     [
       "content-docs",
-
       {
         id: "cosmos",
         path: "cosmos",
@@ -217,8 +216,8 @@ const config: Config = {
         // },
         redirects: [
           {
-            from: ['/docs/resources', '/docs/next/resources'],
-            to: '/community',
+            from: ['/community/resources', '/docs/next/resources'],
+            to: '/community/',
           },
 
         ],
@@ -287,7 +286,7 @@ const config: Config = {
         //   position: 'left',
         //   label: 'Helpdesk'
         // },
-        { to: "/cosmos", label: "Space", position: "left" },
+        { to: "/cosmos", label: "Spacehub", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "projects", label: "Projects", position: "left" },
         {

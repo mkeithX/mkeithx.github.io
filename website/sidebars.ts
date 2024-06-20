@@ -42,7 +42,7 @@ const sidebars: SidebarsConfig = {
         title: 'Basic Guides',
         slug: '/guides',
         description:
-          "This section covers the following topics:",
+          "This section is not going to be very structured, but will cover the following topics:",
         keywords: ['guides'],
       },
       items: [

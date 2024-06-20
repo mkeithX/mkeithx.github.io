@@ -332,18 +332,32 @@ html[data-red-border] div#__docusaurus {
   }
 } */
 
+.alert--powershell {
+  --ifm-alert-background-color: rgba(90, 179, 220, 0.5);
+  --ifm-alert-background-color-highlight: rgba(90,179,220, 0.15);
+  --ifm-alert-foreground-color: rgb(66,69,73);
+  --ifm-alert-border-color: #5ab3dc;
+}
+
+html[data-theme='dark'] .alert--powershell {
+  --ifm-alert-background-color: rgba(90, 179, 220, 0.5);
+  --ifm-alert-background-color-highlight: rgba(90,179,220, 0.15);
+  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-border-color: #5ab3dc;
+}
+
 
 .alert--security {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
   --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(66, 69, 73);
+  --ifm-alert-foreground-color: rgb(66,69,73);
   --ifm-alert-border-color: #d4351c;
 }
 
 html[data-theme='dark'] .alert--security {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
   --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(255, 255, 255);
+  --ifm-alert-foreground-color: rgb(255,255,255);
   --ifm-alert-border-color: #d4351c;
 }
 
@@ -433,21 +447,3 @@ html[data-theme="dark"] div.theme-admonition.theme-admonition-tip a {
   color: #102445;
 }
 
-/* admon - info */
-/* 
-div.theme-admonition.theme-admonition-info.alert.alert--info {
-  background-color: #9ccfd8;
-  border-color: #56949f;
-}
-
-html[data-theme="dark"] div.theme-admonition.theme-admonition-info {
-  color: #102445;
-}
-
-html[data-theme="dark"] div.theme-admonition.theme-admonition-info svg {
-  fill: #102445;
-}
-
-html[data-theme="dark"] div.theme-admonition.theme-admonition-info a {
-  color: #102445;
-} */

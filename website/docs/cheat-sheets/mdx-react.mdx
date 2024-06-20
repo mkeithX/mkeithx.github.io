@@ -14,7 +14,7 @@ import {useLocation} from '@docusaurus/router';
 
 [MDX](https://mdxjs.com/) allows React components inside Markdown making it more interactive:
 
-<BrowserWindow >
+
 
 ```jsx showLineNumbers
 export const Highlight = ({children, color}) => (
@@ -59,15 +59,11 @@ This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
 
 This is <Highlight color="#1877F2">Facebook blue</Highlight> !
 
-</BrowserWindow>
+
 
 ## Custom Highlight
 
 To render the custom highlights:
-
-<BrowserWindow >
-
-
 
 
 
@@ -114,7 +110,7 @@ And so on..
 
 - #41B883 <Highlight color="#41B883">Fresh Green</Highlight>
 
-</BrowserWindow>
+
 
 ## Icons
 
@@ -132,7 +128,7 @@ npm install --save @fontawesome/fontawesome-svg-core @fontawesome/free-solid-svg
 npm install --save @fontawesome/free-regular-svg-icons @fontawesome/free-brands-svg-icons
 ```
 
-<BrowserWindow >
+
 
 
 <Tabs>
@@ -189,7 +185,7 @@ export default components;
 
 </Tabs>
 
-</BrowserWindow>
+
 
 
 
@@ -325,15 +321,11 @@ To render these custom admonition in your ``.mdx``, put ``import Admonition from
 ### Swizzle
 
 :::tip
-
 Custom tip
-
 :::
 
 :::security
-
 This is a security warning
-
 :::
 
 :::caution
@@ -361,6 +353,13 @@ Release Test
 ### HTML Embeds
 
 <BrowserWindow >
+
+```html
+<pre>
+  <b>Input: </b>1 2 3 4{'\n'}
+  <b>Output: </b>"366300745"{'\n'}
+</pre>
+```
 
 <pre>
   <b>Input: </b>1 2 3 4{'\n'}
