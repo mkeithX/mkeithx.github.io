@@ -37,7 +37,7 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  showLastUpdateAuthor: false,
+  showLastUpdateAuthor: true,
   showLastUpdateTime: true,
   ...admonitionsConfig,
   ...commonRemarkConfig,
