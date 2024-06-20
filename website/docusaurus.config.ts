@@ -37,7 +37,7 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  showLastUpdateAuthor: false,
+  showLastUpdateAuthor: true,
   showLastUpdateTime: true,
   ...admonitionsConfig,
   ...commonRemarkConfig,
@@ -161,7 +161,6 @@ const config: Config = {
     './src/plugins/featureRequests/FeatureRequestsPlugin.js',
     [
       "content-docs",
-
       {
         id: "cosmos",
         path: "cosmos",
@@ -217,8 +216,8 @@ const config: Config = {
         // },
         redirects: [
           {
-            from: ['/docs/resources', '/docs/next/resources'],
-            to: '/community',
+            from: ['/community/resources', '/docs/next/resources'],
+            to: '/community/',
           },
 
         ],
@@ -276,12 +275,18 @@ const config: Config = {
       },
       items: [
         {
-          type: "docSidebar",
-          position: "left",
-          sidebarId: "mySidebar",
-          label: "Documentation",
+          type: 'doc',
+          position: 'left',
+          docId: 'keyword',
+          label: 'Documentation'
         },
-        { to: "/cosmos", label: "Space", position: "left" },
+        // {
+        //   type: 'docSidebar',
+        //   sidebarId: 'helpdesk',
+        //   position: 'left',
+        //   label: 'Helpdesk'
+        // },
+        { to: "/cosmos", label: "Spacehub", position: "left" },
         { to: "/blog", label: "Blog", position: "left" },
         { to: "projects", label: "Projects", position: "left" },
         {

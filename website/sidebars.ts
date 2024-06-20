@@ -1,4 +1,5 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
+import { link } from "fs";
 
 /**
  * Creating a sidebar enables you to:
@@ -14,7 +15,7 @@ const sidebars: SidebarsConfig = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
 
   mySidebar: [
-    "the-keyword",
+    "keyword",
     {
       label: "Getting started",
       type: "category",
@@ -41,7 +42,7 @@ const sidebars: SidebarsConfig = {
         title: 'Basic Guides',
         slug: '/guides',
         description:
-          "This section covers the following topics:",
+          "This section is not going to be very structured, but will cover the following topics:",
         keywords: ['guides'],
       },
       items: [
@@ -88,6 +89,25 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+  // helpdesk: [
+
+  //   'helpdesk/index',
+    
+  //   {
+  //     type: 'category',
+  //     label: '',
+  //     link: {
+  //       type: 'generated-index',
+        
+  //     },
+  //     items: [
+  //       'helpdesk/troubleshooting/introduction',
+  //     ]
+      
+  //   },
+    
+
+  // ]
 
 };
 

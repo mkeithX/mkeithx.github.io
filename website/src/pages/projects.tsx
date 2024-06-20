@@ -40,6 +40,13 @@ const projects: ProjectData[] = [
     image: require(`${dataDir}/default.png`),
 
   },
+  {
+    title: "Django Custom User model",
+    description: "Customize Django's base user model with PostgreSQL.",
+    url: "/projects",
+    image: require(`${dataDir}/default-soon.png`),
+
+  },
 ];
 
 const title = "Projects";
