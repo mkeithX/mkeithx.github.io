@@ -39,7 +39,7 @@ const sidebars: SidebarsConfig = {
       collapsible: true,
       link: {
         type: 'generated-index',
-        title: 'Basic Guides',
+        title: 'Guides',
         slug: '/guides',
         description:
           "This section is not going to be very structured, but will cover the following topics:",
