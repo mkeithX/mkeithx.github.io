@@ -21,7 +21,7 @@
 
   --ifm-code-font-size: 95%;
 
-  --ifm-heading-font-weight: 600;
+  /* --ifm-heading-font-weight: 600; */
   --ifm-font-weight-semibold: 600;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -108,15 +108,17 @@
 }
 
 .contentTableContainer th:first-child {
-  width: 5%;
+  width: 15%;
 }
 
 .contentTableContainer td:first-child {
-  text-align: right;
+  text-align: left;
 }
 
+
 .contentTableContainer th:last-child {
-  width: 25%;
+  width: 30%;
+  text-align: left;
 }
 
 

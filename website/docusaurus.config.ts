@@ -287,8 +287,7 @@ const config: Config = {
         //   label: 'Helpdesk'
         // },
         { to: "/cosmos", label: "Spacehub", position: "left" },
-        { to: "/blog", label: "Blog", position: "left" },
-        { to: "projects", label: "Projects", position: "left" },
+        { to: "/msp", label: "MSP", position: "left" },
         {
           type: 'dropdown',
           label: 'Community',
@@ -299,8 +298,12 @@ const config: Config = {
               label: "Resources"
             },
             {
-              to: '/msp',
-              label: 'MSP'
+              to: '/blog',
+              label: 'Blog'
+            },
+            {
+              to: '/projects',
+              label: 'Showcase'
             },
             {
               type: 'html',

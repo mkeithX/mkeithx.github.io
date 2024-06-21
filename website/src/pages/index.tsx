@@ -31,19 +31,19 @@ function HomepageHeader(): JSX.Element {
 
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
-            {/* {"🚀 "} */}
-            {hero_header} <b>{"|"}</b>
+            <b>{"MKX"}</b>{"SpaceHub"} {"|"}
+   
           </span>
         </div>
 
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-              {"Docs for"} <b>{"IT Dev"}</b>
-              {"elopers"}, <br></br>
-              <b> {"Help"}</b>
-              {"desk"}, {"and"} <b>{"Astro"}</b>
-              {"nomers"}.
+            
+            {"Tech's Cookbook"} <br></br>
+               {" For"} {" Basic"} <b>{" Web Dev"}</b>{"elopment"}
+             <br></br>
+
             </div>
           </span>
         </Heading>
