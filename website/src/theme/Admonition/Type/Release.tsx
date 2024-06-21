@@ -4,12 +4,14 @@ import Translate from '@docusaurus/Translate';
 import type {Props} from '@theme/Admonition/Type/Tip';
 import AdmonitionLayout from '@theme/Admonition/Layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faRocket } from '@fortawesome/free-solid-svg-icons';
+import { faComputer } from '@fortawesome/free-solid-svg-icons';
+
+import { faBrave } from '@fortawesome/free-brands-svg-icons'
 
 const infimaClassName = 'alert alert--release';
 
 const defaultProps = {
-  icon: <FontAwesomeIcon icon={faRocket} />,
+  icon: <FontAwesomeIcon icon={faComputer} />,
   title: (
     <Translate
       id="theme.admonition.release"

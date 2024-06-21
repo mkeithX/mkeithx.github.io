@@ -64,7 +64,7 @@ const config: Config = {
   customFields: {
     description: "Website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
-    custom_footer: "Building the web with mkeithx.",
+    custom_footer: "Built for humans.",
     hero_header: "Open Source",
     hero_footer: "Building the web.",
     GIT_USER: process.env.GIT_USER,

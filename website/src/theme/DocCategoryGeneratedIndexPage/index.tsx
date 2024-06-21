@@ -8,18 +8,18 @@ import type {Props} from '@theme/DocCategoryGeneratedIndexPage';
 import styles from './styles.module.css';
 
 function HintFooter() {
-  const docPath = useLayoutDoc('configuration', undefined)?.path;
+  const docPath = useLayoutDoc('repo/index', undefined)?.path;
   return (
     <p className={styles.footerTip}>
       <Translate
         values={{
           guideLink: (
             <Link to={`${docPath}#`}>
-              <Translate>Navigate to this article</Translate>
+              <Translate>Navigate to this page</Translate>
             </Link>
           ),
         }}>
-        {'Looking for default configuration? {guideLink} to learn more.'}
+        {'Looking for default samples? {guideLink} to learn more.'}
       </Translate>
     </p>
   );
