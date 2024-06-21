@@ -45,7 +45,7 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline: "Unified Docs for IT Developers and Astronomers.",
+  tagline: "Unified Docs for Software Developers.",
   favicon: "icons/favicon/slash-dark.ico",
   // titleDelimiter: " ⚡️ ",
   url: "https://mkeithx.github.io",
@@ -66,7 +66,7 @@ const config: Config = {
     custom_tagline: "Building the web",
     custom_footer: "Built for humans.",
     hero_header: "Open Source",
-    hero_footer: "Building the web.",
+    hero_footer: "Projects and samples from mkeithx. ",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
