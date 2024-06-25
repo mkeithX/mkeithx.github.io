@@ -38,3 +38,13 @@ jobs:
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
+
+# CF Pages
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mkeithx.github.io # e.g. 'my-project'
+          directory: ./website/build # e.g. 'dist'
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}          
