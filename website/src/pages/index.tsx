@@ -31,8 +31,8 @@ function HomepageHeader(): JSX.Element {
 
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
-            <b>{"MKX"}</b>{"SpaceHub"} {"|"}
-   
+            {/* <b>{"MKX"}</b>{"SpaceHub"} {"|"} */}
+            {"Introducing"} {"|"}   
           </span>
         </div>
 
@@ -40,8 +40,8 @@ function HomepageHeader(): JSX.Element {
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
             
-            {"Tech's "} <b>{"Cookbook"}</b> <br></br>
-               {" For"} {" Basic"} <b>{" Web Dev"}</b>{"elopment"}
+            <b>{"Tech's"}</b> {"Cookbook "}<br></br>
+               {"For"} {" Basic"} <b>{" Web Dev"}</b>{"elopment"}
              <br></br>
 
             </div>
