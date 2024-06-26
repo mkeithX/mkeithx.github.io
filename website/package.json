@@ -17,7 +17,8 @@
     "build:local": "docusaurus build && docusaurus serve",
     "deploy:gh": "cmd /C set \"GIT_USER=%GIT_USER%\" && npm run deploy",
     "serve:local": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
-    "start:local": "npm run docusaurus start -- --host 0.0.0.0 --no-open"
+    "start:local": "npm run docusaurus start -- --host 0.0.0.0 --no-open",
+    "cf:deploy": "npm run build && wrangler pages deploy ./build"
   },
   "dependencies": {
     "@docusaurus/core": "^3.4.0",
@@ -41,13 +42,15 @@
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
+    "@cloudflare/workers-types": "^4.20240620.0",
     "@docusaurus/module-type-aliases": "^3.4.0",
     "@docusaurus/theme-classic": "^3.4.0",
     "@docusaurus/tsconfig": "^3.4.0",
     "@docusaurus/types": "^3.4.0",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.78",
-    "typescript": "5.4.3"
+    "typescript": "5.4.3",
+    "wrangler": "^3.62.0"
   },
   "browserslist": {
     "production": [
