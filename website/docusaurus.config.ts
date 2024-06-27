@@ -19,7 +19,7 @@ const organizationName = process.env.ORGANIZATION_NAME || 'mkeithX';
 const projectName = process.env.PROJECT_NAME || 'mkeithx.github.io';
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH || 'gh-pages';
 
-const copyright =  `© ${new Date().getFullYear()} · Keith Tan · All rights reserved · <br> Built with Docusaurus `;
+const copyright =  `© ${new Date().getFullYear()} · Keith Tan · All rights reserved · <br> · Built with Docusaurus · `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -280,14 +280,15 @@ const config: Config = {
           docId: 'keyword',
           label: 'Documentation'
         },
-        // {
-        //   type: 'docSidebar',
-        //   sidebarId: 'helpdesk',
-        //   position: 'left',
-        //   label: 'Helpdesk'
-        // },
+        {
+          type: 'docSidebar',
+          sidebarId: 'devops',
+          position: 'left',
+          label: 'DevOps'
+        },
+        
+        
         { to: "/cosmos", label: "Spacehub", position: "left" },
-        { to: "/msp", label: "MSP", position: "left" },
         {
           type: 'dropdown',
           label: 'Community',
@@ -305,6 +306,7 @@ const config: Config = {
               to: '/projects',
               label: 'Showcase'
             },
+            { to: "/msp", label: "MSP" },
             {
               type: 'html',
               value: '<hr class="dropdown-separator">',
@@ -420,7 +422,7 @@ const config: Config = {
       copyright,
     },
     prism: {
-      theme: prismThemes.github,
+      theme: prismThemes.vsLight,
       darkTheme: prismThemes.dracula,
       additionalLanguages: [
         "powershell",

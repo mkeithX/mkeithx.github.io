@@ -89,6 +89,39 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
+
+  devops: [
+    'devops/index',
+
+    {
+      type: 'category',
+      label: "Guides & Workarounds",
+      collapsed: true,
+      link: {
+        type: 'generated-index',
+        slug: '/devops/guides-and-workarounds',
+        description: "Basic troubleshooting guide and workarounds.",
+
+      },
+      items: [
+        'devops/troubleshoot/windows-hardware-issues',
+      ]
+
+    },
+    'devops/glossary'
+    // {
+    //   type: 'category',
+    //   label: 'Terminologies',
+    //   link: {
+    //     type: 'doc',
+    //     id: 'devops/terminologies/index'
+    //   },
+    //   items: [
+    //     'devops/terminologies/itil',
+    //     'devops/terminologies/scrum'
+    //   ]
+    // }
+  ]
   // helpdesk: [
 
   //   'helpdesk/index',
