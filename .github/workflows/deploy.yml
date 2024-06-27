@@ -4,31 +4,37 @@ on:
   push:
     branches:
       - main
-
-
-permissions:
-  contents: write
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'website/**'
+  pull_request:
 
 jobs:
   deploy:
-    name: Install dependencies 
     runs-on: ubuntu-latest
+    permissions:
+      contents: write
+    concurrency:
+      group: ${{ github.workflow }}-${{ github.ref }}
+    defaults:
+      run:
+        working-directory: website
     steps:
       - uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      - uses: actions/setup-node@v4
+
+      - name: Setup Node
+        uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - name: Install dependencies
-        run: 
-          
-          npm install
-          npm run build
+      - run: corepack enable
 
-      - name: Deploy to GitHub Pages
+      - run: yarn install --frozen-lockfile
+      - run: yarn build
+
+      - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
+        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
           publish_dir: ./website/build
