@@ -1,4 +1,4 @@
-name: Deploy to Pages
+name: Publish
 
 on:
   push:
@@ -31,4 +31,4 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: build
+          publish_dir: ./website/build
