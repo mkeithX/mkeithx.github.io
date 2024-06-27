@@ -27,10 +27,16 @@ jobs:
         with:
           node-version: 20
 
-      - run: corepack enable
+      # - run: corepack enable
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+      # - run: yarn install --frozen-lockfile
+      # - run: yarn build
+      - name: Install dependencies
+        run: |
+          cd website
+          npm install
+          npm run build
+      
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
