@@ -109,38 +109,7 @@ const sidebars: SidebarsConfig = {
 
     },
     'devops/glossary'
-    // {
-    //   type: 'category',
-    //   label: 'Terminologies',
-    //   link: {
-    //     type: 'doc',
-    //     id: 'devops/terminologies/index'
-    //   },
-    //   items: [
-    //     'devops/terminologies/itil',
-    //     'devops/terminologies/scrum'
-    //   ]
-    // }
   ]
-  // helpdesk: [
-
-  //   'helpdesk/index',
-    
-  //   {
-  //     type: 'category',
-  //     label: '',
-  //     link: {
-  //       type: 'generated-index',
-        
-  //     },
-  //     items: [
-  //       'helpdesk/troubleshooting/introduction',
-  //     ]
-      
-  //   },
-    
-
-  // ]
 
 };
 
