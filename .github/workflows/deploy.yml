@@ -11,7 +11,7 @@ permissions:
 
 jobs:
   deploy:
-    name: Deploy to GitHub Pages
+    name: Install dependencies 
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -22,8 +22,8 @@ jobs:
           node-version: 20
 
       - name: Install dependencies
-        run: |
-          cd website 
+        run: 
+          
           npm install
           npm run build
 
