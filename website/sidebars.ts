@@ -105,6 +105,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'devops/troubleshoot/windows-hardware-issues',
+        'devops/troubleshoot/windows-utilities'
       ]
 
     },
