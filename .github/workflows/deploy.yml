@@ -8,31 +8,58 @@ on:
       - '.github/workflows/deploy.yml'
       - 'website/**'
   pull_request:
+    branches:
+      - main
+    paths:
+      - '.github/workflows/deploy.yml'
+      - 'website/**'
 
 jobs:
-  deploy:
+  deploy-github-pages:
     runs-on: ubuntu-latest
     permissions:
       contents: write
+      deployments: write
     concurrency:
       group: ${{ github.workflow }}-${{ github.ref }}
     defaults:
       run:
         working-directory: website
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout repository
+        uses: actions/checkout@v4
 
-      - name: Setup Node
+      - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: 20
 
-      - run: npm install
-      - run: npm run build
+      - name: Install and Build
+        run: npm install && npm run build
 
-      - name: Deploy
-        uses: peaceiris/actions-gh-pages@v4
+
+      - name: Deploy to GitHub Pages
         if: github.ref == 'refs/heads/main'
+        uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
+          publish_dir: website/build
+
+  deploy-cloudflare-pages:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout repository
+        uses: actions/checkout@v4
+
+      - name: Deploy to Cloudflare Pages
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mkeithx  
+          directory: website/build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
