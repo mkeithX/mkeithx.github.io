@@ -29,8 +29,8 @@ jobs:
 
       - run: corepack enable
 
-      - run: yarn install --frozen-lockfile
-      - run: yarn build
+      - run: npm install
+      - run: npm run build
 
       - name: Deploy
         uses: peaceiris/actions-gh-pages@v4
