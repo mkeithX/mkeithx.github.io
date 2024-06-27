@@ -8,7 +8,7 @@ import type {Props} from '@theme/DocCategoryGeneratedIndexPage';
 import styles from './styles.module.css';
 
 function HintFooter() {
-  const docPath = useLayoutDoc('repo/index', undefined)?.path;
+  const docPath = useLayoutDoc('devops/index', undefined)?.path;
   return (
     <p className={styles.footerTip}>
       <Translate
@@ -19,7 +19,7 @@ function HintFooter() {
             </Link>
           ),
         }}>
-        {'Looking for default samples? {guideLink} to learn more.'}
+        {'Looking for guides & workarounds? {guideLink} to learn more.'}
       </Translate>
     </p>
   );

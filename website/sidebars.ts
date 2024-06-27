@@ -92,6 +92,17 @@ const sidebars: SidebarsConfig = {
 
   devops: [
     'devops/index',
+    {
+      type: 'category',
+      label: 'Microsoft 365',
+      link: {
+        type: 'doc',
+        id: 'devops/admin-center/index',
+      },
+      items: [
+        'devops/admin-center/management-and-guidelines'
+      ]
+    },
 
     {
       type: 'category',
