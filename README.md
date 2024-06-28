@@ -19,21 +19,32 @@
 <img alt="Pull Requests" src="https://img.shields.io/github/issues-pr/mkeithx/mkeithx.github.io?style=for-the-badge">
 
 </div>
+    <br />
 
+<div align="center">
+    <a href="https://vercel.com/new/clone?repository-url=https://github.com/vercel/vercel/tree/main/docusaurus-2&template=docusaurus-2" target="_blank">
+        <img src="https://vercel.com/button" alt="Deploy with Vercel Button">
+    </a>
+        <a href="https://app.netlify.com/start/deploy?repository=https://github.com/slorber/docusaurus-starter" target="_blank">
+        <img src="https://www.netlify.com/img/deploy/button.svg" width="165" alt="Netlify">
+    </a>
+      <a href="https://pages.dev">
+        <img alt="Cloudflare Pages" src="https://user-images.githubusercontent.com/23264/106598434-9e719e00-654f-11eb-9e59-6167043cfa01.png" width="28" style="margin-right: 5px;">
+    </a>
+</div>
 <!-- <img alt="X (formerly Twitter) Follow" src="https://img.shields.io/twitter/follow/mkeithtan?style=social"> -->
 
-
-
 ## Introduction
+
 This repo contains the website configuration and documentation powering the [mkeithx website](https://mkeithx.github.io).
 
 ## Motivation
+
 The project aims to establish an intuitive and comprehensive Knowledge Base Portal using various technologies including AI offering valuable and accessible resources for IT Developers, Helpdesk Analysts, and Amateur Astronomers.
 
 ## Installation
 
 This website is built using [Docusaurus](https://docusaurus.io/), a modern static website generator.
-
 
 ```bash
 yarn
@@ -57,7 +68,6 @@ Generates static content into the `build` directory and can be served using any 
 
 Learn more about [custom configuration and deployments](https://mkeithx.pages.dev/docs/getting-started).
 
-
 <!-- [**MKX SpaceHub**](https://mkeithx.github.io/)™ a project built with Docusaurus that aims create an intuitive and comprehensive Knowledge Base Portal, providing valuable and accessible resources for all. [Learn more](https://mkeithx.github.io/docs). -->
 
 <!-- ## Contents
@@ -71,4 +81,3 @@ To foster a positive and inclusive community, this has established a Code of Con
 ---
 
 > _A documentation website representing humanity from Dimension C-137 🚀_
-> 
