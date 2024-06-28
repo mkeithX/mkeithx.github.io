@@ -100,7 +100,9 @@ const sidebars: SidebarsConfig = {
         id: 'devops/admin-center/index',
       },
       items: [
-        'devops/admin-center/management-and-guidelines'
+        'devops/admin-center/aka-ms',
+        'devops/admin-center/management-and-guidelines',
+        'devops/admin-center/portal-links'
       ]
     },
 

@@ -59,6 +59,7 @@ const config: Config = {
   staticDirectories: [
     'static',
     path.join(__dirname,'../public'),
+    path.join(__dirname,'../public/non-existent')
   ],
   
   customFields: {
