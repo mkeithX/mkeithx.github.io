@@ -10,7 +10,7 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/website'
     schedule:
-      interval: 'weekly' 
+      interval: 'daily' 
     open-pull-requests-limit: 0
     labels:
       - 'pr: dependencies'
