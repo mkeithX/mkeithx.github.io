@@ -20,12 +20,26 @@
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="devops-docs"><a href="https://mkeithx.github.io/docs/devops">DevOps Docs</a><a class="hash-link" aria-label="Direct link to devops-docs" title="Direct link to devops-docs" href="https://mkeithx.github.io/blog/devops-july#devops-docs">​</a></h3>
 <p>In line with my career development, I'm proud to announce the release of a new section of this website called <a href="https://mkeithx.github.io/docs/devops">DevOps</a>. This section will provide tips and workarounds primarily focused on mitigating issues with Windows machines and effective Microsoft 365 management. Additionally, this new section aims to empower users with effective strategies for streamlining operations, troubleshooting common issues, and maximizing productivity within Windows environments.</p>
 <p>Along with this update, the MSP section is now fully deprecated but some of it contents and articles will be migrated accordingly. Learn <a href="https://mkeithx.github.io/blog/mid-year-upgrades-2024#deprecation-of-msp-docs-project">more</a></p>
+<ul>
+<li>Reference <a href="https://github.com/mkeithX/mkeithx.github.io/pull/46" target="_blank" rel="noopener noreferrer">PR#46</a></li>
+</ul>
 <h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="cloudflare-pages"><a href="https://developers.cloudflare.com/pages" target="_blank" rel="noopener noreferrer">Cloudflare Pages</a><a class="hash-link" aria-label="Direct link to cloudflare-pages" title="Direct link to cloudflare-pages" href="https://mkeithx.github.io/blog/devops-july#cloudflare-pages">​</a></h3>
 <p>This website is hosted on Cloudflare Pages, a platform known for its reliability and performance. Cloudflare Pages not only ensures the safety and security of our website but also enhances its efficiency through robust caching, global CDN (Content Delivery Network), and advanced security features. With Cloudflare Pages, I'm confident to be able to deliver content quickly and securely to users, ensuring a seamless browsing experience.</p>
 <h2 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="other-changes">Other changes<a class="hash-link" aria-label="Direct link to Other changes" title="Direct link to Other changes" href="https://mkeithx.github.io/blog/devops-july#other-changes">​</a></h2>
-<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="title-update">Title Update<a class="hash-link" aria-label="Direct link to Title Update" title="Direct link to Title Update" href="https://mkeithx.github.io/blog/devops-july#title-update">​</a></h3>
-<p>As you may have noticed, we've updated the title or banner of our website to <strong>"Guides for Seamless Software Delivery."</strong> This change reflects our commitment to providing valuable resources that streamline the software delivery process.</p>
-<p>The purpose of this update is to highlight a new feature on our website dedicated to helping you achieve seamless software deployment.</p>]]></content>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="title-update"><a href="https://mkeithx.github.io/">Title Update</a><a class="hash-link" aria-label="Direct link to title-update" title="Direct link to title-update" href="https://mkeithx.github.io/blog/devops-july#title-update">​</a></h3>
+<p>As you may have noticed, we've updated the title or banner of our website to "<em>Guides for Seamless Software Delivery.</em>" This change reflects our commitment to providing valuable resources that streamline the software delivery process.</p>
+<p>The purpose of this update is to highlight a new feature on our website dedicated to helping you achieve seamless software deployment.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="resources"><a href="https://mkeithx.github.io/community">Resources</a><a class="hash-link" aria-label="Direct link to resources" title="Direct link to resources" href="https://mkeithx.github.io/blog/devops-july#resources">​</a></h3>
+<p>Added curated list of some of the fantastic open-source projects that have played a significant role in the development and maintenance this website.</p>
+<h3 class="anchor anchorWithHideOnScrollNavbar_WYt5" id="kitiplex-policies"><a href="https://mkeithx.github.io/community/kitiplex">Kitiplex Policies</a><a class="hash-link" aria-label="Direct link to kitiplex-policies" title="Direct link to kitiplex-policies" href="https://mkeithx.github.io/blog/devops-july#kitiplex-policies">​</a></h3>
+<p>In line with organizational restructuring, Kitiplex policies and other organization-related sites can be temporarily through this website. This includes:</p>
+<ul>
+<li><a href="https://mkeithx.github.io/community/kitiplex/cookie-policy">Cookie Policy</a></li>
+<li><a href="https://mkeithx.github.io/community/kitiplex/m365-guidelines">M365 Guidelines</a></li>
+<li><a href="https://mkeithx.github.io/community/kitiplex/m365-terms-of-use">M365 Terms of Use</a></li>
+<li><a href="https://mkeithx.github.io/community/kitiplex/team">Team</a></li>
+</ul>
+<p>Visit our <a href="https://github.com/kitiplex" target="_blank" rel="noopener noreferrer">GitHub</a> page.</p>]]></content>
         <author>
             <name>Keith Tan</name>
             <email>email@kitimi.onmicrosoft.com</email>
