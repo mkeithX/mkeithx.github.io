@@ -1,32 +1,42 @@
-import path from 'path';
+import path from "path";
 import { themes as prismThemes } from "prism-react-renderer";
 import { Config } from "@docusaurus/types";
 import * as Preset from "@docusaurus/preset-classic";
 import { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
-import type {Options as PageOptions} from '@docusaurus/plugin-content-pages';
-import { Options as IdealImageOptions } from '@docusaurus/plugin-ideal-image';
-import type {Options as ClientRedirectsOptions} from '@docusaurus/plugin-client-redirects';
+import type { Options as PageOptions } from "@docusaurus/plugin-content-pages";
+import { Options as IdealImageOptions } from "@docusaurus/plugin-ideal-image";
+import type { Options as ClientRedirectsOptions } from "@docusaurus/plugin-client-redirects";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import { socialProfiles } from "./social.json";
 
-require('dotenv').config()
+require("dotenv").config();
 
 // console.log(process.env)
-const organizationName = process.env.ORGANIZATION_NAME || 'mkeithX';
-const projectName = process.env.PROJECT_NAME || 'mkeithx.github.io';
-const deploymentBranch = process.env.DEPLOYMENT_BRANCH || 'gh-pages';
+const organizationName = process.env.ORGANIZATION_NAME || "mkeithX";
+const projectName = process.env.PROJECT_NAME || "mkeithx.github.io";
+const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "gh-pages";
 
-const copyright =  `© ${new Date().getFullYear()} · Keith Tan · All rights reserved · <br> · Built with Docusaurus · `;
+const copyright = `© ${new Date().getFullYear()} · Keith Tan · All rights reserved · <br> · Built with Docusaurus · `;
 
 const admonitionsConfig = {
   admonitions: {
     keywords: [
-      "info", "success", "danger", "note", "tip", "warning",
-      "important", "caution", "security", "credit", "discord",
-      "docusaurus", "release"
+      "info",
+      "success",
+      "danger",
+      "note",
+      "tip",
+      "warning",
+      "important",
+      "caution",
+      "security",
+      "credit",
+      "discord",
+      "docusaurus",
+      "release",
     ],
   },
 };
@@ -57,17 +67,19 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
   staticDirectories: [
-    'static',
-    path.join(__dirname,'../public'),
-    path.join(__dirname,'../public/non-existent')
+    "static",
+    path.join(__dirname, "../public"),
+    path.join(__dirname, "../public/non-existent"),
   ],
-  
+
   customFields: {
-    description: "Website representing humanity from Dimension C-137 and beyond.",
+    description:
+      "Website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
     custom_footer: "Built for humans.",
-    hero_header: "Open Source",
-    hero_footer: "Projects and samples from mkeithx. ",
+    custom_title: "Guides for Seamless Software Delivery",
+    hero_header: "OpenSource",
+    hero_footer: "Projects and samples from mkeithx",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -82,12 +94,11 @@ const config: Config = {
         "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
       crossorigin: "anonymous",
     },
-
   ],
 
   scripts: [
     {
-      src: 'https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js',
+      src: "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js",
       async: true,
     },
   ],
@@ -113,15 +124,15 @@ const config: Config = {
         blog: {
           path: "blog",
           blogTitle: "Blog",
-          blogDescription: "Recent updates from mkeithx.",
+          blogDescription: "Recent updates and releases from mkeithx.",
           routeBasePath: "blog",
-          blogSidebarTitle: "Recent updates",
-          blogSidebarCount: 'ALL',
+          blogSidebarTitle: "Updates and Releases",
+          blogSidebarCount: "ALL",
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
           ...admonitionsConfig,
           ...commonRemarkConfig,
-          postsPerPage: 'ALL',
+          postsPerPage: "ALL",
 
           feedOptions: {
             type: "all",
@@ -133,15 +144,15 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           exclude: [
-            '**/_*.{js,jsx,ts,tsx,md,mdx}',
-            '**/_*/**',
-            '**/*.test.{js,jsx,ts,tsx}',
-            '**/__tests__/**',
+            "**/_*.{js,jsx,ts,tsx,md,mdx}",
+            "**/_*/**",
+            "**/*.test.{js,jsx,ts,tsx}",
+            "**/__tests__/**",
           ],
           showLastUpdateTime: false,
           ...commonRemarkConfig,
           ...admonitionsConfig,
-          mdxPageComponent: '@theme/MDXPage',
+          mdxPageComponent: "@theme/MDXPage",
         } satisfies PageOptions,
 
         theme: {
@@ -152,14 +163,14 @@ const config: Config = {
           lastmod: "date",
           changefreq: null,
           priority: null,
-          ignorePatterns: ['/tests/{blog,pages}/**','/tags/**'],
+          ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
         },
       } satisfies Preset.Options,
     ],
   ],
 
   plugins: [
-    './src/plugins/featureRequests/FeatureRequestsPlugin.js',
+    "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
     [
       "content-docs",
       {
@@ -195,7 +206,7 @@ const config: Config = {
     ],
 
     [
-      'ideal-image',
+      "ideal-image",
       {
         quality: 70, // 85
         max: 1030, // 1980
@@ -205,7 +216,7 @@ const config: Config = {
       } satisfies IdealImageOptions,
     ],
     [
-      'client-redirects',
+      "client-redirects",
       {
         // fromExtensions: ['html'],
         // createRedirects(routePath) {
@@ -217,16 +228,13 @@ const config: Config = {
         // },
         redirects: [
           {
-            from: ['/community/resources', '/docs/next/resources'],
-            to: '/community/',
+            from: ["/community/resources", "/docs/next/resources"],
+            to: "/community/",
           },
-
         ],
-        
       } satisfies ClientRedirectsOptions,
     ],
   ],
-  
 
   themeConfig: {
     colorMode: {
@@ -250,18 +258,17 @@ const config: Config = {
     image: "img/mkx-social.png",
     metadata: [
       {
-        name: 'description',
-        description: 'Building the web with mkeithx.'
+        name: "description",
+        description: "Building the web with mkeithx.",
       },
       {
-        name: 'keywords',
-        content: 'web-dev,mkeithx,keith,keith tan,python,docusaurus,react'
+        name: "keywords",
+        content: "web-dev,mkeithx,keith,keith tan,python,docusaurus,react",
       },
       {
         name: "twitter:card",
         content: "summary",
       },
-
     ],
     navbar: {
       style: "dark",
@@ -276,54 +283,49 @@ const config: Config = {
       },
       items: [
         {
-          type: 'doc',
-          position: 'left',
-          docId: 'keyword',
-          label: 'Documentation'
+          type: "doc",
+          position: "left",
+          docId: "keyword",
+          label: "Docs",
         },
         {
-          type: 'docSidebar',
-          sidebarId: 'devops',
-          position: 'left',
-          label: 'DevOps'
+          type: "docSidebar",
+          sidebarId: "devops",
+          position: "left",
+          label: "Devops",
         },
-        
-        
-        { to: "/cosmos", label: "Spacehub", position: "left" },
+
+        { to: "/cosmos", label: "Space", position: "left" },
         {
-          type: 'dropdown',
-          label: 'Community',
-          position: 'right',
+          to: "/blog",
+          label: "Blog",
+        },
+        { to: "/community", label: "Community", position: "left" },
+        {
+          type: "dropdown",
+          label: "More",
+          position: "right",
           items: [
-            {
-              to: '/community',
-              label: "Resources"
-            },
-            {
-              to: '/blog',
-              label: 'Blog'
-            },
-            {
-              to: '/projects',
-              label: 'Showcase'
-            },
             { to: "/msp", label: "MSP" },
+            { to: "/projects", label: "Showcase" },
+            { to: "/feature-requests", label: "Feature Requests" },
+
+            
             {
-              type: 'html',
+              type: "html",
               value: '<hr class="dropdown-separator">',
             },
             {
-              label: 'NASA',
-              href: 'https://eyes.nasa.gov/apps/solar-system/#/home'
+              label: "NASA",
+              href: "https://eyes.nasa.gov/apps/solar-system/#/home",
             },
             {
-              label: 'React',
-              href: 'https://react.dev/',
-            },      
-
+              label: "React",
+              href: "https://react.dev/",
+            },
           ],
         },
- 
+
         {
           href: "https://github.com/mkeithX",
           position: "right",
@@ -354,7 +356,6 @@ const config: Config = {
         href: "/",
         height: "50",
         width: "200",
-        
       },
       links: [
         {
@@ -405,17 +406,17 @@ const config: Config = {
           title: "Dev",
           items: [
             {
-              label: 'Cloudflare',
-              href: 'https://dash.cloudflare.com/login'
+              label: "Cloudflare",
+              href: "https://dash.cloudflare.com/login",
             },
             {
-              label: 'Vercel',
-              href: 'https://vercel.com/'
+              label: "Vercel",
+              href: "https://vercel.com/",
             },
             {
-              label: 'FB Developers',
-              href: 'https://developers.facebook.com/'
-            }
+              label: "FB Developers",
+              href: "https://developers.facebook.com/",
+            },
           ],
         },
       ],

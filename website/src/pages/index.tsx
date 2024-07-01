@@ -20,7 +20,8 @@ function HomepageHeader(): JSX.Element {
   const { hero_header } = customFields as { hero_header: string };
   const { hero_footer } = customFields as { hero_footer: string };
   const { custom_footer } = customFields as { custom_footer: string };
-  return (
+  const { custom_title } = customFields as { custom_title: string };
+  return ( 
     <header className={clsx("hero hero--dark", styles.heroBanner)}>
       <div className="container">
         <BannerLogo
@@ -32,18 +33,28 @@ function HomepageHeader(): JSX.Element {
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
             {/* <b>{"MKX"}</b>{"SpaceHub"} {"|"} */}
-            {"Introducing"} {"|"}   
+            {hero_header} {"|"}
           </span>
         </div>
 
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className="hero__title mb-3">
-            
-            <b>{"Tech's"}</b> {"Cookbook "}<br></br>
-               {"For"} {" Basic"} <b>{" Web Dev"}</b>{"elopment"}
-             <br></br>
+            {/* <b>{"Build"}</b><br></br> */}
+              {/* {"Innovate"}<br></br> */}
+              {/* <b>{"Inspire"}</b><br></br> */}
 
+            {/* <b>{"Guides"}</b>{" and "}{"References "}<br></br> */}
+            {/* {"For Basic"}<b>{" Web"}</b>{" Dev"}{" and "}{"Efficient "}<b>{"IT Ops"}</b> */}
+
+            {/* {"DevOps Handbook: "}<br></br> */}
+            {/* {"Concise References Covering Development and Operations Essentials"} */}
+            {/* {"Guides for Seamless Software Delivery"} */}
+            {/* <b>{tagline}</b> */}
+               {/* {"Best practices and reference for"}<b>{" Web Dev"}</b> {"and"} */}
+               {/* <b>{" IT"}</b>{" Ops"} */}
+          
+               {custom_title}
             </div>
           </span>
         </Heading>

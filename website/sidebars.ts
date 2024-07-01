@@ -102,7 +102,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'devops/admin-center/aka-ms',
         'devops/admin-center/management-and-guidelines',
-        'devops/admin-center/portal-links'
       ]
     },
 

@@ -6,8 +6,6 @@ import AdmonitionLayout from '@theme/Admonition/Layout';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faComputer } from '@fortawesome/free-solid-svg-icons';
 
-import { faBrave } from '@fortawesome/free-brands-svg-icons'
-
 const infimaClassName = 'alert alert--release';
 
 const defaultProps = {

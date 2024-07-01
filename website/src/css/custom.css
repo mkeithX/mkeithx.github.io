@@ -20,7 +20,7 @@
   --ifm-site-dark: #111317;
 
   --ifm-code-font-size: 95%;
-
+  --ifm-font-size-base: 16px;
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
 
@@ -73,13 +73,9 @@
 }
 
 .navbar__brand {
-  margin-right: 2rem;
+  margin-right: 1.8rem;
 }
 
-.navbar__logo {
-  height: 2.0rem;
-  /* width: 150px; */
-}
 
 .navbar .navbar__items {
   flex: auto;
@@ -335,17 +331,17 @@ html[data-red-border] div#__docusaurus {
 } */
 
 .alert--release {
-  --ifm-alert-background-color: rgba(90, 179, 220, 0.5);
-  --ifm-alert-background-color-highlight: rgba(90,179,220, 0.15);
-  --ifm-alert-foreground-color: rgb(66,69,73);
-  --ifm-alert-border-color: #5ab3dc;
+  --ifm-alert-background-color: rgba(114, 137, 218, 0.5);
+  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
+  --ifm-alert-foreground-color: rgb(66, 69, 73);
+  --ifm-alert-border-color: #5865F2;
 }
 
 html[data-theme='dark'] .alert--release {
-  --ifm-alert-background-color: rgba(90, 179, 220, 0.5);
-  --ifm-alert-background-color-highlight: rgba(90,179,220, 0.15);
-  --ifm-alert-foreground-color: rgb(255,255,255);
-  --ifm-alert-border-color: #5ab3dc;
+  --ifm-alert-background-color: rgba(114, 137, 218, 0.5);
+  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
+  --ifm-alert-foreground-color: rgb(255, 255, 255);
+  --ifm-alert-border-color: #5865F2;
 }
 
 
