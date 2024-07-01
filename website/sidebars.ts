@@ -101,7 +101,8 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'devops/admin-center/aka-ms',
-        'devops/admin-center/management-and-guidelines',
+        'devops/admin-center/install-via-intune',
+        // 'devops/admin-center/management-and-guidelines',
       ]
     },
 
@@ -117,6 +118,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'devops/troubleshoot/windows-hardware-issues',
+        'devops/troubleshoot/windows-network-issues',
         'devops/troubleshoot/windows-utilities'
       ]
 

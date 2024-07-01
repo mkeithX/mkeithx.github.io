@@ -367,7 +367,7 @@ const config: Config = {
             },
             {
               label: "Guides",
-              to: "/docs/cheat-sheets",
+              to: "/docs/devops/guides-and-workarounds",
             },
             {
               label: "Keyword",
