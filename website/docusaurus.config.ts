@@ -77,7 +77,7 @@ const config: Config = {
       "Website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
     custom_footer: "Built for humans.",
-    custom_title: "Guides for Seamless Software Delivery",
+    custom_title: "Guides for Seamless Software Deployment",
     hero_header: "OpenSource",
     hero_footer: "Projects and samples from mkeithx",
     GIT_USER: process.env.GIT_USER,
