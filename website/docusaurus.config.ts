@@ -424,7 +424,7 @@ const config: Config = {
       copyright,
     },
     prism: {
-      theme: prismThemes.vsLight,
+      theme: prismThemes.github,
       darkTheme: prismThemes.dracula,
       additionalLanguages: [
         "powershell",
