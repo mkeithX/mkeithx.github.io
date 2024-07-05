@@ -101,10 +101,25 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'devops/admin-center/aka-ms',
-        'devops/admin-center/install-via-intune',
-        // 'devops/admin-center/management-and-guidelines',
-      ]
+        // 'devops/admin-center/install-via-intune',
+        {
+          type: 'category',
+          label: 'Trainings',
+          description: 'Training and comprehensive guides for Admin & Users',
+          link: {
+            type: 'generated-index',
+            slug: 'devops/admin-center/training'
+          },
+          items: [
+            'devops/admin-center/training/email-management',
+            'devops/admin-center/training/install-via-intune'
+          ]
+        },
+      ],
+
+      
     },
+
 
     {
       type: 'category',
@@ -120,7 +135,7 @@ const sidebars: SidebarsConfig = {
         'devops/troubleshoot/windows-utilities',
         'devops/troubleshoot/windows-hardware-issues',
         'devops/troubleshoot/windows-network-issues',
-        
+        // 'devops/troubleshoot/end-user-email-mgmt',
       ]
 
     },
