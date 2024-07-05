@@ -292,7 +292,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "devops",
           position: "left",
-          label: "Devops",
+          label: "DevOps",
         },
 
         { to: "/cosmos", label: "Space", position: "left" },
