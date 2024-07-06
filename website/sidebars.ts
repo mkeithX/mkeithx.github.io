@@ -132,10 +132,12 @@ const sidebars: SidebarsConfig = {
 
       },
       items: [
+        'devops/troubleshoot/powershell',
         'devops/troubleshoot/windows-utilities',
         'devops/troubleshoot/windows-hardware-issues',
         'devops/troubleshoot/windows-network-issues',
         'devops/troubleshoot/ms-teams',
+        // 'devops/troubleshoot/',
       ]
 
     },

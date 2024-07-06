@@ -1,0 +1,113 @@
+---
+description: Explore PowerShell editions and installation methods for different platforms using $PSVersionTable.
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# PowerShell
+
+Learn about different editions of PowerShell and explore installation methods for various platforms.
+
+## Edition
+
+To determine the current version and edition of PowerShell, run:
+
+```sh
+$PSVersionTable
+```
+
+<Tabs>
+  <TabItem value="desktop" label="Desktop" default>
+
+```sh {2}
+PSVersion                      5.1.22621.3810
+PSEdition                      Desktop
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0...}
+BuildVersion                   10.0.22621.3810
+CLRVersion                     4.0.30319.42000
+WSManStackVersion              3.0
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+```
+
+  </TabItem>
+  <TabItem value="core" label="Core">
+
+```sh {2}
+PSVersion                      7.4.3
+PSEdition                      Core
+GitCommitId                    7.4.3
+OS                             Microsoft Windows 10.0.22631
+Platform                       Win32NT
+PSCompatibleVersions           {1.0, 2.0, 3.0, 4.0…}
+PSRemotingProtocolVersion      2.3
+SerializationVersion           1.1.0.1
+WSManStackVersion              3.0
+```
+
+  </TabItem>
+</Tabs>
+
+## Installation Methods
+
+<Tabs>
+  <TabItem value="winget" label="Winget (Recommended)" default>
+
+```bash
+winget search Microsoft.PowerShell
+winget install --id Microsoft.Powershell --source winget
+```
+
+  </TabItem>
+
+  <TabItem value="msi" label="MSI Installer">
+
+For MSI installation, visit the [GitHub Page](https://github.com/PowerShell/PowerShell/releases) for downloads.
+
+  </TabItem>
+
+  <TabItem value="dotnet" label=".NET Global Tool">
+
+Install PowerShell as a [.NET Global tool](https://dotnet.microsoft.com/download) if you have the .NET Core SDK:
+
+```bash
+dotnet tool install --global PowerShell
+```
+
+</TabItem>
+
+<TabItem value="other" label="Other Platforms">
+
+For Linux and macOS, refer to the installation guides:
+
+- [Linux Installation Guide](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-linux?view=powershell-7.4)
+- [macOS Installation Guide](https://docs.microsoft.com/en-us/powershell/scripting/install/installing-powershell-on-macos?view=powershell-7.4)
+
+</TabItem>
+</Tabs>
+
+:::caution Important
+
+When upgrading PowerShell, use the same installation method as initially used.
+
+:::
+
+## Profile Management
+
+```bash
+$PROFILE | Select-Object *
+notepad $PROFILE
+Test-Path -Path $PROFILE.AllUsersAllHosts
+```
+
+## Custom Script Example
+
+```powershell
+# Example: Customize PowerShell prompt
+function Prompt { "mkeithx" + ":\" + "> " }
+```
+
+<pre>
+`mkeithx:\>_`
+</pre>
