@@ -1,0 +1,36 @@
+---
+description: Fix common issues in MS Teams
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Fix common issues in MS Teams
+
+### Clear the cache in Classic Teams
+
+1. Close Teams. If Teams is still running, right-click the Teams icon on the taskbar, and then select Quit.
+
+2. Open the Run dialog box by pressing the Windows logo key  +R.
+
+
+![close-ms-teams](/img/troubleshooting/close-ms-teams.png)
+
+
+<Tabs>
+  <TabItem value="classic" label="Classic Teams" default>
+
+```bash
+%appdata%\Microsoft\Teams
+```
+
+  </TabItem>
+  <TabItem value="new" label="New Teams">
+
+```bash
+%userprofile%\appdata\local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams
+```
+
+  </TabItem>
+</Tabs>
