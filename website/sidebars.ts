@@ -120,6 +120,21 @@ const sidebars: SidebarsConfig = {
       
     },
 
+    {
+      type: 'category',
+      label: 'Snippets',
+      collapsed: true,
+      link: {
+        type: 'doc',
+        id: 'devops/snippets/index'
+      },
+      items: [
+        'devops/snippets/tech-notes',
+        'devops/snippets/email-templates',
+        // 'devops/snippets/',
+      ]
+    },
+
 
     {
       type: 'category',
