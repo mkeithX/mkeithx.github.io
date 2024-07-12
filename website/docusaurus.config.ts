@@ -76,8 +76,9 @@ const config: Config = {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
     custom_tagline: "Building the web",
-    custom_footer: "Built for humans.",
-    custom_title: "Guides for Seamless Software Deployment",
+    custom_footer: "Built for Humans.",
+    // custom_title: "Guides for Seamless Software Deployment",
+    custom_title: "Building Innovative Solutions",
     hero_header: "OpenSource",
     hero_footer: "Projects and samples from mkeithx",
     GIT_USER: process.env.GIT_USER,
@@ -279,7 +280,7 @@ const config: Config = {
         src: "img/logo/x_code.png",
         target: "_self",
         // width: 32,
-        // height: 32,
+        // height: 28,
       },
       items: [
         {

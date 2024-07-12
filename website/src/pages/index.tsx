@@ -7,6 +7,7 @@ import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
 import BannerLogo from "@site/static/img/banner/atom-z.svg";
+// import BannerLogo from "@site/static/img/logo/edatom-z.svg";
 import React from "react";
 import TopBanner from "@site/src/components/TopBanner";
 import IntroCards from "../components/IntroCards";
