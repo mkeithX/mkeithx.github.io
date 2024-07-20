@@ -25,6 +25,9 @@ astronomy:
 planets:
 api:
 post:
+  description: "Blog posts"
+  label: Blog post
+  permalink: /blog-post
 configs:
 software:
 development:

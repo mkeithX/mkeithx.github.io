@@ -43,7 +43,7 @@ function About(): JSX.Element {
                 <h2>I'm Keith</h2>
                 <p>
                   {" "}
-                  I'm an independent Software Developer and Help Desk Analyst with a soft spot for Python, React, and M365. In simple terms, I build websites and fix printers too. 😄 
+                  I'm an independent Web Developer and System Administrator with a soft spot for Python, React, and M365. In simple terms, I build websites and fix computers too. 😄 
 
                   Outside of work, I take pride in being a loving husband and devoted dad, yet admittedly, a stubborn brother.
                   <br></br>
