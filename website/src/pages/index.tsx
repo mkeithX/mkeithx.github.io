@@ -48,9 +48,12 @@ function HomepageHeader(): JSX.Element {
         </Heading>
 
         <div className={styles.heroSubtitle}>
-          <span className={styles.heroCustomSubTitleHtml}>
-            {/* {hero_footer} */}
+          {/* <span className={styles.heroCustomSubTitleHtml}>
             <b>{hero_footer}</b>
+          </span> */}
+          
+          <span className={styles.heroCustomTagline}>
+            {hero_footer}
           </span>
         </div>
 

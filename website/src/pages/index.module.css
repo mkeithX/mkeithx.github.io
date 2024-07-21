@@ -11,20 +11,18 @@
 }
 
 .heroSubtitle {
-  font-size: 25px;
+  font-size: 22px;
   font-weight: 600;
   margin-bottom: 0.4rem;
 }
 
-/* .heroCustomTagline {
+.heroCustomTagline {
   color: var(--ifm-color-primary-dark);
   color: transparent;
-  background: linear-gradient(90deg, #bac341 0%, #00ff88 50%, #1da1f2 100%);
+  background: linear-gradient(90deg, #1da1f2  0%, #00ff88 50%, #f6ff7f 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-weight: 600;
-  font-size: 25px;
-} */
+}
 
 .main {
   padding: 12px;
@@ -117,7 +115,7 @@
   color: var(--ifm-color-primary-dark);
   color: transparent;
   /* background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #cdd55c 100%); */
-  background: linear-gradient(90deg, #fffa6b 0%, #00ffaa 50%, #1da1f2 100%);
+  background: linear-gradient(90deg, #fbf8aa 0%, #00ffaa 50%, #1da1f2 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }

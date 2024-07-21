@@ -82,7 +82,7 @@ const config: Config = {
     // custom_title: "Guides for Seamless Software Deployment",
     custom_title: "Building Innovative Solutions",
     hero_header: "OpenSource",
-    hero_footer: "Docs, guides and samples from mkeithx",
+    hero_footer: "Guides and samples from Keith",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -99,12 +99,6 @@ const config: Config = {
     },
   ],
 
-  scripts: [
-    {
-      src: "https://cdnjs.cloudflare.com/ajax/libs/clipboard.js/2.0.11/clipboard.min.js",
-      async: true,
-    },
-  ],
 
   i18n: {
     defaultLocale: "en",
@@ -340,7 +334,7 @@ const config: Config = {
       appId: "X2M5FPT6G9",
       contextualSearch: false,
       searchPagePath: "search",
-      insights: true,
+      insights: false,
     },
 
     footer: {
