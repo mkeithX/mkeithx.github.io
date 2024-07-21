@@ -8,7 +8,7 @@ body:
     attributes:
       value: |
       
-        Thank you for helping us improve. Please note that this template is strictly for documentation-related issues. [Learn more](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#issues).
+        Thank you for helping us improve. Please note that this template is strictly for documentation-related issues. [Learn more](https://mkeithx.pages.dev/community/contributing#issues).
 
   - type: dropdown
     id: issue
