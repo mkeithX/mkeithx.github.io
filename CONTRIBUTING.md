@@ -101,7 +101,7 @@ More about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 
 ### Bugs
 
-You can report [documentation-related issues]((https://github.com/mkeithX/mkeithx.github.io/issues/new/choose)) if you encounter any of the following:
+You can report [documentation-related issues](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose) if you encounter any of the following:
 
 - Undocumented API
 - Need for elaboration on a particular topic
@@ -112,10 +112,6 @@ For issues related to infrastructure, please visit the [**Docusaurus website**](
 
 ### Feature Request
 For new feature or suggestion, feel free to submit a [feature request](/feature-requests)
-
-If you discover a bug, have a suggestion, or wish to request a new feature, please feel free to [open an issue](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose).
-
-
 
 
 ## Licensing
