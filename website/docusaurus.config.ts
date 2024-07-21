@@ -49,6 +49,8 @@ const commonRemarkConfig = {
 const commonDocsConfig = {
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
+  editUrl: ({versionDocsDirPath, docPath}) =>
+    `https://github.com/mkeithX/mkeithx.github.io/edit/main/website/${versionDocsDirPath}/${docPath}`,
   ...admonitionsConfig,
   ...commonRemarkConfig,
 };
