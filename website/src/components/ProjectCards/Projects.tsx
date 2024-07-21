@@ -32,7 +32,7 @@ export const Project: FunctionComponent<ProjectData> = ({
           <a
             href={url}
             target="_blank"
-            className="button button--primary button--outline"
+            className="button button--outline button--primary"
           >
 
             {"Learn more"}

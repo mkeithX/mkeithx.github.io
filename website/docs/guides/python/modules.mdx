@@ -14,7 +14,7 @@ In Python, a module is a file containing Python definitions (functions, classes,
 
 A simple module named `my_module.py`:
 
-```python
+```python showLineNumbers
 # my_module.py
 
 def greet(name):
@@ -32,7 +32,7 @@ pi = 3.14159
 
 You can import modules in Python using the `import` keyword:
 
-```python
+```python showLineNumbers
 import my_module
 
 print(my_module.greet("Alice"))  # Output: Hello, Alice!
@@ -44,7 +44,7 @@ print(my_module.pi)              # Output: 3.14159
 
 You can import specific items from a module:
 
-```python
+```python showLineNumbers
 from my_module import greet, pi
 
 print(greet("Bob"))  # Output: Hello, Bob!
@@ -73,6 +73,6 @@ Modules can have attributes like variables (`pi` in the example) and functions (
    
 5. **Avoid Circular Imports**: Structure modules to avoid circular dependencies, which can lead to runtime errors.
 
-## Conclusion
+## Summary
 
 Modules are integral to Python programming for organizing and reusing code effectively. By defining modules, importing them into Python programs, and utilizing namespace and attributes appropriately, developers can enhance code organization, maintainability, and scalability of their applications. Continuously explore Python's standard library and third-party packages to leverage pre-built modules and accelerate development processes while adhering to best practices in modular programming.

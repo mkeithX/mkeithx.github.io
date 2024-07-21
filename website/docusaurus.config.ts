@@ -19,7 +19,7 @@ const organizationName = process.env.ORGANIZATION_NAME || "mkeithX";
 const projectName = process.env.PROJECT_NAME || "mkeithx.github.io";
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "gh-pages";
 
-const copyright = `© ${new Date().getFullYear()} · Keith Tan · All rights reserved · <br> · Built with Docusaurus · `;
+const copyright = `© ${new Date().getFullYear()} · Keith Tan · All rights reserved ·`;
 
 const admonitionsConfig = {
   admonitions: {
@@ -80,7 +80,7 @@ const config: Config = {
     // custom_title: "Guides for Seamless Software Deployment",
     custom_title: "Building Innovative Solutions",
     hero_header: "OpenSource",
-    hero_footer: "Projects and samples from mkeithx",
+    hero_footer: "Docs, guides and samples from mkeithx",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -219,14 +219,6 @@ const config: Config = {
     [
       "client-redirects",
       {
-        // fromExtensions: ['html'],
-        // createRedirects(routePath) {
-        //   // Redirect to /docs from /docs/the-keyword (now docs root doc)
-        //   if (routePath === '/docs' || routePath === '/docs/') {
-        //     return [`${routePath}/the-keyword`];
-        //   }
-        //   return undefined;
-        // },
         redirects: [
           {
             from: ["/community/resources", "/docs/next/resources"],
@@ -277,7 +269,7 @@ const config: Config = {
       title: "mkeithx",
       logo: {
         alt: "SiteLogo",
-        src: "img/logo/x_code.png",
+        src: "img/logo/x_code_slash.svg",
         target: "_self",
         // width: 32,
         // height: 28,
@@ -353,10 +345,10 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/mkx-x-raw.png",
+        src: "img/logo/spacehub-x-logo.png",
         href: "/",
-        height: "50",
-        width: "200",
+        // height: "80",
+        width: "250",
       },
       links: [
         {
@@ -367,7 +359,7 @@ const config: Config = {
               to: "/cosmos",
             },
             {
-              label: "Guides",
+              label: "DevOps",
               to: "/docs/devops/guides-and-workarounds",
             },
             {

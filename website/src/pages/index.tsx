@@ -34,36 +34,23 @@ function HomepageHeader(): JSX.Element {
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
             {/* <b>{"MKX"}</b>{"SpaceHub"} {"|"} */}
-            {hero_header} {"|"}
+            {hero_header} <b>{"|"}</b>
           </span>
         </div>
 
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
-            <div className="hero__title mb-3">
-            {/* <b>{"Build"}</b><br></br> */}
-              {/* {"Innovate"}<br></br> */}
-              {/* <b>{"Inspire"}</b><br></br> */}
-
-            {/* <b>{"Guides"}</b>{" and "}{"References "}<br></br> */}
-            {/* {"For Basic"}<b>{" Web"}</b>{" Dev"}{" and "}{"Efficient "}<b>{"IT Ops"}</b> */}
-
-            {/* {"DevOps Handbook: "}<br></br> */}
-            {/* {"Concise References Covering Development and Operations Essentials"} */}
-            {/* {"Guides for Seamless Software Delivery"} */}
-            {/* <b>{tagline}</b> */}
-               {/* {"Best practices and reference for"}<b>{" Web Dev"}</b> {"and"} */}
-               {/* <b>{" IT"}</b>{" Ops"} */}
-          
+            <div className={styles.heroBannerTitle}>
                {custom_title}
+               {/* <b>{custom_title}</b> */}
             </div>
           </span>
         </Heading>
 
-        <div className="hero__subtitle mb-3">
+        <div className={styles.heroSubtitle}>
           <span className={styles.heroCustomSubTitleHtml}>
             {/* {hero_footer} */}
-            <b>{custom_footer}</b>
+            <b>{hero_footer}</b>
           </span>
         </div>
 

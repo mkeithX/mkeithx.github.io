@@ -49,21 +49,38 @@
 
 .navbar__logo {
   /* width: 40px; */
-  height: 34px;
+  height: 38px;
   transition: transform 0.5s;
 }
 
-.navbar__brand:hover .navbar__logo {
+/*  DO NOT DELETE: navBarLogo effect */
+
+/* .navbar__brand:hover .navbar__logo {
   transform: rotate(360deg) scale(1.0);
+} */
+
+/* .navbar__brand:hover .navbar__logo {
+  transform: scaleX(-1) scale(1.0);
+} */
+
+
+.navbar__brand .navbar__logo {
+  border: 2px solid transparent;
+  transition: border-color 0.3s ease;
 }
+.navbar__brand:hover .navbar__logo {
+  border-color: #1da1f2;
+}
+
+/*  DO NOT DELETE: navBarLogo effect */
 
 .navbar__title {
   /* font-size: 1.2em; */
   font-weight: bolder;
   /* background: linear-gradient(90deg,
-      rgb(164, 81, 219) 0%,
-      rgba(56, 202, 255, 0.986) 50%,
-      rgb(88, 253, 151) 100%);
+      #a451db 0%,
+      #38cafffb 50%,
+      #58fd97 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent; */
 }

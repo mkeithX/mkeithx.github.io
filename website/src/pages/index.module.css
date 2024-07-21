@@ -4,8 +4,27 @@
  */
 
 
+.heroBannerTitle {
+  font-size: 52px;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
+}
 
+.heroSubtitle {
+  font-size: 25px;
+  font-weight: 600;
+  margin-bottom: 0.4rem;
+}
 
+/* .heroCustomTagline {
+  color: var(--ifm-color-primary-dark);
+  color: transparent;
+  background: linear-gradient(90deg, #bac341 0%, #00ff88 50%, #1da1f2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+  font-size: 25px;
+} */
 
 .main {
   padding: 12px;
@@ -42,15 +61,6 @@
   --ifm-container-width: 996px;
 }
 
-/* .heroBanner {
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-  display: flex;
-  background-color: var(--kiti-dark-pale);
-  height: 25rem;
- }
-  */
 
 .heroBanner {
   /* padding: 10rem 0; */
@@ -60,8 +70,7 @@
   background-color: var(--ifm-site-dark);
   /* display: flex; */
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8vw), 0 100%); */
-  height: 36rem;
-
+  height: 38rem;
 }
 
 
@@ -103,11 +112,12 @@
 }
 
 
+
 .heroCustomSubTitleHtml b {
   color: var(--ifm-color-primary-dark);
   color: transparent;
   /* background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #cdd55c 100%); */
-  background: linear-gradient(90deg, #cdd55c 0%, #00ff88 50%, #1da1f2 100%);
+  background: linear-gradient(90deg, #fffa6b 0%, #00ffaa 50%, #1da1f2 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }

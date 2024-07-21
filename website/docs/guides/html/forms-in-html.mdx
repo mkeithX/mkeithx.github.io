@@ -1,3 +1,7 @@
+---
+description: Using forms in HTML
+---
+
 
 # HTML Forms
 
@@ -11,7 +15,7 @@ HTML forms provide a way to collect user input through fields like text boxes, c
 
 To create an HTML form, use the `<form>` element:
 
-```html
+```html showLineNumbers
 <form action="/submit-form" method="POST">
   <!-- Form elements go here -->
 </form>
@@ -22,7 +26,7 @@ To create an HTML form, use the `<form>` element:
 
 ### Example of a Simple Form
 
-```html
+```html showLineNumbers
 <form action="/submit-form" method="POST">
   <label for="username">Username:</label>
   <input type="text" id="username" name="username" required>
@@ -58,7 +62,7 @@ Attributes enhance form functionality and validation:
 
 ### Example of Attributes
 
-```html
+```html showLineNumbers
 <input type="text" id="username" name="username" required>
 <input type="email" id="email" name="email" placeholder="Enter your email">
 ```
@@ -79,6 +83,6 @@ HTML forms are handled by backend scripts or server-side languages like PHP, Pyt
    
 5. **Progressive Enhancement**: Ensure forms function without JavaScript for broader compatibility.
 
-## Conclusion
+## Summary
 
 HTML forms are crucial for collecting user input and enabling interaction on web pages. By mastering form creation, understanding elements and attributes, and applying best practices, developers can create robust and user-friendly forms that enhance the functionality and usability of their web applications. Continuously explore advanced form features and integrate with backend technologies to build dynamic and responsive web forms effectively.
