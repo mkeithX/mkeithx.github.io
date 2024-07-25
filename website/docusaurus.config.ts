@@ -329,8 +329,8 @@ const config: Config = {
     },
 
     algolia: {
-      apiKey: "82fefaa9b089c4e0914d06335b19eb19",
-      indexName: "mkeithxio",
+      apiKey: "4136649b1dea303e89f542e4f9ac48f7",
+      indexName: "mkeithxio.tmp.tmp",
       appId: "X2M5FPT6G9",
       contextualSearch: false,
       searchPagePath: "search",
@@ -343,8 +343,8 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/spacehub-x-logo.png",
         href: "/",
-        // height: "80",
-        width: "250",
+        // height: "30",
+        width: "230",
       },
       links: [
         {
