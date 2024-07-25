@@ -369,17 +369,16 @@ const config: Config = {
           title: "More",
           items: [
             {
+              label: "Me",
+              to: "/me",
+            },
+            {
               label: "Blog",
               to: "/blog",
             },
             {
               label: "Tags",
               to: "/blog/tags",
-            },
-
-            {
-              label: "Kitiplex",
-              to: "/community/kitiplex",
             },
           ],
         },
