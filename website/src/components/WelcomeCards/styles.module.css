@@ -1,0 +1,17 @@
+.card {
+    border: 1.5px solid var(--ifm-color-emphasis-300);
+    box-shadow: var(--ifm-global-shadow-md);
+    margin-bottom: var(--ifm-leading);
+    height: 100%;
+    overflow: hidden;
+}
+
+.cardContainer {
+    margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
+}
+
+.image {
+    background: var(--ifm-color-info);
+    position: relative;
+    
+}

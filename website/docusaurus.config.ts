@@ -91,11 +91,8 @@ const config: Config = {
 
   stylesheets: [
     {
-      href: "https://cdn.jsdelivr.net/npm/katex@0.16.9/dist/katex.min.css",
-      type: "text/css",
-      integrity:
-        "sha384-n8MVd4RsNIU0tAv4ct0nTaAbDJwPJzDEaqSD1odI+WdtXRGWt2kTvGFasHpSy3SV",
-      crossorigin: "anonymous",
+      href: '/katex/katex.min.css',
+      type: 'text/css',
     },
   ],
 
@@ -275,13 +272,13 @@ const config: Config = {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "Docs",
+          label: "Keyword",
         },
         {
           type: "docSidebar",
           sidebarId: "devops",
           position: "left",
-          label: "DevOps",
+          label: "Dev",
         },
 
         { to: "/cosmos", label: "Space", position: "left" },
