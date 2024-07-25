@@ -1,17 +1,14 @@
 name: 📚 Documentation
 description: Report an issue related to documentation
-labels: [documentation, 'status: needs triage']
+labels: ["bug", "triage"]
 assignees:
   - mkeithX
 body:
   - type: markdown
     attributes:
       value: |
-        ## IMPORTANT
-
-        This template is strictly for documentation-related issues. We ensure our content's accuracy by citing trusted sources like NASA, Wikipedia, and other documentation, including Python and Microsoft. Additionally, we use AI to assist us in creating content faster and more effectively.
-
-        ---
+      
+        Thank you for helping us improve. Please note that this template is strictly for documentation-related issues. [Learn more](https://mkeithx.pages.dev/community/contributing#issues).
 
   - type: dropdown
     id: issue

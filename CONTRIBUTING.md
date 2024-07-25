@@ -100,19 +100,18 @@ More about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 ## Issues
 
 ### Bugs
-You can [report issues](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose) related to documentation if you find any of the following:
+
+You can report [documentation-related issues](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose) if you encounter any of the following:
 
 - Undocumented API
 - Need for elaboration on a particular topic
 - Outdated or incorrect information
 - Formatting or readability improvement
 
+For issues related to infrastructure, please visit the [**Docusaurus website**](https://docusaurus.io/community/contributing#issues).
+
 ### Feature Request
 For new feature or suggestion, feel free to submit a [feature request](/feature-requests)
-
-If you discover a bug, have a suggestion, or wish to request a new feature, please feel free to [open an issue](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose).
-
-IMPORTANT: For issues related to infrastructure, please visit the [Docusaurus website](https://docusaurus.io/community/contributing#issues).
 
 
 ## Licensing
