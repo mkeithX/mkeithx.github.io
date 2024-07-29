@@ -16,26 +16,11 @@ const sidebars: SidebarsConfig = {
 
   mySidebar: [
     "keyword",
-    {
-      label: "Getting started",
-      type: "category",
-      link: {
-        type: "generated-index",
-        slug: 'getting-started',
-        description: 'This section covers the following:'
-      },
-      collapsed: false,
-      items: [
-        'installation',
-        'configuration',
-        'deployment',
-        'algolia',
-      ],
-    },
+    "development",
     {
       type: "category",
       label: "Guides",
-      collapsed: true,
+      collapsed: false,
       collapsible: true,
       link: {
         type: 'generated-index',
@@ -52,7 +37,6 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-    // repo
     {
       type: "category",
       label: "Examples",
@@ -67,8 +51,7 @@ const sidebars: SidebarsConfig = {
         "repo/flask-tutorials",
         "repo/django-custom-user",
       ],
-    },
-
+    },    
     {
       type: "category",
       label: "Cheat Sheets",
@@ -88,10 +71,27 @@ const sidebars: SidebarsConfig = {
         // "cheat-sheets/django",
       ],
     },
+    {
+      label: "Build",
+      type: "category",
+      link: {
+        type: "generated-index",
+        slug: 'build',
+        description: 'This section covers the following:'
+      },
+      collapsed: true,
+      items: [
+        'installation',
+        'configuration',
+        'deployment',
+        'algolia',
+      ],
+    },
   ],
 
   devops: [
     'devops/index',
+    'devops/key-principles',
     {
       type: 'category',
       label: 'Microsoft 365',
@@ -101,7 +101,7 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         'devops/admin-center/aka-ms',
-        // 'devops/admin-center/install-via-intune',
+        'devops/admin-center/mailbox-archive',
         {
           type: 'category',
           label: 'Trainings',
@@ -112,7 +112,8 @@ const sidebars: SidebarsConfig = {
           },
           items: [
             'devops/admin-center/training/email-management',
-            'devops/admin-center/training/install-via-intune'
+            'devops/admin-center/training/install-via-intune',
+            // 'devops/admin-center/training/'
           ]
         },
       ],
@@ -149,7 +150,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'devops/troubleshoot/cloud-pc',
         'devops/troubleshoot/powershell',
-        'devops/troubleshoot/exhange-archiving',
+        // 'devops/troubleshoot/exhange-archiving',
         'devops/troubleshoot/windows-utilities',
         'devops/troubleshoot/windows-hardware-issues',
         'devops/troubleshoot/windows-network-issues',

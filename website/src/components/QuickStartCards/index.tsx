@@ -82,25 +82,32 @@ export function QuickStartCardRow(): JSX.Element {
         githubUrl="/docs/devops"
       />
       <QuickStartCol
-        name="Showcase"
-        subTitle="Projects and demos I've authored and contributed to."
+        name="Blog"
+        subTitle="Recent updates and Releases"
         githubUrl="/blog"
       />
-      <QuickStartCol
+      {/* <QuickStartCol
         name="Feature Requests"
         subTitle="Submit your feature requests."
         githubUrl="/feature-requests"
-      />
-      {/* <QuickStartCol
-        name="Coming soon"
-        subTitle="This feature will be out soon. Stay tuned."
-        githubUrl="https://github.com/kitiplex"
+      /> */}
+    </div>
+  );
+}
+export function DevOpsCardRow(): JSX.Element {
+  return (
+    <div className="row">
+      <QuickStartCol
+        name="PowerShell"
+        subTitle="Get started with PowerShell"
+        githubUrl="/docs/devops/troubleshoot/powershell"
       />
       <QuickStartCol
-        name="Coming soon"
-        subTitle="This feature will be out soon. Stay tuned."
-        githubUrl="https://github.com/kitiplex"
-      /> */}
+        name="aka.ms"
+        subTitle="All about aka.ms"
+        githubUrl="/docs/devops/admin-center/aka-ms"
+      />
+
     </div>
   );
 }
