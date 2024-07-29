@@ -149,11 +149,12 @@ const sidebars: SidebarsConfig = {
       items: [
         'devops/troubleshoot/cloud-pc',
         'devops/troubleshoot/powershell',
+        'devops/troubleshoot/exhange-archiving',
         'devops/troubleshoot/windows-utilities',
         'devops/troubleshoot/windows-hardware-issues',
         'devops/troubleshoot/windows-network-issues',
         'devops/troubleshoot/ms-teams',
-        // 'devops/troubleshoot/',
+        // 'devops/troubleshoot/'
       ]
 
     },

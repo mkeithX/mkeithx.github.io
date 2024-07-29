@@ -1,0 +1,36 @@
+---
+description: Archive mailbox and auto-expanding
+---
+
+# Mailbox Archive
+
+This article outlines archive mailboxes and the auto-expanding features.
+
+## Run Diagnostics
+
+Run an automated diagnostic check on a user's archive mailbox to identify any problems and suggested resolutions.
+
+<div>
+  <a class="button button--outline button--warning" href="https://aka.ms/PillarArchiveMailbox" target="_blank">Diagnostics</a>
+</div>
+
+## PowerShell
+
+
+```sh
+Connect-ExchangeOnline 
+```
+
+```sh
+Enable-Mailbox -Identity <username> -Archive
+```
+### Auto-expanding
+
+```sh
+Enable-Mailbox <user mailbox> -AutoExpandingArchive
+```
+
+```sh
+Get-Mailbox <user mailbox> | FL AutoExpandingArchiveEnabled
+```
+

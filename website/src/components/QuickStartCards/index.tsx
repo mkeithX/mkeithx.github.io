@@ -36,11 +36,11 @@ function QuickStartCard({
       <div className="card shadow--tl">
         <div className="card__header">
           <div className="avatar">
-            <img
+            {/* <img
               className="avatar__photo avatar__photo--lg margin-vert--sm"
               src={`${githubUrl}.png`}
               alt={`${name}'s avatar`}
-            />
+            /> */}
             <div className="avatar__intro">
               <div className="avatar__name">{name}</div>
               <small className="avatar__subtitle">{subTitle}</small>
@@ -72,16 +72,26 @@ export function QuickStartCardRow(): JSX.Element {
   return (
     <div className="row">
       <QuickStartCol
-        name="DevOps"
-        subTitle="Advanced guides for for IT Developers and System Administrators."
-        githubUrl="https://github.com/kitiplex"
-      />
-      <QuickStartCol
         name="SpaceHub"
         subTitle="Space exploration, technological advances, and physics."
-        githubUrl="https://github.com/kitiplex"
+        githubUrl="/cosmos"
       />
       <QuickStartCol
+        name="Guides and Gists"
+        subTitle="Advanced guides for for IT Developers and System Administrators."
+        githubUrl="/docs/devops"
+      />
+      <QuickStartCol
+        name="Showcase"
+        subTitle="Projects and demos I've authored and contributed to."
+        githubUrl="/blog"
+      />
+      <QuickStartCol
+        name="Feature Requests"
+        subTitle="Submit your feature requests."
+        githubUrl="/feature-requests"
+      />
+      {/* <QuickStartCol
         name="Coming soon"
         subTitle="This feature will be out soon. Stay tuned."
         githubUrl="https://github.com/kitiplex"
@@ -90,7 +100,7 @@ export function QuickStartCardRow(): JSX.Element {
         name="Coming soon"
         subTitle="This feature will be out soon. Stay tuned."
         githubUrl="https://github.com/kitiplex"
-      />
+      /> */}
     </div>
   );
 }
