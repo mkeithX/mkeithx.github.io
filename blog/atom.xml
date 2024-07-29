@@ -6,7 +6,7 @@
     <generator>https://github.com/jpmonette/feed</generator>
     <link rel="alternate" href="https://mkeithx.github.io/blog"/>
     <subtitle>mkeithx Blog</subtitle>
-    <icon>https://mkeithx.github.io/icons/favicon/slash-dark.ico</icon>
+    <icon>https://mkeithx.github.io/icons/favicon/round-dark.ico</icon>
     <rights>© 2024 · Keith Tan · All rights reserved ·</rights>
     <entry>
         <title type="html"><![CDATA[DevOps July]]></title>
