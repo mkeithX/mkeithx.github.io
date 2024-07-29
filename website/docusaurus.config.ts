@@ -58,7 +58,7 @@ const commonDocsConfig = {
 const config: Config = {
   title: "mkeithx",
   tagline: "Unified Docs for Software Developers.",
-  favicon: "icons/favicon/slash-dark.ico",
+  favicon: "icons/favicon/round-dark.ico",
   // titleDelimiter: " ⚡️ ",
   url: "https://mkeithx.github.io",
   baseUrl: "/",
