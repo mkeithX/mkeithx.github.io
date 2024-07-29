@@ -281,7 +281,7 @@ const config: Config = {
           label: "DevOps",
         },
 
-        { to: "/cosmos", label: "Space", position: "left" },
+        { to: "/cosmos", label: "SpaceHub", position: "left" },
         {
           to: "/blog",
           label: "Blog",

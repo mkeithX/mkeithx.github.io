@@ -36,11 +36,11 @@ function QuickStartCard({
       <div className="card shadow--tl">
         <div className="card__header">
           <div className="avatar">
-            {/* <img
+            <img
               className="avatar__photo avatar__photo--lg margin-vert--sm"
-              src={`${githubUrl}.png`}
+              src={`/img/logo/x_code_one.png`}
               alt={`${name}'s avatar`}
-            /> */}
+            />
             <div className="avatar__intro">
               <div className="avatar__name">{name}</div>
               <small className="avatar__subtitle">{subTitle}</small>
@@ -98,9 +98,9 @@ export function DevOpsCardRow(): JSX.Element {
   return (
     <div className="row">
       <QuickStartCol
-        name="PowerShell"
-        subTitle="Get started with PowerShell"
-        githubUrl="/docs/devops/troubleshoot/powershell"
+        name="Win + Rs"
+        subTitle="Win utilities shortcuts"
+        githubUrl="/docs/devops/troubleshoot/windows-utilities"
       />
       <QuickStartCol
         name="aka.ms"
