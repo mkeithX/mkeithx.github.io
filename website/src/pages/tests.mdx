@@ -1,10 +1,8 @@
 ---
-title: Test Page
 description: Playground for extending APIs and extra plugin instances for testing / dogfooding purposes.
 hide_table_of_contents: false
 unlisted: true
 # wrapperClassName: docusaurus-markdown-example
-hide_title: false
 ---
 import Video from "/src/components/Video";
 import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
@@ -20,7 +18,35 @@ Playground for extending APIs and extra plugin instances for testing / dogfoodin
 
 - [`pathname:///pure-html`](pathname:///pure-html)
 
-## Getting started
+
+## Content
+The following should be present when publishing docs or blog in `.mdx` format.
+
+### Docs
+
+
+```yml title="docs.mdx" showLineNumbers
+---
+description: A brief meaningful description
+# title: Optional
+---
+```
+### Blog
+
+```yaml title="blog.mdx" showLineNumbers
+---
+title: What's init?
+tags: [post]
+authors: [mkeithx]
+slug: /init-py
+description: Understanding __init__.py in Python Packages
+draft: true
+---
+```
+
+
+## Iframes/Embeds
+
 
 
 <iframe src="https://free.timeanddate.com/clock/i9ddm2hg/n179/fn6/fs16/fc0f9/tc000/ftb/pa8/tt0/tw1/th1/ta1/tb4" frameborder="0" width="212" height="55"></iframe>
