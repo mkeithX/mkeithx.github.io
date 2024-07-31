@@ -17,8 +17,7 @@ require("dotenv").config();
 // console.log(process.env)
 const organizationName = process.env.ORGANIZATION_NAME || "mkeithX";
 const projectName = process.env.PROJECT_NAME || "mkeithx.github.io";
-const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "gh-pages";
-const url = process.env.PROJECT_URL || "https://mkeithx.github.io";
+const deploymentBranch = process.env.DEPLOYMENT_BRANCH
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · All rights reserved ·`;
 
@@ -61,7 +60,7 @@ const config: Config = {
   tagline: "Building Innovative Solutions",
   favicon: "icons/favicon/round-dark.ico",
   // titleDelimiter: " ⚡️ ",
-  url,
+  url: "https://mkeithx.pages.dev",
   baseUrl: "/",
   organizationName,
   projectName,
@@ -96,7 +95,6 @@ const config: Config = {
       type: 'text/css',
     },
   ],
-
 
   i18n: {
     defaultLocale: "en",
