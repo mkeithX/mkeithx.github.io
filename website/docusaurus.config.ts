@@ -327,9 +327,9 @@ const config: Config = {
     },
 
     algolia: {
-      apiKey: "4136649b1dea303e89f542e4f9ac48f7",
-      indexName: "mkeithxio.tmp.tmp",
-      appId: "X2M5FPT6G9",
+      apiKey: "17c82a48990cb1a63e048dbd20818637",
+      indexName: "mkeithx",
+      appId: "XVSOLYZXNV",
       contextualSearch: false,
       searchPagePath: "search",
       insights: false,
