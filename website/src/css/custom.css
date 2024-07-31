@@ -436,3 +436,25 @@ html[data-theme="dark"] div.theme-admonition.theme-admonition-tip a {
   color: #102445;
 }
 
+
+
+.error-footer {
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 20px;
+  padding: 10px;
+  margin: 20px auto;
+}
+
+.cta-button {
+  display: flex;
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
+  padding: 8px 18px;
+  /* background-color: var(--ifm-color-primary);
+  color: var(--ifm-color-primary); */
+  font-weight: bold;
+  border-radius: 5px;
+  text-decoration: none !important;
+}

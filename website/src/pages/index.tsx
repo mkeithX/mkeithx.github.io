@@ -41,7 +41,7 @@ function HomepageHeader(): JSX.Element {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-               {custom_title}
+               {tagline}
                {/* <b>{custom_title}</b> */}
             </div>
           </span>
@@ -64,7 +64,7 @@ function HomepageHeader(): JSX.Element {
             className="button button--outline button--primary button--lg"
             to="/docs"
           >
-            {"Explore"}
+            {"Get Started"}
           </Link>
           {/* <Link
             className="button button--outline button--info button--lg"
@@ -86,7 +86,7 @@ export default function Home(): JSX.Element {
   const { description } = customFields as { description: string };
   const { custom_footer } = customFields as { custom_footer: string};
   return (
-    <Layout title={custom_tagline} description={tagline}>
+    <Layout title={tagline} description={tagline}>
       {/* <TopBanner /> */}
       <HomepageHeader />
       <main>

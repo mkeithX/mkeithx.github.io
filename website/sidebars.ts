@@ -91,7 +91,8 @@ const sidebars: SidebarsConfig = {
 
   devops: [
     'devops/index',
-    'devops/key-principles',
+    // 'devops/key-principles',
+    'devops/troubleshoot-like-a-boss',
     {
       type: 'category',
       label: 'Microsoft 365',

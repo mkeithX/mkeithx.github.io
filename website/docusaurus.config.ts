@@ -18,6 +18,7 @@ require("dotenv").config();
 const organizationName = process.env.ORGANIZATION_NAME || "mkeithX";
 const projectName = process.env.PROJECT_NAME || "mkeithx.github.io";
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH || "gh-pages";
+const url = process.env.PROJECT_URL || "https://mkeithx.github.io";
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · All rights reserved ·`;
 
@@ -57,10 +58,10 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline: "Unified Docs for Software Developers.",
+  tagline: "Building Innovative Solutions",
   favicon: "icons/favicon/round-dark.ico",
   // titleDelimiter: " ⚡️ ",
-  url: "https://mkeithx.github.io",
+  url,
   baseUrl: "/",
   organizationName,
   projectName,
@@ -80,7 +81,7 @@ const config: Config = {
     custom_tagline: "Building the web",
     custom_footer: "Built for Humans.",
     // custom_title: "Guides for Seamless Software Deployment",
-    custom_title: "Building Innovative Solutions",
+    custom_title: "Unified Docs for Software Developers.",
     hero_header: "OpenSource",
     hero_footer: "Guides and samples from Keith",
     GIT_USER: process.env.GIT_USER,
@@ -224,7 +225,7 @@ const config: Config = {
 
   themeConfig: {
     colorMode: {
-      defaultMode: "light",
+      defaultMode: "dark",
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
@@ -259,7 +260,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "mkeithx",
+      title: "MKX",
       logo: {
         alt: "SiteLogo",
         src: "img/logo/x_code_slash.svg",
