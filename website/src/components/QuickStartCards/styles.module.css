@@ -1,5 +1,5 @@
 .card {
-    border: 1.5px solid var(--ifm-color-emphasis-300);
+    border: 1.5px solid var(--ifm-color-primary);
     box-shadow: var(--ifm-global-shadow-md);
     margin-bottom: var(--ifm-leading);
     height: 100%;
@@ -8,10 +8,11 @@
 
 .cardContainer {
     margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
+    /* margin-top: calc(var(--ifm-spacing-horizontal) * 2); */
 }
 
 .image {
-    background: var(--ifm-color-info);
+    /* background: var(--ifm-color-info); */
     position: relative;
     
 }

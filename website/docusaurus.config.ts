@@ -258,10 +258,10 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "MKX",
+      title: "Beta",
       logo: {
-        alt: "SiteLogo",
-        src: "img/logo/x_code_slash.svg",
+        alt: "MKX",
+        src: "img/logo/mkx_nav_dark_demo.png",
         target: "_self",
         // width: 32,
         // height: 28,
@@ -271,7 +271,7 @@ const config: Config = {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "The Keyword",
+          label: "Explore",
         },
         {
           type: "docSidebar",
@@ -280,7 +280,7 @@ const config: Config = {
           label: "DevOps",
         },
 
-        { to: "/cosmos", label: "SpaceHub", position: "left" },
+        { to: "/cosmos", label: "Cosmos", position: "left" },
         {
           to: "/blog",
           label: "Blog",
@@ -312,7 +312,7 @@ const config: Config = {
         },
 
         {
-          href: "https://github.com/mkeithX",
+          href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",

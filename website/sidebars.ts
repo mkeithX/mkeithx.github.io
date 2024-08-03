@@ -16,7 +16,7 @@ const sidebars: SidebarsConfig = {
 
   mySidebar: [
     "keyword",
-    "development",
+    // "development",
     {
       type: "category",
       label: "Guides",

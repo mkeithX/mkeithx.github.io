@@ -77,13 +77,17 @@
 .navbar__title {
   /* font-size: 1.2em; */
   font-weight: bolder;
-  /* background: linear-gradient(90deg,
-      #a451db 0%,
-      #38cafffb 50%,
-      #58fd97 100%);
+  background: linear-gradient(90deg,
+      #1da1f2 0%,
+      #00ff88 50%,
+      #f6ff7f 100%);
   background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
 }
+
+/* .navbar__title {
+  display: none;
+} */
 
 .dropdown-separator {
   margin: 0.3rem 0;

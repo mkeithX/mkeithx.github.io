@@ -1,7 +1,8 @@
 import React, { ReactNode } from "react";
 import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
-
+import styles from "./styles.module.css";
+import clsx from "clsx";
 
 type WebsiteLinkProps = {
   to: string;
@@ -20,38 +21,48 @@ function WebsiteLink({ to, children }: WebsiteLinkProps) {
 
 type ProfileProps = {
   className?: string;
-  name: string;
+  title: string;
   subTitle: string;
   githubUrl: string;
 };
 
 function QuickStartCard({
   className,
-  name,
+  title,
   subTitle,
   githubUrl,
 }: ProfileProps) {
   return (
-    <div className={className}>
-      <div className="card shadow--tl">
+    <div className={clsx("col col--6", styles.cardContainer)}>
+      <div className={clsx("card shadow--tl", styles.card)}>
         <div className="card__header">
-          <div className="avatar">
+        <div className={clsx("avatar")}>
             <img
               className="avatar__photo avatar__photo--lg margin-vert--sm"
-              src={`/img/logo/x_code_one.png`}
+              src={`/img/logo/x_code_slash.svg`}
               alt={`${name}'s avatar`}
             />
             <div className="avatar__intro">
-              <div className="avatar__name">{name}</div>
-              <small className="avatar__subtitle">{subTitle}</small>
+              <div className="avatar__name">{title}</div>
+              <div className="avatar__subtitle">{subTitle}</div>
             </div>
           </div>
-        </div>
-        <div className="card__footer">
-          <div className="button-group">
+          {/* <div className="button-group">
             {githubUrl && (
               <Link
-                className="button button--outline button--primary"
+                className="button buttom--outline button--primary"
+                href={githubUrl}
+              >
+                {"Learn more"}
+              </Link>
+            )}
+          </div> */}
+        </div>
+        <div className="card__footer">
+          <div className="button-group button-group--block">
+            {githubUrl && (
+              <Link
+                className="button button--secondary"
                 href={githubUrl}
               >
                 {"Learn more"}
@@ -72,22 +83,22 @@ export function QuickStartCardRow(): JSX.Element {
   return (
     <div className="row">
       <QuickStartCol
-        name="SpaceHub"
+        title="Cosmos"
         subTitle="Space exploration, technological advances, and physics."
         githubUrl="/cosmos"
       />
       <QuickStartCol
-        name="Guides and Gists"
-        subTitle="Advanced guides for for IT Developers and System Administrators."
+        title="Guides and Gists"
+        subTitle="Advanced guides IT Developers and System Admin."
         githubUrl="/docs/devops"
       />
-      <QuickStartCol
-        name="Blog"
+      {/* <QuickStartCol
+        title="Blog"
         subTitle="Recent updates and Releases"
         githubUrl="/blog"
-      />
+      /> */}
       {/* <QuickStartCol
-        name="Feature Requests"
+        title="Feature Requests"
         subTitle="Submit your feature requests."
         githubUrl="/feature-requests"
       /> */}
@@ -98,12 +109,12 @@ export function DevOpsCardRow(): JSX.Element {
   return (
     <div className="row">
       <QuickStartCol
-        name="Win + Rs"
+        title="Win + Rs"
         subTitle="Win utilities shortcuts"
         githubUrl="/docs/devops/troubleshoot/windows-utilities"
       />
       <QuickStartCol
-        name="aka.ms"
+        title="aka.ms"
         subTitle="All about aka.ms"
         githubUrl="/docs/devops/admin-center/aka-ms"
       />
