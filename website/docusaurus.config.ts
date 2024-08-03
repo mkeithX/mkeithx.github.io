@@ -258,10 +258,10 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "Beta",
+      title: "DevOps",
       logo: {
         alt: "MKX",
-        src: "img/logo/mkx_nav_dark_demo.png",
+        src: "img/logo/mkx-x-nav.png",
         target: "_self",
         // width: 32,
         // height: 28,
@@ -277,7 +277,7 @@ const config: Config = {
           type: "docSidebar",
           sidebarId: "devops",
           position: "left",
-          label: "DevOps",
+          label: "Developers",
         },
 
         { to: "/cosmos", label: "Cosmos", position: "left" },

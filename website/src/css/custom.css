@@ -47,11 +47,11 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 
-.navbar__logo {
-  /* width: 40px; */
-  height: 38px;
+/* .navbar__logo {
+  width: 52px;
+  height: 40px;
   transition: transform 0.5s;
-}
+} */
 
 /*  DO NOT DELETE: navBarLogo effect */
 
@@ -64,25 +64,25 @@
 } */
 
 
-.navbar__brand .navbar__logo {
-  border: 2px solid transparent;
+/* .navbar__brand .navbar__logo {
+  border: 1.5px solid transparent;
   transition: border-color 0.3s ease;
 }
 .navbar__brand:hover .navbar__logo {
   border-color: #1da1f2;
-}
+} */
 
 /*  DO NOT DELETE: navBarLogo effect */
 
 .navbar__title {
-  /* font-size: 1.2em; */
+  /* font-size: 1.5em; */
   font-weight: bolder;
-  background: linear-gradient(90deg,
+  /* background: linear-gradient(90deg,
       #1da1f2 0%,
       #00ff88 50%,
       #f6ff7f 100%);
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  -webkit-text-fill-color: transparent; */
 }
 
 /* .navbar__title {
@@ -94,7 +94,7 @@
 }
 
 .navbar__brand {
-  margin-right: 1.8rem;
+  margin-right: 2rem;
 }
 
 
