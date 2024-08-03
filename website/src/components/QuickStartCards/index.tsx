@@ -40,7 +40,7 @@ function QuickStartCard({
             <img
               className="avatar__photo avatar__photo--lg margin-vert--sm"
               src={`/img/logo/x_code_slash.svg`}
-              alt={`${name}'s avatar`}
+              alt={`${title}'s avatar`}
             />
             <div className="avatar__intro">
               <div className="avatar__name">{title}</div>
