@@ -219,6 +219,13 @@ const config: Config = {
         ],
       } satisfies ClientRedirectsOptions,
     ],
+    [
+      'vercel-analytics',
+      {
+        debug: true,
+        mode: 'auto',
+      },
+    ],
   ],
 
   themeConfig: {
