@@ -54,9 +54,10 @@
 } */
 
 /*  DO NOT DELETE: navBarLogo effect */
-
-/* .navbar__brand:hover .navbar__logo {
+/* 
+.navbar__brand:hover .navbar__logo {
   transform: rotate(360deg) scale(1.0);
+  transition: transform 0.5s;
 } */
 
 /* .navbar__brand:hover .navbar__logo {
@@ -65,25 +66,25 @@
 } */
 
 
-.navbar__brand .navbar__logo {
+/* .navbar__brand .navbar__logo {
   border: 1.5px solid transparent;
   transition: border-color 0.3s ease;
 }
 .navbar__brand:hover .navbar__logo {
   border-color: #1da1f2;
-}
+} */
 
 /*  DO NOT DELETE: navBarLogo effect */
 
 .navbar__title {
   /* font-size: 1.5em; */
-  font-weight: bolder;
-  /* background: linear-gradient(90deg,
+  /* font-weight: bolder; */
+  background: linear-gradient(90deg,
       #1da1f2 0%,
       #00ff88 50%,
       #f6ff7f 100%);
   background-clip: text;
-  -webkit-text-fill-color: transparent; */
+  -webkit-text-fill-color: transparent;
 }
 
 /* .navbar__title {

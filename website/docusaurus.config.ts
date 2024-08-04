@@ -258,13 +258,14 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "Developers",
+      title: "MKX SpaceHub",
       logo: {
         alt: "MKX",
-        src: "img/logo/terminal-no-slash.svg",
+        src: "img/logo/code-alt.png",
+        // srcDark: "img/logo/mkxspacehub-logo-dark.png",
         target: "_self",
-        // width: 80,
-        // height: 40,
+        // width: 32,
+        // height: 32,
       },
       items: [
         {

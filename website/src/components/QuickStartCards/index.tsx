@@ -83,7 +83,7 @@ export function QuickStartCardRow(): JSX.Element {
   return (
     <div className="row">
       <QuickStartCol
-        title="Advanced Troubleshooting"
+        title="Advanced Guides"
         subTitle="Tips and Best Practice for mitigating issues."
         webUrl="/docs/devops/troubleshoot-like-a-boss"
       />
