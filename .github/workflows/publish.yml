@@ -18,7 +18,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: CLOUDFLARE_ACCOUNT_ID
-          projectName: CLOUDFLARE_PROJECT_NAME
+          projectName: mkeithx
           directory: build
           # Optional: Enable this if you want to have GitHub Deployments triggered
         #   gitHubToken: ${{ secrets.GITHUB_TOKEN }}
