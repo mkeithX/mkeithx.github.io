@@ -1,5 +1,5 @@
 ---
-title: August 2024 Specials
+title: August 2024 Update
 tags: [updates]
 authors: [mkeithx]
 slug: /august-2024-specials
@@ -8,11 +8,14 @@ image: ./media/aug-2024-banner.png
 draft: true
 ---
 
-import BrowserWindow from '@site/src/components/BrowserWindow';
-import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import BrowserWindow from "@site/src/components/BrowserWindow";
+import IframeWindow from "@site/src/components/BrowserWindow/IframeWindow";
+import { QuickStartCardRow } from "@site/src/components/QuickStartCards";
+import { DevOpsCardRow } from "@site/src/components/QuickStartCards";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
-
-Announcing **The August 2024 Specials**. 
+Announcing **The August 2024 Specials**.
 
 This update focuses more on accessibility
 
@@ -23,45 +26,161 @@ This update focuses more on accessibility
 # Highlights
 
 ## React `<Components/>`
+
 Docusaurus supports MDX out of the box, enabling you to embed JSX directly in your Markdown files and render them as React components. Apart from the features in the homepage, check out this [custom cards](/docs#building-the-hub).
 
-```tsx
-import React from 'react';
-import Layout from '@theme/Layout';
-import Head from '@docusaurus/Head';
+<QuickStartCardRow />
 
-export default function Page() {
+<DevOpsCardRow />
+
+<details>
+<summary><b>Show Snippet</b></summary>
+
+<Tabs>
+
+  <TabItem value="tsx" label="TypeScript" default>
+
+```tsx title="src/components/QuickStartCards/index.tsx" showLineNumbers
+import React, { ReactNode } from "react";
+import Link from "@docusaurus/Link";
+import styles from "./styles.module.css";
+import clsx from "clsx";
+import QuickStartImageUrl from "@site/static/img/logo/x_code_slash.svg";
+
+type QuickStartLinkProps = {
+  to: string;
+  children?: ReactNode;
+};
+
+function QuickStartLink({ to, children }: QuickStartLinkProps) {
   return (
-    <Layout title="Page" description="A React page demo">
-      <Head>
-        <meta property="og:image" content="image.png" />
-        <meta name="twitter:card" content="summary_large_image" />
-        <link rel="preconnect" href="https://example.com" />
-        <script type="application/ld+json">
-          {JSON.stringify({
-            '@context': 'https://schema.org/',
-            '@type': 'Organization',
-            name: 'Meta Open Source',
-            url: 'https://opensource.fb.com/',
-            logo: 'https://opensource.fb.com/img/logos/Meta-Open-Source.svg',
-          })}
-        </script>
-      </Head>
-      {/* ... */}
-    </Layout>
+    <Link to={to}>
+      {children ?? <div id="quickstartLinkLabel">website</div>}
+    </Link>
+  );
+}
+
+type ProfileProps = {
+  className?: string;
+  title: string;
+  subTitle: string;
+  webUrl: string;
+};
+
+function QuickStartCard({ className, title, subTitle, webUrl }: ProfileProps) {
+  return (
+    <div className={clsx("col col--6", styles.cardContainer)}>
+      <div className={clsx("card", styles.card)}>
+        <div className={clsx("card__header")}>
+          <div className={clsx("avatar")}>
+            <QuickStartImageUrl
+              className={clsx("avatar__photo avatar__photo--lg", styles.image)}
+              title={title}
+            />
+            <div className="avatar__intro">
+              <div className="avatar__name">{title}</div>
+              <div className="avatar__subtitle">{subTitle}</div>
+            </div>
+          </div>
+        </div>
+        <div className={clsx("card__footer")}>
+          <div
+            className={clsx("button-group button-group--block", styles.buttons)}
+          >
+            {webUrl && (
+              <Link className="button button--secondary" to={webUrl}>
+                {"Learn more"}
+              </Link>
+            )}
+          </div>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+function QuickStartCol(props: ProfileProps) {
+  return <QuickStartCard {...props} />;
+}
+
+export function QuickStartCardRow(): JSX.Element {
+  return (
+    <div className="row">
+      <QuickStartCol
+        title="Advanced Guides"
+        subTitle="Tips and Best Practice for mitigating issues."
+        webUrl="/docs/devops/troubleshoot-like-a-boss"
+      />
+      <QuickStartCol
+        title="Cosmos"
+        subTitle="Space exploration, technological advances, and physics."
+        webUrl="/cosmos"
+      />
+    </div>
+  );
+}
+export function DevOpsCardRow(): JSX.Element {
+  return (
+    <div className="row">
+      <QuickStartCol
+        title="Win + Rs"
+        subTitle="Win utilities shortcuts"
+        webUrl="/docs/devops/troubleshoot/windows-utilities"
+      />
+      <QuickStartCol
+        title="aka.ms"
+        subTitle="All about aka.ms"
+        webUrl="/docs/devops/admin-center/aka-ms"
+      />
+    </div>
   );
 }
 ```
 
+  </TabItem>
+  <TabItem value="css" label="CSS">
 
+```css title="src/components/QuickStartCards/styles.css" showLineNumbers
+.card {
+  border: 1.5px solid var(--ifm-color-primary);
+  box-shadow: var(--ifm-global-shadow-tl);
+  margin-bottom: var(--ifm-leading);
+  height: 100%;
+  overflow: hidden;
+}
+
+.cardContainer {
+  margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
+  margin-top: calc(var(--ifm-spacing-horizontal) * 1.5);
+}
+
+.image {
+  /* background: var(--ifm-color-info); */
+  position: relative;
+}
+
+.buttons {
+  display: flex;
+  justify-content: left;
+  margin-top: auto;
+  color: var(--ifm-color-primary);
+}
+```
+
+  </TabItem>
+
+</Tabs>
+
+</details>
 
 ## Extending Deployments
-
 
 ## The Custom 404 page
 
 ### Dark Theme
+
 <IframeWindow url="/404/?docusaurus-theme=dark" />
 
 ### Light Theme
+
 <IframeWindow url="/404/?docusaurus-theme=light" />
