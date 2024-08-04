@@ -17,11 +17,11 @@ jobs:
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CF_PAGES_TOKEN }}
-          accountId: CLOUDFLARE_ACCOUNT_ID
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: mkeithx
           directory: build
           # Optional: Enable this if you want to have GitHub Deployments triggered
-        #   gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+        #   gitHubToken: 
           # Optional: Switch what branch you are publishing to.
           # By default this will be the branch which triggered this workflow
         #   branch: main
