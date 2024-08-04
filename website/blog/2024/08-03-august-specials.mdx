@@ -4,24 +4,52 @@ tags: [updates]
 authors: [mkeithx]
 slug: /august-2024-specials
 description: The August 2024 Specials
+image: ./media/aug-2024-banner.png
 ---
+
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+
 
 Announcing **The August 2024 Specials**. 
 
 This update focuses more on accessibility
 
-
-![media](./media/mkx-blog-default.png)
+![media](./media/aug-2024-banner.png)
 
 <!-- truncate -->
 
 # Highlights
 
-## React Components
+## React `<Components/>`
 Docusaurus supports MDX out of the box, enabling you to embed JSX directly in your Markdown files and render them as React components. Apart from the features in the homepage, check out this [custom cards](/docs#building-the-hub).
 
-```jsx
-hello.co
+```tsx
+import React from 'react';
+import Layout from '@theme/Layout';
+import Head from '@docusaurus/Head';
+
+export default function Page() {
+  return (
+    <Layout title="Page" description="A React page demo">
+      <Head>
+        <meta property="og:image" content="image.png" />
+        <meta name="twitter:card" content="summary_large_image" />
+        <link rel="preconnect" href="https://example.com" />
+        <script type="application/ld+json">
+          {JSON.stringify({
+            '@context': 'https://schema.org/',
+            '@type': 'Organization',
+            name: 'Meta Open Source',
+            url: 'https://opensource.fb.com/',
+            logo: 'https://opensource.fb.com/img/logos/Meta-Open-Source.svg',
+          })}
+        </script>
+      </Head>
+      {/* ... */}
+    </Layout>
+  );
+}
 ```
 
 
@@ -30,3 +58,9 @@ hello.co
 
 
 ## The Custom 404 page
+
+### Dark Theme
+<IframeWindow url="/404/?docusaurus-theme=dark" />
+
+### Light Theme
+<IframeWindow url="/404/?docusaurus-theme=light" />
