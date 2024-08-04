@@ -1,21 +1,28 @@
-name: Publish
+name: Deploy
 
 on:
   push:
+    branches: [main]
+
+  pull_request:
     branches:
       - main
+
     paths:
-      - '.github/workflows/deploy.yml'
-      - 'website/**'
-  pull_request:
+      - ".github/workflows/deploy.yml"
+      - "website/**"
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+permissions:
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
+
     defaults:
       run:
         working-directory: website
@@ -29,9 +36,17 @@ jobs:
 
       - run: npm install && npm run build
 
-      - name: Deploy
+      #
+
+      - name: Upload Website artifact
+        uses: actions/upload-artifact@v4
+        with:
+          name: website-hash-router-archive
+          path: website/build
+
+      - name: Deploy to GitHub Pages
+        if: ${{ github.event_name != 'pull_request' && github.ref_name == 'main' }}
         uses: peaceiris/actions-gh-pages@v4
-        if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
+          publish_dir: website/build
