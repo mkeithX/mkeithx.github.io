@@ -36,4 +36,4 @@ jobs:
           # Optional: Change the working directory
           workingDirectory: website
           # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
-          wranglerVersion: '3'
+        #   wranglerVersion: '3'
