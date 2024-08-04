@@ -3,6 +3,7 @@ import React, { ReactNode } from "react";
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
 import clsx from "clsx";
+import QuickStartImageUrl from '@site/static/img/logo/x_code_slash.svg';
 
 type WebsiteLinkProps = {
   to: string;
@@ -37,10 +38,11 @@ function QuickStartCard({
       <div className={clsx("card", styles.card)}>
         <div className={clsx("card__header")}>
         <div className={clsx("avatar")}>
-            <img
+            <QuickStartImageUrl
               className={clsx("avatar__photo avatar__photo--lg", styles.image)}
-              src={`/img/logo/x_code_slash.svg`}
-              alt={`${title}'s avatar`}
+              title={title}
+              // src={require("QuickStartImageUrl")}
+              // alt={`${title}'s avatar`}
             />
             <div className="avatar__intro">
               <div className="avatar__name">{title}</div>
