@@ -5,13 +5,16 @@
 - [ ] **For new APIs or substantial changes**: This PR has an associated issue (closes #0000) and has been approved by the maintainers.
 
 ## Description
-<!-- Briefly describe the purpose of this PR. -->
+> _Briefly describe the purpose of this PR._
+
 
 ## Changes
-<!-- List the changes made in this PR. -->
+> _List the changes made in this PR._
+
 
 ## Testing
-<!-- Describe how to test the changes and the expected behavior. Provide steps or links if necessary. -->
+> _Describe how to test the changes and the expected behavior. Provide steps or links if necessary._
+
 
 ## Related Issues/PRs
-<!-- Reference any related issues or pull requests. -->
+> _Reference any related issues or pull requests._
