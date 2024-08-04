@@ -1,0 +1,30 @@
+{
+  "name": "mkeithx.github.io",
+  "version": "0.0.0",
+  "private": true,
+  "description": "MKX SpaceHub",
+  "scripts": {
+    "start": "cd website && npm run docusaurus start",
+    "dev": "cd website && npm run docusaurus start",
+    "clear": "cd website && npm run docusaurus clear",
+    "start:fast" : "cd website && npm run docusaurus start -- --host 0.0.0.0 --no-open",
+    "serve:fast" : "cd website && npm run docusaurus build && npm run docusaurus serve --host 0.0.0.0",
+    "rm:pckg":"cd website && pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\"",
+    "install:pckg": "cd website && npm install"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/mkeithX/mkeithx.github.io.git"
+  },
+  "keywords": [
+    "mkeithx",
+    "website",
+    "mkxspacehub"
+  ],
+  "author": "Keith Tan",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/mkeithX/mkeithx.github.io/issues"
+  },
+  "homepage": "https://mkeithx.github.io/"
+}
