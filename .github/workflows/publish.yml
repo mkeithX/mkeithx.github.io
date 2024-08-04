@@ -11,6 +11,13 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+    #   - name: Setup Node
+    #     uses: actions/setup-node@v4
+    #     with:
+    #       node-version: 20
+    #     - run: npm install && npm run build
+
+
       # Run a build step here if your project requires
 
       - name: Publish to Cloudflare Pages
@@ -19,13 +26,15 @@ jobs:
           apiToken: ${{ secrets.CF_PAGES_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: mkeithx
-          directory: website
+          directory: ./website/build
+
+          
           # Optional: Enable this if you want to have GitHub Deployments triggered
-        #   gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           # Optional: Switch what branch you are publishing to.
           # By default this will be the branch which triggered this workflow
-        #   branch: main
+          branch: main
           # Optional: Change the working directory
           workingDirectory: website
           # Optional: Change the Wrangler version, allows you to point to a specific version or a tag such as `beta`
-          wranglerVersion: '3'
+        #   wranglerVersion: '3'
