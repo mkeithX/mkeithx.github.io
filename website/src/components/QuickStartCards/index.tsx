@@ -38,7 +38,7 @@ function QuickStartCard({
         <div className={clsx("card__header")}>
         <div className={clsx("avatar")}>
             <img
-              className="avatar__photo avatar__photo--lg margin-vert--sm"
+              className={clsx("avatar__photo avatar__photo--lg", styles.image)}
               src={`/img/logo/x_code_slash.svg`}
               alt={`${title}'s avatar`}
             />

@@ -61,16 +61,17 @@
 
 /* .navbar__brand:hover .navbar__logo {
   transform: scaleX(-1) scale(1.0);
+  transition: transform 0.5s;
 } */
 
 
-/* .navbar__brand .navbar__logo {
+.navbar__brand .navbar__logo {
   border: 1.5px solid transparent;
   transition: border-color 0.3s ease;
 }
 .navbar__brand:hover .navbar__logo {
   border-color: #1da1f2;
-} */
+}
 
 /*  DO NOT DELETE: navBarLogo effect */
 
