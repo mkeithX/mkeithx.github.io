@@ -50,8 +50,8 @@ const commonDocsConfig = {
   editLocalizedFiles: false,
   editCurrentVersion: false,
   // editUrl: 'https://github.com/mkeithX/mkeithx.github.io/edit/main/website/',
-  // ...admonitionsConfig,
-  // ...commonRemarkConfig,
+  ...admonitionsConfig,
+  ...commonRemarkConfig,
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
 };
