@@ -15,8 +15,8 @@ import { socialProfiles } from "./social.json";
 require("dotenv").config();
 
 // console.log(process.env)
-const organizationName = process.env.ORGANIZATION_NAME || "mkeithX";
-const projectName = process.env.PROJECT_NAME || "mkeithx.github.io";
+const organizationName = process.env.ORGANIZATION_NAME
+const projectName = process.env.PROJECT_NAME;
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · All rights reserved ·`;
@@ -47,12 +47,13 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  showLastUpdateAuthor: true,
-  showLastUpdateTime: true,
-  // editUrl: ({versionDocsDirPath, docPath}) =>
-  //   `https://github.com/mkeithX/mkeithx.github.io/edit/main/website/${versionDocsDirPath}/${docPath}`,
+  editLocalizedFiles: false,
+  editCurrentVersion: false,
+  editUrl: 'https://github.com/mkeithX/mkeithx.github.io/edit/main/website/',
   ...admonitionsConfig,
   ...commonRemarkConfig,
+  showLastUpdateAuthor: true,
+  showLastUpdateTime: true,
 };
 
 const config: Config = {
@@ -119,7 +120,7 @@ const config: Config = {
           blogTitle: "Blog",
           blogDescription: "Recent updates and releases from mkeithx.",
           routeBasePath: "blog",
-          blogSidebarTitle: "Updates and Releases",
+          blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
@@ -241,27 +242,27 @@ const config: Config = {
     },
 
     image: "img/mkx-social.png",
-    metadata: [
-      {
-        name: "description",
-        description: "Building the web with mkeithx.",
-      },
-      {
-        name: "keywords",
-        content: "web-dev,mkeithx,keith,keith tan,python,docusaurus,react",
-      },
-      {
-        name: "twitter:card",
-        content: "summary",
-      },
-    ],
+    // metadata: [
+    //   {
+    //     name: "description",
+    //     description: "Building the web with mkeithx.",
+    //   },
+    //   {
+    //     name: "keywords",
+    //     content: "web-dev,mkeithx,keith,keith tan,python,docusaurus,react",
+    //   },
+    //   {
+    //     name: "twitter:card",
+    //     content: "summary",
+    //   },
+    // ],
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "MKX SpaceHub",
+      title: "SpaceHub",
       logo: {
         alt: "MKX",
-        src: "img/logo/code-alt.png",
+        src: "img/logo/mkxspacehub-logo-alt.png",
         // srcDark: "img/logo/mkxspacehub-logo-dark.png",
         target: "_self",
         // width: 32,
@@ -282,11 +283,9 @@ const config: Config = {
         },
 
         { to: "/cosmos", label: "Cosmos", position: "left" },
-        {
-          to: "/blog",
-          label: "Blog",
-        },
-        { to: "/community", label: "Community", position: "left" },
+        { to: "/blog", label: "Blog" },
+        { to: "/community", label: "Community"},
+        
         {
           type: "dropdown",
           label: "More",
@@ -296,7 +295,6 @@ const config: Config = {
             { to: "/projects", label: "Showcase" },
             { to: "/feature-requests", label: "Feature Requests" },
 
-            
             {
               type: "html",
               value: '<hr class="dropdown-separator">',
@@ -338,10 +336,10 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/spacehub-x-logo.png",
+        src: "img/logo/mkxspacehub-logo.png",
         href: "/",
         // height: "30",
-        width: "230",
+        width: "300",
       },
       links: [
         {

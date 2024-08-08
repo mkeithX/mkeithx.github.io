@@ -62,11 +62,12 @@ function Feature({ title, Svg, description }: FeatureItem) {
 
 export default function HomepageFeatures(): JSX.Element {
   return (
-    <section className={clsx(styles.features)}>
+    <section className={styles.features}>
       <div className="container text--center">
-        {/* <h2 className={styles.heroTitleTextHtml}>
-          <b>Feat</b>uring
-        </h2> */}
+        <h2 className={styles.heroTitleTextHtml}>
+          {/* <b>{"Features"}</b> */}
+          {/* {"Features"} */}
+        </h2>
 
         <div className="row">
           {FeatureList.map((props, idx) => (

@@ -3,7 +3,6 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
-  
 }
 
 .featureSvg {
@@ -12,7 +11,7 @@
 }
 
 .heroTitleTextHtml b {
-  color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-primary);
   
 }
 
