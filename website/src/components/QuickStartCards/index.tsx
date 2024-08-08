@@ -2,7 +2,7 @@ import React, { ReactNode } from "react";
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
 import clsx from "clsx";
-import QuickStartImageUrl from "@site/static/img/logo/x_code_slash.svg";
+import QuickStartImageUrl from "@site/static/img/logo/terminal-no-slash.svg";
 
 type QuickStartLinkProps = {
   to: string;

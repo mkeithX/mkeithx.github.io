@@ -22,7 +22,7 @@
   --ifm-code-font-size: 95%;
   --ifm-font-size-base: 16px;
   --ifm-heading-font-weight: 600;
-  /* --ifm-font-weight-semibold: 600; */
+  --ifm-font-weight-semibold: 600;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
@@ -77,7 +77,7 @@
 /*  DO NOT DELETE: navBarLogo effect */
 
 .navbar__title {
-  /* font-size: 1.5em; */
+  font-size: 1em;
   font-weight: bolder;
   /* background: linear-gradient(90deg,
       #1da1f2 0%,
