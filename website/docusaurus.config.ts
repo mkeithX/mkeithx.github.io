@@ -239,20 +239,20 @@ const config: Config = {
     },
 
     image: "img/mkx-social.png",
-    metadata: [
-      {
-        name: "description",
-        description: "Building the web with mkeithx.",
-      },
-      {
-        name: "keywords",
-        content: "web-dev,mkeithx,keith,keith tan,python,docusaurus,react",
-      },
-      {
-        name: "twitter:card",
-        content: "summary",
-      },
-    ],
+    // metadata: [
+    //   {
+    //     name: "description",
+    //     description: "Building the web with mkeithx.",
+    //   },
+    //   {
+    //     name: "keywords",
+    //     content: "web-dev,mkeithx,keith,keith tan,python,docusaurus,react",
+    //   },
+    //   {
+    //     name: "twitter:card",
+    //     content: "summary",
+    //   },
+    // ],
     navbar: {
       style: "dark",
       hideOnScroll: true,
@@ -333,10 +333,10 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/spacehub-x-logo.png",
+        src: "img/logo/mkxspacehub-logo.png",
         href: "/",
         // height: "30",
-        width: "230",
+        width: "300",
       },
       links: [
         {
