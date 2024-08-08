@@ -49,9 +49,9 @@ const commonRemarkConfig = {
 const commonDocsConfig = {
   editLocalizedFiles: false,
   editCurrentVersion: false,
-  editUrl: 'https://github.com/mkeithX/mkeithx.github.io/edit/main/website/',
-  ...admonitionsConfig,
-  ...commonRemarkConfig,
+  // editUrl: 'https://github.com/mkeithX/mkeithx.github.io/edit/main/website/',
+  // ...admonitionsConfig,
+  // ...commonRemarkConfig,
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
 };
@@ -329,7 +329,7 @@ const config: Config = {
       appId: "XVSOLYZXNV",
       contextualSearch: false,
       searchPagePath: "search",
-      insights: false,
+      insights: true,
     },
 
     footer: {
