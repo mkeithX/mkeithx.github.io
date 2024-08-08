@@ -11,6 +11,15 @@
 }
 
 .featureSvg {
-  height: 150px;
+  height: 250px;
   width: 200px;
+}
+
+.heroTitleTextHtml b {
+  color: var(--ifm-color-primary-dark);
+  color: transparent;
+  background: linear-gradient(90deg, #1da1f2  0%, #00ff88 50%, #f6ff7f 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  
 }

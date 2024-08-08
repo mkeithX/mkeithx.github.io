@@ -22,7 +22,7 @@ function HomepageHeader(): JSX.Element {
   const { hero_footer } = customFields as { hero_footer: string };
   const { custom_footer } = customFields as { custom_footer: string };
   const { custom_title } = customFields as { custom_title: string };
-  return ( 
+  return (
     <header className={clsx("hero hero--dark", styles.heroBanner)}>
       <div className="container">
         <BannerLogo
@@ -41,8 +41,8 @@ function HomepageHeader(): JSX.Element {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-               {tagline}
-               {/* <b>{custom_title}</b> */}
+              {tagline}
+              {/* <b>{custom_title}</b> */}
             </div>
           </span>
         </Heading>
@@ -51,10 +51,8 @@ function HomepageHeader(): JSX.Element {
           {/* <span className={styles.heroCustomSubTitleHtml}>
             <b>{hero_footer}</b>
           </span> */}
-          
-          <span className={styles.heroCustomTagline}>
-            {hero_footer}
-          </span>
+
+          <span className={styles.heroCustomTagline}>{hero_footer}</span>
         </div>
 
         <br></br>
@@ -78,13 +76,15 @@ export default function Home(): JSX.Element {
   } = useDocusaurusContext();
   const { custom_tagline } = customFields as { custom_tagline: string };
   const { description } = customFields as { description: string };
-  const { custom_footer } = customFields as { custom_footer: string};
+  const { custom_footer } = customFields as { custom_footer: string };
   return (
     <Layout title={tagline} description={tagline}>
       {/* <TopBanner /> */}
-      <HomepageHeader />
       <main>
+        <HomepageHeader />
+        <div className={styles.section}>
         <HomepageFeatures />
+        </div>
         <IntroCards />
       </main>
     </Layout>

@@ -16,7 +16,7 @@ require("dotenv").config();
 
 // console.log(process.env)
 const organizationName = process.env.ORGANIZATION_NAME || "mkeithX";
-const projectName = process.env.PROJECT_NAME || "mkeithx.github.io";
+const projectName = process.env.PROJECT_NAME;
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · All rights reserved ·`;
@@ -49,8 +49,6 @@ const commonRemarkConfig = {
 const commonDocsConfig = {
   showLastUpdateAuthor: true,
   showLastUpdateTime: true,
-  // editUrl: ({versionDocsDirPath, docPath}) =>
-  //   `https://github.com/mkeithX/mkeithx.github.io/edit/main/website/${versionDocsDirPath}/${docPath}`,
   ...admonitionsConfig,
   ...commonRemarkConfig,
 };
@@ -282,11 +280,9 @@ const config: Config = {
         },
 
         { to: "/cosmos", label: "Cosmos", position: "left" },
-        {
-          to: "/blog",
-          label: "Blog",
-        },
+        { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community", position: "left" },
+        
         {
           type: "dropdown",
           label: "More",
@@ -296,7 +292,6 @@ const config: Config = {
             { to: "/projects", label: "Showcase" },
             { to: "/feature-requests", label: "Feature Requests" },
 
-            
             {
               type: "html",
               value: '<hr class="dropdown-separator">',
