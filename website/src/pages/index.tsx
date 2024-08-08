@@ -66,12 +66,6 @@ function HomepageHeader(): JSX.Element {
           >
             {"Explore"}
           </Link>
-          {/* <Link
-            className="button button--outline button--info button--lg"
-            to="/cosmos"
-          >
-            {"Try Demo"}
-          </Link> */}
         </div>
       </div>
     </header>
