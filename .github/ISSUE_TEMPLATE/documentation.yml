@@ -1,6 +1,6 @@
 name: 📚 Documentation
 description: Report an issue related to documentation
-labels: ["bug", "triage"]
+labels: ["bug", "needs triage"]
 assignees:
   - mkeithX
 body:
