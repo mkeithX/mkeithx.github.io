@@ -7,7 +7,8 @@
     <link rel="alternate" href="https://mkeithx.pages.dev/blog"/>
     <subtitle>mkeithx Blog</subtitle>
     <icon>https://mkeithx.pages.dev/icons/favicon/round-dark.ico</icon>
-    <rights>© 2024 · Keith Tan · All rights reserved ·</rights>
+    <rights>© 2024 · Keith Tan · &lt;br&gt;
+ All rights reserved </rights>
     <entry>
         <title type="html"><![CDATA[DevOps July]]></title>
         <id>https://mkeithx.pages.dev/blog/devops-july</id>

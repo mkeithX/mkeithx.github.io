@@ -8,7 +8,8 @@
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>
         <language>en</language>
-        <copyright>© 2024 · Keith Tan · All rights reserved ·</copyright>
+        <copyright>© 2024 · Keith Tan · &lt;br&gt;
+ All rights reserved </copyright>
         <item>
             <title><![CDATA[DevOps July]]></title>
             <link>https://mkeithx.pages.dev/blog/devops-july</link>
