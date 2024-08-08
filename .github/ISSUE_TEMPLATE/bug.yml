@@ -1,4 +1,4 @@
-name: 📚 Documentation
+name: 🐛 Bug Report
 description: Report an issue related to documentation
 labels: ["bug", "needs triage"]
 assignees:
@@ -7,13 +7,14 @@ body:
   - type: markdown
     attributes:
       value: |
-      
-        Thank you for helping us improve. Please note that this template is strictly for documentation-related issues. [Learn more](https://mkeithx.pages.dev/community/contributing#issues).
+        Thanks for taking the time to fill out this bug report.
+        [Learn more](https://mkeithx.pages.dev/community/contributing#issues).
 
   - type: dropdown
     id: issue
     attributes:
       label: Issue category
+      description: What's the issue about?
       multiple: false
       options:
         - Undocumented API
@@ -31,13 +32,15 @@ body:
     validations:
       required: true
 
-  - type: input
+  - type: textarea
+    id: what-happened
     attributes:
-      label: Links
-      description: Relevant urls and/or hyperlinks.
-      placeholder: URLs or hyperlinks
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened!"
     validations:
-      required: false  
+      required: true
 
   - type: textarea
     attributes:
