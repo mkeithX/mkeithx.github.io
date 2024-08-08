@@ -65,7 +65,7 @@ export default function HomepageFeatures(): JSX.Element {
     <section className={styles.features}>
       <div className="container text--center">
         <h2 className={styles.heroTitleTextHtml}>
-          <b>{"Features"}</b>
+          {/* <b>{"Features"}</b> */}
           {/* {"Features"} */}
         </h2>
 

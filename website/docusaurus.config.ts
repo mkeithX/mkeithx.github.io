@@ -15,7 +15,7 @@ import { socialProfiles } from "./social.json";
 require("dotenv").config();
 
 // console.log(process.env)
-const organizationName = process.env.ORGANIZATION_NAME || "mkeithX";
+const organizationName = process.env.ORGANIZATION_NAME
 const projectName = process.env.PROJECT_NAME;
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH
 
@@ -47,10 +47,13 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  showLastUpdateAuthor: true,
-  showLastUpdateTime: true,
+  editLocalizedFiles: false,
+  editCurrentVersion: false,
+  editUrl: 'https://github.com/mkeithX/mkeithx.github.io/edit/main/website/',
   ...admonitionsConfig,
   ...commonRemarkConfig,
+  showLastUpdateAuthor: true,
+  showLastUpdateTime: true,
 };
 
 const config: Config = {
@@ -117,7 +120,7 @@ const config: Config = {
           blogTitle: "Blog",
           blogDescription: "Recent updates and releases from mkeithx.",
           routeBasePath: "blog",
-          blogSidebarTitle: "Updates and Releases",
+          blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
           showLastUpdateAuthor: false,
           showLastUpdateTime: false,
@@ -256,10 +259,10 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "MKX SpaceHub",
+      title: "SpaceHub",
       logo: {
         alt: "MKX",
-        src: "img/logo/code-alt.png",
+        src: "img/logo/mkxspacehub-logo-alt.png",
         // srcDark: "img/logo/mkxspacehub-logo-dark.png",
         target: "_self",
         // width: 32,
@@ -281,7 +284,7 @@ const config: Config = {
 
         { to: "/cosmos", label: "Cosmos", position: "left" },
         { to: "/blog", label: "Blog" },
-        { to: "/community", label: "Community", position: "left" },
+        { to: "/community", label: "Community"},
         
         {
           type: "dropdown",
