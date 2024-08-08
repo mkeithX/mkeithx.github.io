@@ -24,6 +24,11 @@ const FeatureList: FeatureItem[] = [
   },
   {
     
+    Svg: require("@site/static/img/logo/MSAzure.svg").default,
+
+  },
+  {
+    
     Svg: require("@site/static/img/logo/meta_opensource.svg").default,
 
   },
@@ -34,6 +39,11 @@ const FeatureList: FeatureItem[] = [
 
   },
 
+  {
+    
+    Svg: require("@site/static/img/logo/kali-logo-blue.svg").default,
+
+  },
   // {
     
   //   Svg: require("@site/static/img/space/NASA_logo.svg").default,
@@ -55,6 +65,7 @@ const FeatureList: FeatureItem[] = [
 
   },
 
+
   // {
     
   //   Svg: require("@site/static/img/logo/docusaurus-logo.svg").default,
@@ -62,6 +73,11 @@ const FeatureList: FeatureItem[] = [
   // },
 
 
+  {
+    
+    Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
+
+  },
 
 ];
 

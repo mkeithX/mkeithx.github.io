@@ -19,7 +19,8 @@ const organizationName = process.env.ORGANIZATION_NAME
 const projectName = process.env.PROJECT_NAME;
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH
 
-const copyright = `© ${new Date().getFullYear()} · Keith Tan · All rights reserved ·`;
+const copyright = `© ${new Date().getFullYear()} · Keith Tan · <br>
+ All rights reserved `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -261,7 +262,7 @@ const config: Config = {
       hideOnScroll: true,
       title: "SpaceHub",
       logo: {
-        alt: "MKX",
+        alt: "SpaceHub",
         src: "img/logo/mkxspacehub-logo-alt.png",
         // srcDark: "img/logo/mkxspacehub-logo-dark.png",
         target: "_self",
