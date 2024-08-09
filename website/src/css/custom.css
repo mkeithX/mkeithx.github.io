@@ -15,7 +15,7 @@
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
 
-  /* --ifm-background-color: #fff; */
+  --ifm-background-color: #f0f8ff;
 
   --ifm-site-dark: #111317;
 
@@ -52,6 +52,7 @@
   height: 40px;
   transition: transform 0.5s;
 } */
+ 
 
 /*  DO NOT DELETE: navBarLogo effect */
 /* 
@@ -78,7 +79,7 @@
 
 .navbar__title {
   font-size: 1em;
-  font-weight: bolder;
+  font-weight: bold;
   /* background: linear-gradient(90deg,
       #1da1f2 0%,
       #00ff88 50%,
@@ -96,7 +97,7 @@
 }
 
 .navbar__brand {
-  margin-right: 2rem;
+  margin-right: 1.2rem;
 }
 
 

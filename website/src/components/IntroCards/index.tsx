@@ -33,25 +33,9 @@ const FeatureList: FeatureItem[] = [
 
   },
 
-  {
-    
-    Svg: require("@site/static/img/logo/GitHub-Word.svg").default,
-
-  },
-
-  {
-    
-    Svg: require("@site/static/img/logo/kali-logo-blue.svg").default,
-
-  },
   // {
     
-  //   Svg: require("@site/static/img/space/NASA_logo.svg").default,
-
-  // },
-  // {
-    
-  //   Svg: require("@site/static/img/space/spacex.svg").default,
+  //   Svg: require("@site/static/img/logo/GitHub-Word.svg").default,
 
   // },
   {
@@ -62,20 +46,6 @@ const FeatureList: FeatureItem[] = [
   {
     
     Svg: require("@site/static/img/logo/Cloudflare.svg").default,
-
-  },
-
-
-  // {
-    
-  //   Svg: require("@site/static/img/logo/docusaurus-logo.svg").default,
-
-  // },
-
-
-  {
-    
-    Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
 
   },
 

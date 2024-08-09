@@ -7,8 +7,8 @@
 }
 
 .cardContainer {
-    margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
-    margin-top: calc(var(--ifm-spacing-horizontal) * 1.5);
+    margin-bottom: calc(var(--ifm-spacing-horizontal) * 1);
+    margin-top: calc(var(--ifm-spacing-horizontal) * 1);
 }
 
 .image {

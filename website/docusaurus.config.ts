@@ -17,9 +17,10 @@ require("dotenv").config();
 // console.log(process.env)
 const organizationName = process.env.ORGANIZATION_NAME
 const projectName = process.env.PROJECT_NAME;
-const deploymentBranch = process.env.DEPLOYMENT_BRANCH
+const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
+const docsRepo = "https://github.com/mkeithX/mkeithx.github.io/";
 
-const copyright = `© ${new Date().getFullYear()} · Keith Tan · <br>
+const copyright = `© ${new Date().getFullYear()} · Keith Tan · 
  All rights reserved `;
 
 const admonitionsConfig = {
@@ -111,8 +112,9 @@ const config: Config = {
         docs: {
           path: "docs",
           breadcrumbs: true,
-          sidebarPath: "sidebars.ts",
+          sidebarPath: require.resolve("./sidebars.ts"),
           routeBasePath: "docs",
+          editUrl: `${docsRepo}/edit/main/website`,
           ...commonDocsConfig,
         },
 
@@ -151,14 +153,15 @@ const config: Config = {
         } satisfies PageOptions,
 
         theme: {
-          customCss: "./src/css/custom.css",
+          customCss: require.resolve("./src/css/custom.css"),
         },
 
         sitemap: {
-          lastmod: "date",
-          changefreq: null,
-          priority: null,
+          // lastmod: "date",
+          changefreq: "hourly",
+          priority: 0.5,
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
+          filename: 'sitemap.xml'
         },
       } satisfies Preset.Options,
     ],
@@ -174,7 +177,8 @@ const config: Config = {
         routeBasePath: "cosmos",
         breadcrumbs: true,
         ...commonDocsConfig,
-        sidebarPath: "sidebarsCosmos.ts",
+        editUrl: `${docsRepo}/edit/main/website`,
+        sidebarPath: require.resolve("./sidebarsCosmos.ts"),
       } as DocsOptions,
     ],
     [
@@ -184,7 +188,7 @@ const config: Config = {
         path: "community",
         routeBasePath: "community",
         breadcrumbs: true,
-        sidebarPath: "sidebarsCommunity.ts",
+        // sidebarPath: require.resolve("./sidebarsCommunity.ts"),
         ...commonDocsConfig,
       } as DocsOptions,
     ],
@@ -195,7 +199,8 @@ const config: Config = {
         path: "msp",
         routeBasePath: "msp",
         breadcrumbs: true,
-        sidebarPath: "sidebarsMsp.ts",
+        sidebarPath: require.resolve("./sidebarsMsp.ts"),
+        editUrl: `${docsRepo}/edit/main/website`,
         ...commonDocsConfig,
       } as DocsOptions,
     ],
@@ -243,20 +248,6 @@ const config: Config = {
     },
 
     image: "img/mkx-social.png",
-    // metadata: [
-    //   {
-    //     name: "description",
-    //     description: "Building the web with mkeithx.",
-    //   },
-    //   {
-    //     name: "keywords",
-    //     content: "web-dev,mkeithx,keith,keith tan,python,docusaurus,react",
-    //   },
-    //   {
-    //     name: "twitter:card",
-    //     content: "summary",
-    //   },
-    // ],
     navbar: {
       style: "dark",
       hideOnScroll: true,
@@ -274,7 +265,7 @@ const config: Config = {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "Explore",
+          label: "Core",
         },
         {
           type: "docSidebar",

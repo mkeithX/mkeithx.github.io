@@ -2,20 +2,25 @@ import os
 import sys
 import qrcode
 
+
+
 def qr_generator():
     data = input("Enter data to encode in QR code: ")
     
-    qr = qrcode.QRCode(version=1, box_size=10, border=4, error_correction=qrcode.constants.ERROR_CORRECT_L) # type: ignore
-#     qr = qrcode.QRCode( 
-#     version=1,
-#     error_correction=qrcode.constants.ERROR_CORRECT_L,
-#     box_size=10,
-#     border=4,
-# ) 
+    qr = qrcode.QRCode(
+        version=1,
+        error_correction=qrcode.constants.ERROR_CORRECT_L,
+        box_size=10,
+        border=4,
+    )
+
+
     qr.add_data(data)
     qr.make(fit=True)
+
+    img = qr.make_image(back_color=(255, 195, 235), fill_color=(55, 95, 35))
     
-    img = qr.make_image(fill_color="black", black_color="white")
+    # img = qr.make_image(fill_color="black", black_color="white")
 
     filename = input("Enter filename including extension (.jpg, .png): ")
     

@@ -8,7 +8,7 @@
     "dev": "cd website && npm run docusaurus start",
     "clear": "cd website && npm run docusaurus clear",
     "start:fast" : "cd website && npm run docusaurus start -- --host 0.0.0.0 --no-open",
-    "serve:fast" : "cd website && npm run docusaurus build && npm run docusaurus serve --host 0.0.0.0",
+    "serve:fast" : "cd website && npm run docusaurus build && npm run docusaurus serve --host 0.0.0.0 --no-open",
     "rm:pckg":"cd website && pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\"",
     "install:pckg": "cd website && npm install"
   },
