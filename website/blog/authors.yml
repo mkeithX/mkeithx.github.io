@@ -1,12 +1,13 @@
 mkeithx:
-  name: Keith Tan
-  title: Freelance Web Developer
-  url: https://facebook.com/mkeithx
+  name: Keith WT
+  title: Web Dev · System Admin
+  description: Hi there! I build websites and fix printers, too!
+  url: https://github.com/mkeithX
   image_url: https://github.com/mkeithx.png
-  page: true
-  email: email@kitimi.onmicrosoft.com
-  
+  email: me@kitimi.onmicrosoft.com
+  page: 
+    permalink: '/mkeithx'
   socials:
     x: mkeithtan
-    github: mkeithx
+    github: mkeithX
     linkedin: mkeithtan

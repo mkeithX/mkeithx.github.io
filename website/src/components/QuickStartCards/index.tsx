@@ -70,7 +70,7 @@ export function QuickStartCardRow(): JSX.Element {
       />
       <QuickStartCol
         title="Cosmos"
-        subTitle="Space exploration, technological advances, and physics."
+        subTitle="Physics, Planets and the Unknown."
         webUrl="/cosmos"
       />
     </div>

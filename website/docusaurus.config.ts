@@ -15,8 +15,6 @@ import { socialProfiles } from "./social.json";
 require("dotenv").config();
 
 // console.log(process.env)
-const organizationName = process.env.ORGANIZATION_NAME
-const projectName = process.env.PROJECT_NAME;
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
 const docsRepo = "https://github.com/mkeithX/mkeithx.github.io/";
 
@@ -65,8 +63,8 @@ const config: Config = {
   // titleDelimiter: " ⚡️ ",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
-  organizationName,
-  projectName,
+  organizationName: "mkeithX",
+  projectName: "mkeithx.github.io",
   deploymentBranch,
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
@@ -133,6 +131,9 @@ const config: Config = {
 
           feedOptions: {
             type: "all",
+            description:
+            'Keep up to date with upcoming Docusaurus releases and articles by following our feed!',
+            xslt: true,
             copyright,
           },
         } satisfies BlogOptions,
