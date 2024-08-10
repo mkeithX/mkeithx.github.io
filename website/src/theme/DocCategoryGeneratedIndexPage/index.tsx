@@ -8,14 +8,14 @@ import styles from './styles.module.css';
 
 function HintFooter() {
   // Define the path manually or obtain it from a suitable source
-  const docPath = 'devops/index'; // Use the correct path as needed
+  const docPath = ('devops/index'); // Use the correct path as needed
 
   return (
     <p className={styles.footerTip}>
       <Translate
         values={{
           guideLink: (
-            <Link to={`/${docPath}#`}>
+            <Link to={`/${docPath}`}>
               <Translate>Navigate to this page</Translate>
             </Link>
           ),
