@@ -16,6 +16,7 @@ require("dotenv").config();
 
 // console.log(process.env)
 const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
+
 const docsRepo = "https://github.com/mkeithX/mkeithx.github.io/";
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · 
@@ -47,12 +48,10 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  editLocalizedFiles: false,
-  editCurrentVersion: false,
   // editUrl: 'https://github.com/mkeithX/mkeithx.github.io/edit/main/website/',
   ...admonitionsConfig,
   ...commonRemarkConfig,
-  showLastUpdateAuthor: true,
+  showLastUpdateAuthor: false,
   showLastUpdateTime: true,
 };
 
@@ -61,7 +60,7 @@ const config: Config = {
   tagline: "Building Innovative Solutions",
   favicon: "icons/favicon/round-dark.ico",
   // titleDelimiter: " ⚡️ ",
-  url: "https://mkeithx.pages.dev",
+  url: "https://mkeithx.github.io",
   baseUrl: "/",
   organizationName: "mkeithX",
   projectName: "mkeithx.github.io",
@@ -112,7 +111,7 @@ const config: Config = {
           breadcrumbs: true,
           sidebarPath: require.resolve("./sidebars.ts"),
           routeBasePath: "docs",
-          editUrl: `${docsRepo}/edit/main/website`,
+          // editUrl: `${docsRepo}/edit/main/website`,
           ...commonDocsConfig,
         },
 
@@ -178,7 +177,6 @@ const config: Config = {
         routeBasePath: "cosmos",
         breadcrumbs: true,
         ...commonDocsConfig,
-        editUrl: `${docsRepo}/edit/main/website`,
         sidebarPath: require.resolve("./sidebarsCosmos.ts"),
       } as DocsOptions,
     ],
@@ -189,7 +187,6 @@ const config: Config = {
         path: "community",
         routeBasePath: "community",
         breadcrumbs: true,
-        // sidebarPath: require.resolve("./sidebarsCommunity.ts"),
         ...commonDocsConfig,
       } as DocsOptions,
     ],
@@ -201,7 +198,6 @@ const config: Config = {
         routeBasePath: "msp",
         breadcrumbs: true,
         sidebarPath: require.resolve("./sidebarsMsp.ts"),
-        editUrl: `${docsRepo}/edit/main/website`,
         ...commonDocsConfig,
       } as DocsOptions,
     ],
