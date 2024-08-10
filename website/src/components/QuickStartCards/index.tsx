@@ -66,7 +66,7 @@ export function QuickStartCardRow(): JSX.Element {
       <QuickStartCol
         title="Advanced Guides"
         subTitle="Tips and Best Practice for mitigating issues."
-        webUrl="/docs/devops/troubleshoot-like-a-boss"
+        webUrl="/docs/devops/guides-and-workarounds"
       />
       <QuickStartCol
         title="Cosmos"
