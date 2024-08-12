@@ -49,11 +49,11 @@ const commonRemarkConfig = {
 
 const commonDocsConfig = {
   breadcrumbs: true,
-  editUrl: `${docsRepo}/tree/main/website/`,
+  // editUrl: `${docsRepo}/tree/main/website/`,
   ...admonitionsConfig,
   ...commonRemarkConfig,
   showLastUpdateAuthor: false,
-  showLastUpdateTime: false,
+  showLastUpdateTime: true,
 };
 
 const config: Config = {
@@ -121,8 +121,6 @@ const config: Config = {
           routeBasePath: "blog",
           blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
-          showLastUpdateAuthor: false,
-          showLastUpdateTime: false,
           ...admonitionsConfig,
           ...commonRemarkConfig,
           postsPerPage: "ALL",
@@ -130,7 +128,7 @@ const config: Config = {
           feedOptions: {
             type: "all",
             description:
-            'Keep up to date with upcoming Docusaurus releases and articles by following our feed!',
+            'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
             copyright,
           },
