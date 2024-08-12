@@ -52,7 +52,7 @@ const commonDocsConfig = {
   ...admonitionsConfig,
   ...commonRemarkConfig,
   showLastUpdateAuthor: false,
-  showLastUpdateTime: true,
+  showLastUpdateTime: true,  
 };
 
 const config: Config = {
@@ -109,7 +109,7 @@ const config: Config = {
         docs: {
           path: "docs",
           breadcrumbs: true,
-          sidebarPath: require.resolve("./sidebars.ts"),
+          sidebarPath: "sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
         },
@@ -176,7 +176,7 @@ const config: Config = {
         routeBasePath: "cosmos",
         breadcrumbs: true,
         ...commonDocsConfig,
-        sidebarPath: require.resolve("./sidebarsCosmos.ts"),
+        sidebarPath: "sidebarsCosmos.ts",
       } as DocsOptions,
     ],
     [
@@ -187,6 +187,7 @@ const config: Config = {
         routeBasePath: "community",
         breadcrumbs: true,
         ...commonDocsConfig,
+        sidebarPath: "sidebarsCommunity.ts",
       } as DocsOptions,
     ],
     [
@@ -196,7 +197,7 @@ const config: Config = {
         path: "msp",
         routeBasePath: "msp",
         breadcrumbs: true,
-        sidebarPath: require.resolve("./sidebarsMsp.ts"),
+        sidebarPath: "sidebarsMsp.ts",
         ...commonDocsConfig,
       } as DocsOptions,
     ],
