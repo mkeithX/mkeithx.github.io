@@ -4,8 +4,8 @@
   <ShortName>mkeithx</ShortName>
   <Description>Search mkeithx</Description>
   <InputEncoding>UTF-8</InputEncoding>
-  <Image width="16" height="16" type="image/x-icon">https://mkeithx.pages.dev/icons/favicon/round-dark.ico</Image>
-  <Url type="text/html" method="get" template="https://mkeithx.pages.dev/search?q={searchTerms}"/>
-  <Url type="application/opensearchdescription+xml" rel="self" template="https://mkeithx.pages.dev/opensearch.xml" />
-  <moz:SearchForm>https://mkeithx.pages.dev/</moz:SearchForm>
+  <Image width="16" height="16" type="image/x-icon">https://mkeithx.github.io/icons/favicon/round-dark.ico</Image>
+  <Url type="text/html" method="get" template="https://mkeithx.github.io/search?q={searchTerms}"/>
+  <Url type="application/opensearchdescription+xml" rel="self" template="https://mkeithx.github.io/opensearch.xml" />
+  <moz:SearchForm>https://mkeithx.github.io/</moz:SearchForm>
 </OpenSearchDescription>
