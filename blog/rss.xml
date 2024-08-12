@@ -3,7 +3,7 @@
     <channel>
         <title>mkeithx Blog</title>
         <link>https://mkeithx.github.io/blog</link>
-        <description>Keep up to date with upcoming Docusaurus releases and articles by following our feed!</description>
+        <description>Stay tuned with upcoming updates releases and articles by following our feed!</description>
         <lastBuildDate>Mon, 01 Jul 2024 00:00:00 GMT</lastBuildDate>
         <docs>https://validator.w3.org/feed/docs/rss2.html</docs>
         <generator>https://github.com/jpmonette/feed</generator>

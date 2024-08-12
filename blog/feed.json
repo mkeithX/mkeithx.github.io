@@ -2,7 +2,7 @@
     "version": "https://jsonfeed.org/version/1",
     "title": "mkeithx Blog",
     "home_page_url": "https://mkeithx.github.io/blog",
-    "description": "Keep up to date with upcoming Docusaurus releases and articles by following our feed!",
+    "description": "Stay tuned with upcoming updates releases and articles by following our feed!",
     "items": [
         {
             "id": "https://mkeithx.github.io/blog/devops-july",
