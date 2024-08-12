@@ -48,7 +48,8 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  editUrl: `${docsRepo}/tree/main/website/`,
+  breadcrumbs: true,
+  // editUrl: `${docsRepo}/tree/main/website/`,
   ...admonitionsConfig,
   ...commonRemarkConfig,
   showLastUpdateAuthor: false,
@@ -108,8 +109,7 @@ const config: Config = {
       {
         docs: {
           path: "docs",
-          breadcrumbs: true,
-          sidebarPath: require.resolve("./sidebars.ts"),
+          sidebarPath: "sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
         },
@@ -121,8 +121,6 @@ const config: Config = {
           routeBasePath: "blog",
           blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
-          showLastUpdateAuthor: false,
-          showLastUpdateTime: false,
           ...admonitionsConfig,
           ...commonRemarkConfig,
           postsPerPage: "ALL",
@@ -130,7 +128,7 @@ const config: Config = {
           feedOptions: {
             type: "all",
             description:
-            'Keep up to date with upcoming Docusaurus releases and articles by following our feed!',
+            'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
             copyright,
           },
@@ -174,9 +172,8 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        breadcrumbs: true,
         ...commonDocsConfig,
-        sidebarPath: require.resolve("./sidebarsCosmos.ts"),
+        sidebarPath: "sidebarsCosmos.ts",
       } as DocsOptions,
     ],
     [
@@ -185,8 +182,8 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        breadcrumbs: true,
         ...commonDocsConfig,
+        sidebarPath: "sidebarsCommunity.ts",
       } as DocsOptions,
     ],
     [
@@ -195,8 +192,7 @@ const config: Config = {
         id: "msp",
         path: "msp",
         routeBasePath: "msp",
-        breadcrumbs: true,
-        sidebarPath: require.resolve("./sidebarsMsp.ts"),
+        sidebarPath: "sidebarsMsp.ts",
         ...commonDocsConfig,
       } as DocsOptions,
     ],
