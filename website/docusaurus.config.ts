@@ -48,11 +48,12 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
+  breadcrumbs: true,
   editUrl: `${docsRepo}/tree/main/website/`,
   ...admonitionsConfig,
   ...commonRemarkConfig,
   showLastUpdateAuthor: false,
-  showLastUpdateTime: true,  
+  showLastUpdateTime: false,
 };
 
 const config: Config = {
@@ -108,7 +109,6 @@ const config: Config = {
       {
         docs: {
           path: "docs",
-          breadcrumbs: true,
           sidebarPath: "sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
@@ -174,7 +174,6 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        breadcrumbs: true,
         ...commonDocsConfig,
         sidebarPath: "sidebarsCosmos.ts",
       } as DocsOptions,
@@ -185,7 +184,6 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        breadcrumbs: true,
         ...commonDocsConfig,
         sidebarPath: "sidebarsCommunity.ts",
       } as DocsOptions,
@@ -196,7 +194,6 @@ const config: Config = {
         id: "msp",
         path: "msp",
         routeBasePath: "msp",
-        breadcrumbs: true,
         sidebarPath: "sidebarsMsp.ts",
         ...commonDocsConfig,
       } as DocsOptions,
