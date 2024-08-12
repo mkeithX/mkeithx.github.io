@@ -48,7 +48,7 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  // editUrl: 'https://github.com/mkeithX/mkeithx.github.io/edit/main/website/',
+  editUrl: `${docsRepo}/tree/main/website/`,
   ...admonitionsConfig,
   ...commonRemarkConfig,
   showLastUpdateAuthor: false,
@@ -111,7 +111,6 @@ const config: Config = {
           breadcrumbs: true,
           sidebarPath: require.resolve("./sidebars.ts"),
           routeBasePath: "docs",
-          // editUrl: `${docsRepo}/edit/main/website`,
           ...commonDocsConfig,
         },
 
