@@ -27,8 +27,12 @@ jobs:
         with:
           node-version: latest
 
-      - run: npm install && npm run build
-
+      - name: Install dependencies
+        run: |
+          cd website
+          npm install
+          npm run build
+          
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
         if: github.ref == 'refs/heads/main'
