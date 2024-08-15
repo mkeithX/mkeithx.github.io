@@ -124,6 +124,9 @@ const config: Config = {
           ...admonitionsConfig,
           ...commonRemarkConfig,
           postsPerPage: "ALL",
+          onInlineTags: 'warn',
+          onInlineAuthors: 'warn',
+          onUntruncatedBlogPosts: 'warn',
 
           feedOptions: {
             type: "all",
@@ -154,7 +157,6 @@ const config: Config = {
         },
 
         sitemap: {
-          // lastmod: "date",
           changefreq: "hourly",
           priority: 0.5,
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
