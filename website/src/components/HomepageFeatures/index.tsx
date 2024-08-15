@@ -12,7 +12,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Docs Made Easy",
+    title: "Docs For Humans",
     Svg: require("@site/static/img/undraw_experience_design.svg").default,
     description: (
       <>
