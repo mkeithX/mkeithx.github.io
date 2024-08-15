@@ -5,25 +5,18 @@ on:
     branches:
       - main
 
-  pull_request:
 
-    paths:
-      - ".github/workflows/deploy.yml"
-      - "website/**"
+permissions:
+  contents: write
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
-    permissions:
-      contents: write
-      
     steps:
       - uses: actions/checkout@v4
         with:
           fetch-depth: 0
-
-      - name: Setup Node
-        uses: actions/setup-node@v4
+      - uses: actions/setup-node@v4
         with:
           node-version: latest
 
@@ -37,4 +30,5 @@ jobs:
         uses: peaceiris/actions-gh-pages@v4
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
+
           publish_dir: website/build
