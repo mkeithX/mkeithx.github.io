@@ -3,3 +3,5 @@ python-dotenv
 qrcode
 requests
 yt-dlp
+Flask
+python-dotenv
