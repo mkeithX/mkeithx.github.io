@@ -15,9 +15,9 @@ import { socialProfiles } from "./social.json";
 require("dotenv").config();
 
 // console.log(process.env)
-const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
+// const deploymentBranch = process.env.DEPLOYMENT_BRANCH; 
 
-const docsRepo = "https://github.com/mkeithX/mkeithx.github.io/";
+const docsRepo = `https://github.com/mkeithX/mkeithx.github.io/`;
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · 
  All rights reserved `;
@@ -49,11 +49,8 @@ const commonRemarkConfig = {
 
 const commonDocsConfig = {
   breadcrumbs: true,
-  // editUrl: `${docsRepo}/tree/main/website/`,
   ...admonitionsConfig,
   ...commonRemarkConfig,
-  showLastUpdateAuthor: false,
-  showLastUpdateTime: true,
 };
 
 const config: Config = {
@@ -65,7 +62,7 @@ const config: Config = {
   baseUrl: "/",
   organizationName: "mkeithX",
   projectName: "mkeithx.github.io",
-  deploymentBranch,
+  deploymentBranch: "gh-pages",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
@@ -109,9 +106,12 @@ const config: Config = {
       {
         docs: {
           path: "docs",
+          editUrl: `${docsRepo}/tree/main/website/`,
           sidebarPath: "sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
+          showLastUpdateAuthor: true,
+          showLastUpdateTime: true,
         },
 
         blog: {
@@ -174,6 +174,9 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
+        editUrl: `${docsRepo}/tree/main/website/`,
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
         ...commonDocsConfig,
         sidebarPath: "sidebarsCosmos.ts",
       } as DocsOptions,
@@ -184,6 +187,8 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
         ...commonDocsConfig,
         sidebarPath: "sidebarsCommunity.ts",
       } as DocsOptions,
@@ -194,7 +199,10 @@ const config: Config = {
         id: "msp",
         path: "msp",
         routeBasePath: "msp",
+        editUrl: `${docsRepo}/tree/main/website/`,
         sidebarPath: "sidebarsMsp.ts",
+        showLastUpdateAuthor: true,
+        showLastUpdateTime: true,
         ...commonDocsConfig,
       } as DocsOptions,
     ],
