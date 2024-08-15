@@ -10,7 +10,7 @@ import BannerLogo from "@site/static/img/banner/atom-z.svg";
 // import BannerLogo from "@site/static/img/logo/edatom-z.svg";
 import React from "react";
 import TopBanner from "@site/src/components/TopBanner";
-import IntroCards from "../components/IntroCards";
+import FeatureBrands from "../components/FeatureBrands";
 
 function HomepageHeader(): JSX.Element {
   const {
@@ -85,7 +85,7 @@ export default function Home(): JSX.Element {
         <div className={styles.section}>
         <HomepageFeatures />
         </div>
-        <IntroCards />
+        <FeatureBrands/>
       </main>
     </Layout>
   );
