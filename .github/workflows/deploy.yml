@@ -16,13 +16,7 @@ jobs:
     runs-on: ubuntu-latest
     permissions:
       contents: write
-    concurrency:
-      group: ${{ github.workflow }}-${{ github.ref }}
-      cancel-in-progress: true
       
-    defaults:
-      run:
-        working-directory: website
     steps:
       - uses: actions/checkout@v4
         with:
@@ -40,4 +34,4 @@ jobs:
         if: github.ref == 'refs/heads/main'
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./website/build
+          publish_dir: website/build
