@@ -333,7 +333,7 @@ const config: Config = {
         src: "img/logo/mkxspacehub-logo.png",
         href: "/",
         // height: "30",
-        width: "300",
+        width: "380",
       },
       links: [
         {

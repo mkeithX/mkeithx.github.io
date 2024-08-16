@@ -72,7 +72,7 @@ const sidebars: SidebarsConfig = {
       ],
     },
     {
-      label: "Build",
+      label: "Website",
       type: "category",
       link: {
         type: "generated-index",

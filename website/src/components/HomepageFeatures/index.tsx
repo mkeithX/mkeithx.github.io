@@ -12,7 +12,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    title: "Docs For Humans",
+    title: "Built for Humans",
     Svg: require("@site/static/img/undraw_experience_design.svg").default,
     description: (
       <>
@@ -22,7 +22,7 @@ const FeatureList: FeatureItem[] = [
   },
 
   {
-    title: "Built with React",
+    title: "React Components",
     Svg: require("@site/static/img/undraw_react.svg").default,
     description: (
       <>

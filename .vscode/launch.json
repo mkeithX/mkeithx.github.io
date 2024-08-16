@@ -3,30 +3,30 @@
     "configurations": [
         {
             "type": "node-terminal",
-            "name": "dev",
+            "name": "START",
             "request": "launch",
-            "command": "npm run dev",
+            "command": "npm run start",
             "cwd": "${workspaceFolder}\\website"
         },
         {
             "type": "node-terminal",
-            "name": "start:local",
+            "name": "START:FAST",
             "request": "launch",
-            "command": "npm run start:local",
+            "command": "npm run start:fast",
             "cwd": "${workspaceFolder}\\website"
         },
         {
             "type": "node-terminal",
-            "name": "clear",
+            "name": "SERVE:FAST",
+            "request": "launch",
+            "command": "npm run serve:fast",
+            "cwd": "${workspaceFolder}\\website"
+        },
+        {
+            "type": "node-terminal",
+            "name": "Clear",
             "request": "launch",
             "command": "npm run clear",
-            "cwd": "${workspaceFolder}\\website"
-        },
-        {
-            "type": "node-terminal",
-            "name": "serve:local",
-            "request": "launch",
-            "command": "npm run serve:local",
             "cwd": "${workspaceFolder}\\website"
         }
     ]
