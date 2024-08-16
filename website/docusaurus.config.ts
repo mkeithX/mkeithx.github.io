@@ -58,7 +58,7 @@ const config: Config = {
   tagline: "Building Innovative Solutions",
   favicon: "icons/favicon/round-dark.ico",
   // titleDelimiter: " ⚡️ ",
-  url: "https://mkeithx.github.io",
+  url: "https://mkeithx.pages.dev",
   baseUrl: "/",
   organizationName: "mkeithX",
   projectName: "mkeithx.github.io",
