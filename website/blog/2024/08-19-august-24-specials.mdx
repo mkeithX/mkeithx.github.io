@@ -15,10 +15,7 @@ import { DevOpsCardRow } from "@site/src/components/QuickStartCards";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-Announcing **The August 2024 Specials**. 
-
-
-
+Announcing **The August 2024 Specials**.
 
 ![media](./media/mkx-blog-default.png)
 
@@ -29,15 +26,75 @@ Announcing **The August 2024 Specials**.
 - Extending React
 - Custom Deployments
 
-## Links
+## References
 
 - [RSS](https://mkeithx.pages.dev/blog/rss.xml)
+- [PR#80](https://github.com/mkeithX/mkeithx.github.io/pull/80)
+
+## Changes
+
+### New Docs
+
+- [Plugins](/docs/website-configuration/plugins-config)
+- [Environments](/docs/website-configuration/virtual-environment)
+- [Content Creation](/docs/content-creation)
+- [Deployment](/docs/custom-deployment)
+
+### New Pages
+
+<IframeWindow url="/404/?docusaurus-theme=dark" />
+
+### Deployments
+
+#### CLI
+
+```json title="package.json" showLineNumbers {16, 17}
+  "scripts": {
+    // ...
+    "start:fast": "npm run docusaurus start -- --host 0.0.0.0 --no-open",
+    "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
+    "build:local": "docusaurus build && docusaurus serve",
+    "deploy:cf": "npm run build && wrangler pages deploy ./build",
+    "rm:pckg": "pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\""
+  },
+
+```
+
+#### Actions
+
+```yml
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build
+        run: |
+          cd website
+          npm install && npm run build
+
+      - name: Publish
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mkeithx
+          directory: website/build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+```
 
 ## React `<Components/>`
 
 Docusaurus supports MDX out of the box, enabling you to embed JSX directly in your Markdown files and render them as React components. Apart from the features in the homepage, check out this [custom cards](/docs#explore).
-
-
 
 ## Exciting August 2024 Updates: Extending React, Custom Deployments, and More!
 
@@ -92,5 +149,3 @@ To provide hands-on learning experiences, we’re introducing interactive demos 
 We’re constantly working to enhance our tools and resources to support your development journey. These August 2024 updates are just the beginning, and we’re excited to see how you’ll leverage these new features and improvements.
 
 Stay tuned for more updates, and as always, we’d love to hear your feedback. Happy coding, and here’s to making August a month of innovation and progress!
-
-
