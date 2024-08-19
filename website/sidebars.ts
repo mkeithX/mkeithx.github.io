@@ -18,9 +18,69 @@ const sidebars: SidebarsConfig = {
     "keyword",
     // "development",
     {
+      label: "Getting started",
+      type: "category",
+      link: {
+        type: "generated-index",
+        slug: '/getting-started',
+        description: 'This section covers the following:'
+      },
+      
+      collapsed: false,
+      collapsible: true,
+      items: [
+        'installation',
+        // 'website-configuration/configuration',
+        // 'deployment',
+        // 'algolia',
+        {
+          type: 'category',
+          label: 'Configurations',
+          link: {
+            type: 'doc',
+            id: 'website-configuration/index',
+          },
+          items:[
+            // 'website-configuration/configuration',
+            'website-configuration/plugins-config',
+            'website-configuration/virtual-environment',
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Content Creation',
+          link: {
+            type: 'generated-index',
+            slug: '/content-creation',
+            description: "This section covers the following:"
+          },
+          items: [
+            'content-creation/create-docs',
+            'content-creation/create-pages',
+            'content-creation/create-blog'
+          ]
+        },
+        {
+          type: 'category',
+          label: 'Deployment',
+          link: {
+            type: 'generated-index',
+            slug: '/custom-deployment',
+            description: "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows."
+          },
+          items:
+          [
+            'custom-deployment/deploy-locally',
+            'custom-deployment/deploy-to-github-pages',
+            'custom-deployment/deploy-to-cloudflare-pages',
+          ]
+        },
+
+      ],
+    },
+    {
       type: "category",
       label: "Guides",
-      collapsed: false,
       collapsible: true,
       link: {
         type: 'generated-index',
@@ -69,22 +129,6 @@ const sidebars: SidebarsConfig = {
         "cheat-sheets/batch",
         "cheat-sheets/mdx-react",
         // "cheat-sheets/django",
-      ],
-    },
-    {
-      label: "Website",
-      type: "category",
-      link: {
-        type: "generated-index",
-        slug: '/website',
-        description: 'This section covers the following:'
-      },
-      collapsed: true,
-      items: [
-        'installation',
-        'configuration',
-        'deployment',
-        'algolia',
       ],
     },
   ],
