@@ -76,7 +76,7 @@ const sidebars: SidebarsConfig = {
       type: "category",
       link: {
         type: "generated-index",
-        slug: 'build',
+        slug: '/website',
         description: 'This section covers the following:'
       },
       collapsed: true,

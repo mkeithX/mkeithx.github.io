@@ -1,33 +1,19 @@
 ---
-title: Deployment
-description: Managing deployments.
+description: Custom deployment configurations.
 ---
 
 import Admonition from "@theme/Admonition";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-This article outlines deployment configuration of this website.
+# Deployment
 
-## Get started
-
-
-To ensure smooth deployment, let's build the static files for production. Run either of the following:
-
-```bash npm2yarn
-npm run build
-```
-
-```bash npm2yarn
-npm run build && npm run serve
-```
-
-```bash npm2yarn
-npm run build && npm run serve -- --build --port 80 --host 0.0.0.0
-```
+This article outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.
 
 
-## CLI
+
+
+## Configuration {#configuration}
 
 Using the ``docusaurus build`` command is a convenient way to build the website and push to the gh-pages branch. Note that the following configuration is **REQUIRED**.
 
@@ -44,6 +30,50 @@ const config: Config =  {
   // ...
 };
 ```
+
+### CLI
+
+Here are some custom scripts that you can invoke with your package manager:
+
+```json title="package.json"
+{
+  // ...
+  "scripts": {
+    // ...
+    "start:fast": "npm run docusaurus start -- --host 0.0.0.0 --no-open",
+    "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
+    "deploy:cf":"npm run build && wrangler pages deploy ./build",
+    "rm:pckg": "pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\""
+  }
+}
+```
+
+
+
+| Script | Description |
+| --- | --- |
+| start:fast | Does not automatically open in the browser and accessible externally or in your local network. Example: Run `ipconfig /all`  and get your local address 192.168.0.150:3000 |
+| serve:fast | Does not automatically open in the browser and a combination of `build` and `serve` commands to build the static files of the website for production. |
+
+<details>
+
+<summary>
+  Alternative commands.
+</summary>
+
+
+```bash npm2yarn
+npm run build
+```
+
+```bash npm2yarn
+npm run build && npm run serve
+```
+
+```bash npm2yarn
+npm run build && npm run serve -- --build --port 80 --host 0.0.0.0
+```
+
 
 <Tabs>
   <TabItem value="bash" label="Bash" default>
@@ -69,12 +99,17 @@ cmd /C 'set "GIT_USER=<GITHUB_USERNAME>" && npm run deploy'
   </TabItem>
 </Tabs>
 
+</details>
 
 
 
+<!-- To ensure smooth deployment, let's build the static files for production. Run either of the following: -->
 
 
-## SSH Deployment
+
+<details>
+<summary>SSH Deployments</summary>
+
 
 <Tabs>
   <TabItem value="ssh" label="Using SSH" default>
@@ -93,6 +128,9 @@ GIT_USER=<Your GitHub username> yarn deploy
   </TabItem>
 
 </Tabs>
+
+</details>
+
 
 
 ## GitHub Actions
@@ -226,10 +264,16 @@ jobs:
           npm run build
 
           ```
-
   </TabItem>
 </Tabs>
 
+
+
+:::tip[Important]
+
+This website is currently being served on Cloudflare Pages, a platform known for its fast performance and scalability. However, the configuration of the site can be easily adjusted or updated at any time to meet new requirements or to incorporate changes. Whether you're looking to modify settings, update the content, or switch to a different hosting solution, you have the flexibility to reconfigure the website as needed.
+
+:::
 
 
 
