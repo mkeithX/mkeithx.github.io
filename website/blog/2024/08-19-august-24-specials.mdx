@@ -28,13 +28,14 @@ Welcome to the August 2024 update! This month, we’re focusing on extending Rea
 ## Highlights
 
 - [Extending React](#react-components)
-- Custom Deployments
+- [Custom Deployments](#deploying-cloudflare-pages-with-wrangler-and-actions)
 - [Newly added docs](#new-docs)
 
 ## References
 
 - [RSS](https://mkeithx.pages.dev/blog/rss.xml)
 - [PR#80](https://github.com/mkeithX/mkeithx.github.io/pull/80)
+- [PR#72](https://github.com/mkeithX/mkeithx.github.io/pull/72)
 
 ## Changes
 
@@ -102,7 +103,7 @@ jobs:
 Docusaurus supports MDX out of the box, enabling you to embed JSX directly in your Markdown files and render them as React components. Apart from the features in the homepage, check out this [custom cards](/docs#explore).
 
 
-
+<!-- 
 ## Extending React: New Capabilities Unveiled
 
 React continues to be at the forefront of modern web development, and we’re excited to share some new ways you can extend its capabilities. This month, we’re focusing on advanced patterns and techniques that will take your React applications to the next level.
@@ -117,7 +118,7 @@ React’s Suspense and Concurrent Mode are getting some much-anticipated updates
 
 ### Custom Hooks Toolkit
 
-We’re introducing a new toolkit for creating and managing custom hooks. This toolkit will streamline the process of building reusable logic and make it simpler to share functionality across different components.
+We’re introducing a new toolkit for creating and managing custom hooks. This toolkit will streamline the process of building reusable logic and make it simpler to share functionality across different components. -->
 
 ## Deploying Cloudflare Pages with Wrangler and Actions
 
@@ -129,9 +130,41 @@ Wrangler, the command-line tool for Cloudflare Workers, now supports seamless in
 
 ### GitHub Actions for Deployment
 
-To make continuous deployment even more accessible, we’ve integrated GitHub Actions with Cloudflare Pages. This allows you to set up custom workflows that automatically deploy your site whenever you push changes to your repository. Say goodbye to manual deployments and hello to automated efficiency!
+To make continuous deployment even more accessible, we’ve integrated GitHub Actions with Cloudflare Pages. 
 
-## Revamping Core Documentation
+
+```yml title=".github/workflows/pages-deployment.yml"
+on: [push]
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    name: Deploy to Cloudflare Pages
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Build
+        run: |
+          cd website
+          npm install && npm run build
+
+      - name: Publish
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: <CLOUDFLARE_PROJECT_NAME>
+          directory: website/build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+```
+
+
+<!-- ## Revamping Core Documentation
 
 Clear and comprehensive documentation is crucial for developers, and we’re committed to making our core docs better than ever. This month, we’re revamping our documentation to provide a more intuitive and user-friendly experience.
 
@@ -145,7 +178,7 @@ Our documentation now features a wealth of new examples and tutorials to help yo
 
 ### Interactive Demos
 
-To provide hands-on learning experiences, we’re introducing interactive demos directly within the documentation. You can experiment with code and see results in real-time without leaving the page.
+To provide hands-on learning experiences, we’re introducing interactive demos directly within the documentation. You can experiment with code and see results in real-time without leaving the page. -->
 
 ## What’s Next?
 
