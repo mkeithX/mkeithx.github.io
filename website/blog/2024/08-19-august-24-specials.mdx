@@ -15,7 +15,7 @@ import { DevOpsCardRow } from "@site/src/components/QuickStartCards";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-**The August 2024 Specials**.
+**The August 2024 Specials**. New stuff coming out this August. Learn more.
 
 ![media](./media/mkx-blog-default.png)
 
@@ -126,14 +126,16 @@ Cloudflare Pages has become a popular choice for deploying fast and secure stati
 
 ### Wrangler Integration
 
-Wrangler, the command-line tool for Cloudflare Workers, now supports seamless integration with Cloudflare Pages. You can use Wrangler to manage your deployment configurations, automate builds, and handle advanced deployment scenarios with ease.
+Wrangler, the command-line tool for Cloudflare Workers, now supports seamless integration with Cloudflare Pages. [Learn more](/docs/custom-deployment/deploy-to-cloudflare-pages).
+
+You can use Wrangler to manage your deployment configurations, automate builds, and handle advanced deployment scenarios with ease.
 
 ### GitHub Actions for Deployment
 
 To make continuous deployment even more accessible, we’ve integrated GitHub Actions with Cloudflare Pages. 
 
 
-```yml title=".github/workflows/pages-deployment.yml"
+```yml title=".github/workflows/pages-deployment.yml" showLineNumbers
 on: [push]
 jobs:
   deploy:
