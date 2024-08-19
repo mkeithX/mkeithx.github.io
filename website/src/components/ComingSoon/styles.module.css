@@ -1,0 +1,61 @@
+
+.ComingSoon {
+    font-size: 20px;
+    padding: 30px 20px;
+    max-width: 900px;
+    margin: 0 auto;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .ComingSoonTitle {
+    font-size: 54px;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+  }
+  
+  @media only screen and (max-width: 768px) {
+    .ComingSoonTitle {
+      font-size: 40px;
+    }
+  }
+  
+  .ComingSoonTitleText {
+    background: linear-gradient(
+      90deg,
+      #833ab4 0%,
+      #fd1d1d 50%,
+      #fcb045 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ComingSoonTitleText:hover {
+    border-bottom: solid 2px;
+    border-color: rgb(152 0 255);
+  }
+  
+  html[data-theme='dark'] .ComingSoonTitleText {
+    background: linear-gradient(
+      90deg,
+      #9800ff 0%,
+      #f62929 50%,
+      #ffa908 100%
+    );
+    background-clip: text;
+    -webkit-text-fill-color: transparent;
+  }
+  
+  .ComingSoonDescription {
+    font-size: 20px;
+  }
+  @media only screen and (max-width: 768px) {
+    .ComingSoonDescription {
+      font-size: 16px;
+      white-space: normal;
+    }
+  }
+  
