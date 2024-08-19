@@ -17,7 +17,7 @@
     "start:fast": "npm run docusaurus start -- --host 0.0.0.0 --no-open",
     "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
     "build:local": "docusaurus build && docusaurus serve",
-    "deploy:cf":"npm run build && wrangler pages deploy ./build",
+    "deploy:cf": "npm run build && wrangler pages deploy ./build",
     "rm:pckg": "pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\""
   },
   "dependencies": {
@@ -50,7 +50,7 @@
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.78",
     "typescript": "5.4.3",
-    "wrangler": "^3.62.0"
+    "wrangler": "^3.72.0"
   },
   "browserslist": {
     "production": [
