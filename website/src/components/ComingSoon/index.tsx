@@ -39,8 +39,8 @@ function ComingSoon() {
                 alignItems: 'center',
                 textAlign: 'center',
               }}>
-                <h1 style={{color: 'var(--ifm-color-primary)', fontSize: '60px', textAlign: 'center'}}>
-                 {"Coming soon."}
+                <h1 style={{color: 'var(--ifm-color-primary)', fontSize: '48px', textAlign: 'center'}}>
+                 {"Coming soon"}
                 </h1>
                 <h3>{"Exciting things are on the way!"}</h3>
                 <h3>{"Stay tuned."}</h3>
