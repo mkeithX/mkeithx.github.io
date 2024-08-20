@@ -10,12 +10,12 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-            fetch-depth: 0
+          fetch-depth: 0
 
       - name: Build
         run: |
-            cd website
-            npm install && npm run build
+          cd website
+          npm install && npm run build
 
       - name: Publish
         uses: cloudflare/wrangler-action@v3
