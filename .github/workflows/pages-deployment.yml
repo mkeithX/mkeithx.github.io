@@ -25,3 +25,4 @@ jobs:
           projectName: mkeithx
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
