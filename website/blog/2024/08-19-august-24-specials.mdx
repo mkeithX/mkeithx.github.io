@@ -68,7 +68,7 @@ Welcome to the August 2024 update! This month, we’re focusing on extending Rea
 
 #### Actions
 
-```yml title=".github/workflows/pages-deployment.yml"
+```yml title=".github/workflows/pages-deployment.yml" showLineNumbers {13,26}
 on: [push]
 jobs:
   deploy:
@@ -135,35 +135,6 @@ You can use Wrangler to manage your deployment configurations, automate builds, 
 To make continuous deployment even more accessible, we’ve integrated GitHub Actions with Cloudflare Pages. 
 
 
-```yml title=".github/workflows/pages-deployment.yml" showLineNumbers
-on: [push]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    name: Deploy to Cloudflare Pages
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Build
-        run: |
-          cd website
-          npm install && npm run build
-
-      - name: Publish
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: <CLOUDFLARE_PROJECT_NAME>
-          directory: website/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-```
 
 
 <!-- ## Revamping Core Documentation
