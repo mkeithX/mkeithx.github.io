@@ -117,7 +117,7 @@ const config: Config = {
         blog: {
           path: "blog",
           blogTitle: "Blog",
-          blogDescription: "Recent updates and releases from mkeithx.",
+          blogDescription: "Updates and Releases.",
           routeBasePath: "blog",
           blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
@@ -130,10 +130,11 @@ const config: Config = {
 
           feedOptions: {
             type: "all",
+            title: "TheSpaceHub",
             description:
             'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
-            copyright,
+            copyright: copyright,
           },
         } satisfies BlogOptions,
 
