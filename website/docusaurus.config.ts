@@ -130,11 +130,11 @@ const config: Config = {
 
           feedOptions: {
             type: "all",
-            title: "TheSpaceHub",
+            title: "The MKXSpaceHub Blog",
             description:
             'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
-            copyright: copyright,
+            copyright: `${copyright}`,
           },
         } satisfies BlogOptions,
 
