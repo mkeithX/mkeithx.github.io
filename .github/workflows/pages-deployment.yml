@@ -25,4 +25,4 @@ jobs:
           projectName: mkeithx
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          
+          command: pages deploy website/build --project-name=mkeithx
