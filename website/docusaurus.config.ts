@@ -124,9 +124,9 @@ const config: Config = {
           ...admonitionsConfig,
           ...commonRemarkConfig,
           postsPerPage: "ALL",
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: 'throw',
+          onInlineAuthors: 'throw',
+          onUntruncatedBlogPosts: 'throw',
 
           feedOptions: {
             type: "all",

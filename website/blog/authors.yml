@@ -1,12 +1,12 @@
 mkeithx:
   name: Keith Tan
-  title: Web Dev · System Admin
+  title: Web Dev · Geek
   description: Thank you for visiting! This website is part of my personal project aimed at establishing an intuitive and comprehensive Knowledge Base Portal using various technologies and frameworks to offer valuable and accessible resources for IT developers, Sys Admin, and amateur astronomers.
   url: https://github.com/mkeithx
   image_url: https://github.com/mkeithx.png
   email: me@kitimi.onmicrosoft.com
-  page: 
-    permalink: '/mkeithx'
+  page: true
+    # permalink: '/mkeithx'
   socials:
     x: mkeithtan
     github: mkeithX

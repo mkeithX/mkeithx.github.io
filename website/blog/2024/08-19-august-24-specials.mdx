@@ -5,7 +5,7 @@ slug: /august-2024-specials
 description: The August 2024 Specials
 image: ./media/aug-2024-banner.png
 tags: [updates]
-unlisted: true
+unlisted: false
 ---
 
 import BrowserWindow from "@site/src/components/BrowserWindow";
@@ -15,41 +15,75 @@ import { DevOpsCardRow } from "@site/src/components/QuickStartCards";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-**The August 2024 Specials**. New stuff coming out this August. Learn more.
+**New stuff coming out this August!**
+
+This update features React Components, custom deployments, and aligns with [Docusaurus v3.5.2](https://docusaurus.io/blog/releases/3.5.2).
+
 
 ![media](./media/mkx-blog-default.png)
 
-<!-- truncate -->
+{/* truncate */}
 
 
-Welcome to the August 2024 update! This month, we’re focusing on extending React components and improving the deployment workflow to boost efficiency and productivity.
 
 
 ## Highlights
 
-- [Extending React](#react-components)
-- [Custom Deployments](#deploying-cloudflare-pages-with-wrangler-and-actions)
-- [Newly added docs](#new-docs)
+### Extending React
 
-## References
+MDX allow JSX directly in your Markdown files and render them as React components. [Learn more](/docs/content-creation/create-pages).
 
-- [RSS](https://mkeithx.pages.dev/blog/rss.xml)
-- [PR#80](https://github.com/mkeithX/mkeithx.github.io/pull/80)
-- [PR#72](https://github.com/mkeithX/mkeithx.github.io/pull/72)
+<QuickStartCardRow />
 
-## Changes
+<DevOpsCardRow />
 
-### New Docs
-
-- [Plugins](/docs/website-configuration/plugins-config)
-- [Environments](/docs/website-configuration/virtual-environment)
-- [Content Creation](/docs/content-creation)
-- [Deployment](/docs/custom-deployment)
-
-### New Pages
 
 <IframeWindow url="/404/?docusaurus-theme=dark" />
 
+
+
+## Custom Deployment
+
+### Cloudflare Pages
+
+Cloudflare Pages has become a popular choice for deploying fast and secure static sites, and this month we’re excited to introduce new features that will simplify your deployment process.
+
+
+### Wrangler Integration
+
+Wrangler, the command-line tool for Cloudflare Workers, now supports seamless integration with Cloudflare Pages. [Learn more](/docs/custom-deployment/deploy-to-cloudflare-pages).
+
+You can use Wrangler to manage your deployment configurations, automate builds, and handle advanced deployment scenarios with ease.
+
+### GitHub Actions
+
+To make continuous deployment even more accessible, we’ve integrated GitHub Actions with Cloudflare Pages. 
+
+
+
+
+
+
+
+## Other Changes
+
+### New docs
+
+- [Content Creation](/docs/content-creation)
+- [Plugins](/docs/website-configuration/plugins-config)
+- [Environments](/docs/website-configuration/virtual-environment)
+- [Deployment](/docs/custom-deployment)
+- [RSS](https://mkeithx.pages.dev/blog/rss.xml)
+- [Author's Index](/blog/authors)
+- [Author's Page](/blog/authors/mkeithx)
+
+## References
+
+
+- [PR#80](https://github.com/mkeithX/mkeithx.github.io/pull/80)
+- [PR#72](https://github.com/mkeithX/mkeithx.github.io/pull/72)
+
+<!-- 
 ### Deployments
 
 #### CLI
@@ -96,11 +130,7 @@ jobs:
           projectName: <CLOUDFLARE_PROJECT_NAME>
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-```
-
-## React `<Components/>`
-
-Docusaurus supports MDX out of the box, enabling you to embed JSX directly in your Markdown files and render them as React components. Apart from the features in the homepage, check out this [custom cards](/docs#explore).
+``` -->
 
 
 <!-- 
@@ -120,19 +150,7 @@ React’s Suspense and Concurrent Mode are getting some much-anticipated updates
 
 We’re introducing a new toolkit for creating and managing custom hooks. This toolkit will streamline the process of building reusable logic and make it simpler to share functionality across different components. -->
 
-## Deploying Cloudflare Pages with Wrangler and Actions
 
-Cloudflare Pages has become a popular choice for deploying fast and secure static sites, and this month we’re excited to introduce new features that will simplify your deployment process.
-
-### Wrangler Integration
-
-Wrangler, the command-line tool for Cloudflare Workers, now supports seamless integration with Cloudflare Pages. [Learn more](/docs/custom-deployment/deploy-to-cloudflare-pages).
-
-You can use Wrangler to manage your deployment configurations, automate builds, and handle advanced deployment scenarios with ease.
-
-### GitHub Actions for Deployment
-
-To make continuous deployment even more accessible, we’ve integrated GitHub Actions with Cloudflare Pages. 
 
 
 
@@ -153,8 +171,8 @@ Our documentation now features a wealth of new examples and tutorials to help yo
 
 To provide hands-on learning experiences, we’re introducing interactive demos directly within the documentation. You can experiment with code and see results in real-time without leaving the page. -->
 
-## What’s Next?
+<!-- ## What’s Next?
 
 We’re constantly working to enhance our tools and resources to support your development journey. These August 2024 updates are just the beginning, and we’re excited to see how you’ll leverage these new features and improvements.
 
-Stay tuned for more updates, and as always, we’d love to hear your feedback. Happy coding, and here’s to making August a month of innovation and progress!
+Stay tuned for more updates, and as always, we’d love to hear your feedback. Happy coding, and here’s to making August a month of innovation and progress! -->
