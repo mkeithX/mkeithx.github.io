@@ -117,23 +117,24 @@ const config: Config = {
         blog: {
           path: "blog",
           blogTitle: "Blog",
-          blogDescription: "Recent updates and releases from mkeithx.",
+          blogDescription: "Updates and Releases.",
           routeBasePath: "blog",
           blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
           ...admonitionsConfig,
           ...commonRemarkConfig,
           postsPerPage: "ALL",
-          onInlineTags: 'warn',
-          onInlineAuthors: 'warn',
-          onUntruncatedBlogPosts: 'warn',
+          onInlineTags: 'throw',
+          onInlineAuthors: 'throw',
+          onUntruncatedBlogPosts: 'throw',
 
           feedOptions: {
             type: "all",
+            title: "The MKXSpaceHub Blog",
             description:
             'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
-            copyright,
+            copyright: `${copyright}`,
           },
         } satisfies BlogOptions,
 
