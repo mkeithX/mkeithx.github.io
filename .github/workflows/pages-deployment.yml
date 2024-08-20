@@ -18,11 +18,10 @@ jobs:
           npm install && npm run build
 
       - name: Publish
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          # projectName: mkeithx
-          # directory: website/build
-          # gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          command: pages deploy website/build --project-name=mkeithx
+          projectName: mkeithx
+          directory: website/build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
