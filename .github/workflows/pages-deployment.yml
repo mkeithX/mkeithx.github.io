@@ -3,8 +3,7 @@ name: MKX Custom Deploy
 on:
   push:
     branches: [main]
-  
-  
+
   pull_request:
     branches:
       - main
@@ -32,7 +31,6 @@ jobs:
         with:
           node-version: 20
           cache: npm
-          
 
       - name: Build
         run: |
