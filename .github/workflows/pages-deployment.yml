@@ -7,15 +7,18 @@ on:
   pull_request:
     branches:
       - main
-      - preview
+    
+    paths:
+      - .github/workflows/pages-deployment.yml
 
 concurrency:
-  group: ${{ github.workflow }}-${{ github.ref }}
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
 jobs:
   deploy:
     runs-on: ubuntu-latest
+
     permissions:
       contents: read
       deployments: write
@@ -29,7 +32,7 @@ jobs:
 
       - uses: actions/setup-node@v4
         with:
-          node-version: 20
+          node-version: 'latest'
 
       - name: Build
         run: |
@@ -37,6 +40,7 @@ jobs:
           npm install && npm run build
 
       - name: Publish
+        if: ${{ github.event_name != 'pull_request' && github.ref_name == 'main' }}
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -44,3 +48,4 @@ jobs:
           projectName: mkeithx
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
