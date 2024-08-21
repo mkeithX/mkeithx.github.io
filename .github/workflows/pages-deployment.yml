@@ -1,6 +1,17 @@
 name: MKX Custom Deploy
 
-on: [push]
+on:
+  push:
+    branches: [main]
+
+  pull_request:
+    branches:
+      - main
+      - preview
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
 
 jobs:
   deploy:
@@ -15,6 +26,10 @@ jobs:
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
+
+      - uses: actions/setup-node@v4
+        with:
+          node-version: 20
 
       - name: Build
         run: |
