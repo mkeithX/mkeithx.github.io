@@ -48,7 +48,7 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'category',
-          label: 'Content',
+          label: 'Guides',
           link: {
             type: 'generated-index',
             slug: '/content-creation',
