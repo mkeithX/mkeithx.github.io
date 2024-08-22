@@ -107,7 +107,7 @@ const config: Config = {
         docs: {
           path: "docs",
           editUrl: `${docsRepo}/tree/main/website/`,
-          sidebarPath: "sidebars.ts",
+          sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
           showLastUpdateAuthor: true,
@@ -179,7 +179,7 @@ const config: Config = {
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         ...commonDocsConfig,
-        sidebarPath: "sidebarsCosmos.ts",
+        sidebarPath: "./sidebarsCosmos.ts",
       } as DocsOptions,
     ],
     [
@@ -191,7 +191,7 @@ const config: Config = {
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         ...commonDocsConfig,
-        sidebarPath: "sidebarsCommunity.ts",
+        sidebarPath: "./sidebarsCommunity.ts",
       } as DocsOptions,
     ],
     [
@@ -201,7 +201,7 @@ const config: Config = {
         path: "msp",
         routeBasePath: "msp",
         editUrl: `${docsRepo}/tree/main/website/`,
-        sidebarPath: "sidebarsMsp.ts",
+        sidebarPath: "./sidebarsMsp.ts",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         ...commonDocsConfig,
