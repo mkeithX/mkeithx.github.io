@@ -237,7 +237,11 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-
+    blog: {
+      sidebar: {
+        groupByYear: true,
+      },
+    },
     docs: {
       sidebar: {
         hideable: true,
@@ -268,7 +272,7 @@ const config: Config = {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "Core",
+          label: "Docs",
         },
         {
           type: "docSidebar",
@@ -280,7 +284,6 @@ const config: Config = {
         { to: "/cosmos", label: "Cosmos", position: "left" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community"},
-        
         {
           type: "dropdown",
           label: "More",
@@ -289,6 +292,7 @@ const config: Config = {
             { to: "/msp", label: "MSP" },
             { to: "/projects", label: "Showcase" },
             { to: "/feature-requests", label: "Feature Requests" },
+            // { to: "/cosmos", label: "Cosmos"},
 
             {
               type: "html",
@@ -304,7 +308,10 @@ const config: Config = {
             },
           ],
         },
-
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        // },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",

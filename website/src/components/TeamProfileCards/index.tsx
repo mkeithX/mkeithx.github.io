@@ -2,6 +2,8 @@ import React, { type ReactNode } from "react";
 import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
+import styles from "../QuickStartCards/styles.module.css";
+import clsx from "clsx";
 
 import {
   FontAwesomeIcon,
@@ -42,23 +44,23 @@ function TeamProfileCard({
   twitterUrl,
 }: ProfileProps) {
   return (
-    <div className={className}>
-      <div className="card shadow--tl">
-        <div className="card__header">
-          <div className="avatar">
+    <div className={clsx("col col--6", styles.cardContainer)}>
+      <div className={clsx("card", styles.card)}>
+      <div className={clsx("card__header")}>
+      <div className={clsx("avatar")}>
             <img
-              className="avatar__photo avatar__photo--lg margin-vert--sm"
+              className={clsx("avatar__photo avatar__photo--lg", styles.image)}
               src={`${githubUrl}.png`}
               alt={`${name}'s avatar`}
             />
             <div className="avatar__intro">
-              <div className="avatar__name">{name}</div>
-              <small className="avatar__subtitle">{subTitle}</small>
+              <div className={clsx("avatar__name")}>{name}</div>
+              <div className="avatar__subtitle">{subTitle}</div>
             </div>
           </div>
         </div>
         {/* <div className="card__body">{children}</div> */}
-        <div className="card__footer">
+        <div className={clsx("card__footer")}>
           <div className="button-group button-group--block">
             {githubUrl && (
               <Link className="button button--sm button--secondary" href={githubUrl}>
