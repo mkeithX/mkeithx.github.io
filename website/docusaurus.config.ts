@@ -117,7 +117,7 @@ const config: Config = {
         blog: {
           path: "blog",
           blogTitle: "Blog",
-          blogDescription: "Updates and Releases.",
+          blogDescription: "Keep up to date with what's going on with the SpaceHub project.",
           routeBasePath: "blog",
           blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
@@ -237,11 +237,7 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    blog: {
-      sidebar: {
-        groupByYear: true,
-      },
-    },
+    
     docs: {
       sidebar: {
         hideable: true,

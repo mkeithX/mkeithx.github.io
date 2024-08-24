@@ -1,4 +1,5 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
+import { faL } from "@fortawesome/free-solid-svg-icons";
 import { link } from "fs";
 
 /**
@@ -18,6 +19,8 @@ const sidebars: SidebarsConfig = {
 
     "keyword",
     // "development",
+    // "installation",
+    //     "algolia",    
 
     {
       label: "Getting started",
@@ -27,7 +30,7 @@ const sidebars: SidebarsConfig = {
         slug: "/getting-started",
         description: "Let's get started!",
       },
-      collapsed: false,
+      // collapsed: false,
       collapsible: true,
       items: [
         //
@@ -42,6 +45,7 @@ const sidebars: SidebarsConfig = {
         //   value: '<img src="/img/logo/spacehub-x-logo.png" alt="LoGo" />',
         //   defaultStyle: true,
         // },
+        
         // {
         //   type: "html",
         //   value: "Core Concept",
