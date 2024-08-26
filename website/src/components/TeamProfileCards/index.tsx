@@ -90,7 +90,7 @@ export function CoreTeamRow(): JSX.Element {
     <div className="row">
       <TeamProfileCardCol
         name="Keith Tan"
-        subTitle="maintener @ Kitiplex"
+        subTitle="Maintainer @ Kitiplex"
         githubUrl="https://github.com/mkeithX"
         twitterUrl="https://twitter.com/mkeithtan"
       >

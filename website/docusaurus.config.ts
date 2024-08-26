@@ -130,7 +130,7 @@ const config: Config = {
 
           feedOptions: {
             type: "all",
-            title: "The MKXSpaceHub Blog",
+            title: "The MKX SpaceHub Blog",
             description:
             'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
@@ -295,6 +295,10 @@ const config: Config = {
               value: '<hr class="dropdown-separator">',
             },
             {
+              label: "Preview",
+              href: "https://preview.mkeithx.pages.dev",
+            },
+            {
               label: "NASA",
               href: "https://eyes.nasa.gov/apps/solar-system/#/home",
             },
@@ -370,8 +374,8 @@ const config: Config = {
               to: "/blog",
             },
             {
-              label: "Tags",
-              to: "/blog/tags",
+              label: "RSS feed",
+              href: "https://mkeithx.pages.dev/blog/rss.xml",
             },
           ],
         },
@@ -384,7 +388,7 @@ const config: Config = {
           ],
         },
         {
-          title: "Dev",
+          title: "Developers",
           items: [
             {
               label: "Cloudflare",
@@ -395,9 +399,10 @@ const config: Config = {
               href: "https://vercel.com/",
             },
             {
-              label: "FB Developers",
+              label: "Facebook Dev",
               href: "https://developers.facebook.com/",
             },
+
           ],
         },
       ],
