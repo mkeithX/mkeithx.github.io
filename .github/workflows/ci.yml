@@ -1,0 +1,27 @@
+name: MKX-CI
+
+on:
+  push:
+    branches-ignore:
+      - main
+
+jobs:
+  ci:
+    runs-on: ubuntu-latest
+    steps:
+
+      - name: Check out repo
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node
+        uses: actions/setup-node@v4
+        with:
+          node-version: latest
+          
+      - name: Build website
+        run: |
+          cd website
+          npm install 
+          npm run build
