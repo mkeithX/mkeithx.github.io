@@ -66,11 +66,12 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
-  staticDirectories: [
-    "static",
-    path.join(__dirname, "../public"),
-    path.join(__dirname, "../public/non-existent"),
-  ],
+
+  // staticDirectories: [
+  //   "static",
+  //   path.join(__dirname, "../public"),
+  //   path.join(__dirname, "../public/non-existent"),
+  // ],
 
   customFields: {
     description:
@@ -286,7 +287,7 @@ const config: Config = {
           position: "right",
           items: [
             { to: "/msp", label: "MSP" },
-            { to: "/projects", label: "Showcase" },
+            // { to: "/projects", label: "Showcase" },
             { to: "/feature-requests", label: "Feature Requests" },
             // { to: "/cosmos", label: "Cosmos"},
 
