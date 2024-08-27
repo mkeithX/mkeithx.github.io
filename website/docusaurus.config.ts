@@ -117,7 +117,7 @@ const config: Config = {
         blog: {
           path: "blog",
           blogTitle: "Blog",
-          blogDescription: "Updates and Releases.",
+          blogDescription: "Keep up to date with what's going on with the SpaceHub project.",
           routeBasePath: "blog",
           blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
@@ -130,7 +130,7 @@ const config: Config = {
 
           feedOptions: {
             type: "all",
-            title: "The MKXSpaceHub Blog",
+            title: "The MKX SpaceHub Blog",
             description:
             'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
@@ -237,7 +237,7 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-
+    
     docs: {
       sidebar: {
         hideable: true,
@@ -268,7 +268,7 @@ const config: Config = {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "Core",
+          label: "Docs",
         },
         {
           type: "docSidebar",
@@ -280,7 +280,6 @@ const config: Config = {
         { to: "/cosmos", label: "Cosmos", position: "left" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community"},
-        
         {
           type: "dropdown",
           label: "More",
@@ -289,14 +288,15 @@ const config: Config = {
             { to: "/msp", label: "MSP" },
             { to: "/projects", label: "Showcase" },
             { to: "/feature-requests", label: "Feature Requests" },
+            // { to: "/cosmos", label: "Cosmos"},
 
             {
               type: "html",
               value: '<hr class="dropdown-separator">',
             },
             {
-              label: "NASA",
-              href: "https://eyes.nasa.gov/apps/solar-system/#/home",
+              label: "Preview",
+              href: "https://preview.mkeithx.pages.dev",
             },
             {
               label: "React",
@@ -304,7 +304,10 @@ const config: Config = {
             },
           ],
         },
-
+        // {
+        //   type: 'localeDropdown',
+        //   position: 'right',
+        // },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -367,8 +370,8 @@ const config: Config = {
               to: "/blog",
             },
             {
-              label: "Tags",
-              to: "/blog/tags",
+              label: "RSS feed",
+              href: "https://mkeithx.pages.dev/blog/rss.xml",
             },
           ],
         },
@@ -381,7 +384,7 @@ const config: Config = {
           ],
         },
         {
-          title: "Dev",
+          title: "Developers",
           items: [
             {
               label: "Cloudflare",
@@ -392,9 +395,10 @@ const config: Config = {
               href: "https://vercel.com/",
             },
             {
-              label: "FB Developers",
+              label: "Facebook Dev",
               href: "https://developers.facebook.com/",
             },
+
           ],
         },
       ],
