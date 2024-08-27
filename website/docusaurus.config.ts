@@ -286,7 +286,7 @@ const config: Config = {
           position: "right",
           items: [
             { to: "/msp", label: "MSP" },
-            { to: "/projects", label: "Showcase" },
+            // { to: "/projects", label: "Showcase" },
             { to: "/feature-requests", label: "Feature Requests" },
             // { to: "/cosmos", label: "Cosmos"},
 
