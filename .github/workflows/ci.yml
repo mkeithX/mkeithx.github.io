@@ -4,6 +4,10 @@ on:
   push:
     branches-ignore:
       - main
+    
+    paths:
+      - '.github/workflows/ci.yml'
+      - 'website/**'
 
 jobs:
   ci:

@@ -30,7 +30,7 @@ const sidebars: SidebarsConfig = {
         slug: "/getting-started",
         description: "The SpaceHub in-depth. Let's get started!",
       },
-      // collapsed: false,
+      collapsed: false,
       collapsible: true,
       items: [
         //

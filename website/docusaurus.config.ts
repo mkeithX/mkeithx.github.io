@@ -66,11 +66,12 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
-  staticDirectories: [
-    "static",
-    path.join(__dirname, "../public"),
-    path.join(__dirname, "../public/non-existent"),
-  ],
+
+  // staticDirectories: [
+  //   "static",
+  //   path.join(__dirname, "../public"),
+  //   path.join(__dirname, "../public/non-existent"),
+  // ],
 
   customFields: {
     description:
