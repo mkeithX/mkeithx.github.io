@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
       link: {
         type: "generated-index",
         slug: "/getting-started",
-        description: "Let's get started!",
+        description: "The SpaceHub in-depth. Let's get started!",
       },
       // collapsed: false,
       collapsible: true,

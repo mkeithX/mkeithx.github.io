@@ -299,10 +299,6 @@ const config: Config = {
               href: "https://preview.mkeithx.pages.dev",
             },
             {
-              label: "NASA",
-              href: "https://eyes.nasa.gov/apps/solar-system/#/home",
-            },
-            {
               label: "React",
               href: "https://react.dev/",
             },
