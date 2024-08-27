@@ -1,6 +1,12 @@
 name: MKX Custom Deploy
 
-on: [push]
+on: 
+  pull_request:
+    branches:
+      - main
+
+    paths: 
+        - 'website/**'
 
 jobs:
   deploy:
@@ -16,12 +22,13 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build
-        uses: actions/setup-node@v4
+      
+      - uses: actions/setup-node@v4
         with:
           node-version: latest
 
-      - run: |
+      - name: Install Dependencies
+        run: |
           cd website
           npm install && npm run build
 
