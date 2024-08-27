@@ -1,12 +1,15 @@
 name: MKX Custom Deploy
 
-on: 
-  pull_request:
+on:
+  push:
     branches:
       - main
-
     paths: 
-        - 'website/**'
+      - '.github/workflows/pages-deployment.yml'
+      - 'website/**'
+
+  pull_request:
+
 
 jobs:
   deploy:
