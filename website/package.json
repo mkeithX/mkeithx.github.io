@@ -50,7 +50,7 @@
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.78",
     "typescript": "5.4.3",
-    "wrangler": "^3.72.1"
+    "wrangler": "^3.72.2"
   },
   "browserslist": {
     "production": [
