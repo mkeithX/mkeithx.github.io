@@ -8,7 +8,7 @@ on:
       - '.github/workflows/mkx-deploy.yml'
       - 'website/**'
 
-  pull_request:
+  # pull_request:
 
 
 jobs:
