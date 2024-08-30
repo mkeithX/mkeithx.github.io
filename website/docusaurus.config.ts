@@ -288,8 +288,8 @@ const config: Config = {
         { to: "/community", label: "Community"},
         {
           type: 'html',
-          position: 'right',
-          value: '<span class="badge badge--secondary">Preview </span>',
+          position: 'left',
+          value: '<span class="badge badge--secondary">Preview</span>',
           
         },
         {
