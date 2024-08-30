@@ -11,6 +11,7 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 # Configuration {#website-configuration}
+This section covers the custom configuration powering the **MKX SpaceHub**™ website.
 
 
 <!-- 
@@ -20,10 +21,33 @@ The **MKX SpaceHub**™ was initialize as a monorepo along with examples such as
  -->
 
 
+
+## Scaffold project
+<!-- Use the command line tool to quickly set up a Docusaurus site. This command will create a new directory with the basic Docusaurus files, whether you're starting fresh or adding to an existing repository. -->
+
 From its initial GitHub commit, the **MKX SpaceHub**™ has been organized as a monorepo with [examples](https://github.com/mkeithX/mkeithx.github.io/tree/main/examples) and built with [Docusaurus TypeScript](https://docusaurus.io/docs/typescript-support) variant along with some awesome tools like [VS Code](https://code.visualstudio.com/).
 
-## Project structure
 
+Docusaurus requires [Node.js](https://nodejs.org/en/download/package-manager) version 18 or up. I use [npm](https://docs.npmjs.com/) as the package manager. 
+
+```bash
+npx create-docusaurus@latest website classic --typescript
+```
+
+
+```bash npm2yarn
+npm run start
+```
+
+
+### Project structure
+
+<details>
+<summary>Show</summary>
+
+Project structure
+
+<html>
 <pre>
 
 <b>
@@ -59,22 +83,14 @@ website
 
 
 </pre>
+</html>
 
-## Initialization
-Docusaurus requires [Node.js](https://nodejs.org/en/download/package-manager) version 18 or up. I use [npm](https://docs.npmjs.com/) as the package manager. 
-
-```bash
-npx create-docusaurus@latest website classic --typescript
-```
-
-
-```bash npm2yarn
-npm run start
-```
+</details>
 
 
 
 
+## More
 
 <DocCardList />
 

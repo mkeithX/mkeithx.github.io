@@ -67,12 +67,6 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
 
-  // staticDirectories: [
-  //   "static",
-  //   path.join(__dirname, "../public"),
-  //   path.join(__dirname, "../public/non-existent"),
-  // ],
-
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
@@ -106,6 +100,7 @@ const config: Config = {
 
       {
         docs: {
+          
           path: "docs",
           editUrl: `${docsRepo}/tree/main/website/`,
           sidebarPath: "./sidebars.ts",
@@ -113,6 +108,14 @@ const config: Config = {
           ...commonDocsConfig,
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          // versions: {
+          //   current: {
+          //     label: 'Preview',
+          //     // path: 'android-2.0.0',
+          //     // banner: 'unreleased',
+          //     badge: true
+          //   },
+          // }, 
         },
 
         blog: {
@@ -135,7 +138,7 @@ const config: Config = {
             description:
             'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
-            copyright: `${copyright}`,
+            copyright
           },
         } satisfies BlogOptions,
 

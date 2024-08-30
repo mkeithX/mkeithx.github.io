@@ -16,86 +16,54 @@ const sidebars: SidebarsConfig = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
 
   mySidebar: [
-
     "keyword",
-    // "development",
-    // "installation",
-    //     "algolia",    
-
     {
-      label: "Getting started",
       type: "category",
-      link: {
-        type: "generated-index",
-        slug: "/getting-started",
-        description: "The SpaceHub in-depth. Let's get started!",
-      },
       collapsed: false,
-      collapsible: true,
+      label: "Configs",
+      link: {
+        type: "doc",
+        id: "configs/index",
+      },
       items: [
-        //
-        // 'installation',
+        // "configs/plugins-config",
+        "configs/api",
 
-        // 'website-configuration/configuration',
-        // 'deployment',
-        // 'algolia',
-
-        // {
-        //   type: 'html',
-        //   value: '<img src="/img/logo/spacehub-x-logo.png" alt="LoGo" />',
-        //   defaultStyle: true,
-        // },
-        
-        // {
-        //   type: "html",
-        //   value: "Core Concept",
-        //   className: "sidebar-title",
-        // },
-    
         {
           type: "category",
-          label: "Configuration",
-          link: {
-            type: "doc",
-            id: "website-configuration/index",
-          },
-          items: [
-            "website-configuration/plugins-config",
-            "website-configuration/virtual-environment",
-          ],
-        },
-        {
-          type: "category",
-          label: "Content Creation",
+          label: "Guides",
           link: {
             type: "generated-index",
-            slug: "/content-creation",
-            description:
-              "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity.",
+            description: "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity",
+            slug: "/guides",
+            keywords: ["guides"]
           },
           items: [
-            "content-creation/create-docs",
-            "content-creation/create-pages",
-            "content-creation/create-blog",
+            "configs/guides/docs/create-doc",
+            "configs/guides/docs/docs-create-page",
+            "configs/guides/docs/blog",
+            {
+              type: "category",
+              label: "Deployment",
+              link: {
+                type: "generated-index",
+                slug: "/deployment",
+                description:
+                  "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.",
+                  keywords: ["deployments"],
+              },
+              items: [
+                "configs/guides/deployment/deploy-cloudflare",
+                "configs/guides/deployment/deploy-github"
+              ],
+            },
           ],
+          
         },
-        {
-          type: "category",
-          label: "Deployment",
-          link: {
-            type: "generated-index",
-            slug: "/custom-deployment",
-            description:
-              "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.",
-          },
-          items: [
-            "custom-deployment/deploy-locally",
-            "custom-deployment/deploy-to-github-pages",
-            "custom-deployment/deploy-to-cloudflare-pages",
-          ],
-        },
+        // "configs/virtual-environment"
       ],
     },
+
     {
       type: "category",
       label: "Tutorials",

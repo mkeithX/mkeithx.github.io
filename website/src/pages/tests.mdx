@@ -2,7 +2,7 @@
 description: Playground for extending APIs and extra plugin instances for testing / dogfooding purposes.
 hide_table_of_contents: false
 unlisted: true
-# wrapperClassName: docusaurus-markdown-example
+wrapperClassName: docusaurus-markdown-example
 ---
 import Video from "/src/components/Video";
 import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
@@ -21,6 +21,33 @@ Playground for extending APIs and extra plugin instances for testing / dogfoodin
 
 ## Content
 The following should be present when publishing docs or blog in `.mdx` format.
+
+### Coming Soon
+<BrowserWindow url="/coming-soon">
+
+import ComingSoon from "@site/src/components/ComingSoon";
+
+<ComingSoon />
+
+
+</BrowserWindow>
+
+```tsx title="/docs/awesome-docs.mdx" showLineNumbers
+<BrowserWindow url="/coming-soon">
+import ComingSoon from "@site/src/components/ComingSoon";
+
+<ComingSoon />
+
+
+</BrowserWindow>
+
+```
+
+### Projects
+
+
+<IframeWindow url="/projects" />
+
 
 ### Docs
 
@@ -179,5 +206,7 @@ Release Test
 
 
 </div>
+
+
 
 
