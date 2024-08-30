@@ -284,12 +284,12 @@ const config: Config = {
 
         // { to: "/projects", label: "Showcase", position: "left" },
         { to: "/cosmos", label: "Cosmos" },
-        { to: "/blog", label: "Blog" },
+        // { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community"},
         {
           type: 'html',
           position: 'left',
-          value: '<span class="badge badge--secondary">Preview</span>',
+          value: '<span class="badge badge--secondary ">Preview</span>',
           
         },
         {
@@ -297,7 +297,7 @@ const config: Config = {
           label: "More",
           position: "right",
           items: [
-            { to: "/cosmos", label: "Cosmos" },
+            { to: "/blog", label: "Updates" },
             { to: "/msp", label: "MSP" },
             // { to: "/projects", label: "Showcase" },
             // { to: "/feature-requests", label: "Feature Requests" },
