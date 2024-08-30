@@ -20,7 +20,61 @@ The **MKX SpaceHub**™ was initialize as a monorepo along with examples such as
  -->
 
 
-From its initial GitHub commit, the **MKX SpaceHub**™ has been organized as a monorepo with [examples](https://github.com/mkeithX/mkeithx.github.io/tree/main/examples) and built with [Docusaurus `--typescript`](https://docusaurus.io/docs/typescript-support) variant along with some awesome tools like [VS Code](https://code.visualstudio.com/).
+From its initial GitHub commit, the **MKX SpaceHub**™ has been organized as a monorepo with [examples](https://github.com/mkeithX/mkeithx.github.io/tree/main/examples) and built with [Docusaurus TypeScript](https://docusaurus.io/docs/typescript-support) variant along with some awesome tools like [VS Code](https://code.visualstudio.com/).
+
+## Project structure
+
+<pre>
+
+<b>
+public
+├─
+examples
+├──
+website
+|
+├── blog
+│   ├── 2024
+│   ├── release
+│   └── updates
+├── docs
+│   ├── content-creation
+│   ├── devops
+│   ├── tutorials
+│   └── keyword.mdx
+├── src
+│   ├── css
+│   │   └── custom.css
+│   └── pages
+│       ├── styles.module.css
+│       └── index.tsx
+├── static
+│   └── img
+├── docusaurus.config.ts
+├── package.json
+├── README.md
+├── sidebars.ts
+└── yarn.lock
+</b>
+
+
+</pre>
+
+## Initialization
+Docusaurus requires [Node.js](https://nodejs.org/en/download/package-manager) version 18 or up. I use [npm](https://docs.npmjs.com/) as the package manager. 
+
+```bash
+npx create-docusaurus@latest website classic --typescript
+```
+
+
+```bash npm2yarn
+npm run start
+```
+
+
+
+
 
 <DocCardList />
 

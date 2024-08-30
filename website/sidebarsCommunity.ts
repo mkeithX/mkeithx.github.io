@@ -28,6 +28,11 @@ const sidebars: SidebarsConfig = {
       label: 'Showcase',
       href: '/projects'
     },
+    {
+      type: 'link',
+      label: 'Feature Requests',
+      href: '/feature-requests'
+    },
   ],
 
   // But you can create a sidebar manually
