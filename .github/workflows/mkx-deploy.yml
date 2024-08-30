@@ -8,11 +8,12 @@ on:
       - '.github/workflows/mkx-deploy.yml'
       - 'website/**'
 
-  pull_request:
+  # pull_request:
 
 
 jobs:
   deploy:
+    
     runs-on: ubuntu-latest
     permissions:
       contents: read

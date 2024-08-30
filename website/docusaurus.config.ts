@@ -67,12 +67,6 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
 
-  // staticDirectories: [
-  //   "static",
-  //   path.join(__dirname, "../public"),
-  //   path.join(__dirname, "../public/non-existent"),
-  // ],
-
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
@@ -106,6 +100,7 @@ const config: Config = {
 
       {
         docs: {
+          
           path: "docs",
           editUrl: `${docsRepo}/tree/main/website/`,
           sidebarPath: "./sidebars.ts",
@@ -113,6 +108,14 @@ const config: Config = {
           ...commonDocsConfig,
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
+          // versions: {
+          //   current: {
+          //     label: 'Preview',
+          //     // path: 'android-2.0.0',
+          //     // banner: 'unreleased',
+          //     badge: true
+          //   },
+          // }, 
         },
 
         blog: {
@@ -135,7 +138,7 @@ const config: Config = {
             description:
             'Stay tuned with upcoming updates releases and articles by following our feed!',
             xslt: true,
-            copyright: `${copyright}`,
+            copyright
           },
         } satisfies BlogOptions,
 
@@ -265,11 +268,12 @@ const config: Config = {
         // height: 32,
       },
       items: [
+
         {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "Docs",
+          label: "Core",
         },
         {
           type: "docSidebar",
@@ -278,17 +282,25 @@ const config: Config = {
           label: "DevOps",
         },
 
-        { to: "/cosmos", label: "Cosmos", position: "left" },
-        { to: "/blog", label: "Blog" },
+        // { to: "/projects", label: "Showcase", position: "left" },
+        { to: "/cosmos", label: "Cosmos" },
+        // { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community"},
+        {
+          type: 'html',
+          position: 'left',
+          value: '<span class="badge badge--secondary ">Preview</span>',
+          
+        },
         {
           type: "dropdown",
           label: "More",
           position: "right",
           items: [
+            { to: "/blog", label: "Updates" },
             { to: "/msp", label: "MSP" },
             // { to: "/projects", label: "Showcase" },
-            { to: "/feature-requests", label: "Feature Requests" },
+            // { to: "/feature-requests", label: "Feature Requests" },
             // { to: "/cosmos", label: "Cosmos"},
 
             {
@@ -300,8 +312,8 @@ const config: Config = {
               href: "https://preview.mkeithx.pages.dev",
             },
             {
-              label: "React",
-              href: "https://react.dev/",
+              label: "RSS",
+              href: "https://mkeithx.pages.dev/blog/rss.xml",
             },
           ],
         },

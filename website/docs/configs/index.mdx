@@ -1,0 +1,96 @@
+---
+description: The custom configuration powering MKX SpaceHub
+custom_edit_url: null
+---
+
+import DocCardList from '@theme/DocCardList';
+
+
+import Admonition from "@theme/Admonition";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Configuration {#website-configuration}
+This section covers the custom configuration powering the **MKX SpaceHub**™ website.
+
+
+<!-- 
+The **MKX SpaceHub**™ project is built with [Docusaurus `--typescript`](https://docusaurus.io/docs/typescript-support) variant along with some awesome tools like [VS Code](https://code.visualstudio.com/). It also includes examples of variables in a monorepo, with samples such as Python, Jupyter Notebook, and Batch scripts for starters.
+
+The **MKX SpaceHub**™ was initialize as a monorepo along with examples such as [Python](/docs/repo), [Jupyter Notebook](https://github.com/mkeithX/mkeithx.github.io/tree/main/examples/jupyter-starters), and [Batch scripts](/docs/cheat-sheets/batch) for starters. project is built with Docusaurus --typescript variant along with some awesome tools like VS Code.
+ -->
+
+
+
+## Scaffold project
+<!-- Use the command line tool to quickly set up a Docusaurus site. This command will create a new directory with the basic Docusaurus files, whether you're starting fresh or adding to an existing repository. -->
+
+From its initial GitHub commit, the **MKX SpaceHub**™ has been organized as a monorepo with [examples](https://github.com/mkeithX/mkeithx.github.io/tree/main/examples) and built with [Docusaurus TypeScript](https://docusaurus.io/docs/typescript-support) variant along with some awesome tools like [VS Code](https://code.visualstudio.com/).
+
+
+Docusaurus requires [Node.js](https://nodejs.org/en/download/package-manager) version 18 or up. I use [npm](https://docs.npmjs.com/) as the package manager. 
+
+```bash
+npx create-docusaurus@latest website classic --typescript
+```
+
+
+```bash npm2yarn
+npm run start
+```
+
+
+### Project structure
+
+<details>
+<summary>Show</summary>
+
+Project structure
+
+<html>
+<pre>
+
+<b>
+public
+├─
+examples
+├──
+website
+|
+├── blog
+│   ├── 2024
+│   ├── release
+│   └── updates
+├── docs
+│   ├── content-creation
+│   ├── devops
+│   ├── tutorials
+│   └── keyword.mdx
+├── src
+│   ├── css
+│   │   └── custom.css
+│   └── pages
+│       ├── styles.module.css
+│       └── index.tsx
+├── static
+│   └── img
+├── docusaurus.config.ts
+├── package.json
+├── README.md
+├── sidebars.ts
+└── yarn.lock
+</b>
+
+
+</pre>
+</html>
+
+</details>
+
+
+
+
+## More
+
+<DocCardList />
+
