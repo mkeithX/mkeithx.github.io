@@ -155,12 +155,17 @@ const sidebars: SidebarsConfig = {
         "cheat-sheets/batch",
         "cheat-sheets/mdx-react",
         // "cheat-sheets/django",
+        {
+          type: "link",
+          label: "MSP-Old", // The link label
+          href: "/msp", // The external URL
+        },
       ],
     },
     // {
-    //   type: "link",
-    //   label: "Visit", // The link label
-    //   href: "https://mkeithx.github.io", // The external URL
+    //   type: 'html',
+    //   value: 'BeTa',
+    //   className: 'sidebar-title',
     // },
   ],
 

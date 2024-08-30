@@ -268,11 +268,12 @@ const config: Config = {
         // height: 32,
       },
       items: [
+
         {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "Docs",
+          label: "Core",
         },
         {
           type: "docSidebar",
@@ -281,17 +282,25 @@ const config: Config = {
           label: "DevOps",
         },
 
-        { to: "/cosmos", label: "Cosmos", position: "left" },
+        // { to: "/projects", label: "Showcase", position: "left" },
+        { to: "/cosmos", label: "Cosmos" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community"},
+        {
+          type: 'html',
+          position: 'right',
+          value: '<span class="badge badge--secondary">Preview </span>',
+          
+        },
         {
           type: "dropdown",
           label: "More",
           position: "right",
           items: [
+            { to: "/cosmos", label: "Cosmos" },
             { to: "/msp", label: "MSP" },
             // { to: "/projects", label: "Showcase" },
-            { to: "/feature-requests", label: "Feature Requests" },
+            // { to: "/feature-requests", label: "Feature Requests" },
             // { to: "/cosmos", label: "Cosmos"},
 
             {
@@ -303,8 +312,8 @@ const config: Config = {
               href: "https://preview.mkeithx.pages.dev",
             },
             {
-              label: "React",
-              href: "https://react.dev/",
+              label: "RSS",
+              href: "https://mkeithx.pages.dev/blog/rss.xml",
             },
           ],
         },
