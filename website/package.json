@@ -18,7 +18,8 @@
     "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
     "build:local": "docusaurus build && docusaurus serve",
     "deploy:cf": "npm run build && wrangler pages deploy ./build",
-    "rm:pckg": "pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\""
+    "rm:pckg": "pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\"",
+    "clear:purge": "pwsh -Command \"@('node_modules','.yarn','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue\""
   },
   "dependencies": {
     "@docusaurus/core": "^3.5.2",
@@ -39,7 +40,8 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "rehype-katex": "^7.0.0",
-    "remark-math": "^6.0.0"
+    "remark-math": "^6.0.0",
+    "serve-handler": "^6.1.5"
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240620.0",

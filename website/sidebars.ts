@@ -1,6 +1,4 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
-import { faL } from "@fortawesome/free-solid-svg-icons";
-import { link } from "fs";
 
 /**
  * Creating a sidebar enables you to:
@@ -17,10 +15,12 @@ const sidebars: SidebarsConfig = {
 
   mySidebar: [
     "keyword",
+
+ 
     {
       type: "category",
       collapsed: false,
-      label: "Configs",
+      label: "Configs • Guides",
       link: {
         type: "doc",
         id: "configs/index",
@@ -45,6 +45,7 @@ const sidebars: SidebarsConfig = {
             {
               type: "category",
               label: "Deployment",
+              collapsed: true,
               link: {
                 type: "generated-index",
                 slug: "/deployment",
@@ -57,10 +58,37 @@ const sidebars: SidebarsConfig = {
                 "configs/guides/deployment/deploy-github"
               ],
             },
+         
           ],
-          
         },
+        // {
+        //   type: 'html',
+        //   value: 'BeTa',
+        //   className: 'sidebar-title',
+        // },
+        "troubleshoot",
         // "configs/virtual-environment"
+        {
+          type: "category",
+          label: "Cheat sheets",
+          collapsed: true,
+          collapsible: true,
+          link: {
+            type: "generated-index",
+            slug: "/cheat-sheets",
+            description: "Commonly-used commands for reference",
+          },
+          items: [
+            "foo",
+            "cheat-sheets/windows",
+            "cheat-sheets/git",
+            "cheat-sheets/conda",
+            "cheat-sheets/batch",
+            "cheat-sheets/mdx-react",
+            // "cheat-sheets/django",
+    
+          ],
+        },
       ],
     },
 
@@ -138,35 +166,7 @@ const sidebars: SidebarsConfig = {
         "repo/django-custom-user",
       ],
     },
-    {
-      type: "category",
-      label: "Cheat Sheets",
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "generated-index",
-        slug: "/cheat-sheets",
-        description: "Gists, references and more.",
-      },
-      items: [
-        "cheat-sheets/windows",
-        "cheat-sheets/git",
-        "cheat-sheets/conda",
-        "cheat-sheets/batch",
-        "cheat-sheets/mdx-react",
-        // "cheat-sheets/django",
-        {
-          type: "link",
-          label: "MSP-Old", // The link label
-          href: "/msp", // The external URL
-        },
-      ],
-    },
-    // {
-    //   type: 'html',
-    //   value: 'BeTa',
-    //   className: 'sidebar-title',
-    // },
+
   ],
 
   devops: [

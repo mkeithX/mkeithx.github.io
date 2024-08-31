@@ -215,10 +215,10 @@ const config: Config = {
     [
       "ideal-image",
       {
-        quality: 70, // 85
-        max: 1030, // 1980
-        min: 680, // 680
-        steps: 2, // 4
+        quality: 70,
+        max: 1030,
+        min: 640, 
+        steps: 2,
         disableInDev: false,
       } satisfies IdealImageOptions,
     ],
@@ -258,7 +258,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      title: "Andromeda",
       logo: {
         alt: "SpaceHub",
         src: "img/logo/mkxspacehub-logo-alt.png",
@@ -283,24 +283,18 @@ const config: Config = {
         },
 
         // { to: "/projects", label: "Showcase", position: "left" },
-        { to: "/cosmos", label: "Cosmos" },
-        // { to: "/blog", label: "Blog" },
+
+        { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community"},
-        {
-          type: 'html',
-          position: 'left',
-          value: '<span class="badge badge--secondary ">Preview</span>',
-          
-        },
+
         {
           type: "dropdown",
           label: "More",
           position: "right",
           items: [
-            { to: "/blog", label: "Updates" },
-            { to: "/msp", label: "MSP" },
+            { to: "/cosmos", label: "Cosmos" },
             // { to: "/projects", label: "Showcase" },
-            // { to: "/feature-requests", label: "Feature Requests" },
+            { to: "/feature-requests", label: "Feature Requests" },
             // { to: "/cosmos", label: "Cosmos"},
 
             {
@@ -330,6 +324,12 @@ const config: Config = {
         {
           type: "search",
           position: "right",
+        },
+        {
+          type: 'html',
+          // position: 'right',
+          value: '<span class="badge badge--success text--warning">Preview</span>',
+          
         },
       ],
     },
