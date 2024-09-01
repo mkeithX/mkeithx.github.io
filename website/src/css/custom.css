@@ -89,16 +89,16 @@
   -webkit-text-fill-color: transparent; */
 }
 
-/* .navbar__title {
+.navbar__title {
   display: none;
-} */
+}
 
 .dropdown-separator {
   margin: 0.3rem 0;
 }
 
 .navbar__brand {
-  margin-right: 1.2rem;
+  margin-right: 1.5rem;
 }
 
 

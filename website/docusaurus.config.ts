@@ -15,7 +15,7 @@ import { socialProfiles } from "./social.json";
 require("dotenv").config();
 
 // console.log(process.env)
-// const deploymentBranch = process.env.DEPLOYMENT_BRANCH; 
+// const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
 
 const docsRepo = `https://github.com/mkeithX/mkeithx.github.io/`;
 const editUrlLink = `${docsRepo}/tree/main/website/`;
@@ -76,7 +76,7 @@ const config: Config = {
     // custom_title: "Guides for Seamless Software Deployment",
     custom_title: "Unified Docs for Software Developers.",
     hero_header: "OpenSource",
-    hero_footer: "Guides and samples from Keith",
+    hero_footer: "Open source projects and samples from Keith",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -85,8 +85,8 @@ const config: Config = {
 
   stylesheets: [
     {
-      href: '/katex/katex.min.css',
-      type: 'text/css',
+      href: "/katex/katex.min.css",
+      type: "text/css",
     },
   ],
 
@@ -101,7 +101,6 @@ const config: Config = {
 
       {
         docs: {
-          
           path: "docs",
           // editUrl: editUrlLink,
           sidebarPath: "./sidebars.ts",
@@ -116,30 +115,31 @@ const config: Config = {
           //     // banner: 'unreleased',
           //     badge: true
           //   },
-          // }, 
+          // },
         },
 
         blog: {
           path: "blog",
           blogTitle: "Blog",
-          blogDescription: "Keep up to date with what's going on with the SpaceHub project.",
+          blogDescription:
+            "Keep up to date with what's going on with the SpaceHub project.",
           routeBasePath: "blog",
           blogSidebarTitle: "Blog",
           blogSidebarCount: "ALL",
           ...admonitionsConfig,
           ...commonRemarkConfig,
           postsPerPage: "ALL",
-          onInlineTags: 'throw',
-          onInlineAuthors: 'throw',
-          onUntruncatedBlogPosts: 'throw',
+          onInlineTags: "throw",
+          onInlineAuthors: "throw",
+          onUntruncatedBlogPosts: "throw",
 
           feedOptions: {
             type: "all",
             title: "The MKX SpaceHub Blog",
             description:
-            'Stay tuned with upcoming updates releases and articles by following our feed!',
+              "Stay tuned with upcoming updates releases and articles by following our feed!",
             xslt: true,
-            copyright
+            copyright,
           },
         } satisfies BlogOptions,
 
@@ -166,7 +166,7 @@ const config: Config = {
           changefreq: "hourly",
           priority: 0.5,
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
-          filename: 'sitemap.xml'
+          filename: "sitemap.xml",
         },
       } satisfies Preset.Options,
     ],
@@ -218,7 +218,7 @@ const config: Config = {
       {
         quality: 70,
         max: 1030,
-        min: 640, 
+        min: 640,
         steps: 2,
         disableInDev: false,
       } satisfies IdealImageOptions,
@@ -242,7 +242,7 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    
+
     docs: {
       sidebar: {
         hideable: true,
@@ -259,22 +259,21 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "Andromeda",
+      // title: "Docs",
       logo: {
-        alt: "SpaceHub",
-        src: "img/logo/mkxspacehub-logo-alt.png",
+        alt: "Docs",
+        src: "img/logo/mkxspacehub-logo.png",
         // srcDark: "img/logo/mkxspacehub-logo-dark.png",
         target: "_self",
         // width: 32,
-        // height: 32,
+        height: 32,
       },
       items: [
-
         {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "Core",
+          label: "Docs",
         },
         {
           type: "docSidebar",
@@ -286,7 +285,7 @@ const config: Config = {
         // { to: "/projects", label: "Showcase", position: "left" },
 
         { to: "/blog", label: "Blog" },
-        { to: "/community", label: "Community"},
+        { to: "/community", label: "Community" },
 
         {
           type: "dropdown",
@@ -303,8 +302,8 @@ const config: Config = {
               value: '<hr class="dropdown-separator">',
             },
             {
-              label: "Preview",
-              href: "https://preview.mkeithx.pages.dev",
+              label: "Bugs",
+              href: "https://github.com/mkeithX/mkeithx.github.io/issues/new/choose",
             },
             {
               label: "RSS",
@@ -327,10 +326,9 @@ const config: Config = {
           position: "right",
         },
         {
-          type: 'html',
-          // position: 'right',
-          value: '<span class="badge badge--success text--warning">Preview</span>',
-          
+          type: "html",
+          // position: "right",
+          value: '<span class="badge badge--secondary">M87</span>',
         },
       ],
     },
@@ -351,15 +349,15 @@ const config: Config = {
         src: "img/logo/mkxspacehub-logo.png",
         href: "/",
         // height: "30",
-        width: "380",
+        width: "280",
       },
       links: [
         {
           title: "Docs",
           items: [
             {
-              label: "Space",
-              to: "/cosmos",
+              label: "Gists",
+              to: "/docs/gists",
             },
             {
               label: "DevOps",
@@ -376,16 +374,16 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Me",
-              to: "/me",
+              label: "Contributing",
+              href: "/community/contributing",
             },
             {
-              label: "Blog",
-              to: "/blog",
+              label: "Projects",
+              to: "/projects",
             },
             {
-              label: "RSS feed",
-              href: "https://mkeithx.pages.dev/blog/rss.xml",
+              label: "Feature requests",
+              to: "/feature-requests",
             },
           ],
         },
@@ -412,7 +410,6 @@ const config: Config = {
               label: "Facebook Dev",
               href: "https://developers.facebook.com/",
             },
-
           ],
         },
       ],

@@ -80,6 +80,7 @@ const sidebars: SidebarsConfig = {
           items: [
             "gists/gists-windows",
             "gists/gists-git",
+            "gists/gists-extras",
 
           ]
         },
@@ -252,6 +253,13 @@ const sidebars: SidebarsConfig = {
     },
     "devops/glossary",
   ],
+  // myHtmlSidebar: [
+  //   {
+  //     type: 'html',
+  //     value: '<img src="sponsor.png" alt="Sponsor" />', // The HTML to be rendered
+  //     defaultStyle: true, // Use the default menu item styling
+  //   },
+  // ],
 };
 
 export default sidebars;

@@ -1,0 +1,32 @@
+
+.red {
+    color: #ff3131;
+  }
+  
+  .red[aria-selected='true'] {
+    border-bottom-color: rgb(255, 84, 84);
+  }
+  
+  .orange {
+    color: orange;
+  }
+  
+  .orange[aria-selected='true'] {
+    border-bottom-color: orange;
+  }
+  
+  .yellow {
+    color: #ffff6a;
+  }
+  
+  .yellow[aria-selected='true'] {
+    border-bottom-color: yellow;
+  }
+
+  .green {
+    color: #29ef29;
+  }
+
+  .green[aria-selected='true'] {
+    border-bottom-color: rgb(41, 239, 41);
+  }
