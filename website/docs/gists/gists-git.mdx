@@ -8,10 +8,7 @@ import TabItem from "@theme/TabItem";
 
 # Git
 
-<FAIcon icon="fa-brands fa-git" size="2x" />
-
 ## Basics
-
 
 <table>
 <tr>
@@ -100,7 +97,7 @@ Pull Changes from Remote Repository
 <td>
 
 ```bash
-git switch branch-name
+git switch "<branch-name>"
 ```
 
 </td>
@@ -113,7 +110,7 @@ Switch Branches
 <td>
 
 ```bash
-git switch -c new-branch-name
+git switch -c "<new-branch-name>"
 ```
 
 </td>
@@ -123,10 +120,7 @@ Create and Switch to a New Branch
 </tr>
 </table>
 
-
-
 ## Branching
-
 
 <table>
 <tr>
@@ -137,7 +131,7 @@ Create and Switch to a New Branch
 <td>
 
 ```bash
-git checkout -b <branch-name>
+git checkout -b "<branch-name>"
 ```
 
 </td>
@@ -150,7 +144,7 @@ Create a New Branch
 <td>
 
 ```bash
-git merge <branch-name>
+git merge "<branch-name>"
 ```
 
 </td>
@@ -163,7 +157,7 @@ Merge Branches
 <td>
 
 ```bash
-git branch -d <branch-name>
+git branch -d "<branch-name>"
 ```
 
 </td>
@@ -173,12 +167,7 @@ Delete a Branch
 </tr>
 </table>
 
-
-
-
 ## Monitoring
-
-
 
 <table>
 <tr>
@@ -228,7 +217,7 @@ Undo Changes in Working Directory
 <td>
 
 ```bash
-git reset HEAD <file>
+git reset HEAD "<file>"
 ```
 
 </td>
@@ -251,11 +240,7 @@ Undo Last Commit
 </tr>
 </table>
 
-
-
 ## Collaborating
-
-
 
 <table>
 <tr>
@@ -266,7 +251,7 @@ Undo Last Commit
 <td>
 
 ```bash
-git remote add origin <REPO-URL>
+git remote add origin "<repo-url>"
 ```
 
 </td>
@@ -306,10 +291,7 @@ Fetch Changes from Remote Repository
 </tr>
 </table>
 
-
 ## Advanced
-
-
 
 <table>
 <tr>
@@ -346,7 +328,7 @@ Apply Stashed Changes
 <td>
 
 ```bash
-git rebase <BASE-BRANCH>
+git rebase "<base-branch>"
 ```
 
 </td>
@@ -368,7 +350,3 @@ Amend Last Commit
 </td>
 </tr>
 </table>
-
-
-
-

@@ -103,7 +103,7 @@ const config: Config = {
         docs: {
           
           path: "docs",
-          editUrl: editUrlLink,
+          // editUrl: editUrlLink,
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
@@ -180,7 +180,7 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        editUrl: editUrlLink,
+        // editUrl: editUrlLink,
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         ...commonDocsConfig,
@@ -205,7 +205,7 @@ const config: Config = {
         id: "msp",
         path: "msp",
         routeBasePath: "msp",
-        editUrl: editUrlLink,
+        // editUrl: editUrlLink,
         sidebarPath: "./sidebarsMsp.ts",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
