@@ -76,7 +76,7 @@ const config: Config = {
     // custom_title: "Guides for Seamless Software Deployment",
     custom_title: "Unified Docs for Software Developers.",
     hero_header: "OpenSource",
-    hero_footer: "Open source projects and samples from Keith",
+    hero_footer: "Projects and samples from Keith",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -108,14 +108,6 @@ const config: Config = {
           ...commonDocsConfig,
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          // versions: {
-          //   current: {
-          //     label: 'Preview',
-          //     // path: 'android-2.0.0',
-          //     // banner: 'unreleased',
-          //     badge: true
-          //   },
-          // },
         },
 
         blog: {
@@ -159,7 +151,7 @@ const config: Config = {
         } satisfies PageOptions,
 
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: "./src/css/custom.css",
         },
 
         sitemap: {
