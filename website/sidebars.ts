@@ -20,7 +20,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       collapsed: false,
-      label: "Configs • Guides",
+      label: "Guides",
       link: {
         type: "doc",
         id: "configs/index",
@@ -31,7 +31,7 @@ const sidebars: SidebarsConfig = {
 
         {
           type: "category",
-          label: "Guides",
+          label: "Configs",
           link: {
             type: "generated-index",
             description: "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity",
@@ -70,25 +70,40 @@ const sidebars: SidebarsConfig = {
         // "configs/virtual-environment"
         {
           type: "category",
-          label: "Cheat sheets",
+          label: "Gists",
           collapsed: true,
-          collapsible: true,
           link: {
             type: "generated-index",
-            slug: "/cheat-sheets",
-            description: "Commonly-used commands for reference",
+            slug: "/gists",
+
           },
           items: [
-            "foo",
-            "cheat-sheets/windows",
-            "cheat-sheets/git",
-            "cheat-sheets/conda",
-            "cheat-sheets/batch",
-            "cheat-sheets/mdx-react",
-            // "cheat-sheets/django",
-    
-          ],
+            "gists/gists-windows",
+            "gists/gists-git",
+
+          ]
         },
+        // {
+        //   type: "category",
+        //   label: "Cheat sheets",
+        //   collapsed: true,
+        //   collapsible: true,
+        //   link: {
+        //     type: "generated-index",
+        //     slug: "/cheat-sheets",
+        //     description: "Commonly-used commands for reference",
+        //   },
+        //   items: [
+        //     "foo",
+        //     "cheat-sheets/windows",
+        //     "cheat-sheets/git",
+        //     "cheat-sheets/conda",
+        //     "cheat-sheets/batch",
+        //     "cheat-sheets/mdx-react",
+        //     // "cheat-sheets/django",
+    
+        //   ],
+        // },
       ],
     },
 

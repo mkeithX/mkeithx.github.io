@@ -18,6 +18,7 @@ require("dotenv").config();
 // const deploymentBranch = process.env.DEPLOYMENT_BRANCH; 
 
 const docsRepo = `https://github.com/mkeithX/mkeithx.github.io/`;
+const editUrlLink = `${docsRepo}/tree/main/website/`;
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · 
  All rights reserved `;
@@ -102,7 +103,7 @@ const config: Config = {
         docs: {
           
           path: "docs",
-          editUrl: `${docsRepo}/tree/main/website/`,
+          editUrl: editUrlLink,
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
@@ -179,7 +180,7 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        editUrl: `${docsRepo}/tree/main/website/`,
+        editUrl: editUrlLink,
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         ...commonDocsConfig,
@@ -204,7 +205,7 @@ const config: Config = {
         id: "msp",
         path: "msp",
         routeBasePath: "msp",
-        editUrl: `${docsRepo}/tree/main/website/`,
+        editUrl: editUrlLink,
         sidebarPath: "./sidebarsMsp.ts",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,

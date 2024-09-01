@@ -1,0 +1,376 @@
+---
+description: Gist for git
+slug: /gists/git
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Git
+
+<FAIcon icon="fa-brands fa-git" size="2x" />
+
+## Basics
+<div class="contentTableContainer">
+
+
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+
+```bash
+git init
+```
+
+</td>
+<td>
+Initialize a Repository
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git clone "<repository-url>"
+```
+
+</td>
+<td>
+Clone a Repository
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git add --all
+```
+
+</td>
+<td>
+Add all to Staging Area
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git commit -m "Commit message"
+```
+
+</td>
+<td>
+Commit Changes
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git push origin "<branch-name>"
+```
+
+</td>
+<td>
+Push Changes to Remote Repository
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git pull origin "<branch-name>"
+```
+
+</td>
+<td>
+Pull Changes from Remote Repository
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git switch branch-name
+```
+
+</td>
+<td>
+Switch Branches
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git switch -c new-branch-name
+```
+
+</td>
+<td>
+Create and Switch to a New Branch
+</td>
+</tr>
+</table>
+
+
+</div>
+
+## Branching
+
+<div class="contentTableContainer">
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+
+```bash
+git checkout -b <branch-name>
+```
+
+</td>
+<td>
+Create a New Branch
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git merge <branch-name>
+```
+
+</td>
+<td>
+Merge Branches
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git branch -d <branch-name>
+```
+
+</td>
+<td>
+Delete a Branch
+</td>
+</tr>
+</table>
+
+
+</div>
+
+## Monitoring
+
+<div class="contentTableContainer">
+
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+
+```bash
+git status
+```
+
+</td>
+<td>
+View Changes
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git log
+```
+
+</td>
+<td>
+View Commit History
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git checkout --file
+```
+
+</td>
+<td>
+Undo Changes in Working Directory
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git reset HEAD <file>
+```
+
+</td>
+<td>
+Undo Staged Changes
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git reset HEAD~1 --soft
+```
+
+</td>
+<td>
+Undo Last Commit
+</td>
+</tr>
+</table>
+
+</div>
+
+## Collaborating
+
+<div class="contentTableContainer">
+
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+
+```bash
+git remote add origin <REPO-URL>
+```
+
+</td>
+<td>
+Add Remote Repository
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git remote -v
+```
+
+</td>
+<td>
+List Remote Repositories
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git fetch origin
+```
+
+</td>
+<td>
+Fetch Changes from Remote Repository
+</td>
+</tr>
+
+<tr>
+
+</tr>
+</table>
+</div>
+
+## Advanced
+
+<div class="contentTableContainer">
+
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+
+```bash
+git stash
+```
+
+</td>
+<td>
+Stash Changes
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git stash apply
+```
+
+</td>
+<td>
+Apply Stashed Changes
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git rebase <BASE-BRANCH>
+```
+
+</td>
+<td>
+Rebase Branch
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git commit --amend
+```
+
+</td>
+<td>
+Amend Last Commit
+</td>
+</tr>
+</table>
+
+</div>
+
+
