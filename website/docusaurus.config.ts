@@ -76,7 +76,7 @@ const config: Config = {
     // custom_title: "Guides for Seamless Software Deployment",
     custom_title: "Unified Docs for Software Developers.",
     hero_header: "OpenSource",
-    hero_footer: "Projects and samples from Keith",
+    hero_footer: "Guides and samples from Keith",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -116,11 +116,11 @@ const config: Config = {
           blogDescription:
             "Keep up to date with what's going on with the SpaceHub project.",
           routeBasePath: "blog",
-          blogSidebarTitle: "Blog",
-          blogSidebarCount: "ALL",
+          blogSidebarTitle: "Updates",
+          blogSidebarCount:  "ALL", // 5
+          postsPerPage: "ALL", // 5
           ...admonitionsConfig,
           ...commonRemarkConfig,
-          postsPerPage: "ALL",
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "throw",
@@ -251,7 +251,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      // title: "Docs",
+      title: "",
       logo: {
         alt: "Docs",
         src: "img/logo/mkxspacehub-logo.png",
@@ -265,30 +265,22 @@ const config: Config = {
           type: "doc",
           position: "left",
           docId: "keyword",
-          label: "Docs",
+          label: "Core",
         },
         {
           type: "docSidebar",
           sidebarId: "devops",
-          position: "left",
           label: "DevOps",
         },
-
-        // { to: "/projects", label: "Showcase", position: "left" },
-
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
-
         {
           type: "dropdown",
           label: "More",
           position: "right",
           items: [
-            { to: "/cosmos", label: "Cosmos" },
-            // { to: "/projects", label: "Showcase" },
+            { to: "/cosmos", label: "The Universe" },
             { to: "/feature-requests", label: "Feature Requests" },
-            // { to: "/cosmos", label: "Cosmos"},
-
             {
               type: "html",
               value: '<hr class="dropdown-separator">',
@@ -320,7 +312,7 @@ const config: Config = {
         {
           type: "html",
           // position: "right",
-          value: '<span class="badge badge--secondary">M87</span>',
+          value: '<span class="badge badge--sm badge--success">M87</span>',
         },
       ],
     },
@@ -370,13 +362,13 @@ const config: Config = {
               href: "/community/contributing",
             },
             {
-              label: "Projects",
-              to: "/projects",
+              label: "Author",
+              to: "/me",
             },
             {
-              label: "Feature requests",
-              to: "/feature-requests",
-            },
+              label: "Kitiplex",
+              to: "/community/kitiplex"
+            }
           ],
         },
         {

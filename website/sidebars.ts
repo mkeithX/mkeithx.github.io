@@ -16,98 +16,69 @@ const sidebars: SidebarsConfig = {
   mySidebar: [
     "keyword",
 
- 
     {
       type: "category",
       collapsed: false,
-      label: "Guides",
+      label: "Configuration",
       link: {
         type: "doc",
         id: "configs/index",
       },
       items: [
         // "configs/plugins-config",
-        "configs/api",
-
+        // "configs/api",
+        "configs/guides/docs/create-doc",
+        "configs/guides/docs/docs-create-page",
+        "configs/guides/docs/blog",
+        {
+          type: "category",
+          label: "Deployment",
+          collapsed: true,
+          link: {
+            type: "generated-index",
+            slug: "/deployment",
+            description:
+              "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.",
+            keywords: ["deployments"],
+          },
+          items: [
+            "configs/guides/deployment/deploy-cloudflare",
+            "configs/guides/deployment/deploy-github",
+          ],
+        },
         {
           type: "category",
           label: "Configs",
           link: {
             type: "generated-index",
-            description: "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity",
+            description:
+              "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity",
             slug: "/guides",
-            keywords: ["guides"]
+            keywords: ["guides"],
           },
           items: [
-            "configs/guides/docs/create-doc",
-            "configs/guides/docs/docs-create-page",
-            "configs/guides/docs/blog",
-            {
-              type: "category",
-              label: "Deployment",
-              collapsed: true,
-              link: {
-                type: "generated-index",
-                slug: "/deployment",
-                description:
-                  "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.",
-                  keywords: ["deployments"],
-              },
-              items: [
-                "configs/guides/deployment/deploy-cloudflare",
-                "configs/guides/deployment/deploy-github"
-              ],
-            },
-         
+
           ],
         },
-        // {
-        //   type: 'html',
-        //   value: 'BeTa',
-        //   className: 'sidebar-title',
-        // },
-        "troubleshoot",
-        // "configs/virtual-environment"
-        {
-          type: "category",
-          label: "Gists",
-          collapsed: true,
-          link: {
-            type: "generated-index",
-            slug: "/gists",
 
-          },
-          items: [
-            "gists/gists-windows",
-            "gists/gists-git",
-            "gists/gists-extras",
-
-          ]
-        },
-        // {
-        //   type: "category",
-        //   label: "Cheat sheets",
-        //   collapsed: true,
-        //   collapsible: true,
-        //   link: {
-        //     type: "generated-index",
-        //     slug: "/cheat-sheets",
-        //     description: "Commonly-used commands for reference",
-        //   },
-        //   items: [
-        //     "foo",
-        //     "cheat-sheets/windows",
-        //     "cheat-sheets/git",
-        //     "cheat-sheets/conda",
-        //     "cheat-sheets/batch",
-        //     "cheat-sheets/mdx-react",
-        //     // "cheat-sheets/django",
-    
-        //   ],
-        // },
       ],
     },
-
+    {
+      type: "category",
+      label: "Gists",
+      collapsed: true,
+      link: {
+        type: "generated-index",
+        slug: "/gists",
+      },
+      items: [
+        
+        // "troubleshoot",
+        "gists/gists-git",
+        "gists/gists-windows",
+        "gists/gists-extras",
+      ],
+    },
     {
       type: "category",
       label: "Tutorials",
@@ -182,12 +153,10 @@ const sidebars: SidebarsConfig = {
         "repo/django-custom-user",
       ],
     },
-
   ],
 
   devops: [
     "devops/index",
-    // 'devops/key-principles',
     "devops/troubleshoot-like-a-boss",
     {
       type: "category",
@@ -210,7 +179,6 @@ const sidebars: SidebarsConfig = {
           items: [
             "devops/admin-center/training/email-management",
             "devops/admin-center/training/install-via-intune",
-            // 'devops/admin-center/training/'
           ],
         },
       ],
@@ -227,7 +195,6 @@ const sidebars: SidebarsConfig = {
       items: [
         "devops/snippets/tech-notes",
         "devops/snippets/email-templates",
-        // 'devops/snippets/',
       ],
     },
 
@@ -243,12 +210,10 @@ const sidebars: SidebarsConfig = {
       items: [
         "devops/troubleshoot/cloud-pc",
         "devops/troubleshoot/powershell",
-        // 'devops/troubleshoot/exhange-archiving',
         "devops/troubleshoot/windows-utilities",
         "devops/troubleshoot/windows-hardware-issues",
         "devops/troubleshoot/windows-network-issues",
         "devops/troubleshoot/ms-teams",
-        // 'devops/troubleshoot/'
       ],
     },
     "devops/glossary",
@@ -259,6 +224,11 @@ const sidebars: SidebarsConfig = {
   //     value: '<img src="sponsor.png" alt="Sponsor" />', // The HTML to be rendered
   //     defaultStyle: true, // Use the default menu item styling
   //   },
+  // {
+  //   type: 'html',
+  //   value: 'Beta',
+  //   className: 'sidebar-title',
+  // },
   // ],
 };
 

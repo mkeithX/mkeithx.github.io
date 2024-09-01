@@ -1,5 +1,5 @@
 ---
-description: Gist for git
+description: Frequently used git commands
 slug: /gists/git
 ---
 
@@ -7,346 +7,190 @@ import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
 # Git
+Basic Git workflow covering the essential commands for typical tasks.
 
-## Basics
 
-<table>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
+## Basic workflow
+
 
 ```bash
-git init
+git clone <repository-url>  # Clone a remote repository
+git status                  # Show working directory status
+git add <file>              # Stage specific file changes
+git add .                   # Stage all changes
+git commit -m "message"     # Commit staged changes
+git push origin <branch>    # Push changes to remote branch
+git pull origin <branch>    # Pull changes from remote branch
+git branch <new-branch>     # Create a new branch
+git switch <branch>         # Switch to a branch
+git merge <branch>          # Merge branch into current branch
+git branch -d <branch>      # Delete local branch
+git push origin --delete <branch>  # Delete remote branch
 ```
 
-</td>
-<td>
-Initialize a Repository
-</td>
-</tr>
-
-<tr>
-<td>
+Create a local branch, make and push changes.
 
 ```bash
-git clone "<repository-url>"
+git checkout -b <"my-feature">
+git commit -m <"feat: my feature description">
+git push
+git push -u origin <"my-feature">
 ```
-
-</td>
-<td>
-Clone a Repository
-</td>
-</tr>
-
-<tr>
-<td>
+## Updating a branch
+### `git checkout`
 
 ```bash
-git add --all
+git fetch
+git checkout your-branch-name
+git merge origin/main
+# or
+git rebase origin/main
+# Resolve conflicts if needed
+git add resolved-file
+# if merging
+git merge --continue
+# if rebasing
+git rebase --continue
+git push origin your-branch-name
+# if rebasing
+git push origin your-branch-name --force-with-lease
 ```
-
-</td>
-<td>
-Add all to Staging Area
-</td>
-</tr>
-
-<tr>
-<td>
+### `git switch`
 
 ```bash
-git commit -m "Commit message"
+git fetch
+git switch your-branch-name
+git merge origin/main  # or git rebase origin/main
+# Resolve conflicts if needed
+git add resolved-file
+# if merging
+git merge --continue
+# if rebasing
+git rebase --continue
+git push origin your-branch-name --force-with-lease  # if rebasing
 ```
 
-</td>
-<td>
-Commit Changes
-</td>
-</tr>
 
-<tr>
-<td>
-
-```bash
-git push origin "<branch-name>"
-```
-
-</td>
-<td>
-Push Changes to Remote Repository
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git pull origin "<branch-name>"
-```
-
-</td>
-<td>
-Pull Changes from Remote Repository
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git switch "<branch-name>"
-```
-
-</td>
-<td>
-Switch Branches
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git switch -c "<new-branch-name>"
-```
-
-</td>
-<td>
-Create and Switch to a New Branch
-</td>
-</tr>
-</table>
-
-## Branching
-
-<table>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-
-```bash
-git checkout -b "<branch-name>"
-```
-
-</td>
-<td>
-Create a New Branch
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git merge "<branch-name>"
-```
-
-</td>
-<td>
-Merge Branches
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git branch -d "<branch-name>"
-```
-
-</td>
-<td>
-Delete a Branch
-</td>
-</tr>
-</table>
-
-## Monitoring
-
-<table>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
+## Resolving conflicts
+### `git checkout`
 
 ```bash
 git status
+# Open and edit conflicted files
+git add <file>
+git commit
+# If rebasing, continue with
+git rebase --continue
+git push
 ```
 
-</td>
-<td>
-View Changes
-</td>
-</tr>
-
-<tr>
-<td>
+### `git switch`
 
 ```bash
-git log
+git switch <branch-name>
+git merge <branch-to-merge>
+git status
+# Resolve conflicts in files
+git add <file>
+git commit
+git push
 ```
 
-</td>
-<td>
-View Commit History
-</td>
-</tr>
 
-<tr>
-<td>
+<!-- 
 
-```bash
-git checkout --file
+## `.gitconfig`
+
+
+
+<details>
+<summary>Show</summary>
+
+```js title=".gitconfig
+[user]
+    name = my_username
+    email = my_email@example.com
+[init]
+	defaultBranch = main
+[color]
+	ui = auto
+[core]
+	editor = code
 ```
 
-</td>
-<td>
-Undo Changes in Working Directory
-</td>
-</tr>
+</details>
 
-<tr>
-<td>
+### Extended
 
-```bash
-git reset HEAD "<file>"
+<details>
+<summary>Show</summary>
+
+```js title=".gitconfig"
+
+# First things first, always set up your user info.
+// highlight-start
+
+[user]
+name = my_username
+email = my_email@example.com
+
+// highlight-end
+
+# Display colours in the console
+[color]
+ui = auto
+branch = auto
+status = auto
+
+# Always rebase when using `git pull`, except for `main, master, develop` branches.
+[branch]
+autosetuprebase = always
+
+[branch "main"]
+rebase = false
+
+[branch "master"]
+rebase = false
+
+[branch "develop"]
+rebase = false
+
+
+
+# Automatically set up remote tracking branches for all new local branches.
+
+
+
+[push]
+autoSetupRemote = true
+
+# Important setting in windows that allows working on both Windows and cross-platform projects
+[core]
+eol = native
+autocrlf = input
+
+# Common typos and aliases for long commands
+[alias]
+chekcout = checkout
+ocmmit = commit
+statsu = status
+sttaus = status
+fa = fetch --all
+pushf = push --force-with-lease
+stsah = stash
+
+# Common LFS Settings
+[filter "lfs"]
+smudge = git-lfs smudge -- %f
+process = git-lfs filter-process
+required = true
+clean = git-lfs clean -- %f
+
+# How private registries are handled
+[credential "https://my_company_vcs.example.com"]
+provider = generic
 ```
 
-</td>
-<td>
-Undo Staged Changes
-</td>
-</tr>
+</details>
 
-<tr>
-<td>
-
-```bash
-git reset HEAD~1 --soft
-```
-
-</td>
-<td>
-Undo Last Commit
-</td>
-</tr>
-</table>
-
-## Collaborating
-
-<table>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-
-```bash
-git remote add origin "<repo-url>"
-```
-
-</td>
-<td>
-Add Remote Repository
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git remote -v
-```
-
-</td>
-<td>
-List Remote Repositories
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git fetch origin
-```
-
-</td>
-<td>
-Fetch Changes from Remote Repository
-</td>
-</tr>
-
-<tr>
-
-</tr>
-</table>
-
-## Advanced
-
-<table>
-<tr>
-<th>Command</th>
-<th>Description</th>
-</tr>
-<tr>
-<td>
-
-```bash
-git stash
-```
-
-</td>
-<td>
-Stash Changes
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git stash apply
-```
-
-</td>
-<td>
-Apply Stashed Changes
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git rebase "<base-branch>"
-```
-
-</td>
-<td>
-Rebase Branch
-</td>
-</tr>
-
-<tr>
-<td>
-
-```bash
-git commit --amend
-```
-
-</td>
-<td>
-Amend Last Commit
-</td>
-</tr>
-</table>
+ -->
