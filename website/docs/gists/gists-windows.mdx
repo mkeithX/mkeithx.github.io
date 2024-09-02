@@ -27,7 +27,7 @@ Utilities and command prompts for quick access.
 <tr>
 <td>
 
-```md
+```sh
 compmgmt.msc
 ```
 
@@ -40,7 +40,7 @@ Computer Management
 <tr>
 <td>
 
-```md
+```sh
 devmgmt.msc
 ```
 
@@ -53,7 +53,7 @@ Device Manager
 <tr>
 <td>
 
-```md
+```sh
 diskmgmt.msc
 ```
 
@@ -66,7 +66,7 @@ Disk Management
 <tr>
 <td>
 
-```md
+```sh
 dfrg.msc
 ```
 
@@ -79,7 +79,7 @@ Disk Defragmenter
 <tr>
 <td>
 
-```md
+```sh
 eventvwr.msc
 ```
 
@@ -92,7 +92,7 @@ Event Viewer
 <tr>
 <td>
 
-```md
+```sh
 fsmgmt.msc
 ```
 
@@ -105,7 +105,7 @@ Shared Folders
 <tr>
 <td>
 
-```md
+```sh
 gpedit.msc
 ```
 
@@ -118,7 +118,7 @@ Group Policies
 <tr>
 <td>
 
-```md
+```sh
 lusrmgr.msc
 ```
 
@@ -131,7 +131,7 @@ Local Users and Groups
 <tr>
 <td>
 
-```md
+```sh
 perfmon.msc
 ```
 
@@ -144,7 +144,7 @@ Performance Monitor
 <tr>
 <td>
 
-```md
+```sh
 rsop.msc
 ```
 
@@ -157,7 +157,7 @@ Resultant Set of Policies
 <tr>
 <td>
 
-```md
+```sh
 secpol.msc
 ```
 
@@ -170,7 +170,7 @@ Local Security Policy
 <tr>
 <td>
 
-```md
+```sh
 services.msc
 ```
 
@@ -183,7 +183,7 @@ Various Services
 <tr>
 <td>
 
-```md
+```sh
 msconfig
 ```
 
@@ -196,7 +196,7 @@ System Configuration Utility
 <tr>
 <td>
 
-```md
+```sh
 regedit
 ```
 
@@ -209,7 +209,7 @@ Registry Editor
 <tr>
 <td>
 
-```md
+```sh
 msinfo32
 ```
 
@@ -222,7 +222,7 @@ System Information
 <tr>
 <td>
 
-```md
+```sh
 sysedit
 ```
 
@@ -235,7 +235,7 @@ System Edit
 <tr>
 <td>
 
-```md
+```sh
 win.ini
 ```
 
@@ -248,7 +248,7 @@ Windows Loading Information (also system.ini)
 <tr>
 <td>
 
-```md
+```sh
 winver
 ```
 
@@ -261,7 +261,7 @@ Shows Current Version of Windows
 <tr>
 <td>
 
-```md
+```sh
 mailto:
 ```
 
@@ -274,13 +274,13 @@ Opens Default Email Client
 <tr>
 <td>
 
-```md
-command
+```sh
+netplwiz
 ```
 
 </td>
 <td>
-Opens Command Prompt
+Manage user accounts
 </td>
 </tr>
 
@@ -302,7 +302,7 @@ Opens Command Prompt
 <tr>
 <td>
 
-```md
+```sh
 appwiz.cpl
 ```
 
@@ -315,7 +315,7 @@ Add/Remove Programs Control
 <tr>
 <td>
 
-```md
+```sh
 timedate.cpl
 ```
 
@@ -328,7 +328,7 @@ Date/Time Properties Control
 <tr>
 <td>
 
-```md
+```sh
 desk.cpl
 ```
 
@@ -341,7 +341,7 @@ Display Properties Control
 <tr>
 <td>
 
-```md
+```sh
 findfast.cpl
 ```
 
@@ -354,7 +354,7 @@ FindFast Control
 <tr>
 <td>
 
-```md
+```sh
 inetcpl.cpl
 ```
 
@@ -367,7 +367,7 @@ Internet Properties Control
 <tr>
 <td>
 
-```md
+```sh
 main.cpl keyboard
 ```
 
@@ -380,7 +380,7 @@ Keyboard Properties Control
 <tr>
 <td>
 
-```md
+```sh
 main.cpl
 ```
 
@@ -393,7 +393,7 @@ Mouse Properties Control
 <tr>
 <td>
 
-```md
+```sh
 mmsys.cpl
 ```
 
@@ -406,7 +406,7 @@ Multimedia Properties Control
 <tr>
 <td>
 
-```md
+```sh
 netcpl.cpl
 ```
 
@@ -419,7 +419,7 @@ Network Properties Control
 <tr>
 <td>
 
-```md
+```sh
 password.cpl
 ```
 
@@ -432,7 +432,7 @@ Password Properties Control
 <tr>
 <td>
 
-```md
+```sh
 mmsys.cpl sounds
 ```
 
@@ -445,7 +445,7 @@ Sound Properties Control
 <tr>
 <td>
 
-```md
+```sh
 sysdm.cpl
 ```
 
@@ -540,7 +540,7 @@ netsh interface ip show dnsservers
 </td>
 <td>
 
-Command that generated network reports and/or statuses.
+View network interface and DNS server information
 
 </td>
 </tr>
@@ -552,7 +552,7 @@ Command that generated network reports and/or statuses.
 
 ### Others
 
-<div class="contentTableContainer">
+
 
 <table>
 
@@ -564,20 +564,55 @@ Command that generated network reports and/or statuses.
 <tr>
 <td>
 
+```sh
+ net user administrator /active:yes
+```
+```sh
+ net user administrator /active:no
+```
 </td>
 <td>
+
+Enable/Disable Admin
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+net user /add Kitoy pAssw0rd
+```
+
+</td>
+<td>
+
+Add new user "Kitoy" with password
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+net localgroup administrators Kitoy /add
+```
+
+</td>
+<td>
+
+Add the user "Kitoy" to the Local Administrators Group
 
 </td>
 </tr>
 
+
 </table>
 
-</div>
 
+<!-- 
 ### Foo
 
-<div class="contentTableContainer">
-
 <table>
 
 <tr>
@@ -594,6 +629,5 @@ Command that generated network reports and/or statuses.
 </td>
 </tr>
 
-</table>
+</table> -->
 
-</div>
