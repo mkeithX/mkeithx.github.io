@@ -15,9 +15,8 @@ import { socialProfiles } from "./social.json";
 require("dotenv").config();
 
 // console.log(process.env)
-// const deploymentBranch = process.env.DEPLOYMENT_BRANCH; 
+// const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
 
-const docsRepo = `https://github.com/mkeithX/mkeithx.github.io/`;
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · 
  All rights reserved `;
@@ -42,6 +41,15 @@ const admonitionsConfig = {
   },
 };
 
+const commonExlusion = {
+  exclude: [
+    "**/_*.{js,jsx,ts,tsx,md,mdx}",
+    "**/_*/**",
+    "**/*.test.{js,jsx,ts,tsx}",
+    "**/__tests__/**",
+  ],
+}
+
 const commonRemarkConfig = {
   remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
   rehypePlugins: [rehypeKatex],
@@ -51,6 +59,7 @@ const commonDocsConfig = {
   breadcrumbs: true,
   ...admonitionsConfig,
   ...commonRemarkConfig,
+  ...commonExlusion,
 };
 
 const config: Config = {
@@ -84,8 +93,8 @@ const config: Config = {
 
   stylesheets: [
     {
-      href: '/katex/katex.min.css',
-      type: 'text/css',
+      href: "/katex/katex.min.css",
+      type: "text/css",
     },
   ],
 
@@ -100,72 +109,58 @@ const config: Config = {
 
       {
         docs: {
-          
           path: "docs",
-          editUrl: `${docsRepo}/tree/main/website/`,
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
-          // versions: {
-          //   current: {
-          //     label: 'Preview',
-          //     // path: 'android-2.0.0',
-          //     // banner: 'unreleased',
-          //     badge: true
-          //   },
-          // }, 
         },
 
         blog: {
           path: "blog",
           blogTitle: "Blog",
-          blogDescription: "Keep up to date with what's going on with the SpaceHub project.",
+          blogDescription:
+            "Keep up to date with what's going on with the SpaceHub project.",
           routeBasePath: "blog",
-          blogSidebarTitle: "Blog",
-          blogSidebarCount: "ALL",
+          blogSidebarTitle: "Updates",
+          blogSidebarCount:  "ALL", // 5
+          postsPerPage: "ALL", // 5
           ...admonitionsConfig,
           ...commonRemarkConfig,
-          postsPerPage: "ALL",
-          onInlineTags: 'throw',
-          onInlineAuthors: 'throw',
-          onUntruncatedBlogPosts: 'throw',
+          onInlineTags: "throw",
+          onInlineAuthors: "throw",
+          // onUntruncatedBlogPosts: "throw",
 
           feedOptions: {
             type: "all",
             title: "The MKX SpaceHub Blog",
             description:
-            'Stay tuned with upcoming updates releases and articles by following our feed!',
+              "Stay tuned with upcoming updates releases and articles by following our feed!",
             xslt: true,
-            copyright
+            copyright,
           },
         } satisfies BlogOptions,
 
         pages: {
           path: "src/pages",
           routeBasePath: "",
-          exclude: [
-            "**/_*.{js,jsx,ts,tsx,md,mdx}",
-            "**/_*/**",
-            "**/*.test.{js,jsx,ts,tsx}",
-            "**/__tests__/**",
-          ],
           showLastUpdateTime: false,
+          ...commonExlusion,
           ...commonRemarkConfig,
           ...admonitionsConfig,
           mdxPageComponent: "@theme/MDXPage",
         } satisfies PageOptions,
 
         theme: {
-          customCss: require.resolve("./src/css/custom.css"),
+          customCss: "./src/css/custom.css",
         },
 
         sitemap: {
           changefreq: "hourly",
           priority: 0.5,
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
-          filename: 'sitemap.xml'
+          filename: "sitemap.xml",
         },
       } satisfies Preset.Options,
     ],
@@ -179,7 +174,6 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        editUrl: `${docsRepo}/tree/main/website/`,
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         ...commonDocsConfig,
@@ -204,7 +198,6 @@ const config: Config = {
         id: "msp",
         path: "msp",
         routeBasePath: "msp",
-        editUrl: `${docsRepo}/tree/main/website/`,
         sidebarPath: "./sidebarsMsp.ts",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -215,10 +208,10 @@ const config: Config = {
     [
       "ideal-image",
       {
-        quality: 70, // 85
-        max: 1030, // 1980
-        min: 680, // 680
-        steps: 2, // 4
+        quality: 70,
+        max: 1030,
+        min: 640,
+        steps: 2,
         disableInDev: false,
       } satisfies IdealImageOptions,
     ],
@@ -241,7 +234,7 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    
+
     docs: {
       sidebar: {
         hideable: true,
@@ -258,17 +251,16 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      title: "",
       logo: {
-        alt: "SpaceHub",
-        src: "img/logo/mkxspacehub-logo-alt.png",
+        alt: "Docs",
+        src: "img/logo/mkxspacehub-logo.png",
         // srcDark: "img/logo/mkxspacehub-logo-dark.png",
         target: "_self",
         // width: 32,
         // height: 32,
       },
       items: [
-
         {
           type: "doc",
           position: "left",
@@ -278,38 +270,24 @@ const config: Config = {
         {
           type: "docSidebar",
           sidebarId: "devops",
-          position: "left",
           label: "DevOps",
         },
-
-        // { to: "/projects", label: "Showcase", position: "left" },
-        { to: "/cosmos", label: "Cosmos" },
-        // { to: "/blog", label: "Blog" },
-        { to: "/community", label: "Community"},
-        {
-          type: 'html',
-          position: 'left',
-          value: '<span class="badge badge--secondary ">Preview</span>',
-          
-        },
+        { to: "/blog", label: "Blog" },
+        { to: "/community", label: "Community" },
         {
           type: "dropdown",
           label: "More",
           position: "right",
           items: [
-            { to: "/blog", label: "Updates" },
-            { to: "/msp", label: "MSP" },
-            // { to: "/projects", label: "Showcase" },
-            // { to: "/feature-requests", label: "Feature Requests" },
-            // { to: "/cosmos", label: "Cosmos"},
-
+            { to: "/cosmos", label: "The Universe" },
+            { to: "/feature-requests", label: "Feature Requests" },
             {
               type: "html",
               value: '<hr class="dropdown-separator">',
             },
             {
-              label: "Preview",
-              href: "https://preview.mkeithx.pages.dev",
+              label: "Bugs",
+              href: "https://github.com/mkeithX/mkeithx.github.io/issues/new/choose",
             },
             {
               label: "RSS",
@@ -317,10 +295,6 @@ const config: Config = {
             },
           ],
         },
-        // {
-        //   type: 'localeDropdown',
-        //   position: 'right',
-        // },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -330,6 +304,11 @@ const config: Config = {
         {
           type: "search",
           position: "right",
+        },
+        {
+          type: "html",
+          // position: "right",
+          value: '<span class="badge badge--sm badge--secondary">M87</span>',
         },
       ],
     },
@@ -350,15 +329,15 @@ const config: Config = {
         src: "img/logo/mkxspacehub-logo.png",
         href: "/",
         // height: "30",
-        width: "380",
+        width: "280",
       },
       links: [
         {
           title: "Docs",
           items: [
             {
-              label: "Space",
-              to: "/cosmos",
+              label: "Gists",
+              to: "/docs/gists",
             },
             {
               label: "DevOps",
@@ -375,17 +354,17 @@ const config: Config = {
           title: "More",
           items: [
             {
-              label: "Me",
+              label: "Contributing",
+              href: "/community/contributing",
+            },
+            {
+              label: "Author",
               to: "/me",
             },
             {
-              label: "Blog",
-              to: "/blog",
-            },
-            {
-              label: "RSS feed",
-              href: "https://mkeithx.pages.dev/blog/rss.xml",
-            },
+              label: "Kitiplex",
+              to: "/community/kitiplex"
+            }
           ],
         },
         {
@@ -411,7 +390,6 @@ const config: Config = {
               label: "Facebook Dev",
               href: "https://developers.facebook.com/",
             },
-
           ],
         },
       ],

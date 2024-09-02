@@ -1,6 +1,4 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
-import { faL } from "@fortawesome/free-solid-svg-icons";
-import { link } from "fs";
 
 /**
  * Creating a sidebar enables you to:
@@ -19,51 +17,67 @@ const sidebars: SidebarsConfig = {
     "keyword",
     {
       type: "category",
+      label: "Gists",
       collapsed: false,
-      label: "Configs",
+      link: {
+        type: "generated-index",
+        slug: "/gists",
+      },
+      items: [
+        
+        // "troubleshoot",
+        "gists/gists-git",
+        "gists/gists-windows",
+        "gists/gists-misc",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: true,
+      label: "Configuration",
       link: {
         type: "doc",
         id: "configs/index",
       },
       items: [
         // "configs/plugins-config",
-        "configs/api",
-
+        // "configs/api",
+        "configs/guides/docs/create-doc",
+        "configs/guides/docs/docs-create-page",
+        "configs/guides/docs/blog",
         {
           type: "category",
-          label: "Guides",
+          label: "Deployment",
+          collapsed: true,
           link: {
             type: "generated-index",
-            description: "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity",
-            slug: "/guides",
-            keywords: ["guides"]
+            slug: "/deployment",
+            description:
+              "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.",
+            keywords: ["deployments"],
           },
           items: [
-            "configs/guides/docs/create-doc",
-            "configs/guides/docs/docs-create-page",
-            "configs/guides/docs/blog",
-            {
-              type: "category",
-              label: "Deployment",
-              link: {
-                type: "generated-index",
-                slug: "/deployment",
-                description:
-                  "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.",
-                  keywords: ["deployments"],
-              },
-              items: [
-                "configs/guides/deployment/deploy-cloudflare",
-                "configs/guides/deployment/deploy-github"
-              ],
-            },
+            "configs/guides/deployment/deploy-cloudflare",
+            "configs/guides/deployment/deploy-github",
           ],
-          
         },
-        // "configs/virtual-environment"
+        {
+          type: "category",
+          label: "Configs",
+          link: {
+            type: "generated-index",
+            description:
+              "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity",
+            slug: "/guides",
+            keywords: ["guides"],
+          },
+          items: [
+
+          ],
+        },
+
       ],
     },
-
     {
       type: "category",
       label: "Tutorials",
@@ -138,40 +152,10 @@ const sidebars: SidebarsConfig = {
         "repo/django-custom-user",
       ],
     },
-    {
-      type: "category",
-      label: "Cheat Sheets",
-      collapsed: true,
-      collapsible: true,
-      link: {
-        type: "generated-index",
-        slug: "/cheat-sheets",
-        description: "Gists, references and more.",
-      },
-      items: [
-        "cheat-sheets/windows",
-        "cheat-sheets/git",
-        "cheat-sheets/conda",
-        "cheat-sheets/batch",
-        "cheat-sheets/mdx-react",
-        // "cheat-sheets/django",
-        {
-          type: "link",
-          label: "MSP-Old", // The link label
-          href: "/msp", // The external URL
-        },
-      ],
-    },
-    // {
-    //   type: 'html',
-    //   value: 'BeTa',
-    //   className: 'sidebar-title',
-    // },
   ],
 
   devops: [
     "devops/index",
-    // 'devops/key-principles',
     "devops/troubleshoot-like-a-boss",
     {
       type: "category",
@@ -194,7 +178,6 @@ const sidebars: SidebarsConfig = {
           items: [
             "devops/admin-center/training/email-management",
             "devops/admin-center/training/install-via-intune",
-            // 'devops/admin-center/training/'
           ],
         },
       ],
@@ -211,7 +194,6 @@ const sidebars: SidebarsConfig = {
       items: [
         "devops/snippets/tech-notes",
         "devops/snippets/email-templates",
-        // 'devops/snippets/',
       ],
     },
 
@@ -227,16 +209,26 @@ const sidebars: SidebarsConfig = {
       items: [
         "devops/troubleshoot/cloud-pc",
         "devops/troubleshoot/powershell",
-        // 'devops/troubleshoot/exhange-archiving',
         "devops/troubleshoot/windows-utilities",
         "devops/troubleshoot/windows-hardware-issues",
         "devops/troubleshoot/windows-network-issues",
         "devops/troubleshoot/ms-teams",
-        // 'devops/troubleshoot/'
       ],
     },
     "devops/glossary",
   ],
+  // myHtmlSidebar: [
+  //   {
+  //     type: 'html',
+  //     value: '<img src="sponsor.png" alt="Sponsor" />', // The HTML to be rendered
+  //     defaultStyle: true, // Use the default menu item styling
+  //   },
+  // {
+  //   type: 'html',
+  //   value: 'Beta',
+  //   className: 'sidebar-title',
+  // },
+  // ],
 };
 
 export default sidebars;

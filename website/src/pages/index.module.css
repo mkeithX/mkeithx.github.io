@@ -19,7 +19,7 @@
 .heroCustomTagline {
   color: var(--ifm-color-primary-dark);
   color: transparent;
-  background: linear-gradient(90deg, #1da1f2  0%, #00ff88 50%, #f6ff7f 100%);
+  background: linear-gradient(90deg, #019eff  0%, #1fe61f 50%, #ffff3f 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
