@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
         // "troubleshoot",
         "gists/gists-git",
         "gists/gists-windows",
-        "gists/gists-extras",
+        "gists/gists-misc",
       ],
     },
     {
