@@ -17,8 +17,6 @@ require("dotenv").config();
 // console.log(process.env)
 // const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
 
-const docsRepo = `https://github.com/mkeithX/mkeithx.github.io/`;
-const editUrlLink = `${docsRepo}/tree/main/website/`;
 
 const copyright = `© ${new Date().getFullYear()} · Keith Tan · 
  All rights reserved `;
@@ -43,6 +41,15 @@ const admonitionsConfig = {
   },
 };
 
+const commonExlusion = {
+  exclude: [
+    "**/_*.{js,jsx,ts,tsx,md,mdx}",
+    "**/_*/**",
+    "**/*.test.{js,jsx,ts,tsx}",
+    "**/__tests__/**",
+  ],
+}
+
 const commonRemarkConfig = {
   remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
   rehypePlugins: [rehypeKatex],
@@ -52,6 +59,7 @@ const commonDocsConfig = {
   breadcrumbs: true,
   ...admonitionsConfig,
   ...commonRemarkConfig,
+  ...commonExlusion,
 };
 
 const config: Config = {
@@ -102,7 +110,6 @@ const config: Config = {
       {
         docs: {
           path: "docs",
-          // editUrl: editUrlLink,
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
@@ -123,7 +130,7 @@ const config: Config = {
           ...commonRemarkConfig,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
-          onUntruncatedBlogPosts: "throw",
+          // onUntruncatedBlogPosts: "throw",
 
           feedOptions: {
             type: "all",
@@ -138,13 +145,8 @@ const config: Config = {
         pages: {
           path: "src/pages",
           routeBasePath: "",
-          exclude: [
-            "**/_*.{js,jsx,ts,tsx,md,mdx}",
-            "**/_*/**",
-            "**/*.test.{js,jsx,ts,tsx}",
-            "**/__tests__/**",
-          ],
           showLastUpdateTime: false,
+          ...commonExlusion,
           ...commonRemarkConfig,
           ...admonitionsConfig,
           mdxPageComponent: "@theme/MDXPage",
@@ -172,7 +174,6 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        // editUrl: editUrlLink,
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
         ...commonDocsConfig,
@@ -197,7 +198,6 @@ const config: Config = {
         id: "msp",
         path: "msp",
         routeBasePath: "msp",
-        // editUrl: editUrlLink,
         sidebarPath: "./sidebarsMsp.ts",
         showLastUpdateAuthor: true,
         showLastUpdateTime: true,
@@ -258,7 +258,7 @@ const config: Config = {
         // srcDark: "img/logo/mkxspacehub-logo-dark.png",
         target: "_self",
         // width: 32,
-        height: 32,
+        // height: 32,
       },
       items: [
         {
@@ -295,10 +295,6 @@ const config: Config = {
             },
           ],
         },
-        // {
-        //   type: 'localeDropdown',
-        //   position: 'right',
-        // },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -312,7 +308,7 @@ const config: Config = {
         {
           type: "html",
           // position: "right",
-          value: '<span class="badge badge--sm badge--success">M87</span>',
+          value: '<span class="badge badge--sm badge--secondary">M87</span>',
         },
       ],
     },

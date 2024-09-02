@@ -15,10 +15,25 @@ const sidebars: SidebarsConfig = {
 
   mySidebar: [
     "keyword",
-
     {
       type: "category",
+      label: "Gists",
       collapsed: false,
+      link: {
+        type: "generated-index",
+        slug: "/gists",
+      },
+      items: [
+        
+        // "troubleshoot",
+        "gists/gists-git",
+        "gists/gists-windows",
+        "gists/gists-extras",
+      ],
+    },
+    {
+      type: "category",
+      collapsed: true,
       label: "Configuration",
       link: {
         type: "doc",
@@ -61,22 +76,6 @@ const sidebars: SidebarsConfig = {
           ],
         },
 
-      ],
-    },
-    {
-      type: "category",
-      label: "Gists",
-      collapsed: true,
-      link: {
-        type: "generated-index",
-        slug: "/gists",
-      },
-      items: [
-        
-        // "troubleshoot",
-        "gists/gists-git",
-        "gists/gists-windows",
-        "gists/gists-extras",
       ],
     },
     {

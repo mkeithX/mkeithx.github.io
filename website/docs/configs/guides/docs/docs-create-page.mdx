@@ -1,5 +1,6 @@
 ---
 slug: /guides/creating-pages
+description: Create a Page using React components
 # sidebar_label: Pages
 ---
 
@@ -11,8 +12,406 @@ import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 import {useLocation} from '@docusaurus/router';
 
-# Create a page
 
-import ComingSoon from "@site/src/components/ComingSoon";
+# Create a Page {#create-a-page}
 
-<ComingSoon />
+
+
+Add **Markdown or React** files to `src/pages` to create a **standalone page**:
+
+- `src/pages/index.js` → `localhost:3000/`
+- `src/pages/foo.md` → `localhost:3000/foo`
+- `src/pages/foo/bar.js` → `localhost:3000/foo/bar`
+
+## Create your first React Page
+
+Create a file at `src/pages/my-react-page.js`:
+
+```jsx title="src/pages/my-react-page.js"
+import React from "react";
+import Layout from "@theme/Layout";
+
+export default function MyReactPage() {
+  return (
+    <Layout>
+      <h1>My React page</h1>
+      <p>This is a React page</p>
+    </Layout>
+  );
+}
+```
+
+A new page is now available at [http://localhost:3000/my-react-page](http://localhost:3000/my-react-page).
+
+## Create your first Markdown Page
+
+Create a file at `src/pages/my-markdown-page.md`:
+
+```mdx title="src/pages/my-markdown-page.md"
+# My Markdown page
+
+This is a Markdown page
+```
+
+A new page is now available at [http://localhost:3000/my-markdown-page](http://localhost:3000/my-markdown-page).
+
+## React `<Component />`
+
+
+
+[MDX](https://mdxjs.com/) allows React components inside Markdown making it more interactive:
+
+
+
+```jsx showLineNumbers
+export const Highlight = ({children, color}) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: '20px',
+      color: '#fff',
+      padding: '10px',
+      cursor: 'pointer',
+    }}
+    onClick={() => {
+      alert(`You clicked the color ${color} with label ${children}`)
+    }}>
+    {children}
+  </span>
+);
+
+This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+
+This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+```
+
+export const Highlight = ({ children, color }) => (
+  <span
+    style={{
+      backgroundColor: color,
+      borderRadius: "20px",
+      color: "#fff",
+      padding: "10px",
+      cursor: "pointer",
+    }}
+    onClick={() => {
+      alert(`You clicked the color ${color} with label ${children}`);
+    }}
+  >
+    {children}
+  </span>
+);
+
+This is <Highlight color="#25c2a0">Docusaurus green</Highlight> !
+
+This is <Highlight color="#1877F2">Facebook blue</Highlight> !
+
+
+
+## Custom Highlight
+
+To render the custom highlights:
+
+
+
+```tsx title="src/components/Highlight/index.tsx" showLineNumbers
+import React, { type ReactNode } from "react";
+
+export default function Highlight({
+  children,
+  color,
+}: {
+  children: ReactNode;
+  color: string;
+}): JSX.Element {
+  return (
+    <span
+      style={{
+        backgroundColor: color,
+        borderRadius: "15px",
+        color: "#fff",
+        padding: '0.5rem',
+      }}
+    >
+      {children}
+    </span>
+  );
+}
+```
+
+```md
+And some <Highlight color="#1877F2">custom markup</Highlight>
+```
+
+```md
+- #1da1f2 <Highlight color="#1da1f2">Primary color</Highlight>
+```
+
+And so on..
+
+- And some <Highlight color="#1877F2">custom markup</Highlight>
+
+- #1da1f2 <Highlight color="#1da1f2">Primary color</Highlight>
+
+- #878787 <Highlight color="#878787">Secondary color</Highlight>
+
+- #41B883 <Highlight color="#41B883">Fresh Green</Highlight>
+
+
+
+## Icons
+
+
+### Font Awesome
+
+Font Awesome Icons. The file `MDXComponents.tsx` or `MDXComponents.js` should be present in the `src/theme` folder.
+
+```bash npm2yarn
+npm install --save @fontawesome/fontawesome-svg-core @fontawesome/free-solid-svg-icons @fortawesome/react-fontawesome
+```
+
+```bash npm2yarn
+
+npm install --save @fontawesome/free-regular-svg-icons @fontawesome/free-brands-svg-icons
+```
+
+
+
+
+<Tabs>
+  <TabItem value="js" label="JavaScript" default>
+
+```js title="src/theme/MDXComponents.js" showLineNumbers
+import React from "react";
+// Import the original mapper
+import MDXComponents from "@theme-original/MDXComponents";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, fas);
+
+export default {
+  ...MDXComponents,
+  FAIcon: FontAwesomeIcon, // Make the FontAwesomeIcon component available in MDX as <icon />.
+};
+```
+
+
+  </TabItem>
+  <TabItem value="tsx" label="TypeScript">
+
+  ```tsx title="src/theme/MDXComponents.tsx" showLineNumbers
+  import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import MDXComponents from "@theme-original/MDXComponents";
+import Code from '@theme/MDXComponents/Code';
+
+library.add(fab, fas);
+
+interface Components {
+  [key: string]: React.ComponentType<any>;
+}
+
+const components: Components = {
+  ...MDXComponents,
+  FAIcon: FontAwesomeIcon,
+  Code,
+};
+
+export default components;
+```
+
+
+
+  </TabItem>
+
+</Tabs>
+
+
+
+
+
+<Tabs>
+  <TabItem value="js" label="JavaScript" default>
+
+```js title="src/theme/MDXComponents.js" showLineNumbers
+import React from "react";
+// Import the original mapper
+import MDXComponents from "@theme-original/MDXComponents";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+
+library.add(fab, fas);
+
+export default {
+  ...MDXComponents,
+  FAIcon: FontAwesomeIcon, // Make the FontAwesomeIcon component available in MDX as <icon />.
+};
+```
+
+
+  </TabItem>
+  <TabItem value="tsx" label="TypeScript">
+
+  ```tsx title="src/theme/MDXComponents.tsx" showLineNumbers
+  import React from "react";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { library } from "@fortawesome/fontawesome-svg-core";
+import { fab } from "@fortawesome/free-brands-svg-icons";
+import { fas } from "@fortawesome/free-solid-svg-icons";
+import MDXComponents from "@theme-original/MDXComponents";
+import Code from '@theme/MDXComponents/Code';
+
+library.add(fab, fas);
+
+interface Components {
+  [key: string]: React.ComponentType<any>;
+}
+
+const components: Components = {
+  ...MDXComponents,
+  FAIcon: FontAwesomeIcon,
+  Code,
+};
+
+export default components;
+```
+
+
+
+  </TabItem>
+
+</Tabs>
+
+<BrowserWindow >
+
+
+```bash title="Rendering Font Awesome Icons" showLineNumbers
+<FAIcon icon="fa-brands fa-github" size="3x" />
+
+# highlight-start
+<FAIcon icon="fa-brands fa-x-twitter" size="3x" />
+# highlight-end
+
+<FAIcon icon="fa-brands fa-youtube" size="3x" />
+
+<FAIcon icon="fa-brands fa-linkedin" size="3x" />
+
+<FAIcon icon="fa-brands fa-python" size="3x" />
+
+<FAIcon icon="fa-brands fa-js" size="3x" />
+
+<FAIcon icon="fa-brands fa-react" size="3x" />
+```
+
+<FAIcon icon="fa-brands fa-github" size="3x" />
+
+<FAIcon icon="fa-brands fa-x-twitter" size="3x" />
+
+<FAIcon icon="fa-brands fa-youtube" size="3x" />
+
+<FAIcon icon="fa-brands fa-linkedin" size="3x" />
+
+<FAIcon icon="fa-brands fa-python" size="3x" />
+
+<FAIcon icon="fa-brands fa-js" size="3x" />
+
+<FAIcon icon="fa-brands fa-react" size="3x" />
+
+</BrowserWindow>
+
+
+
+
+
+
+## Custom Admonitions
+
+To render these custom admonition in your ``.mdx``, put ``import Admonition from "@theme/Admonition";`` 
+
+
+
+
+
+<BrowserWindow >
+
+### JSX
+
+<Admonition type="tip" icon="💡" title="Did you know...">
+  Use plugins to introduce shorter syntax for the most commonly used JSX
+  elements in your project.
+</Admonition>
+
+<Admonition type="danger" icon="💀" title="Danger...">
+  Use plugins to introduce shorter syntax for the most commonly used JSX
+  elements in your project.
+</Admonition>
+
+<Admonition type="note" icon="ℹ️" title="Take note...">
+  Use plugins to introduce shorter syntax for the most commonly used JSX
+  elements in your project.
+</Admonition>
+
+
+<Admonition type="warning" icon="☢️" title="Warning...">
+  Use plugins to introduce shorter syntax for the most commonly used JSX
+  elements in your project.
+</Admonition>
+
+### Swizzle
+
+:::tip
+Custom tip
+:::
+
+:::security
+This is a security warning
+:::
+
+:::caution
+This is a security warning
+:::
+
+:::credit
+The quick credit.
+:::
+
+:::discord
+Discord 
+:::
+
+:::docusaurus
+Discord 
+:::
+
+:::release
+Release Test
+::: 
+
+</BrowserWindow>
+
+### HTML Embeds
+
+<BrowserWindow >
+
+```html
+<pre>
+  <b>Input: </b>1 2 3 4{'\n'}
+  <b>Output: </b>"366300745"{'\n'}
+</pre>
+```
+
+<pre>
+  <b>Input: </b>1 2 3 4{'\n'}
+  <b>Output: </b>"366300745"{'\n'}
+</pre>
+
+</BrowserWindow>
+
