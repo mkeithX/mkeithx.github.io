@@ -1,0 +1,2 @@
+# Feature requests redirects
+/feedback/*                 /feature-requests/:splat           301!
