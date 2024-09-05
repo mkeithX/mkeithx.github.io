@@ -33,7 +33,7 @@ Following these guidelines helps to communicate that you respect the time of the
 **MKXSpacehub** depends on GitHub as its main source of information. All pull requests will be checked by the continuous integration system, GitHub actions.
 
 ![website_status](https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io%2F&style=for-the-badge&label=Website)
-![Build](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/mkx-deploy.yml?style=for-the-badge)
+![Build](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/build-deploy.yml?style=for-the-badge)
 ![issues](https://img.shields.io/github/issues/mkeithx/mkeithx.github.io?style=for-the-badge
 )
 ![pr](https://img.shields.io/github/issues-pr/mkeithx/mkeithx.github.io?style=for-the-badge

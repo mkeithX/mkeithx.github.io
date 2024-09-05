@@ -1,4 +1,4 @@
-name: MKX Deploy
+name: Build and Deploy
 
 on:
   push:
@@ -25,7 +25,7 @@ jobs:
       deployments: write
     timeout-minutes: 30
 
-    name: Deploy to Cloudflare Pages (Preview)
+    name: Build (Preview)
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -43,7 +43,7 @@ jobs:
           npm ci
           npm run build
 
-      - name: Deploy to Cloudflare Pages (Preview)
+      - name: Deploy (Preview)
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -61,7 +61,7 @@ jobs:
       deployments: write
     timeout-minutes: 30
 
-    name: Deploy to Cloudflare Pages (Production)
+    name: Build (Production)
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -79,7 +79,7 @@ jobs:
           npm ci
           npm run build
 
-      - name: Deploy to Cloudflare Pages (Production)
+      - name: Deploy (Production)
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
