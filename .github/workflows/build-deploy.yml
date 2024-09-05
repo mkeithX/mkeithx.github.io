@@ -31,12 +31,23 @@ jobs:
           npm ci
           npm run build
 
-      - name: Deploy to Cloudflare Pages
+      # - name: Deploy to Cloudflare Pages
+      #   uses: cloudflare/pages-action@v1
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     projectName: mkeithx
+      #     directory: website/build
+      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: ${{ github.ref_name }}  # Deploy based on the branch name
+      
+      - name: Publish via Wrangler
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           projectName: mkeithx
           directory: website/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref_name }}  # Deploy based on the branch name
+          wranglerVersion: '3'
+          
+      
