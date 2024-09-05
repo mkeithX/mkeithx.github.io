@@ -60,6 +60,19 @@ const sidebars: SidebarsConfig = {
             "configs/guides/deployment/deploy-cloudflare",
             "configs/guides/deployment/deploy-github",
           ],
+          
+        },
+        {
+          type: 'category',
+          label: "Plugins",
+          collapsed: true,
+          link: {
+            type: 'generated-index',
+            slug: '/plugins'
+          },
+          items: [
+            "configs/guides/plugins/plugins-algolia"
+          ]
         },
         {
           type: "category",
@@ -156,10 +169,11 @@ const sidebars: SidebarsConfig = {
 
   devops: [
     "devops/index",
-    "devops/troubleshoot-like-a-boss",
+    // "devops/troubleshoot-like-a-boss",
     {
       type: "category",
       label: "Microsoft 365",
+      collapsed: false,
       link: {
         type: "doc",
         id: "devops/admin-center/index",
@@ -178,6 +192,7 @@ const sidebars: SidebarsConfig = {
           items: [
             "devops/admin-center/training/email-management",
             "devops/admin-center/training/install-via-intune",
+            "devops/admin-center/training/conditional-access",
           ],
         },
       ],

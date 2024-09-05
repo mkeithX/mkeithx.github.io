@@ -251,11 +251,11 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "",
+      title: "SpaceHub",
       logo: {
-        alt: "Docs",
-        src: "img/logo/mkxspacehub-logo.png",
-        // srcDark: "img/logo/mkxspacehub-logo-dark.png",
+        alt: "SpaceHub",
+        src: "img/logo/mkxspacehub-logo-alt.png",//"img/logo/mkxspacehub-logo.png",
+        // srcDark: "img/logo/mkxspacehub-logo.png",
         target: "_self",
         // width: 32,
         // height: 32,
@@ -308,7 +308,7 @@ const config: Config = {
         {
           type: "html",
           // position: "right",
-          value: '<span class="badge badge--sm badge--secondary">M87</span>',
+          value: '<span class="badge badge--sm badge--success">M87</span>',
         },
       ],
     },

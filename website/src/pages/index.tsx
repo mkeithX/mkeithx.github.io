@@ -6,7 +6,8 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-import BannerLogo from "@site/static/img/banner/spacecraft-rocket.svg";
+// import BannerLogo from "@site/static/img/banner/spacecraft-rocket.svg";
+import BannerLogo from "@site/static/img/logo/react-logo.svg";
 import React from "react";
 import TopBanner from "@site/src/components/TopBanner";
 import FeatureBrands from "../components/FeatureBrands";
