@@ -2,7 +2,9 @@ name: MKX Deploy
 
 on:
   push:
-    branches: [main]
+    branches: 
+      - main
+      - preview
   pull_request:
     branches:
       - main
@@ -14,16 +16,16 @@ concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
   cancel-in-progress: true
 
-
 jobs:
-  deploy:
+  deploy-preview:
+    if: github.ref == 'refs/heads/preview'
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
     timeout-minutes: 30
 
-    name: Deploy to Cloudflare Pages
+    name: Deploy to Cloudflare Pages (Preview)
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
@@ -41,7 +43,7 @@ jobs:
           npm ci
           npm run build
 
-      - name: Deploy to Cloudflare Pages
+      - name: Deploy to Cloudflare Pages (Preview)
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -49,15 +51,40 @@ jobs:
           projectName: mkeithx
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: ${{ github.ref_name }}  # Deploy based on the branch name
-      
-      # - name: Publish via Wrangler
-      #   uses: cloudflare/pages-action@v1
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     projectName: mkeithx
-      #     directory: website/build
-      #     wranglerVersion: '3'
-          
-      
+          branch: preview
+
+  deploy-production:
+    if: github.ref == 'refs/heads/main'
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    timeout-minutes: 30
+
+    name: Deploy to Cloudflare Pages (Production)
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: 'lts/*'
+
+      - name: Install dependencies and build
+        run: |
+          cd website
+          npm ci
+          npm run build
+
+      - name: Deploy to Cloudflare Pages (Production)
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mkeithx
+          directory: website/build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: main
