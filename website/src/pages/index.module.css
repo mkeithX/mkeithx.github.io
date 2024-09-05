@@ -125,6 +125,7 @@
 }
 
 @keyframes kit-in-the-box {
+  
   from {
     transform: rotate(360deg) scale(1.5);
   }
@@ -132,4 +133,5 @@
   to {
     transform: rotate(-360deg) scale(1.5);
   }
+  
 }
