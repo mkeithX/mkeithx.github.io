@@ -4,16 +4,13 @@ on:
   push:
     branches:
       - main
-    paths: 
+      - preview/*  # Deploy for any branch prefixed with 'preview/'
+    paths:
       - '.github/workflows/mkx-deploy.yml'
       - 'website/**'
 
-  # pull_request:
-
-
 jobs:
   deploy:
-    
     runs-on: ubuntu-latest
     permissions:
       contents: read
@@ -21,22 +18,23 @@ jobs:
 
     name: Deploy to Cloudflare Pages
     steps:
-      - name: Checkout
+      - name: Checkout code
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      
-      - uses: actions/setup-node@v4
+      - name: Set up Node.js
+        uses: actions/setup-node@v4
         with:
-          node-version: latest
+          node-version: 'lts/*'  # Using the latest LTS version for better stability
 
-      - name: Install Dependencies
+      - name: Install dependencies and build
         run: |
           cd website
-          npm install && npm run build
+          npm ci  # More efficient than npm install in CI/CD
+          npm run build
 
-      - name: Publish
+      - name: Deploy to Cloudflare Pages
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -44,3 +42,4 @@ jobs:
           projectName: mkeithx
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: ${{ github.ref_name }}  # Deploy based on the branch name
