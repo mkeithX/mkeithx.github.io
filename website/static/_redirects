@@ -1,15 +1,4 @@
 # Redirects
 
-/feedback/* /feature-requests/:splat
-
-/posts/*
-  /blog/:splat
-
-/feature-requests/*
-  /feature-requests 200
-
-/blog/*
-  /blog 200
-
-/blog/feed.xml
-  /blog/rss.xml
+/feedback/*                 /feature-requests/:splat           301!
+/feature-requests/*         /feature-requests                  200
