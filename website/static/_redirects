@@ -1,4 +1,4 @@
 # Redirects
 
-/feedback/*                 /feature-requests/:splat           301!
+/feedback/*                 /feature-requests/:splat           301
 /feature-requests/*         /feature-requests                  200
