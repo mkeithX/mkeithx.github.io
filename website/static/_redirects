@@ -1,2 +1,11 @@
-# Feature requests redirects
-/feedback/*                 /feature-requests/:splat           301!
+# Redirects
+
+/feedback/* /feature-requests/:splat    301!
+/posts/*    /blog/:splat   301
+/feature-requests/* /feature-requests   200
+/blog/* /blog   200
+
+https://mkeithx.github.io/*      https://mkeithx.pages.dev/:splat 301!
+http://preview.mkeithx.github.io/ https://preview.mkeithx.pages.dev/:splat 301!
+
+/blog/feed.xml   /blog/rss.xml
