@@ -223,6 +223,14 @@ const config: Config = {
             from: ["/community/resources", "/docs/next/resources"],
             to: "/community/",
           },
+          {
+            from: ["/feedback", "/docs/next/feedback"],
+            to: "/feature-requests",
+          },
+          {
+            from: "/showcase",
+            to: "/projects"
+          },
         ],
       } satisfies ClientRedirectsOptions,
     ],
