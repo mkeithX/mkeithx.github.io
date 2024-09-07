@@ -6,8 +6,8 @@ import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
 
 import styles from "./index.module.css";
-// import BannerLogo from "@site/static/img/banner/spacecraft-rocket.svg";
-import BannerLogo from "@site/static/img/logo/react-logo.svg";
+import BannerLogo from "@site/static/img/banner/atom-z.svg";
+// import BannerLogo from "@site/static/img/logo/react-logo.svg";
 import React from "react";
 import TopBanner from "@site/src/components/TopBanner";
 import FeatureBrands from "../components/FeatureBrands";
@@ -22,18 +22,21 @@ function HomepageHeader(): JSX.Element {
   const { hero_footer } = customFields as { hero_footer: string };
   const { custom_footer } = customFields as { custom_footer: string };
   const { custom_title } = customFields as { custom_title: string };
+  const { custom_description } = customFields as { custom_description: string };
+  const { custom_header } = customFields as { custom_header: string };
   return (
     <header className={clsx("hero hero--dark", styles.heroBanner)}>
       <div className="container">
         <BannerLogo
           className={clsx(styles.heroBannerLogo, "margin-vert--sm")}
           title="BannerLogo"
-          width={300}
+          width={350}
         />
 
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
             {/* <b>{"MKX"}</b>{"SpaceHub"} {"|"} */}
+            {/* {"Powered By"} <b>{"|"}</b> {"Keith"} */}
             {hero_header} <b>{"|"}</b>
           </span>
         </div>
@@ -41,7 +44,9 @@ function HomepageHeader(): JSX.Element {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-              {tagline}
+              {/* {hero_header}<br></br> */}
+              {custom_header}
+              {/* {hero_footer} */}
               {/* <b>{custom_title}</b> */}
             </div>
           </span>
@@ -52,7 +57,9 @@ function HomepageHeader(): JSX.Element {
             <b>{hero_footer}</b>
           </span> */}
 
-          <span className={styles.heroCustomTagline}>{hero_footer}</span>
+          <span className={styles.heroCustomTagline}>
+            {custom_description}
+            </span>
         </div>
 
         <br></br>

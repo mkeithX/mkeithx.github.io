@@ -1,4 +1,5 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
+import { faTemperatureEmpty } from "@fortawesome/free-solid-svg-icons";
 
 /**
  * Creating a sidebar enables you to:
@@ -22,13 +23,23 @@ const sidebars: SidebarsConfig = {
       link: {
         type: "generated-index",
         slug: "/gists",
+        description: "Quick examples, useful utilities and demos.",
       },
       items: [
-        
         // "troubleshoot",
         "gists/gists-git",
         "gists/gists-windows",
-        "gists/gists-misc",
+        // "gists/gists-misc",
+        {
+          type: "category",
+          label: "Extras",
+          collapsed: true,
+          link: {
+            type: "generated-index",
+            slug: "/extras",
+          },
+          items: ["gists/extras/quick-responses", "gists/extras/misc"],
+        },
       ],
     },
     {
@@ -60,19 +71,16 @@ const sidebars: SidebarsConfig = {
             "configs/guides/deployment/deploy-cloudflare",
             "configs/guides/deployment/deploy-github",
           ],
-          
         },
         {
-          type: 'category',
+          type: "category",
           label: "Plugins",
           collapsed: true,
           link: {
-            type: 'generated-index',
-            slug: '/plugins'
+            type: "generated-index",
+            slug: "/plugins",
           },
-          items: [
-            "configs/guides/plugins/plugins-algolia"
-          ]
+          items: ["configs/guides/plugins/plugins-algolia"],
         },
         {
           type: "category",
@@ -84,11 +92,8 @@ const sidebars: SidebarsConfig = {
             slug: "/guides",
             keywords: ["guides"],
           },
-          items: [
-
-          ],
+          items: [],
         },
-
       ],
     },
     {
@@ -206,10 +211,7 @@ const sidebars: SidebarsConfig = {
         type: "doc",
         id: "devops/snippets/index",
       },
-      items: [
-        "devops/snippets/tech-notes",
-        "devops/snippets/email-templates",
-      ],
+      items: ["devops/snippets/tech-notes", "devops/snippets/email-templates"],
     },
 
     {

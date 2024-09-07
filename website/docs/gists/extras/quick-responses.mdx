@@ -1,0 +1,106 @@
+---
+description: Quick responses
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import Admonition from "@theme/Admonition";
+import styles from "../markdown-tabs.styles.module.css";
+
+# Quick responses
+
+<Tabs>
+
+<TabItem value="generic" label="Generic" default>
+
+```md
+Hi
+
+Thanks for reaching out to us!
+
+We have received your request and reviewing the details shortly. We'll get back to you as soon as we have updates to share.
+
+Thank you.
+
+```
+
+</TabItem>
+<TabItem value="iinfo" label="Initial Info" attributes={{className: styles.orange}}>
+
+```md
+Caller:
+Company:
+Email:
+Callback#:
+Existing ticket#:
+Issue:
+
+When did this occur: n/a
+When did it last work: n/a
+Any changes made before the issue started: n/a
+Steps done to rectify: n/a
+Any other users affected: n/a
+How impacting to your work: n/a
+Still able to perform work: n/a
+Other relevant details: n/a
+```
+
+
+
+</TabItem>
+<TabItem value="inbound" label="Inbound" attributes={{className: styles.green}}>
+
+```md
+Inbound call (existing ticket):
+Caller's Name:
+Site/Company:
+Verified email address:
+Contact number:
+Verified ticket number/summary:
+Reason of call:
+Details of inbound call:
+```
+
+</TabItem>
+  <TabItem value="outbound" label="Outbound" attributes={{className: styles.red}}>
+
+```md
+Outbound (follow up):
+Called at: (all dialed #s and indicate # client used)
+Spoke with:
+Agreement/appointment:
+Other details of the call:
+```
+
+  </TabItem>
+
+<TabItem value="more" label="More">
+
+```md
+Hi Team,
+
+Please see the details below.
+
+Caller:
+Contact#:
+Email:
+Issue:
+
+Steps done:
+Next steps:
+Priority: [URGENT]
+
+Thank you.
+
+Best,
+```
+
+  </TabItem>
+</Tabs>
+
+
+<details>
+<summary><b>Tech Notes</b> </summary>
+
+
+</details>

@@ -18,8 +18,7 @@ require("dotenv").config();
 // const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
 
 
-const copyright = `© ${new Date().getFullYear()} · Keith Tan · 
- All rights reserved `;
+const copyright = ` © ${new Date().getFullYear()} All rights reserved <br> ·  Developed and Designed by Keith Tan · `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -79,12 +78,14 @@ const config: Config = {
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
+    custom_header: "How-Tos and Code Samples for IT Pros and Developers",
+    custom_description: "Official Resource Hub of the Kitiplex DevOps",
     custom_tagline: "Building the web",
     custom_footer: "Built for Humans.",
-    // custom_title: "Guides for Seamless Software Deployment",
-    custom_title: "Unified Docs for Software Developers.",
+    custom_title: "Guides and Samples for IT & Software Developers.",
+    // custom_title: "Unified Docs for Software Developers.",
     hero_header: "OpenSource",
-    hero_footer: "Guides and samples from Keith",
+    hero_footer: "Guides and Samples from Keith",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -316,7 +317,7 @@ const config: Config = {
         {
           type: "html",
           // position: "right",
-          value: '<span class="badge badge--sm badge--success">M87</span>',
+          value: '<span class="badge badge--sm badge--secondary">M87</span>',
         },
       ],
     },

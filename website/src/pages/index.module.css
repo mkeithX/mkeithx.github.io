@@ -19,7 +19,9 @@
 .heroCustomTagline {
   color: var(--ifm-color-primary-dark);
   color: transparent;
-  background: linear-gradient(90deg, #019eff  0%, #1fe61f 50%, #ffff3f 100%);
+  /* background: linear-gradient(90deg, #019eff  0%, #1fe61f 50%, #ffff3f 100%); */
+  /* background: linear-gradient(90deg, #fbf8aa 0%, #00ffaa 50%, #1da1f2 100%); */
+  background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%);
   -webkit-background-clip: text;
   background-clip: text;
 }
@@ -33,9 +35,9 @@
   font-size: 20px;
 }
 
-/* .contents {
+.contents {
   color: #ccc;
-} */
+}
 
 
 .section {
@@ -61,14 +63,14 @@
 
 
 .heroBanner {
-  /* padding: 10rem 0; */
+  padding: 10rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
   background-color: var(--ifm-site-dark);
-  /* display: flex; */
-  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 2.8vw), 0 100%); */
-  height: 38rem;
+  display: flex;
+  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.5vw), 0 100%);
+  height: 42rem;
 }
 
 
