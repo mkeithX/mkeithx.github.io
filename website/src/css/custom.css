@@ -19,8 +19,8 @@
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important; */
-  /* --ifm-menu-color-active: var(--ifm-color-primary-dark) !important; */
+  --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important;
+  --ifm-menu-color-active: var(--ifm-color-primary-dark) !important;
   
 }
 
@@ -34,10 +34,7 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
-
   --ifm-background-color: #14171a;
-  
-
   --ifm-background-surface-color: #14171a !important;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
@@ -223,8 +220,8 @@ div[class^='announcementBar_'] a:hover {
 
 
 [data-theme='light'] .DocSearch {
-  /* --docsearch-primary-color: var(--ifm-color-primary); */
-  /* --docsearch-text-color: var(--ifm-font-color-base); */
+  --docsearch-primary-color: var(--ifm-color-primary);
+  --docsearch-text-color: var(--ifm-font-color-base);
   --docsearch-muted-color: var(--ifm-color-emphasis-700);
   --docsearch-container-background: rgb(94 100 112 / 70%);
   /* Modal */
@@ -412,9 +409,9 @@ html[data-theme='dark'] .alert--release {
   --ifm-alert-border-color: #5865F2;
 } */
 
-.banner {
+/* .banner {
   padding: 4rem;
-}
+} */
 
 /** In mobile view, reduce the padding */
 /* @media screen and (max-width: 996px) {

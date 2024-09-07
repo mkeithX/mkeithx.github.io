@@ -17,8 +17,7 @@ require("dotenv").config();
 // console.log(process.env)
 // const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
 
-
-const copyright = ` © ${new Date().getFullYear()} All Rights Reserved <br> ·  Developed and Designed by Keith Tan · `;
+const copyright = ` © ${new Date().getFullYear()} Keith Tan, All rights reserved `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -47,7 +46,7 @@ const commonExlusion = {
     "**/*.test.{js,jsx,ts,tsx}",
     "**/__tests__/**",
   ],
-}
+};
 
 const commonRemarkConfig = {
   remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
@@ -55,7 +54,7 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  breadcrumbs: true,
+  // breadcrumbs: true,
   ...admonitionsConfig,
   ...commonRemarkConfig,
   ...commonExlusion,
@@ -65,7 +64,7 @@ const config: Config = {
   title: "mkeithx",
   tagline: "Building Innovative Solutions",
   favicon: "icons/favicon/round-dark.ico",
-  // titleDelimiter: " ⚡️ ",
+  // titleDelimiter: " ⚡️ ·  ",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
   organizationName: "mkeithX",
@@ -125,7 +124,7 @@ const config: Config = {
             "Keep up to date with what's going on with the SpaceHub project.",
           routeBasePath: "blog",
           blogSidebarTitle: "Updates",
-          blogSidebarCount:  "ALL", // 5
+          blogSidebarCount: "ALL", // 5
           postsPerPage: "ALL", // 5
           ...admonitionsConfig,
           ...commonRemarkConfig,
@@ -147,9 +146,7 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
-          ...commonExlusion,
-          ...commonRemarkConfig,
-          ...admonitionsConfig,
+          ...commonDocsConfig,
           mdxPageComponent: "@theme/MDXPage",
         } satisfies PageOptions,
 
@@ -229,8 +226,12 @@ const config: Config = {
             to: "/feature-requests",
           },
           {
+            from: ["/posts", "/updates"],
+            to: "/blog",
+          },
+          {
             from: "/showcase",
-            to: "/projects"
+            to: "/projects",
           },
         ],
       } satisfies ClientRedirectsOptions,
@@ -263,7 +264,7 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/logo/mkxspacehub-logo-alt.png",//"img/logo/mkxspacehub-logo.png",
+        src: "img/logo/mkxspacehub-logo-alt.png", //"img/logo/mkxspacehub-logo.png",
         // srcDark: "img/logo/mkxspacehub-logo.png",
         target: "_self",
         // width: 32,
@@ -372,8 +373,8 @@ const config: Config = {
             },
             {
               label: "Kitiplex",
-              to: "/community/kitiplex"
-            }
+              to: "/community/kitiplex",
+            },
           ],
         },
         {
