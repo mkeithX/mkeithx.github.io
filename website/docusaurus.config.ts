@@ -18,7 +18,7 @@ require("dotenv").config();
 // const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
 
 
-const copyright = ` © ${new Date().getFullYear()} All rights reserved <br> ·  Developed and Designed by Keith Tan · `;
+const copyright = ` © ${new Date().getFullYear()} All Rights Reserved <br> ·  Developed and Designed by Keith Tan · `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -78,7 +78,7 @@ const config: Config = {
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
-    custom_header: "How-Tos and Code Samples for IT Pros and Developers",
+    custom_header: "How-Tos and Code Samples",
     custom_description: "Official Resource Hub of the Kitiplex DevOps",
     custom_tagline: "Building the web",
     custom_footer: "Built for Humans.",
