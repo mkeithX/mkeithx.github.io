@@ -36,9 +36,9 @@
   font-size: 20px;
 }
 
-.contents {
+/* .contents {
   color: #ccc;
-}
+} */
 
 
 .section {
@@ -71,7 +71,7 @@
   background-color: var(--ifm-site-dark);
   display: flex;
   clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.0vw), 0 100%);
-  height: 40rem;
+  height: 38rem;
 }
 
 
@@ -89,12 +89,12 @@
   }
 }
 
-/* .buttons {
+.buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: auto;
-} */
+}
 
 .buttons {
   display: flex;

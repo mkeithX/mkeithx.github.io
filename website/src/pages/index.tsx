@@ -41,10 +41,10 @@ function HomepageHeader(): JSX.Element {
           </span>
         </div>
 
-        <Heading as="h1" className="hero__title">
+        <Heading as="h1" className={"hero__title"}>
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-              {hero_footer}<br></br>
+              {tagline}<br></br>
               {/* {hero_footer} */}
               {/* {hero_footer} */}
               {/* <b>{hero_footer}</b> */}
@@ -53,13 +53,13 @@ function HomepageHeader(): JSX.Element {
         </Heading>
 
         <div className={styles.heroSubtitle}>
-          {/* <span className={styles.heroCustomSubTitleHtml}>
+          <span className={styles.heroCustomSubTitleHtml}>
             <b>{hero_footer}</b>
-          </span> */}
+          </span>
 
-          <span className={styles.heroCustomTagline}>
+          {/* <span className={styles.heroCustomTagline}>
             {tagline}
-            </span>
+            </span> */}
         </div>
 
         <br></br>
