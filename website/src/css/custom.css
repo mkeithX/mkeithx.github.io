@@ -6,6 +6,7 @@
 
 /* You can override the default Infima variables here. */
 
+
 :root {
 
   /* --ifm-background-color: #ffff; */
@@ -16,15 +17,18 @@
   --ifm-color-primary-light: #3b7de6;
   --ifm-color-primary-lighter: #4784e7;
   --ifm-color-primary-lightest: #6a9cec;
+  
   --ifm-site-dark: #010408;
-  --ifm-code-font-size: 95%;
+  --site-color-feedback-background: #f0f8ff;
+
+  --ifm-code-font-size: 90%;
   --ifm-font-size-base: 16px;
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  /* --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important;
-  --ifm-menu-color-active: var(--ifm-color-primary-dark) !important; */
+  --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
+  --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
   
 }
 
@@ -38,7 +42,9 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
+
   --ifm-background-color: #0D1116;
+  --site-color-feedback-background: #2a2929;
   --ifm-background-surface-color: #0D1116 !important;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
@@ -180,7 +186,17 @@
 }
 
 
+.unique-tabs .tabs__item {
+  line-height: 16px;
+  margin-right: 8px;
+}
 
+.unique-tabs .tabs__item--active {
+  border: 0;
+  color: #fff;
+  border-radius: var(--ifm-global-radius);
+  background-color: var(--ifm-tabs-color-active);
+}
 
 .footer--dark {
   --ifm-footer-background-color: #151B22;
@@ -222,7 +238,6 @@ div[class^='announcementBar_'] a:hover {
   text-decoration: none;
 }
 
-
 [data-theme='light'] .DocSearch {
   /* --docsearch-primary-color: var(--ifm-color-primary); */
   /* --docsearch-text-color: var(--ifm-font-color-base); */
@@ -243,8 +258,8 @@ div[class^='announcementBar_'] a:hover {
 
 [data-theme='dark'] .DocSearch {
   --docsearch-text-color: var(--ifm-font-color-base);
-  --docsearch-muted-color: var(--ifm-color-secondary-lighter);
-  --docsearch-container-background: rgb(47 55 69 / 90%);
+  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
+  --docsearch-container-background: rgb(47 55 69 / 70%);
   /* Modal */
   --docsearch-modal-background: var(--ifm-background-color);
   /* Search box */
@@ -256,11 +271,12 @@ div[class^='announcementBar_'] a:hover {
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
   /* Footer */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(-26.5deg,
-      var(--ifm-color-emphasis-200) 0%,
-      var(--ifm-color-emphasis-100) 100%);
+  --docsearch-key-gradient: linear-gradient(
+    -26.5deg,
+    var(--ifm-color-emphasis-200) 0%,
+    var(--ifm-color-emphasis-100) 100%
+  );
 }
-
 
 
 @media (max-width: 996px) {

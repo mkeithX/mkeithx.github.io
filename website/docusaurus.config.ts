@@ -130,7 +130,7 @@ const config: Config = {
           ...commonRemarkConfig,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
-          // onUntruncatedBlogPosts: "throw",
+          onUntruncatedBlogPosts: "throw",
 
           feedOptions: {
             type: "all",
@@ -229,6 +229,11 @@ const config: Config = {
             from: ["/posts", "/updates"],
             to: "/blog",
           },
+          {
+            from: ["/home",],
+            to: "/"
+          },
+          
           {
             from: "/showcase",
             to: "/projects",
@@ -336,10 +341,9 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/mkxspacehub-logo.png",
+        src: "img/logo/kitiplex-devops.svg",
         href: "/",
-        // height: "30",
-        width: "280",
+        width: "250",
       },
       links: [
         {
