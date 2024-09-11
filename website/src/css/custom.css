@@ -46,7 +46,9 @@
   --ifm-background-color: #0D1116;
   --site-color-feedback-background: #2a2929;
   --ifm-background-surface-color: #0D1116 !important;
+  
   --ifm-background-color: var(--ifm-background-surface-color) !important;
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 }
 

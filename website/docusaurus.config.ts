@@ -191,19 +191,6 @@ const config: Config = {
       } as DocsOptions,
     ],
     [
-      "content-docs",
-      {
-        id: "msp",
-        path: "msp",
-        routeBasePath: "msp",
-        sidebarPath: "./sidebarsMsp.ts",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
-        ...commonDocsConfig,
-      } as DocsOptions,
-    ],
-
-    [
       "ideal-image",
       {
         quality: 70,
@@ -266,7 +253,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      title: "Universe",
       logo: {
         alt: "SpaceHub",
         src: "img/logo/mkxspacehub-logo-alt.png", //"img/logo/mkxspacehub-logo.png",

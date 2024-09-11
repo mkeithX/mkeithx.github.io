@@ -89,12 +89,12 @@
   }
 }
 
-.buttons {
+/* .buttons {
   display: flex;
   align-items: center;
   justify-content: center;
   margin-top: auto;
-}
+} */
 
 .buttons {
   display: flex;

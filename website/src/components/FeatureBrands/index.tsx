@@ -83,12 +83,8 @@ export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={clsx(styles.features)}>
       <div className={clsx("container text--center")}>
-        <Heading as="h2"className={clsx(styles.heroTitleTextHtml,'margin-bottom--lg', 'text--center')}>
-        {/* <b>{"Special thanks to:"}</b> */}
-        {/* {"Special thanks to:"} */}
-        </Heading>
-
-        <div className={`row ${styles.featuresRowCenter}`}>
+      <div className={clsx("row", styles.featuresRowCenter)}>
+        {/* <div className={`row ${styles.featuresRowCenter}`}> */}
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

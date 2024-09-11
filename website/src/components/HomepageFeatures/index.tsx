@@ -34,7 +34,7 @@ const FeatureList: FeatureItem[] = [
 
   {
     title: "Powered by MDX",
-    Svg: require("@site/static/img/undraw_experience.svg").default,
+    Svg: require("@site/static/img/undraw_website.svg").default,
     description: (
       <>
         For dynamic content integration, ensuring a seamless and engaging user
@@ -42,25 +42,25 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
-//   {
-//     title: "OpenSource",
-//     Svg: require("@site/static/img/undraw_hello.svg").default,
-//     description: (
-//       <>
-//         For dynamic content integration, ensuring a seamless and engaging user
-//         experience.
-//       </>
-//     ),
-//   },
-//   {
-//     title: "Dev Friendly",
-//     Svg: require("@site/static/img/undraw_website.svg").default,
-//     description: (
-//       <>
-//  Featuring practical tips, best practices, and in-depth insights to ensure smooth and efficient software deployments.
-//       </>
-//     ),
-//   },
+  {
+    title: "OpenSource",
+    Svg: require("@site/static/img/undraw_hello.svg").default,
+    description: (
+      <>
+        For dynamic content integration, ensuring a seamless and engaging user
+        experience.
+      </>
+    ),
+  },
+  {
+    title: "Dev Friendly",
+    Svg: require("@site/static/img/undraw_code_review.svg").default,
+    description: (
+      <>
+ Featuring practical tips, best practices, and in-depth insights to ensure smooth and efficient software deployments.
+      </>
+    ),
+  },
 
 ];
 
@@ -81,13 +81,8 @@ function Feature({ title, Svg, description }: FeatureItem) {
 export default function HomepageFeatures(): JSX.Element {
   return (
     <section className={styles.features}>
-      <div className={clsx("container text--center")}>
-        <h2 className={styles.heroTitleTextHtml}>
-          {/* <b>{"Features"}</b> */}
-          {/* {"Features"} */}
-        </h2>
-
-        <div className={`row ${styles.featuresRowCenter}`}>
+      <div className={clsx("container")}>
+        <div className={clsx("row",styles.featuresRowCenter)}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}
