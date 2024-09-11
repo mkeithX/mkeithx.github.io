@@ -79,7 +79,7 @@ const config: Config = {
       "Website representing humanity from Dimension C-137 and beyond.",
     custom_header: "How-Tos and Code Samples",
     custom_description: "Official Resource Hub of the Kitiplex DevOps",
-    custom_tagline: "Building the web",
+    custom_tagline: "The Boring Website",
     custom_footer: "Built for Humans.",
     custom_title: "Guides and Samples for IT & Software Developers.",
     // custom_title: "Unified Docs for Software Developers.",

@@ -42,25 +42,25 @@ const FeatureList: FeatureItem[] = [
       </>
     ),
   },
-  {
-    title: "OpenSource",
-    Svg: require("@site/static/img/undraw_hello.svg").default,
-    description: (
-      <>
-        For dynamic content integration, ensuring a seamless and engaging user
-        experience.
-      </>
-    ),
-  },
-  {
-    title: "Dev Friendly",
-    Svg: require("@site/static/img/undraw_website.svg").default,
-    description: (
-      <>
- Featuring practical tips, best practices, and in-depth insights to ensure smooth and efficient software deployments.
-      </>
-    ),
-  },
+//   {
+//     title: "OpenSource",
+//     Svg: require("@site/static/img/undraw_hello.svg").default,
+//     description: (
+//       <>
+//         For dynamic content integration, ensuring a seamless and engaging user
+//         experience.
+//       </>
+//     ),
+//   },
+//   {
+//     title: "Dev Friendly",
+//     Svg: require("@site/static/img/undraw_website.svg").default,
+//     description: (
+//       <>
+//  Featuring practical tips, best practices, and in-depth insights to ensure smooth and efficient software deployments.
+//       </>
+//     ),
+//   },
 
 ];
 
