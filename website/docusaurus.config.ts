@@ -165,7 +165,9 @@ const config: Config = {
   ],
 
   plugins: [
+    '@docusaurus/theme-live-codeblock',
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
+   
     [
       "content-docs",
       {
@@ -409,6 +411,7 @@ const config: Config = {
         "yaml",
       ],
     },
+    playgroundPosition: 'bottom',
   } satisfies Preset.ThemeConfig,
 };
 

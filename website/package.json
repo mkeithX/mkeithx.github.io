@@ -27,6 +27,7 @@
     "@docusaurus/plugin-ideal-image": "^3.5.2",
     "@docusaurus/preset-classic": "^3.5.2",
     "@docusaurus/remark-plugin-npm2yarn": "^3.5.2",
+    "@docusaurus/theme-live-codeblock": "^3.5.2",
     "@fortawesome/fontawesome-svg-core": "^6.5.2",
     "@fortawesome/free-brands-svg-icons": "^6.5.2",
     "@fortawesome/free-regular-svg-icons": "^6.5.2",
@@ -45,6 +46,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20240620.0",
+    "@docusaurus/eslint-plugin": "^3.5.2",
     "@docusaurus/module-type-aliases": "^3.5.2",
     "@docusaurus/theme-classic": "^3.5.2",
     "@docusaurus/tsconfig": "^3.5.2",
@@ -52,7 +54,7 @@
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.78",
     "typescript": "5.4.3",
-    "wrangler": "^3.72.3"
+    "wrangler": "^3.76.0"
   },
   "browserslist": {
     "production": [

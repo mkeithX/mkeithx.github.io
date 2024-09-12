@@ -37,7 +37,7 @@
   color: transparent;
   /* background: linear-gradient(90deg, #019eff  0%, #1fe61f 50%, #ffff3f 100%); */
   /* background: linear-gradient(90deg, #fbf8aa 0%, #00ffaa 50%, #1da1f2 100%); */
-  background: linear-gradient(90deg, #1da1f2  10%, #00ff88 85%, #f6ff7f 100%);
+  /* background: linear-gradient(90deg, #1da1f2  10%, #00ff88 85%, #f6ff7f 100%); */
   /* background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%); */
   -webkit-background-clip: text;
   background-clip: text;
@@ -94,11 +94,7 @@
 
 
 
-@media (prefers-reduced-motion: no-preference) {
-  .heroBannerLogo {
-    animation: kit-in-the-box infinite 60s linear;
-  }
-}
+
 
 @media screen and (max-width: 996px) {
   .heroBanner {
@@ -137,7 +133,7 @@
 
 
 .heroCustomSubTitleHtml b {
-  color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-primary);
   color: transparent;
   /* background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #cdd55c 100%); */
   background: linear-gradient(90deg, #f6ff7f 0%, #00ffaa 50%, #1da1f2 100%);
@@ -146,17 +142,22 @@
 }
 
 .heroSubTitleTextHtml b {
-  color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-primary);
 }
 
+@media (prefers-reduced-motion: no-preference) {
+  .heroBannerLogo {
+    animation: kit-in-the-box infinite 60s linear;
+  }
+}
 @keyframes kit-in-the-box {
   
   from {
-    transform: rotate(360deg) scale(1.2);
+    transform: rotate(360deg) scale(1.5);
   }
 
   to {
-    transform: rotate(-360deg) scale(1.2);
+    transform: rotate(-360deg) scale(1.5);
   }
   
 }

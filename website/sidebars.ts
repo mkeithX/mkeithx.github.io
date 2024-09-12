@@ -38,7 +38,7 @@ const sidebars: SidebarsConfig = {
             type: "generated-index",
             slug: "/extras",
           },
-          items: ["gists/extras/quick-responses", "gists/extras/misc"],
+          items: ["gists/extras/quick-responses", "gists/extras/misc","gists/extras/live-react"],
         },
       ],
     },
