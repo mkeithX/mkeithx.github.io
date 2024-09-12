@@ -78,13 +78,13 @@ const config: Config = {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
     custom_header: "How-Tos and Code Samples",
-    custom_description: "Official Resource Hub of the Kitiplex DevOps",
+    custom_description: "Projects, Guides and Samples from mkeith",
     custom_tagline: "The Boring Website",
     custom_footer: "Built for Humans.",
     custom_title: "Guides and Samples for IT & Software Developers.",
     // custom_title: "Unified Docs for Software Developers.",
     hero_header: "OpenSource",
-    hero_footer: "Guides and Samples from Keith",
+    hero_footer: "Building the web before bedtime",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -253,11 +253,10 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "Universe",
+      title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/logo/mkxspacehub-logo-alt.png", //"img/logo/mkxspacehub-logo.png",
-        // srcDark: "img/logo/mkxspacehub-logo.png",
+        src: "img/logo/mkxspacehub-logo-alt.png", //"img/logo/mkxspacehub-logo.
         target: "_self",
         // width: 32,
         // height: 32,

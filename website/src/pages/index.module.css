@@ -2,22 +2,36 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
-
+ /* .hero {
+  display: flex;
+  padding: 4rem 0;
+  text-align: center;
+  align-items: center;
+  vertical-align: center;
+  position: relative;
+} */
+/* .hero h1 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+} */
 
 .heroBannerTitle {
-  font-size: 52px;
+  font-size: 1.3em;
+  padding-bottom: 1rem;
   font-weight: bold;
-  margin-bottom: 0.4rem;
+  /* margin-bottom: auto; */
+  position: relative;
+  
 }
 
 .heroSubtitle {
-  font-size: 22px;
-  font-weight: 600;
-  margin-bottom: 0.4rem;
+  font-size: 1.5em;
+  font-weight: normal;
+  margin-bottom: auto;
 }
 
 .heroCustomTagline {
-  color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-primary);
   color: transparent;
   /* background: linear-gradient(90deg, #019eff  0%, #1fe61f 50%, #ffff3f 100%); */
   /* background: linear-gradient(90deg, #fbf8aa 0%, #00ffaa 50%, #1da1f2 100%); */
@@ -32,7 +46,7 @@
 }
 
 .heading {
-  font-weight: bold;
+  font-weight: bolder;
   font-size: 20px;
 }
 
@@ -47,10 +61,12 @@
 
 
 .heroBannerLogo {
-  max-width: 38%;
-  margin-top: 20px;
+  max-width: 30%;
+  margin-top: 28px;
+  width: 25rem;
+  height: 25rem;
   animation-name: kit-in-the-box;
-  float: right;
+  float:right;
   height: auto;
   display: block;
   pointer-events: none;
@@ -64,14 +80,14 @@
 
 
 .heroBanner {
-  /* padding: 10rem 0; */
+  padding: 10rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
   background-color: var(--ifm-site-dark);
   display: flex;
-  clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.0vw), 0 100%);
-  height: 41rem;
+  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.0vw), 0 100%); */
+  height: 38rem;
 }
 
 
@@ -98,14 +114,19 @@
 
 .buttons {
   display: flex;
-  justify-content: left;
+  /* justify-content: left; */
+  width: fit-content;
+  align-items: center;
+  gap: 10px;
   margin-top: auto;
-  color: var(--ifm-color-primary-dark);
+  border-radius: 5px;
+  text-decoration: none !important;
+  font-weight: bold;
 }
 
 
 .heroTitleTextHtml b {
-  color: var(--ifm-color-primary-dark);
+  color: var(--ifm-color-primary);
   color: transparent;
   background: linear-gradient(90deg, #1da1f2  0%, #00ff88 50%, #f6ff7f 100%);
   background-clip: text;

@@ -28,9 +28,10 @@ function HomepageHeader(): JSX.Element {
     <header className={clsx("hero hero--dark", styles.heroBanner)}>
       <div className="container">
         <BannerLogo
-          className={clsx(styles.heroBannerLogo, "margin-vert--sm")}
+          className={clsx(styles.heroBannerLogo)}
           title="BannerLogo"
-          width={350}
+          width={300}
+          // height={250}
         />
 
         <div className={clsx("hero__subtitle")}>
@@ -42,18 +43,19 @@ function HomepageHeader(): JSX.Element {
         </div>
 
         <Heading as="h1" className={"hero__title"}>
-          <span className={styles.heroTitleTextHtml}>
-            <div className={styles.heroBannerTitle}>
-              {tagline}<br></br>
+          <span className={clsx(styles.heroTitleTextHtml)}>
+            <div className={clsx(styles.heroBannerTitle)}>
+              {custom_description}<b>{"X"}</b>
+
               {/* {hero_footer} */}
               {/* {hero_footer} */}
-              {/* <b>{hero_footer}</b> */}
+              {/* <b>{tagline}</b> */}
             </div>
           </span>
         </Heading>
 
-        <div className={styles.heroSubtitle}>
-          <span className={styles.heroCustomSubTitleHtml}>
+        <div className={clsx(styles.heroSubtitle)}>
+          <span className={clsx(styles.heroCustomSubTitleHtml)}>
             <b>{hero_footer}</b>
           </span>
 
@@ -64,12 +66,20 @@ function HomepageHeader(): JSX.Element {
 
         <br></br>
 
-        <div className={styles.buttons}>
+        <div className={clsx(styles.buttons)}>
           <Link
-            className="button button--outline button--primary button--lg"
+            className={clsx(
+              "button button--outline button--primary button--lg"
+            )}
             to="/docs"
           >
             {"Explore"}
+          </Link>
+          <Link
+            className={clsx("button button--outline button--info button--lg ")}
+            to="feeling-lucky"
+          >
+            {"Feeling Lucky"}
           </Link>
         </div>
       </div>
@@ -90,9 +100,9 @@ export default function Home(): JSX.Element {
       <main>
         <HomepageHeader />
         <div className={styles.section}>
-        <HomepageFeatures />
+          <HomepageFeatures />
         </div>
-        <FeatureBrands/>
+        <FeatureBrands />
       </main>
     </Layout>
   );
