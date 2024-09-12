@@ -7,6 +7,8 @@ import { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 import type { Options as PageOptions } from "@docusaurus/plugin-content-pages";
 import { Options as IdealImageOptions } from "@docusaurus/plugin-ideal-image";
 import type { Options as ClientRedirectsOptions } from "@docusaurus/plugin-client-redirects";
+import PrismLight from './src/utils/prismLight';
+import PrismDark from './src/utils/prismDark';
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
@@ -17,7 +19,7 @@ require("dotenv").config();
 // console.log(process.env)
 // const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
 
-const copyright = ` © ${new Date().getFullYear()} Keith Tan, All rights reserved `;
+const copyright = ` © ${new Date().getFullYear()} Keith Tan • All rights reserved `;
 
 const admonitionsConfig = {
   admonitions: {
@@ -399,8 +401,8 @@ const config: Config = {
       copyright,
     },
     prism: {
-      theme: prismThemes.github,
-      darkTheme: prismThemes.dracula,
+      theme: PrismLight,
+      darkTheme: PrismDark,
       additionalLanguages: [
         "powershell",
         "python",
