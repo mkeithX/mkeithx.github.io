@@ -77,14 +77,14 @@ const config: Config = {
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
-    custom_header: "How-Tos and Code Samples",
-    custom_description: "Projects, Guides and Samples from mkeith",
+    custom_header: "Docs, Guides & Samples from mkeith",
+    custom_description: "Docs Guides & Samples from mkeith",
     custom_tagline: "The Boring Website",
     custom_footer: "Built for Humans.",
     custom_title: "Guides and Samples for IT & Software Developers.",
     // custom_title: "Unified Docs for Software Developers.",
     hero_header: "OpenSource",
-    hero_footer: "Building the web before bedtime",
+    hero_footer: "Building the web with Kitiplex",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,

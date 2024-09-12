@@ -16,18 +16,20 @@
 } */
 
 .heroBannerTitle {
-  font-size: 1.3em;
-  padding-bottom: 1rem;
+  font-size: 1em;
+  padding-bottom: 0.3em;
   font-weight: bold;
-  /* margin-bottom: auto; */
+  margin-top: 1rem;
   position: relative;
   
 }
 
 .heroSubtitle {
-  font-size: 1.5em;
-  font-weight: normal;
-  margin-bottom: auto;
+  font-size: 1.3em;
+  /* font-weight: normal; */
+  /* padding-top: 1rem; */
+  /* font-weight: normal; */
+  margin-bottom: 1.8em;
 }
 
 .heroCustomTagline {
@@ -46,7 +48,7 @@
 }
 
 .heading {
-  font-weight: bolder;
+  font-weight: bold;
   font-size: 20px;
 }
 
@@ -61,7 +63,7 @@
 
 
 .heroBannerLogo {
-  max-width: 30%;
+  max-width: 38%;
   margin-top: 28px;
   width: 25rem;
   height: 25rem;
@@ -74,9 +76,9 @@
 }
 
 
-.container {
+/* .container {
   --ifm-container-width: 996px;
-}
+} */
 
 
 .heroBanner {
@@ -87,7 +89,7 @@
   background-color: var(--ifm-site-dark);
   display: flex;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.0vw), 0 100%); */
-  height: 38rem;
+  height: 36rem;
 }
 
 
@@ -114,10 +116,10 @@
 
 .buttons {
   display: flex;
-  /* justify-content: left; */
+  justify-content: left;
   width: fit-content;
   align-items: center;
-  gap: 10px;
+  gap: 12px;
   margin-top: auto;
   border-radius: 5px;
   text-decoration: none !important;
