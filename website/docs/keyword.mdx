@@ -6,32 +6,30 @@ keywords:
   - mkeithX
 ---
 
-import MicrosoftLogo from "@site/static/img/logo/microsoft_logo.svg";
-import NasaWormLogo from "@site/static/img/logo/NASA_Worm_logo.svg";
-import NasaLogo from "@site/static/img/space/NASA_logo.svg";
-import SpacexLogo from "@site/static/img/space/spacex.svg";
-import KitimiLogo from "@site/static/img/logo/kitiplex-svg-banner.svg";
-import AlgoliaLogo from "@site/static/img/logo/Algolia_logo.svg";
-import IframeWindow from "@site/src/components/BrowserWindow/IframeWindow";
-import BrowserWindow from "@site/src/components/BrowserWindow";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
+import IframeWindow from "@site/src/components/BrowserWindow/IframeWindow";
+import BrowserWindow from "@site/src/components/BrowserWindow";
+
+
 import { QuickStartCardRow } from "@site/src/components/QuickStartCards";
-
-import KeywordBanner from "@site/static/img/undraw_hello.svg";
-
-import Microsoft_icon from "@site/static/img/logo/Microsoft_icon.svg";
-
-import VsCode_icon from "@site/static/img/logo/vscode.svg";
 
 # Welcome
 
-<!-- <KeywordBanner className="logoBadge"/> -->
+<!-- For starters, this website is part of the **Kitiplex Universe** project the essence and importance of documentation in software development. is a documentation website that features quick reference for Systems Administrators and Software Developers.
 
-The **MKX SpaceHub**™ project is a documentation website that features open-source guides for IT professionals and systems administrators, developed and maintained by [**mkeithX**](https://github.com/mkeithx). It also serves as the primary resource for the [**Kitiplex DevOps Team**](/community/kitiplex/team), who are actively extending and refining existing projects documentation.
 
-### What's Inside?
+introducing the essence and importance of documentation in software development. Developed and maintained by [**mkeithX**](https://github.com/mkeithx),  -->
+ 
+The **MKX SpaceHub**™ project is a documentation website that features streamlined resources and quick reference for Software Development & Infra Management. Developed and maintained by [**mkeithX**](https://github.com/mkeithx), it also serves as an alternative source of information for the new generation and active members of [**Kitiplex DevOps**](/community/kitiplex/team)
+
+
+<!-- it also serves as the primary resource for the [**Kitiplex DevOps Team**](/community/kitiplex/team), who are actively extending and refining existing projects documentation.
+  -->
+
+
+## What's Inside?
 
 Currently, the site offers a comprehensive range of resources, including:
 
@@ -41,11 +39,56 @@ Currently, the site offers a comprehensive range of resources, including:
 
 <QuickStartCardRow />
 
+
 ### How It's Built
 
 **MKX SpaceHub**™ is powered by [**Docusaurus**](https://docusaurus.io/), a popular documentation framework, and hosted on [**Cloudflare**](https://developers.cloudflare.com/pages) for optimal performance and security. The site also utilizes additional tools and [**awesome resources**](/community) to ensure a seamless user experience. Learn [**more**](#).
 
-:::tip[Important]
+
+<BrowserWindow url="http://localhost:3000/">
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
+function helloWorld() {
+  console.log('Hello, world!');
+}
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+msg = "Hello, world!"
+print(msg)
+```
+
+</TabItem>
+<TabItem value="powershell" label="PowerShell">
+
+```powershell
+function Prompt { "mkeithx" + ":\" + "> " }
+```
+
+</TabItem>
+
+<TabItem value="java" label="Java">
+
+```java
+class HelloWorld {
+  public static void main(String args[]) {
+    System.out.println("Hello, World");
+  }
+}
+```
+
+</TabItem>
+</Tabs>
+
+</BrowserWindow>
+
+:::caution[caution]
 Everything here is a work in progress and will continue to evolve. If you find [**bugs**](/community/contributing#), inconsistencies, or if you would like to [**request a new feature**](/feature-requests), please feel free to do so.
 :::
 
@@ -56,3 +99,4 @@ Everything here is a work in progress and will continue to evolve. If you find [
 [![techs](https://skillicons.dev/icons?i=react,js,cloudflare,github,py,ts,vscode,md,html,css&perline=20)](#)
 
 </p>
+

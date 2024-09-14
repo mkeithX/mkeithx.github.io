@@ -34,7 +34,7 @@ function HomepageHeader(): JSX.Element {
           // height={250}
         />
 
-        <div className={("hero__subtitle")}>
+        <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
             {hero_header} <b>{"|"}</b>
           </span>
@@ -43,41 +43,45 @@ function HomepageHeader(): JSX.Element {
         <Heading as="h1" className={"hero__title"}>
           <span className={styles.heroTitleTextHtml}>
             <div className={clsx(styles.heroBannerTitle)}>
-              {custom_header}<b>{"X"}</b>
-
+              {/* {tagline} */}
+              {/* {"Building"}
+              <b>{" Innovative"}</b>
+              {" Solutions"} */}
+              {/* {custom_description}{" "} */}
               {/* {hero_footer} */}
-              {/* {custom_description} */}
-              {/* <b>{tagline}</b> */}
+              {custom_header}{" mkeith"}<b>{"X"}</b>
+              {/* <b>{custom_description}</b> */}
             </div>
           </span>
         </Heading>
 
-        <div className={clsx(styles.heroSubtitle)}>
+        <div className={styles.heroSubtitle}>
           <span className={clsx(styles.heroCustomSubTitleHtml)}>
-            <b>{hero_footer}</b>
+            <b> {"Build Optimal Websites"}</b>
+   
           </span>
 
-          {/* <span className={styles.heroCustomTagline}>
-            {tagline}
-            </span> */}
+          {/* <span className={(styles.heroCustomTagline)}>
+            {"Build Optimal Websites"}{" "}
+          
+          </span> */}
+
         </div>
 
         {/* <br></br> */}
 
         <div className={clsx(styles.buttons)}>
           <Link
-            className={clsx(
-              "button button--outline button--primary button--lg"
-            )}
+            className={clsx("button button--outline button--info button--lg")}
             to="/docs"
           >
             {"Explore"}
           </Link>
           <Link
             className={clsx("button button--outline button--info button--lg ")}
-            to="feeling-lucky"
+            to="/cosmos"
           >
-            {"Feeling Lucky"}
+            {"Space"}
           </Link>
         </div>
       </div>

@@ -1,5 +1,3 @@
-import path from "path";
-import { themes as prismThemes } from "prism-react-renderer";
 import { Config } from "@docusaurus/types";
 import * as Preset from "@docusaurus/preset-classic";
 import { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
@@ -79,14 +77,14 @@ const config: Config = {
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
-    custom_header: "Docs, Guides & Samples from mkeith",
-    custom_description: "Docs Guides & Samples from mkeith",
-    custom_tagline: "The Boring Website",
-    custom_footer: "Built for Humans.",
-    custom_title: "Guides and Samples for IT & Software Developers.",
+    custom_header: "Quick Guides & Examples from ", // Quick Guides & Code Snippets from mkeith
+    custom_description: "Software Development and Infra Management",
+    custom_tagline: "Guides and Snippets from",
+    custom_footer: "Resources for Building Optimal Websites",
+    custom_title: "mkeithX",
     // custom_title: "Unified Docs for Software Developers.",
     hero_header: "OpenSource",
-    hero_footer: "Building the web with Kitiplex",
+    hero_footer: "Streamlined Resources",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -257,9 +255,9 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      title: "Cookbook",
       logo: {
-        alt: "SpaceHub",
+        alt: "Cookbook",
         src: "img/logo/mkxspacehub-logo-alt.png", //"img/logo/mkxspacehub-logo.
         target: "_self",
         // width: 32,
@@ -284,6 +282,7 @@ const config: Config = {
           label: "More",
           position: "right",
           items: [
+            { to: "/feeling-lucky", label: "Feeling Lucky" },
             { to: "/cosmos", label: "The Universe" },
             { to: "/feature-requests", label: "Feature Requests" },
             {
@@ -362,12 +361,8 @@ const config: Config = {
               href: "/community/contributing",
             },
             {
-              label: "Author",
-              to: "/me",
-            },
-            {
-              label: "Kitiplex",
-              to: "/community/kitiplex",
+              label: "Feeling Lucky",
+              to: "/feeling-lucky",
             },
           ],
         },
@@ -376,7 +371,6 @@ const config: Config = {
           items: [
             socialProfiles.twitter,
             socialProfiles.facebook,
-            socialProfiles.linkedin,
           ],
         },
         {

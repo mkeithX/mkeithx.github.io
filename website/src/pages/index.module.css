@@ -17,27 +17,28 @@
 
 .heroBannerTitle {
   font-size: 1em;
-  padding-bottom: 0.3em;
+  /* padding-bottom: 0.3em; */
   font-weight: bold;
-  margin-top: 1rem;
+  /* margin-top: 1rem; */
+  margin-bottom: 0.4rem;
   position: relative;
   
 }
 
 .heroSubtitle {
-  font-size: 1.3em;
-  /* font-weight: normal; */
+  font-size: 20px;
+  font-weight: normal;
   /* padding-top: 1rem; */
   /* font-weight: normal; */
-  margin-bottom: 1.8em;
+  margin-bottom: 1em;
 }
 
 .heroCustomTagline {
-  color: var(--ifm-color-primary);
-  color: transparent;
-  /* background: linear-gradient(90deg, #019eff  0%, #1fe61f 50%, #ffff3f 100%); */
+  color: var(--ifm-color-emphasis);
+  /* font-weight:600; */
+  /* color: transparent; */
+  /* background: linear-gradient(90deg, #009dff  0%, #59d559 50%, #ffff3f 100%); */
   /* background: linear-gradient(90deg, #fbf8aa 0%, #00ffaa 50%, #1da1f2 100%); */
-  /* background: linear-gradient(90deg, #1da1f2  10%, #00ff88 85%, #f6ff7f 100%); */
   /* background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%); */
   -webkit-background-clip: text;
   background-clip: text;
@@ -56,17 +57,17 @@
   color: #ccc;
 } */
 
-
+/* 
 .section {
   padding: 40px 0;
-}
+} */
 
 
 .heroBannerLogo {
-  max-width: 38%;
-  margin-top: 28px;
-  width: 25rem;
-  height: 25rem;
+  max-width: 36%;
+  /* margin-top: 22px; */
+  width: 22rem;
+  height: 22rem;
   animation-name: kit-in-the-box;
   float:right;
   height: auto;
@@ -76,32 +77,32 @@
 }
 
 
-/* .container {
+.container {
   --ifm-container-width: 996px;
-} */
+}
 
 
 .heroBanner {
-  padding: 10rem 0;
+  padding: 9rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
   background-color: var(--ifm-site-dark);
   display: flex;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.0vw), 0 100%); */
-  height: 36rem;
+  height: 37rem;
 }
 
 
 
 
 
-@media screen and (max-width: 996px) {
+/* @media screen and (max-width: 996px) {
   .heroBanner {
     padding-left: 12px;
     padding-right: 12px;
   }
-}
+} */
 
 /* .buttons {
   display: flex;
@@ -115,8 +116,10 @@
   justify-content: left;
   width: fit-content;
   align-items: center;
-  gap: 12px;
-  margin-top: auto;
+  gap: 10px;
+  /* margin-top: auto; */
+  /* color: var(--ifm-color-info); */
+  /* background-color: var(--ifm-color-info); */
   border-radius: 5px;
   text-decoration: none !important;
   font-weight: bold;
@@ -143,6 +146,7 @@
 
 .heroSubTitleTextHtml b {
   color: var(--ifm-color-primary);
+  font-size: 22px;
 }
 
 @media (prefers-reduced-motion: no-preference) {
