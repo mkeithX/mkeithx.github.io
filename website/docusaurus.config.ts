@@ -77,13 +77,13 @@ const config: Config = {
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
-    custom_header: "Your Cookbook with Dev-Friendly Receipes ", // Quick Guides & Code Snippets from mkeith
+    custom_header: "Software Development at Kitiplex", // Quick Guides & Code Snippets from mkeith
     custom_description: "Software Development and Infra Management",
     custom_tagline: "",
-    custom_footer: "Guides for Software Development @ Kitiple", //Build fast, Optimized Websites and Focus on your Content 
+    custom_footer: "Guides and Samples from mkeith", //Build fast, Optimized Websites and Focus on your Content 
     custom_title: "mkeithX",
     // custom_title: "Unified Docs for Software Developers.",
-    hero_header: "Streamlined",
+    hero_header: "Discover",
     hero_footer: "Streamlined Resources",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,

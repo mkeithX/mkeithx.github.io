@@ -40,31 +40,24 @@ function HomepageHeader(): JSX.Element {
           </span>
         </div>
 
-        <Heading as="h1" className={"hero__title"}>
+        <Heading as="h1" className={clsx("hero__title")}>
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-              {/* {tagline} */}
-              {/* {"Building"}
-              <b>{" Innovative"}</b>
-              {" Solutions"} */}
-              {/* {custom_description}{" "} */}
-              {/* {hero_footer} */}
-              {/* {custom_header}{" mkeith"}<b>{"X"}</b> */}
-              <b></b>{custom_footer}<b>{"x"}</b>
+              <b></b>{custom_footer}<b>{"X"}</b>
             </div>
           </span>
         </Heading>
 
         <div className={styles.heroSubtitle}>
-          {/* <span className={styles.heroCustomSubTitleHtml}>
-            <b> {custom_footer}</b>
+          <span className={styles.heroCustomSubTitleHtml}>
+            <b> {tagline}</b>
    
-          </span> */}
-
+          </span>
+{/* 
           <span className={styles.heroCustomTagline}>
 
             <b>{custom_header}</b>        
-          </span>
+          </span> */}
 
         </div>
 

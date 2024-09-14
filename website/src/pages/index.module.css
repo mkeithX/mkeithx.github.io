@@ -10,23 +10,23 @@
   vertical-align: center;
   position: relative;
 }
-/* .hero h1 {
+.hero h1 {
   font-size: 3rem;
   padding-bottom: 1rem;
-} */
+}
 
 .heroBannerTitle {
   font-size: 1em;
   /* padding-bottom: 0.3em; */
   font-weight: bold;
   /* margin-top: 1rem; */
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.3rem;
   position: relative;
   
 }
 
 .heroSubtitle {
-  font-size: 24px;
+  font-size: 22px;
   /* font-weight: normal; */
   /* padding-top: 1rem; */
   /* font-weight: normal; */
@@ -51,7 +51,7 @@
 
 .heading {
   font-weight: bold;
-  font-size: 18px;
+  font-size: 20px;
 }
 
 /* .contents {
@@ -91,7 +91,7 @@
   background-color: var(--ifm-site-dark);
   display: flex;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.0vw), 0 100%); */
-  height: 33rem;
+  height: 34rem;
 }
 
 
@@ -158,11 +158,11 @@
 @keyframes kit-in-the-box {
   
   from {
-    transform: rotate(360deg) scale(1.4);
+    transform: rotate(360deg) scale(1.3);
   }
 
   to {
-    transform: rotate(-360deg) scale(1.4);
+    transform: rotate(-360deg) scale(1.3);
   }
   
 }
