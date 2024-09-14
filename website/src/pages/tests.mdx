@@ -9,8 +9,12 @@ import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 import {useLocation} from '@docusaurus/router';
 
+import CodeBlock from '@theme/CodeBlock';
+import MyComponentSource from '!!raw-loader!/docusaurus.config.ts';
 
 # MKXSpaceHub Dogfooding
+
+<!-- -->
 
 Playground for extending APIs and extra plugin instances for testing / dogfooding purposes.
 
@@ -20,7 +24,16 @@ Playground for extending APIs and extra plugin instances for testing / dogfoodin
 
 - [`pathname:///pure-html`](pathname:///pure-html)
 
-## Defaults
+## Site Configurations
+
+>### `docusaurus.config.ts`
+
+<details>
+<summary>Current</summary>
+
+<CodeBlock language="ts">{MyComponentSource}</CodeBlock> 
+
+</details>
 
 ### Config
 
@@ -29,7 +42,7 @@ Playground for extending APIs and extra plugin instances for testing / dogfoodin
 <details>
 <summary><code>docusaurus.config.ts</code></summary>
 
-```ts
+```ts showLineNumbers
 import {themes as prismThemes} from 'prism-react-renderer';
 import type {Config} from '@docusaurus/types';
 import type * as Preset from '@docusaurus/preset-classic';

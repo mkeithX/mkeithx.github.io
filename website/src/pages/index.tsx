@@ -36,35 +36,35 @@ function HomepageHeader(): JSX.Element {
 
         <div className={clsx("hero__subtitle")}>
           <span className={styles.heroSubTitleTextHtml}>
-            {hero_header} <b>{"|"}</b>
+            {hero_header}<b>{" |"}</b>
           </span>
         </div>
 
         <Heading as="h1" className={"hero__title"}>
           <span className={styles.heroTitleTextHtml}>
-            <div className={clsx(styles.heroBannerTitle)}>
+            <div className={styles.heroBannerTitle}>
               {/* {tagline} */}
               {/* {"Building"}
               <b>{" Innovative"}</b>
               {" Solutions"} */}
               {/* {custom_description}{" "} */}
               {/* {hero_footer} */}
-              {custom_header}{" mkeith"}<b>{"X"}</b>
-              {/* <b>{custom_description}</b> */}
+              {/* {custom_header}{" mkeith"}<b>{"X"}</b> */}
+              <b></b>{custom_footer}<b>{"x"}</b>
             </div>
           </span>
         </Heading>
 
         <div className={styles.heroSubtitle}>
-          <span className={clsx(styles.heroCustomSubTitleHtml)}>
-            <b> {"Build Optimal Websites"}</b>
+          {/* <span className={styles.heroCustomSubTitleHtml}>
+            <b> {custom_footer}</b>
    
-          </span>
-
-          {/* <span className={(styles.heroCustomTagline)}>
-            {"Build Optimal Websites"}{" "}
-          
           </span> */}
+
+          <span className={styles.heroCustomTagline}>
+
+            <b>{custom_header}</b>        
+          </span>
 
         </div>
 

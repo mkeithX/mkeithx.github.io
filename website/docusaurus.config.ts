@@ -5,14 +5,14 @@ import { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 import type { Options as PageOptions } from "@docusaurus/plugin-content-pages";
 import { Options as IdealImageOptions } from "@docusaurus/plugin-ideal-image";
 import type { Options as ClientRedirectsOptions } from "@docusaurus/plugin-client-redirects";
-import PrismLight from './src/utils/prismLight';
-import PrismDark from './src/utils/prismDark';
+import PrismLight from "./src/utils/prismLight";
+import PrismDark from "./src/utils/prismDark";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import { socialProfiles } from "./social.json";
 
-require("dotenv").config();
+// require("dotenv").config();
 
 // console.log(process.env)
 // const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
@@ -69,7 +69,7 @@ const config: Config = {
   baseUrl: "/",
   organizationName: "mkeithX",
   projectName: "mkeithx.github.io",
-  deploymentBranch: "gh-pages",
+  // deploymentBranch: "gh-pages",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
@@ -77,13 +77,13 @@ const config: Config = {
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
-    custom_header: "Quick Guides & Examples from ", // Quick Guides & Code Snippets from mkeith
+    custom_header: "Your Cookbook with Dev-Friendly Receipes ", // Quick Guides & Code Snippets from mkeith
     custom_description: "Software Development and Infra Management",
-    custom_tagline: "Guides and Snippets from",
-    custom_footer: "Resources for Building Optimal Websites",
+    custom_tagline: "",
+    custom_footer: "Guides for Software Development @ Kitiple", //Build fast, Optimized Websites and Focus on your Content 
     custom_title: "mkeithX",
     // custom_title: "Unified Docs for Software Developers.",
-    hero_header: "OpenSource",
+    hero_header: "Streamlined",
     hero_footer: "Streamlined Resources",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -101,6 +101,9 @@ const config: Config = {
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
+  },
+  markdown: {
+    format: 'detect'
   },
 
   presets: [
@@ -165,9 +168,9 @@ const config: Config = {
   ],
 
   plugins: [
-    '@docusaurus/theme-live-codeblock',
+    "@docusaurus/theme-live-codeblock",
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
-   
+
     [
       "content-docs",
       {
@@ -199,7 +202,7 @@ const config: Config = {
         max: 1030,
         min: 640,
         steps: 2,
-        disableInDev: false,
+        disableInDev: true,
       } satisfies IdealImageOptions,
     ],
     [
@@ -219,10 +222,10 @@ const config: Config = {
             to: "/blog",
           },
           {
-            from: ["/home",],
-            to: "/"
+            from: ["/home"],
+            to: "/",
           },
-          
+
           {
             from: "/showcase",
             to: "/projects",
@@ -255,9 +258,9 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "Cookbook",
+      title: "Circuit",
       logo: {
-        alt: "Cookbook",
+        alt: "Circuit",
         src: "img/logo/mkxspacehub-logo-alt.png", //"img/logo/mkxspacehub-logo.
         target: "_self",
         // width: 32,
@@ -368,10 +371,7 @@ const config: Config = {
         },
         {
           title: "Connect",
-          items: [
-            socialProfiles.twitter,
-            socialProfiles.facebook,
-          ],
+          items: [socialProfiles.twitter, socialProfiles.facebook],
         },
         {
           title: "Developers",
@@ -407,7 +407,7 @@ const config: Config = {
         "yaml",
       ],
     },
-    playgroundPosition: 'bottom',
+    playgroundPosition: "bottom",
   } satisfies Preset.ThemeConfig,
 };
 

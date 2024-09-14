@@ -296,7 +296,7 @@ div[class^='announcementBar_'] a:hover {
 
 @media (max-width: 996px) {
 
-  .footer .row col.col.col {
+  .footer .row .col.col.col {
     flex: 1 0 !important;
   }
 }
@@ -444,16 +444,16 @@ html[data-theme='dark'] .alert--release {
   --ifm-alert-border-color: #5865F2;
 } */
 
-/* .banner {
+.banner {
   padding: 4rem;
-} */
+}
 
 /** In mobile view, reduce the padding */
-/* @media screen and (max-width: 996px) {
+@media screen and (max-width: 996px) {
   .heroBanner {
     padding: 2rem;
   }
-} */
+}
 
 div.theme-admonition.theme-admonition-tip.alert.alert--success {
   background-color: #9ccfd8;

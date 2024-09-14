@@ -49,22 +49,22 @@ const FeatureList: FeatureItem[] = [
 
   },
 
-  {
+  // {
     
-    Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
+  //   Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
 
-  },
+  // },
   // {
     
   //   Svg: require("@site/static/img/space/NASA_logo.svg").default,
 
   // },
   
-  {
+  // {
     
-    Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
+  //   Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
 
-  },
+  // },
 
 ];
 

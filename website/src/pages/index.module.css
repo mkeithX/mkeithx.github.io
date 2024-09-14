@@ -2,14 +2,14 @@
  * CSS files with the .module.css suffix will be treated as CSS modules
  * and scoped locally.
  */
- /* .hero {
+ .hero {
   display: flex;
   padding: 4rem 0;
   text-align: center;
   align-items: center;
   vertical-align: center;
   position: relative;
-} */
+}
 /* .hero h1 {
   font-size: 3rem;
   padding-bottom: 1rem;
@@ -26,21 +26,22 @@
 }
 
 .heroSubtitle {
-  font-size: 20px;
-  font-weight: normal;
+  font-size: 24px;
+  /* font-weight: normal; */
   /* padding-top: 1rem; */
   /* font-weight: normal; */
+  font-weight:normal;
   margin-bottom: 1em;
 }
 
 .heroCustomTagline {
-  color: var(--ifm-color-emphasis);
-  /* font-weight:600; */
-  /* color: transparent; */
+  /* color: var(--ifm-color-secondary) !important; */
+
+  color: transparent;
   /* background: linear-gradient(90deg, #009dff  0%, #59d559 50%, #ffff3f 100%); */
   /* background: linear-gradient(90deg, #fbf8aa 0%, #00ffaa 50%, #1da1f2 100%); */
-  /* background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%); */
-  -webkit-background-clip: text;
+  background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%);
+  -webkit-text-fill-color: transparent;
   background-clip: text;
 }
 
@@ -50,21 +51,21 @@
 
 .heading {
   font-weight: bold;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* .contents {
   color: #ccc;
 } */
 
-/* 
-.section {
-  padding: 40px 0;
+
+/* .section {
+  padding: 70px 0;
 } */
 
 
 .heroBannerLogo {
-  max-width: 36%;
+  max-width: 34%;
   /* margin-top: 22px; */
   width: 22rem;
   height: 22rem;
@@ -77,20 +78,20 @@
 }
 
 
-.container {
+/* .container {
   --ifm-container-width: 996px;
-}
+} */
 
 
 .heroBanner {
-  padding: 9rem 0;
+  padding: 10rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
   background-color: var(--ifm-site-dark);
   display: flex;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 5.0vw), 0 100%); */
-  height: 37rem;
+  height: 33rem;
 }
 
 
@@ -116,13 +117,13 @@
   justify-content: left;
   width: fit-content;
   align-items: center;
-  gap: 10px;
+  gap: 8px;
   /* margin-top: auto; */
   /* color: var(--ifm-color-info); */
   /* background-color: var(--ifm-color-info); */
-  border-radius: 5px;
+  border-radius: 12px;
   text-decoration: none !important;
-  font-weight: bold;
+  font-weight: normal;
 }
 
 
@@ -157,11 +158,11 @@
 @keyframes kit-in-the-box {
   
   from {
-    transform: rotate(360deg) scale(1.5);
+    transform: rotate(360deg) scale(1.4);
   }
 
   to {
-    transform: rotate(-360deg) scale(1.5);
+    transform: rotate(-360deg) scale(1.4);
   }
   
 }
