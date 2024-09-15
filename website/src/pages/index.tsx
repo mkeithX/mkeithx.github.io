@@ -4,74 +4,65 @@ import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import Layout from "@theme/Layout";
 import HomepageFeatures from "@site/src/components/HomepageFeatures";
 import Heading from "@theme/Heading";
-
-import styles from "./index.module.css";
 import BannerLogo from "@site/static/img/banner/atom-z.svg";
-// import BannerLogo from "@site/static/img/logo/react-logo.svg";
 import React from "react";
 import TopBanner from "@site/src/components/TopBanner";
-import FeatureBrands from "../components/FeatureBrands";
+import FeatureBrands from "@site/src/components/FeatureBrands";
+import styles from "./index.module.css";
 
 function HomepageHeader(): JSX.Element {
   const {
-    siteConfig: { title, customFields, tagline },
+    siteConfig: { tagline, customFields },
   } = useDocusaurusContext();
-  const { custom_tagline } = customFields as { custom_tagline: string };
-  const { description } = customFields as { description: string };
-  const { hero_header } = customFields as { hero_header: string };
-  const { hero_footer } = customFields as { hero_footer: string };
-  const { custom_footer } = customFields as { custom_footer: string };
-  const { custom_title } = customFields as { custom_title: string };
-  const { custom_description } = customFields as { custom_description: string };
-  const { custom_header } = customFields as { custom_header: string };
+  const {
+    hero_header,
+    custom_footer,
+    custom_tagline,
+    custom_description,
+    custom_header,
+  } = customFields as {
+    hero_header: string;
+    custom_footer: string;
+    custom_tagline: string;
+    custom_description: string;
+    custom_header: string;
+  };
+
   return (
     <header className={clsx("hero hero--dark", styles.heroBanner)}>
       <div className="container">
         <BannerLogo
           className={clsx(styles.heroBannerLogo)}
-          title="BannerLogo"
+          title="Banner Logo"
           width={380}
-          // height={250}
         />
-
-        <div className={clsx("hero__subtitle")}>
+        <div className="hero__subtitle">
           <span className={styles.heroSubTitleTextHtml}>
-            {hero_header}<b>{" |"}</b>
+            {hero_header}
+            <b>{" |"}</b>
           </span>
         </div>
-
-        <Heading as="h1" className={clsx("hero__title")}>
+        <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
               <b></b>{custom_footer}<b>{"X"}</b>
             </div>
           </span>
         </Heading>
-
         <div className={styles.heroSubtitle}>
           <span className={styles.heroCustomSubTitleHtml}>
-            <b> {tagline}</b>
-   
+            <b>{tagline}</b>
           </span>
-{/* 
-          <span className={styles.heroCustomTagline}>
-
-            <b>{custom_header}</b>        
-          </span> */}
-
         </div>
-
-        {/* <br></br> */}
-
         <div className={clsx(styles.buttons)}>
           <Link
-            className={clsx("button button--outline button--info button--lg")}
+            className="button button--outline button--info button--lg"
             to="/docs"
           >
             {"Explore"}
           </Link>
           <Link
-            className={clsx("button button--outline button--info button--lg ")}
+            className="button button--outline button--info button--lg"
             to="/cosmos"
           >
             {"Space"}
@@ -84,14 +75,12 @@ function HomepageHeader(): JSX.Element {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { title, customFields, tagline },
+    siteConfig: { tagline, customFields },
   } = useDocusaurusContext();
-  const { custom_tagline } = customFields as { custom_tagline: string };
-  const { description } = customFields as { description: string };
   const { hero_footer } = customFields as { hero_footer: string };
+
   return (
     <Layout title={tagline} description={hero_footer}>
-      {/* <TopBanner /> */}
       <main>
         <HomepageHeader />
         <div className={styles.section}>

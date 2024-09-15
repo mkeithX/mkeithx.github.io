@@ -1,6 +1,7 @@
 ---
 description: The official DevPortal of the mkeithX ecosystem.
 slug: /
+sidebar_label: Introduction
 keywords:
   - docs
   - mkeithX
@@ -13,32 +14,84 @@ import BrowserWindow from "@site/src/components/BrowserWindow";
 import { QuickStartCardRow } from "@site/src/components/QuickStartCards";
 
 # Welcome
+**MKX SpaceHub** is a simple documentation website that features guides, examples, code snippets, etc. for basic software development and infrastructure management.
 
-The **MKX SpaceHub**, developed and maintained by [**mkeithX**](https://github.com/mkeithx), is a simple documentation website that features streamlined resources and quick references for basic Web Development & Infra Management. The project had many pseudonyms internally and **MKX SpaceHub** was known publicly. 
+## Features
+The site offers a range of resources, including detailed guides for IT and system administration tasks, comprehensive project documentation with development notes and user guides, and updates on recent changes, new features, and upcoming developments. Additionally, it features articles about space.
 
-
-also became part of the **Kitiplex** forum promoting essence and the importance of documentation in the context of software development. It also serves as an alternative source of information for the new generation and active members of [**Kitiplex DevOps**](/community/kitiplex/team)
-
-
-<!-- it also serves as the primary resource for the [**Kitiplex DevOps Team**](/community/kitiplex/team), who are actively extending and refining existing projects documentation.
-  -->
-
-
-## What's Inside?
-
-Currently, the site offers a comprehensive range of resources, including:
-
-- ⚡ **Basic and Advanced Guides**: Detailed instructions and best practices for various IT and system administration tasks.
-- ⚡ **Project Docs**: In-depth information on current projects, including development notes and user guides.
-- ⚡ **Updates and Developments**: The latest news on recent updates, feature additions, and upcoming changes.
 
 <QuickStartCardRow />
 
+## Tech
 
-### How It's Built
+Designed and maintained by  [**@mkeithX**](https://github.com/mkeithx), the website is built using  [**Docusaurus**](https://docusaurus.io/), a popular static-site generator known for its ease of use and flexibility. The site’s source code is hosted on **GitHub**, allowing for collaborative development and version control. It is also hosted on [**Cloudflare**](https://developers.cloudflare.com/pages)., ensuring fast and reliable performance with enhanced security features.
 
-**MKX SpaceHub**™ is powered by [**Docusaurus**](https://docusaurus.io/), a popular documentation framework, and hosted on [**Cloudflare**](https://developers.cloudflare.com/pages) for optimal performance and security. The site also utilizes additional tools and [**awesome resources**](/community) to ensure a seamless user experience. Learn [**more**](#).
+### Structure
+Here is a broad overview of the important files and folders.
 
+
+<pre>
+<b>
+
+mkeithx.githuh.io/
+├──  /
+│   ├── [````]
+│   └── ...
+└── website/
+    ├── blog/
+    │   ├── [BLOG POSTS]
+    │   └── ...
+    ├── community/
+    │   ├── [CONTRIBUTING DOC FILES]
+    │   └── ...
+    ├── cosmos/
+    │   ├── [ ARTICLES ABOUT SPACE ]
+    │   └── ...
+    ├── docs/
+    │   ├── [ MAIN DOCS]
+    │   └── ...
+    ├── src/
+    │   ├── css/
+    │   │   ├── [CUSTOM STYLES]
+    │   │   └── ...
+    │   ├── pages/
+    │   │   ├── [STATIC PAGES]
+    │   │   └── ...
+    │   └── theme/
+    │   │   ├── [SWIZZLED COMPONENTS]
+    │   │   └── ...
+    ├── static/
+    │   ├── .../
+    │   │   └── assets/
+    │   ├── .../
+    │   │   └── assets/
+    │   └── img/
+    ├── docusaurus.config.ts
+    ├── package.json
+    ├── sidebars.json
+    ├── sidebarsCommunity.ts
+    ├── sidebarsCosmos.ts
+    └── versions.json
+
+</b>
+</pre>
+
+
+
+
+
+
+If you're geeky enough to notice that the site is constantly updating—whether with new content, minor fixes, or both—it's because the website also serves as a resource for the maintainers and contributors at [**Kitiplex**](https://github.com/kitiplex).
+
+
+<!-- it also serves as a testing 
+
+The **MKX SpaceHub**, developed and maintained by [**mkeithX**](https://github.com/mkeithx), is a simple documentation website that features streamlined resources and quick references for basic Web Development & Infra Management. The project had many pseudonyms internally and **MKX SpaceHub** was known publicly. 
+ -->
+
+
+
+### Sample Code
 
 <BrowserWindow url="http://localhost:3000/">
 
@@ -81,6 +134,16 @@ function Prompt { "mkeithx" + ":\" + "> " }
   --docusaurus-highlighted-code-line-bg: rgb(100, 100, 100);
 }
 ```
+
+</TabItem>
+<TabItem value="git" label="Git">
+
+
+```bash
+git add --all && git commit -m "This is Awesome"
+```
+
+
 
 </TabItem>
 </Tabs>

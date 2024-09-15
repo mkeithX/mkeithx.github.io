@@ -1,9 +1,9 @@
-import { Config } from "@docusaurus/types";
+import type { Config } from "@docusaurus/types";
 import * as Preset from "@docusaurus/preset-classic";
-import { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
-import { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
+import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
+import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
 import type { Options as PageOptions } from "@docusaurus/plugin-content-pages";
-import { Options as IdealImageOptions } from "@docusaurus/plugin-ideal-image";
+import type { Options as IdealImageOptions } from "@docusaurus/plugin-ideal-image";
 import type { Options as ClientRedirectsOptions } from "@docusaurus/plugin-client-redirects";
 import PrismLight from "./src/utils/prismLight";
 import PrismDark from "./src/utils/prismDark";
@@ -12,13 +12,10 @@ import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import { socialProfiles } from "./social.json";
 
-// require("dotenv").config();
+// Current year for copyright
+const copyright = `© ${new Date().getFullYear()} Keith Tan • All rights reserved`;
 
-// console.log(process.env)
-// const deploymentBranch = process.env.DEPLOYMENT_BRANCH;
-
-const copyright = ` © ${new Date().getFullYear()} Keith Tan • All rights reserved `;
-
+// Admonitions and common configurations
 const admonitionsConfig = {
   admonitions: {
     keywords: [
@@ -39,7 +36,7 @@ const admonitionsConfig = {
   },
 };
 
-const commonExlusion = {
+const commonExclusions = {
   exclude: [
     "**/_*.{js,jsx,ts,tsx,md,mdx}",
     "**/_*/**",
@@ -54,22 +51,20 @@ const commonRemarkConfig = {
 };
 
 const commonDocsConfig = {
-  // breadcrumbs: true,
   ...admonitionsConfig,
   ...commonRemarkConfig,
-  ...commonExlusion,
+  ...commonExclusions,
 };
 
+// Docusaurus configuration
 const config: Config = {
   title: "mkeithx",
   tagline: "Building Innovative Solutions",
   favicon: "icons/favicon/round-dark.ico",
-  // titleDelimiter: " ⚡️ ·  ",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
   organizationName: "mkeithX",
   projectName: "mkeithx.github.io",
-  // deploymentBranch: "gh-pages",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
@@ -77,12 +72,10 @@ const config: Config = {
   customFields: {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
-    custom_header: "Software Development at Kitiplex", // Quick Guides & Code Snippets from mkeith
+    custom_header: "Software Development at Kitiplex",
     custom_description: "Software Development and Infra Management",
-    custom_tagline: "",
-    custom_footer: "Guides and Samples from mkeith", //Build fast, Optimized Websites and Focus on your Content 
+    custom_footer: "Guides and Samples from mkeith",
     custom_title: "mkeithX",
-    // custom_title: "Unified Docs for Software Developers.",
     hero_header: "Discover",
     hero_footer: "Streamlined Resources",
     GIT_USER: process.env.GIT_USER,
@@ -91,25 +84,20 @@ const config: Config = {
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
 
-  stylesheets: [
-    {
-      href: "/katex/katex.min.css",
-      type: "text/css",
-    },
-  ],
+  stylesheets: [{ href: "/katex/katex.min.css", type: "text/css" }],
 
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
+
   markdown: {
-    format: 'detect'
+    format: "detect",
   },
 
   presets: [
     [
       "classic",
-
       {
         docs: {
           path: "docs",
@@ -119,7 +107,6 @@ const config: Config = {
           showLastUpdateAuthor: true,
           showLastUpdateTime: true,
         },
-
         blog: {
           path: "blog",
           blogTitle: "Blog",
@@ -127,14 +114,13 @@ const config: Config = {
             "Keep up to date with what's going on with the SpaceHub project.",
           routeBasePath: "blog",
           blogSidebarTitle: "Updates",
-          blogSidebarCount: "ALL", // 5
-          postsPerPage: "ALL", // 5
+          blogSidebarCount: "ALL",
+          postsPerPage: "ALL",
           ...admonitionsConfig,
           ...commonRemarkConfig,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "throw",
-
           feedOptions: {
             type: "all",
             title: "The MKX SpaceHub Blog",
@@ -144,7 +130,6 @@ const config: Config = {
             copyright,
           },
         } satisfies BlogOptions,
-
         pages: {
           path: "src/pages",
           routeBasePath: "",
@@ -152,11 +137,9 @@ const config: Config = {
           ...commonDocsConfig,
           mdxPageComponent: "@theme/MDXPage",
         } satisfies PageOptions,
-
         theme: {
           customCss: "./src/css/custom.css",
         },
-
         sitemap: {
           changefreq: "hourly",
           priority: 0.5,
@@ -170,7 +153,6 @@ const config: Config = {
   plugins: [
     "@docusaurus/theme-live-codeblock",
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
-
     [
       "content-docs",
       {
@@ -217,19 +199,9 @@ const config: Config = {
             from: ["/feedback", "/docs/next/feedback"],
             to: "/feature-requests",
           },
-          {
-            from: ["/posts", "/updates"],
-            to: "/blog",
-          },
-          {
-            from: ["/home"],
-            to: "/",
-          },
-
-          {
-            from: "/showcase",
-            to: "/projects",
-          },
+          { from: ["/posts", "/updates"], to: "/blog" },
+          { from: ["/home"], to: "/" },
+          { from: "/showcase", to: "/projects" },
         ],
       } satisfies ClientRedirectsOptions,
     ],
@@ -241,43 +213,29 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-
     docs: {
       sidebar: {
         hideable: true,
-        autoCollapseCategories: true,
+        autoCollapseCategories: false,
       },
     },
-
     tableOfContents: {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-
     image: "img/mkx-social.png",
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "Circuit",
+      title: "SpaceHub",
       logo: {
-        alt: "Circuit",
-        src: "img/logo/mkxspacehub-logo-alt.png", //"img/logo/mkxspacehub-logo.
+        alt: "SpaceHub",
+        src: "img/logo/mkxspacehub-logo-alt.png",
         target: "_self",
-        // width: 32,
-        // height: 32,
       },
       items: [
-        {
-          type: "doc",
-          position: "left",
-          docId: "keyword",
-          label: "Core",
-        },
-        {
-          type: "docSidebar",
-          sidebarId: "devops",
-          label: "DevOps",
-        },
+        { type: "doc", position: "left", docId: "keyword", label: "Core" },
+        { type: "docSidebar", sidebarId: "devops", label: "DevOps" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
         {
@@ -288,18 +246,12 @@ const config: Config = {
             { to: "/feeling-lucky", label: "Feeling Lucky" },
             { to: "/cosmos", label: "The Universe" },
             { to: "/feature-requests", label: "Feature Requests" },
-            {
-              type: "html",
-              value: '<hr class="dropdown-separator">',
-            },
+            { type: "html", value: '<hr class="dropdown-separator">' },
             {
               label: "Bugs",
               href: "https://github.com/mkeithX/mkeithx.github.io/issues/new/choose",
             },
-            {
-              label: "RSS",
-              href: "https://mkeithx.pages.dev/blog/rss.xml",
-            },
+            { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
         },
         {
@@ -308,18 +260,13 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
-        {
-          type: "search",
-          position: "right",
-        },
+        { type: "search", position: "right" },
         {
           type: "html",
-          // position: "right",
           value: '<span class="badge badge--sm badge--secondary">M87</span>',
         },
       ],
     },
-
     algolia: {
       apiKey: "17c82a48990cb1a63e048dbd20818637",
       indexName: "mkeithx",
@@ -328,7 +275,6 @@ const config: Config = {
       searchPagePath: "search",
       insights: true,
     },
-
     footer: {
       style: "dark",
       logo: {
@@ -341,32 +287,16 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            {
-              label: "Gists",
-              to: "/docs/gists",
-            },
-            {
-              label: "DevOps",
-              to: "/docs/devops/guides-and-workarounds",
-            },
-            {
-              label: "Keyword",
-              to: "/docs",
-            },
+            { label: "Gists", to: "/docs/gists" },
+            { label: "DevOps", to: "/docs/devops/guides-and-workarounds" },
+            { label: "Keyword", to: "/docs" },
           ],
         },
-
         {
           title: "More",
           items: [
-            {
-              label: "Contributing",
-              href: "/community/contributing",
-            },
-            {
-              label: "Feeling Lucky",
-              to: "/feeling-lucky",
-            },
+            { label: "Contributing", href: "/community/contributing" },
+            { label: "Feeling Lucky", to: "/feeling-lucky" },
           ],
         },
         {
@@ -376,22 +306,12 @@ const config: Config = {
         {
           title: "Developers",
           items: [
-            {
-              label: "Cloudflare",
-              href: "https://dash.cloudflare.com/login",
-            },
-            {
-              label: "Vercel",
-              href: "https://vercel.com/",
-            },
-            {
-              label: "Facebook Dev",
-              href: "https://developers.facebook.com/",
-            },
+            { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
+            { label: "Vercel", href: "https://vercel.com/" },
+            { label: "Facebook Dev", href: "https://developers.facebook.com/" },
           ],
         },
       ],
-
       copyright,
     },
     prism: {
