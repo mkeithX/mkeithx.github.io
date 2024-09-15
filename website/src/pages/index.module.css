@@ -10,6 +10,7 @@
   align-items: center;
   vertical-align: center;
   position: relative;
+  background: var(--ifm-color-info) !important;
 }
 
 .hero h1 {

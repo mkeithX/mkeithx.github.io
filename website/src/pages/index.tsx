@@ -45,7 +45,9 @@ function HomepageHeader(): JSX.Element {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-              <b></b>{custom_footer}<b>{"X"}</b>
+              <b></b>
+              {custom_footer}
+              <b>{"X"}</b>
             </div>
           </span>
         </Heading>
@@ -56,13 +58,13 @@ function HomepageHeader(): JSX.Element {
         </div>
         <div className={clsx(styles.buttons)}>
           <Link
-            className="button button--outline button--info button--lg"
+            className="button button--outline button--primary button--lg"
             to="/docs"
           >
             {"Explore"}
           </Link>
           <Link
-            className="button button--outline button--info button--lg"
+            className="button button--outline button--primary button--lg"
             to="/cosmos"
           >
             {"Space"}
@@ -83,7 +85,7 @@ export default function Home(): JSX.Element {
     <Layout title={tagline} description={hero_footer}>
       <main>
         <HomepageHeader />
-        <div className={styles.section}>
+        <div className={clsx(styles.section)}>
           <HomepageFeatures />
         </div>
         <FeatureBrands />

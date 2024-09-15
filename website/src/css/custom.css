@@ -19,14 +19,14 @@
   --site-color-feedback-background: #f0f8ff;
   
 
-  --ifm-code-font-size: 15px;
-  --ifm-font-size-base: 16px;
+  --ifm-code-font-size: 90%;
+  /* --ifm-font-size-base: 18px; */
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important;
-  --ifm-menu-color-active: var(--ifm-color-primary) !important;
+  /* --ifm-breadcrumb-color-active: var(--ifm-color-primary-dark) !important; */
+  /* --ifm-menu-color-active: var(--ifm-color-primary-dark) !important; */
 
   --ifm-menu-color-background-active: var(--ifm-color-emphasis-100) !important;
 
