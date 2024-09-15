@@ -9,99 +9,62 @@ function Foobar() {
       <div className={'hero hero--dark'}>
         <div className="container">
             <Heading as="h1" className='hero__title'>
-                {"Community"}
+                {"Hi there!"}
             </Heading>
           <p className="hero__subtitle">
-           {" Resources for connecting with people working on Electron apps."}
+           {" We're getting this page up and running any time now. Please stay tuned."}
           </p>
         </div>
       </div>
       <div className={'container margin-vert--xl'}>
-        <h2>Electron resources</h2>
+        <h2>{"Lorem Ipsum"}</h2>
         <ul>
           <li>
-            📣 <strong>Stay up to date</strong> by following{' '}
-            <a href="https://twitter.com/electronjs">@electronjs</a> on Twitter
-            and subscribing to the <Link to="/blog">blog feed.</Link>
+            📣 <strong>{"Lorem Ipsum "}</strong> {"stay tuned!"}{' '}
+            <a href="#">{"Here"}</a> {"stay tuned!"}
+            {"stay tuned!"}<Link to="/blog">{"stay tuned!"}</Link>
           </li>
           <li>
-            🙋 <strong>Get help and feedback</strong> by joining the{' '}
-            <a href="https://discord.gg/electronjs">Discord server</a>, or
-            visiting{' '}
-            <a href="https://stackoverflow.com/questions/tagged/electron">
-              Stack Overflow
+            🙋 <strong>{"Lorem Ipsum "}</strong> by joining the{' '}
+            <a href="#">{"stay tuned!"}</a>, or
+            {"stay tuned!"}{' '}
+            <a href="#">
+            {"stay tuned!"}
             </a>
             .
           </li>
           <li>
-            🌏 <strong>Contribute to translations</strong> on{' '}
-            <a href="https://crowdin.com/project/electron">Crowdin</a>.
+            🌏 <strong>{"Lorem Ipsum "}</strong> on{' '}
+            <a href="#">{"stay tuned!"}</a>.
           </li>
           <li>
-            🔒 <strong>Report security issues</strong> by emailing{' '}
-            <a href="mailto:security@electronjs.org">security@electronjs.org</a>
-            .
-          </li>
-          <li>
-            🐞 <strong>Request features</strong> or <strong>report bugs</strong>{' '}
-            by opening issues on the{' '}
-            <a href="https://github.com/electron/electron/issues">
-              electron/electron
-            </a>{' '}
-            repository.
-          </li>
-          <li>
-            ⚖️ <strong>Report Code of Conduct violations</strong> by emailing{' '}
-            <a href="mailto:coc@electronjs.org">coc@electronjs.org</a>.
-          </li>
-          <li>
-            💰 <strong>Donate</strong> on our{' '}
-            <a href="https://opencollective.com/electron">
-              OpenCollective page
-            </a>
+            🔒 <strong>{"Lorem Ipsum "}</strong> {"stay tuned!"}{' '}
+            <a href="#">{"stay tuned!"}</a>
             .
           </li>
         </ul>
         <p>
-          ❓ For all other inquiries, email{' '}
-          <a href="mailto:info@electronjs.org">info@electronjs.org</a>.
+          ❓ {"stay tuned!"}{' '}
+          <a href="#">{"stay tuned!"}</a>.
         </p>
       </div>
       <hr></hr>
       <div className={'container margin-vert--xl'}>
-        <h2>Language communities</h2>
+        <h2>{"Almost there now!"}</h2>
         <p>
-          The Electron foobar spans the globe, and English is not
-          everyone&apos;s first language. Find documentation in your language on
-          this website, or join one of the language communities below:
+          {"Lorem Ipsum is simply dummy text of the printing and typesetting"}
           <ul>
             <li>
-              <a href="https://discord.gg/eZTKXHBKpK">electron-zh</a>{' '}
-              <i>(Chinese)</i>
+              <a href="#">{'Link 1'}</a>{' '}
+              <i>(Link 1)</i>
             </li>
             <li>
-              <a href="https://telegram.me/electron_ru">electron-ru</a>{' '}
-              <i>(Russian)</i>
+              <a href="#">{'Link 2'}</a>{' '}
+              <i>(Link 2)</i>
             </li>
             <li>
-              <a href="https://electron-br.slack.com/">electron-br</a>{' '}
-              <i>(Brazilian Portuguese)</i>
-            </li>
-            <li>
-              <a href="https://electron-jp.slack.com/">electron-jp</a>{' '}
-              <i>(Japanese)</i>
-            </li>
-            <li>
-              <a href="https://electron-tr.herokuapp.com/">electron-tr</a>{' '}
-              <i>(Turkish)</i>
-            </li>
-            <li>
-              <a href="https://electron-id.slack.com/">electron-id</a>{' '}
-              <i>(Indonesian)</i>
-            </li>
-            <li>
-              <a href="https://electronpl.github.io/">electron-pl</a>{' '}
-              <i>(Polish)</i>
+              <a href="#">{'Link 3'}</a>{' '}
+              <i>(Link 3)</i>
             </li>
           </ul>
         </p>
