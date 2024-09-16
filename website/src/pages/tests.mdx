@@ -395,15 +395,94 @@ Release Test
 
 <IframeWindow url="https://kitiplex.github.io/" />
 
-<IframeWindow url="https://kitiplex.github.io/iuiu/" />
+<!-- <IframeWindow url="https://kitiplex.github.io/iuiu/" /> -->
 
-<IframeWindow url="https://kitimi.vercel.app/" />
+<!-- <IframeWindow url="https://kitimi.vercel.app/" /> -->
 
 <IframeWindow url="https://kitiplex.pages.dev/" />
 
 <!-- <IframeWindow url="https://mkeithx-docs.vercel.app/" /> -->
 
 
+## Custom Cards
+
+ <Card>
+    <CardImage
+      cardImageUrl='/img/mkx-social.png'
+    />
+    <CardFooter style={{ backgroundColor: 'rgb(33 126 209)' , color:'black'}} className='text--center'> 
+      <div className='button-group button-md button-group--block'>
+        <button className='button button--success'>Like</button>
+        <button className='button button--warning'>Comment</button>
+        <button className='button button--danger'>Share</button>
+      </div>
+    </CardFooter> 
+  </Card>
+
+<br></br>
+ 
+  <Card>
+    <CardHeader
+      className='padding-top--lg'
+      style={{ backgroundColor: 'rgb(33 126 209)' , color:'black'}}
+    >
+      <div className='avatar avatar--vertical'>
+        <img
+          className='avatar__photo avatar__photo--xl' 
+          src='https://avatars.githubusercontent.com/u/97809069?v=4'
+        />
+        <div className='avatar__intro'>
+          <div className='avatar__name'>Docux (@Juniors017)</div>
+          <small className='avatar__subtitle'>
+            humble contributor on:
+            <a style={{ color:'white'}} href='https://docusaurus.community/'>docusaurus.community</a>
+          </small>
+        </div>
+      </div>
+</CardHeader>
+</Card>
+
+<hr></hr>
+  <Card shadow='tl'  style={{border: '1.5px solid var(--ifm-color-primary)'}}>
+    <CardHeader>
+      <h3>Lorem Ipsum</h3>
+    </CardHeader>
+    <CardBody>
+      Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Quis ipsum suspendisse ultrices gravida.
+    </CardBody>
+    <CardFooter>
+      <button className='button button--secondary button--block'>See All</button>
+    </CardFooter>
+  </Card>
+
+<hr></hr>
+
+## Custom Columns
+
+<Columns> 
+  <Column className='text--center'>
+    ![](/img/logo/kitiplex-devops.svg)
+  </Column>
+  <Column className='text--justify'> 
+    #### My text column
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim ut. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sit amet porttitor eget dolor morbi. Varius vel pharetra vel turpis nuncSit amet porttitor eget dolor morbi. Varius vel pharetra vel turpis nunc.
+  </Column>
+</Columns>
+
+<Columns> 
+  <Column className='text--left'>
+    #### My First Column
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim ut. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sit amet porttitor eget dolor morbi. Varius vel pharetra vel turpis nunc.
+  </Column>
+  <Column className='text--center'>
+    #### My Second Column
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim ut. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sit amet porttitor eget dolor morbi. Varius vel pharetra vel turpis nunc.
+  </Column>
+  <Column className='text--justify'>
+    #### My Third Column
+    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim ut. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sit amet porttitor eget dolor morbi. Varius vel pharetra vel turpis nunc.
+  </Column>
+</Columns>
 
 ## Video Container 
 

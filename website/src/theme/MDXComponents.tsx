@@ -5,8 +5,15 @@ import { fab } from "@fortawesome/free-brands-svg-icons";
 import { fas } from "@fortawesome/free-solid-svg-icons";
 import MDXComponents from "@theme-original/MDXComponents";
 import Code from '@theme/MDXComponents/Code';
-
 import Highlight from '@site/src/components/Highlight';
+
+import Card from '@site/src/components/Card';
+import CardBody from '@site/src/components/Card/CardBody';
+import CardFooter from '@site/src/components/Card/CardFooter';
+import CardHeader from '@site/src/components/Card/CardHeader';
+import CardImage from '@site/src/components/Card/CardImage';
+import Columns from '@site/src/components/Columns';
+import Column from '@site/src/components/Column';
 
 library.add(fab, fas);
 
@@ -19,6 +26,13 @@ const components: Components = {
   Highlight,
   FAIcon: FontAwesomeIcon,
   Code,
+  Card, 
+  CardHeader, 
+  CardBody, 
+  CardFooter,
+  CardImage,
+  Columns,
+  Column,
 };
 
 export default components;

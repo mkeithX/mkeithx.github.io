@@ -243,9 +243,9 @@ const config: Config = {
           label: "More",
           position: "right",
           items: [
-            { to: "/feeling-lucky", label: "Feeling Lucky" },
-            { to: "/cosmos", label: "The Universe" },
-            { to: "/feature-requests", label: "Feature Requests" },
+            { to: "/cosmos", label: "The Universe 🚀" },
+            { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
+            { to: "/feature-requests", label: "Feature Requests ❓" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             {
               label: "Bugs",
@@ -295,8 +295,8 @@ const config: Config = {
         {
           title: "More",
           items: [
+            { label: "Updates", to: "/blog" },
             { label: "Contributing", href: "/community/contributing" },
-            { label: "Feeling Lucky", to: "/feeling-lucky" },
           ],
         },
         {

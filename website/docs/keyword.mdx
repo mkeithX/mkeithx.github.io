@@ -17,12 +17,14 @@ import { QuickStartCardRow } from "@site/src/components/QuickStartCards";
 **MKX SpaceHub** is a simple documentation website that features guides, examples, code snippets, etc. for basic software development and infrastructure management.
 
 ## Features
-The site offers a range of resources, including detailed guides for IT and system administration tasks, comprehensive project documentation with development notes and user guides, and updates on recent changes, new features, and upcoming developments. Additionally, it features articles about space, too.
+The site offers resources, including basic and extended guides for systems administration, web development, gists and user guides on [some projects](/docs/repo). Additionally, it features articles about [space](/cosmos), too!
+
+<!-- tasks, comprehensive project documentation with development notes and user guides, and updates on recent changes, new features, and upcoming developments. Additionally, it features articles about space, too. -->
 
 
 <QuickStartCardRow />
 
-## Tech
+## Tech Specs
 
 Designed and maintained by  [**@mkeithX**](https://github.com/mkeithx), the website is built using  [**Docusaurus**](https://docusaurus.io/), a popular static-site generator known for its ease of use and flexibility. The site’s source code is hosted on **GitHub**, allowing for collaborative development and version control. It is also hosted on [**Cloudflare**](https://developers.cloudflare.com/pages)., ensuring fast and reliable performance with enhanced security features.
 
@@ -150,15 +152,45 @@ git add --all && git commit -m "This is Awesome"
 
 </BrowserWindow>
 
-:::tip[caution]
-Everything here is a work in progress and will continue to evolve. If you find [**bugs**](/community/contributing#), inconsistencies, or if you would like to [**request a new feature**](/feature-requests), please feel free to do so.
-:::
-
-<br></br>
-
-<p align="center">
+<!-- <p align="center">
 
 [![techs](https://skillicons.dev/icons?i=react,js,cloudflare,github,py,ts,vscode,md,html,css&perline=20)](#)
 
-</p>
+</p> -->
 
+## Report
+
+<Columns className='item  margin-bottom-lg' > 
+  <Column className='text--left item  padding--sm'>
+
+<Card shadow='tl' style={{border: '1.5px solid var(--ifm-color-warning)'}}>
+    <CardHeader>
+      <h3 style={{color: 'var(--ifm-color-warning)'}}>Bugs 🪲</h3>
+    </CardHeader>
+    <CardBody>
+
+   Feel free to report if you find bugs and/or any inconsistencies. [**Learn more**](/community/contributing#).
+  </CardBody>
+  </Card>
+
+  </Column>
+  <Column  className='text--left item  padding--sm'>
+<Card shadow='tl' style={{border: '1.5px solid var(--ifm-color-success)'}}>
+    <CardHeader>
+      <h3 style={{color: 'var(--ifm-color-success)' }}>Request a Feature ❓</h3>
+    </CardHeader>
+    <CardBody>
+      Your ideas are welcome for this project. For new feature or suggestions, submit it [**here**](/feature-requests).
+    </CardBody>
+  </Card>
+  </Column>
+</Columns>
+
+
+<br></br>
+
+
+
+:::caution[Note Worth Remembering]
+Everything here is a work in progress and will continue to evolve.
+:::
