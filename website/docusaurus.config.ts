@@ -234,8 +234,8 @@ const config: Config = {
         target: "_self",
       },
       items: [
-        { type: "doc", position: "left", docId: "keyword", label: "Core" },
-        { type: "docSidebar", sidebarId: "devops", label: "DevOps" },
+        { type: "doc", position: "left", docId: "keyword", label: "Docs" },
+        { type: "docSidebar", sidebarId: "devops", label: "Advanced" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
         {
