@@ -14,6 +14,8 @@ This section covers the custom configuration powering the **MKX SpaceHub**™ we
 From its initial GitHub commit, the **MKX SpaceHub**™ has been organized as a monorepo with [examples](https://github.com/mkeithX/mkeithx.github.io/tree/main/examples) and built with [Docusaurus TypeScript](https://docusaurus.io/docs/typescript-support) variant along with some awesome tools like [VS Code](https://code.visualstudio.com/).
 
 
+## Installation
+
 ```bash
 npx create-docusaurus@latest website classic --typescript
 ```
@@ -23,49 +25,54 @@ npx create-docusaurus@latest website classic --typescript
 npm run start
 ```
 
+### Structure
 
-## Project structure
+Here is a broad overview of the important files and folders.
 
-
-
-<html>
 <pre>
+  <b>
 
-<b>
-public
-├─
-examples
-├──
-website
-|
-├── blog
-│   ├── 2024
-│   ├── release
-│   └── updates
-├── docs
-│   ├── content-creation
-│   ├── devops
-│   ├── tutorials
-│   └── keyword.mdx
-├── src
-│   ├── css
-│   │   └── custom.css
-│   └── pages
-│       ├── styles.module.css
-│       └── index.tsx
-├── static
-│   └── img
-├── docusaurus.config.ts
-├── package.json
-├── README.md
-├── sidebars.ts
-└── yarn.lock
-</b>
+mkeithx.github.io/
+├──  /
+│   ├── [````]
+│   └── ...
+└── website/
+    ├── blog/
+    │   ├── [BLOG POSTS]
+    │   └── ...
+    ├── community/
+    │   ├── [CONTRIBUTING DOC FILES]
+    │   └── ...
+    ├── cosmos/
+    │   ├── [ ARTICLES ABOUT SPACE ]
+    │   └── ...
+    ├── docs/
+    │   ├── [ MAIN DOCS]
+    │   └── ...
+    ├── src/
+    │   ├── css/
+    │   │   ├── [CUSTOM STYLES]
+    │   │   └── ...
+    │   ├── pages/
+    │   │   ├── [STATIC PAGES]
+    │   │   └── ...
+    │   └── theme/
+    │   │   ├── [SWIZZLED COMPONENTS]
+    │   │   └── ...
+    ├── static/
+    │   ├── .../
+    │   │   └── assets/
+    │   ├── .../
+    │   │   └── assets/
+    │   └── img/
+    ├── docusaurus.config.ts
+    ├── package.json
+    ├── sidebars.json
+    ├── sidebarsCommunity.ts
+    ├── sidebarsCosmos.ts
+    └── .../
+  </b>
 </pre>
-</html>
-
-
-
 
 
 

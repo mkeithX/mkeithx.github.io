@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import Link from "@docusaurus/Link";
 import CTAButton from "@site/src/components/CTAButton";
 import GridFlexRow from "@site/src/components/GridFlexRow";
-import ComingSoonImageUrl from "@site/static//img/banner/code-icon-demo.svg";
+import ComingSoonImageUrl from "@site/static/img/undraw_bug_fix.svg";
 import clsx from "clsx";
 
 function ComingSoon() {
@@ -23,8 +23,8 @@ function ComingSoon() {
             }}>
               <ComingSoonImageUrl 
               className={clsx(styles.ComingSoon)}
-              title="Coming Soon."
-              width={250}
+              title="Coming Soon"
+              // width={250}
               height={250}
               />
                 
@@ -43,7 +43,7 @@ function ComingSoon() {
                  {"Coming soon"}
                 </h1>
                 <h3>{"Exciting things are on the way!"}</h3>
-                <h3>{"Stay tuned."}</h3>
+                {/* <h3>{"Stay tuned."}</h3> */}
                 {/* <GridFlexRow type={'evenly'}>
                   <CTAButton
                     href={'/'}

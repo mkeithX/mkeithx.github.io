@@ -1,0 +1,93 @@
+---
+description: Live Code Block
+---
+
+import Video from "/src/components/Video";
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import {useLocation} from '@docusaurus/router';
+
+# Live Code Examples
+
+## Example 1
+
+<BrowserWindow url="localhost">
+
+
+```jsx live
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+```
+
+
+</BrowserWindow>
+
+## Example 2
+
+<BrowserWindow url="localhost">
+
+
+```jsx live noInline
+const project = 'The SpaceHub Project';
+
+const Greeting = () => <p>Introducing <br></br> {project}</p>;
+
+render(<Greeting />);
+```
+
+
+</BrowserWindow>
+
+## Example 3
+
+<BrowserWindow url="localhost">
+
+```jsx live
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h4>
+        Date: {date.toLocaleDateString()},{" "}
+        {date.toLocaleDateString(undefined, { weekday: "long" })}
+      </h4>
+      <h4>
+        Time: {date.toLocaleTimeString([], { hour12: false })} · {" "}
+        {date.toLocaleTimeString([], {})}
+      </h4>
+    </div>
+  );
+}
+```
+</BrowserWindow>

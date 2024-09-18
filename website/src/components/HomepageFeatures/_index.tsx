@@ -6,69 +6,66 @@ import Link from "@docusaurus/Link";
 
 const FeatureList = [
   {
-    scale: 1.3,
-    title: "Platform",
-    Svg: require("@site/static/img/kitimi-svg-banner.svg").default,
+    scale: 0.8,
+    title: "Easy Navigation",
+    Svg: require("@site/static/img/undraw_experience_design.svg").default,
     description: (
       <>
-        A multi-level platform founded on 2018. Learn{" "}
-        <Link to="/projects">more</Link>.
+        Explore and manage your repositories with an intuitive interface and
+        powerful search features. <Link to="/projects">more</Link>.
       </>
     ),
   },
   {
     scale: 0.8,
-    title: "Open-source",
-    Svg: require("@site/static/img/kitiplex-svg-banner.svg").default,
+    title: "Detailed Tutorials",
+    Svg: require("@site/static/img/undraw_react.svg").default,
     description: (
       <>
-        The central hub for contributors, authors, and maintainers within the{" "}
-        <b>Kitimi ecosystem</b>. Learn{" "}
-        <Link to="https://kitiplex.github.io/">more</Link>.
+        Access step-by-step tutorials tailored for your projects, guiding you
+        from setup to advanced techniques.{" "}
       </>
     ),
   },
   {
     scale: 0.8,
-    title: "Docusaurus",
-    Svg: require("@site/static/img/undraw_docusaurus_mountain.svg").default,
+    title: "Interactive Samples",
+    Svg: require("@site/static/img/undraw_website.svg").default,
     description: (
       <>
-        An open-source <code>static-site</code> generator powering most of my
-        front-end projects including this website.
-        {/* Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-        ahead and move your docs into the <code>docs</code> directory. */}
+        Engage with live code examples and experiments directly within the
+        documentation for hands-on learning.
       </>
     ),
   },
-  // {
-  //   scale: 0.8,
-  //   title: 'WSL',
-  //   Svg: require('@site/static/img/kali-logo-blue.svg').default,
-  //   description: (
-  //     <>
-  //       Docusaurus lets you focus on your docs, and we&apos;ll do the chores. Go
-  //       ahead and move your docs into the <code>docs</code> directory.
-  //     </>
-  //   ),
-  // },
-  // {
-  //   scale: 1.0,
-  //   title: 'Windows for Developers',
-  //   Svg: require('@site/static/img/microsoft_logo.svg').default,
-  //   description: (
-  //     <>
-  //       Extend or customize your website layout by reusing React. Docusaurus can
-  //       be extended while reusing the same header and footer.
-  //     </>
-  //   ),
-  // },
+  {
+    scale: 0.8,
+    title: "Expert Tips",
+    Svg: require("@site/static/img/undraw_hello.svg").default,
+    description: (
+      <>
+        For dynamic content integration, ensuring a seamless and engaging user
+        experience.
+      </>
+    ),
+  },
+  {
+    scale: 1.0,
+    title: "Windows for Developers",
+    Svg: require("@site/static/img/undraw_code_review.svg").default,
+    description: (
+      <>
+        Gain insights from top developers in your organization, with best
+        practices and advice to enhance your coding skills.
+      </>
+    ),
+  },
 ];
 
 function Feature({ Svg, scale, title, description }) {
   return (
     <div className={clsx("col col--4")}>
-      <div className="text--center">
+      <div className={"text--center"}>
         <Svg
           transform={"scale(" + scale + ")"}
           className={styles.featureSvg}
@@ -85,8 +82,8 @@ function Feature({ Svg, scale, title, description }) {
 export default function HomepageFeatures() {
   return (
     <section className={styles.features}>
-      <div className="container">
-        <div className="row">
+      <div className={clsx("container")}>
+      <div className={clsx("row", styles.featuresRowCenter)}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />
           ))}

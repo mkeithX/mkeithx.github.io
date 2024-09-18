@@ -1,58 +1,278 @@
 ---
 description: The official DevPortal of the mkeithX ecosystem.
 slug: /
+sidebar_label: Introduction
 keywords:
   - docs
   - mkeithX
 ---
 
-import MicrosoftLogo from "@site/static/img/logo/microsoft_logo.svg";
-import NasaWormLogo from "@site/static/img/logo/NASA_Worm_logo.svg";
-import NasaLogo from "@site/static/img/space/NASA_logo.svg";
-import SpacexLogo from "@site/static/img/space/spacex.svg";
-import KitimiLogo from "@site/static/img/logo/kitiplex-svg-banner.svg";
-import AlgoliaLogo from "@site/static/img/logo/Algolia_logo.svg";
-import IframeWindow from "@site/src/components/BrowserWindow/IframeWindow";
-import BrowserWindow from "@site/src/components/BrowserWindow";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-
-import { QuickStartCardRow } from "@site/src/components/QuickStartCards";
-
-import KeywordBanner from "@site/static/img/undraw_hello.svg";
-
-import Microsoft_icon from "@site/static/img/logo/Microsoft_icon.svg";
-
-import VsCode_icon from "@site/static/img/logo/vscode.svg";
+import IframeWindow from "@site/src/components/BrowserWindow/IframeWindow";
+import BrowserWindow from "@site/src/components/BrowserWindow";
+import {
+  QuickStartCardRow,
+  ReportsCardRow,
+} from "@site/src/components/QuickStartCards";
 
 # Welcome
 
-<!-- <KeywordBanner className="logoBadge"/> -->
+**MKX SpaceHub** is a simple documentation website that offers basic and extended resources for systems administration and web development. It features tutorials, code snippets, gists, user's guide on some projects, and some fascinating articles about space.
+<!-- ## Features
+The site offers resources, including basic and extended guides for systems administration, web development, gists and user guides on [some projects](/docs/repo). Additionally, it features articles about [space](/cosmos), too! -->
 
-The **MKX SpaceHub**™ project is a documentation website that features open-source guides for IT professionals and systems administrators, developed and maintained by [**mkeithx**](https://github.com/mkeithx). It also serves as the primary resource for the [**Kitiplex DevOps Team**](/community/kitiplex/team), who are actively extending and refining existing projects documentation.
+<!-- tasks, comprehensive project documentation with development notes and user guides, and updates on recent changes, new features, and upcoming developments. Additionally, it features articles about space, too. -->
 
-### What's Inside?
+<!-- <QuickStartCardRow /> -->
 
-Currently, the site offers a comprehensive range of resources, including:
 
-- ⚡ **Basic and Advanced Guides**: Detailed instructions and best practices for various IT and system administration tasks.
-- ⚡ **Project Docs**: In-depth information on current projects, including development notes and user guides.
-- ⚡ **Updates and Developments**: The latest news on recent updates, feature additions, and upcoming changes.
+<Columns className='item margin-bottom-lg' > 
 
-<QuickStartCardRow />
+<Column  className='text--left item  padding--sm'>
+<Card shadow='tl' style={{border: '1.5px solid var(--ifm-color-primary)'}}>
+    <CardHeader>
+<div class="avatar">
+  <img
+    class="avatar__photo avatar__photo--md"
+    src="/img/logo/x_code_slash.svg" />
+  <div class="avatar__intro">
+    <div class="avatar__name"><h3>Guides</h3></div>
+    <!-- <small class="avatar__subtitle">Frenchy Front End Engineer</small> -->
+  </div>
+</div>
+    </CardHeader>
+    <CardBody>
+Advanced tips, guides and best practices for mitigating issues. [Take me there](/docs/devops/guides-and-workarounds).
+    </CardBody>
+  </Card>
+  </Column>
+   <Column  className='text--left item  padding--sm'>
+<Card shadow='tl' style={{border: '1.5px solid var(--ifm-color-primary)'}}>
+    <CardHeader>
+<div class="avatar">
+  <img
+    class="avatar__photo avatar__photo--md"
+    src="/img/rocket-1a.svg" />
+  <div class="avatar__intro">
+    <div class="avatar__name"><h3>The Universe</h3></div>
+    <!-- <small class="avatar__subtitle">Frenchy Front End Engineer</small> -->
+  </div>
+</div>
+    </CardHeader>
+    <CardBody>
+Discover [fascinating facts](/cosmos) about the universe starting from our [Solar System](/cosmos/solar-system).
+    </CardBody>
+  </Card>
+  </Column>
+</Columns>
 
-### How It's Built
+## Motivation
+The project is part of an internal collaboration within the [Kitiplex](https://github.com/kitiplex) organization, designed and maintained by [@mkeith**X**](https://github.com/mkeithx). Its goal is to build an intuitive Knowledge Base Portal using powerful yet low-maintenance technology, without compromising the integrity and accessibility of the content.
 
-**MKX SpaceHub**™ is powered by [**Docusaurus**](https://docusaurus.io/), a popular documentation framework, and hosted on [**Cloudflare**](https://developers.cloudflare.com/pages) for optimal performance and security. The site also utilizes additional tools and [**awesome resources**](/community) to ensure a seamless user experience. Learn [**more**](#).
 
-:::tip[Important]
-Everything here is a work in progress and will continue to evolve. If you find [**bugs**](/community/contributing#), inconsistencies, or if you would like to [**request a new feature**](/feature-requests), please feel free to do so.
-:::
+<!-- Designed and maintained by [@mkeithX](https://github.com/mkeithx), the website is built using [Docusaurus](https://docusaurus.io/), a popular static-site generator known for its ease of use and flexibility. The site’s source code is hosted on [GitHub](https://github.com/login), allowing for collaborative development and version control. It is also hosted on [**Cloudflare**](https://developers.cloudflare.com/pages)., ensuring fast and reliable performance with enhanced security features. -->
 
-<br></br>
 
-<p align="center">
+The website is built using [Docusaurus](https://docusaurus.io/), a popular static site generator known for its ease of use and flexibility. The site’s source code is available on [GitHub](https://github.com/login), and it is also hosted on [Cloudflare](https://developers.cloudflare.com/pages), ensuring fast and reliable performance with enhanced security features.
+
+## Code Live
+Try your `JavaScript` using the Live Code Editor:
+
+```jsx live noInline
+const project = 'The SpaceHub Project';
+
+const Greeting = () => <p>Introducing <br></br> {project}</p>;
+
+render(<Greeting />);
+```
+<details>
+<summary>More samples</summary>
+
+* Basic Clock:
+
+```js showLineNumbers
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+render(Clock)
+```
+
+* Alternative Clock:
+
+```js showLineNumbers
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h4>
+        Date: {date.toLocaleDateString()},{" "}
+        {date.toLocaleDateString(undefined, { weekday: "long" })}
+      </h4>
+      <h4>
+        Time: {date.toLocaleTimeString([], { hour12: false })} · {" "}
+        {date.toLocaleTimeString([], {})}
+      </h4>
+    </div>
+  );
+}
+render(Clock)
+```
+
+
+</details>
+
+
+
+<!-- ### Sample Code
+
+<BrowserWindow url="http://localhost:3000/">
+
+<Tabs>
+<TabItem value="js" label="JavaScript">
+
+```js
+function helloWorld() {
+  console.log("Hello, world!");
+}
+```
+
+</TabItem>
+<TabItem value="py" label="Python">
+
+```py
+msg = "Hello, world!"
+print(msg)
+```
+
+</TabItem>
+<TabItem value="powershell" label="PowerShell">
+
+```powershell
+function Prompt { "mkeithx" + ":\" + "> " }
+```
+
+</TabItem>
+
+<TabItem value="css" label="CSS">
+
+```css
+:root {
+  --docusaurus-highlighted-code-line-bg: rgb(72, 77, 91);
+}
+
+/* If you have a different syntax highlighting theme for dark mode. */
+[data-theme="dark"] {
+  /* Color which works with dark mode syntax highlighting theme */
+  --docusaurus-highlighted-code-line-bg: rgb(100, 100, 100);
+}
+```
+
+</TabItem>
+<TabItem value="git" label="Git">
+
+```bash
+git add --all && git commit -m "This is Awesome"
+```
+
+</TabItem>
+</Tabs>
+
+</BrowserWindow> -->
+
+<!-- <p align="center">
 
 [![techs](https://skillicons.dev/icons?i=react,js,cloudflare,github,py,ts,vscode,md,html,css&perline=20)](#)
 
-</p>
+</p> -->
+
+## Something missing?
+
+<Columns className='item margin-bottom-lg' > 
+
+<Column  className='text--left item  padding--sm'>
+<Card shadow='tl' style={{border: '1.5px solid var(--ifm-color-primary)'}}>
+    <CardHeader>
+<div class="avatar">
+  <img
+    class="avatar__photo avatar__photo--md"
+    src="/img/logo/terminal-no-slash.svg" />
+  <div class="avatar__intro">
+    <div class="avatar__name"><h3>Report a Bug</h3></div>
+    <!-- <small class="avatar__subtitle">Frenchy Front End Engineer</small> -->
+  </div>
+</div>
+    </CardHeader>
+    <CardBody>
+    If you find issues or inconsistencies with the documentation or have
+    suggestions on how to improve the project, please [file an
+    issue](/community/contributing#issues).
+    </CardBody>
+  </Card>
+  </Column>
+   <Column  className='text--left item  padding--sm'>
+<Card shadow='tl' style={{border: '1.5px solid var(--ifm-color-primary)'}}>
+    <CardHeader>
+<div class="avatar">
+  <img
+    class="avatar__photo avatar__photo--md"
+    src="/img/logo/terminal-no-slash.svg" />
+  <div class="avatar__intro">
+    <div class="avatar__name"><h3>Request a Feature</h3></div>
+    <!-- <small class="avatar__subtitle">Frenchy Front End Engineer</small> -->
+  </div>
+</div>
+    </CardHeader>
+    <CardBody>
+For new feature requests, you can create a post through the [feature requests board](/feature-requests). Your ideas are welcome for this project!
+    </CardBody>
+  </Card>
+  </Column>
+</Columns>
+
+<br></br>
+
+<!-- <ReportsCardRow /> -->
+
+<!-- If you find issues or inconsistencies with the documentation or have suggestions on how to improve the project in general, please [file an issue](/community/contributing#issues).
+
+
+For new feature requests, you can create a post on the [feature requests board](/feature-requests) (Canny). Your ideas are welcome! -->
+
+<!-- , which is a handy tool for road-mapping and allows for sorting by upvotes, which gives the core team a better indicator of what features are in high demand, as compared to GitHub issues which are harder to triage. -->
+
+:::caution[Worth Remembering]
+**For Developers**: The site is constantly updating and everything here is a work in progress. It may break if used incorrectly. Use at your own risk!
+:::
+
+<!-- if you're geeky enough to notice that the site is constantly updating—whether with new content, minor fixes, or both—it's because the website also serves as a resource for the maintainers and contributors at [**Kitiplex**](https://github.com/kitiplex). -->

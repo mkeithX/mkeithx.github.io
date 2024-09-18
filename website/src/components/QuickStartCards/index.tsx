@@ -3,6 +3,7 @@ import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
 import clsx from "clsx";
 import QuickStartImageUrl from "@site/static/img/logo/terminal-no-slash.svg";
+import Heading from "@theme/Heading";
 
 type QuickStartLinkProps = {
   to: string;
@@ -35,7 +36,11 @@ function QuickStartCard({ className, title, subTitle, webUrl }: ProfileProps) {
               title={title}
             />
             <div className="avatar__intro">
-              <div className="avatar__name">{title}</div>
+              <Heading as="h3">
+                <span>{title}</span>
+    
+              </Heading>
+              {/* <div className="avatar__name">{title}</div> */}
               <div className="avatar__subtitle">{subTitle}</div>
             </div>
           </div>
@@ -70,7 +75,7 @@ export function QuickStartCardRow(): JSX.Element {
       />
       <QuickStartCol
         title="Cosmos"
-        subTitle="Physics, Planets and the Unknown."
+        subTitle="Discover fascinating facts about the universe starting from our Solar System."
         webUrl="/cosmos"
       />
     </div>
@@ -88,6 +93,22 @@ export function DevOpsCardRow(): JSX.Element {
         title="aka.ms"
         subTitle="All about aka.ms"
         webUrl="/docs/devops/admin-center/aka-ms"
+      />
+    </div>
+  );
+}
+export function ReportsCardRow(): JSX.Element {
+  return (
+    <div className="row">
+      <QuickStartCol
+        title="Bugs 🪲"
+        subTitle="If you find issues or inconsistencies with the documentation or have suggestions on how to improve the project in general, please feel free to file an issue."
+        webUrl="/community/contributing#issues"
+      />
+      <QuickStartCol
+        title="Request a Feature ❓"
+        subTitle="For new feature requests, you can create a post through the feature requests board. Your ideas are welcome for this project!"
+        webUrl="/feature-requests"
       />
     </div>
   );

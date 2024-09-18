@@ -3,6 +3,7 @@
   align-items: center;
   padding: 2rem 0;
   width: 100%;
+  /* background-color: var(--ifm-color-white) !important; */
 }
 
 .featureSvg {
@@ -12,6 +13,8 @@
 
 .heroTitleTextHtml b {
   color: var(--ifm-color-primary);
-  
 }
 
+.featuresRowCenter {
+  justify-content: center;
+}

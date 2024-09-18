@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 import CTAButton from "/src/components/CTAButton";
 import GridFlexRow from "@site/src/components/GridFlexRow";
 

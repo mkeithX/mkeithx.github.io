@@ -1,6 +1,10 @@
 import path from 'path';
 import {normalizeUrl, posixPath} from '@docusaurus/utils';
 
+/**
+ * @param {import('@docusaurus/types').LoadContext} context
+ * @returns {import('@docusaurus/types').Plugin}
+ */
 
 export default function FeatureRequestsPlugin(context) {
   return {
