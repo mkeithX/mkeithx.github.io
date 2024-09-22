@@ -1,0 +1,15 @@
+.fooHead {
+    background-color: var(--ifm-site-dark) !important;
+    flex-direction: column;
+}
+
+.fooTitle {
+    font-size: 54px;
+    font-weight: bold;
+    margin-bottom: 0.4rem;
+}
+
+
+.fooBody {
+    background-color: var(--ifm-color-primary) !important;
+}

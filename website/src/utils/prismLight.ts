@@ -1,7 +1,6 @@
 import { themes, type PrismTheme } from 'prism-react-renderer';
 
-const baseTheme = themes.github; // Keep this if needed for other references
-
+const baseTheme = themes.github; 
 export default {
   plain: {
     color: "#393A34",
