@@ -10,7 +10,19 @@
   align-items: center;
   vertical-align: center;
   position: relative;
-  background: var(--ifm-color-info) !important;
+  background-color: var(--ifm-site-dark) !important;
+}
+
+.heroBanner {
+  padding: 10rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ifm-site-dark);
+  /* background-color: #2b3137; */
+  display: flex;
+  height: 35rem;
+  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
 }
 
 .hero h1 {
@@ -58,16 +70,7 @@
   pointer-events: none;
 }
 
-.heroBanner {
-  padding: 10rem 0;
-  text-align: left;
-  position: relative;
-  overflow: hidden;
-  background-color: var(--ifm-site-dark) !important;
-  display: flex;
-  height: 35rem;
-  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
-}
+
 
 .buttons {
   display: flex;

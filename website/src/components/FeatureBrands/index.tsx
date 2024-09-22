@@ -13,7 +13,7 @@ const FeatureList: FeatureItem[] = [
 
   {
     
-    Svg: require("@site/static/img/logo/kitimi-svg-banner.svg").default,
+    Svg: require("@site/static/img/logo/KitimiPlatforms-svg-logo.svg").default,
 
   },
   
@@ -49,23 +49,6 @@ const FeatureList: FeatureItem[] = [
 
   },
 
-  // {
-    
-  //   Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
-
-  // },
-  // {
-    
-  //   Svg: require("@site/static/img/space/NASA_logo.svg").default,
-
-  // },
-  
-  // {
-    
-  //   Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
-
-  // },
-
 ];
 
 function Feature({Svg, }: FeatureItem) {
@@ -79,7 +62,7 @@ function Feature({Svg, }: FeatureItem) {
   );
 }
 
-export default function HomepageFeatures(): JSX.Element {
+export default function FeatureBrands(): JSX.Element {
   return (
     <section className={clsx(styles.features)}>
       <div className={clsx("container text--center")}>

@@ -29,7 +29,7 @@ function HomepageHeader(): JSX.Element {
   };
 
   return (
-    <header className={clsx("hero hero--dark", styles.heroBanner)}>
+    <header className={clsx("hero hero--dark", styles.heroBanner)} data-theme="dark">
       <div className="container">
         <BannerLogo
           className={clsx(styles.heroBannerLogo)}
