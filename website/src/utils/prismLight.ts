@@ -1,94 +1,77 @@
-import {themes, type PrismTheme} from 'prism-react-renderer';
+import { themes, type PrismTheme } from 'prism-react-renderer';
 
-const baseTheme = themes.github;
+const baseTheme = themes.github; // Keep this if needed for other references
 
 export default {
-  ...baseTheme,
+  plain: {
+    color: "#393A34",
+    backgroundColor: "#f6f8fa",
+  },
   styles: [
-    ...baseTheme.styles,
     {
-      types: ['title'],
+      types: ["comment", "prolog", "doctype", "cdata"],
       style: {
-        color: '#0550AE',
-        fontWeight: 'bold',
+        color: "#999988",
+        fontStyle: "italic",
       },
     },
     {
-      types: ['parameter'],
+      types: ["namespace"],
       style: {
-        color: '#953800',
+        opacity: 0.7,
       },
     },
     {
-      types: ['boolean', 'rule', 'color', 'number', 'constant', 'property'],
+      types: ["string", "attr-value"],
       style: {
-        color: '#005CC5',
+        color: "#e3116c",
       },
     },
     {
-      types: ['atrule', 'tag'],
+      types: ["punctuation", "operator"],
       style: {
-        color: '#22863A',
+        color: "#393A34",
       },
     },
     {
-      types: ['script'],
+      types: [
+        "entity",
+        "url",
+        "symbol",
+        "number",
+        "boolean",
+        "variable",
+        "constant",
+        "property",
+        "regex",
+        "inserted",
+      ],
       style: {
-        color: '#24292E',
+        color: "#36acaa",
       },
     },
     {
-      types: ['operator', 'unit', 'rule'],
+      types: ["atrule", "keyword", "attr-name", "selector"],
       style: {
-        color: '#D73A49',
+        color: "#00a4db",
       },
     },
     {
-      types: ['font-matter', 'string', 'attr-value'],
+      types: ["function", "deleted", "tag"],
       style: {
-        color: '#C6105F',
+        color: "#d73a49",
       },
     },
     {
-      types: ['class-name'],
+      types: ["function-variable"],
       style: {
-        color: '#116329',
+        color: "#6f42c1",
       },
     },
     {
-      types: ['attr-name'],
+      types: ["tag", "selector", "keyword"],
       style: {
-        color: '#0550AE',
-      },
-    },
-    {
-      types: ['keyword'],
-      style: {
-        color: '#CF222E',
-      },
-    },
-    {
-      types: ['function'],
-      style: {
-        color: '#8250DF',
-      },
-    },
-    {
-      types: ['selector'],
-      style: {
-        color: '#6F42C1',
-      },
-    },
-    {
-      types: ['variable'],
-      style: {
-        color: '#E36209',
-      },
-    },
-    {
-      types: ['comment'],
-      style: {
-        color: '#6B6B6B',
+        color: "#00009f",
       },
     },
   ],
