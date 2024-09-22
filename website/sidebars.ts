@@ -27,8 +27,8 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         // "troubleshoot",
-        "gists/gists-git",
         "gists/gists-windows",
+        "gists/gists-git",
         // "gists/gists-misc",
         {
           type: "category",
@@ -111,6 +111,7 @@ const sidebars: SidebarsConfig = {
         keywords: ["tutorials"],
       },
       items: [
+        "tutorials/create-a-github-repo",
         {
           type: "category",
           collapsed: true,
