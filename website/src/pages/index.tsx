@@ -38,8 +38,7 @@ function HomepageHeader(): JSX.Element {
         />
         <div className="hero__subtitle">
           <span className={styles.heroSubTitleTextHtml}>
-            {"Discover"}
-            <b>{" |"}</b>
+            {"Discover"}<b>{" |"}</b>
           </span>
         </div>
         <Heading as="h1" className="hero__title">
@@ -65,9 +64,9 @@ function HomepageHeader(): JSX.Element {
           </Link>
           <Link
             className="button button--outline button--primary button--lg"
-            to="/cosmos"
+            to="/foobar"
           >
-            {"Space"}
+            {"About"}
           </Link>
         </div>
       </div>

@@ -73,7 +73,7 @@ const config: Config = {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
     custom_header: "Guides and Samples from mkeith",
-    custom_description: "Streamlined Software Development Resources at Kitiplex",
+    custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
