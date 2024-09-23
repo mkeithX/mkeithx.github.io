@@ -5,21 +5,27 @@ import Heading from "@theme/Heading";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Column from "@site/src/components/Column";
-import Columns from "@site/src/components/Columns";
-import KitiplexDevOpsLogo from "@site/static/img/logo/kitiplex-devops.svg";
-import KitimiPlatforms from "@site/static/img/logo/KitimiPlatforms-svg-logo.svg";
 
 function Foobar(): JSX.Element {
   const {
     siteConfig: { tagline, customFields },
   } = useDocusaurusContext();
-
   const {
+    hero_header,
+    custom_footer,
+    custom_tagline,
+    custom_description,
     custom_title,
+    custom_header,
   } = customFields as {
+    hero_header: string;
+    custom_footer: string;
+    custom_tagline: string;
+    custom_description: string;
+    custom_header: string;
     custom_title: string;
   };
+
 
   return (
     <Layout title="Foobar">
@@ -37,36 +43,38 @@ function Foobar(): JSX.Element {
           </span>
         </div>
       </div>
-      <div className={"container margin-vert--lg"}>
-        <Columns>
-          <Column className="text--start margin-vert--lg">
-            <KitiplexDevOpsLogo title="KitiplexDevOps" />
-          </Column>
-          <Column className="text--justify">
-            <h2>{"Motivation"}</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim ut. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sit amet porttitor eget dolor morbi. Varius vel pharetra vel turpis nunc. 
-          </Column>
-        </Columns>
-        
-        <Columns>
-          <Column className="text--justify margin-vert--lg">
-            <h2>{"Build"}</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim ut. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sit amet porttitor eget dolor morbi. Varius vel pharetra vel turpis nunc.
-          </Column>
-          <Column className="text--start margin-vert--lg" children={""}>
-            {/* <Kitiplex title="Kitiplex" /> */}
-          </Column>
-        </Columns>
-
-        <Columns>
-          <Column className="text--start margin-vert--lg">
-            <KitimiPlatforms title="KitimiPlatforms" />
-          </Column>
-          <Column className="text--justify">
-            <h2>{"Developers"}</h2>
-            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. A diam maecenas sed enim ut. Sit amet mauris commodo quis imperdiet massa tincidunt nunc pulvinar. Sit amet porttitor eget dolor morbi. Varius vel pharetra vel turpis nunc.
-          </Column>
-        </Columns>
+      <div className={'container margin-vert--lg'}>
+        <h2>{"About"}</h2>
+        <p>{custom_description}</p>
+        <ul>
+          <li>
+            📣 <strong>{"Lorem Ipsum "}</strong> {"stay tuned!"}{' '}
+            <a href="#">{"Here"}</a> {"stay tuned!"}
+            {"stay tuned!"}<Link to="/blog">{"stay tuned!"}</Link>
+          </li>
+          <li>
+            🙋 <strong>{"Lorem Ipsum "}</strong> by joining the{' '}
+            <a href="#">{"stay tuned!"}</a>, or
+            {"stay tuned!"}{' '}
+            <a href="#">
+            {"stay tuned!"}
+            </a>
+            .
+          </li>
+          <li>
+            🌏 <strong>{"Lorem Ipsum "}</strong> on{' '}
+            <a href="#">{"stay tuned!"}</a>.
+          </li>
+          <li>
+            🔒 <strong>{"Lorem Ipsum "}</strong> {"stay tuned!"}{' '}
+            <a href="#">{"stay tuned!"}</a>
+            .
+          </li>
+        </ul>
+        <p>
+          ❓ {"stay tuned!"}{' '}
+          <a href="#">{"stay tuned!"}</a>.
+        </p>
       </div>
     </Layout>
   );
