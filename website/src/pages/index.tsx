@@ -64,9 +64,9 @@ function HomepageHeader(): JSX.Element {
           </Link>
           <Link
             className="button button--outline button--primary button--lg "
-            to="/foobar"
+            to="/cosmos"
           >
-            {"About"}
+            {"Space"}
           </Link>
         </div>
       </div>

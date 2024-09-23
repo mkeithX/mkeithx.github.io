@@ -96,7 +96,7 @@ render(<Greeting />);
 
 Displays the current time and updates every second. It uses `useState` to manage the time state and `useEffect` to set up and clean up a timer for real-time updates.
 
-```jsx showLineNumbers
+```jsx
 function Clock(props) {
   const [date, setDate] = useState(new Date());
   useEffect(() => {
@@ -128,7 +128,7 @@ render(Clock)
 
 Showing both 24-hour and 12-hour formats.
 
-```js showLineNumbers
+```jsx
 function Clock(props) {
   const [date, setDate] = useState(new Date());
 
@@ -164,7 +164,7 @@ render(<Clock />);
 
 A simple component that allows users to increase a like count. 
 
-```jsx showLineNumbers
+```jsx
 const LikeButton = (props: Props) => {
   const [likes, increaseLikes] = React.useState<number>(0);
   
@@ -198,7 +198,7 @@ render(<LikeButton/>);
 
 Counts for likes and dislikes using `useState` 
 
-```jsx showLineNumbers
+```jsx
 const LikeDislikeButton = (props: Props) => {
   const [likes, setLikes] = React.useState<number>(0);
   const [dislikes, setDislikes] = React.useState<number>(0);

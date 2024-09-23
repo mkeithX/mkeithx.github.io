@@ -61,7 +61,7 @@ function About(): JSX.Element {
                 </p>
                 <p>
                   Feel free to explore {" "}
-                  <Link to={"/cosmos"}> this website</Link> or check out{" "}
+                  <Link to={"/foobar"}> this website</Link> or check out{" "}
                   <a target="_blank" rel="noreferrer" href={resumeUrl}>
                     my resume
                   </a>

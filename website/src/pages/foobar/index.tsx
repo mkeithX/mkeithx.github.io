@@ -34,8 +34,8 @@ function Foobar(): JSX.Element {
           </Heading>
           <span className={clsx("hero__subtitle margin-left--xs")}>
             {" | "}
-            <span className="text--info text--light text--small">
-              {"Author's Perspective"}
+            <span className="text--primary text--light text--small">
+              {"Author's Note"}
             </span>
             {/* <Link to="https://github.com/mkeithX" className="text--no-decoration">
               <b></b>{"Foobar"}
@@ -44,22 +44,54 @@ function Foobar(): JSX.Element {
         </div>
       </div>
       <div className={clsx(styles.fooBody, "container margin-vert--lg")}>
-        <h2>{"Foobar"}</h2>
+        <h2>{"Overview"}</h2>
         <p>
           This project highlights the{" "}
           <span className="text--primary">importance of documentation</span> in
           software development yet{" "}
           <span className="text--primary">often neglected</span> by many
-          software developers, including myself.
-          For instance, a simple <span className="text--primary">README</span>{" "}
-          in your project or repository serves as valuable documentation. It
-          explains why your project is useful, what users can do with it, and
-          how to use it. In addition, it also promotes knowledge sharing among team members,
+          software developers, including myself. For instance, a simple{" "}
+          <span className="text--primary">README</span> in your project or
+          repository serves as valuable documentation. It explains why your
+          project is useful, what users can do with it, and how to use it. In
+          addition, it also promotes knowledge sharing among team members,
           ensuring everyone understands the codebase, architecture, and design
-          decisions—especially beneficial for onboarding new developers. 
+          decisions—especially beneficial for onboarding new developers.
         </p>
-        Without proper documentation, <span className="text--primary">confusion can happen</span>  within a team, leading to <span className="text--primary">miscommunication  and duplicated work</span>. This results in wasted time and resources, creating costs that impacts the business. Effective documentation is essential to ensure everyone understands their roles and responsibilities clearly, preventing these inefficiencies and enhancing productivity.
-   
+        Without proper documentation,{" "}
+        <span className="text--primary">confusion can happen</span> within a
+        team, leading to{" "}
+        <span className="text--primary">
+          miscommunication and duplicated work
+        </span>
+        . This results in wasted time and resources, creating costs that impacts
+        the business. Effective documentation is essential to ensure everyone
+        understands their roles and responsibilities clearly, preventing these
+        inefficiencies and enhancing productivity.
+        <br></br> <br></br>{" "}
+        <span>
+          If find this project helpful,  {" "}
+          <Link to="https://github.com/mkeithX/mkeithx.github.io" className="text--no-decoration">
+            <b>{"give it star"}</b>
+     
+          </Link>{" "}
+          on GitHub or 
+          <Link to="/feeling-lucky" className="text--no-decoration">
+            <b>{" click here "}</b> 
+     
+          </Link>{" "}
+          {" if you're feeling lucky."}
+        </span>
+        {/* <br></br> <br></br>{" "}
+        <span>
+          Further, a big thank you{" "}
+          <Link to="https://github.com/mkeithX" className="text--no-decoration">
+            <b></b>
+            {"Kitiplex DevOps"}
+          </Link>{" "}
+          team for considering this boring website a valuable resources for
+          software development.
+        </span> */}
       </div>
     </Layout>
   );

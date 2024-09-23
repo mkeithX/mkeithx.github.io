@@ -235,6 +235,7 @@ const config: Config = {
         { type: "docSidebar", sidebarId: "devops", label: "Advanced" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
+        { to: "/foobar", label: "What's this ?" },
         {
           type: "dropdown",
           label: "More",
@@ -258,10 +259,10 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
         { type: "search", position: "right" },
-        {
-          type: "html",
-          value: '<span class="badge badge--sm badge--secondary">M87</span>',
-        },
+        // {
+        //   type: "html",
+        //   value: '<span class="badge badge--sm badge--secondary">M87</span>',
+        // },
       ],
     },
     algolia: {
