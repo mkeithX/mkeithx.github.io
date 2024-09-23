@@ -1,8 +1,0 @@
-# The `/assets` folder contains Webpack-processed files with unique hashes, 
-# which ensures efficient caching by updating filenames when content changes.
-
-/assets/*
-  Cache-Control: public
-  Cache-Control: max-age=365000000
-  Cache-Control: immutable
-
