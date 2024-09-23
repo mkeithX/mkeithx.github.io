@@ -1,73 +1,97 @@
-import React from 'react';
-import Layout from '@theme/Layout';
-import Link from '@docusaurus/Link';
+import React from "react";
+import Layout from "@theme/Layout";
+import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
+import clsx from "clsx";
+import styles from "./styles.module.css";
+import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 
-function Foobar() {
+function Foobar(): JSX.Element {
+  const {
+    siteConfig: { tagline, customFields },
+  } = useDocusaurusContext();
+
+  const {
+    custom_footer,
+    custom_tagline,
+    custom_description,
+    custom_title,
+    custom_header,
+  } = customFields as {
+    custom_footer: string;
+    custom_tagline: string;
+    custom_description: string;
+    custom_header: string;
+    custom_title: string;
+  };
+
   return (
     <Layout title="Foobar">
-      <div className={'hero hero--dark'}>
+      <div className={clsx(styles.fooHead, "hero hero--dark")}>
         <div className="container">
-            <Heading as="h1" className='hero__title'>
-                {"Hi there!"}
-            </Heading>
-          <p className="hero__subtitle">
-           {" We're getting this page up and running any time now. Please stay tuned."}
-          </p>
+          <Heading as="h1" className={clsx(styles.fooTitle)}>
+            The SpaceHub Project
+          </Heading>
+          <span className={clsx("hero__subtitle margin-left--xs")}>
+            {" | "}
+            <span className="text--primary text--light text--small">
+              {"Author's Note"}
+            </span>
+            {/* <Link to="https://github.com/mkeithX" className="text--no-decoration">
+              <b></b>{"Foobar"}
+            </Link> */}
+          </span>
         </div>
       </div>
-      <div className={'container margin-vert--xl'}>
-        <h2>{"Lorem Ipsum"}</h2>
-        <ul>
-          <li>
-            📣 <strong>{"Lorem Ipsum "}</strong> {"stay tuned!"}{' '}
-            <a href="#">{"Here"}</a> {"stay tuned!"}
-            {"stay tuned!"}<Link to="/blog">{"stay tuned!"}</Link>
-          </li>
-          <li>
-            🙋 <strong>{"Lorem Ipsum "}</strong> by joining the{' '}
-            <a href="#">{"stay tuned!"}</a>, or
-            {"stay tuned!"}{' '}
-            <a href="#">
-            {"stay tuned!"}
-            </a>
-            .
-          </li>
-          <li>
-            🌏 <strong>{"Lorem Ipsum "}</strong> on{' '}
-            <a href="#">{"stay tuned!"}</a>.
-          </li>
-          <li>
-            🔒 <strong>{"Lorem Ipsum "}</strong> {"stay tuned!"}{' '}
-            <a href="#">{"stay tuned!"}</a>
-            .
-          </li>
-        </ul>
+      <div className={clsx(styles.fooBody, "container margin-vert--lg")}>
+        <h2>{"Overview"}</h2>
         <p>
-          ❓ {"stay tuned!"}{' '}
-          <a href="#">{"stay tuned!"}</a>.
+          This project highlights the{" "}
+          <span className="text--primary">importance of documentation</span> in
+          software development yet{" "}
+          <span className="text--primary">often neglected</span> by many
+          software developers, including myself. For instance, a simple{" "}
+          <span className="text--primary">README</span> in your project or
+          repository serves as valuable documentation. It explains why your
+          project is useful, what users can do with it, and how to use it. In
+          addition, it also promotes knowledge sharing among team members,
+          ensuring everyone understands the codebase, architecture, and design
+          decisions—especially beneficial for onboarding new developers.
         </p>
-      </div>
-      <hr></hr>
-      <div className={'container margin-vert--xl'}>
-        <h2>{"Almost there now!"}</h2>
-        <p>
-          {"Lorem Ipsum is simply dummy text of the printing and typesetting"}
-          <ul>
-            <li>
-              <a href="#">{'Link 1'}</a>{' '}
-              <i>(Link 1)</i>
-            </li>
-            <li>
-              <a href="#">{'Link 2'}</a>{' '}
-              <i>(Link 2)</i>
-            </li>
-            <li>
-              <a href="#">{'Link 3'}</a>{' '}
-              <i>(Link 3)</i>
-            </li>
-          </ul>
-        </p>
+        Without proper documentation,{" "}
+        <span className="text--primary">confusion can happen</span> within a
+        team, leading to{" "}
+        <span className="text--primary">
+          miscommunication and duplicated work
+        </span>
+        . This results in wasted time and resources, creating costs that impacts
+        the business. Effective documentation is essential to ensure everyone
+        understands their roles and responsibilities clearly, preventing these
+        inefficiencies and enhancing productivity.
+        <br></br> <br></br>{" "}
+        <span>
+          If find this project helpful,  {" "}
+          <Link to="https://github.com/mkeithX/mkeithx.github.io" className="text--no-decoration">
+            <b>{"give it star"}</b>
+     
+          </Link>{" "}
+          on GitHub or 
+          <Link to="/feeling-lucky" className="text--no-decoration">
+            <b>{" click here "}</b> 
+     
+          </Link>{" "}
+          {" if you're feeling lucky."}
+        </span>
+        {/* <br></br> <br></br>{" "}
+        <span>
+          Further, a big thank you{" "}
+          <Link to="https://github.com/mkeithX" className="text--no-decoration">
+            <b></b>
+            {"Kitiplex DevOps"}
+          </Link>{" "}
+          team for considering this boring website a valuable resources for
+          software development.
+        </span> */}
       </div>
     </Layout>
   );

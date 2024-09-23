@@ -29,7 +29,7 @@ function HomepageHeader(): JSX.Element {
   };
 
   return (
-    <header className={clsx("hero hero--dark", styles.heroBanner)}>
+    <header className={clsx("hero hero--dark", styles.heroBanner)} data-theme="dark">
       <div className="container">
         <BannerLogo
           className={clsx(styles.heroBannerLogo)}
@@ -38,8 +38,7 @@ function HomepageHeader(): JSX.Element {
         />
         <div className="hero__subtitle">
           <span className={styles.heroSubTitleTextHtml}>
-            {"Discover"}
-            <b>{" |"}</b>
+            {"Discover"}<b>{" |"}</b>
           </span>
         </div>
         <Heading as="h1" className="hero__title">
@@ -64,7 +63,7 @@ function HomepageHeader(): JSX.Element {
             {"Explore"}
           </Link>
           <Link
-            className="button button--outline button--primary button--lg"
+            className="button button--outline button--primary button--lg "
             to="/cosmos"
           >
             {"Space"}

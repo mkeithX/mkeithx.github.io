@@ -73,7 +73,7 @@ const config: Config = {
     description:
       "Website representing humanity from Dimension C-137 and beyond.",
     custom_header: "Guides and Samples from mkeith",
-    custom_description: "Streamlined Software Development Resources at Kitiplex",
+    custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -235,6 +235,7 @@ const config: Config = {
         { type: "docSidebar", sidebarId: "devops", label: "Advanced" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
+        { to: "/foobar", label: "What's this ?" },
         {
           type: "dropdown",
           label: "More",
@@ -258,10 +259,10 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
         { type: "search", position: "right" },
-        {
-          type: "html",
-          value: '<span class="badge badge--sm badge--secondary">M87</span>',
-        },
+        // {
+        //   type: "html",
+        //   value: '<span class="badge badge--sm badge--secondary">M87</span>',
+        // },
       ],
     },
     algolia: {

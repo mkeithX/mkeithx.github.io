@@ -27,8 +27,8 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         // "troubleshoot",
-        "gists/gists-git",
         "gists/gists-windows",
+        "gists/gists-git",
         // "gists/gists-misc",
         {
           type: "category",
@@ -111,6 +111,19 @@ const sidebars: SidebarsConfig = {
         keywords: ["tutorials"],
       },
       items: [
+        {
+          type: "category",
+          label: "Version Control",
+          link: {
+            type: "generated-index",
+            description: "Learn Version Control",
+          },
+          items: [
+            "tutorials/version-control/basic-workflow-github",
+            "tutorials/version-control/create-a-github-repo",
+          ]
+        },
+
         {
           type: "category",
           collapsed: true,

@@ -1,0 +1,104 @@
+---
+description: Understanding the Basic Git Workflow
+---
+
+# Basic Git Workflow
+
+Git is a powerful version control system that helps developers manage changes to their code over time. Whether you’re working alone or in a team, a solid understanding of the basic Git workflow is essential for maintaining a smooth development process. Here’s a breakdown of the fundamental steps involved.
+
+## 1. **Setting Up a Repository**
+
+To begin using Git, you first need to create a repository (repo). This can be done locally or on a platform like GitHub, GitLab, or Bitbucket.
+
+### **Local Repository**:
+Navigate to your project directory and initialize a new Git repository with the command:
+  
+  ```bash
+  git init
+  ```
+
+### **Cloning a Repository**:
+If you're collaborating, you might clone an existing repository:
+  
+  ```bash
+  git clone <repository-url>
+  ```
+
+## 2. **Making Changes**
+
+Once your repository is set up, you can start making changes to your files. It’s crucial to track these changes, so you’ll use the `git add` command to stage them.
+
+```bash
+git add <filename>       # Add a specific file
+git add .                # Add all changes in the current directory
+```
+
+## 3. **Committing Changes**
+
+After staging your changes, you need to commit them to the repository. A commit is a snapshot of your project at a specific point in time, and it should always include a meaningful message describing the changes.
+
+```bash
+git commit -m "Your descriptive commit message"
+```
+
+## 4. **Checking Status and History**
+
+To keep track of your progress, you can use the following commands:
+
+### `Check the status`
+  
+  ```bash
+  git status
+  ```
+
+### `View your commit history`
+
+  ```bash
+  git log
+  ```
+
+## 5. **Branching and Merging**
+
+Branches are a key feature of Git that allow you to work on different features or bug fixes in isolation. You can create a new branch using:
+
+```bash
+git branch <branch-name>   # Create a new branch
+git checkout <branch-name>  # Switch to the new branch
+```
+
+Once your work is complete, you can merge it back into the main branch (usually called `main` or `master`):
+
+```bash
+git checkout main          # Switch back to the main branch
+git merge <branch-name>    # Merge the feature branch
+```
+
+## 6. **Pushing Changes**
+
+If you’re collaborating with others, you’ll need to push your changes to a remote repository. This is done using:
+
+```bash
+git push origin <branch-name>
+```
+
+## 7. **Pulling Changes**
+
+To incorporate changes made by others, you can pull the latest updates from the remote repository:
+
+```bash
+git pull origin <branch-name>
+```
+
+## More
+
+```bash
+git add --all && git commit -m "fix: padding in projects"
+```
+```bash
+git push --set-upstream origin mkeithx/patch-seo
+```
+
+
+<!-- ## Conclusion
+
+Mastering the basic Git workflow is vital for effective collaboration and code management. By following these steps—setting up a repo, making changes, committing, branching, merging, pushing, and pulling—you’ll streamline your development process and enhance your productivity. As you become more familiar with Git, you can explore its advanced features to further improve your workflow. Happy coding! -->

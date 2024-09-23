@@ -1,6 +1,6 @@
 import React from "react";
 import clsx from "clsx";
-
+import Heading from "@theme/Heading";
 import Link from "@docusaurus/Link";
 import useBaseUrl from "@docusaurus/useBaseUrl";
 import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
@@ -26,10 +26,15 @@ function About(): JSX.Element {
 
   return (
     <Layout title="Me" description={siteConfig.tagline}>
-      <header className={styles.aboutHeader}>
-        <h2 className={clsx(styles.underlineColorSuccess)}>{"Hi there!"}</h2>
+      <header className={clsx(styles.aboutHeader,"hero hero--dark")}>
+        {/* <h2 className={clsx(styles.underlineColorSuccess)}>{"Hi there!"}</h2> */}
+        <Heading as="h1" className='hero__title'>
+                {"Hi there!"}
+            </Heading>
         <div>
-          <span>{"Thank you for stopping by"}</span>
+        <p className="hero__subtitle">
+           {"Thank you for stopping by."}
+          </p>
         </div>
       </header>
       <main id="main">
@@ -56,7 +61,7 @@ function About(): JSX.Element {
                 </p>
                 <p>
                   Feel free to explore {" "}
-                  <Link to={"/cosmos"}> this website</Link> or check out{" "}
+                  <Link to={"/foobar"}> this website</Link> or check out{" "}
                   <a target="_blank" rel="noreferrer" href={resumeUrl}>
                     my resume
                   </a>
