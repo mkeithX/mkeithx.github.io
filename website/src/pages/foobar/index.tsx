@@ -34,39 +34,32 @@ function Foobar(): JSX.Element {
           </Heading>
           <span className={clsx("hero__subtitle margin-left--xs")}>
             {" | "}
-            <Link to="https://github.com/mkeithX" className="text--no-decoration">
-              <b>{custom_title}</b>
-            </Link>
+            <span className="text--info text--light text--small">
+              {"Author's Perspective"}
+            </span>
+            {/* <Link to="https://github.com/mkeithX" className="text--no-decoration">
+              <b></b>{"Foobar"}
+            </Link> */}
           </span>
         </div>
       </div>
-      <div className={clsx(styles.fooBody, 'container margin-vert--lg')}>
-        <h2>About</h2>
-        <span className="text--break text--left">
-          A documentation website offering <span className="text--primary">Streamlined Resources for Software Development at Kitiplex</span>, tailored specifically for <span className="text--primary">systems administrators and software development, especially for the web</span>. With a focus on simplifying both foundational and advanced concepts, the platform provides tutorials, code snippets, and sharable gists.<br></br><br></br>
-
-          The goal is to equip users with practical, organized resources to efficiently manage projects, solve problems, and enhance their technical expertise in web development and systems administration.
-        </span>
-        {/* 
-        Uncomment the following section if needed
-        <ul>
-          <li>
-            📣 <strong>Lorem Ipsum</strong> stay tuned! <Link to="/blog">here</Link>.
-          </li>
-          <li>
-            🙋 <strong>Lorem Ipsum</strong> by joining the <Link to="#">stay tuned!</Link>.
-          </li>
-          <li>
-            🌏 <strong>Lorem Ipsum</strong> on <Link to="#">stay tuned!</Link>.
-          </li>
-          <li>
-            🔒 <strong>Lorem Ipsum</strong> stay tuned! <Link to="#">stay tuned!</Link>.
-          </li>
-        </ul>
+      <div className={clsx(styles.fooBody, "container margin-vert--lg")}>
+        <h2>{"Foobar"}</h2>
         <p>
-          ❓ stay tuned! <Link to="#">stay tuned!</Link>.
-        </p> 
-        */}
+          This project highlights the{" "}
+          <span className="text--primary">importance of documentation</span> in
+          software development yet{" "}
+          <span className="text--primary">often neglected</span> by many
+          software developers, including myself.
+          For instance, a simple <span className="text--primary">README</span>{" "}
+          in your project or repository serves as valuable documentation. It
+          explains why your project is useful, what users can do with it, and
+          how to use it. In addition, it also promotes knowledge sharing among team members,
+          ensuring everyone understands the codebase, architecture, and design
+          decisions—especially beneficial for onboarding new developers. 
+        </p>
+        Without proper documentation, <span className="text--primary">confusion can happen</span>  within a team, leading to <span className="text--primary">miscommunication  and duplicated work</span>. This results in wasted time and resources, creating costs that impacts the business. Effective documentation is essential to ensure everyone understands their roles and responsibilities clearly, preventing these inefficiencies and enhancing productivity.
+   
       </div>
     </Layout>
   );
