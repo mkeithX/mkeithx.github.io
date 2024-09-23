@@ -11,5 +11,6 @@
 
 
 .fooBody {
-    background-color: var(--ifm-color-primary) !important;
+    /* background-color: var(--ifm-color-primary) !important; */
+    flex-direction: column;
 }
