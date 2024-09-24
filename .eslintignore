@@ -8,11 +8,9 @@ website/build
 website/.docusaurus
 website/.cache-loader
 
+
 # Misc
 website/.DS_Store
-website/.env.local
-website/.env.development.local
-website/.env.test.local
-website/.env.production.local
+website/.env.*local
 
-website/npm-debug.log*
+website/.log*

@@ -7,17 +7,17 @@ website/build
 # Generated files
 website/.docusaurus
 website/.cache-loader
-website/
+
 # Misc
 website/.DS_Store
-website/.env.local
-website/.env.development.local
-website/.env.test.local
-website/.env.production.local
-website/.env
+website/.env*
+
+# Logs
 website/npm-debug.log*
 
 website/static/katex/katex.min.css
+
+# General files
 
 dist
 node_modules
@@ -26,5 +26,4 @@ build
 coverage
 .docusaurus
 
-.svg
 *.svg
