@@ -8,15 +8,24 @@ updates:
   - package-ecosystem: 'github-actions'
     directory: '/'
     schedule:
-      interval: weekly
+      interval: "daily"
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
+
+  - package-ecosystem: 'pip'
+    directory: '/examples'
+    schedule:
+      interval: 'daily'
+    open-pull-requests-limit: 99
+    labels:
+      - 'pr: dependencies'
+
   - package-ecosystem: 'npm'
     directory: '/website'
     schedule:
-      interval: daily
-    open-pull-requests-limit: 0
+      interval: "daily"
+    open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
 

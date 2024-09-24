@@ -1,0 +1,16 @@
+# Dependencies
+website/node_modules
+
+# Production
+website/build
+
+# Generated files
+website/.docusaurus
+website/.cache-loader
+
+
+# Misc
+website/.DS_Store
+website/.env.*local
+
+website/.log*
