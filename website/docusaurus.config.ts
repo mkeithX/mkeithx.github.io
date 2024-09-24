@@ -11,30 +11,11 @@ import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 import { socialProfiles } from "./social.json";
+import redirects from "./redirects";
+import { admonitionsConfig } from "./admonitionsConfig";
 
 // Current year for copyright
 const copyright = `© ${new Date().getFullYear()} Keith Tan • All rights reserved`;
-
-// Admonitions and common configurations
-const admonitionsConfig = {
-  admonitions: {
-    keywords: [
-      "info",
-      "success",
-      "danger",
-      "note",
-      "tip",
-      "warning",
-      "important",
-      "caution",
-      "security",
-      "credit",
-      "discord",
-      "docusaurus",
-      "release",
-    ],
-  },
-};
 
 const commonExclusions = {
   exclude: [
@@ -187,19 +168,8 @@ const config: Config = {
     [
       "client-redirects",
       {
-        redirects: [
-          {
-            from: ["/community/resources", "/docs/next/resources"],
-            to: "/community/",
-          },
-          {
-            from: ["/feedback", "/docs/next/feedback"],
-            to: "/feature-requests",
-          },
-          { from: ["/posts", "/updates"], to: "/blog" },
-          { from: ["/home"], to: "/" },
-          { from: "/showcase", to: "/projects" },
-        ],
+        fromExtensions: ['html'],
+        redirects: redirects,
       } satisfies ClientRedirectsOptions,
     ],
   ],

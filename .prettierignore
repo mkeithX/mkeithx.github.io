@@ -1,0 +1,30 @@
+# Dependencies
+website/node_modules
+
+# Production
+website/build
+
+# Generated files
+website/.docusaurus
+website/.cache-loader
+website/
+# Misc
+website/.DS_Store
+website/.env.local
+website/.env.development.local
+website/.env.test.local
+website/.env.production.local
+website/.env
+website/npm-debug.log*
+
+website/static/katex/katex.min.css
+
+dist
+node_modules
+.yarn
+build
+coverage
+.docusaurus
+
+.svg
+*.svg

@@ -13,7 +13,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "dev": "npm run docusaurus start",
+    "dev": "docusaurus start",
     "start:fast": "npm run docusaurus start -- --host 0.0.0.0 --no-open",
     "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
     "build:local": "docusaurus build && docusaurus serve",
@@ -53,7 +53,7 @@
     "@docusaurus/types": "^3.5.2",
     "@types/node": "^20.12.7",
     "@types/react": "^18.2.78",
-    "typescript": "5.4.3",
+    "typescript": "~5.5.2",
     "wrangler": "^3.78.7"
   },
   "browserslist": {
@@ -70,5 +70,6 @@
   },
   "engines": {
     "node": ">=18.0"
-  }
+  },
+  "description": "Guides and code samples from mkeithX"
 }
