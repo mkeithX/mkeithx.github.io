@@ -14,7 +14,7 @@ updates:
       - 'pr: dependencies'
 
   - package-ecosystem: 'pip'
-    directory: '/examples'
+    directory: '/examples/python-starters'
     schedule:
       interval: 'daily'
     open-pull-requests-limit: 99
