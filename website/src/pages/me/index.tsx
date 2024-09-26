@@ -28,7 +28,7 @@ function About(): JSX.Element {
     <Layout title="Me" description={siteConfig.tagline}>
       <header className={clsx(styles.aboutHeader,"hero hero--dark")}>
         {/* <h2 className={clsx(styles.underlineColorSuccess)}>{"Hi there!"}</h2> */}
-        <Heading as="h1" className='hero__title'>
+        <Heading as="h1" className={clsx('hero__title')}>
                 {"Hi there!"}
             </Heading>
         <div>
@@ -45,10 +45,10 @@ function About(): JSX.Element {
                 <img src={profilePicUrl} alt="Profile" />
               </div>
               <div className={clsx("col col--9")}>
-                <h2>I'm Keith</h2>
+                <h2>{"Hi, my name is Keith."}</h2>
                 <p>
                   {" "}
-                  I'm an independent Web Developer and System Administrator with a soft spot for Python, React, and M365. In simple terms, I build websites and fix computers too. 😄 
+                  I'm an independent Web Developer and System Administrator with a soft spot for Python, React, and M365. In simple terms, I build websites and fix computers too. 
 
                   Outside of work, I take pride in being a loving husband and devoted dad, yet admittedly, a stubborn brother.
                   <br></br>
@@ -61,8 +61,8 @@ function About(): JSX.Element {
                 </p>
                 <p>
                   Feel free to explore {" "}
-                  <Link to={"/foobar"}> this website</Link> or check out{" "}
-                  <a target="_blank" rel="noreferrer" href={resumeUrl}>
+                  <Link className="text--no-decoration" to={"/foobar"}> this website</Link> or check out{" "}
+                  <a target="_blank" rel="noreferrer" className="text--no-decoration" href={resumeUrl}>
                     my resume
                   </a>
                   .
@@ -81,7 +81,7 @@ function About(): JSX.Element {
                   </Link>
                   <Link
                     to={"https://twitter.com/mkeithtan"}
-                    className={clsx("mx-3")}
+                    className={clsx("mx-3","text--no-decoration")}
                   >
                     <FontAwesomeIcon
                       icon={faXTwitter}

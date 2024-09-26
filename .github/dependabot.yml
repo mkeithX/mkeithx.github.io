@@ -9,6 +9,8 @@ updates:
     directory: '/'
     schedule:
       interval: "daily"
+      time: "14:00"
+      timezone: "Asia/Manila"
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
@@ -17,6 +19,8 @@ updates:
     directory: '/examples/python-starters'
     schedule:
       interval: 'daily'
+      time: "14:00"
+      timezone: "Asia/Manila"      
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
@@ -25,6 +29,8 @@ updates:
     directory: '/website'
     schedule:
       interval: "daily"
+      time: "14:00"
+      timezone: "Asia/Manila"      
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'

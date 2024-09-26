@@ -15,7 +15,7 @@
   --ifm-color-primary-lighter: #4784e7;
   --ifm-color-primary-lightest: #6a9cec;
 
-  --ifm-site-dark: #010408;
+  --ifm-site-dark: #010409;
   --site-color-feedback-background: #f0f8ff;
   
 
@@ -42,11 +42,11 @@
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
 
-  --ifm-background-color: #0D1117;
+  --ifm-background-color: #0D1118;
   
-  --site-color-feedback-background: #2a2929;
+  --site-color-feedback-background: #2a2930;
 
-  --ifm-background-surface-color: #0D1117 !important;
+  --ifm-background-surface-color: #0D1116 !important;
   
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 

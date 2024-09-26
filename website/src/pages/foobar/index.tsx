@@ -26,7 +26,7 @@ function Foobar(): JSX.Element {
   };
 
   return (
-    <Layout title="Foobar">
+    <Layout title="Foobar" description="The SpaceHub Project">
       <div className={clsx(styles.fooHead, "hero hero--dark")}>
         <div className="container">
           <Heading as="h1" className={clsx(styles.fooTitle)}>
@@ -35,7 +35,7 @@ function Foobar(): JSX.Element {
           <span className={clsx("hero__subtitle margin-left--xs")}>
             {" | "}
             <span className="text--primary text--light text--small">
-              {"Author's Note"}
+              {"Author's Perspective"}
             </span>
             {/* <Link to="https://github.com/mkeithX" className="text--no-decoration">
               <b></b>{"Foobar"}
@@ -47,7 +47,7 @@ function Foobar(): JSX.Element {
         <h2>{"Overview"}</h2>
         <p>
           This project highlights the{" "}
-          <span className="text--primary">importance of documentation</span> in
+          <span className="text--primary text--semibold">importance of documentation</span> in
           software development yet{" "}
           <span className="text--primary">often neglected</span> by many
           software developers, including myself. For instance, a simple{" "}

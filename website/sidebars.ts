@@ -187,6 +187,25 @@ const sidebars: SidebarsConfig = {
         "repo/django-custom-user",
       ],
     },
+    {
+      type: "category",
+      label: "Contributing",
+      link: {
+        type: "doc",
+        id: "contributing/index",
+      },
+      items: [
+        "contributing/development-process",
+        "contributing/pull-request",
+        "contributing/reporting-issues",
+        {
+          type: "link",
+          label: "Feature Request",
+          href: "/feature-requests",
+          description: "Request a feature"
+        }
+      ]
+    },
   ],
 
   devops: [

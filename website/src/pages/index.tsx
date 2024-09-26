@@ -1,18 +1,18 @@
-import clsx from "clsx";
-import Link from "@docusaurus/Link";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
-import Layout from "@theme/Layout";
-import HomepageFeatures from "@site/src/components/HomepageFeatures";
-import Heading from "@theme/Heading";
-import BannerLogo from "@site/static/img/banner/atom-z.svg";
-import React from "react";
-import TopBanner from "@site/src/components/TopBanner";
-import FeatureBrands from "@site/src/components/FeatureBrands";
-import styles from "./index.module.css";
+import clsx from 'clsx';
+import Link from '@docusaurus/Link';
+import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
+import Layout from '@theme/Layout';
+import HomepageFeatures from '@site/src/components/HomepageFeatures';
+import Heading from '@theme/Heading';
+import BannerLogo from '@site/static/img/banner/atom-z.svg';
+import React from 'react';
+import TopBanner from '@site/src/components/TopBanner';
+import FeatureBrands from '@site/src/components/FeatureBrands';
+import styles from './index.module.css';
 
 function HomepageHeader(): JSX.Element {
   const {
-    siteConfig: { tagline, customFields },
+    siteConfig: {tagline, customFields},
   } = useDocusaurusContext();
   const {
     hero_header,
@@ -29,7 +29,9 @@ function HomepageHeader(): JSX.Element {
   };
 
   return (
-    <header className={clsx("hero hero--dark", styles.heroBanner)} data-theme="dark">
+    <header
+      className={clsx('hero hero--dark', styles.heroBanner)}
+      data-theme="dark">
       <div className="container">
         <BannerLogo
           className={clsx(styles.heroBannerLogo)}
@@ -37,16 +39,14 @@ function HomepageHeader(): JSX.Element {
           width={380}
         />
         <div className="hero__subtitle">
-          <span className={styles.heroSubTitleTextHtml}>
-            {"Discover"}<b>{" |"}</b>
-          </span>
+          <span className={styles.heroSubTitleTextHtml}>{'OpenSource'}</span>
+          <span className="text--primary text--semibold">{' |'}</span>
         </div>
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-              <b></b>
               {custom_header}
-              <b>{"X"}</b>
+              <b>{'X'}</b>
             </div>
           </span>
         </Heading>
@@ -58,15 +58,13 @@ function HomepageHeader(): JSX.Element {
         <div className={clsx(styles.buttons)}>
           <Link
             className="button button--outline button--primary button--lg"
-            to="/docs"
-          >
-            {"Explore"}
+            to="/docs">
+            {'Explore'}
           </Link>
           <Link
             className="button button--outline button--primary button--lg "
-            to="/cosmos"
-          >
-            {"Space"}
+            to="/cosmos">
+            {'Space'}
           </Link>
         </div>
       </div>
@@ -76,9 +74,9 @@ function HomepageHeader(): JSX.Element {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { tagline, customFields },
+    siteConfig: {tagline, customFields},
   } = useDocusaurusContext();
-  const { custom_description } = customFields as { custom_description: string };
+  const {custom_description} = customFields as {custom_description: string};
 
   return (
     <Layout title={tagline} description={custom_description}>
