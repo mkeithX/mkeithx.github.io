@@ -5,7 +5,7 @@
   text-align: center;
   position: relative;
   overflow: hidden;
-  display: block;
+  display: inline-block;
 }
 
 /* .aboutHeader h2 {
@@ -14,7 +14,7 @@
 } */
 
 .aboutBody {
-  background-color: var(--ifm-color-kiti-light);
+  /* background-color: var(--ifm-color-kiti-light); */
   align-items: center;
   display: flex;
   width: 100%;
@@ -34,7 +34,7 @@
 }
 
 .profilePic img {
-  border-radius: 5%;
+  border-radius: 10%;
   max-height: 196px;
   max-width: 196px;
 }

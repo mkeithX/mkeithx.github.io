@@ -14,7 +14,7 @@
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
     "dev": "docusaurus start",
-    "start:fast": "npm run docusaurus start -- --host 0.0.0.0 --no-open",
+    "start:fast": "npm start -- --host 0.0.0.0 --no-open",
     "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
     "build:local": "docusaurus build && docusaurus serve",
     "deploy:cf": "npm run build && wrangler pages deploy ./build",
