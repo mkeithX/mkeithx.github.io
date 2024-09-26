@@ -205,7 +205,7 @@ const config: Config = {
         { type: "docSidebar", sidebarId: "devops", label: "Advanced" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
-        { to: "/foobar", label: "What's this ?" },
+        // { to: "/foobar", label: "What's this ?" },
         {
           type: "dropdown",
           label: "More",
