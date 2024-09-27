@@ -2,13 +2,6 @@ name: Build and Deploy
 
 on:
   push:
-    branches: 
-      - main
-      - preview
-  pull_request:
-    branches:
-      - main
-      - preview
     paths:
       - .github/workflows/build-deploy.yml
 
@@ -27,32 +20,26 @@ jobs:
 
     name: Build (Preview)
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 'lts/*'
-
-      - name: Install dependencies and build
+      - name: Install dependencies
         run: |
           cd website
-          npm ci
-          npm run build
+          npm install && npm run build
 
-      # - name: Deploy (Preview)
-      #   uses: cloudflare/pages-action@v1
-      #   with:
-      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-      #     projectName: mkeithx
-      #     directory: website/build
-      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-      #     branch: preview
-
+      - name: Publish
+        uses: cloudflare/pages-action@v1
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: mkeithx
+          directory: website/build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          branch: preview
+  
   deploy-production:
     if: github.ref == 'refs/heads/main'
     runs-on: ubuntu-latest
@@ -68,16 +55,6 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Set up Node.js
-        uses: actions/setup-node@v4
-        with:
-          node-version: 'lts/*'
-
-      - name: Install dependencies and build
-        run: |
-          cd website
-          npm ci
-          npm run build
 
       - name: Deploy (Production)
         uses: cloudflare/pages-action@v1
@@ -87,4 +64,4 @@ jobs:
           projectName: mkeithx
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+   
