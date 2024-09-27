@@ -47,6 +47,9 @@ jobs:
           cd website
           npm run build
 
+      - name: Install Wrangler
+        run: npm install -g @cloudflare/wrangler
+
       - name: Deploy to Cloudflare Pages
         run: |
           cd website
@@ -64,6 +67,7 @@ jobs:
       #     directory: website/build
       #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
       #     branch: preview
+
 
 
   deploy-production:
