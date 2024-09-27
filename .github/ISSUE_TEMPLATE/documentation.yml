@@ -1,4 +1,4 @@
-name: 📚 Documentation
+name: 📒 Documentation
 description: Report an issue related to documentation
 labels: [documentation, 'status: needs triage']
 body:
@@ -23,7 +23,7 @@ body:
     attributes:
       label: Have you read the Contributing Guidelines on issues?
       options:
-        - label: I have read the [Contributing Guidelines](https://github.com/facebook/docusaurus/blob/main/CONTRIBUTING.md#issues).
+        - label: I have read the [Code of Conduct](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md).
           required: true
 
   - type: textarea
