@@ -41,7 +41,7 @@ jobs:
         run: |
           cd website
           npm ci
-          npm run build:cf
+          npm run build && wrangler pages deploy ./build
           
 
       # - name: Deploy (Preview)
