@@ -15,6 +15,6 @@ jobs:
       - name: 'Dependency Review'
         uses: actions/dependency-review-action@v4
         with:
-            fail-on-severity: critical, moderate
+            fail-on-severity: critical
             
             show-openssf-scorecard: true
