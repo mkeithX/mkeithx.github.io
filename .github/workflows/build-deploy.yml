@@ -41,17 +41,18 @@ jobs:
         run: |
           cd website
           npm ci
-          npm run build
+          npm run build:cf
+          
 
-      - name: Deploy (Preview)
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: mkeithx
-          directory: website/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: preview
+      # - name: Deploy (Preview)
+      #   uses: cloudflare/pages-action@v1
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     projectName: mkeithx
+      #     directory: website/build
+      #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+      #     branch: preview
 
   deploy-production:
     if: github.ref == 'refs/heads/main'
