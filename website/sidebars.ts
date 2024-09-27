@@ -195,9 +195,9 @@ const sidebars: SidebarsConfig = {
         id: "contributing/index",
       },
       items: [
-        "contributing/development-process",
+        // "contributing/development-process",
         "contributing/reporting-issues",
-        "contributing/pull-request",
+        // "contributing/pull-request",
 
         {
           type: "link",

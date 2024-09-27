@@ -1,4 +1,4 @@
-name: 🐛 Bug Report
+name: 🐞 Bug Report
 description: Report an issue related to documentation
 labels: ["bug", "needs triage"]
 body:
