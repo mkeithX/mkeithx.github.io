@@ -37,27 +37,12 @@ jobs:
         with:
           node-version: 'lts/*'
 
-      - name: Install dependencies
+      - name: Install dependencies and build
         run: |
           cd website
           npm ci
-
-      - name: Build the project
-        run: |
-          cd website
           npm run build
 
-      - name: Install Wrangler
-        run: npm install -g @cloudflare/wrangler
-
-      - name: Deploy to Cloudflare Pages
-        run: |
-          cd website
-          wrangler pages deploy ./build
-        env:
-          CLOUDFLARE_API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-
-      # Uncomment this block if you want to use the cloudflare/pages-action
       # - name: Deploy (Preview)
       #   uses: cloudflare/pages-action@v1
       #   with:
@@ -67,8 +52,6 @@ jobs:
       #     directory: website/build
       #     gitHubToken: ${{ secrets.GITHUB_TOKEN }}
       #     branch: preview
-
-
 
   deploy-production:
     if: github.ref == 'refs/heads/main'
