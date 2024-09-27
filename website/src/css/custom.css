@@ -63,10 +63,16 @@
 /* Styling for navbar */
 .navbar {
   background-color: var(--ifm-site-dark) !important;
+  /* color: var(--ifm-color-primary-lighter) !important; */
+}
+
+.navbar .navbar__items {
+  flex: auto;
 }
 
 .navbar__title {
   font-weight: bold;
+  color: var(--ifm-color-primary-lighter) !important;
 }
 
 /* Dropdown separator styling */
@@ -78,6 +84,8 @@
 .navbar__brand {
   margin-right: 1em;
 }
+
+
 
 /* Content table container */
 .contentTableContainer table {

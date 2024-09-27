@@ -196,8 +196,9 @@ const sidebars: SidebarsConfig = {
       },
       items: [
         "contributing/development-process",
-        "contributing/pull-request",
         "contributing/reporting-issues",
+        "contributing/pull-request",
+
         {
           type: "link",
           label: "Feature Request",

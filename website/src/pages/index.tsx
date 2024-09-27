@@ -39,8 +39,8 @@ function HomepageHeader(): JSX.Element {
           width={380}
         />
         <div className="hero__subtitle">
-          <span className={styles.heroSubTitleTextHtml}>{'OpenSource'}</span>
-          <span className="text--primary text--semibold">{' |'}</span>
+          <span className={clsx(styles.heroSubTitleTextHtml)}>{'OpenSource'}</span>
+          <span className="text--primary text--normal">{' |'}</span>
         </div>
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
@@ -53,6 +53,7 @@ function HomepageHeader(): JSX.Element {
         <div className={styles.heroSubtitle}>
           <span className={styles.heroCustomSubTitleHtml}>
             <b>{tagline}</b>
+            {/* {custom_description} */}
           </span>
         </div>
         <div className={clsx(styles.buttons)}>

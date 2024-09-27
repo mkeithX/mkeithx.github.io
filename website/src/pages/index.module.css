@@ -21,7 +21,7 @@
   background-color: var(--ifm-site-dark);
   /* background-color: #2b3137; */
   display: flex;
-  height: 38rem;
+  height: 35rem;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
 }
 
@@ -48,6 +48,7 @@
   background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%);
   -webkit-text-fill-color: transparent;
   background-clip: text;
+  font-weight: 600;
 }
 
 .main {
@@ -75,11 +76,11 @@
 .buttons {
   display: flex;
   justify-content: left;
-  width: fit-content;
+  /* width: fit-content; */
   align-items: center;
-  gap: 11px;
-  border-radius: 12px;
-  text-decoration: none !important;
+  gap: 9px;
+  border-radius: 18px;
+  /* text-decoration: none !important; */
   font-weight: normal;
 }
 
@@ -87,13 +88,15 @@
   color: transparent;
   background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
   background-clip: text;
+  font-weight: bold;
 }
 
 .heroCustomSubTitleHtml b {
   color: transparent;
-  background: linear-gradient(90deg, #f6ff7f 0%, #00ffaa 50%, #1da1f2 100%);
+  background: linear-gradient(90deg, #f2f89c 0%, #4affaa 50%, #12a4ff 100%);
   -webkit-background-clip: text;
   background-clip: text;
+  font-weight: 600;
 }
 
 .heroSubTitleTextHtml b {
