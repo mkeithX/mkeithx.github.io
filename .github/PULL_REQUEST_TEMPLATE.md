@@ -2,17 +2,13 @@
 
 ## Description
 
-
 ## Motivation and Context
-
 
 ## Tests and Changes
 
-
 ## Related Issues/PRs
 
-
-### Pre-flight Checklist
+## Pre-flight Checklist
 
 - [ ] I have read the [Contributing Guidelines](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#contribute).
 - [ ] **For code changes**: I have tested my changes locally and they work as expected.

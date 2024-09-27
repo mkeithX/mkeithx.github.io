@@ -1,13 +1,11 @@
 name: 🐛 Bug Report
 description: Report an issue related to documentation
 labels: ["bug", "needs triage"]
-assignees:
-  - mkeithX
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report.
+        Thanks for filling out this bug report.
         [Learn more](https://mkeithx.pages.dev/community/contributing#issues).
 
   - type: dropdown
@@ -18,7 +16,7 @@ body:
       multiple: false
       options:
         - Undocumented API
-        - Elaboration needed on a particular topic
+        - Elaboration needed
         - Outdated or incorrect information
         - Formatting or readability improvement
         - Others
@@ -28,7 +26,7 @@ body:
   - type: textarea
     attributes:
       label: Description
-      description: A clear and concise description of what the issue is.
+      description: A clear and concise description of the issue.
     validations:
       required: true
 
@@ -36,7 +34,7 @@ body:
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
+      description: What did you expect to happen?
       placeholder: Tell us what you see!
       value: "A bug happened!"
     validations:
@@ -45,7 +43,7 @@ body:
   - type: textarea
     attributes:
       label: Steps To Reproduce
-      description: Steps you've taken so far.
+      description: Steps you've taken.
       placeholder: |
         1. I've checked ...
         2. Also validated through ...
@@ -54,19 +52,18 @@ body:
     validations:
       required: true
 
-
   - type: textarea
     id: logs
     attributes:
       label: Relevant log output
-      description: Please copy and paste any relevant log output. This will be automatically formatted into code, so no need for backticks.
+      description: Copy and paste any relevant log output. Auto-formatted into code.
       render: shell
 
   - type: checkboxes
     id: terms
     attributes:
       label: Code of Conduct
-      description: By submitting this issue, you agree to follow our [Code of Conduct](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md)
+      description: By submitting, you agree to our [Code of Conduct](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md)
       options:
         - label: I agree to follow this project's Code of Conduct.
           required: true
