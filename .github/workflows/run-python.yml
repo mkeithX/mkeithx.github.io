@@ -25,4 +25,4 @@ jobs:
       - name: Run main script
         run: |
           cd examples/python-starters
-          python main.py
+          python hello.py
