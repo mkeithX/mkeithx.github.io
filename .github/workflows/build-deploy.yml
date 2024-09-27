@@ -30,12 +30,12 @@ jobs:
           cd website
           npm install && npm run build
 
-      - name: Publish
+      - name: Deploy (Preview)
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: mkeithx
+          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
           branch: preview
@@ -50,7 +50,7 @@ jobs:
 
     name: Build (Production)
     steps:
-      - name: Checkout code
+      - name: Checkout
         uses: actions/checkout@v4
         with:
           fetch-depth: 0
@@ -61,7 +61,7 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: mkeithx
+          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME}}
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-   
+          branch: main

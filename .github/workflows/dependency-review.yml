@@ -1,6 +1,6 @@
 # https://github.com/marketplace/actions/dependency-review#installation
 
-name: 'Dependency Review'
+name: Dependency Review
 on: [pull_request]
 
 permissions:
@@ -10,11 +10,12 @@ jobs:
   dependency-review:
     runs-on: ubuntu-latest
     steps:
-      - name: 'Checkout Repository'
+      - name: Checkout
         uses: actions/checkout@v4
-      - name: 'Dependency Review'
+      - name: Dependency Review
         uses: actions/dependency-review-action@v4
         with:
+
             fail-on-severity: critical
-            
             show-openssf-scorecard: true
+            warn-on-openssf-scorecard-level: 3
