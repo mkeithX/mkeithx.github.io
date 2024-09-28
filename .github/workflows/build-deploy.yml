@@ -10,15 +10,17 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  deploy-preview:
-    if: github.ref == 'refs/heads/preview'
+  deploy:
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
     timeout-minutes: 30
+    strategy:
+      matrix:
+        environment: [preview, production]
 
-    name: Build (Preview)
+    name: Deploy (${{ matrix.environment }})
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,7 +32,7 @@ jobs:
           cd website
           npm install && npm run build
 
-      - name: Deploy (Preview)
+      - name: Deploy
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
@@ -38,35 +40,6 @@ jobs:
           projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: preview
-  
-  deploy-production:
-    if: github.ref == 'refs/heads/main'
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    timeout-minutes: 30
+          branch: ${{ github.ref == 'refs/heads/main' && 'main' || 'preview' }}
 
-    name: Build (Production)
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-      
-      - name: Install dependencies
-        run: |
-          cd website
-          npm install && npm run build
-
-
-      - name: Deploy (Production)
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME}}
-          directory: website/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          branch: main
+    if: github.ref == 'refs/heads/preview' || github.ref == 'refs/heads/main'
