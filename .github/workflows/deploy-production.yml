@@ -7,6 +7,7 @@ on:
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
+    environment: production
     permissions:
       contents: read
       deployments: write
@@ -18,7 +19,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Build
+      - name: Install Dependencies
         run: |
             cd website
             npm install && npm run build
