@@ -51,10 +51,10 @@
     "@docusaurus/theme-classic": "^3.5.2",
     "@docusaurus/tsconfig": "^3.5.2",
     "@docusaurus/types": "^3.5.2",
-    "@types/node": "^22.7.3",
-    "@types/react": "^18.3.9",
+    "@types/node": "^22.7.4",
+    "@types/react": "^18.3.10",
     "typescript": "~5.6.2",
-    "wrangler": "3.78.11"
+    "wrangler": "3.78.12"
   },
   "browserslist": {
     "production": [
