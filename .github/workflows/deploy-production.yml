@@ -24,7 +24,7 @@ jobs:
             cd website
             npm install && npm run build
 
-      - name: Deploy
+      - name: Deploy (Production)
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
