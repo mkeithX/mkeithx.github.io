@@ -182,6 +182,9 @@ const sidebars: SidebarsConfig = {
         id: "repo/index",
       },
       items: [
+        "repo/bmi-in-python",
+        "repo/fibonacci-in-python",
+        "repo/password-generator-python",
         "repo/python-starters",
         "repo/flask-tutorials",
         "repo/django-custom-user",

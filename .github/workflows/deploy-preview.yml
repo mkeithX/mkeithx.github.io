@@ -5,6 +5,7 @@ on: [push]
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
+    environment: development
     permissions:
       contents: read
       deployments: write
@@ -21,7 +22,7 @@ jobs:
             cd website
             npm install && npm run build
             
-      - name: Deplpy
+      - name: Deploy (Preview)
         uses: cloudflare/pages-action@v1
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
