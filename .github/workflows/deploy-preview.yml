@@ -1,6 +1,9 @@
 name: Deploy (Preview)
 
-on: [push]
+on:
+  pull_request:
+    branches:
+      - preview
 
 jobs:
   deploy-preview:
@@ -30,4 +33,4 @@ jobs:
           projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          # branch: preview
+          
