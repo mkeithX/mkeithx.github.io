@@ -185,6 +185,7 @@ const sidebars: SidebarsConfig = {
         "repo/bmi-in-python",
         "repo/fibonacci-in-python",
         "repo/password-generator-python",
+        "repo/django-crud-demo",
         "repo/python-starters",
         "repo/flask-tutorials",
         "repo/django-custom-user",
