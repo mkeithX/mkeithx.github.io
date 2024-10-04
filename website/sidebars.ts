@@ -182,14 +182,33 @@ const sidebars: SidebarsConfig = {
         id: "repo/index",
       },
       items: [
-        "repo/bmi-in-python",
-        "repo/fibonacci-in-python",
-        "repo/password-generator-python",
-        "repo/django-crud-demo",
-        "repo/python-starters",
-        "repo/flask-tutorials",
-        "repo/django-custom-user",
+        {
+          type: 'category',
+          label: 'Python',
+          collapsed: true,
+          items: [
+            "repo/bmi-in-python",
+            "repo/fibonacci-in-python",
+            "repo/password-generator-python",
+            "repo/python-starters",
+            "repo/flask-tutorials",
+
+          ]
+        },
+
+
+        {
+          type: 'category',
+          label: 'Django',
+          collapsed: true,
+          items:[
+            "repo/django-crud-demo",
+            "repo/django-custom-user",
+          ]
+        },
+
       ],
+      
     },
     {
       type: "category",
