@@ -8,8 +8,122 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 
 # Django `crud` Project 
-> Exciting things are on the way!
+The full feature and functionalities of the [`django-crud-demo`](https://github.com/mkeithX/django-crud-demo) project.
 
 
+<!-- <img src={useBaseUrl('/img/projects/django-crud-demo.png')} /> -->
 
-<img src={useBaseUrl('/img/projects/django-crud-demo.png')} />
+
+:::tip[Important]
+This article assumes that you already have the `django-crud-demo` installed and properly configured in your machine
+:::
+
+
+## Registration and Authentication
+
+### `Age Restriction`
+
+The user must be at least 18 years old to sign up, which is verified by checking their date of birth. The age is calculated based on the date of birth provided in the form.
+
+```py title="forms.py"
+    def clean(self):
+        cleaned_data = super(CustomUserCreationForm, self).clean()
+        dob = self.cleaned_data["date_of_birth"]
+        age = abs(date.today() - dob)
+        if (age.days / 365.0) < 18:
+            raise forms.ValidationError(
+                "You must be at least 18 to signup.",
+                code="too_young",
+            )
+        return cleaned_data
+```
+If the user is younger than 18, an error is raised with a message stating they can't sign up. If the age is acceptable, the cleaned data is returned.
+
+### `Profile Verification`
+
+The `UpdateProfileView` class allows logged-in users to update their profiles. It requires authentication, displays the current profile data in forms, and processes updates when submitted
+
+```py title="views.py" {2}
+@method_decorator(login_required(login_url="/login/"), name="dispatch")
+class UpdateProfileView(LoginRequiredMixin, TemplateView):
+    template_name = 'users/user_update_profile.html'
+    http_method_names = ["get", "post"]
+
+    def get(self, request, *args, **kwargs):
+        user = self.request.user
+
+        if "u_form" not in kwargs:
+            kwargs["u_form"] = forms.UpdateUserForm(instance=user)
+
+        if "p_form" not in kwargs:
+            kwargs["p_form"] = forms.UpdateProfileForm(instance=user.user_profile)
+
+        return super().get(request, *args, **kwargs)
+    
+
+    def post(self, request, *args, **kwargs):
+        user = self.request.user
+        u_form = forms.UpdateUserForm(request.POST, instance=user)
+        p_form = forms.UpdateProfileForm(request.POST, request.FILES, instance=user.user_profile)
+
+        if u_form.is_valid() and p_form.is_valid():
+            u_form.save()
+            p_form.save()
+            messages.success(request, f"Awesome {user.first_name}! Your profile has been updated.")
+            return redirect("/")
+        
+        return super().get(request, u_form=u_form, p_form=p_form)
+```
+ If the update is successful, the user will get a verification badge.
+
+
+### `Session Timeout`
+
+By default, users will be automatically logged out if idle for 5 minutes, unless the "Remember Me" option is selected upon login, extending the session to 30 days.
+
+```py title="settings.py"
+SESSION_EXPIRE_AT_BROWSER_CLOSE = True
+
+SESSION_COOKIE_AGE = 10 * 30 # 5 Minutes
+```
+
+Overall, `CustomLoginView` enhances the standard login functionality with additional features like session management and security measures.
+
+```py title="views.py"
+class CustomLoginView(LoginView):
+    form_class = LoginForm
+    template_name = "auth/login.html"
+    success_url = '/'
+    redirect_field_name = REDIRECT_FIELD_NAME
+    
+    @method_decorator(csrf_protect)
+    @method_decorator(never_cache)
+    def dispatch(self, request, *args, **kwargs):
+        return super(CustomLoginView, self).dispatch(request, *args, **kwargs)
+    
+    def get_context_data(self, **kwargs):
+        redirect_to = self.request.GET.get(self.redirect_field_name)
+        if redirect_to is None:
+            redirect_to = '/'
+        return super(CustomLoginView, self).get_context_data(**kwargs)
+
+    def form_valid(self, form):
+        redirect = super().form_valid(form)
+        remember_me = form.cleaned_data.get("remember_me")
+
+        if remember_me is True:
+            SESSION_DURATION = 30 * 24 * 60 * 60 # 1 Month
+            expiry = getattr(settings, "KEEP_LOGGED_DURATION", SESSION_DURATION)
+            self.request.session.set_expiry(expiry)
+        
+        return redirect
+    
+    def get_success_url(self):
+        redirect_to = self.request.POST.get(self.redirect_field_name)
+        if not url_has_allowed_host_and_scheme(
+            url=redirect_to, allowed_hosts=[
+                self.request.get_host()]):
+            redirect_to = self.success_url
+            
+        return redirect_to
+```
