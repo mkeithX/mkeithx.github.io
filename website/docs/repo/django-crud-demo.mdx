@@ -1,15 +1,18 @@
 ---
 description: More than just CRUD.
 image: /img/projects/django-crud-demo.png
+title: Django CRUD
 ---
 
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
+import DjangoRocket from '@site/static/img/logo/django-rocket.svg';
 
 
-# Django `crud` Project 
+# `django-crud-demo`
 The full feature and functionalities of the [`django-crud-demo`](https://github.com/mkeithX/django-crud-demo) project.
 
+<DjangoRocket className="logoBadge" />
 
 <!-- <img src={useBaseUrl('/img/projects/django-crud-demo.png')} /> -->
 
@@ -18,8 +21,40 @@ The full feature and functionalities of the [`django-crud-demo`](https://github.
 This article assumes that you already have the `django-crud-demo` installed and properly configured in your machine
 :::
 
+## Project structure
 
-## Registration and Authentication
+<pre>
+django-crud-demo/
+│ 
+├───.github
+│   └───workflows
+├───requirements
+├───screenshots
+├───src
+│   ├───apps
+│   │   └───users
+│   │       ├───management
+│   │       │   └───commands
+│   │       ├───migrations
+│   │       ├───templatetags
+│   │       └───...
+│   ├───core
+│   │   ├───settings
+│   │   │   ├───base
+│   │   │   ├───development
+│   │   │   └───production
+│   │   └───...
+│   ├───media
+│   ├───staticfiles
+│   └───templates
+│       └───auth
+│           └───layouts
+│               └───main
+│                   └───users
+└───static
+</pre>
+
+## Auth and Validate
 
 ### `Age Restriction`
 
@@ -43,7 +78,7 @@ If the user is younger than 18, an error is raised with a message stating they c
 
 The `UpdateProfileView` class allows logged-in users to update their profiles. It requires authentication, displays the current profile data in forms, and processes updates when submitted
 
-```py title="views.py" {2}
+```py title="views.py" showLineNumbers {2}
 @method_decorator(login_required(login_url="/login/"), name="dispatch")
 class UpdateProfileView(LoginRequiredMixin, TemplateView):
     template_name = 'users/user_update_profile.html'
@@ -81,7 +116,7 @@ class UpdateProfileView(LoginRequiredMixin, TemplateView):
 
 By default, users will be automatically logged out if idle for 5 minutes, unless the "Remember Me" option is selected upon login, extending the session to 30 days.
 
-```py title="settings.py"
+```py title="settings.py" showLineNumbers
 SESSION_EXPIRE_AT_BROWSER_CLOSE = True
 
 SESSION_COOKIE_AGE = 10 * 30 # 5 Minutes
@@ -89,7 +124,7 @@ SESSION_COOKIE_AGE = 10 * 30 # 5 Minutes
 
 Overall, `CustomLoginView` enhances the standard login functionality with additional features like session management and security measures.
 
-```py title="views.py"
+```py title="views.py" showLineNumbers
 class CustomLoginView(LoginView):
     form_class = LoginForm
     template_name = "auth/login.html"
@@ -127,3 +162,9 @@ class CustomLoginView(LoginView):
             
         return redirect_to
 ```
+
+## Custom commands
+
+### `dummy users`
+
+### `new secret`
