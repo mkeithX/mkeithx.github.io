@@ -14,7 +14,7 @@ const projects: ProjectData[] = [
     title: "Python Starters",
     description: "Basic Python examples for starters.",
     url: "https://github.com/mkeithX/python-starters",
-    image: require(`${dataDir}/default.png`).default,
+    image: require(`${dataDir}/default.png`),
   },
   {
     title: "MKX Website",
@@ -41,10 +41,10 @@ const projects: ProjectData[] = [
     image: require(`${dataDir}/default.png`),
   },
   {
-    title: "Django Custom User Model",
-    description: "Customize Django's base user model with PostgreSQL.",
-    url: "/projects",
-    image: require(`${dataDir}/default-soon.png`),
+    title: "django-crud-demo",
+    description: "Simple crud built with Django.",
+    url: "https://github.com/mkeithX/django-crud-demo",
+    image: require(`${dataDir}/djang_mkx_demo.png`),
   },
 ];
 
