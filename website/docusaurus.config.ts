@@ -203,6 +203,7 @@ const config: Config = {
       items: [
         { type: "doc", position: "left", docId: "keyword", label: "Docs" },
         { type: "docSidebar", sidebarId: "devops", label: "Advanced" },
+        { to: "/projects", label: "Showcase" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
         // { to: "/foobar", label: "What's this ?" },
