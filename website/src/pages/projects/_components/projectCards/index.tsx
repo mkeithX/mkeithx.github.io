@@ -1,9 +1,7 @@
 import { ProjectData } from "@site/src/components/ProjectCards/Projects";
 
-// Explicitly type the dataDir variable
 export const dataDir: string = 'img/projects';
 
-// Explicitly type the projects array
 export const projects: ProjectData[] = [
     {
         title: "django-crud-demo",
@@ -15,7 +13,13 @@ export const projects: ProjectData[] = [
         title: "Python Starters",
         description: "Basic Python examples for starters.",
         url: "https://github.com/mkeithX/python-starters",
-        image: `${dataDir}/ms-banner.png`,
+        image: `${dataDir}/default.png`,
+    },
+    {
+        title: "Flask Tutorial - Demo",
+        description: "Building web applications with Python.",
+        url: "https://github.com/mkeithX/flask-tutorial-demo",
+        image: `${dataDir}/default.png`,
     },
     // {
     //     title: "MKX Website",
@@ -35,10 +39,5 @@ export const projects: ProjectData[] = [
     //     url: "https://kitiplex.github.io/iuiu",
     //     image: `${dataDir}/sc-iuiu.png`,
     // },
-    {
-        title: "Flask Tutorial - Demo",
-        description: "Building web applications with Python.",
-        url: "https://github.com/mkeithX/flask-tutorial-demo",
-        image: `${dataDir}/ms-banner.png`,
-    },
+
 ];

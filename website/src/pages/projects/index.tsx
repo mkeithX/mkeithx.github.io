@@ -5,8 +5,7 @@ import Layout from '@theme/Layout';
 import Heading from '@theme/Heading';
 import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import styles from './styles.module.css';
-// import { projects } from './_projectCards';
-import {projects} from "./_components/projectCards";
+import { projects } from "./_components/projectCards";
 
 
 
@@ -27,17 +26,15 @@ const ProjectsHeader = (): JSX.Element => {
                 <Heading as="h1" className="hero__title">
                     <span className={styles.heroTitleTextHtml}>
                         <div className={styles.heroBannerTitle}>
-                            <b>{"Projects"}</b>
+                            <b>{"Explore"}</b>
 
                         </div>
                     </span>
                 </Heading>
                 <div className={styles.heroSubtitle}>
                     <span className={styles.heroCustomSubTitleHtml}>
-                        {/* <b>{tagline || "Explore my projects"}</b> */}
                         {custom_projectDescription}
                         <br />
-
                     </span>
                 </div>
             </div>
