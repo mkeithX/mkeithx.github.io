@@ -1,9 +1,7 @@
 name: Deploy (Preview)
 
-on:
-  pull_request:
-    branches:
-      - preview
+on: [pull_request]
+
 
 jobs:
   deploy-preview:
