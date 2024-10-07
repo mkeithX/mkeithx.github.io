@@ -56,6 +56,7 @@ const config: Config = {
     custom_header: "Guides and Samples from mkeith",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
+    custom_projectDescription: "Highlighting some projects and demos I've authored and contributed to.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -203,6 +204,7 @@ const config: Config = {
       items: [
         { type: "doc", position: "left", docId: "keyword", label: "Docs" },
         { type: "docSidebar", sidebarId: "devops", label: "Advanced" },
+        { to: "/projects", label: "Projects" },
         { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
         // { to: "/foobar", label: "What's this ?" },

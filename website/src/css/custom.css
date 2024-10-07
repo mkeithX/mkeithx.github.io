@@ -70,11 +70,11 @@
   flex: auto;
 }
 
-.navbar__title {
+/* .navbar__title {
   font-weight: bold;
   font-size: normal;
   color: var(--ifm-color-primary-lighter) !important;
-}
+} */
 
 /* Dropdown separator styling */
 .dropdown-separator {
@@ -83,7 +83,7 @@
 
 /* Navbar branding */
 .navbar__brand {
-  margin-right: 2rem;
+  margin-right: 1rem;
 }
 
 

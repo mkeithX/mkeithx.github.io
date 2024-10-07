@@ -1,0 +1,122 @@
+/**
+ * CSS files with the .module.css suffix will be treated as CSS modules
+ * and scoped locally.
+ */
+
+ .hero {
+  display: flex;
+  padding: 4rem 0;
+  text-align: center;
+  align-items: center;
+  vertical-align: center;
+  position: relative;
+  background-color: var(--ifm-site-dark) !important;
+}
+
+.heroBanner {
+  padding: 4rem 0;
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ifm-site-dark);
+  /* background-color: #2b3137; */
+  display: flex;
+  height: auto;
+  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
+}
+
+.hero h1 {
+  font-size: 3rem;
+  padding-bottom: 1rem;
+}
+
+.heroBannerTitle {
+  font-size: 1em;
+  font-weight: bold;
+  margin-bottom: 0.3rem;
+  position: relative;
+}
+
+.heroSubtitle {
+  font-size: 22px;
+  font-weight: normal;
+  margin-bottom: 1em;
+}
+
+.heroCustomTagline {
+  color: transparent;
+  background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%);
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.main {
+  padding: 12px;
+}
+
+.heading {
+  font-weight: bold;
+  font-size: 20px;
+}
+
+.heroBannerLogo {
+  max-width: 34%;
+  width: 22rem;
+  height: 22rem;
+  animation: kit-in-the-box infinite 60s linear;
+  float: right;
+  height: auto;
+  display: block;
+  pointer-events: none;
+}
+
+
+
+.buttons {
+  display: flex;
+  justify-content: left;
+  /* width: fit-content; */
+  align-items: center;
+  gap: 9px;
+  border-radius: 18px;
+  /* text-decoration: none !important; */
+  font-weight: normal;
+}
+
+.heroTitleTextHtml b {
+  color: transparent;
+  background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
+  background-clip: text;
+  font-weight: bold;
+}
+
+.heroCustomSubTitleHtml b {
+  color: transparent;
+  background: linear-gradient(90deg, #f2f89c 0%, #4affaa 50%, #12a4ff 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 600;
+}
+
+.heroSubTitleTextHtml b {
+  color: var(--ifm-color-primary);
+  font-size: 22px;
+}
+
+@keyframes kit-in-the-box {
+  from {
+    transform: rotate(360deg) scale(1.3);
+  }
+  to {
+    transform: rotate(-360deg) scale(1.3);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heroBannerLogo {
+    animation: kit-in-the-box infinite 60s linear;
+  }
+}
+
+
