@@ -28,21 +28,6 @@ body:
         - label: I have tried creating a repro with https://new.docusaurus.io.
         - label: I have read the console error message carefully (if applicable).
 
-  - type: dropdown
-    id: issue
-    attributes:
-      label: Issue category
-      description: What's the issue about?
-      multiple: false
-      options:
-        - Undocumented API
-        - Elaboration needed
-        - Outdated or incorrect information
-        - Formatting or readability improvement
-        - Others
-    validations:
-      required: true
-
   - type: textarea
     id: what-happened
     attributes:
@@ -58,11 +43,10 @@ body:
       label: Steps to reproduce
       description: Kindly indicate the troubleshooting steps you've taken.
       placeholder: |
-
         1. Navigate to the form page.
         2. Leave required fields empty.
         3. Click the "Submit" button.
-        4.Observe the application crash.
+        4. Observe the application crash.
 
     validations:
       required: true
