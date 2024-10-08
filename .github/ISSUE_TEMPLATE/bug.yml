@@ -1,13 +1,14 @@
 name: 🐞 Bug Report
 description: Report an issue related to documentation
+title: "[Bug]: "
 labels: ["bug", "needs triage"]
-projects: ["projects/4"]
+projects: ["SpaceHub"]
+
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for filling out this bug report.
-        [Learn more](https://mkeithx.pages.dev/community/contributing#issues).
+        Thanks for taking the time to fill out this bug report!
 
   - type: dropdown
     id: issue
@@ -22,33 +23,56 @@ body:
         - Formatting or readability improvement
         - Others
     validations:
-      required: true     
-
-  - type: textarea
-    attributes:
-      label: Description
-      description: A clear and concise description of the issue.
-    validations:
       required: true
 
   - type: textarea
+    id: what-happened
     attributes:
-      label: Steps To Reproduce
-      description: Steps you've taken.
+      label: What happened?
+      description: Also tell us, what did you expect to happen?
+      placeholder: Tell us what you see!
+      value: "A bug happened when..."
+    validations:
+      required: true
+
+
+
+  - type: textarea
+    attributes:
+      label: Steps to reproduce
+      description: Steps you've taken have.
       placeholder: |
-        1. I've checked ...
-        2. Also validated through ...
-        3. Including this ...
-        4. To support this ...
+        Kindly indicate the troubleshooting steps you've taken so far.
+
     validations:
       required: true
 
-  - type: textarea
-    id: logs
+  - type: dropdown
+    id: browsers
     attributes:
-      label: Relevant log output
-      description: Copy and paste any relevant log output. Auto-formatted into code.
-      render: shell
+      label: What browsers are you seeing the problem on?
+      multiple: true
+      options:
+        - Firefox
+        - Chrome
+        - Safari
+        - Microsoft Edge
+        - Brave
+        - DuckDuck Go
+
+  # body:
+  #   - type: markdown
+  #     attributes:
+  #       value: |
+  #         Thanks for filling out this bug report.
+  #         [Learn more](https://mkeithx.pages.dev/community/contributing#issues).
+
+  # - type: textarea
+  #   attributes:
+  #     label: Description
+  #     description: A clear and concise description of the issue.
+  #   validations:
+  #     required: true
 
   - type: checkboxes
     id: terms
@@ -58,3 +82,11 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct.
           required: true
+
+  - type: checkboxes
+    attributes:
+      label: Self-service
+      description: |
+        If you can contribute, check the box to indicate you're working on it. Please submit a pull request within 7 days.
+      options:
+        - label: I'd be willing to address this documentation request myself.
