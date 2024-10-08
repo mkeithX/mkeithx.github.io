@@ -172,15 +172,40 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    
+    {
+      type: "category",
+      label: "Contributing",
+      link: {
+        type: "doc",
+        id: "contributing/index",
+      },
+      items: [
+        // "contributing/development-process",
+        "contributing/reporting-issues",
+        // "contributing/pull-request",
+
+        {
+          type: "link",
+          label: "Feature Request",
+          href: "/feature-requests",
+          description: "Request a feature"
+        }
+      ]
+    },
+  ],
+
+  repo: [
+    "repo/index",
     {
       type: "category",
       label: "Examples",
       collapsed: true,
       collapsible: true,
-      link: {
-        type: "doc",
-        id: "repo/index",
-      },
+      // link: {
+      //   type: "doc",
+      //   id: "repo/index",
+      // },
       items: [
         {
           type: 'category',
@@ -209,26 +234,6 @@ const sidebars: SidebarsConfig = {
 
       ],
       
-    },
-    {
-      type: "category",
-      label: "Contributing",
-      link: {
-        type: "doc",
-        id: "contributing/index",
-      },
-      items: [
-        // "contributing/development-process",
-        "contributing/reporting-issues",
-        // "contributing/pull-request",
-
-        {
-          type: "link",
-          label: "Feature Request",
-          href: "/feature-requests",
-          description: "Request a feature"
-        }
-      ]
     },
   ],
 
