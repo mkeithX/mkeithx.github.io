@@ -26,7 +26,7 @@ const sidebars: SidebarsConfig = {
         description: "Quick examples, useful utilities and demos.",
       },
       items: [
-        // "troubleshoot",
+
         "gists/gists-windows",
         "gists/gists-git",
         // "gists/gists-misc",
@@ -196,16 +196,16 @@ const sidebars: SidebarsConfig = {
   ],
 
   repo: [
-    "repo/index",
+    "troubleshoot",
     {
       type: "category",
       label: "Examples",
       collapsed: true,
       collapsible: true,
-      // link: {
-      //   type: "doc",
-      //   id: "repo/index",
-      // },
+      link: {
+        type: "doc",
+        id: "repo/index",
+      },
       items: [
         {
           type: 'category',
