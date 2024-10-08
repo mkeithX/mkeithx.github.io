@@ -74,6 +74,10 @@ If the user is younger than 18, an error is raised with a message stating they c
 
 The `UpdateProfileView` class allows logged-in users to update their profiles. It requires authentication, displays the current profile data in forms, and processes updates when submitted
 
+<details>
+<summary>If the update is successful, the user will get a verification badge.</summary>
+
+
 ```py title="views.py" showLineNumbers {2}
 @method_decorator(login_required(login_url="/login/"), name="dispatch")
 class UpdateProfileView(LoginRequiredMixin, TemplateView):
@@ -105,7 +109,10 @@ class UpdateProfileView(LoginRequiredMixin, TemplateView):
         
         return super().get(request, u_form=u_form, p_form=p_form)
 ```
- If the update is successful, the user will get a verification badge.
+
+</details>
+
+
 
 
 ### `Session Timeout`
@@ -119,6 +126,9 @@ SESSION_COOKIE_AGE = 10 * 30 # 5 Minutes
 ```
 
 Overall, `CustomLoginView` enhances the standard login functionality with additional features like session management and security measures.
+
+<details>
+<summary>Show</summary>
 
 ```py title="views.py" showLineNumbers
 class CustomLoginView(LoginView):
@@ -158,6 +168,10 @@ class CustomLoginView(LoginView):
             
         return redirect_to
 ```
+
+</details>
+
+
 
 ## Custom commands
 

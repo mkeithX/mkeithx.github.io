@@ -21,7 +21,7 @@
   background-color: var(--ifm-site-dark);
   /* background-color: #2b3137; */
   display: flex;
-  height: 35rem;
+  height: 36rem;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
 }
 
