@@ -172,70 +172,77 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
-
-    [
-      "devops/index",
-      // "devops/troubleshoot-like-a-boss",
-      {
-        type: "category",
-        label: "Microsoft 365",
-        collapsed: false,
-        link: {
-          type: "doc",
-          id: "devops/admin-center/index",
-        },
-        items: [
-          "devops/admin-center/aka-ms",
-          "devops/admin-center/mailbox-archive",
-          {
-            type: "category",
-            label: "Trainings",
-            description: "Training and comprehensive guides for Admin & Users",
-            link: {
-              type: "generated-index",
-              slug: "devops/admin-center/training",
-            },
-            items: [
-              "devops/admin-center/training/email-management",
-              "devops/admin-center/training/install-via-intune",
-              "devops/admin-center/training/conditional-access",
-            ],
+    // DevOps
+    {
+      type: "category",
+      label: "DevOps",
+      collapsed: false,
+      link: {
+        type: "doc",
+        id: "devops/index",
+      },
+      items: [
+        {
+          type: "category",
+          label: "Microsoft 365",
+          collapsed: false,
+          link: {
+            type: "doc",
+            id: "devops/admin-center/index",
           },
-        ],
-      },
-  
-      {
-        type: "category",
-        label: "Snippets",
-        collapsed: true,
-        link: {
-          type: "doc",
-          id: "devops/snippets/index",
+          items: [
+            "devops/admin-center/aka-ms",
+            "devops/admin-center/mailbox-archive",
+            {
+              type: "category",
+              label: "Trainings",
+              description: "Training and comprehensive guides for Admin & Users",
+              link: {
+                type: "generated-index",
+                slug: "devops/admin-center/training",
+              },
+              items: [
+                "devops/admin-center/training/email-management",
+                "devops/admin-center/training/install-via-intune",
+                "devops/admin-center/training/conditional-access",
+              ],
+            },
+          ],
         },
-        items: ["devops/snippets/tech-notes", "devops/snippets/email-templates"],
-      },
-  
-      {
-        type: "category",
-        label: "Guides & Workarounds",
-        collapsed: true,
-        link: {
-          type: "generated-index",
-          slug: "/devops/guides-and-workarounds",
-          description: "Basic troubleshooting guide and workarounds.",
+        {
+          type: "category",
+          label: "Snippets",
+          collapsed: true,
+          link: {
+            type: "doc",
+            id: "devops/snippets/index",
+          },
+          items: ["devops/snippets/tech-notes", "devops/snippets/email-templates"],
         },
-        items: [
-          "devops/troubleshoot/cloud-pc",
-          "devops/troubleshoot/powershell",
-          "devops/troubleshoot/windows-utilities",
-          "devops/troubleshoot/windows-hardware-issues",
-          "devops/troubleshoot/windows-network-issues",
-          "devops/troubleshoot/ms-teams",
-        ],
-      },
-      "devops/glossary",
-    ],
-    
+        {
+          type: "category",
+          label: "Guides & Workarounds",
+          collapsed: true,
+          link: {
+            type: "generated-index",
+            slug: "/devops/guides-and-workarounds",
+            description: "Basic troubleshooting guide and workarounds.",
+          },
+          items: [
+            "devops/troubleshoot/cloud-pc",
+            "devops/troubleshoot/powershell",
+            "devops/troubleshoot/windows-utilities",
+            "devops/troubleshoot/windows-hardware-issues",
+            "devops/troubleshoot/windows-network-issues",
+            "devops/troubleshoot/ms-teams",
+          ],
+        },
+        "devops/troubleshoot-like-a-boss",
+        "devops/glossary",
+      ]
+    },
+
+
     {
       type: "category",
       label: "Contributing",
@@ -289,14 +296,14 @@ const sidebars: SidebarsConfig = {
           type: 'category',
           label: 'Django',
           collapsed: true,
-          items:[
+          items: [
             "repo/django-crud-demo",
             "repo/django-custom-user",
           ]
         },
 
       ],
-      
+
     },
   ],
 
