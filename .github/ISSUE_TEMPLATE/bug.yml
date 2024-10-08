@@ -1,14 +1,32 @@
 name: 🐞 Bug Report
-description: Report an issue related to documentation
+description: Report a bug to help us improve
 title: "[Bug]: "
-labels: ["bug", "needs triage"]
+labels: ["needs triage"]
 projects: ["SpaceHub"]
 
 body:
   - type: markdown
     attributes:
       value: |
-        Thanks for taking the time to fill out this bug report!
+        ## Important!
+
+        Before filing your issue, ask yourself:
+        - Do I have an idea of where the issue occurs?
+        - Did I include clear steps to reproduce it?
+        - Could it be due to my own mistakes?
+        - Has this bug already been reported?
+
+  - type: checkboxes
+    attributes:
+      label: Basic troubleshooting.
+      description: The project is built with Docusaurus. Review these items before submitting an issue to ensure you’ve completed the necessary steps.
+      options:
+        - label: I'm using the latest version of Docusaurus.
+          required: true
+        - label: I have tried the `npm run clear` or `yarn clear` command.
+        - label: I have tried `rm -rf node_modules yarn.lock package-lock.json` and re-installing packages.
+        - label: I have tried creating a repro with https://new.docusaurus.io.
+        - label: I have read the console error message carefully (if applicable).
 
   - type: dropdown
     id: issue
@@ -31,18 +49,20 @@ body:
       label: What happened?
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
-      value: "A bug happened when..."
+      value: "A bug happened when "
     validations:
       required: true
-
-
 
   - type: textarea
     attributes:
       label: Steps to reproduce
-      description: Steps you've taken have.
+      description: Kindly indicate the troubleshooting steps you've taken.
       placeholder: |
-        Kindly indicate the troubleshooting steps you've taken so far.
+
+        1. Navigate to the form page.
+        2. Leave required fields empty.
+        3. Click the "Submit" button.
+        4.Observe the application crash.
 
     validations:
       required: true
@@ -59,20 +79,6 @@ body:
         - Microsoft Edge
         - Brave
         - DuckDuck Go
-
-  # body:
-  #   - type: markdown
-  #     attributes:
-  #       value: |
-  #         Thanks for filling out this bug report.
-  #         [Learn more](https://mkeithx.pages.dev/community/contributing#issues).
-
-  # - type: textarea
-  #   attributes:
-  #     label: Description
-  #     description: A clear and concise description of the issue.
-  #   validations:
-  #     required: true
 
   - type: checkboxes
     id: terms
