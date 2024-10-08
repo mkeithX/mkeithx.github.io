@@ -176,7 +176,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "DevOps",
-      collapsed: false,
+      collapsed: true,
       link: {
         type: "doc",
         id: "devops/index",
@@ -185,7 +185,7 @@ const sidebars: SidebarsConfig = {
         {
           type: "category",
           label: "Microsoft 365",
-          collapsed: false,
+          collapsed: true,
           link: {
             type: "doc",
             id: "devops/admin-center/index",
@@ -266,44 +266,29 @@ const sidebars: SidebarsConfig = {
   ],
 
   repo: [
-    "troubleshoot",
+    // "troubleshoot",
+    "repo/index",
     {
       type: "category",
-      label: "Examples",
+      label: "Python",
       collapsed: true,
-      collapsible: true,
-      link: {
-        type: "doc",
-        id: "repo/index",
-      },
       items: [
-        {
-          type: 'category',
-          label: 'Python',
-          collapsed: true,
-          items: [
-            "repo/bmi-in-python",
-            "repo/fibonacci-in-python",
-            "repo/password-generator-python",
-            "repo/python-starters",
-            "repo/flask-tutorials",
-
-          ]
-        },
-
-
-        {
-          type: 'category',
-          label: 'Django',
-          collapsed: true,
-          items: [
-            "repo/django-crud-demo",
-            "repo/django-custom-user",
-          ]
-        },
-
+        "repo/bmi-in-python",
+        "repo/fibonacci-in-python",
+        "repo/password-generator-python",
+        "repo/python-starters",
+        "repo/flask-tutorials",
       ],
+    },
 
+    {
+      type: 'category',
+      label: 'Django',
+      collapsed: true,
+      items: [
+        "repo/django-crud-demo",
+        "repo/django-custom-user",
+      ]
     },
   ],
 
