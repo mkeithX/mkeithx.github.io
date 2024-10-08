@@ -9,7 +9,7 @@ body:
       value: |
         ## Important!
 
-        Use this template to report various documentation related issue.
+        Use this template to report various documentation-related issues.
         If documentation issues arise, consider if it’s a documentation or code problem. For code issues, use the "bug" template.
 
         Pull requests are generally accepted if:
@@ -40,7 +40,7 @@ body:
       label: Description
       description: A clear description of the issue.
       placeholder: Tell us what you see!
-      value: " "
+      value: "Describe the issue"
     validations:
       required: true
 
