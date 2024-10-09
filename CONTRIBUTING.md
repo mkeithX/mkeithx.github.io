@@ -1,5 +1,10 @@
 # Contributing
 
+When contributing to this repository, please first discuss the change you wish to make via issue,
+email, or any other method with the owners of this repository before making a change. 
+
+
+
 To foster a positive and inclusive community, **MKX SpaceHub**™ has established a [**Code of Conduct**](https://kitiplex.github.io/community/code-of-conduct) for all participants to follow. Please review the summarized guidelines to understand what behaviors are expected and unacceptable.
 
 Please read the [detailed guidelines](https://mkeithx.pages.dev/docs/contributing) to know more.

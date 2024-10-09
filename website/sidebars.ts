@@ -243,26 +243,24 @@ const sidebars: SidebarsConfig = {
     },
 
 
-    {
-      type: "category",
-      label: "Contributing",
-      link: {
-        type: "doc",
-        id: "contributing/index",
-      },
-      items: [
-        // "contributing/development-process",
-        "contributing/reporting-issues",
-        // "contributing/pull-request",
+    // {
+    //   type: "category",
+    //   label: "Contributing",
+    //   link: {
+    //     type: "doc",
+    //     id: "contributing/index",
+    //   },
+    //   items: [
+    //     "contributing/reporting-issues",
 
-        {
-          type: "link",
-          label: "Feature Request",
-          href: "/feature-requests",
-          description: "Request a feature"
-        }
-      ]
-    },
+    //     {
+    //       type: "link",
+    //       label: "Feature Request",
+    //       href: "/feature-requests",
+    //       description: "Request a feature"
+    //     }
+    //   ]
+    // },
   ],
 
   exampleSidebar: [
