@@ -1,5 +1,5 @@
 import path from 'path';
-import {normalizeUrl, posixPath} from '@docusaurus/utils';
+import { normalizeUrl, posixPath } from '@docusaurus/utils';
 
 /**
  * @param {import('@docusaurus/types').LoadContext} context
@@ -9,7 +9,7 @@ import {normalizeUrl, posixPath} from '@docusaurus/utils';
 export default function FeatureRequestsPlugin(context) {
   return {
     name: 'feature-requests-plugin',
-    async contentLoaded({actions}) {
+    async contentLoaded({ actions }) {
       const basePath = normalizeUrl([context.baseUrl, '/feature-requests']);
       const paths = await actions.createData(
         'paths.json',

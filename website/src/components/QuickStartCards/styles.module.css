@@ -1,7 +1,7 @@
 .card {
-    border: 1.5px solid var(--ifm-color-primary);
+    border: 1.5px solid var(--ifm-color-primary) !important;
     box-shadow: var(--ifm-global-shadow-tl);
-    margin-bottom: var(--ifm-leading);
+    /* margin-bottom: var(--ifm-leading); */
     height: 100%;
     overflow: hidden;
 }
@@ -21,6 +21,6 @@
     display: flex;
     justify-content: left;
     margin-top: auto;
-    color: var(--ifm-color-primary);
+    color: var(--ifm-color-primary) !important;
   }
   
