@@ -280,7 +280,7 @@ const sidebars: SidebarsConfig = {
       items: [
         "examples/python/bmi-calculator",
         "examples/python/fibonacci-sequence",
-        "examples/python/password-generator"
+        "examples/python/password-generator",
       ]
     },
     {
@@ -295,39 +295,24 @@ const sidebars: SidebarsConfig = {
       items: [
         "examples/django/crud-demo",
       ]
-      
+
+    },
+    {
+      type: "category",
+      label: "READMEs",
+      collapsed: true,
+      link: {
+        type: "generated-index",
+        slug: "/examples/setup",
+        description: "Project setup guides and more.",
+      },
+      items: [
+        "examples/setup/python-starters",
+        "examples/setup/flask-tutorials"
+      ]
     },
 
   ],
-
-  // repoSidebar: [
-  //   "repo/index",
-  //   {
-  //     type: 'category',
-  //     label: 'Django',
-  //     collapsed: true,
-  //     link: {
-  //       type: "generated-index",
-  //       slug: "/repo/django",
-  //     },
-  //     items: [
-  //       "repo/django/django-crud-demo",
-  //       "repo/django/django-custom-user",
-  //     ]
-  //   },
-    // {
-    //   type: "category",
-    //   label: "Python",
-    //   collapsed: true,
-    //   items: [
-    //     "repo/bmi-in-python",
-    //     "repo/fibonacci-in-python",
-    //     "repo/password-generator-python",
-    //     "repo/python-starters",
-    //     "repo/flask-tutorials",
-    //   ],
-    // },
-
 
 
   // myHtmlSidebar: [
