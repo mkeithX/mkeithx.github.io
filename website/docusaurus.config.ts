@@ -267,7 +267,7 @@ const config: Config = {
           title: "More",
           items: [
             { label: "Updates", to: "/blog" },
-            { label: "Contributing", href: "/docs/contributing" },
+            { label: "Contributing", href: "/community" },
           ],
         },
         {

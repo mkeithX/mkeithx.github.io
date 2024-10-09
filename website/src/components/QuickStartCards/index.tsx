@@ -103,7 +103,7 @@ export function ReportsCardRow(): JSX.Element {
       <QuickStartCol
         title="Bugs 🪲"
         subTitle="If you find issues or inconsistencies with the documentation or have suggestions on how to improve the project in general, please feel free to file an issue."
-        webUrl="/community/contributing#issues"
+        webUrl="/community"
       />
       <QuickStartCol
         title="Request a Feature ❓"
