@@ -1,0 +1,170 @@
+---
+description: Basic Python examples.
+sidebar_label: Python Starters
+---
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+
+# Python for Starters
+Code samples for algorithm, API calls, and data structures written in `Python`.
+
+
+## Requirements
+This project requires minimal setup and you need to have the following installed in your local machine:
+
+[![Python](https://skillicons.dev/icons?i=python)](https://www.python.org/downloads/)
+[![Git](https://skillicons.dev/icons?i=git)](https://git-scm.com/downloads)
+
+<!-- > _For best practices, ensure that you have the newest versions._ -->
+
+
+## Installation
+
+#### Clone Repo
+
+```bash
+git clone https://github.com/mkeithX/python-starters.git
+```
+
+```bash
+cd python-starters
+```
+
+#### Setup Virtual Environment
+
+<Tabs>
+  <TabItem value="nt" label="Windows" default>
+    
+```bash
+py -m venv .venv
+```
+```bash
+.venv\Scripts\activate
+```
+  </TabItem>
+  <TabItem value="ln" label="Unix">
+
+```bash
+python3 -m venv .venv
+```
+
+```bash
+source .venv/bin/activate
+```
+
+  </TabItem>
+</Tabs>
+
+#### Managing Dependencies
+
+ <Tabs>
+  <TabItem value="nt" label="Windows" default>
+
+```bash
+py -m pip install --upgrade pip
+```
+
+```bash
+py -m pip install --upgrade -r requirements.txt
+```
+
+  </TabItem>
+  <TabItem value="ln" label="Unix">
+
+```bash
+python3 -m pip install --upgrade pip
+```
+
+```bash
+python3 -m pip install --upgrade -r requirements.txt
+```
+
+  </TabItem>
+</Tabs>
+
+## What's inside
+
+<div class="contentTableContainer">
+
+| Title                 | Description                                                                                            |
+|:-----------------------|--------------------------------------------------------------------------------------------------------|
+| Fibonacci Generator   | Generates a sequence of numbers where each term is the sum of the two preceding terms.                 |
+| BMI Calculator        | Determines your BMI status—Normal, Overweight, or Obese.                                               |
+| Cipher/Decipher       | Encrypts or decrypts messages using the Caesar Cipher Algorithm.                                         |
+| Password Generator    | Generates random passwords with three complexity levels.                                                |
+| Video Downloader      | Easily downloads videos.                                                                               |
+| Countdown Timer       | Set and track countdowns.                                                                               |
+| QR Code Generator     | Create QR codes.                                                                                        |
+| Word Guess Game       | A fun game for guessing words.                                                                          |
+| Currency Converter    | Convert between currencies.                                                                             |
+| Weather Forecast      | Provides current weather conditions and forecasts. Learn [more](https://home.openweathermap.org/home).                                                      |
+
+</div>
+
+<br></br>
+
+<details>
+<summary>Show code sample</summary>
+
+```py
+import os
+
+class Fibonacci:
+    def __init__(self) -> None:
+        self.sequence = [0, 1]
+
+    def get(self, index: int):
+        """
+        Get Fibonacci sequence up to the specified index.
+
+        >>> Fibonacci().get(10)
+        [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+        >>> Fibonacci().get(5)
+        [0, 1, 1, 2, 3]
+        """
+        difference = index - len(self.sequence) + 2
+        if difference > 0:
+            self.sequence.extend(self.sequence[-1] + self.sequence[-2] for _ in range(difference))
+        return self.sequence[:index]
+
+def clear_console():
+    os.system('cls' if os.name == 'nt' else 'clear')
+
+def main():
+    clear_console()
+    app_name = "Fibonacci Sequence Generator"
+    msg = "(To exit, enter 'exit' or press Ctrl-C)"
+    print(f'{"-" * 48}\n{" " * 10}{app_name}\n{" " * 5}{msg}{" " * 12}\n{"-" * 48}')
+
+    fibonacci = Fibonacci()
+
+    while True:
+        print()
+        prompt = input(">> ").lower()
+
+        if prompt in {"exit", "quit"}:
+            break
+
+        try:
+            index = int(prompt)
+        except ValueError:
+            print("Enter a number or 'exit'")
+            continue
+
+        print(*fibonacci.get(index), sep=', ')
+
+if __name__ == "__main__":
+    main()
+```
+
+</details>
+
+## License
+This project is licensed under [MIT](https://github.com/mkeithX/python-starters?tab=MIT-1-ov-file#readme).
+
+## Support
+
+🎉 Give this project a star ⭐ on [GitHub](https://github.com/mkeithX/python-starters). 🙏
+
