@@ -35,3 +35,4 @@ jobs:
           projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
           directory: website/build
           gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'

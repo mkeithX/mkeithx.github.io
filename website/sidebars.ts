@@ -26,7 +26,7 @@ const sidebars: SidebarsConfig = {
         description: "Quick examples, useful utilities and demos.",
       },
       items: [
-        // "troubleshoot",
+
         "gists/gists-windows",
         "gists/gists-git",
         // "gists/gists-misc",
@@ -172,44 +172,77 @@ const sidebars: SidebarsConfig = {
         },
       ],
     },
+    // DevOps
     {
       type: "category",
-      label: "Examples",
+      label: "DevOps",
       collapsed: true,
-      collapsible: true,
       link: {
         type: "doc",
-        id: "repo/index",
+        id: "devops/index",
       },
       items: [
         {
-          type: 'category',
-          label: 'Python',
+          type: "category",
+          label: "Microsoft 365",
           collapsed: true,
+          link: {
+            type: "doc",
+            id: "devops/admin-center/index",
+          },
           items: [
-            "repo/bmi-in-python",
-            "repo/fibonacci-in-python",
-            "repo/password-generator-python",
-            "repo/python-starters",
-            "repo/flask-tutorials",
-
-          ]
+            "devops/admin-center/aka-ms",
+            "devops/admin-center/mailbox-archive",
+            {
+              type: "category",
+              label: "Trainings",
+              description: "Training and comprehensive guides for Admin & Users",
+              link: {
+                type: "generated-index",
+                slug: "devops/admin-center/training",
+              },
+              items: [
+                "devops/admin-center/training/email-management",
+                "devops/admin-center/training/install-via-intune",
+                "devops/admin-center/training/conditional-access",
+              ],
+            },
+          ],
         },
-
-
         {
-          type: 'category',
-          label: 'Django',
+          type: "category",
+          label: "Snippets",
           collapsed: true,
-          items:[
-            "repo/django-crud-demo",
-            "repo/django-custom-user",
-          ]
+          link: {
+            type: "doc",
+            id: "devops/snippets/index",
+          },
+          items: ["devops/snippets/tech-notes", "devops/snippets/email-templates"],
         },
-
-      ],
-      
+        {
+          type: "category",
+          label: "Guides & Workarounds",
+          collapsed: true,
+          link: {
+            type: "generated-index",
+            slug: "/devops/guides-and-workarounds",
+            description: "Basic troubleshooting guide and workarounds.",
+          },
+          items: [
+            "devops/troubleshoot/cloud-pc",
+            "devops/troubleshoot/powershell",
+            "devops/troubleshoot/windows-utilities",
+            "devops/troubleshoot/windows-hardware-issues",
+            "devops/troubleshoot/windows-network-issues",
+            "devops/troubleshoot/ms-teams",
+          ],
+        },
+        "devops/troubleshoot-like-a-boss",
+        "devops/glossary",
+      ]
     },
+
+
     {
       type: "category",
       label: "Contributing",
@@ -232,68 +265,71 @@ const sidebars: SidebarsConfig = {
     },
   ],
 
-  devops: [
-    "devops/index",
-    // "devops/troubleshoot-like-a-boss",
+  exampleSidebar: [
+    "examples/index",
+    "examples/quick-start-guide",
     {
       type: "category",
-      label: "Microsoft 365",
-      collapsed: false,
-      link: {
-        type: "doc",
-        id: "devops/admin-center/index",
-      },
-      items: [
-        "devops/admin-center/aka-ms",
-        "devops/admin-center/mailbox-archive",
-        {
-          type: "category",
-          label: "Trainings",
-          description: "Training and comprehensive guides for Admin & Users",
-          link: {
-            type: "generated-index",
-            slug: "devops/admin-center/training",
-          },
-          items: [
-            "devops/admin-center/training/email-management",
-            "devops/admin-center/training/install-via-intune",
-            "devops/admin-center/training/conditional-access",
-          ],
-        },
-      ],
-    },
-
-    {
-      type: "category",
-      label: "Snippets",
-      collapsed: true,
-      link: {
-        type: "doc",
-        id: "devops/snippets/index",
-      },
-      items: ["devops/snippets/tech-notes", "devops/snippets/email-templates"],
-    },
-
-    {
-      type: "category",
-      label: "Guides & Workarounds",
+      label: "Python",
       collapsed: true,
       link: {
         type: "generated-index",
-        slug: "/devops/guides-and-workarounds",
-        description: "Basic troubleshooting guide and workarounds.",
+        slug: "/examples/python",
+        description: "Python short examples",
       },
       items: [
-        "devops/troubleshoot/cloud-pc",
-        "devops/troubleshoot/powershell",
-        "devops/troubleshoot/windows-utilities",
-        "devops/troubleshoot/windows-hardware-issues",
-        "devops/troubleshoot/windows-network-issues",
-        "devops/troubleshoot/ms-teams",
-      ],
+        "examples/python/bmi-calculator",
+        "examples/python/fibonacci-sequence",
+        "examples/python/password-generator"
+      ]
     },
-    "devops/glossary",
+    {
+      type: "category",
+      label: "Django",
+      collapsed: true,
+      link: {
+        type: "generated-index",
+        slug: "/examples/django",
+        description: "Django examples",
+      },
+      items: [
+        "examples/django/crud-demo",
+      ]
+      
+    },
+
   ],
+
+  // repoSidebar: [
+  //   "repo/index",
+  //   {
+  //     type: 'category',
+  //     label: 'Django',
+  //     collapsed: true,
+  //     link: {
+  //       type: "generated-index",
+  //       slug: "/repo/django",
+  //     },
+  //     items: [
+  //       "repo/django/django-crud-demo",
+  //       "repo/django/django-custom-user",
+  //     ]
+  //   },
+    // {
+    //   type: "category",
+    //   label: "Python",
+    //   collapsed: true,
+    //   items: [
+    //     "repo/bmi-in-python",
+    //     "repo/fibonacci-in-python",
+    //     "repo/password-generator-python",
+    //     "repo/python-starters",
+    //     "repo/flask-tutorials",
+    //   ],
+    // },
+
+
+
   // myHtmlSidebar: [
   //   {
   //     type: 'html',
