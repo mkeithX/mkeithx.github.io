@@ -6,9 +6,6 @@ on:
   push:
     branches:
       - main
-  pull_request:
-    branches:
-      - main
 
 
 jobs:
@@ -32,7 +29,7 @@ jobs:
       - name: Install Dependencies
         run: |
             cd website
-            ci install && npm run build
+            npm ci && npm run build
 
       - name: Deploy (Production)
         uses: cloudflare/pages-action@v1
