@@ -232,10 +232,10 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
         { type: "search", position: "right" },
-        {
-          type: "html",
-          value: '<span class="badge badge--sm badge--danger">Beta</span>',
-        },
+        // {
+        //   type: "html",
+        //   value: '<span class="badge badge--sm badge--danger">Beta</span>',
+        // },
       ],
     },
     algolia: {
