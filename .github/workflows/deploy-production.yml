@@ -1,9 +1,16 @@
 name: Deploy (Production)
 
+concurrency: production
+
 on:
   push:
     branches:
       - main
+  pull_request:
+    branches:
+      - main
+  workflow_dispatch:
+
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
@@ -25,7 +32,7 @@ jobs:
       - name: Install Dependencies
         run: |
             cd website
-            npm install && npm run build
+            ci install && npm run build
 
       - name: Deploy (Production)
         uses: cloudflare/pages-action@v1
