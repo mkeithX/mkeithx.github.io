@@ -265,34 +265,70 @@ const sidebars: SidebarsConfig = {
     },
   ],
 
-  repo: [
-    // "troubleshoot",
-    "repo/index",
+  exampleSidebar: [
+    "examples/index",
+    "examples/quick-start-guide",
     {
       type: "category",
       label: "Python",
       collapsed: true,
+      link: {
+        type: "generated-index",
+        slug: "/examples/python",
+        description: "Python short examples",
+      },
       items: [
-        "repo/bmi-in-python",
-        "repo/fibonacci-in-python",
-        "repo/password-generator-python",
-        "repo/python-starters",
-        "repo/flask-tutorials",
-      ],
-    },
-
-    {
-      type: 'category',
-      label: 'Django',
-      collapsed: true,
-      items: [
-        "repo/django-crud-demo",
-        "repo/django-custom-user",
+        "examples/python/bmi-calculator",
+        "examples/python/fibonacci-sequence",
+        "examples/python/password-generator"
       ]
     },
+    {
+      type: "category",
+      label: "Django",
+      collapsed: true,
+      link: {
+        type: "generated-index",
+        slug: "/examples/django",
+        description: "Django examples",
+      },
+      items: [
+        "examples/django/crud-demo",
+      ]
+      
+    },
+
   ],
 
-  // devops: 
+  // repoSidebar: [
+  //   "repo/index",
+  //   {
+  //     type: 'category',
+  //     label: 'Django',
+  //     collapsed: true,
+  //     link: {
+  //       type: "generated-index",
+  //       slug: "/repo/django",
+  //     },
+  //     items: [
+  //       "repo/django/django-crud-demo",
+  //       "repo/django/django-custom-user",
+  //     ]
+  //   },
+    // {
+    //   type: "category",
+    //   label: "Python",
+    //   collapsed: true,
+    //   items: [
+    //     "repo/bmi-in-python",
+    //     "repo/fibonacci-in-python",
+    //     "repo/password-generator-python",
+    //     "repo/python-starters",
+    //     "repo/flask-tutorials",
+    //   ],
+    // },
+
+
 
   // myHtmlSidebar: [
   //   {

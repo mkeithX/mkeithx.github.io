@@ -1,0 +1,85 @@
+---
+description: Creating a Fibonacci Sequence Generator in Python
+---
+
+# Fibonacci Sequence Generator
+
+In this guide, we'll walk through creating a Fibonacci sequence generator using Python. This application allows users to generate Fibonacci numbers up to a specified index, providing a clear understanding of the sequence. We’ll cover the essential steps, including class definition, method implementation, and user interaction.
+
+## Step 1: Setting Up Your Environment
+
+Make sure you have Python installed on your system. You can download it from [python.org](https://www.python.org/). Use any text editor or integrated development environment (IDE) like VSCode or PyCharm to write your code.
+
+## Step 2: Define the Fibonacci Class
+
+We'll create a class called `Fibonacci` that will generate the Fibonacci sequence. This class will have an initializer and a method to get the sequence up to a specified index.
+
+```python
+class Fibonacci:
+    def __init__(self) -> None:
+        self.sequence = [0, 1]
+```
+
+## Step 3: Implement the `get` Method
+
+The `get` method will compute the Fibonacci sequence up to the given index. If the index exceeds the current sequence length, it will extend the sequence.
+
+```python
+    def get(self, index: int):
+        """
+        Get Fibonacci sequence up to the specified index.
+
+        >>> Fibonacci().get(10)
+        [0, 1, 1, 2, 3, 5, 8, 13, 21, 34]
+        >>> Fibonacci().get(5)
+        [0, 1, 1, 2, 3]
+        """
+        difference = index - len(self.sequence) + 2
+        if difference > 0:
+            self.sequence.extend(self.sequence[-1] + self.sequence[-2] for _ in range(difference))
+        return self.sequence[:index]
+```
+
+## Step 4: Build the Main Function
+
+Now we’ll create the main function that will handle user input, display the Fibonacci sequence, and manage the program's flow.
+
+```python
+def main():
+    os.system("cls" if os.name == 'nt' else "clear")
+    app_name = "Fibonacci Sequence Generator - mkeithX"
+    border_length = len(app_name) + 4
+
+    print("+" + "-" * (border_length - 2) + "+")
+    print(f"| {app_name} |")
+    print("+" + "-" * (border_length - 2) + "+")
+    fibonacci = Fibonacci()
+
+    while True:
+        print()
+        prompt = input(">> ")
+
+        if prompt in {"exit", "quit"}:
+            break
+
+        try:
+            index = int(prompt)
+        except ValueError:
+            print("Enter a number or 'exit'")
+            continue
+
+        print(*fibonacci.get(index), sep=', ')
+```
+
+## Step 5: Execute the Program
+
+Finally, ensure the main function runs when the script is executed:
+
+```python
+if __name__ == "__main__":
+    main()
+```
+
+## Congratulations!
+
+You've successfully created a Fibonacci sequence generator in Python! This application allows users to input an index and receive the Fibonacci numbers up to that point. You can further enhance this generator by adding features like error handling for negative indices or a graphical user interface. Happy coding!

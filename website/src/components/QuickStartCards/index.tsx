@@ -113,3 +113,22 @@ export function ReportsCardRow(): JSX.Element {
     </div>
   );
 }
+
+export function ProjectsDocsRow(): JSX.Element {
+  return (
+    <div className="row">
+      <QuickStartCol 
+      title="Django"
+      subTitle="Apps built with Django"
+      webUrl="/docs/examples/django"
+      />
+            <QuickStartCol 
+      title="Python"
+      subTitle="Apps built with Python"
+      webUrl="/docs/examples/django"
+      />
+    </div>
+  );
+}
+
+
