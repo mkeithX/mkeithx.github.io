@@ -11,51 +11,43 @@ function ComingSoon() {
   const announcedVersion = useDocusaurusContext().siteConfig.customFields
     ?.announcedVersion as string;
   return (
-        <main style={{
-          margin: '0 auto',
-          padding: '0 20px',
-          maxWidth: '1200px'
+    <main style={{
+      margin: '0 auto',
+      padding: '0 20px',
+      maxWidth: '1200px'
+    }}>
+      <div className={clsx('hero-container')}>
+        <div style={{
+          display: 'flex',
+          flexDirection: 'column',
+          justifyContent: 'center',
+          alignItems: 'center',
+          textAlign: 'center',
         }}>
-          <div className={'hero-container'}>
+          <h1 style={{ color: 'var(--ifm-color-primary)', fontSize: '48px', textAlign: 'center' }}>
+            {"Rolling Out Soon"}
+          </h1>
+          <ComingSoonImageUrl
+            className={clsx(styles.ComingSoon)}
+            title="Coming Soon"
+            height={250}
+          />
+        </div>
+        <div>
           <div style={{
-              display: 'flex',
-              justifyContent: 'center',
-            }}>
-              <ComingSoonImageUrl 
-              className={clsx(styles.ComingSoon)}
-              title="Coming Soon"
-              // width={250}
-              height={250}
-              />
-                
-
-
-            </div>
-            <div>
-              <div style={{
-                display: 'flex',
-                flexDirection: 'column',
-                justifyContent: 'center',
-                alignItems: 'center',
-                textAlign: 'center',
-              }}>
-                <h1 style={{color: 'var(--ifm-color-primary)', fontSize: '48px', textAlign: 'center'}}>
-                 {"Coming soon"}
-                </h1>
-                <h3>{"Exciting things are on the way!"}</h3>
-                {/* <h3>{"Stay tuned."}</h3> */}
-                {/* <GridFlexRow type={'evenly'}>
-                  <CTAButton
-                    href={'/'}
-                    label={'Go Back'}
-                    type={'secondary'}
-                  />
-                </GridFlexRow> */}
-              </div>
-            </div>
+            display: 'flex',
+            flexDirection: 'column',
+            justifyContent: 'center',
+            alignItems: 'center',
+            textAlign: 'center',
+          }}>
+            <h3>{"Exciting things are on the way!"}</h3>
 
           </div>
-        </main>
+        </div>
+
+      </div>
+    </main>
   );
 }
 export default ComingSoon;

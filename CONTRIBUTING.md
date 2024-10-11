@@ -1,9 +1,17 @@
 # Contributing
 
-When contributing to this project, please first discuss the change you wish to make by creating a [new issue](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose). The feature or bug will be discussed, and if it's something we would like to see in our codebase we will ask you to create a pull request for it.
+When contributing to this project, please first discuss the change you wish to make by creating a [new issue](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose). We also established a [Code of Conduct](../community/code-of-conduct) for all participants to follow as we foster a positive and inclusive community.
 
-We also established a [**Code of Conduct**](/community/code-of-conduct) for all participants to follow as we foster a positive and inclusive community.
- 
+## Code conventions
+Follow the existing code style and formatting conventions. Check out [this guide](../community/styling-guide) to learn more.
+
+
+```yml
+---
+title: Awesome Stuff
+description: Short description
+---
+```
 
 ## Pull Request Process
 
@@ -33,9 +41,9 @@ git push -u origin <'feature/your-feature-name'>
 8. Our team will review your PR, provide feedback, and merge it if everything looks good.
 
 
-## Code Conventions
+## Code x
 
-> Follow the existing code style and formatting conventions.
+
 
 ### Commit Messages
 
