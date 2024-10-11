@@ -1,0 +1,76 @@
+---
+description: Guidelines for reporting bugs and feature requests
+sidebar_position: 4.1
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+
+# Issues
+Streamline guides for squashing bugs and sharing ideas.
+
+## Bugs
+Please take note that the project is built and aligns with the latest Docusaurus version and it is very important to review these items before submitting an issue to ensure you’ve completed the necessary steps:
+
+### Basic Troubleshooting
+
+#### 1st step
+
+```bash npm2yarn
+npm run clear
+```
+#### 2nd step
+
+<Tabs groupId="operating-systems">
+  <TabItem value="bash" label="Bash">
+
+  ```bash
+  rm -rf node_modules yarn.lock package-lock.json
+  ```
+
+  </TabItem>
+  <TabItem value="pwsh" label="PowerShell">
+
+  ```sh
+  @('node_modules','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
+  ```
+
+  </TabItem>
+</Tabs>
+
+#### 3rd step
+
+```bash npm2yarn
+npm install
+```
+
+#### Self Assess
+
+Consider ask yourself the following:
+- Do I have an idea of where the issue occurs?
+- Did I include clear steps to reproduce it?
+- Could it be due to my own mistakes?
+- Has this bug already been reported?
+
+Once you are certain that it is indeed **bug**, feel free to [submit a report](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose).
+
+## Feature Request
+You can use the [Canny board](/feature-requests) for casual feature request or if you're not ready to open a pull request.
+
+<!-- 
+## Feedback
+
+We welcome feedback on how we can improve our guidelines or the contribution process itself. If you have any suggestions, please let us know by opening an issue or reaching out to us directly. -->
+
+<!-- 
+
+You can report [documentation-related issues](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose) if you encounter any of the following:
+
+- Undocumented API
+- Need for elaboration on a particular topic
+- Outdated or incorrect information
+- Formatting or readability improvement
+
+For issues related to infrastructure, please visit the [**Docusaurus website**](https://docusaurus.io/community/contributing#issues). -->
+
