@@ -12,10 +12,176 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 import { ProjectsDocsRow } from '@site/src/components/QuickStartCards';
 
 
-# Project `docs`
+# Examples
 
 This section outlines the installation guides across all [projects](/projects) and demos I've authored and contributed to.
 
 
 
 <ProjectsDocsRow />
+
+
+## Live Editor
+Test your React using the Interactive Code Editor:
+
+<BrowserWindow>
+
+
+```jsx live noInline
+const project = 'The SpaceHub Project';
+
+const Greeting = () => <p>Introducing <br></br> {project}</p>;
+
+render(<Greeting />);
+```
+
+</BrowserWindow>
+
+### Samples
+
+<details>
+  <summary>**Real-Time Clock**</summary>
+
+Displays the current time and updates every second. It uses `useState` to manage the time state and `useEffect` to set up and clean up a timer for real-time updates.
+
+```jsx
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return function cleanup() {
+      clearInterval(timerID);
+    };
+  });
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h2>It is {date.toLocaleTimeString()}.</h2>
+    </div>
+  );
+}
+render(Clock)
+```
+
+</details>
+
+
+<details>
+<summary>**Enhanced Clock**</summary>
+
+Showing both 24-hour and 12-hour formats.
+
+```jsx
+function Clock(props) {
+  const [date, setDate] = useState(new Date());
+
+  useEffect(() => {
+    const timerID = setInterval(() => tick(), 1000);
+
+    return () => clearInterval(timerID); // Cleanup timer on unmount
+  }, []); // Add empty dependency array for one-time setup
+
+  function tick() {
+    setDate(new Date());
+  }
+
+  return (
+    <div>
+      <h4>
+        Date: {date.toLocaleDateString()}, {date.toLocaleDateString(undefined, { weekday: "long" })}
+      </h4>
+      <h4>
+        Time: {date.toLocaleTimeString([], { hour12: false })} · {date.toLocaleTimeString([])}
+      </h4>
+    </div>
+  );
+}
+
+render(<Clock />);
+```
+</details>
+
+
+<details>
+<summary>**Likes Counter**</summary>
+
+A simple component that allows users to increase a like count. 
+
+```jsx
+const LikeButton = (props: Props) => {
+  const [likes, increaseLikes] = React.useState<number>(0);
+  
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h3 style={{
+        background: 'darkslateblue',
+        color: 'white',
+        padding: 8,
+        borderRadius: 4,
+        textAlign: 'center', // Center text within the h3
+      }}>
+        {props.label} {likes} Likes
+      </h3>
+      <button
+        className="button button--md button--danger"
+        onClick={() => increaseLikes(c => c + 1)}
+      >
+        {"🤍"}
+      </button>
+    </div>
+  );
+};
+
+render(<LikeButton/>);
+```
+</details>
+
+<details>
+<summary>**Likes/Dislikes**</summary>
+
+Counts for likes and dislikes using `useState` 
+
+```jsx
+const LikeDislikeButton = (props: Props) => {
+  const [likes, setLikes] = React.useState<number>(0);
+  const [dislikes, setDislikes] = React.useState<number>(0);
+
+  return (
+    <div style={{ display: 'flex', flexDirection: 'column', alignItems: 'center' }}>
+      <h3 style={{
+        background: 'darkslateblue',
+        color: 'white',
+        padding: 8,
+        borderRadius: 4,
+        textAlign: 'center',
+      }}>
+        {props.label} {likes} Likes | {dislikes} Dislikes
+      </h3>
+      <div>
+        <button
+          className="button button--md button--outline button--success"
+          onClick={() => setLikes(likes + 1)}
+          style={{ marginRight: 8 }} // Add gap between buttons
+        >
+          👍
+        </button>
+        <button
+          className="button button--md button--outline button--danger"
+          onClick={() => setDislikes(dislikes + 1)}
+        >
+          👎
+        </button>
+      </div>
+    </div>
+  );
+};
+
+render(<LikeDislikeButton/>);
+```
+
+</details>

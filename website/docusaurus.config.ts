@@ -205,9 +205,9 @@ const config: Config = {
         { type: "doc", position: "left", docId: "keyword", label: "Docs" },
         { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
         { to: "/projects", label: "Showcase" },
-        { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community" },
         // { to: "/foobar", label: "What's this ?" },
+        { to: "/blog", position: "right", label: "Updates" },
         {
           type: "dropdown",
           label: "More",
@@ -224,6 +224,7 @@ const config: Config = {
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
         },
+       
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -233,7 +234,7 @@ const config: Config = {
         { type: "search", position: "right" },
         // {
         //   type: "html",
-        //   value: '<span class="badge badge--sm badge--secondary">M87</span>',
+        //   value: '<span class="badge badge--sm badge--danger">Beta</span>',
         // },
       ],
     },
@@ -266,7 +267,7 @@ const config: Config = {
           title: "More",
           items: [
             { label: "Updates", to: "/blog" },
-            { label: "Contributing", href: "/docs/contributing" },
+            { label: "Contributing", href: "/community" },
           ],
         },
         {

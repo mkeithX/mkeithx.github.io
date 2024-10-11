@@ -13,7 +13,7 @@ type QuickStartLinkProps = {
 function QuickStartLink({ to, children }: QuickStartLinkProps) {
   return (
     <Link to={to}>
-      {children ?? <div id="quickstartLinkLabel">website</div>}
+      {children ?? <div id="QuickStartLinkLabel">website</div>}
     </Link>
   );
 }
@@ -32,20 +32,28 @@ function QuickStartCard({ className, title, subTitle, webUrl }: ProfileProps) {
         <div className={clsx("card__header")}>
           <div className={clsx("avatar")}>
             <QuickStartImageUrl
-              className={clsx("avatar__photo avatar__photo--lg", styles.image)}
+              className={clsx("avatar__photo avatar__photo--lg")}
               title={title}
             />
-            <div className="avatar__intro">
-              <Heading as="h3">
-                <span>{title}</span>
+            <div className={clsx("avatar__intro")}>
+              <Heading as="h2">
+                {title}
+                {/* <span className="margin--vert-sm"><b>{title}</b></span> */}
     
               </Heading>
-              {/* <div className="avatar__name">{title}</div> */}
-              <div className="avatar__subtitle">{subTitle}</div>
+              <div className="avatar__subtitle">{subTitle}
+              {webUrl && (
+              <Link className="text--no-decoration" to={webUrl}>
+                {" Learn more"}
+              </Link>
+            )}
+
+              </div>
+
             </div>
           </div>
         </div>
-        <div className={clsx("card__footer")}>
+        {/* <div className={clsx("card__footer")}>
           <div
             className={clsx("button-group button-group--block", styles.buttons)}
           >
@@ -55,7 +63,7 @@ function QuickStartCard({ className, title, subTitle, webUrl }: ProfileProps) {
               </Link>
             )}
           </div>
-        </div>
+        </div> */}
       </div>
     </div>
   );
@@ -69,8 +77,8 @@ export function QuickStartCardRow(): JSX.Element {
   return (
     <div className="row">
       <QuickStartCol
-        title="Advanced Guides"
-        subTitle="Tips and Best Practice for mitigating issues."
+        title="Guides"
+        subTitle="Advanced tips, guides and best practices for mitigating issues."
         webUrl="/docs/devops/guides-and-workarounds"
       />
       <QuickStartCol
@@ -103,7 +111,7 @@ export function ReportsCardRow(): JSX.Element {
       <QuickStartCol
         title="Bugs 🪲"
         subTitle="If you find issues or inconsistencies with the documentation or have suggestions on how to improve the project in general, please feel free to file an issue."
-        webUrl="/community/contributing#issues"
+        webUrl="/community"
       />
       <QuickStartCol
         title="Request a Feature ❓"

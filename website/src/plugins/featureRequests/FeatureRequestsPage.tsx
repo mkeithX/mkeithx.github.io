@@ -42,7 +42,7 @@ export default function FeatureRequests({
   basePath: string;
 }): JSX.Element {
   return (
-    <Layout title="Feature Request" description="Your ideas are welcome for this project..">
+    <Layout title="Feature Request" description="Share your ideas...">
       <CannyWidget basePath={basePath} />
     </Layout>
   );

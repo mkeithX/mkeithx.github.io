@@ -1,5 +1,7 @@
 name: Deploy (Preview)
 
+concurrency: development
+
 on: [pull_request]
 
 jobs:
@@ -23,7 +25,7 @@ jobs:
       - name: Install Dependencies
         run: |
             cd website
-            npm install && npm run build
+            npm ci && npm run build
             
       - name: Deploy (Preview)
         uses: cloudflare/pages-action@v1
