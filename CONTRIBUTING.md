@@ -9,10 +9,10 @@ When contributing to this project, please first discuss the change you wish to m
 Contributors must follow the standard code style and formatting conventions. Check out [this guide](https://mkeithx.pages.dev/community/styling-guide) to learn more.
 
 
-## Pull Request
+## Pull Requests
 Before submitting, please make sure that:
 
-- **Keep it small**: At least (~300 lines of diff). Keep your changes focused and addressing one issue per PR. Otherwise, please split it into separate requests.
+- **Keep it simple**: At least (~300 lines of diff). Keep your changes focused and addressing one issue per PR. Otherwise, please split it into separate requests.
 - **Make it clear**: Write clear and concise [commit messages](#semantic-commit-messages) and PR descriptions.
 - **Pass all tests**: Test your changes thoroughly and ensure they don't introduce any regressions.
 
@@ -52,9 +52,9 @@ More about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/
 
 
 
-### Fork
+## Contribute
 
-1. Fork the repository to your GitHub account.
+1. [Fork the repository](https://github.com/mkeithX/mkeithx.github.io/fork) to your GitHub account.
 2. Clone the forked repository to your local machine.
 3. Create a new branch for your feature or bug fix:
 
@@ -78,27 +78,6 @@ git push -u origin <'feature/your-feature-name'>
 6. Open a pull request (PR) against the main repository's `main` branch.
 7. Ensure that your PR includes a clear description of the changes made and any relevant information.
 8. Our team will review your PR, provide feedback, and merge it if everything looks good.
-
-
-
-
-
-## Issues
-
-### Bugs
-
-You can report [documentation-related issues](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose) if you encounter any of the following:
-
-- Undocumented API
-- Need for elaboration on a particular topic
-- Outdated or incorrect information
-- Formatting or readability improvement
-
-For issues related to infrastructure, please visit the [**Docusaurus website**](https://docusaurus.io/community/contributing#issues).
-
-### Feature Request
-For new feature or suggestion, feel free to submit a [feature request](/feature-requests)
-
 
 ## Licensing
 

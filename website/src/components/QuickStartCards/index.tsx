@@ -34,9 +34,10 @@ function QuickStartCard({ className, title, subTitle, webUrl }: ProfileProps) {
             <QuickStartImageUrl
               className={clsx("avatar__photo avatar__photo--lg")}
               title={title}
+              width={350}
             />
             <div className={clsx("avatar__intro")}>
-              <Heading as="h2">
+              <Heading as="h3">
                 {title}
                 {/* <span className="margin--vert-sm"><b>{title}</b></span> */}
     
@@ -44,7 +45,7 @@ function QuickStartCard({ className, title, subTitle, webUrl }: ProfileProps) {
               <div className="avatar__subtitle">{subTitle}
               {webUrl && (
               <Link className="text--no-decoration" to={webUrl}>
-                {" Learn more"}
+                {" Learn more"}.
               </Link>
             )}
 
@@ -110,13 +111,13 @@ export function ReportsCardRow(): JSX.Element {
     <div className="row">
       <QuickStartCol
         title="Bugs 🪲"
-        subTitle="If you find issues or inconsistencies with the documentation or have suggestions on how to improve the project in general, please feel free to file an issue."
-        webUrl="/community"
+        subTitle="Bugs don’t belong here—report them!"
+        webUrl="/community/report-an-issue#bugs"
       />
       <QuickStartCol
         title="Request a Feature ❓"
-        subTitle="For new feature requests, you can create a post through the feature requests board. Your ideas are welcome for this project!"
-        webUrl="/feature-requests"
+        subTitle="Your ideas are welcome. Help us build the future!"
+        webUrl="/community/report-an-issue#feature-request"
       />
     </div>
   );
