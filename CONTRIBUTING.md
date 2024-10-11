@@ -1,51 +1,11 @@
 # Contributing
 
-When contributing to this repository, please first discuss the change you wish to make via issue,
-email, or any other method with the owners of this repository before making a change. 
+When contributing to this project, please first discuss the change you wish to make by creating a [new issue](https://github.com/mkeithX/mkeithx.github.io/issues/new/choose). The feature or bug will be discussed, and if it's something we would like to see in our codebase we will ask you to create a pull request for it.
 
+We also established a [**Code of Conduct**](/community/code-of-conduct) for all participants to follow as we foster a positive and inclusive community.
+ 
 
-
-To foster a positive and inclusive community, **MKX SpaceHub**™ has established a [**Code of Conduct**](https://kitiplex.github.io/community/code-of-conduct) for all participants to follow. Please review the summarized guidelines to understand what behaviors are expected and unacceptable.
-
-Please read the [detailed guidelines](https://mkeithx.pages.dev/contributing) to know more.
-
-## Core Values
-
-- **Respect**: Treat others with kindness, empathy, and understanding.
-- **Inclusivity**: Embrace diversity of thought, background, and identity.
-- **Openness**: Encourage honest and constructive communication.
-- **Collaboration**: Work together towards common goals with mutual respect.
-
-
-## Expected Behavior
-
-- Be respectful towards others, regardless of differences.
-- Listen actively and considerately to others' perspectives.
-- Provide constructive feedback and criticism.
-- Refrain from engaging in any form of harassment, discrimination, or offensive behavior.
-
-## Unacceptable Behavior
-
-- Offensive comments related to personal characteristics.
-- Harassment, intimidation, or discrimination in any form.
-- Disruptive behavior that hinders productive discussion.
-- Any form of unwelcome attention or advances.
-
-Following these guidelines helps to communicate that you respect the time of the developers managing and developing this open source project. In return, they should reciprocate that respect in addressing your issue or assessing patches and features.
-
-
-## Development process
-
-**MKXSpacehub** depends on GitHub as its main source of information. All pull requests will be checked by the continuous integration system, GitHub actions.
-
-![website_status](https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io%2F&style=for-the-badge&label=Website)
-![Build](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/build-deploy.yml?style=for-the-badge)
-![issues](https://img.shields.io/github/issues/mkeithx/mkeithx.github.io?style=for-the-badge
-)
-![pr](https://img.shields.io/github/issues-pr/mkeithx/mkeithx.github.io?style=for-the-badge
-)
-
-## Contribute
+## Pull Request Process
 
 1. Fork the repository to your GitHub account.
 2. Clone the forked repository to your local machine.
@@ -73,9 +33,9 @@ git push -u origin <'feature/your-feature-name'>
 8. Our team will review your PR, provide feedback, and merge it if everything looks good.
 
 
-### Code Conventions
+## Code Conventions
 
-Follow the existing code style and formatting conventions.
+> Follow the existing code style and formatting conventions.
 
 ### Commit Messages
 
@@ -95,7 +55,7 @@ Write clear and concise commit messages and PR descriptions.
 
 More about [Conventional Commits](https://www.conventionalcommits.org/en/v1.0.0/#examples).
 
-## Pull request
+## PR
 
 - Keep your changes focused and atomic, addressing one issue per PR.
 - Write clear and concise commit messages and PR descriptions.
