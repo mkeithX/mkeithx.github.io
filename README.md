@@ -1,8 +1,5 @@
 <div align="center">
   <h1 align="center">
-    mkeithx website
-    <br />
-    <br />
     <a href="https://mkeithx.pages.dev">
       <img src="./public/img/github-banner.png" alt="mkeithx">
     </a>
@@ -36,11 +33,11 @@
 
 ## Introduction
 
-This repo contains the website configuration and documentation powering the [mkeithx website](https://mkeithx.github.io).
+This repo contains the source code and  configuration powering the **Kitiplex SpaceHub Project** [**website**](https://mkeithx.github.io).
 
 ## Motivation
 
-The project aims to establish an intuitive and comprehensive Knowledge Base Portal using various technologies including AI offering valuable and accessible resources for IT Developers, Helpdesk Analysts, and Amateur Astronomers.
+The project aims to create an intuitive Knowledge Base Portal using powerful, low-maintenance technology, ensuring that content remains both accessible and reliable. See [author's perspective](https://mkeithx.pages.dev/foobar).
 
 ## Installation
 
@@ -66,7 +63,7 @@ yarn build
 
 Generates static content into the `build` directory and can be served using any static contents hosting service.
 
-Learn more about [custom configuration and deployments](https://mkeithx.pages.dev/docs/getting-started).
+Learn more about [custom configuration and deployments](https://mkeithx.pages.dev/docs/deployment).
 
 <!-- [**MKX SpaceHub**](https://mkeithx.github.io/)™ a project built with Docusaurus that aims create an intuitive and comprehensive Knowledge Base Portal, providing valuable and accessible resources for all. [Learn more](https://mkeithx.github.io/docs). -->
 
@@ -75,8 +72,7 @@ Learn more about [custom configuration and deployments](https://mkeithx.pages.de
 Apart from tech docs, you'll get to find articles covering fascinating topics about [the universe](../cosmos/). Ranging from our very own [solar system](https://mkeithx.github.io/cosmos), facts about [celestial mechanics](https://mkeithx.github.io/cosmos/astrophysics), some influential [figures in physics](https://mkeithx.github.io/cosmos/legacy), astronomy, and space exploration, and beyond. -->
 
 ## Contributing
-
-To foster a positive and inclusive community, this has established a Code of Conduct for all participants to follow. [Read the docs](https://mkeithx.github.io/community) for further info.
+[Learn more](https://mkeithx.pages.dev/community).
 
 ---
 
