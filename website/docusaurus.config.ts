@@ -128,9 +128,9 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
+ themes: ['live-codeblock'],
 
   plugins: [
-    "@docusaurus/theme-live-codeblock",
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
     [
       "content-docs",
@@ -206,8 +206,7 @@ const config: Config = {
         { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
         { to: "/projects", label: "Showcase" },
         { to: "/community", label: "Community" },
-        // { to: "/foobar", label: "What's this ?" },
-        { to: "/blog", position: "right", label: "Updates" },
+        { to: "/blog", label: "Updates" },
         {
           type: "dropdown",
           label: "More",
@@ -272,14 +271,14 @@ const config: Config = {
         },
         {
           title: "Connect",
-          items: [socialProfiles.twitter, socialProfiles.facebook],
+          items: [ socialProfiles.facebook, socialProfiles.linkedin,],
         },
         {
           title: "Developers",
           items: [
             { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
             { label: "Vercel", href: "https://vercel.com/" },
-            { label: "Facebook Dev", href: "https://developers.facebook.com/" },
+            { label: "Meta Dev", href: "https://developers.facebook.com/" },
           ],
         },
       ],

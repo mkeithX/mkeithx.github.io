@@ -5,7 +5,7 @@ When contributing to this project, please first discuss the change you wish to m
 - [Open Source Guides](https://opensource.guide/)
 - [Building Welcoming Communities](https://opensource.guide/building-community/)
 
-## Standards and Code Conventions
+## Code Conventions
 Contributors must follow the standard code style and formatting conventions. Check out [this guide](https://mkeithx.pages.dev/community/styling-guide) to learn more.
 
 

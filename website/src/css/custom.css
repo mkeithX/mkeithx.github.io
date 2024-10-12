@@ -7,20 +7,21 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-color-primary: #246de3;
-  --ifm-color-primary-dark: #1b61d2;
-  --ifm-color-primary-darker: #195bc6;
-  --ifm-color-primary-darkest: #326ac5;
-  --ifm-color-primary-light: #3b7de6;
-  --ifm-color-primary-lighter: #4784e7;
-  --ifm-color-primary-lightest: #6a9cec;
+  --ifm-color-primary: #0b84ce;
+  --ifm-color-primary-dark: #0a77b9;
+  --ifm-color-primary-darker: #0970af;
+  --ifm-color-primary-darkest: #085c90;
+  --ifm-color-primary-light: #0c91e3;
+  --ifm-color-primary-lighter: #0d98ed;
+  --ifm-color-primary-lightest: #27a6f3;
 
   --ifm-site-dark: #010409;
+  /* --ifm-site-dark: #1B1C26 */
   --site-color-feedback-background: #f0f8ff;
   
 
   --ifm-code-font-size: 90%;
-  /* --ifm-font-size-base: 18px; */
+  --ifm-font-size-base: 16px;
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
