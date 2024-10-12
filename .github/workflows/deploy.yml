@@ -1,0 +1,58 @@
+name: Deploy
+
+on:
+  pull_request:
+    branches:
+      - main
+
+jobs:
+    deploy-production:
+        runs-on: ubunto-latest
+        steps:
+            - name: Checkout Repo
+              uses: actions/checkout@v4
+              with:
+                fetch-depth: 0
+
+            - name: Setup Node
+              uses: actions/setup-node@v4
+              with:
+                node-version: lts/*
+
+            - name: Install Dependencies
+              run: |
+                cd website
+                npm ci && npm run build
+
+            - name: Deploy
+              uses: cloudflare/wrangler-action@v3
+              with:
+                apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+                accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+                command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+
+
+# on:
+#   push:
+#     branches:
+#       - main
+
+
+# jobs:
+#   deploy-production:
+#     runs-on: ubuntu-latest
+#     name: Deploy (Production)
+      
+#     steps:
+#       - name: Checkout
+#         uses: actions/checkout@v4
+#         with:
+#             fetch-depth: 0
+            
+#       - name: Deploy
+#         uses: cloudflare/wrangler-action@v3
+#         with:
+#           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+#           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+#           command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
