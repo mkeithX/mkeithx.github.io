@@ -45,7 +45,7 @@ function QuickStartCard({ className, title, subTitle, webUrl }: ProfileProps) {
               <div className="avatar__subtitle">{subTitle}
               {webUrl && (
               <Link className="text--no-decoration" to={webUrl}>
-                {" Learn more"}.
+                {" "}{"Take me there."}
               </Link>
             )}
 
@@ -110,12 +110,12 @@ export function ReportsCardRow(): JSX.Element {
   return (
     <div className="row">
       <QuickStartCol
-        title="Bugs 🪲"
-        subTitle="Bugs don’t belong here—report them!"
+        title="Report Bugs🪲"
+        subTitle=" Help us help you: Report those pesky bugs!"
         webUrl="/community/report-an-issue#bugs"
       />
       <QuickStartCol
-        title="Request a Feature ❓"
+        title="Request a Feature❓"
         subTitle="Your ideas are welcome. Help us build the future!"
         webUrl="/community/report-an-issue#feature-request"
       />

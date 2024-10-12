@@ -7,19 +7,20 @@ import type { Props } from "@theme/DocCategoryGeneratedIndexPage";
 import styles from "./styles.module.css";
 
 function HintFooter() {
-  const docPath = "docs/devops/guides-and-workarounds";
+  const docPath = "community";
   return (
     <p className={styles.footerTip}>
       <Translate
         values={{
           guideLink: (
-            <Link to={`/${docPath}#`}>
-              <Translate>Navigate to this page</Translate>
+            <Link to={`/${docPath}#`} className="text--no-decoration">
+              {/* <Translate>Navigate to this page</Translate> */}
+              {"Submit an issue"}
             </Link>
           ),
         }}
       >
-        {"Looking for guides & workarounds? {guideLink} to learn more."}
+        {"Missing something? {guideLink} to help us improve."}
       </Translate>
     </p>
   );

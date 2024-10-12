@@ -1,6 +1,3 @@
-## Description
-
-
 ## Motivation
 
 
@@ -11,6 +8,6 @@
 
 
 
-## Checklist
+## Pre-flight Checklist
 
-- [ ] I have read the [Contributing Guidelines](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#contribute).
+- [ ] I have read and understand the Contributing Guidelines on [Pull Request](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#pull-requests).

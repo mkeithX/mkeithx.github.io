@@ -1,5 +1,5 @@
-name: 🐞 Bug Report
-description: Report a bug to help us improve
+name: 🪲 Bug Report
+description: Help us help you:Report those pesky bugs!
 title: "[Bug]: "
 labels: ["needs triage"]
 projects: ["SpaceHub"]
