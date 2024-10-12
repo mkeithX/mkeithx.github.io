@@ -1,6 +1,5 @@
 name: Deploy (Production)
 
-concurrency: production
 
 on:
   push:
@@ -11,32 +10,17 @@ on:
 jobs:
   deploy-production:
     runs-on: ubuntu-latest
-    environment: production
-    permissions:
-      contents: read
-      deployments: write
-    timeout-minutes: 30
-
+    name: Deploy (Production)
+      
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
-          fetch-depth: 0
-      - name: Node setup
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-      - name: Install Dependencies
-        run: |
-            cd website
-            npm ci && npm run build
-
-      - name: Deploy (Production)
-        uses: cloudflare/pages-action@v1
+            fetch-depth: 0
+            
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-          directory: website/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '3'
+          command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}

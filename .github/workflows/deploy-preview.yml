@@ -1,38 +1,21 @@
 name: Deploy (Preview)
 
-concurrency: development
-
 on: [pull_request]
 
 jobs:
   deploy-preview:
     runs-on: ubuntu-latest
-    environment: development
-    permissions:
-      contents: read
-      deployments: write
-    timeout-minutes: 30
+    name: Deploy (Preview)
       
     steps:
       - name: Checkout
         uses: actions/checkout@v4
         with:
             fetch-depth: 0
-      - name: Node setup
-        uses: actions/setup-node@v4
-        with:
-          node-version: lts/*
-      - name: Install Dependencies
-        run: |
-            cd website
-            npm ci && npm run build
             
-      - name: Deploy (Preview)
-        uses: cloudflare/pages-action@v1
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-          directory: website/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '3'
+          command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
