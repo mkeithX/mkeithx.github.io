@@ -54,12 +54,11 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    title: "Dev Friendly",
+    title: "Developers",
     Svg: require("@site/static/img/undraw_code_review.svg").default,
     description: (
       <>
-        Gain insights from top developers in your organization, with best
-        practices and advice to enhance your coding skills.
+        Best practices and advice to enhance your coding skills.
       </>
     ),
   },

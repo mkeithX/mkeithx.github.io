@@ -18,34 +18,44 @@ const sidebars: SidebarsConfig = {
     "keyword",
     {
       type: "category",
-      label: "Gists",
+      label: "Getting Started",
       collapsed: false,
-      link: {
-        type: "generated-index",
-        slug: "/gists",
-        description: "Quick examples, useful utilities and demos.",
-      },
       items: [
-
-        "gists/gists-windows",
-        "gists/gists-git",
-        // "gists/gists-misc",
+        "core-concept",
+        // "troubleshoot",
         {
           type: "category",
-          label: "Extras",
+          label: "Gists",
           collapsed: true,
           link: {
             type: "generated-index",
-            slug: "/extras",
+            slug: "/gists",
+            description: "Quick examples, useful utilities and demos.",
           },
           items: [
-            "gists/extras/quick-responses",
-            "gists/extras/misc",
-            // "gists/extras/live-react",
+    
+            "gists/gists-windows",
+            "gists/gists-git",
+            // "gists/gists-misc",
+            {
+              type: "category",
+              label: "Extras",
+              collapsed: true,
+              link: {
+                type: "generated-index",
+                slug: "/extras",
+              },
+              items: [
+                "gists/extras/quick-responses",
+                "gists/extras/misc",
+                // "gists/extras/live-react",
+              ],
+            },
           ],
         },
-      ],
+      ]
     },
+    
     {
       type: "category",
       collapsed: true,
@@ -241,26 +251,6 @@ const sidebars: SidebarsConfig = {
         "devops/glossary",
       ]
     },
-
-
-    // {
-    //   type: "category",
-    //   label: "Contributing",
-    //   link: {
-    //     type: "doc",
-    //     id: "contributing/index",
-    //   },
-    //   items: [
-    //     "contributing/reporting-issues",
-
-    //     {
-    //       type: "link",
-    //       label: "Feature Request",
-    //       href: "/feature-requests",
-    //       description: "Request a feature"
-    //     }
-    //   ]
-    // },
   ],
 
   exampleSidebar: [

@@ -82,12 +82,14 @@
   margin: 0.3rem 0;
 }
 
+/* .navbar__title{
+  display: none;
+} */
+
 /* Navbar branding */
 .navbar__brand {
-  margin-right: 1rem;
+  margin-right: 1.8rem;
 }
-
-
 
 /* Content table container */
 .contentTableContainer table {

@@ -29,13 +29,17 @@ function Foobar(): JSX.Element {
     <Layout title="Foobar" description="The SpaceHub Project">
       <div className={clsx(styles.fooHead, "hero hero--dark")}>
         <div className="container">
+        <div className="hero__subtitle">
+          <span className={clsx(styles.heroSubTitleTextHtml)}>{'The'}</span>
+
+        </div>
           <Heading as="h1" className={clsx(styles.fooTitle)}>
-            The SpaceHub Project
+            SpaceHub Project
           </Heading>
           <span className={clsx("hero__subtitle margin-left--xs")}>
             {" | "}
             <span className="text--primary text--light text--small">
-              {"Author's Perspective"}
+              {"Foobar"}
             </span>
             {/* <Link to="https://github.com/mkeithX" className="text--no-decoration">
               <b></b>{"Foobar"}
@@ -43,7 +47,8 @@ function Foobar(): JSX.Element {
           </span>
         </div>
       </div>
-      <div className={clsx(styles.fooBody, "container margin-vert--lg")}>
+      <div className={clsx(styles.fooBody, "hero hero--dark")}>
+        <div className="container">
         <h2>{"Overview"}</h2>
         <p>
           This project highlights the{" "}
@@ -92,6 +97,7 @@ function Foobar(): JSX.Element {
           team for considering this boring website a valuable resources for
           software development.
         </span> */}
+      </div>
       </div>
     </Layout>
   );
