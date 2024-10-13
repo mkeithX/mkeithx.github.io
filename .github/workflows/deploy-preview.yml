@@ -4,6 +4,10 @@ on:
   pull_request:
     branches:
       - main
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
 
 jobs:
   deploy-preview:
@@ -30,15 +34,10 @@ jobs:
           cd website
           npm ci && npm run build
 
-      - name: Deploy (Preview)
+      - name: Deploy (Production)
+        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.env == 'development'}}
         uses: cloudflare/wrangler-action@v3
         with:
-            workingDirectory: website
             apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-            environment: development
             command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-        env:
-            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-            projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
