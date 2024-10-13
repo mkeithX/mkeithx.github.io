@@ -73,5 +73,5 @@ jobs:
           environment: production
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          command: npx wrangler deploy --env production
           
