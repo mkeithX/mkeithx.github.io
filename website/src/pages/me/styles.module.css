@@ -6,6 +6,14 @@
   position: relative;
   overflow: hidden;
   display: inline-block;
+
+  /* flex-direction: column; */
+}
+
+.aboutTitle {
+  font-size: 54px;
+  font-weight: bold;
+  margin-bottom: 0.4rem;
 }
 
 /* .aboutHeader h2 {
@@ -14,16 +22,17 @@
 } */
 
 .aboutBody {
-  /* background-color: var(--ifm-color-kiti-light); */
+  background-color: var(--ifm-footer-background-color) !important;
+  color: var(--ifm-font-color-base);
   align-items: center;
   display: flex;
   width: 100%;
   padding: 3.6rem 0;
 }
 
-.aboutBody a {
+/* .aboutBody a {
   font-weight: bold;
-}
+} */
 
 .aboutBody p {
   max-width: 640px;
@@ -34,7 +43,7 @@
 }
 
 .profilePic img {
-  border-radius: 10%;
+  border-radius: 50%;
   max-height: 196px;
   max-width: 196px;
 }

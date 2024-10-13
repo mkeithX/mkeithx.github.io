@@ -181,13 +181,12 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    announcementBar: {
-      id: `announcementBar_`,
-      content:
-        // 'New updates are coming. <a target="_blank" rel="noopener noreferrer" href="#">Learn more</a>.',
-        'New stuff rolling out soon 🚀 <a target="_blank" rel="noopener noreferrer" href="#"></a>',
-      isCloseable: true,
-    },
+    // announcementBar: {
+    //   id: `announcementBar_`,
+    //   content:
+    //     'New stuff rolling out soon 🚀 <a target="_blank" rel="noopener noreferrer" href="#"></a>',
+    //   isCloseable: true,
+    // },
     docs: {
       sidebar: {
         hideable: true,
