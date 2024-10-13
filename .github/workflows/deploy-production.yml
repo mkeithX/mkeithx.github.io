@@ -73,5 +73,5 @@ jobs:
           environment: production
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: wrangler deploy --env production
+          command: wrangler pages deploy --env production
           
