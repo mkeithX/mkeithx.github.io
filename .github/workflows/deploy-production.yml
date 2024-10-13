@@ -1,7 +1,9 @@
 
 name: Deploy (Production)
 
-concurrency: production
+concurrency:
+  group: production-${{ github.ref }}
+  cancel-in-progress: true
 
 on:
   push:
