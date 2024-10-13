@@ -1,14 +1,22 @@
 
 name: Deploy (Production)
 
-concurrency:
-  group: production-${{ github.ref }}
-  cancel-in-progress: true
-
 on:
   push:
     branches:
       - main
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+
+# concurrency:
+#   group: production-${{ github.ref }}
+#   cancel-in-progress: true
+
+# on:
+#   push:
+#     branches:
+#       - main
 
 jobs:
   deploy-production:
@@ -38,7 +46,7 @@ jobs:
 
 
       - name: Deploy (Production)
-        uses: cloudflare/pages-action@v1
+        uses: cloudflare/pages-action@v1.5.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
