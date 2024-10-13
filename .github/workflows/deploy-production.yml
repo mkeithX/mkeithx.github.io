@@ -4,6 +4,7 @@ on:
   push:
     branches: [main]
   pull_request:
+    branches: ["main"]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -24,6 +25,7 @@ jobs:
         uses: actions/checkout@v4
         with:
             fetch-depth: 0
+
       - name: Node setup
         uses: actions/setup-node@v4
         with:
@@ -49,10 +51,11 @@ jobs:
   deploy-production:
     runs-on: ubuntu-latest
     timeout-minutes: 30
+    environment: production
     permissions:
       contents: read
       deployments: write
-      
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -64,16 +67,11 @@ jobs:
         with:
           node-version: lts/*
 
-
-      - name: Install Dependencies
-        run: |
-            cd website
-            npm ci && npm run build
-
-      - name: Deploy
+      - name: Deploy (Production)
         if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          
