@@ -181,6 +181,13 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        // 'New updates are coming. <a target="_blank" rel="noopener noreferrer" href="#">Learn more</a>.',
+        'New stuff rolling out soon 🚀 <a target="_blank" rel="noopener noreferrer" href="#"></a>',
+      isCloseable: true,
+    },
     docs: {
       sidebar: {
         hideable: true,
@@ -202,11 +209,11 @@ const config: Config = {
         target: "_self",
       },
       items: [
-        { type: "doc", position: "left", docId: "keyword", label: "Docs" },
+        { type: "doc", position: "left", docId: "introduction", label: "Docs" },
         { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
         { to: "/projects", label: "Showcase" },
         { to: "/community", label: "Community" },
-        { to: "/blog", label: "Updates" },
+        { to: "/blog", label: "Blog" },
         {
           type: "dropdown",
           label: "More",
@@ -233,7 +240,7 @@ const config: Config = {
         { type: "search", position: "right" },
         // {
         //   type: "html",
-        //   value: '<span class="badge badge--sm badge--danger">Beta</span>',
+        //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
         // },
       ],
     },
