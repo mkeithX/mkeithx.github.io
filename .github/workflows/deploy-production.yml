@@ -51,7 +51,6 @@ jobs:
   deploy-production:
     runs-on: ubuntu-latest
     timeout-minutes: 30
-    environment: production
     permissions:
       contents: read
       deployments: write
