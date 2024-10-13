@@ -31,5 +31,5 @@ jobs:
       - name: Install Dependencies
         run: |
             cd website
-            npm ci && npm run build && wrangler pages deploy ./build
+            npm ci && npm run build && npx wrangler pages deploy ./build
     
