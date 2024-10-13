@@ -63,6 +63,15 @@ body:
         - Microsoft Edge
         - Brave
         - DuckDuck Go
+  
+  - type: dropdown
+    id: device
+    attributes:
+      label: Device type.
+      multiple: true
+      options:
+        - Mobile
+        - Desktop
 
   - type: checkboxes
     id: terms
