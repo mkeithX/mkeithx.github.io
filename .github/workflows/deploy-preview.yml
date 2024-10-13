@@ -35,11 +35,11 @@ jobs:
           cd website
           npm ci && npm run build
 
-      - name: Deploy (Preview)
-        uses: cloudflare/wrangler-action@v3
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+      # - name: Deploy (Preview)
+      #   uses: cloudflare/wrangler-action@v3
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
 
 # https://github.com/cloudflare/wrangler-action
