@@ -34,7 +34,7 @@ jobs:
           cd website
           npm ci && npm run build
 
-      - name: Deploy (Production)
+      - name: Deploy (Preview)
         if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' && github.env == 'development'}}
         uses: cloudflare/wrangler-action@v3
         with:
