@@ -31,10 +31,14 @@ jobs:
           npm ci && npm run build
 
       - name: Deploy (Preview)
-        run: |
-          cd website
-          npm ci && npm run build && npx wrangler pages deploy ./build
+        uses: cloudflare/wrangler-action@v3
+        with:
+            workingDirectory: website
+            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+            environment: development
+            command: npx wrangler deploy --env development
         env:
-          API_TOKEN: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          ACCOUNT_ID: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          PROJECT_NAME: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+            piToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
