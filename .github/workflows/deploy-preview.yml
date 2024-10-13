@@ -37,8 +37,8 @@ jobs:
             apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
             environment: development
-            command: npx wrangler deploy --env development
+            command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
         env:
-            piToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
             projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
             accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
