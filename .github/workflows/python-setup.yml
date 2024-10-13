@@ -1,25 +1,32 @@
 name: "Setup Python"
 
-on: [push]
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
 
 jobs:
-  build:
+  build-python:
     runs-on: ubuntu-latest
 
     steps:
-      - uses: actions/checkout@v4
-      
-      - name: Setup Python
+      - name: Clone Repo
+        uses: actions/checkout@v4
+
+      - name: Configure Python Environment
         uses: actions/setup-python@v5
         with:
-          python-version: "3.11"
-          
-      - name: Install dependencies
+          python-version: "3.12"
+
+      - name: Install Requirements
         run: |
           cd examples/python-starters
           python -m pip install --upgrade -r requirements.txt
 
-      - name: Run main script
+      - name: Run Python
         run: |
           cd examples/python-starters
           python hello.py

@@ -1,24 +1,24 @@
-
-name: Deploy (Production)
-
-concurrency:
-  group: production-${{ github.ref }}
-  cancel-in-progress: true
+name: Deploy (Preview)
 
 on:
-  push:
+  pull_request:
     branches:
       - main
 
+concurrency:
+  group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
+  cancel-in-progress: true
+
+
 jobs:
-  deploy-production:
+  deploy-preview:
     runs-on: ubuntu-latest
-    environment: production
+    environment: development
     permissions:
       contents: read
       deployments: write
     timeout-minutes: 30
-    
+
     steps:
       - name: Checkout
         uses: actions/checkout@v4
@@ -30,19 +30,16 @@ jobs:
         with:
           node-version: lts/*
 
-          
       - name: Install Dependencies
         run: |
-            cd website
-            npm ci && npm run build
+          cd website
+          npm ci && npm run build
 
-
-      - name: Deploy (Production)
-        uses: cloudflare/pages-action@v1
+      - name: Deploy (Preview)
+        uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-          directory: website/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-          wranglerVersion: '3'
+          command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+# https://github.com/cloudflare/wrangler-action

@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 
 // Current year for copyright
-const copyright = `© ${new Date().getFullYear()} Keith Tan • All rights reserved`;
+const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors <br> • All rights reserved •` ;
 
 const commonExclusions = {
   exclude: [
