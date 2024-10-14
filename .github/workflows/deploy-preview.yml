@@ -1,9 +1,6 @@
 name: Deploy (Preview)
 
-on:
-  pull_request:
-    branches:
-      - main
+on: [pull_request]
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -34,6 +31,16 @@ jobs:
         run: |
           cd website
           npm ci && npm run build
+        
+      - name: Deploy (Preview)
+        uses: cloudflare/pages-action@v1.5.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          projectName: ${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          directory: website/build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          wranglerVersion: '3'
 
       # - name: Deploy (Preview)
       #   uses: cloudflare/wrangler-action@v3
