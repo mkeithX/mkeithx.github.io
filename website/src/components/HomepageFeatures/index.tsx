@@ -16,40 +16,36 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_experience_design.svg").default,
     description: (
       <>
-        Explore and manage your repositories with an intuitive interface and
-        powerful search features.
+        Find resources easily with  a robust search functionality.
       </>
     ),
   },
 
   {
-    title: "Detailed Tutorials",
+    title: "Built with React",
     Svg: require("@site/static/img/undraw_react.svg").default,
     description: (
       <>
-        Access step-by-step tutorials tailored for your projects, guiding you
-        from setup to advanced techniques.
+        Experience a fast, dynamic interface powered by React for optimal performance.
       </>
     ),
   },
 
   {
-    title: "Interactive Samples",
+    title: "Project Docs",
     Svg: require("@site/static/img/undraw_website.svg").default,
     description: (
       <>
-        Engage with live code examples and experiments directly within the
-        documentation for hands-on learning.
+        Clear docs to showcase and manage various projects effectively.
       </>
     ),
   },
   {
-    title: "Expert Tips",
+    title: "Code Snippets",
     Svg: require("@site/static/img/undraw_hello.svg").default,
     description: (
       <>
-        For dynamic content integration, ensuring a seamless and engaging user
-        experience.
+        Quick solutions with practical code snippets, shared gists and more.
       </>
     ),
   },
@@ -58,7 +54,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_code_review.svg").default,
     description: (
       <>
-        Best practices and advice to enhance your coding skills.
+        Designed with developers in mind for a seamless experience.
       </>
     ),
   },

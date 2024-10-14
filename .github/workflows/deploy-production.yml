@@ -8,15 +8,7 @@ on:
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
-
-# concurrency:
-#   group: production-${{ github.ref }}
-#   cancel-in-progress: true
-
-# on:
-#   push:
-#     branches:
-#       - main
+  cancel-in-progress: true
 
 jobs:
   deploy-production:
