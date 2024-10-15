@@ -200,7 +200,7 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/mkx-social.png",
+    image: "img/mkx-social-banner.png",
     navbar: {
       style: "dark",
       hideOnScroll: true,
@@ -209,7 +209,7 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/logo/mkxspacehub-logo-alt.png",
         target: "_self",
-        className: 'custom-navbar-logo-class',
+        // className: 'custom-navbar-logo-class',
       },
       items: [
         { type: "doc", position: "left", docId: "introduction", label: "Docs" },
