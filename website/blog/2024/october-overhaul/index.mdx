@@ -13,73 +13,21 @@ unlisted: false
 
 **Hey everyone!**
 
+Excited to share some updates that have been brewing for a while. Here’s what I’ve been working on!
+
+- **Github Projects** : Manage everything from issues to pull requests.
+- **Django** : Getting back to the web framework for perfectionists with deadlines.
+- **Workflows** : Revamped CI/CD using GitHub Actions workflows.
+
+
 <Card>
     <CardImage
       cardImageUrl='/img/new-blog-default.png'
     />
-    
   </Card>
 
 <br></br>
 
-
-Excited to share some updates that have been brewing for a while. Here’s what I’ve been working on!
-
-
-<Columns className='item margin-bottom-lg' > 
-
-<Column  className='text--left item  padding--sm'>
-<Card shadow='tl'  style={{border: '1.5px solid var(--ifm-color-primary)', height:'100%'}}>
-    <CardHeader>
-      <h3>Github Projects</h3>
-    </CardHeader>
-    <CardBody>
-      Manage everything from issues to pull requests.
-    </CardBody>
-  </Card>
-</Column>
-
-<Column  className='text--left item  padding--sm'>
-<Card shadow='tl'style={{border: '1.5px solid var(--ifm-color-primary)', height:'100%'}}>
-    <CardHeader>
-      <h3>Django</h3>
-    </CardHeader>
-    <CardBody>
-    Getting back to the web framework for perfectionists with deadlines.
-    </CardBody>
-  </Card>
-</Column>
-
-
-</Columns> 
-<Columns className='item margin-bottom-lg' > 
-
-<Column  className='text--left item  padding--sm'>
-<Card shadow='tl'  style={{border: '1.5px solid var(--ifm-color-primary)', height:'100%'}}>
-    <CardHeader>
-      <h3>Feature Requests</h3>
-    </CardHeader>
-    <CardBody>
-      Access reusable code that can enhance your projects.
-    </CardBody>
-  </Card>
-</Column>
-
-<Column  className='text--left item  padding--sm'>
-<Card shadow='tl'style={{border: '1.5px solid var(--ifm-color-primary)', height:'100%'}}>
-    <CardHeader>
-      <h3>Workflows</h3>
-    </CardHeader>
-    <CardBody>
-    Revamped CI/CD using GitHub Actions workflows.
-    </CardBody>
-  </Card>
-</Column>
-
-
-</Columns> 
-
-<br></br>
 
 
 {/* truncate */}
@@ -92,7 +40,7 @@ One of the biggest steps I’ve taken recently is integrating GitHub into my pro
 
 ![projects-item](projects-items.png)
 
-### What This Means for Me:
+### What's in it
 - **Streamlined Workflow**: I can now sync issues, pull requests, and commits directly with my dashboard, making tracking progress so much easier!
 
 <!-- ![prlinked](prlinked.png) -->
@@ -109,20 +57,38 @@ More about [GitHub Projects](https://docs.github.com/en/issues/planning-and-trac
 
 ## Reviving Django
 
-![django](/img/projects/django-crud-demo.png)
+<Card>
+    <CardImage
+      cardImageUrl='/img/projects/django-crud-demo.png'
+    />
+  </Card>
+
+<br></br>
 
 I decided it was time to refresh my Django skills, and I’m really excited about it. After some time off, I'm happy to introduce the django-crud-demo project -  A simple yet effective way to explore CRUD (Create, Read, Update, Delete) operations using Django. 
 
-### Focus Areas:
-- **Performance Improvements**: I’ve optimized the backend to handle more traffic and deliver faster responses.
-- **Updated Documentation**: I created comprehensive guides to help myself and others navigate the framework with ease.
-- **Feature-Rich Extensions**: I’ve added new extensions to enhance functionality and customization.
+### Features
 
-Revisiting Django has reignited my passion for web development, and I can’t wait to see where this journey takes me!
+- **Custom User Model** : Extend the default user model using AbstractUser to add fields like bio or profile picture while retaining authentication features.
+- **PostgreSQL** : Use PostgreSQL as the database backend.
+- **More** : Custom features such as creating dummy users, age restriction ect..
 
-## Feature Requests and GitHub Actions via Cloudflare
+### Install
+
+Clone to it in your local machine:
+
+```bash
+git clone https://github.com/mkeithX/django-crud-demo.git
+```
+Visit [the repo](https://github.com/mkeithX/django-crud-demo) to know more.
+
+## Enhancements
+
+### Feature Requests
 
 I’ve also streamlined the process for feature requests, allowing anyone interested in the project to suggest improvements. Your feedback is invaluable, and I’m excited to incorporate ideas that can elevate the project to the next level.
+
+### Cloudflare
 
 Additionally, I’ve integrated GitHub actions via Cloudflare, adding an extra layer of security and performance. It’s reassuring to know my code is protected while benefiting from Cloudflare’s speed.
 
@@ -132,7 +98,7 @@ To further enhance my development process, I’ve set up a GitHub Actions workfl
 
 <details>
 
-<summary>Here’s a quick overview of my workflow configuration</summary>
+<summary>View workflow configuration</summary>
 
 ```yaml
 name: "Setup Python"
@@ -166,10 +132,12 @@ jobs:
         run: |
           python hello_world.py
 ```
+This workflow ensures that every push and pull request triggers tests, helping me maintain code quality and reliability.
+
 </details>
 
 
-This workflow ensures that every push and pull request triggers tests, helping me maintain code quality and reliability.
+
 
 
 ## What's Next
@@ -181,25 +149,4 @@ I’m excited about what’s coming up:
 - **Community Input**: I want to engage more with everyone to gather ideas.
 - **Better Documentation**: I’ll continue improving the documentation for easier navigation.
 
-
-
-<Card>
-    <CardHeader
-      className='padding-top--lg'
-      style={{ backgroundColor: 'rgb(33 126 209)' , color:'black'}}
-    >
-      <div className='avatar avatar--vertical'>
-        <img
-          className='avatar__photo avatar__photo--xl' 
-          src='https://github.com/mkeithx.png'
-        />
-        <div className='avatar__intro'>
-          <div className='avatar__name'>Thanks for your support! </div>
-          <span className='avatar__subtitle'>
-            <!-- <a style={{ color:'white'}} href='https://mkeithx.pages.dev/'>The SpaceHub Project</a> -->
-            <p style={{ color:'white'}}>Here’s to more coding adventures ahead. Happy coding!</p>
-          </span>
-        </div>
-      </div>
-</CardHeader>
-</Card>
+Thanks for your time and happy coding!

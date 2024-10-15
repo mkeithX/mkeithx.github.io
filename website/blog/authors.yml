@@ -1,13 +1,15 @@
 mkeithx:
   name: Keith Tan
-  title: Engineer @Kitiplex
+  title: Freelance Developer • 
   description: Hi there and thanks for visiting! Hope you find this website helpful. More good stuff are coming. Stay tuned!
   url: https://github.com/mkeithx
   image_url: https://github.com/mkeithx.png
   email: me@kitimi.onmicrosoft.com
+  # page:
+  #   permalink: '/mkeithx'
   page: true
-    # permalink: '/mkeithx'
+  
   socials:
-    x: mkeithtan
+    # x: mkeithtan
     github: mkeithX
     linkedin: mkeithtan
