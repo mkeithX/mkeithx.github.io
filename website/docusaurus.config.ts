@@ -184,10 +184,13 @@ const config: Config = {
     // announcementBar: {
     //   id: `announcementBar_`,
     //   content:
-    //     'New stuff rolling out soon 🚀 <a target="_blank" rel="noopener noreferrer" href="#"></a>',
+    //     `🚀 Check out <a target="_blank" rel="noopener noreferrer" href="/blog">what's new!</a>`,
     //   isCloseable: true,
+    //   backgroundColor: '#176af8',
+    //   textColor: '#fafbfc',
     // },
     docs: {
+      versionPersistence: 'localStorage',
       sidebar: {
         hideable: true,
         autoCollapseCategories: false,
@@ -206,6 +209,7 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/logo/mkxspacehub-logo-alt.png",
         target: "_self",
+        className: 'custom-navbar-logo-class',
       },
       items: [
         { type: "doc", position: "left", docId: "introduction", label: "Docs" },
