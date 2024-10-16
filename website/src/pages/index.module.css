@@ -92,7 +92,8 @@
   color: transparent;
   background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
   background-clip: text;
-  font-weight: 800;
+  font-weight: 700;
+  font-size: 54px;
 }
 
 .heroCustomSubTitleHtml b {

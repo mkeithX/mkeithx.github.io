@@ -26,7 +26,7 @@
   src: url('./fonts/Mona-Sans.woff2') format('woff2');
 } */
 
-@font-face {
+/* @font-face {
   font-family: "Hubot-Sans";
   src: url("/static/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
     url("/static/fonts/Hubot-Sans.woff2") format("woff2-variations");
@@ -44,9 +44,9 @@
   font-display: swap;
 }
 
-/* html {
+html {
   font-family: "Hubot-Sans";
-} */
+}
 
 h1,
 h2,
@@ -55,7 +55,7 @@ h4,
 h5,
 h6 {
   font-family: "Hubot-Sans";
-}
+} */
 
 :root {
   --ifm-color-primary: #0b84ce;
@@ -72,12 +72,12 @@ h6 {
   --site-color-feedback-background: #f0f8ff;
   /* --site-background-color: #bbeffd4d; */
 
-  --ifm-font-family-base: "Mona-Sans";
+  /* --ifm-font-family-base: "Mona-Sans"; */
 
   --ifm-code-font-size: 90%;
   /* --ifm-font-size-base: 16px; */
   --ifm-heading-font-weight: 600;
-  --ifm-font-weight-semibold: 500;
+  --ifm-font-weight-semibold: 600;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important; */
@@ -130,14 +130,14 @@ h6 {
 
 
 .navbar {
-  background-color: var(--ifm-site-dark) !important;
-  /* color: var(--ifm-color-primary-lighter) !important; */
+  background-color: var(--ifm-site-dark);
+  
 }
 
-.navbar .navbar__items {
+/* .navbar .navbar__items {
   flex: auto;
 
-}
+} */
 
 /* .navbar__title {
   font-weight: bold;
@@ -154,10 +154,15 @@ h6 {
   display: none;
 } */
 
-/* Navbar branding */
-.navbar__brand {
-  margin-right: 1.5rem;
+html[data-navbar='false'] .navbar {
+  display: none;
 }
+
+/* Navbar branding */
+
+/* .navbar__brand {
+  margin-right: 1.5rem;
+} */
 
 /* Content table container */
 .contentTableContainer table {
@@ -218,7 +223,7 @@ h6 {
 
 .unique-tabs .tabs__item--active {
   border: 0;
-  color: #fff;
+  /* color: #fff; */
   border-radius: var(--ifm-global-radius);
   background-color: var(--ifm-tabs-color-active);
 }
@@ -247,13 +252,16 @@ h6 {
 }
 
 div[class^='announcementBar_'] {
-  font-size: 16px;
-  font-weight: bold;
+  font-size: 18px;
+  font-weight: 700;
   background: linear-gradient(90deg, #f2f89c, #4affaa, #12a4ff) !important;
+  color: var(--ifm-color-black);
+  /* background-clip: text; */
   height: 1.5em;
 }
 
-.screen-reader-only {
+
+/* .screen-reader-only {
   clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
@@ -261,7 +269,7 @@ div[class^='announcementBar_'] {
   position: absolute;
   width: 1px;
   white-space: nowrap;
-}
+} */
 
 
 [data-theme='light'] .DocSearch {
