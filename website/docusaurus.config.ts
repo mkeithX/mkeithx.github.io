@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 
 // Current year for copyright
-const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors <br> • All rights reserved •` ;
+const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors <br> • All rights reserved •`;
 
 const commonExclusions = {
   exclude: [
@@ -63,7 +63,7 @@ const config: Config = {
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
 
-  stylesheets: [{ href: "/katex/katex.min.css", type: "text/css" }],
+  stylesheets: [{ href: "/katex/katex.min.css", type: "text/css" }, { href: "https://fonts.gstatic.com", crossorigin: "anonymous", rel: "preconnect" }],
 
   i18n: {
     defaultLocale: "en",
@@ -128,7 +128,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
- themes: ['live-codeblock'],
+  themes: ['live-codeblock'],
 
   plugins: [
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
@@ -207,7 +207,7 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/logo/mkxspacehub-logo-alt.png",
+        src: "img/logo/nav-logo.png",
         target: "_self",
         // className: 'custom-navbar-logo-class',
       },
@@ -233,7 +233,7 @@ const config: Config = {
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
         },
-       
+
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -281,7 +281,7 @@ const config: Config = {
         },
         {
           title: "Connect",
-          items: [ socialProfiles.facebook, socialProfiles.linkedin,],
+          items: [socialProfiles.facebook, socialProfiles.linkedin,],
         },
         {
           title: "Developers",

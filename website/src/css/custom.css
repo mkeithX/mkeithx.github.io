@@ -6,6 +6,9 @@
 
 /* You can override the default Infima variables here. */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+
 :root {
   --ifm-color-primary: #0b84ce;
   --ifm-color-primary-dark: #0a77b9;
@@ -15,10 +18,14 @@
   --ifm-color-primary-lighter: #0d98ed;
   --ifm-color-primary-lightest: #27a6f3;
 
+  /* --site-background-color: #f5f3f7; */
+
   --ifm-site-dark: #010409;
-  /* --ifm-site-dark: #1B1C26 */
+  /* --ifm-site-dark: #1B1C26; */
   --site-color-feedback-background: #f0f8ff;
-  
+  /* --site-background-color: #bbeffd4d; */
+
+  --ifm-font-family-base: "Montserrat" ;
 
   --ifm-code-font-size: 90%;
   --ifm-font-size-base: 16px;
@@ -35,19 +42,30 @@
 
 /* Dark theme overrides */
 [data-theme='dark'] {
-  --ifm-color-primary: #1da1f2;
+  /* --ifm-color-primary: #1da1f2;
   --ifm-color-primary-dark: #0d94e7;
   --ifm-color-primary-darker: #0d8cda;
   --ifm-color-primary-darkest: #0a73b3;
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
-  --ifm-color-primary-lightest: #6ac1f6;
+  --ifm-color-primary-lightest: #6ac1f6; */
+
+  --ifm-color-primary: #06bef1;
+  --ifm-color-primary-dark: #05abd9;
+  --ifm-color-primary-darker: #05a1cd;
+  --ifm-color-primary-darkest: #0485a9;
+  --ifm-color-primary-light: #16c8f9;
+  --ifm-color-primary-lighter: #23cbfa;
+  --ifm-color-primary-lightest: #47d3fa;
+
+  /* --ifm-background-color: #1e2125; */
+  /* --ifm-background-surface-color: #121212; */
 
   --ifm-background-color: #0D1118;
+  --ifm-background-surface-color: #0D1116 !important;
   
   --site-color-feedback-background: #2a2930;
 
-  --ifm-background-surface-color: #0D1116 !important;
   
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 

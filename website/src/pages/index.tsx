@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import BannerLogo from '@site/static/img/banner/atom-z.svg';
+import BannerLogo from '@site/static/img/banner/atom.svg';
 import React from 'react';
 import TopBanner from '@site/src/components/TopBanner';
 import FeatureBrands from '@site/src/components/FeatureBrands';
@@ -36,7 +36,8 @@ function HomepageHeader(): JSX.Element {
         <BannerLogo
           className={clsx(styles.heroBannerLogo)}
           title="Banner Logo"
-          width={380}
+          width={950}
+          height={650}
         />
         <div className="hero__subtitle">
           <span className={clsx(styles.heroSubTitleTextHtml)}>{'OpenSource'}</span>
