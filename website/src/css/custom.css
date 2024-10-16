@@ -6,8 +6,56 @@
 
 /* You can override the default Infima variables here. */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
 
+/* @font-face {
+  font-family: 'Hubot-Sans';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: normal;
+  font-named-instance: 'Regular';
+  src: url('./fonts/Hubot-Sans.woff2') format('woff2');
+}
+
+@font-face {
+  font-family: 'Mona-Sans';
+  font-weight: 100 900;
+  font-display: swap;
+  font-style: italic;
+  font-named-instance: 'Italic';
+  src: url('./fonts/Mona-Sans.woff2') format('woff2');
+} */
+
+@font-face {
+  font-family: "Hubot-Sans";
+  src: url("/static/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
+  url("/static/fonts/Hubot-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Mona-Sans";
+  src: url("/static/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
+  url("/static/fonts/Mona-Sans.woff2") format("woff2-variations");
+  font-weight: 200 900;
+  font-stretch: 75% 125%;
+  font-display: swap;
+}
+
+html {
+  font-family: "Mona-Sans";
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  font-family: "Hubot-Sans";
+}
 
 :root {
   --ifm-color-primary: #0b84ce;
@@ -17,7 +65,6 @@
   --ifm-color-primary-light: #0c91e3;
   --ifm-color-primary-lighter: #0d98ed;
   --ifm-color-primary-lightest: #27a6f3;
-
   /* --site-background-color: #f5f3f7; */
 
   --ifm-site-dark: #010409;
@@ -25,10 +72,10 @@
   --site-color-feedback-background: #f0f8ff;
   /* --site-background-color: #bbeffd4d; */
 
-  --ifm-font-family-base: "Montserrat" ;
+  /* --ifm-font-family-base: "Montserrat" ; */
 
   --ifm-code-font-size: 90%;
-  --ifm-font-size-base: 16px;
+  /* --ifm-font-size-base: 16px; */
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -196,21 +243,41 @@
 }
 
 /* Announcement bar styling */
-div[class^='announcementBar_'] {
-  font-weight: 600;
+
+/* div[class^='announcementBar_'] {
   font-size: 17px;
-  background-color: var(--ifm-footer-background-color);
-  color: var(--ifm-font-color-base);
+
+  background: linear-gradient(90deg, #f2f89c 0%, #4affaa 50%, #12a4ff 100%);
+  font-weight: bold;
 }
 
-div[class^='announcementBar_'] a {
-  color: var(--ifm-link-color);
-  text-decoration: inherit;
+.screen-reader-only {
+  border: 0;
+  clip: rect(0 0 0 0);
+  clip-path: polygon(0 0, 0 0, 0 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  padding: 0;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
+} */
+
+div[class^='announcementBar_'] {
+  font-size: 18px;
+  font-weight: bold;
+  background: linear-gradient(90deg, #f2f89c, #4affaa, #12a4ff);
 }
 
-div[class^='announcementBar_'] a:hover {
-  color: var(--ifm-link-color);
-  text-decoration: none;
+.screen-reader-only {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
 

@@ -14,7 +14,7 @@ import { socialProfiles } from "./social.json";
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 
-// Current year for copyright
+
 const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors <br> • All rights reserved •`;
 
 const commonExclusions = {
@@ -37,7 +37,7 @@ const commonDocsConfig = {
   ...commonExclusions,
 };
 
-// Docusaurus configuration
+
 const config: Config = {
   title: "mkeithx",
   tagline: "Building Innovative Solutions",
@@ -51,8 +51,7 @@ const config: Config = {
   trailingSlash: false,
 
   customFields: {
-    description:
-      "Website representing humanity from Dimension C-137 and beyond.",
+    description: "Website representing humanity from Dimension C-137 and beyond.",
     custom_header: "Guides and Samples from mkeith",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
@@ -63,7 +62,12 @@ const config: Config = {
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
 
-  stylesheets: [{ href: "/katex/katex.min.css", type: "text/css" }, { href: "https://fonts.gstatic.com", crossorigin: "anonymous", rel: "preconnect" }],
+  stylesheets: [
+    { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
+    { href: "/fonts/Hubot-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
+    { href: "/fonts/Mona-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
+  ],
+  
 
   i18n: {
     defaultLocale: "en",
@@ -181,14 +185,14 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    // announcementBar: {
-    //   id: `announcementBar_`,
-    //   content:
-    //     `🚀 Check out <a target="_blank" rel="noopener noreferrer" href="/blog">what's new!</a>`,
-    //   isCloseable: true,
-    //   backgroundColor: '#176af8',
-    //   textColor: '#fafbfc',
-    // },
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        `Check out <a target="_blank" rel="noopener noreferrer" href="/blog">what's new!</a>`,
+      isCloseable: true,
+      // backgroundColor: '#176af8',
+      // textColor: '#fafbfc',
+    },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {
