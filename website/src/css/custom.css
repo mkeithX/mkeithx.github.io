@@ -6,57 +6,6 @@
 
 /* You can override the default Infima variables here. */
 
-/* @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap'); */
-
-/* @font-face {
-  font-family: 'Hubot-Sans';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: normal;
-  font-named-instance: 'Regular';
-  src: url('./fonts/Hubot-Sans.woff2') format('woff2');
-}
-
-@font-face {
-  font-family: 'Mona-Sans';
-  font-weight: 100 900;
-  font-display: swap;
-  font-style: italic;
-  font-named-instance: 'Italic';
-  src: url('./fonts/Mona-Sans.woff2') format('woff2');
-} */
-
-/* @font-face {
-  font-family: "Hubot-Sans";
-  src: url("/static/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
-    url("/static/fonts/Hubot-Sans.woff2") format("woff2-variations");
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
-  font-display: swap;
-}
-
-@font-face {
-  font-family: "Mona-Sans";
-  src: url("/static/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
-    url("/static/fonts/Mona-Sans.woff2") format("woff2-variations");
-  font-weight: 200 900;
-  font-stretch: 75% 125%;
-  font-display: swap;
-}
-
-html {
-  font-family: "Hubot-Sans";
-}
-
-h1,
-h2,
-h3,
-h4,
-h5,
-h6 {
-  font-family: "Hubot-Sans";
-} */
-
 :root {
   --ifm-color-primary: #0b84ce;
   --ifm-color-primary-dark: #0a77b9;
@@ -65,19 +14,19 @@ h6 {
   --ifm-color-primary-light: #0c91e3;
   --ifm-color-primary-lighter: #0d98ed;
   --ifm-color-primary-lightest: #27a6f3;
-  /* --site-background-color: #f5f3f7; */
 
-  --ifm-site-dark: #010409;
-  /* --ifm-site-dark: #1B1C26; */
-  --site-color-feedback-background: #f0f8ff;
+  /* --site-background-color: #f5f3f7; */
   /* --site-background-color: #bbeffd4d; */
 
-  /* --ifm-font-family-base: "Mona-Sans"; */
+  --ifm-site-dark: #010409;
+  --site-color-feedback-background: #f0f8ff;
 
   --ifm-code-font-size: 90%;
   /* --ifm-font-size-base: 16px; */
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
+
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important; */
@@ -110,34 +59,28 @@ h6 {
 
   --ifm-background-color: #0D1118 !important;
   --ifm-background-surface-color: #0D1116 !important;
-
   --site-color-feedback-background: #2a2930;
-
-
   --ifm-background-color: var(--ifm-background-surface-color) !important;
-
-
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
 
 }
-
-
-/* Light theme overrides */
-
-
-/* Styling for navbar */
-
 
 .navbar {
   background-color: var(--ifm-site-dark);
   
 }
 
+/* .navbar__brand {
+  margin-right: 1.5rem;
+} */
+
+
 /* .navbar .navbar__items {
   flex: auto;
 
 } */
+
 
 /* .navbar__title {
   font-weight: bold;
@@ -150,19 +93,9 @@ h6 {
   margin: 0.3rem 0;
 }
 
-/* .navbar__title{
-  display: none;
-} */
-
 html[data-navbar='false'] .navbar {
   display: none;
 }
-
-/* Navbar branding */
-
-/* .navbar__brand {
-  margin-right: 1.5rem;
-} */
 
 /* Content table container */
 .contentTableContainer table {
@@ -223,7 +156,7 @@ html[data-navbar='false'] .navbar {
 
 .unique-tabs .tabs__item--active {
   border: 0;
-  /* color: #fff; */
+  color: #fff;
   border-radius: var(--ifm-global-radius);
   background-color: var(--ifm-tabs-color-active);
 }
@@ -251,17 +184,18 @@ html[data-navbar='false'] .navbar {
   margin: 0 auto;
 }
 
+/* Announcement Bar */
+
 div[class^='announcementBar_'] {
   font-size: 18px;
   font-weight: 700;
   background: linear-gradient(90deg, #f2f89c, #4affaa, #12a4ff) !important;
   color: var(--ifm-color-black);
-  /* background-clip: text; */
   height: 1.5em;
 }
 
 
-/* .screen-reader-only {
+.screen-reader-only {
   clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;
@@ -269,7 +203,7 @@ div[class^='announcementBar_'] {
   position: absolute;
   width: 1px;
   white-space: nowrap;
-} */
+}
 
 
 [data-theme='light'] .DocSearch {
@@ -305,11 +239,8 @@ div[class^='announcementBar_'] {
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
   /* Footer */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(-26.5deg,
-      var(--ifm-color-emphasis-200) 0%,
-      var(--ifm-color-emphasis-100) 100%);
+  --docsearch-key-gradient: linear-gradient(-26.5deg, var(--ifm-color-emphasis-200) 0%, var(--ifm-color-emphasis-100) 100%);
 }
-
 
 div.theme-admonition.theme-admonition-tip.alert.alert--success {
   background-color: #9ccfd8;

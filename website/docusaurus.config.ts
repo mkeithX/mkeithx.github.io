@@ -257,8 +257,9 @@ const config: Config = {
       appId: "XVSOLYZXNV",
       contextualSearch: false,
       searchPagePath: "search",
-      insights: true,
+      insights: false,
     },
+    
     footer: {
       style: "dark",
       logo: {
@@ -290,9 +291,9 @@ const config: Config = {
         {
           title: "Developers",
           items: [
-            { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
+            { label: "Meta", href: "https://developers.facebook.com/" },
             { label: "Vercel", href: "https://vercel.com/" },
-            { label: "Meta Dev", href: "https://developers.facebook.com/" },
+            { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
           ],
         },
       ],
