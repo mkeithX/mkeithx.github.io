@@ -30,18 +30,17 @@ function HomepageHeader(): JSX.Element {
 
   return (
     <header
-      className={clsx('hero hero--dark', styles.heroBanner)}
-      data-theme="dark">
+      className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
         <BannerLogo
           className={clsx(styles.heroBannerLogo)}
           title="Banner Logo"
-          width={950}
-          height={650}
+          width={980}
+          height={500}
         />
         <div className="hero__subtitle">
           <span className={clsx(styles.heroSubTitleTextHtml)}>{'OpenSource'}</span>
-          <span className="text--primary text--normal">{' |'}</span>
+          <span className="text--primary">{' |'}</span>
         </div>
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
@@ -83,6 +82,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout title={tagline} description={custom_description}>
       <main>
+        {/* <TopBanner /> */}
         <HomepageHeader />
         <div className={clsx(styles.section)}>
           <HomepageFeatures />

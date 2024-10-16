@@ -29,7 +29,7 @@
 @font-face {
   font-family: "Hubot-Sans";
   src: url("/static/fonts/Hubot-Sans.woff2") format("woff2 supports variations"),
-  url("/static/fonts/Hubot-Sans.woff2") format("woff2-variations");
+    url("/static/fonts/Hubot-Sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
   font-display: swap;
@@ -38,15 +38,15 @@
 @font-face {
   font-family: "Mona-Sans";
   src: url("/static/fonts/Mona-Sans.woff2") format("woff2 supports variations"),
-  url("/static/fonts/Mona-Sans.woff2") format("woff2-variations");
+    url("/static/fonts/Mona-Sans.woff2") format("woff2-variations");
   font-weight: 200 900;
   font-stretch: 75% 125%;
   font-display: swap;
 }
 
-html {
-  font-family: "Mona-Sans";
-}
+/* html {
+  font-family: "Hubot-Sans";
+} */
 
 h1,
 h2,
@@ -72,12 +72,12 @@ h6 {
   --site-color-feedback-background: #f0f8ff;
   /* --site-background-color: #bbeffd4d; */
 
-  /* --ifm-font-family-base: "Montserrat" ; */
+  --ifm-font-family-base: "Mona-Sans" ;
 
   --ifm-code-font-size: 90%;
   /* --ifm-font-size-base: 16px; */
   --ifm-heading-font-weight: 600;
-  --ifm-font-weight-semibold: 600;
+  /* --ifm-font-weight-semibold: 700; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important; */
@@ -110,10 +110,10 @@ h6 {
 
   --ifm-background-color: #0D1118;
   --ifm-background-surface-color: #0D1116 !important;
-  
+
   --site-color-feedback-background: #2a2930;
 
-  
+
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 
 
@@ -127,6 +127,8 @@ h6 {
 
 
 /* Styling for navbar */
+
+
 .navbar {
   background-color: var(--ifm-site-dark) !important;
   /* color: var(--ifm-color-primary-lighter) !important; */
@@ -134,6 +136,7 @@ h6 {
 
 .navbar .navbar__items {
   flex: auto;
+
 }
 
 /* .navbar__title {
@@ -153,7 +156,7 @@ h6 {
 
 /* Navbar branding */
 .navbar__brand {
-  margin-right: 1.8rem;
+  margin-right: 1.5rem;
 }
 
 /* Content table container */
@@ -222,7 +225,8 @@ h6 {
 
 /* Footer styling */
 .footer--dark {
-  --ifm-footer-background-color: #151B22;
+  /* --ifm-footer-background-color: #151B22; */
+  --ifm-footer-background-color: #0D1118;
 }
 
 .footer {
@@ -242,32 +246,11 @@ h6 {
   margin: 0 auto;
 }
 
-/* Announcement bar styling */
-
-/* div[class^='announcementBar_'] {
-  font-size: 17px;
-
-  background: linear-gradient(90deg, #f2f89c 0%, #4affaa 50%, #12a4ff 100%);
-  font-weight: bold;
-}
-
-.screen-reader-only {
-  border: 0;
-  clip: rect(0 0 0 0);
-  clip-path: polygon(0 0, 0 0, 0 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  padding: 0;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-} */
-
 div[class^='announcementBar_'] {
-  font-size: 18px;
+  font-size: 16px;
   font-weight: bold;
-  background: linear-gradient(90deg, #f2f89c, #4affaa, #12a4ff);
+  background: linear-gradient(90deg, #f2f89c, #4affaa, #12a4ff) !important;
+  height: 1.5em;
 }
 
 .screen-reader-only {
@@ -314,11 +297,9 @@ div[class^='announcementBar_'] {
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
   /* Footer */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(
-    -26.5deg,
-    var(--ifm-color-emphasis-200) 0%,
-    var(--ifm-color-emphasis-100) 100%
-  );
+  --docsearch-key-gradient: linear-gradient(-26.5deg,
+      var(--ifm-color-emphasis-200) 0%,
+      var(--ifm-color-emphasis-100) 100%);
 }
 
 
@@ -372,14 +353,14 @@ html[data-theme='dark'] .alert--release {
 .alert--security {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
   --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(66,69,73);
+  --ifm-alert-foreground-color: rgb(66, 69, 73);
   --ifm-alert-border-color: #d4351c;
 }
 
 html[data-theme='dark'] .alert--security {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
   --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-foreground-color: rgb(255, 255, 255);
   --ifm-alert-border-color: #d4351c;
 }
 
