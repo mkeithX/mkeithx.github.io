@@ -29,7 +29,7 @@ function CannyWidget({ basePath }: { basePath: string }) {
   }, [basePath, theme]);
   return (
     <main
-      key={theme} // widget needs a full reset: unable to update the theme
+      key={theme}
       className={clsx("container", "margin-vert--lg", styles.main)}
       data-canny
     />

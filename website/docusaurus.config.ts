@@ -14,8 +14,8 @@ import { socialProfiles } from "./social.json";
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 
-// Current year for copyright
-const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors <br> • All rights reserved •` ;
+
+const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors <br> • All rights reserved •`;
 
 const commonExclusions = {
   exclude: [
@@ -37,7 +37,7 @@ const commonDocsConfig = {
   ...commonExclusions,
 };
 
-// Docusaurus configuration
+
 const config: Config = {
   title: "mkeithx",
   tagline: "Building Innovative Solutions",
@@ -51,8 +51,7 @@ const config: Config = {
   trailingSlash: false,
 
   customFields: {
-    description:
-      "Website representing humanity from Dimension C-137 and beyond.",
+    description: "Website representing humanity from Dimension C-137 and beyond.",
     custom_header: "Guides and Samples from mkeith",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
@@ -63,7 +62,12 @@ const config: Config = {
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
 
-  stylesheets: [{ href: "/katex/katex.min.css", type: "text/css" }],
+  stylesheets: [
+    { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
+    // { href: "/fonts/Hubot-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
+    // { href: "/fonts/Mona-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
+  ],
+  
 
   i18n: {
     defaultLocale: "en",
@@ -128,7 +132,7 @@ const config: Config = {
       } satisfies Preset.Options,
     ],
   ],
- themes: ['live-codeblock'],
+  themes: ['live-codeblock'],
 
   plugins: [
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
@@ -181,14 +185,14 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    // announcementBar: {
-    //   id: `announcementBar_`,
-    //   content:
-    //     `🚀 Check out <a target="_blank" rel="noopener noreferrer" href="/blog">what's new!</a>`,
-    //   isCloseable: true,
-    //   backgroundColor: '#176af8',
-    //   textColor: '#fafbfc',
-    // },
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        `Find out more <a target="_blank" rel="noopener noreferrer" href="/foobar">about this project</a>.`,
+      isCloseable: true,
+      // backgroundColor: '#176af8',
+      // textColor: '#fafbfc',
+    },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {
@@ -207,7 +211,7 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/logo/mkxspacehub-logo-alt.png",
+        src: "img/logo/nav-logo.png",
         target: "_self",
         // className: 'custom-navbar-logo-class',
       },
@@ -233,7 +237,7 @@ const config: Config = {
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
         },
-       
+
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -253,8 +257,9 @@ const config: Config = {
       appId: "XVSOLYZXNV",
       contextualSearch: false,
       searchPagePath: "search",
-      insights: true,
+      insights: false,
     },
+    
     footer: {
       style: "dark",
       logo: {
@@ -281,14 +286,14 @@ const config: Config = {
         },
         {
           title: "Connect",
-          items: [ socialProfiles.facebook, socialProfiles.linkedin,],
+          items: [socialProfiles.facebook, socialProfiles.linkedin,],
         },
         {
           title: "Developers",
           items: [
-            { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
+            { label: "Meta", href: "https://developers.facebook.com/" },
             { label: "Vercel", href: "https://vercel.com/" },
-            { label: "Meta Dev", href: "https://developers.facebook.com/" },
+            { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
           ],
         },
       ],

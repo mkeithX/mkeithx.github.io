@@ -15,15 +15,18 @@
   --ifm-color-primary-lighter: #0d98ed;
   --ifm-color-primary-lightest: #27a6f3;
 
+  /* --site-background-color: #f5f3f7; */
+  /* --site-background-color: #bbeffd4d; */
+
   --ifm-site-dark: #010409;
-  /* --ifm-site-dark: #1B1C26 */
   --site-color-feedback-background: #f0f8ff;
-  
 
   --ifm-code-font-size: 90%;
-  --ifm-font-size-base: 16px;
+  /* --ifm-font-size-base: 16px; */
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
+
+
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important; */
@@ -35,41 +38,49 @@
 
 /* Dark theme overrides */
 [data-theme='dark'] {
-  --ifm-color-primary: #1da1f2;
+  /* --ifm-color-primary: #1da1f2;
   --ifm-color-primary-dark: #0d94e7;
   --ifm-color-primary-darker: #0d8cda;
   --ifm-color-primary-darkest: #0a73b3;
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
-  --ifm-color-primary-lightest: #6ac1f6;
+  --ifm-color-primary-lightest: #6ac1f6; */
 
-  --ifm-background-color: #0D1118;
-  
-  --site-color-feedback-background: #2a2930;
+  --ifm-color-primary: #06bef1;
+  --ifm-color-primary-dark: #05abd9;
+  --ifm-color-primary-darker: #05a1cd;
+  --ifm-color-primary-darkest: #0485a9;
+  --ifm-color-primary-light: #16c8f9;
+  --ifm-color-primary-lighter: #23cbfa;
+  --ifm-color-primary-lightest: #47d3fa;
 
+  /* --ifm-background-color: #1e2125; */
+  /* --ifm-background-surface-color: #121212; */
+
+  --ifm-background-color: #0D1118 !important;
   --ifm-background-surface-color: #0D1116 !important;
-  
+  --site-color-feedback-background: #2a2930;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
-
-
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
 
 }
 
-
-/* Light theme overrides */
-
-
-/* Styling for navbar */
 .navbar {
-  background-color: var(--ifm-site-dark) !important;
-  /* color: var(--ifm-color-primary-lighter) !important; */
+  background-color: var(--ifm-site-dark);
+  
 }
 
-.navbar .navbar__items {
+/* .navbar__brand {
+  margin-right: 1.5rem;
+} */
+
+
+/* .navbar .navbar__items {
   flex: auto;
-}
+
+} */
+
 
 /* .navbar__title {
   font-weight: bold;
@@ -82,13 +93,8 @@
   margin: 0.3rem 0;
 }
 
-/* .navbar__title{
+html[data-navbar='false'] .navbar {
   display: none;
-} */
-
-/* Navbar branding */
-.navbar__brand {
-  margin-right: 1.8rem;
 }
 
 /* Content table container */
@@ -157,7 +163,8 @@
 
 /* Footer styling */
 .footer--dark {
-  --ifm-footer-background-color: #151B22;
+  /* --ifm-footer-background-color: #151B22; */
+  --ifm-footer-background-color: #0D1118;
 }
 
 .footer {
@@ -177,22 +184,25 @@
   margin: 0 auto;
 }
 
-/* Announcement bar styling */
+/* Announcement Bar */
+
 div[class^='announcementBar_'] {
-  font-weight: 600;
-  font-size: 17px;
-  background-color: var(--ifm-footer-background-color);
-  color: var(--ifm-font-color-base);
+  font-size: 18px;
+  font-weight: 700;
+  background: linear-gradient(90deg, #f2f89c, #4affaa, #12a4ff) !important;
+  color: var(--ifm-color-black);
+  height: 1.5em;
 }
 
-div[class^='announcementBar_'] a {
-  color: var(--ifm-link-color);
-  text-decoration: inherit;
-}
 
-div[class^='announcementBar_'] a:hover {
-  color: var(--ifm-link-color);
-  text-decoration: none;
+.screen-reader-only {
+  clip: rect(0, 0, 0, 0);
+  height: 1px;
+  margin: -1px;
+  overflow: hidden;
+  position: absolute;
+  width: 1px;
+  white-space: nowrap;
 }
 
 
@@ -229,14 +239,8 @@ div[class^='announcementBar_'] a:hover {
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
   /* Footer */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(
-    -26.5deg,
-    var(--ifm-color-emphasis-200) 0%,
-    var(--ifm-color-emphasis-100) 100%
-  );
+  --docsearch-key-gradient: linear-gradient(-26.5deg, var(--ifm-color-emphasis-200) 0%, var(--ifm-color-emphasis-100) 100%);
 }
-
-
 
 div.theme-admonition.theme-admonition-tip.alert.alert--success {
   background-color: #9ccfd8;
@@ -287,14 +291,14 @@ html[data-theme='dark'] .alert--release {
 .alert--security {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
   --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(66,69,73);
+  --ifm-alert-foreground-color: rgb(66, 69, 73);
   --ifm-alert-border-color: #d4351c;
 }
 
 html[data-theme='dark'] .alert--security {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
   --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
-  --ifm-alert-foreground-color: rgb(255,255,255);
+  --ifm-alert-foreground-color: rgb(255, 255, 255);
   --ifm-alert-border-color: #d4351c;
 }
 
