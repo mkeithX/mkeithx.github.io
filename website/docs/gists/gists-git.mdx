@@ -12,50 +12,491 @@ Basic Git workflow covering the essential commands for typical tasks.
 
 ## Basic workflow
 
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
 
-```bash showLineNumbers
-git clone <repository-url>  # Clone a remote repository
-git status                  # Show working directory status
-git add <file>              # Stage specific file changes
-git add .                   # Stage all changes
-git commit -m "message"     # Commit staged changes
-git push origin <branch>    # Push changes to remote branch
-git pull origin <branch>    # Pull changes from remote branch
-git branch <new-branch>     # Create a new branch
-git switch <branch>         # Switch to a branch
-git merge <branch>          # Merge branch into current branch
-git branch -d <branch>      # Delete local branch
-git push origin --delete <branch>  # Delete remote branch
+```bash
+git clone <repository-url>
 ```
 
-Create a local branch, make and push changes.
+</td>
+<td>
+Clone a remote repository.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git status
+```
+
+</td>
+<td>
+Show the current state of the working directory and staging area.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git add <file>
+```
+
+</td>
+<td>
+Stage specific file changes.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git add .
+```
+
+</td>
+<td>
+Stage all changes in the current directory.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git commit -m "message"
+```
+
+</td>
+<td>
+Commit staged changes with a descriptive message.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git push origin <branch>
+```
+
+</td>
+<td>
+Push changes to the specified remote branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git pull origin <branch>
+```
+
+</td>
+<td>
+Pull changes from the specified remote branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git branch <new-branch>
+```
+
+</td>
+<td>
+Create a new branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git switch <branch>
+```
+
+</td>
+<td>
+Switch to an existing branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git merge <branch>
+```
+
+</td>
+<td>
+Merge the specified branch into the current branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git branch -d <branch>
+```
+
+</td>
+<td>
+Delete a local branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git push origin --delete <branch>
+```
+
+</td>
+<td>
+Delete a remote branch.
+</td>
+</tr>
+</table>
+
+
+
+
+### `Make and push changes`.
+
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
 
 ```bash
 git checkout -b <"my-feature">
+```
+
+</td>
+<td>
+Create and switch to a new branch called "my-feature".
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git commit -m <"feat: my feature description">
+```
+
+</td>
+<td>
+Commit changes with a message describing the new feature.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git push
+```
+
+</td>
+<td>
+Push changes to the current branch on the remote repository.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git push -u origin <"my-feature">
 ```
+
+</td>
+<td>
+Push the "my-feature" branch to the remote and set the upstream tracking.
+</td>
+</tr>
+</table>
+
+
+
 ## Updating a branch
 ### `git checkout`
 
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+
 ```bash
 git fetch
+```
+
+</td>
+<td>
+Fetch updates from the remote repository without merging.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git checkout your-branch-name
+```
+
+</td>
+<td>
+Switch to the specified branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git merge origin/main
-# or
+```
+
+</td>
+<td>
+Merge changes from the main branch into the current branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git rebase origin/main
-# Resolve conflicts if needed
+```
+
+</td>
+<td>
+Rebase the current branch on top of the main branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git add resolved-file
-# if merging
+```
+
+</td>
+<td>
+Stage the resolved file after fixing any conflicts.
+</td>
+</tr>
+<tr>
+<td>
+
+If Merging
+
+</td>
+<td>
+If Merging
+</td>
+</tr>
+<tr>
+<td>
+
+```bash
 git merge --continue
-# if rebasing
+```
+
+</td>
+<td>
+Continue the merge process after resolving conflicts.
+</td>
+</tr>
+
+<tr>
+<td>
+
+Rebase
+
+</td>
+<td>
+Rebase
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git rebase --continue
+```
+
+</td>
+<td>
+Continue the rebase process after resolving conflicts.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git push origin your-branch-name
-# if rebasing
+```
+
+</td>
+<td>
+Push changes to the specified branch on the remote repository.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
 git push origin your-branch-name --force-with-lease
 ```
+
+</td>
+<td>
+Force push changes to the branch while ensuring safety against overwriting.
+</td>
+</tr>
+</table>
+
+
 ### `git switch`
+
+<table>
+<tr>
+<th>Command</th>
+<th>Description</th>
+</tr>
+<tr>
+<td>
+
+```bash
+git fetch
+```
+
+</td>
+<td>
+Fetch updates from the remote repository without merging.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git switch your-branch-name
+```
+
+</td>
+<td>
+Switch to the specified branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git merge origin/main
+```
+
+</td>
+<td>
+Merge changes from the main branch into the current branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git rebase origin/main
+```
+
+</td>
+<td>
+Rebase the current branch on top of the main branch.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git add resolved-file
+```
+
+</td>
+<td>
+Stage the resolved file after fixing any conflicts.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git merge --continue
+```
+
+</td>
+<td>
+Continue the merge process after resolving conflicts.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git rebase --continue
+```
+
+</td>
+<td>
+Continue the rebase process after resolving conflicts.
+</td>
+</tr>
+
+<tr>
+<td>
+
+```bash
+git push origin your-branch-name --force-with-lease
+```
+
+</td>
+<td>
+Force push changes to the branch while ensuring safety against overwriting.
+</td>
+</tr>
+</table>
 
 ```bash
 git fetch

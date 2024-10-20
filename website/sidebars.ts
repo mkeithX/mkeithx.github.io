@@ -270,22 +270,30 @@ const sidebars: SidebarsConfig = {
         "examples/python/bmi-calculator",
         "examples/python/fibonacci-sequence",
         "examples/python/password-generator",
+        {
+          type: "category",
+          label: "Django",
+          collapsed: true,
+          items: [
+            "examples/python/django/crud-demo",
+          ]
+        },
       ]
     },
-    {
-      type: "category",
-      label: "Django",
-      collapsed: true,
-      link: {
-        type: "generated-index",
-        slug: "/examples/django",
-        description: "Django examples",
-      },
-      items: [
-        "examples/django/crud-demo",
-      ]
+    // {
+    //   type: "category",
+    //   label: "Django",
+    //   collapsed: true,
+    //   link: {
+    //     type: "generated-index",
+    //     slug: "/examples/django",
+    //     description: "Django examples",
+    //   },
+    //   items: [
+    //     "examples/django/crud-demo",
+    //   ]
 
-    },
+    // },
     {
       type: "category",
       label: "READMEs",
@@ -300,6 +308,7 @@ const sidebars: SidebarsConfig = {
         "examples/setup/flask-tutorials"
       ]
     },
+
 
   ],
 

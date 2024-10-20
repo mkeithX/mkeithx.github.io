@@ -1,6 +1,7 @@
 .fooHead {
     background-color: var(--ifm-site-dark) !important;
     flex-direction: column;
+    /* padding: 3.6rem 0 1rem; */
 }
 
 .fooTitle {
