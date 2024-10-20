@@ -1,20 +1,26 @@
-.fooHead {
+.thisHead {
     background-color: var(--ifm-site-dark) !important;
     flex-direction: column;
     /* padding: 3.6rem 0 1rem; */
+    padding: 3.6rem 0 1rem;
 }
 
-.fooTitle {
-    font-size: 54px;
-    font-weight: bold;
-    margin-bottom: 0.4rem;
+.thisTitle {
+    font-size: 50px;
+    font-weight: 600;
+    margin-bottom: 0.1rem;
 }
 
 
-.fooBody {
+.thisBody {
     /* background-color: var(--ifm-color-primary) !important; */
     background-color: var(--ifm-site-dark) !important;
     flex-direction: column;
     font-size: 20px;
     font-weight: 300;
+}
+
+.thisAvatar {
+    max-height: 196px;
+    max-width: 196px;
 }

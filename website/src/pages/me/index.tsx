@@ -21,7 +21,7 @@ function About(): JSX.Element {
       <div className={clsx(styles.aboutHeader, "hero hero--dark")}>
         <div className="container">
           <div className="hero__subtitle">
-            <span className={clsx(styles.aboutSectionHeader)}>{"Le"}</span>
+            <span className={clsx(styles.aboutSectionHeader)}>{"About"}</span>
           </div>
           <Heading as="h1" className={clsx(styles.aboutTitle)}>
             {"Me"}

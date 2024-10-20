@@ -270,30 +270,29 @@ const sidebars: SidebarsConfig = {
         "examples/python/bmi-calculator",
         "examples/python/fibonacci-sequence",
         "examples/python/password-generator",
+        {
+          type: "category",
+          label: "Django",
+          items: [
+            "examples/django/crud-demo",
+          ]
+        },
       ]
     },
-    {
-      type: "category",
-      label: "Django",
-      collapsed: true,
-      link: {
-        type: "generated-index",
-        slug: "/examples/django",
-        description: "Django examples",
-      },
-      items: [
-        "examples/django/crud-demo",
-      ]
+    // {
+    //   type: "category",
+    //   label: "Django",
+    //   collapsed: true,
+    //   link: {
+    //     type: "generated-index",
+    //     slug: "/examples/django",
+    //     description: "Django examples",
+    //   },
+    //   items: [
+    //     "examples/django/crud-demo",
+    //   ]
 
-    },
-    {
-      type: "category",
-      label: "Batch",
-      collapsed: true,
-      items: [
-        "examples/windows-batch",
-      ]
-    },
+    // },
     {
       type: "category",
       label: "READMEs",
