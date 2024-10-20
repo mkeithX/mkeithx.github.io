@@ -273,8 +273,9 @@ const sidebars: SidebarsConfig = {
         {
           type: "category",
           label: "Django",
+          collapsed: true,
           items: [
-            "examples/django/crud-demo",
+            "examples/python/django/crud-demo",
           ]
         },
       ]
