@@ -288,6 +288,14 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: "category",
+      label: "Batch",
+      collapsed: true,
+      items: [
+        "examples/windows-batch",
+      ]
+    },
+    {
+      type: "category",
       label: "READMEs",
       collapsed: true,
       link: {
@@ -300,6 +308,7 @@ const sidebars: SidebarsConfig = {
         "examples/setup/flask-tutorials"
       ]
     },
+
 
   ],
 

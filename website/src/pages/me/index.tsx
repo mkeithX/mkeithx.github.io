@@ -21,10 +21,10 @@ function About(): JSX.Element {
       <div className={clsx(styles.aboutHeader, "hero hero--dark")}>
         <div className="container">
           <div className="hero__subtitle">
-            <span className={clsx(styles.heroSubTitleTextHtml)}>{"Hi there!"}</span>
+            <span className={clsx(styles.aboutSectionHeader)}>{"Le"}</span>
           </div>
           <Heading as="h1" className={clsx(styles.aboutTitle)}>
-            {"I'm Keith"}
+            {"Me"}
           </Heading>
         </div>
       </div>
@@ -33,11 +33,13 @@ function About(): JSX.Element {
           <div className="container">
             <div className="row bottom--lg">
               <div className={clsx("col col--3", styles.profilePic)}>
-                <img src={profilePicUrl} alt="Profile of Keith" />
+                <img src={profilePicUrl} alt="mkxProfile" />
               </div>
               <div className={clsx("col col--9")}>
+                <h2>Hi, I'm Keith.</h2>
                 <p>
-                  I'm an independent Web Developer and System Administrator with a soft spot for Python, React, and M365. In simple terms, I build websites and fix computers too.
+                  I'm a independent software developer with a soft spot for the Django web framework. Right now, I'm focusing on improving my frontend skills to make better user experiences. I also work as a systems administrator at a private company, where I help manage IT infrastructure.
+                  In simple terms, I build websites and fix computers too.
                   Outside of work, I take pride in being a loving husband and devoted dad, yet admittedly, a stubborn brother.
                   <br />
                 </p>
@@ -48,7 +50,7 @@ function About(): JSX.Element {
                   I graduated with a degree in Information Technology, which has provided me with a solid foundation for my career in the tech industry. Along the way, I've had the opportunity to work closely with a range of professionals, including civil engineers, business specialists, and lawyers, expanding my perspective and enhancing my skill set.
                 </p>
                 <p>
-                  Feel free to explore <Link className="text--no-decoration" to={"/foobar"}>this website</Link> or check out <a target="_blank" rel="noreferrer" className="text--no-decoration" href={resumeUrl}>my resume</a>.
+                  Feel free to explore <Link className="text--no-decoration" to="/foobar">this website</Link> or check out <a target="_blank" rel="noreferrer" className="text--no-decoration" href={resumeUrl}>my resume</a>.
                 </p>
                 <p>Thank you!</p>
                 <p className="text--justify">
