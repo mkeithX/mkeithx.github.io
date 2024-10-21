@@ -13,11 +13,12 @@ function This(): JSX.Element {
     } = useDocusaurusContext();
 
     const {
+        description,
         custom_tagline,
-        custom_description,
         custom_title,
         custom_header,
     } = customFields as {
+        description: string;
         custom_tagline: string;
         custom_description: string;
         custom_header: string;
@@ -28,7 +29,7 @@ function This(): JSX.Element {
     const resumeUrl = useBaseUrl("./files/resume.pdf");
 
     return (
-        <Layout title="About" description="About me">
+        <Layout title="About me" description={description}>
             <div className={clsx(styles.thisHead, "hero")}>
                 <div className="container">
                     <div className="avatar">

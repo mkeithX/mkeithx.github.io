@@ -51,7 +51,7 @@ const config: Config = {
   trailingSlash: false,
 
   customFields: {
-    description: "Website representing humanity from Dimension C-137 and beyond.",
+    description: "Representing humanity from Dimension C-137 and beyond.",
     custom_header: "Guides and Samples from mkeith",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
