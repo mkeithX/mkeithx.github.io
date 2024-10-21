@@ -252,6 +252,11 @@ const sidebars: SidebarsConfig = {
         "devops/glossary",
       ]
     },
+    {
+      type: 'link',
+      label: 'Le Me',
+      href: '/me'
+    },
   ],
 
   exampleSidebar: [
