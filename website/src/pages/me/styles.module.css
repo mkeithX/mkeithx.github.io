@@ -1,5 +1,6 @@
 .thisHead {
-    background-color: var(--ifm-site-dark) !important;
+    background-color: #1da1f2 !important;
+    color: var(--ifm-site-dark) !important;
     flex-direction: column;
     padding: 2.5rem 0 1rem;
 }
