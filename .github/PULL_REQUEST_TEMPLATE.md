@@ -1,13 +1,17 @@
-## Motivation
+### Motivation
 
 
-## Tests and Changes
-
-
-## Related Issues/PRs
+### Tests and Changes
+- **chore**: Code maintenance, no feature changes
 
 
 
-## Pre-flight Checklist
+### Related Issues/PRs
 
-- [ ] I have read and understand the Contributing Guidelines on [Pull Request](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#pull-requests).
+
+
+### Checklist
+- [ ] I have read the Contributing Guidelines on [Pull Request](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md#pull-requests).
+- [ ] I have tested the changes locally.
+- [ ] I have ensured that all existing tests pass.
+- [ ] I have added necessary documentation (if applicable).
