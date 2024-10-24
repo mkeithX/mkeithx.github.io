@@ -5,28 +5,17 @@ labels: ["needs triage"]
 projects: ["SpaceHub"]
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## Important!
-
-        Before filing your issue, ask yourself:
-        - Do I have an idea of where the issue occurs?
-        - Did I include clear steps to reproduce it?
-        - Could it be due to my own mistakes?
-        - Has this bug already been reported?
 
   - type: checkboxes
     attributes:
-      label: Basic troubleshooting.
-      description: The project is built with Docusaurus. Review these items before submitting an issue to ensure you’ve completed the necessary steps.
+      label: IMPORTANT!
+      description: Please review these items before submitting an issue to ensure you’ve completed the necessary steps.
       options:
         - label: I'm using the latest version of Docusaurus.
           required: true
-        - label: I have tried the `npm run clear` or `yarn clear` command.
-        - label: I have tried `rm -rf node_modules yarn.lock package-lock.json` and re-installing packages.
-        - label: I have tried creating a repro with https://new.docusaurus.io.
-        - label: I have read the console error message carefully (if applicable).
+        - label: I have read the Guidelines in [reporting bugs](https://mkeithx.pages.dev/community/issue/report).
+        - label: I have perform [basic troubleshooting](https://mkeithx.pages.dev/community/issue/installation#troubleshooting) (if applicable).
+        - label: I'd be willing to address this issue myself.
 
   - type: textarea
     id: what-happened
@@ -81,11 +70,3 @@ body:
       options:
         - label: I agree to follow this project's Code of Conduct.
           required: true
-
-  - type: checkboxes
-    attributes:
-      label: Self-service
-      description: |
-        If you can contribute, check the box to indicate you're working on it. Please submit a pull request within 7 days.
-      options:
-        - label: I'd be willing to address this documentation request myself.
