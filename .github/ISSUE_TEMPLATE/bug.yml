@@ -5,20 +5,17 @@ labels: ['needs triage']
 projects: ['SpaceHub']
 
 body:
-  - type: markdown
-    attributes:
-      value: |
-        ## Please help us help you!
-
   - type: checkboxes
     attributes:
       label: Prerequisites
-      description: Please review these items before submitting an issue to ensure you’ve completed the necessary steps outlined in [this article](https://mkeithx.pages.dev/community/issue/report).
+      description: Please review these items before submitting an issue to ensure you’ve completed the necessary steps.
       options:
-        - label: I have read the Guidelines in reporting bugs.
+        - label: I have read the Guidelines in [reporting bugs](https://mkeithx.pages.dev/community/issue/report).
           required: true
-        - label: I have performed basic troubleshooting (if applicable).
+        - label: I have performed [basic troubleshooting](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
+          required: false
         - label: I'd be willing to address this issue myself.
+          required: false
 
   - type: textarea
     id: what-happened
@@ -47,7 +44,6 @@ body:
     attributes:
       label: What browsers are you seeing the problem on?
       multiple: false
-      required: true
       options:
         - Firefox
         - Chrome
@@ -61,7 +57,6 @@ body:
     attributes:
       label: Device type.
       multiple: false
-      required: true
       options:
         - Mobile
         - Desktop
