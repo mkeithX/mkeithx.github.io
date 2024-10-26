@@ -11,13 +11,8 @@ body:
       description: Please review these items before submitting an issue to ensure you’ve completed the necessary steps.
       options:
         - label: I have read the Guidelines in [reporting bugs](https://mkeithx.pages.dev/community/issue/report).
-          required: true
-        - label: I'm certain that I have [configured it correctly](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot).
-          required: true
         - label: I have performed [basic troubleshooting](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
-          required: true
         - label: I'd be willing to address this issue myself.
-          required: false
 
   - type: textarea
     id: what-happened
