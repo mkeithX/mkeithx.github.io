@@ -3,3 +3,6 @@ contact_links:
   - name: 🚀 Feature request
     url: https://mkeithx.pages.dev/feature-requests
     about: Your ideas are welcome. Help us build the future!
+  - name: 💡Proposal
+    url: https://forms.office.com/r/sQBiMJ8bQ3
+    about: If you intend to make any non-trivial changes to existing implementations, let's discuss the change you wish to make.
