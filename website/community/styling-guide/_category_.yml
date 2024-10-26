@@ -1,7 +1,0 @@
-label: Styling Guide
-collapsed: true
-position: 3
-link:
-  type: generated-index
-  slug: /styling-guide
-  description: The styling guide provides conventions for code and documentation formatting, ensuring consistency and readability. It covers naming conventions, indentation, and comment styles. Adhering to these standards enhances collaboration and maintains a high-quality codebase.
