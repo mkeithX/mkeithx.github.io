@@ -1,7 +1,7 @@
 name: 📒 Documentation
 description: Report an issue related to documentation
-title: "[Docs]: "
-labels: ["needs triage"]
+title: '[Docs]: '
+labels: ['needs triage','documentation']
 
 body:
   - type: markdown
@@ -9,28 +9,20 @@ body:
       value: |
         ## Important!
 
-        Use this template to report various documentation-related issues.
-        If documentation issues arise, consider if it’s a documentation or code problem. For code issues, use the "bug" template.
-
-        Pull requests are generally accepted if:
-        - Relevant to many users
-        - Not about external tooling
-        - Not documented elsewhere or hard to find
-
-        You may submit a pull request directly if criteria are met; otherwise, issues are welcome.
+        Use this template to report documentation-related issues. Make sure that you read the [Guidelines](https://mkeithx.pages.dev/community/issue/report#docs) before submitting.
 
   - type: dropdown
     id: issue
     attributes:
-      label: Issue category
-      description: What's the issue about?
+      label: What's this about?
+      description: Help us categorize this issue/request.
       multiple: false
       options:
         - Undocumented API
         - Elaboration needed
         - Outdated or incorrect information
         - Formatting or readability improvement
-        - Others
+        - Other
     validations:
       required: true
 
@@ -39,16 +31,17 @@ body:
     attributes:
       label: Description
       description: A clear description of the issue.
-      placeholder: Tell us what you see!
-      value: "Describe the issue"
+      placeholder: Clearly describe the issue/request in detail.
     validations:
       required: true
 
   - type: checkboxes
+    id: terms
     attributes:
-      label: Have you read the Contributing Guidelines on [reporting issues?](https://mkeithx.pages.dev/community/report-an-issue)
+      label: Code of Conduct
+      description: By submitting, you agree to our [Code of Conduct](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md)
       options:
-        - label: I have read the [Code of Conduct](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md).
+        - label: I agree to follow this project's Code of Conduct.
           required: true
 
   - type: checkboxes
@@ -58,3 +51,4 @@ body:
         If you can contribute, check the box to indicate you're working on it. Please submit a pull request within 7 days.
       options:
         - label: I'd be willing to address this documentation request myself.
+          required: false
