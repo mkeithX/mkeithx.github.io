@@ -22,8 +22,23 @@ const sidebars: SidebarsConfig = {
       label: "Getting Started",
       collapsed: false,
       items: [
-        "sdlc",
+        // "sdlc",
         "core-concept",
+        {
+          type: 'category',
+          label: 'How tos',
+          collapsed: true,
+          link: {
+            type: 'doc',
+            id: "how-tos/index"
+          },
+          items: [
+            'how-tos/fix-cloud-pc',
+            'how-tos/fix-ms-teams',
+            'how-tos/check-pc-performance',
+            
+          ]
+        },
         {
           type: "category",
           label: "Gists",
