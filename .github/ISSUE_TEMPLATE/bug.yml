@@ -14,8 +14,8 @@ body:
           required: true
         - label: I'm certain that I have [configured it correctly](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot).
           required: true
-        - label: I have performed [basic troubleshooting]https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
-          required: true
+        - label: I have performed [basic troubleshooting](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
+          required: false
         - label: I'd be willing to address this issue myself.
 
   - type: textarea
@@ -45,6 +45,7 @@ body:
     attributes:
       label: What browsers are you seeing the problem on?
       multiple: false
+      required: true
       options:
         - Firefox
         - Chrome
@@ -58,6 +59,7 @@ body:
     attributes:
       label: Device type.
       multiple: false
+      required: true
       options:
         - Mobile
         - Desktop
