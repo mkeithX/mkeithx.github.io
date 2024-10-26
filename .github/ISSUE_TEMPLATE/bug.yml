@@ -1,20 +1,21 @@
 name: 🪲 Bug Report
 description: Report those pesky bugs!
-title: "[Bug]: "
-labels: ["needs triage"]
-projects: ["SpaceHub"]
+title: '[Bug]: '
+labels: ['needs triage']
+projects: ['SpaceHub']
 
 body:
-
   - type: checkboxes
     attributes:
       label: IMPORTANT!
       description: Please review these items before submitting an issue to ensure you’ve completed the necessary steps.
       options:
-        - label: I'm using the latest version of Docusaurus.
-          required: true
         - label: I have read the Guidelines in [reporting bugs](https://mkeithx.pages.dev/community/issue/report).
-        - label: I have perform [basic troubleshooting](https://mkeithx.pages.dev/community/issue/installation#troubleshooting) (if applicable).
+          required: true
+        - label: I'm certain that I have [configured it correctly](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot).
+          required: true
+        - label: I have performed [basic troubleshooting]https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
+          required: true
         - label: I'd be willing to address this issue myself.
 
   - type: textarea
@@ -23,7 +24,6 @@ body:
       label: What happened?
       description: Also tell us, what did you expect to happen?
       placeholder: Tell us what you see!
-      value: "A bug happened when "
     validations:
       required: true
 
@@ -44,7 +44,7 @@ body:
     id: browsers
     attributes:
       label: What browsers are you seeing the problem on?
-      multiple: true
+      multiple: false
       options:
         - Firefox
         - Chrome
@@ -52,12 +52,12 @@ body:
         - Microsoft Edge
         - Brave
         - DuckDuck Go
-  
+
   - type: dropdown
     id: device
     attributes:
       label: Device type.
-      multiple: true
+      multiple: false
       options:
         - Mobile
         - Desktop
