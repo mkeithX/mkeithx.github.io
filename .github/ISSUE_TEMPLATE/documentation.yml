@@ -15,7 +15,7 @@ body:
     id: issue
     attributes:
       label: What's this about?
-      description: Help us categorize this issue/request.
+      description: Help us categorize this issue.
       multiple: false
       options:
         - Undocumented API

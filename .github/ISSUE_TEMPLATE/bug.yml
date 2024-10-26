@@ -15,8 +15,9 @@ body:
         - label: I'm certain that I have [configured it correctly](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot).
           required: true
         - label: I have performed [basic troubleshooting](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
-          required: false
+          required: true
         - label: I'd be willing to address this issue myself.
+          required: true
 
   - type: textarea
     id: what-happened
