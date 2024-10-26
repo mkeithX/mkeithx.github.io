@@ -7,27 +7,27 @@ projects: ['SpaceHub']
 body:
   - type: checkboxes
     attributes:
-      label: IMPORTANT!
+      label: Prerequisites
       description: Please review these items before submitting an issue to ensure you’ve completed the necessary steps.
       options:
         - label: I have read the Guidelines in [reporting bugs](https://mkeithx.pages.dev/community/issue/report).
           required: true
-        - label: I'm certain that I have [configured it correctly](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot).
-          required: true
         - label: I have performed [basic troubleshooting](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
           required: false
         - label: I'd be willing to address this issue myself.
+          required: false
 
   - type: textarea
     id: what-happened
     attributes:
       label: What happened?
-      description: Also tell us, what did you expect to happen?
+      description: Also tell us what you expected to happen.
       placeholder: Tell us what you see!
     validations:
       required: true
 
   - type: textarea
+    id: steps-to-reproduce
     attributes:
       label: Steps to reproduce
       description: Kindly indicate the troubleshooting steps you've taken.
@@ -36,7 +36,6 @@ body:
         2. Leave required fields empty.
         3. Click the "Submit" button.
         4. Observe the application crash.
-
     validations:
       required: true
 
@@ -45,7 +44,6 @@ body:
     attributes:
       label: What browsers are you seeing the problem on?
       multiple: false
-      required: true
       options:
         - Firefox
         - Chrome
@@ -59,7 +57,6 @@ body:
     attributes:
       label: Device type.
       multiple: false
-      required: true
       options:
         - Mobile
         - Desktop

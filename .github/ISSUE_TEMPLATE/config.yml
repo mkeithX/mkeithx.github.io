@@ -1,8 +1,8 @@
 blank_issues_enabled: false
 contact_links:
-  - name: 🚀 Feature request
+  - name: 🚀 Feature Requests
     url: https://mkeithx.pages.dev/feature-requests
-    about: Your ideas are welcome. Help us build the future!
-  - name: 💡Proposal
+    about: Not ready to open a pull request yet? We got that covered.
+  - name: 💡 Proposals
     url: https://forms.office.com/r/sQBiMJ8bQ3
     about: If you intend to make any non-trivial changes to existing implementations, let's discuss the change you wish to make.
