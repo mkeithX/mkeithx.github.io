@@ -112,12 +112,12 @@ export function ReportsCardRow(): JSX.Element {
       <QuickStartCol
         title="Report Bugs🪲"
         subTitle=" Help us help you: Report those pesky bugs!"
-        webUrl="/community/report-an-issue#bugs"
+        webUrl="/community"
       />
       <QuickStartCol
         title="Request a Feature❓"
         subTitle="Your ideas are welcome. Help us build the future!"
-        webUrl="/community/report-an-issue#feature-request"
+        webUrl="/feature-request"
       />
     </div>
   );
