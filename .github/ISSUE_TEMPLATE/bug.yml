@@ -5,6 +5,11 @@ labels: ['needs triage']
 projects: ['SpaceHub']
 
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Please help us help you!
+        
   - type: checkboxes
     attributes:
       label: IMPORTANT!
