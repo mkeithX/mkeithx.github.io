@@ -14,8 +14,8 @@ body:
   - type: dropdown
     id: issue
     attributes:
-      label: Issue category
-      description: What's the issue about?
+      label: What's this about?
+      description: Help us categorize this issue/request.
       multiple: false
       options:
         - Undocumented API
@@ -31,8 +31,7 @@ body:
     attributes:
       label: Description
       description: A clear description of the issue.
-      placeholder: Tell us what you see!
-      value: 'Describe the issue'
+      placeholder: Clearly describe the issue/request in detail.
     validations:
       required: true
 
