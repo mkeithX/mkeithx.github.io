@@ -185,14 +185,12 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: false,
     },
-    announcementBar: {
-      id: `announcementBar_`,
-      content:
-        `Find out more <a target="_blank" rel="noopener noreferrer" href="/foobar">about this project</a>.`,
-      isCloseable: true,
-      // backgroundColor: '#176af8',
-      // textColor: '#fafbfc',
-    },
+    // announcementBar: {
+    //   id: `announcementBar_`,
+    //   content:
+    //     `Find out more <a target="_blank" rel="noopener noreferrer" href="/foobar">about this project</a>.`,
+    //   isCloseable: true,
+    // },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {

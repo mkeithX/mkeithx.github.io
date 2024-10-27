@@ -2,8 +2,79 @@
 description: Fix common MS Teams issues
 ---
 
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+import MsTeams from '@site/static/img/logo/ms-teams.svg';
+
 # Fix MS Teams Issues
 
-import ComingSoon from "@site/src/components/ComingSoon";
 
-<ComingSoon />
+
+Microsoft Teams is a powerful collaboration tool, but you might occasionally encounter issues. Here’s a quick guide to help you troubleshoot and resolve common problems.
+
+
+<MsTeams className="logoBadge" />
+
+
+## 1. **Unable to Log In**
+
+If you can’t log in, try the following:
+
+- **Check Your Credentials:** Ensure you’re using the correct email and password.
+- **Restart Teams:** Close the application completely and reopen it.
+- **Clear the Cache:** For desktop users, clearing the Teams cache can help:
+  - Exit Teams.
+  - Navigate to `%appdata%\Microsoft\Teams` and delete all files in the folder.
+
+
+
+![close-ms-teams](/img/troubleshooting/close-ms-teams.png)
+
+
+<Tabs>
+  <TabItem value="classic" label="Classic Teams" default>
+
+```bash
+%appdata%\Microsoft\Teams
+```
+
+  </TabItem>
+  <TabItem value="new" label="New Teams">
+
+```bash
+%userprofile%\appdata\local\Packages\MSTeams_8wekyb3d8bbwe\LocalCache\Microsoft\MSTeams
+```
+
+  </TabItem>
+</Tabs>
+
+## 2. **Poor Call Quality**
+
+If your calls are choppy or unclear:
+
+- **Check Your Internet Connection:** A stable connection is crucial. Test your speed and switch to a wired connection if possible.
+- **Close Other Applications:** Make sure other applications aren’t using too much bandwidth.
+- **Adjust Audio Settings:** Check your audio device settings within Teams to ensure the correct microphone and speaker are selected.
+
+## 3. **Teams Not Syncing Messages**
+
+If messages aren’t appearing or syncing:
+
+- **Restart Teams:** Close and reopen the application.
+- **Check for Updates:** Ensure you’re using the latest version of Teams. Click on your profile picture and select **Check for updates**.
+- **Sign Out and Back In:** This can help refresh your session and sync messages.
+
+## 4. **Screen Sharing Issues**
+
+If you’re having trouble sharing your screen:
+
+- **Check Permissions:** Ensure Teams has the necessary permissions to share your screen.
+- **Close Other Sharing Applications:** Other applications using screen sharing might conflict with Teams.
+- **Try Different Browsers:** If you’re using Teams in a browser, switching to a different one may resolve issues.
+
+## Conclusion
+
+While Microsoft Teams is a robust platform, issues can occasionally arise. By following these troubleshooting steps, you can quickly resolve common problems and enhance your collaboration experience. If you continue to face challenges, consider reaching out to your IT support team for further assistance.
+
+For more help, visit our [Helpdesk Support Page](#) or contact [Helpdesk Email/Phone Number].
