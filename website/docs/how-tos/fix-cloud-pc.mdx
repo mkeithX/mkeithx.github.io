@@ -1,9 +1,117 @@
 ---
-description: Fix common Cloud PC issues
+description: Fix Common Cloud PC Issues
 ---
+
+import CloudPC from '@site/static/img/logo/cloud-pc.svg';
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
 
 # Fix Cloud PC Issues
 
-import ComingSoon from "@site/src/components/ComingSoon";
 
-<ComingSoon />
+
+This article will cover some common Cloud PC problems and provide effective solutions to help you get back on track.
+
+<CloudPC className="logoBadge"/>
+
+
+## **Connectivity Issue**
+
+<BrowserWindow url="/Connectivity">
+
+If you’re having trouble connecting, try these steps:
+
+- **Check Your Internet Connection:** Make sure your internet is stable and working properly.
+- **Restart the Application:** Close the Cloud PC app or your web browser, then reopen it.
+- **Clear Your Browser Cache:** If you’re using a browser, clearing the cache and cookies can help. 
+
+
+<!-- import ComingSoon from "@site/src/components/ComingSoon";
+
+<ComingSoon /> -->
+<!-- 
+<Tabs groupId="browser">
+  <TabItem value="edge" label="Edge">
+  
+
+```bash
+edge://settings/clearBrowserData
+```
+
+  </TabItem>
+  <TabItem value="chrome" label="Chrome">
+  
+
+```bash
+chrome://settings/clearBrowserData
+```
+  </TabItem>
+</Tabs> -->
+
+</BrowserWindow>
+
+
+
+## **Latency Issues**
+
+<BrowserWindow url="/Latency">
+
+If your Cloud PC feels sluggish, here’s what you can do:
+
+- **Close Unnecessary Applications:** Try to limit the number of apps you have open at the same time.
+- **Check Resource Usage:** Look at your [CPU and memory usage](#monitor-uptime) to see if any apps are using too many resources.
+- **Restart Your Cloud PC:** A simple [restart can refresh](#restart) the system and improve performance.
+
+</BrowserWindow>
+
+<!-- ## **Display Issues**
+
+If you’re seeing a black screen or distorted visuals, follow these tips:
+
+- **Check Your Display Settings:** Make sure your resolution and display settings are correct.
+- **Update Your Graphics Drivers:** Keeping your graphics drivers up to date can fix display problems.
+- **Reconnect to Your Cloud PC:** Disconnecting and reconnecting can refresh the display. -->
+
+<!-- ## **Applications Crashing**
+
+If your applications are crashing frequently, try these solutions:
+
+- **Update Your Applications:** Ensure all your applications are up to date.
+- **Check Compatibility:** Verify that the apps you’re using are compatible with your Cloud PC.
+- **Reinstall the Affected Applications:** If problems persist, uninstall and then reinstall the apps that are crashing. -->
+
+
+
+<!-- ## Conclusion
+
+Cloud PCs are powerful tools, but sometimes issues can arise. By following these troubleshooting steps, you can quickly resolve common problems and get back to work. If you still need help, don’t hesitate to reach out to your IT support team.
+ -->
+
+<!-- :::tip[PRO TIP]
+Consider the following best practices that could help keeping your Cloud PC running smoothly.
+::: -->
+
+
+### **Check for Updates**
+Keeping your system and app up-to-date comes latest features and security improvements. You'll notice if update is available if there's a green arrow on your Cloud PC client.
+
+![update cpc](/img/guides/cpc-update.png)
+
+### **Monitor Uptime**
+You can check uptime in Task Manager (Ctrl + Shift + Esc), displayed as [**DAYS: HOURS: MINUTES: SECONDS**] under the "Performance" tab. Aim to restart your Cloud PC at least once a week to refresh system resources and apply updates.
+
+![alt text](/img/guides/pc-uptime.png)
+
+### **Restart**
+Navigate to [windows365.microsoft.com](https://windows365.microsoft.com/) to see the Cloud PCs they have access to.
+
+![close-ms-teams](/img/troubleshooting/cloud-pc.png)
+
+| Action            | Description                                                                                                                                                    |
+|-------------------|----------------------------------------------------------------------------------------------------------------------------------------------------------------|
+| **Restart**       |This clears temporary files and refreshes resources, improving performance and applying updates.  |
+| **Troubleshoot**  | Attempts to resolve connection issues. Checks include: <ul><li>Verifying that necessary files or agents for connectivity are correctly installed.</li><li>Ensuring that Azure resources are available.</li></ul> |
+| **System Information** | Displays information about the Cloud PC specifications.                                                                                                   |
+
