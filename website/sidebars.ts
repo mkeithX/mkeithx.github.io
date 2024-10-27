@@ -255,7 +255,7 @@ const sidebars: SidebarsConfig = {
             description: "Basic troubleshooting guide and workarounds.",
           },
           items: [
-            "devops/troubleshoot/cloud-pc",
+            // "devops/troubleshoot/cloud-pc",
             "devops/troubleshoot/powershell",
             "devops/troubleshoot/windows-utilities",
             "devops/troubleshoot/windows-hardware-issues",
