@@ -30,3 +30,4 @@ jobs:
         run: |
           cd examples/python-starters
           python hello.py
+          python -c 'import this'
