@@ -23,7 +23,8 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         // "sdlc",
-        "core-concept",
+        // "core-concept",
+        "writing-good-docs",
         {
           type: 'category',
           label: 'How tos',
@@ -35,7 +36,10 @@ const sidebars: SidebarsConfig = {
           items: [
             'how-tos/fix-cloud-pc',
             'how-tos/fix-ms-teams',
-            'how-tos/check-pc-performance',
+            'how-tos/fix-connectivity',
+            'how-tos/windows-utils',
+
+            // 'how-tos/check-pc-performance',
             
           ]
         },
@@ -81,8 +85,6 @@ const sidebars: SidebarsConfig = {
         id: "configs/index",
       },
       items: [
-        // "configs/plugins-config",
-        // "configs/api",
         "configs/guides/docs/create-doc",
         "configs/guides/docs/docs-create-page",
         "configs/guides/docs/blog",
@@ -267,11 +269,11 @@ const sidebars: SidebarsConfig = {
         "devops/glossary",
       ]
     },
-    {
-      type: 'link',
-      label: 'Le Me',
-      href: '/me'
-    },
+    // {
+    //   type: 'link',
+    //   label: 'Le Me',
+    //   href: '/me'
+    // },
   ],
 
   exampleSidebar: [
