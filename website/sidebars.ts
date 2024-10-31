@@ -22,9 +22,8 @@ const sidebars: SidebarsConfig = {
       label: "Getting Started",
       collapsed: false,
       items: [
-        // "sdlc",
-        // "core-concept",
-        "writing-good-docs",
+        // 'fix-cloud-pc',
+        'remote-desktop',
         {
           type: 'category',
           label: 'How tos',
@@ -34,7 +33,7 @@ const sidebars: SidebarsConfig = {
             id: "how-tos/index"
           },
           items: [
-            'how-tos/fix-cloud-pc',
+            // 'how-tos/fix-cloud-pc',
             'how-tos/fix-ms-teams',
             'how-tos/fix-connectivity',
             'how-tos/windows-utils',
