@@ -22,8 +22,15 @@ const sidebars: SidebarsConfig = {
       label: "Getting Started",
       collapsed: false,
       items: [
-        // 'fix-cloud-pc',
+        'troubleshoot',
+        'cli',
         'remote-desktop',
+        'writing-good-docs',
+
+        'core-concept',
+        'sdlc',
+
+
         {
           type: 'category',
           label: 'How tos',
