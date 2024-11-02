@@ -12,6 +12,10 @@ release:
   description: "Posts about recent releases"
   label: Release
   permalink: /release
+workplace:
+  description: "A page dedicated to my colleagues"
+  label: Workplace
+  permalink: /workplace
 tribute:
 unlisted:
 MKXSpaceHub:

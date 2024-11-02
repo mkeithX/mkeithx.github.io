@@ -24,7 +24,6 @@ const sidebars: SidebarsConfig = {
       items: [
         'troubleshoot',
         'cli',
-        'remote-desktop',
         'writing-good-docs',
 
         'core-concept',
