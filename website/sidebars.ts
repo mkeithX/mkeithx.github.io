@@ -22,12 +22,14 @@ const sidebars: SidebarsConfig = {
       label: "Getting Started",
       collapsed: false,
       items: [
-        'troubleshoot',
+        // 'troubleshoot',
         'cli',
-        'writing-good-docs',
+        'aka-ms',
+        'mailbox-archive',
 
-        'core-concept',
+        // 'core-concept',
         'sdlc',
+
 
 
         {
@@ -224,8 +226,8 @@ const sidebars: SidebarsConfig = {
             id: "devops/admin-center/index",
           },
           items: [
-            "devops/admin-center/aka-ms",
-            "devops/admin-center/mailbox-archive",
+            // "devops/admin-center/aka-ms",
+            // "devops/admin-center/mailbox-archive",
             {
               type: "category",
               label: "Trainings",
