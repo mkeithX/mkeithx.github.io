@@ -1,0 +1,75 @@
+---
+# description: 
+---
+
+import CloudPC from '@site/static/img/logo/cloud-pc.svg';
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Remote Desktop
+This article outlines basic functions and how to fix common issues in Cloud PC.
+
+
+<CloudPC className="logoBadge" />
+
+## What is Cloud PC?
+A Cloud PC is an optimize virtual machine providing users with a rich Windows desktop experience hosted in the Windows365 services.
+
+## Getting started
+Depending on your organization, visit [windows365.microsoft.com](https://windows365.microsoft.com/) to see and manage your remote desktop that your admin has made available to you.
+
+<!-- :::tip[keep in mind]
+
+**Admins don't manually create Cloud PCs**. Cloud PCs are created automatically by the Windows 365 service when an appropriate license is assigned.
+::: -->
+
+## Access a Cloud PC
+
+### Download
+To access your remote desktop:
+
+1. Visit [windows365.microsoft.com](https://windows365.microsoft.com/) > go to Downloads.
+![alt text](/img/guides/cpc-download.png)
+1. Select the **Microsoft Remote Desktop for Windows** and click download.
+
+To know what your system type:
+
+- In your computer, go Settings > System > About
+- Look for **System Type**
+
+Alternatively, you can click the button below.
+
+<div>
+  <a class="button button--outline button--primary" href="ms-settings:about" target="_blank"><FAIcon icon="fa-brands fa-windows"/> <span>What's My OS</span></a>
+</div>
+
+
+### Installation
+
+1. Perform normal installation process and follow the prompts.
+1. When finished, make the "**Launch Remote Desktop when setup exits**" is ticked before hitting finish
+
+
+![alt text](/img/guides/cpc-setup.png)
+
+:::caution[take note]
+When prompted, you can either select:
+- **Install only for this user**: If you want the Cloud PC client client installed only for you;
+- **Install for all users (Elevated access required)**: If you want the Cloud PC client installed and to all users in your machine.
+:::
+
+When the download is complete, select Open to launch the app.
+Download the Remote Desktop client in [windows365.microsoft.com](https://windows365.microsoft.com/) as long as your device meets the minimum hardware requirements:
+
+<details>
+<summary>Show</summary>
+
+- Operating systems: Windows 10 1703 or later
+- CPU: 1 GHz or faster processor
+- RAM: 1024 MB
+- Hard drive: 100 MB or more
+- Video: DirectX 9 or later with WDDM 1.0 driver. Teams audio and video offloading on Cloud PC benefits from a dedicated Graphics Processing Unit (GPU) within your physical endpoint device.
+
+</details>
+
+<!-- [Check here](pathname:///ms-settings:about) -->

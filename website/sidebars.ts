@@ -22,8 +22,32 @@ const sidebars: SidebarsConfig = {
       label: "Getting Started",
       collapsed: false,
       items: [
-        "sdlc",
-        "core-concept",
+        'troubleshoot',
+        'cli',
+        'writing-good-docs',
+
+        'core-concept',
+        'sdlc',
+
+
+        {
+          type: 'category',
+          label: 'How tos',
+          collapsed: true,
+          link: {
+            type: 'doc',
+            id: "how-tos/index"
+          },
+          items: [
+            // 'how-tos/fix-cloud-pc',
+            'how-tos/fix-ms-teams',
+            'how-tos/fix-connectivity',
+            'how-tos/windows-utils',
+
+            // 'how-tos/check-pc-performance',
+            
+          ]
+        },
         {
           type: "category",
           label: "Gists",
@@ -66,8 +90,6 @@ const sidebars: SidebarsConfig = {
         id: "configs/index",
       },
       items: [
-        // "configs/plugins-config",
-        // "configs/api",
         "configs/guides/docs/create-doc",
         "configs/guides/docs/docs-create-page",
         "configs/guides/docs/blog",
@@ -240,23 +262,23 @@ const sidebars: SidebarsConfig = {
             description: "Basic troubleshooting guide and workarounds.",
           },
           items: [
-            "devops/troubleshoot/cloud-pc",
-            "devops/troubleshoot/powershell",
-            "devops/troubleshoot/windows-utilities",
+            // "devops/troubleshoot/cloud-pc",
+            // "devops/troubleshoot/powershell",
+            // "devops/troubleshoot/windows-utilities",
             "devops/troubleshoot/windows-hardware-issues",
             "devops/troubleshoot/windows-network-issues",
-            "devops/troubleshoot/ms-teams",
+            // "devops/troubleshoot/ms-teams",
           ],
         },
         "devops/troubleshoot-like-a-boss",
         "devops/glossary",
       ]
     },
-    {
-      type: 'link',
-      label: 'Le Me',
-      href: '/me'
-    },
+    // {
+    //   type: 'link',
+    //   label: 'Le Me',
+    //   href: '/me'
+    // },
   ],
 
   exampleSidebar: [
