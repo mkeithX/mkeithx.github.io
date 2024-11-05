@@ -183,12 +183,12 @@ const config: Config = {
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
-      respectPrefersColorScheme: false,
+      respectPrefersColorScheme: true,
     },
     // announcementBar: {
     //   id: `announcementBar_`,
     //   content:
-    //     `Find out more <a target="_blank" rel="noopener noreferrer" href="/foobar">about this project</a>.`,
+    //     `Check out <a target="_blank" rel="noopener noreferrer" href="/foobar">what's new</a>.`,
     //   isCloseable: true,
     // },
     docs: {
