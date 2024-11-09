@@ -101,7 +101,7 @@ export function DevOpsCardRow(): JSX.Element {
       <QuickStartCol
         title="aka.ms"
         subTitle="All about aka.ms"
-        webUrl="/docs/devops/admin-center/aka-ms"
+        webUrl="/docs/aka-ms"
       />
     </div>
   );

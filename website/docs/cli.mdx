@@ -1,24 +1,85 @@
 ---
-description: Win CLI
+description: Quick Access to Windows Tools & Utilities
 ---
 
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# CLI
 
+# Win Tools & Utils
 
-## Management and Utility
+## Account
 
 <div class="contentTableContainer">
-
 
 <table>
 
 <tr>
-<th>Command</th>
-<th>Description</th>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+ net user administrator /active:yes
+```
+```sh
+ net user administrator /active:no
+```
+</td>
+<td>
+
+Enable/Disable Admin
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+net user /add Kitoy p@ssw0rd
+```
+
+</td>
+<td>
+
+Add new user "Kitoy" with password
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+net localgroup administrators Kitoy /add
+```
+
+</td>
+<td>
+
+Add the user "Kitoy" to the Local Administrators Group
+
+</td>
+</tr>
+
+
+</table>
+
+</div>
+
+
+## Management
+
+<div class="contentTableContainer">
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
 </tr>
 
 <tr>
@@ -272,12 +333,12 @@ Opens Default Email Client
 <td>
 
 ```sh
-command
+netplwiz
 ```
 
 </td>
 <td>
-Opens Command Prompt
+Manage user accounts
 </td>
 </tr>
 
@@ -285,16 +346,17 @@ Opens Command Prompt
 
 </div>
 
-## Control Panel Access
+## Control Panel
+
+
 
 <div class="contentTableContainer">
-
 
 <table>
 
 <tr>
-<th>Command</th>
-<th>Description</th>
+  <th>Command</th>
+  <th>Description</th>
 </tr>
 
 <tr>
@@ -455,5 +517,176 @@ System Properties Control
 
 </table>
 
+</div>
+
+
+## Network
+
+* Check Network Cables and Connections
+* Restart Your Devices
+* Check Network Adapter Settings
+* Run Network Troubleshooter
+* Update Network Drivers
+* Check Firewall and Security Software
+* Check for Windows Updates
+* Check IP Address Configuration
+
+### Reset
+
+<div class="contentTableContainer">
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+ipconfig /release
+```
+
+```sh
+ipconfig /flushdns
+```
+
+```sh
+ipconfig /renew
+```
+
+```sh
+netsh int ip reset
+```
+
+```sh
+netsh winsock reset
+```
+
+```sh
+Restart-Computer
+```
+
+</td>
+<td>
+
+Complete network reset sequence. 
+
+</td>
+</tr>
+
+</table>
 
 </div>
+
+### Reports
+
+
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+netsh interface show interface
+```
+
+```sh
+netsh interface show interface
+```
+
+```sh
+netsh interface ip show dnsservers
+```
+</td>
+<td>
+
+View network interface and DNS server information
+
+</td>
+</tr>
+
+</table>
+
+
+## Misc.
+
+### `ms-settings`
+
+<div>
+  <ul>
+    <li>
+      <a class="code" href="ms-settings:about">ms-settings:about</a> - **About** page
+    </li>
+    <li>
+      <a class="code" href="ms-settings:accounts">ms-settings:accounts</a> - **Accounts** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:windowsupdate">ms-settings:windowsupdate</a> - **Windows Update**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:network-status">ms-settings:network-status</a> - **Network Status**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:privacy">ms-settings:privacy</a> - **Privacy** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:display">ms-settings:display</a> - **Display** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:personalization">ms-settings:personalization</a> - **Personalization**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:bluetooth">ms-settings:bluetooth</a> - **Bluetooth** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:storage">ms-settings:storage</a> - **Storage** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:time-date">ms-settings:time-date</a> - **Time & Language**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:troubleshoot">ms-settings:troubleshoot</a> - **Troubleshoot**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:windowsdefender">ms-settings:windowsdefender</a> - **Windows Security**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:appnotifications">ms-settings:appnotifications</a> - **App Notifications**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:background">ms-settings:background</a> - **Background** settings
+    </li>
+  </ul>
+</div>
+
+
+<!-- 
+### Foo
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+</td>
+<td>
+
+</td>
+</tr>
+
+</table> -->
+

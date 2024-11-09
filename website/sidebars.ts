@@ -22,12 +22,14 @@ const sidebars: SidebarsConfig = {
       label: "Getting Started",
       collapsed: false,
       items: [
-        'troubleshoot',
+        // 'troubleshoot',
         'cli',
-        'writing-good-docs',
+        'aka-ms',
+        'mailbox-archive',
 
-        'core-concept',
-        'sdlc',
+        // 'core-concept',
+        // 'sdlc',
+
 
 
         {
@@ -42,7 +44,7 @@ const sidebars: SidebarsConfig = {
             // 'how-tos/fix-cloud-pc',
             'how-tos/fix-ms-teams',
             'how-tos/fix-connectivity',
-            'how-tos/windows-utils',
+            // 'how-tos/windows-utils',
 
             // 'how-tos/check-pc-performance',
             
@@ -59,9 +61,8 @@ const sidebars: SidebarsConfig = {
           },
           items: [
     
-            "gists/gists-windows",
+            // "gists/gists-windows",
             "gists/gists-git",
-            // "gists/gists-misc",
             {
               type: "category",
               label: "Extras",
@@ -224,8 +225,8 @@ const sidebars: SidebarsConfig = {
             id: "devops/admin-center/index",
           },
           items: [
-            "devops/admin-center/aka-ms",
-            "devops/admin-center/mailbox-archive",
+            // "devops/admin-center/aka-ms",
+            // "devops/admin-center/mailbox-archive",
             {
               type: "category",
               label: "Trainings",
