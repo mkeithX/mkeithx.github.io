@@ -98,7 +98,7 @@ const config: Config = {
           routeBasePath: "blog",
           blogSidebarTitle: "Updates",
           blogSidebarCount: "ALL",
-          postsPerPage: "ALL",
+          postsPerPage: 5,
           ...admonitionsConfig,
           ...commonRemarkConfig,
           onInlineTags: "throw",
