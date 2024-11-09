@@ -17,7 +17,7 @@ on:
   pull_request:
     branches: [ "main" ]
   schedule:
-    - cron: '21 6 * * 4'
+    - cron: 25 22 * * 3
 
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -33,13 +33,8 @@ jobs:
     # Consider using larger runners or machines with greater resources for possible analysis time improvements.
     runs-on: ${{ (matrix.language == 'swift' && 'macos-latest') || 'ubuntu-latest' }}
     permissions:
-      # required for all workflows
       security-events: write
-
-      # required to fetch internal or private CodeQL packs
       packages: read
-
-      # only required for workflows in private repositories
       actions: read
       contents: read
 
