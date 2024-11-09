@@ -28,7 +28,7 @@ const sidebars: SidebarsConfig = {
         'mailbox-archive',
 
         // 'core-concept',
-        'sdlc',
+        // 'sdlc',
 
 
 
@@ -44,7 +44,7 @@ const sidebars: SidebarsConfig = {
             // 'how-tos/fix-cloud-pc',
             'how-tos/fix-ms-teams',
             'how-tos/fix-connectivity',
-            'how-tos/windows-utils',
+            // 'how-tos/windows-utils',
 
             // 'how-tos/check-pc-performance',
             
@@ -61,9 +61,8 @@ const sidebars: SidebarsConfig = {
           },
           items: [
     
-            "gists/gists-windows",
+            // "gists/gists-windows",
             "gists/gists-git",
-            // "gists/gists-misc",
             {
               type: "category",
               label: "Extras",
