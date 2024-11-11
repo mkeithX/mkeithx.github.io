@@ -97,14 +97,14 @@ export function CoreTeamRow(): JSX.Element {
         {/* {"Building the web before bedtime."} */}
       </TeamProfileCardCol>
       <TeamProfileCardCol
-        name="Kiti"
+        name="Kean Ortiga"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/rkortiga"
         twitterUrl="https://twitter.com/"
       ></TeamProfileCardCol>
 
       <TeamProfileCardCol
-        name="Kiti"
+        name="doorinel"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/doorinel"
         twitterUrl="https://twitter.com/"
