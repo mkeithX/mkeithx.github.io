@@ -55,6 +55,7 @@ const config: Config = {
     custom_header: "Guides and Samples from mkeith",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
+    custom_tagline: "Alt Resources for Software Development at Kitiplex",
     custom_projectDescription: "Highlighting some projects and demos I've authored and contributed to.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,

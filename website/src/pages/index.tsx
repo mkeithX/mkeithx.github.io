@@ -52,7 +52,7 @@ function HomepageHeader(): JSX.Element {
         </Heading>
         <div className={styles.heroSubtitle}>
           <span className={styles.heroCustomSubTitleHtml}>
-            <b>{tagline}</b>
+            <b>{custom_tagline}</b>
             {/* {custom_description} */}
           </span>
         </div>
