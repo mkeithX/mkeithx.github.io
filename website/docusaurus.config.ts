@@ -55,7 +55,7 @@ const config: Config = {
     custom_header: "Guides and Samples from mkeith",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
-    custom_tagline: "Alt Resources for Software Development at Kitiplex",
+    custom_tagline: "Alternative Resources for Software Development",
     custom_projectDescription: "Highlighting some projects and demos I've authored and contributed to.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -189,7 +189,7 @@ const config: Config = {
     // announcementBar: {
     //   id: `announcementBar_`,
     //   content:
-    //     `Check out <a target="_blank" rel="noopener noreferrer" href="/foobar">what's new</a>.`,
+    //     `Check out <a target="_blank" rel="noopener noreferrer" href="/blog">What's New</a>🎉`,
     //   isCloseable: true,
     // },
     docs: {

@@ -46,8 +46,8 @@ function TeamProfileCard({
   return (
     <div className={clsx("col col--6", styles.cardContainer)}>
       <div className={clsx("card", styles.card)}>
-      <div className={clsx("card__header")}>
-      <div className={clsx("avatar")}>
+        <div className={clsx("card__header")}>
+          <div className={clsx("avatar")}>
             <img
               className={clsx("avatar__photo avatar__photo--lg", styles.image)}
               src={`${githubUrl}.png`}
@@ -97,6 +97,19 @@ export function CoreTeamRow(): JSX.Element {
         {/* {"Building the web before bedtime."} */}
       </TeamProfileCardCol>
       <TeamProfileCardCol
+        name="Kiti"
+        subTitle="Contributor @ Kitiplex"
+        githubUrl="https://github.com/rkortiga"
+        twitterUrl="https://twitter.com/"
+      ></TeamProfileCardCol>
+
+      <TeamProfileCardCol
+        name="Kiti"
+        subTitle="Contributor @ Kitiplex"
+        githubUrl="https://github.com/doorinel"
+        twitterUrl="https://twitter.com/"
+      ></TeamProfileCardCol>
+      <TeamProfileCardCol
         name="PrimmieDoll"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/PrimmieDoll"
@@ -143,6 +156,8 @@ export function CoreTeamRow(): JSX.Element {
         githubUrl="https://github.com/kitimi88"
         twitterUrl="https://twitter.com/"
       ></TeamProfileCardCol>
+
+
     </div>
   );
 }
