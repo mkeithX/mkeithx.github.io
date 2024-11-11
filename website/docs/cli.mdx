@@ -11,8 +11,6 @@ import TabItem from "@theme/TabItem";
 
 ## Account
 
-
-
 <table>
 
 <tr>
@@ -519,106 +517,12 @@ System Properties Control
 </div>
 
 
-## Network
-
-* Check Network Cables and Connections
-* Restart Your Devices
-* Check Network Adapter Settings
-* Run Network Troubleshooter
-* Update Network Drivers
-* Check Firewall and Security Software
-* Check for Windows Updates
-* Check IP Address Configuration
-
-### Reset
-
-<div class="contentTableContainer">
-
-<table>
-
-<tr>
-  <th>Command</th>
-  <th>Description</th>
-</tr>
-
-<tr>
-<td>
-
-```sh
-ipconfig /release
-```
-
-```sh
-ipconfig /flushdns
-```
-
-```sh
-ipconfig /renew
-```
-
-```sh
-netsh int ip reset
-```
-
-```sh
-netsh winsock reset
-```
-
-```sh
-Restart-Computer
-```
-
-</td>
-<td>
-
-Complete network reset sequence. 
-
-</td>
-</tr>
-
-</table>
-
-</div>
-
-### Reports
-
-
-
-<table>
-
-<tr>
-  <th>Command</th>
-  <th>Description</th>
-</tr>
-
-<tr>
-<td>
-
-```sh
-netsh interface show interface
-```
-
-```sh
-netsh interface show interface
-```
-
-```sh
-netsh interface ip show dnsservers
-```
-</td>
-<td>
-
-View network interface and DNS server information
-
-</td>
-</tr>
-
-</table>
-
 
 ## Misc.
 
 ### `ms-settings`
+
+
 
 <div>
   <ul>
@@ -667,6 +571,18 @@ View network interface and DNS server information
   </ul>
 </div>
 
+:::tip[Note]
+
+These **URI** (Uniform Resource Identifier) examples only work for **Windows** and can be use in several places, such as:
+
+- **Run Dialog**: Press Windows + R, type `ms-settings:windowsupdate`, and hit Enter. This will open the Windows Update section in the Settings app.
+- **Command Prompt**: You can also run this URI from the Command Prompt using the start command:
+
+```sh
+start ms-settings:windowsupdate
+```
+
+:::
 
 <!-- 
 ### Foo

@@ -44,7 +44,7 @@ const sidebars: SidebarsConfig = {
             // 'how-tos/fix-cloud-pc',
             'how-tos/fix-ms-teams',
             'how-tos/fix-connectivity',
-            // 'how-tos/windows-utils',
+            'how-tos/fix-windows-hardware-issues',
 
             // 'how-tos/check-pc-performance',
             
@@ -63,6 +63,7 @@ const sidebars: SidebarsConfig = {
     
             // "gists/gists-windows",
             "gists/gists-git",
+            "gists/gists-powershell",
             {
               type: "category",
               label: "Extras",
@@ -267,7 +268,7 @@ const sidebars: SidebarsConfig = {
             // "devops/troubleshoot/powershell",
             // "devops/troubleshoot/windows-utilities",
             "devops/troubleshoot/windows-hardware-issues",
-            "devops/troubleshoot/windows-network-issues",
+            // "devops/troubleshoot/windows-network-issues",
             // "devops/troubleshoot/ms-teams",
           ],
         },

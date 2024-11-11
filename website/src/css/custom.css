@@ -190,7 +190,8 @@ div[class^='announcementBar_'] {
   font-size: 17px;
   font-weight: 700;
   background: linear-gradient(90deg, #f2f89c, #4affaa, #12a4ff) !important;
-  color: var(--ifm-color-black);
+  /* background: #010409; */
+  color: var(--ifm-site-dark);
   height: 1.5em;
 }
 

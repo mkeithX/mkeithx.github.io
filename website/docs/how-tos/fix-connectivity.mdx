@@ -2,7 +2,11 @@
 description: Fixing network issues in Windows
 ---
 
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
 # Fix Network Issues
+Fix common network/connectivity issues in Windows.
 
 
 :::caution[important]
@@ -10,56 +14,137 @@ Elevated access required. Contact your administrator for further assist.
 
 :::
 
+## Getting started
+The following are some important things to remember before getting started:
 
-### Step 1: Release IP Address
-```bash
-ipconfig /release
-```
-
-### Step 2: Flush DNS Cache
-```bash
-ipconfig /flushdns
-```
-
-### Step 3: Renew IP Address
-```bash
-ipconfig /renew
-```
-
-### Step 4: Reset TCP/IP Stack
-```bash
-netsh int ip reset
-```
-
-### Step 5: Reset Winsock Catalog
-```bash
-netsh winsock reset
-```
-### Step 6: Restart Computer
-
-```bash
-Restart-Computer
-```
-
-### Additional Troubleshooting Steps:
-- **Check Network Cables and Connections**
-- **Restart Your Devices**
-- **Check Network Adapter Settings**
-- **Run Network Troubleshooter**
-- **Update Network Drivers**
-- **Check Firewall and Security Software**
-- **Check for Windows Updates**
-- **Check IP Address Configuration**
-
+* Check Network Cables and Connections
+* Restart Your Devices
+* Check Network Adapter Settings
+* Run Network Troubleshooter
+* Update Network Drivers
+* Check Firewall and Security Software
+* Check for Windows Updates
+* Check IP Address Configuration
 
 ### Reports
 
-```bash
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
 netsh interface show interface
 ```
-```bash
-netsh wlan show wlanreport
+
+```sh
+netsh interface show interface
 ```
-```bash
+
+```sh
 netsh interface ip show dnsservers
 ```
+</td>
+<td>
+
+View network interface and DNS server information
+
+</td>
+</tr>
+
+</table>
+
+
+### Network Configs
+
+<Tabs>
+  <TabItem value="cmd" label="Command Prompt" default>
+    
+    ```sh
+    ipconfig /all
+    ```
+    ```sh
+    ipconfig
+    ```
+  </TabItem>
+  <TabItem value="pwsh" label="PowerShell">
+    
+    ```sh
+    Get-NetAdapter
+    ```
+    ```sh
+    Get-NetAdapter | Format-Table -Property Name, Status, MacAddress, LinkSpeed
+    ```
+
+  </TabItem>
+  <TabItem value="warp" label="Warp-CLI">
+    
+    ```bash
+    warp-cli settings
+    ```
+    ```bash
+    warp-cli status
+    ```
+
+  </TabItem>
+</Tabs>
+
+
+
+
+## Network Reset
+
+<div class="contentTableContainer">
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+  <td>
+    ```sh
+    ipconfig /release
+    ```
+    ```sh
+    ipconfig /flushdns
+    ```
+    ```sh
+    ipconfig /renew
+    ```
+    ```sh
+    netsh int ip reset
+    ```
+    ```sh
+    netsh winsock reset
+    ```
+
+  </td>
+  <td>
+    Complete network reset sequence. Must be executed in exact order (from top to bottom).
+  </td>
+</tr>
+
+<tr>
+  <td>
+      ```sh
+    Restart-Computer
+    ```
+  </td>
+  <td>
+  
+  The `Restart-Computer` command can only be used in PowerShell.
+
+  </td>
+</tr>
+</table>
+
+
+</div>
+
