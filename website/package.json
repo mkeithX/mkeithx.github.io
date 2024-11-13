@@ -45,7 +45,7 @@
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "^4.20241106.0",
+    "@cloudflare/workers-types": "^4.20241112.0",
     "@docusaurus/eslint-plugin": "3.6.1",
     "@docusaurus/module-type-aliases": "3.6.1",
     "@docusaurus/theme-classic": "3.6.1",
