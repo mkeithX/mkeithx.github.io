@@ -77,6 +77,7 @@ const config: Config = {
 
   markdown: {
     format: "detect",
+    mermaid: true,
   },
 
   presets: [
@@ -136,6 +137,7 @@ const config: Config = {
   themes: ['live-codeblock'],
 
   plugins: [
+    '@docusaurus/theme-mermaid',
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
     [
       "content-docs",
@@ -272,7 +274,7 @@ const config: Config = {
           title: "Docs",
           items: [
             { label: "Gists", to: "/docs/gists" },
-            { label: "DevOps", to: "/docs/devops/guides-and-workarounds" },
+            { label: "DevOps", to: "/docs/devops" },
             { label: "Keyword", to: "/docs" },
           ],
         },

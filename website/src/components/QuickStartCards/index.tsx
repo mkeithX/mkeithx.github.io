@@ -80,7 +80,7 @@ export function QuickStartCardRow(): JSX.Element {
       <QuickStartCol
         title="Guides"
         subTitle="Advanced tips, guides and best practices for mitigating issues."
-        webUrl="/docs/devops/guides-and-workarounds"
+        webUrl="/docs/how-tos"
       />
       <QuickStartCol
         title="Cosmos"
@@ -96,7 +96,7 @@ export function DevOpsCardRow(): JSX.Element {
       <QuickStartCol
         title="Win + Rs"
         subTitle="Win utilities shortcuts"
-        webUrl="/docs/devops/troubleshoot/windows-utilities"
+        webUrl="/docs/cli"
       />
       <QuickStartCol
         title="aka.ms"
