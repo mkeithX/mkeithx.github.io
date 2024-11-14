@@ -177,18 +177,7 @@ const sidebars: SidebarsConfig = {
           items: [
             // "devops/admin-center/aka-ms",
             // "devops/admin-center/mailbox-archive",
-            {
-              type: 'category',
-              collapsed: true,
-              label: 'User Stories',
-              link: {
-                type: 'doc',
-                id: 'devops/user-stories/index',
-              },
-              items: [
-                'devops/user-stories/ticket-priority',
-              ]
-            },
+            
             {
               type: "category",
               label: "Trainings",
@@ -204,6 +193,18 @@ const sidebars: SidebarsConfig = {
               ],
             },
           ],
+        },
+        {
+          type: 'category',
+          collapsed: true,
+          label: 'User Stories',
+          link: {
+            type: 'doc',
+            id: 'devops/user-stories/index',
+          },
+          items: [
+            'devops/user-stories/ticket-priority',
+          ]
         },
         {
           type: "category",
