@@ -274,7 +274,7 @@ const config: Config = {
           title: "Docs",
           items: [
             { label: "Gists", to: "/docs/gists" },
-            { label: "DevOps", to: "/docs/devops/guides-and-workarounds" },
+            { label: "DevOps", to: "/docs/devops" },
             { label: "Keyword", to: "/docs" },
           ],
         },

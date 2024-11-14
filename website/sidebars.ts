@@ -229,7 +229,7 @@ const sidebars: SidebarsConfig = {
         //   ],
         // },
         
-        "devops/troubleshoot-like-a-boss",
+        // "devops/troubleshoot-like-a-boss",
         "devops/glossary",
       ]
     },
