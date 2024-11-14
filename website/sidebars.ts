@@ -83,58 +83,7 @@ const sidebars: SidebarsConfig = {
       ]
     },
     
-    {
-      type: "category",
-      collapsed: true,
-      label: "Configuration",
-      link: {
-        type: "doc",
-        id: "configs/index",
-      },
-      items: [
-        "configs/guides/docs/create-doc",
-        "configs/guides/docs/docs-create-page",
-        "configs/guides/docs/blog",
-        {
-          type: "category",
-          label: "Deployment",
-          collapsed: true,
-          link: {
-            type: "generated-index",
-            slug: "/deployment",
-            description:
-              "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.",
-            keywords: ["deployments"],
-          },
-          items: [
-            "configs/guides/deployment/deploy-cloudflare",
-            "configs/guides/deployment/deploy-github",
-          ],
-        },
-        {
-          type: "category",
-          label: "Plugins",
-          collapsed: true,
-          link: {
-            type: "generated-index",
-            slug: "/plugins",
-          },
-          items: ["configs/guides/plugins/plugins-algolia"],
-        },
-        {
-          type: "category",
-          label: "Configs",
-          link: {
-            type: "generated-index",
-            description:
-              "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity",
-            slug: "/guides",
-            keywords: ["guides"],
-          },
-          items: [],
-        },
-      ],
-    },
+    
     {
       type: "category",
       label: "Tutorials",
@@ -229,6 +178,18 @@ const sidebars: SidebarsConfig = {
             // "devops/admin-center/aka-ms",
             // "devops/admin-center/mailbox-archive",
             {
+              type: 'category',
+              collapsed: true,
+              label: 'User Stories',
+              link: {
+                type: 'doc',
+                id: 'devops/user-stories/index',
+              },
+              items: [
+                'devops/user-stories/ticket-priority',
+              ]
+            },
+            {
               type: "category",
               label: "Trainings",
               description: "Training and comprehensive guides for Admin & Users",
@@ -254,24 +215,20 @@ const sidebars: SidebarsConfig = {
           },
           items: ["devops/snippets/tech-notes", "devops/snippets/email-templates"],
         },
-        {
-          type: "category",
-          label: "Guides & Workarounds",
-          collapsed: true,
-          link: {
-            type: "generated-index",
-            slug: "/devops/guides-and-workarounds",
-            description: "Basic troubleshooting guide and workarounds.",
-          },
-          items: [
-            // "devops/troubleshoot/cloud-pc",
-            // "devops/troubleshoot/powershell",
-            // "devops/troubleshoot/windows-utilities",
-            "devops/troubleshoot/windows-hardware-issues",
-            // "devops/troubleshoot/windows-network-issues",
-            // "devops/troubleshoot/ms-teams",
-          ],
-        },
+        // {
+        //   type: "category",
+        //   label: "Guides & Workarounds",
+        //   collapsed: true,
+        //   link: {
+        //     type: "generated-index",
+        //     slug: "/devops/guides-and-workarounds",
+        //     description: "Basic troubleshooting guide and workarounds.",
+        //   },
+        //   items: [
+        //     "devops/troubleshoot/windows-hardware-issues",
+        //   ],
+        // },
+        
         "devops/troubleshoot-like-a-boss",
         "devops/glossary",
       ]
@@ -281,6 +238,58 @@ const sidebars: SidebarsConfig = {
     //   label: 'Le Me',
     //   href: '/me'
     // },
+    {
+      type: "category",
+      collapsed: true,
+      label: "Configuration",
+      link: {
+        type: "doc",
+        id: "configs/index",
+      },
+      items: [
+        "configs/guides/docs/create-doc",
+        "configs/guides/docs/docs-create-page",
+        "configs/guides/docs/blog",
+        {
+          type: "category",
+          label: "Deployment",
+          collapsed: true,
+          link: {
+            type: "generated-index",
+            slug: "/deployment",
+            description:
+              "This section outlines the custom deployment configuration of this website for GitHub Pages and Cloudflare Pages deployments and assumes that you have knowledge of package managers, continuous integration, and workflows.",
+            keywords: ["deployments"],
+          },
+          items: [
+            "configs/guides/deployment/deploy-cloudflare",
+            "configs/guides/deployment/deploy-github",
+          ],
+        },
+        {
+          type: "category",
+          label: "Plugins",
+          collapsed: true,
+          link: {
+            type: "generated-index",
+            slug: "/plugins",
+          },
+          items: ["configs/guides/plugins/plugins-algolia"],
+        },
+        {
+          type: "category",
+          label: "Configs",
+          link: {
+            type: "generated-index",
+            description:
+              "This section covers the standard styling and formatting guidelines for creating docs, pages, and blog articles to ensure consistency and clarity",
+            slug: "/guides",
+            keywords: ["guides"],
+          },
+          items: [],
+        },
+      ],
+    },
   ],
 
   exampleSidebar: [
