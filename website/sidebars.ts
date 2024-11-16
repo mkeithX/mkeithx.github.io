@@ -204,6 +204,7 @@ const sidebars: SidebarsConfig = {
           },
           items: [
             'devops/user-stories/ticket-priority',
+            'devops/user-stories/service-level-agreement',
           ]
         },
         {
