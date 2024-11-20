@@ -47,7 +47,7 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241106.0",
-    "@docusaurus/eslint-plugin": "3.6.1",
+    "@docusaurus/eslint-plugin": "3.6.2",
     "@docusaurus/module-type-aliases": "3.6.1",
     "@docusaurus/theme-classic": "3.6.1",
     "@docusaurus/tsconfig": "3.6.1",
