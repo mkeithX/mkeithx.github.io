@@ -52,7 +52,7 @@
     "@docusaurus/theme-classic": "3.6.1",
     "@docusaurus/tsconfig": "3.6.1",
     "@docusaurus/types": "3.6.1",
-    "@types/node": "^22.8.7",
+    "@types/node": "^22.9.1",
     "@types/react": "^18.3.12",
     "typescript": "~5.6.3",
     "wrangler": "3.87.0"
