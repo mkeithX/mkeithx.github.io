@@ -25,7 +25,7 @@
     "@docusaurus/core": "3.6.1",
     "@docusaurus/plugin-client-redirects": "3.6.1",
     "@docusaurus/plugin-ideal-image": "3.6.1",
-    "@docusaurus/preset-classic": "3.6.1",
+    "@docusaurus/preset-classic": "3.6.2",
     "@docusaurus/remark-plugin-npm2yarn": "3.6.1",
     "@docusaurus/theme-live-codeblock": "3.6.1",
     "@docusaurus/theme-mermaid": "3.6.1",
