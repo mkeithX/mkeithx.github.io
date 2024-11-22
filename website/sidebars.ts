@@ -203,7 +203,9 @@ const sidebars: SidebarsConfig = {
             id: 'devops/user-stories/index',
           },
           items: [
+            'devops/user-stories/ticket-refinement',
             'devops/user-stories/ticket-priority',
+            'devops/user-stories/service-level-agreement',
           ]
         },
         {
