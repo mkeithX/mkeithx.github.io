@@ -23,9 +23,7 @@ This website is part of the [**The SpaceHub Project**](https://mkeithx.pages.dev
 Apart from tech docs, you'll get to find articles covering fascinating topics about [the universe](../cosmos/). Ranging from our very own [solar system](https://mkeithx.github.io/cosmos), facts about [celestial mechanics](https://mkeithx.github.io/cosmos/astrophysics), some influential [figures in physics](https://mkeithx.github.io/cosmos/legacy), astronomy, and space exploration, and beyond. -->
 
 ## Contributing
+Contributions are welcome but we highly encourage future contributors to join [Kitiplex](https://github.com/kitiplex). More about contributing in [this article](https://mkeithx.pages.dev/community).
 
-[Learn more](https://mkeithx.pages.dev/community).
 
----
-
-> _A documentation website representing humanity from Dimension C-137 🚀_
+<!-- > _A documentation website representing humanity from Dimension C-137 🚀_ -->
