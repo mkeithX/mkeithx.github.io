@@ -22,7 +22,7 @@
     "clear:purge": "pwsh -Command \"@('node_modules','.yarn','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue\""
   },
   "dependencies": {
-    "@docusaurus/core": "3.6.2",
+    "@docusaurus/core": "3.6.3",
     "@docusaurus/plugin-client-redirects": "3.6.2",
     "@docusaurus/plugin-ideal-image": "3.6.2",
     "@docusaurus/preset-classic": "3.6.2",
