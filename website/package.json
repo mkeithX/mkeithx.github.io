@@ -50,7 +50,7 @@
     "@docusaurus/eslint-plugin": "3.6.2",
     "@docusaurus/module-type-aliases": "3.6.2",
     "@docusaurus/theme-classic": "3.6.2",
-    "@docusaurus/tsconfig": "3.6.2",
+    "@docusaurus/tsconfig": "3.6.3",
     "@docusaurus/types": "3.6.2",
     "@types/node": "22.9.1",
     "@types/react": "^18.3.12",
