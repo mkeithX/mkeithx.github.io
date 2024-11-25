@@ -49,7 +49,7 @@
     "@cloudflare/workers-types": "^4.20241106.0",
     "@docusaurus/eslint-plugin": "3.6.2",
     "@docusaurus/module-type-aliases": "3.6.2",
-    "@docusaurus/theme-classic": "3.6.2",
+    "@docusaurus/theme-classic": "3.6.3",
     "@docusaurus/tsconfig": "3.6.2",
     "@docusaurus/types": "3.6.2",
     "@types/node": "22.9.1",
