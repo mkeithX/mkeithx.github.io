@@ -27,7 +27,7 @@
     "@docusaurus/plugin-ideal-image": "3.6.2",
     "@docusaurus/preset-classic": "3.6.2",
     "@docusaurus/remark-plugin-npm2yarn": "3.6.2",
-    "@docusaurus/theme-live-codeblock": "3.6.2",
+    "@docusaurus/theme-live-codeblock": "3.6.3",
     "@docusaurus/theme-mermaid": "3.6.2",
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
