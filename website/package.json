@@ -18,17 +18,16 @@
     "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
     "build:local": "docusaurus build && docusaurus serve",
     "deploy:cf": "npm run build && wrangler pages deploy ./build",
-    "rm:pckg": "pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\"",
-    "clear:purge": "pwsh -Command \"@('node_modules','.yarn','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue\""
+    "purge": "pwsh -Command \"@('node_modules','.yarn','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue\""
   },
   "dependencies": {
-    "@docusaurus/core": "3.6.2",
-    "@docusaurus/plugin-client-redirects": "3.6.2",
-    "@docusaurus/plugin-ideal-image": "3.6.2",
-    "@docusaurus/preset-classic": "3.6.2",
-    "@docusaurus/remark-plugin-npm2yarn": "3.6.2",
-    "@docusaurus/theme-live-codeblock": "3.6.2",
-    "@docusaurus/theme-mermaid": "3.6.2",
+    "@docusaurus/core": "3.6.3",
+    "@docusaurus/plugin-client-redirects": "3.6.3",
+    "@docusaurus/plugin-ideal-image": "3.6.3",
+    "@docusaurus/preset-classic": "3.6.3",
+    "@docusaurus/remark-plugin-npm2yarn": "3.6.3",
+    "@docusaurus/theme-live-codeblock": "3.6.3",
+    "@docusaurus/theme-mermaid": "3.6.3",
     "@fortawesome/fontawesome-svg-core": "^6.7.1",
     "@fortawesome/free-brands-svg-icons": "^6.7.1",
     "@fortawesome/free-regular-svg-icons": "^6.7.1",
@@ -47,15 +46,15 @@
   },
   "devDependencies": {
     "@cloudflare/workers-types": "^4.20241106.0",
-    "@docusaurus/eslint-plugin": "3.6.2",
-    "@docusaurus/module-type-aliases": "3.6.2",
-    "@docusaurus/theme-classic": "3.6.2",
-    "@docusaurus/tsconfig": "3.6.2",
-    "@docusaurus/types": "3.6.2",
+    "@docusaurus/eslint-plugin": "3.6.3",
+    "@docusaurus/module-type-aliases": "3.6.3",
+    "@docusaurus/theme-classic": "3.6.3",
+    "@docusaurus/tsconfig": "3.6.3",
+    "@docusaurus/types": "3.6.3",
     "@types/node": "22.9.1",
     "@types/react": "^18.3.12",
     "typescript": "~5.6.3",
-    "wrangler": "3.88.0"
+    "wrangler": "3.90.0"
   },
   "browserslist": {
     "production": [
