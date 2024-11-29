@@ -49,6 +49,7 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
+  titleDelimiter: "•",
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
@@ -68,7 +69,7 @@ const config: Config = {
     // { href: "/fonts/Hubot-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
     // { href: "/fonts/Mona-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
   ],
-  
+
 
   i18n: {
     defaultLocale: "en",
@@ -115,6 +116,7 @@ const config: Config = {
             copyright,
           },
         } satisfies BlogOptions,
+
         pages: {
           path: "src/pages",
           routeBasePath: "",
@@ -122,6 +124,7 @@ const config: Config = {
           ...commonDocsConfig,
           mdxPageComponent: "@theme/MDXPage",
         } satisfies PageOptions,
+
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -217,9 +220,17 @@ const config: Config = {
         // className: 'custom-navbar-logo-class',
       },
       items: [
-        { type: "doc", position: "left", docId: "introduction", label: "Docs" },
-        { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
-        { to: "/projects", label: "Showcase" },
+        {
+          type: "dropdown" ,
+          label: "Development",
+          position: "left",
+          items: [
+            {type: "doc",  docId: "introduction", label: "Guides",},
+            {type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
+            { to: "/projects", label: "Showcase" },
+          ]
+        },
+        { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
         {
@@ -260,7 +271,7 @@ const config: Config = {
       searchPagePath: "search",
       insights: false,
     },
-    
+
     footer: {
       style: "dark",
       logo: {
