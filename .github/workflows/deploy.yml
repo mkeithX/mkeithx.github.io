@@ -1,5 +1,4 @@
-
-name: Deploy
+name: Deploy (Production)
 
 on:
   push:
@@ -25,7 +24,7 @@ jobs:
         with:
           fetch-depth: 0
           
-      - name: Deploy
+      - name: Deploy (Production)
         uses: cloudflare/wrangler-action@v3
         with:
             apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}

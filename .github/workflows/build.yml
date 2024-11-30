@@ -1,4 +1,4 @@
-name: Build
+name: Build (Preview)
 
 on: [pull_request]
 
@@ -7,7 +7,7 @@ concurrency:
   cancel-in-progress: true
 
 jobs:
-  build:
+  preview:
     runs-on: ubuntu-latest
     environment: development
     permissions:
@@ -30,4 +30,10 @@ jobs:
           run: |
             cd website
             npm ci && npm run build
-      
+
+        - name: Build (Preview)
+          uses: cloudflare/wrangler-action@v3
+          with:
+            apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+            accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+            command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
