@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 
 
-const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors <br> • All rights reserved •`;
+const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors`;
 
 const commonExclusions = {
   exclude: [
@@ -49,6 +49,7 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
+  titleDelimiter: "•",
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
@@ -68,7 +69,7 @@ const config: Config = {
     // { href: "/fonts/Hubot-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
     // { href: "/fonts/Mona-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
   ],
-  
+
 
   i18n: {
     defaultLocale: "en",
@@ -115,6 +116,7 @@ const config: Config = {
             copyright,
           },
         } satisfies BlogOptions,
+
         pages: {
           path: "src/pages",
           routeBasePath: "",
@@ -122,6 +124,7 @@ const config: Config = {
           ...commonDocsConfig,
           mdxPageComponent: "@theme/MDXPage",
         } satisfies PageOptions,
+
         theme: {
           customCss: "./src/css/custom.css",
         },
@@ -188,12 +191,14 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    // announcementBar: {
-    //   id: `announcementBar_`,
-    //   content:
-    //     `Check out <a target="_blank" rel="noopener noreferrer" href="/blog">What's New</a>🎉`,
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
+        // backgroundColor: '#010409',
+        // textColor: 'white',
+        isCloseable: true,
+    },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {
@@ -214,12 +219,19 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/logo/nav-logo.png",
         target: "_self",
-        // className: 'custom-navbar-logo-class',
       },
       items: [
-        { type: "doc", position: "left", docId: "introduction", label: "Docs" },
-        { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
-        { to: "/projects", label: "Showcase" },
+        {
+          type: "dropdown" ,
+          label: "Development",
+          position: "left",
+          items: [
+            {type: "doc",  docId: "introduction", label: "Guides",},
+            {type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
+            { to: "/projects", label: "Showcase" },
+          ]
+        },
+        { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
         {
@@ -227,7 +239,6 @@ const config: Config = {
           label: "More",
           position: "right",
           items: [
-            { to: "/cosmos", label: "The Universe 🚀" },
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { to: "/feature-requests", label: "Feature Requests ❓" },
             { type: "html", value: '<hr class="dropdown-separator">' },
@@ -238,7 +249,12 @@ const config: Config = {
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
         },
-
+        
+        // {
+        //   type: "html",
+        //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
+        //   position: 'right'
+        // },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -246,10 +262,7 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
         { type: "search", position: "right" },
-        // {
-        //   type: "html",
-        //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
-        // },
+
       ],
     },
     algolia: {
@@ -260,7 +273,7 @@ const config: Config = {
       searchPagePath: "search",
       insights: false,
     },
-    
+
     footer: {
       style: "dark",
       logo: {

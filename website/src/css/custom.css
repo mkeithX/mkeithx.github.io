@@ -38,21 +38,21 @@
 
 /* Dark theme overrides */
 [data-theme='dark'] {
-  /* --ifm-color-primary: #1da1f2;
+  --ifm-color-primary: #1da1f2;
   --ifm-color-primary-dark: #0d94e7;
   --ifm-color-primary-darker: #0d8cda;
   --ifm-color-primary-darkest: #0a73b3;
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
-  --ifm-color-primary-lightest: #6ac1f6; */
+  --ifm-color-primary-lightest: #6ac1f6;
 
-  --ifm-color-primary: #06bef1;
+  /* --ifm-color-primary: #06bef1;
   --ifm-color-primary-dark: #05abd9;
   --ifm-color-primary-darker: #05a1cd;
   --ifm-color-primary-darkest: #0485a9;
   --ifm-color-primary-light: #16c8f9;
   --ifm-color-primary-lighter: #23cbfa;
-  --ifm-color-primary-lightest: #47d3fa;
+  --ifm-color-primary-lightest: #47d3fa; */
 
   /* --ifm-background-color: #1e2125; */
   /* --ifm-background-surface-color: #121212; */
@@ -71,22 +71,26 @@
   
 }
 
-/* .navbar__brand {
-  margin-right: 1.5rem;
-} */
+.navbar__brand {
+  margin-right: 2.0rem;
+}
 
 
-/* .navbar .navbar__items {
+.navbar .navbar__items {
   flex: auto;
 
-} */
+}
 
+/* Header Dropdown Menu */
+.dropdown__link {
+  font-size: inherit;
+}
 
-/* .navbar__title {
+.navbar__title {
   font-weight: bold;
   font-size: normal;
   color: var(--ifm-color-primary-lighter) !important;
-} */
+}
 
 /* Dropdown separator styling */
 .dropdown-separator {
@@ -104,6 +108,28 @@ html[data-navbar='false'] .navbar {
   width: 100%;
   margin: 0;
 }
+
+/* Announcement Bar */
+
+div[class^='announcementBar_'] {
+  /* font-size: 17px; */
+  font-weight: 650;
+  background: linear-gradient(90deg, #00ff88, #12a4ff) !important;
+  color: var(--ifm-site-dark);
+  /* height: 1.5em; */
+}
+
+
+/* div[class^="announcementBar_"] {
+
+  a {
+    display: inline-block;
+    color: var(--brand);
+    &:hover {
+      color: var(--ifm-color-primary) !important;
+    }
+  }
+} */
 
 .contentTableContainer th:first-child {
   width: 15%;
@@ -186,16 +212,7 @@ html[data-navbar='false'] .navbar {
   margin: 0 auto;
 }
 
-/* Announcement Bar */
 
-div[class^='announcementBar_'] {
-  font-size: 17px;
-  font-weight: 700;
-  background: linear-gradient(90deg, #f2f89c, #4affaa, #12a4ff) !important;
-  /* background: #010409; */
-  color: var(--ifm-site-dark);
-  height: 1.5em;
-}
 
 
 .screen-reader-only {

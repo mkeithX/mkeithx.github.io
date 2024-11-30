@@ -1,0 +1,53 @@
+---
+description: Manage emergency access accounts in Microsoft Entra
+title: Emergency Access Accounts
+---
+
+<!-- # How to Create an Emergency Access Account in Microsoft Entra -->
+
+An **Emergency Access Account** in Microsoft Entra ensures administrators can regain control of the environment in case of critical issues, such as account lockouts or security breaches. Here's a concise guide on creating and managing this account.
+
+## Why You Need an Emergency Access Account
+
+- **Account Lockouts**: Regain access if an admin account is locked.
+- **Disaster Recovery**: Provides a secure backup if primary admin accounts are compromised.
+- **Privilege Management**: Ensures critical operations can still be performed during emergencies.
+
+## Steps to Create an Emergency Access Account 
+
+1. Sign in to the [Microsoft Entra admin center](https://entra.microsoft.com) as a **Global Administrator**.
+1. Navigate to: Identity > Users > All users.
+1. Select: New user.
+1. Choose: Create user.
+1. Fill in the details:
+    - Username: Choose a unique username.
+    - Name: Provide a name for the account.
+1. Create a long and complex password for the account.
+1. Assign the Global Administrator role.
+1. Select the appropriate Usage location.
+1. Click: Create.
+
+<!-- 3. **Select**: **New user**.
+4. **Choose**: **Create user**.
+5. **Fill in the details**:
+   - **User name**: Choose a unique username.
+   - **Name**: Provide a name for the account.
+6. **Create a long and complex password** for the account.
+7. **Assign the Global Administrator role** under the Roles section.
+8. **Select the appropriate Usage location**.
+9. **Click**: **Create**. -->
+
+
+
+## Best Practices
+- **Limit use**: Use the account only in emergencies.
+- **Regular reviews**: Periodically audit accounts and roles.
+- **Multi-Factor Authentication**: Enable MFA for secondary admins if needed.
+- **Credential Rotation**: Regularly rotate or expire credentials to minimize risks.
+
+## Conclusion
+Creating an emergency access account in Microsoft Entra is essential for business continuity. By following these steps and best practices, you ensure your organization can recover from unforeseen events and maintain secure access control.
+
+## References
+- [Microsoft Entra Docs](https://learn.microsoft.com/en-us/entra/identity/role-based-access-control/security-emergency-access)
+- [Best Practices](https://ourcloudnetwork.com/best-practice-for-emergency-access-accounts-in-microsoft-entra/)
