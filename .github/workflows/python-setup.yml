@@ -1,4 +1,4 @@
-name: "Setup Python"
+name: "Python"
 
 on:
   push:

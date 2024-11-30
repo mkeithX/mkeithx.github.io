@@ -16,7 +16,7 @@ updates:
   - package-ecosystem: 'pip'
     directory: '/examples/python-starters'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
@@ -24,7 +24,7 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/website'
     schedule:
-      interval: 'daily'
+      interval: 'weekly'
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
