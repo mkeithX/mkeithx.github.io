@@ -1,0 +1,92 @@
+---
+description: Common types of commits
+sidebar_position: 2.3
+---
+
+# Conventional Commits
+
+This document outlines the common types of commits following the Conventional Commits standard, along with examples of each type.
+
+## `feat` - Features
+
+A new API or behavior for the end user.
+
+| Example Commit Message | Branch |
+| --- | --- |
+| _This PR allow users to upload profile pictures._ | `feat/upload-profile-pictures` |
+| _This PR add user authentication module._ | `feat/add-user-authentication` |
+| _This PR implement dark mode toggle._ | `feat/dark-mode-toggle` |
+| _This PR create dashboard for user analytics._ | `feat/user-analytics-dashboard` |
+| _This PR enable social media login options._ | `feat/social-media-login` |
+
+## `fix` - Bug Fixes
+
+A bug fix for the end user.
+
+| Example Commit Message | Branch |
+| --- | --- |
+| _This PR resolve mobile login button click issue._ | `fix/mobile-login-issue` |
+| _This PR correct typo in homepage header._ | `fix/homepage-header-typo` |
+| _This PR prevent crash when accessing profile page._ | `fix/profile-page-crash` |
+| _This PR fix broken image links in gallery._ | `fix/gallery-image-links` |
+| _This PR resolve incorrect calculation in checkout._ | `fix/checkout-calculation` |
+
+## `docs` - Documentation
+
+A change to the website or other Markdown documents in our repo.
+
+| Example Commit Message | Branch |
+| --- | --- |
+| _This PR update installation guide with troubleshooting steps._ | `docs/update-installation-guide` |
+| _This PR add installation instructions to README._ | `docs/add-installation-instructions` |
+| _This PR clarify contribution guidelines._ | `docs/clarify-contribution-guidelines` |
+| _This PR create a changelog for version history._ | `docs/create-changelog` |
+| _This PR add onboarding screenshots._ | `docs/add-onboarding-screenshots` |
+
+## `refactor` - Refactoring
+
+A change to production code that leads to no behavior difference.
+
+| Example Commit Message | Branch |
+| --- | --- |
+| _This PR streamline user profile loading logic._ | `refactor/user-profile-loading` |
+| _This PR extract common utility functions._ | `refactor/extract-utility-functions` |
+| _This PR reorganize state management for better performance._ | `refactor/state-management` |
+| _This PR simplify component structure for the header._ | `refactor/header-component` |
+| _This PR consolidate duplicate API requests._ | `refactor/consolidate-api-requests` |
+
+## `test` - Tests
+
+Adding missing tests, refactoring tests; no production code change.
+
+| Example Commit Message | Branch |
+| --- | --- |
+| _This PR add unit tests for user service._ | `test/user-service` |
+| _This PR improve coverage for login component._ | `test/login-component-coverage` |
+| _This PR write integration tests for payment processing._ | `test/payment-processing` |
+| _This PR validate error handling in API responses._ | `test/api-error-handling` |
+| _This PR add snapshot tests for UI components._ | `test/ui-snapshot-tests` |
+
+## `chore` - Chores
+
+Upgrading dependencies, releasing new versions, maintenance tasks.
+
+| Example Commit Message | Branch |
+| --- | --- |
+| _This PR update package.json with latest dependency versions._ | `chore/update-dependencies` |
+| _This PR clean up unused CSS styles._ | `chore/cleanup-css` |
+| _This PR migrate build tool from Gulp to Webpack._ | `chore/migrate-to-webpack` |
+| _This PR remove deprecated API endpoints._ | `chore/remove-deprecated-apis` |
+| _This PR reorganize project structure for clarity._ | `chore/reorganize-project-structure` |
+
+## `misc` - Miscellaneous
+
+Anything else that doesn't change production code, yet is not test or chore.
+
+| Example Commit Message | Branch |
+| --- | --- |
+| _This PR update GitHub Actions workflow to include code linting._ | `misc/update-github-actions` |
+| _This PR update package-lock.json to reflect latest npm version._ | `misc/update-package-lock` |
+| _This PR modify .gitignore to exclude unnecessary files._ | `misc/modify-gitignore` |
+| _This PR add README section for debugging setup._ | `misc/add-debugging-section` |
+| _This PR remove old testing configuration files._ | `misc/remove-old-configs` |
