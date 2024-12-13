@@ -2,6 +2,8 @@ name: 📒 Documentation
 description: Report an issue related to documentation
 title: '[Docs]: '
 labels: ['needs triage','documentation']
+assignees:
+  - mkeithX
 
 body:
   - type: markdown
