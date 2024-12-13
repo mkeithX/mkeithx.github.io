@@ -7,7 +7,7 @@ updates:
   permalink: /updates
 docs:
   description: "Posts about documentation"
-  label: Documentation
+  label: Docs
 release:
   description: "Posts about recent releases"
   label: Release
@@ -16,25 +16,8 @@ workplace:
   description: "A page dedicated to my colleagues"
   label: Workplace
   permalink: /workplace
-tribute:
-unlisted:
-MKXSpaceHub:
-mkeithx:
 mkeithX:
-Keith Tan:
-mkeithx.github.io:
-solar-system:
-space:
-astronomy:
-planets:
-api:
-post:
-  description: "Blog posts"
-  label: Blog post
-  permalink: /blog-post
-configs:
-software:
-development:
-upgrade:
-update:
-emptyTag:
+  label: mkeithX
+
+
+# TODO #265 remove all unused tags
