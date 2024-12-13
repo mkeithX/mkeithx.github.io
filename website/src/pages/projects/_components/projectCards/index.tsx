@@ -21,12 +21,12 @@ export const projects: ProjectData[] = [
         url: "https://github.com/mkeithX/flask-tutorial-demo",
         image: `${dataDir}/default.png`,
     },
-    // {
-    //     title: "MKX Website",
-    //     description: "A unified docs for IT Developers and Astronomers.",
-    //     url: "https://mkeithx.pages.dev",
-    //     image: `${dataDir}/ms-banner.png`,
-    // },
+    {
+        title: "MKX Website",
+        description: "A unified docs for IT Developers and Astronomers.",
+        url: "https://mkeithx.pages.dev",
+        image: `${dataDir}/default.png`,
+    },
     {
         title: "Kitimi Platforms",
         description: "Hub for contributors, authors and maintainers within the platform.",
@@ -39,5 +39,11 @@ export const projects: ProjectData[] = [
     //     url: "https://kitiplex.github.io/iuiu",
     //     image: `${dataDir}/sc-iuiu.png`,
     // },
+    {
+        title: "Kitiplex Website",
+        description: "Building Innovative Solutions",
+        url: "https://kitiplex.pages.dev",
+        image: `${dataDir}/default.png`
+    },
 
 ];

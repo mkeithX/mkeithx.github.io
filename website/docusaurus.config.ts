@@ -66,8 +66,6 @@ const config: Config = {
 
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
-    // { href: "/fonts/Hubot-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
-    // { href: "/fonts/Mona-Sans.woff2", type: "font/woff2", rel: "preload", as: "font", crossorigin: "anonymous" },
   ],
 
 
