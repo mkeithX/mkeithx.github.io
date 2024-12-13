@@ -54,7 +54,7 @@
     "@types/node": "22.10.1",
     "@types/react": "^18.3.12",
     "typescript": "5.7.2",
-    "wrangler": "3.93.0"
+    "wrangler": "3.95.0"
   },
   "browserslist": {
     "production": [
