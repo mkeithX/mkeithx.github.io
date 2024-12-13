@@ -13,7 +13,7 @@ concurrency:
 
 jobs:
   build:
-    name: Build
+    name: Build website
     runs-on: ubuntu-latest
     timeout-minutes: 30
     permissions:
