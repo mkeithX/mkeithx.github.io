@@ -3,6 +3,8 @@ description: Report those pesky bugs!
 title: '[Bug]: '
 labels: ['needs triage']
 projects: ['SpaceHub']
+assignees:
+  - mkeithX
 
 body:
   - type: checkboxes

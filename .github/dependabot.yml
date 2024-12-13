@@ -12,6 +12,8 @@ updates:
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
+    reviewers:
+      - "mkeithX"
 
   - package-ecosystem: 'pip'
     directory: '/examples/python-starters'
@@ -20,6 +22,8 @@ updates:
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
+    reviewers:
+      - "mkeithX"
 
   - package-ecosystem: 'npm'
     directory: '/website'
@@ -28,4 +32,5 @@ updates:
     open-pull-requests-limit: 99
     labels:
       - 'pr: dependencies'
-
+    reviewers:
+      - "mkeithX"
