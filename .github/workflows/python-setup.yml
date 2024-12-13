@@ -11,6 +11,10 @@ on:
 jobs:
   build-python:
     runs-on: ubuntu-latest
+    strategy:
+      fail-fast: false
+      matrix:
+        python-version: ["3.10", "3.11"]
 
     steps:
       - name: Clone Repo
@@ -19,7 +23,7 @@ jobs:
       - name: Configure Python Environment
         uses: actions/setup-python@v5
         with:
-          python-version: "3.12"
+          python-version: ${{ matrix.python-version }}
 
       - name: Install Requirements
         run: |
@@ -31,3 +35,5 @@ jobs:
           cd examples/python-starters
           python hello.py
           python -c 'import this'
+
+# TODO #264 Consider at least three `python` versions

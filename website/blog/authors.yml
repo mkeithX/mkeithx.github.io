@@ -1,15 +1,14 @@
 mkeithx:
   name: Keith Tan
-  title: Geek • Potato
-  description: Hi there and thanks for visiting! Hope you find this website helpful. More good stuff are coming. Stay tuned!
+  title: Software Engineer • Geek • Potato
   url: https://github.com/mkeithx
   image_url: https://github.com/mkeithx.png
-  email: me@kitimi.onmicrosoft.com
-  # page:
-  #   permalink: '/mkeithx'
-  page: true
+  email: pr@kitimi.onmicrosoft.com
+  page: false
   
   socials:
-    # x: mkeithtan
+    x: mkeithtan
     github: mkeithX
     linkedin: mkeithtan
+
+# TODO: #263 Remove page and permalink
