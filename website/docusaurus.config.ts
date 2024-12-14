@@ -264,11 +264,10 @@ const config: Config = {
       ],
     },
     algolia: {
-      apiKey: "17c82a48990cb1a63e048dbd20818637",
+      apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       indexName: "mkeithx",
       appId: "XVSOLYZXNV",
       contextualSearch: false,
-      searchPagePath: "search",
       insights: false,
     },
 

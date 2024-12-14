@@ -6,6 +6,8 @@ on:
   pull_request:
     branches:
       - main
+    paths:
+      - .github/workflows/ci.yml
       
 concurrency:
   group: ${{ github.workflow }}-${{ github.head_ref || github.run_id }}
@@ -15,18 +17,19 @@ jobs:
   build:
     name: Build website
     runs-on: ubuntu-latest
-    timeout-minutes: 30
     permissions:
       contents: read
       deployments: write
+    timeout-minutes: 30
 
     steps:
-      - uses: actions/checkout@v4
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
       - name: Node setup
-        uses: actions/setup-node@v4
+        uses: actions/setup-node@v4.1.0
         with:
           node-version: lts/*
 
@@ -36,7 +39,7 @@ jobs:
           npm ci && npm run build
 
       - name: Deploy
-        uses: cloudflare/wrangler-action@v3
+        uses: cloudflare/wrangler-action@v3.13.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
