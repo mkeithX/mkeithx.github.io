@@ -64,6 +64,22 @@ const config: Config = {
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
 
+  future: {
+    experimental_faster: {
+      swcJsLoader: true,
+      swcJsMinimizer: true,
+      swcHtmlMinimizer: true,
+      lightningCssMinimizer: true,
+      rspackBundler: true,
+      mdxCrossCompilerCache: true,
+    },
+    experimental_storage: {
+      type: 'localStorage',
+      namespace: true,
+    },
+    experimental_router: 'browser',
+  },
+
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
