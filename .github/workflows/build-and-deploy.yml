@@ -37,7 +37,7 @@ jobs:
       - name: Test deploy
         uses: cloudflare/wrangler-action@v3.13.0
         with:
-          workingDirectory: website
+          workingDirectory: ${{ secrets.CLOUDFLARE_ROOT_DIRECTORY }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
@@ -46,7 +46,6 @@ jobs:
   build:
     name: Build and Deploy Website
     runs-on: ubuntu-latest
-    needs: test-build
     permissions:
       contents: read
       deployments: write
@@ -71,7 +70,7 @@ jobs:
       - name: Deploy
         uses: cloudflare/wrangler-action@v3.13.0
         with:
-          workingDirectory: website
+          workingDirectory: ${{ secrets.CLOUDFLARE_ROOT_DIRECTORY }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
