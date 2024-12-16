@@ -39,7 +39,7 @@ function This(): JSX.Element {
                             alt="ProfileAvatar" />
                         <div className="avatar__intro">
                             <Heading as="h1" className={clsx(styles.thisTitle)}>
-                                {"About"}
+                                <b>{"About"}</b>
                             </Heading>
                             <div className={clsx("avatar__subtitle")}>
                                 <span className={clsx(styles.thisSubtitle)}>{"@"}{custom_title}</span>
