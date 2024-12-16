@@ -14,6 +14,14 @@ import { socialProfiles } from "./social.json";
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 
+import * as dotenv from 'dotenv';
+
+const environment = process.env.NODE_ENV || 'development';
+dotenv.config({
+  path: environment === 'production'
+    ? '.env.production.local'
+    : '.env.development.local',
+});
 
 const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
@@ -57,11 +65,12 @@ const config: Config = {
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
     custom_tagline: "Alternative Resources for Software Development",
-    custom_projectDescription: "Highlighting some projects and demos I've authored and contributed to.",
+    custom_projectDescription: "Demos and other good stuff.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
+    LOGIN_URL: process.env.LOGIN_URL || '/login',
   },
 
   future: {
@@ -248,6 +257,7 @@ const config: Config = {
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
+        // { label: 'Login', href: process.env.LOGIN_URL || '/login' },
         {
           type: "dropdown",
           label: "More",
@@ -280,9 +290,9 @@ const config: Config = {
       ],
     },
     algolia: {
-      apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
+      apiKey:  process.env.ALGOLIA_API_KEY || '',
+      appId: process.env.ALGOLIA_APP_ID || '',
       indexName: "mkeithx",
-      appId: "XVSOLYZXNV",
       contextualSearch: false,
       insights: false,
     },
