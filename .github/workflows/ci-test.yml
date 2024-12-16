@@ -25,3 +25,9 @@ jobs:
         run: |
          cd website
          npm ci && npm run build
+
+      - name: Test deploy
+        uses: cloudflare/wrangler-action@v3.13.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}         

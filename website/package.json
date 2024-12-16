@@ -36,7 +36,6 @@
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mdx-js/react": "^3.1.0",
     "clsx": "^2.1.0",
-    "dotenv": "^16.4.5",
     "postcss": "^8.4.49",
     "prism-react-renderer": "^2.4.1",
     "raw-loader": "^4.0.2",
@@ -55,7 +54,8 @@
     "@types/node": "22.10.2",
     "@types/react": "^18.3.12",
     "typescript": "5.7.2",
-    "wrangler": "3.95.0"
+    "wrangler": "3.95.0",
+    "@dotenvx/dotenvx": "1.31.0"
   },
   "browserslist": {
     "production": [
