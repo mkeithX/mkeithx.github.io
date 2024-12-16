@@ -1,0 +1,15 @@
+name = "mkeithx"
+pages_build_output_dir = "build"
+route = "dev.mkeithx.pages.dev/*"
+vars = { ENVIRONMENT = "dev" }
+
+[env.staging]
+vars = { ENVIRONMENT = "staging" }
+route = "staging.mkeithx.pages.dev/*"
+
+[env.production]
+vars = { ENVIRONMENT = "production" }
+routes = [
+    "mkeithx.pages.dev/*"
+]
+
