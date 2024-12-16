@@ -37,6 +37,7 @@ jobs:
       - name: Test deploy
         uses: cloudflare/wrangler-action@v3.13.0
         with:
+          workingDirectory: website/build
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
@@ -70,8 +71,10 @@ jobs:
       - name: Deploy
         uses: cloudflare/wrangler-action@v3.13.0
         with:
+          workingDirectory: website/build
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
 
+          
 # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
