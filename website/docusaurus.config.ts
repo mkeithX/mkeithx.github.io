@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 
 
-const copyright = `© ${new Date().getFullYear()} Keith Tan and Contributors`;
+const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
 const commonExclusions = {
   exclude: [
@@ -293,7 +293,7 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/kitiplex-devops.svg",
         href: "/",
-        width: "250",
+        width: "350",
       },
       links: [
         {
