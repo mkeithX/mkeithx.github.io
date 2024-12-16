@@ -9,13 +9,15 @@ permissions:
 
 jobs:
   dependency-review:
+    name: Dependency Review
     runs-on: ubuntu-latest
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
         
       - name: Dependency Review
-        uses: actions/dependency-review-action@v4
+        uses: actions/dependency-review-action@v4.5.0
+    
         with:
           fail-on-severity: critical
           show-openssf-scorecard: true
