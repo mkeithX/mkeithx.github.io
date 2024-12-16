@@ -290,8 +290,8 @@ const config: Config = {
       ],
     },
     algolia: {
-      apiKey:  process.env.ALGOLIA_API_KEY,
-      appId: process.env.ALGOLIA_APP_ID,
+      apiKey:  "b63e590c0b5a9ab7c0930991ea785aeb",
+      appId: "XVSOLYZXNV",
       indexName: "mkeithx",
       contextualSearch: false,
       insights: false,
