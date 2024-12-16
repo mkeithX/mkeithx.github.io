@@ -1,0 +1,62 @@
+name: CI/CD Pipeline
+
+on:
+  pull_request:
+    branches:
+      - main
+  push:
+    branches:
+      - main
+
+jobs:
+  test-build:
+    name: Test build
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Node setup
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version: lts/*
+
+      - name: Install dependencies
+        run: |
+          cd website
+          npm ci && npm run build
+
+      - name: Test deploy
+        uses: cloudflare/wrangler-action@v3.13.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy website/build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+  build:
+    name: Build and Deploy Website
+    runs-on: ubuntu-latest
+    permissions:
+      contents: read
+      deployments: write
+    needs: test-build  # Ensure the build job runs only after the test-build job is successful
+
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+
+      - name: Node setup
+        uses: actions/setup-node@v4.1.0
+        with:
+          node-version: lts/*
+
+      - name: Deploy
+        uses: cloudflare/wrangler-action@v3.13.0
+        with:
+          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy website/build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
