@@ -35,7 +35,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy website/build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          # command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
 
   build:
     name: Build and Deploy Website
@@ -61,4 +62,8 @@ jobs:
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy website/build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          workingDirectory: website/build
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
+          # command: pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+# https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
