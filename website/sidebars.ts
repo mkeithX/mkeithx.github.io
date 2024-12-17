@@ -234,6 +234,7 @@ const sidebars: SidebarsConfig = {
         
         // "devops/troubleshoot-like-a-boss",
         "devops/glossary",
+        "devops/sdlc",
       ]
     },
     // {
