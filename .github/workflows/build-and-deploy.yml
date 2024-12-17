@@ -23,7 +23,7 @@ jobs:
       deployments: write
     
     steps:
-      - name: Checkout repository
+      - name: Checkout
         uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
@@ -33,16 +33,23 @@ jobs:
         with:
           node-version: lts/*
       
+      - uses: actions/configure-pages@v5.0.0
       - name: Run build
         run: |
           cd website
           npm ci --no-audit
           npm run build
           
-      - name: Upload build artifact
+      - name: Upload artifact
         uses: actions/upload-artifact@v4.4.3
         with:
-          name: github-pages
+          name: mkeithx__build
+          path: website/build
+          
+      - name: Upload pages artifact
+        if: github.event_name == 'push'
+        uses: actions/upload-pages-artifact@v3.0.1
+        with:
           path: website/build
 
   deploy:
@@ -59,35 +66,31 @@ jobs:
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-
+    
     steps:
-      - name: Download build artifact
+      - name: Download Build Artifact
         uses: actions/download-artifact@v4.1.8
-        with:
-          name: github-pages
-
+    
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4.0.5
-        with:
-          folder: website/build  # Make sure this path matches your build output
+
 
   publish:
     name: Deploy to Cloudflare
     runs-on: ubuntu-latest
-    needs: build
     permissions:
       contents: read
       deployments: write
 
     steps:
-      - name: Checkout repository
+      - name: Checkout Repo
         uses: actions/checkout@v4.2.2
         with:
           fetch-depth: 0
 
       - name: Deploy to Cloudflare
-        if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
+        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: cloudflare/wrangler-action@v3.13.0
         with:
           workingDirectory: ${{ secrets.CLOUDFLARE_ROOT_DIRECTORY }}
