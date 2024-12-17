@@ -85,11 +85,17 @@ jobs:
       deployments: write
 
     steps:
+      - name: Download WF Artifact
+        uses: actions/download-artifact@v4.1.8
+        with: 
+          name: mkeithx__build
+          path: website/build
+          
       - name: Deploy to Cloudflare
-        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: cloudflare/wrangler-action@v3.13.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          command: pages deploy build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
 
 # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
