@@ -43,7 +43,7 @@ jobs:
         uses: actions/upload-pages-artifact@v3.0.1
         with:
           name: build-artifact
-          path: ./build
+          path: website
 
   deploy:
     if: github.event_name == 'push'
@@ -63,7 +63,7 @@ jobs:
         uses: actions/download-artifact@v3.0.0
         with:
           name: build-artifact
-          path: website/build
+          path: website
     
       - name: Deploy to GitHub Pages
         id: deployment
