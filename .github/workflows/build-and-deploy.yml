@@ -98,6 +98,6 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: |
             pages project list
-            pages deploy ./build --project-name=mkeithx
+            pages deploy website --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
 
 # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
