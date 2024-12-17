@@ -60,6 +60,7 @@ jobs:
     needs: build
     permissions:
       pages: write
+      id-token: write
 
     environment:
       name: github-pages
@@ -87,7 +88,6 @@ jobs:
         if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: cloudflare/wrangler-action@v3.13.0
         with:
-          workingDirectory: ${{ secrets.CLOUDFLARE_ROOT_DIRECTORY }}
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
