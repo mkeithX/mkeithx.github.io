@@ -60,6 +60,7 @@ jobs:
     needs: build
     permissions:
       pages: write
+      id-token: write
 
     environment:
       name: github-pages
@@ -76,13 +77,17 @@ jobs:
 
   publish:
     name: Deploy to Cloudflare
-    needs: build
     runs-on: ubuntu-latest
     permissions:
       contents: read
       deployments: write
 
     steps:
+      - name: Checkout Repo
+        uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
+
       - name: Deploy to Cloudflare
         if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: cloudflare/wrangler-action@v3.13.0
