@@ -33,12 +33,10 @@ jobs:
         with:
           node-version: lts/*
       
-      - uses: actions/configure-pages@v5.0.0
       - name: Run build
         run: |
           cd website
-          npm ci --no-audit
-          npm run build
+          npm ci && npm run build
           
       - name: Upload artifact
         uses: actions/upload-artifact@v4.4.3
@@ -77,9 +75,11 @@ jobs:
 
 
   publish:
+    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
     name: Deploy to Cloudflare
     runs-on: ubuntu-latest
     needs: build
+    
     permissions:
       contents: read
       deployments: write
@@ -87,11 +87,10 @@ jobs:
     steps:
       - name: Deploy to Cloudflare
         id: cf
-        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: cloudflare/wrangler-action@v3.13.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy website/build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+          command: pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
 
 # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
