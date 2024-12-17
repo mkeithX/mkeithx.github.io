@@ -42,7 +42,6 @@ jobs:
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
           command: pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
 
-
   build:
     name: Build and Deploy Website
     runs-on: ubuntu-latest
@@ -66,7 +65,29 @@ jobs:
           cd website
           npm ci && npm run build
 
-      - name: Deploy
+  deploy:
+    if: github.event_name == 'push' && github.ref == 'refs/heads/main'
+    name: Deploy to GitHub Pages
+    concurrency: build-deploy-pages
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4.0.5
+
+  publish:
+    if: github.repository == 'mkeithX/mkeithx.github.io'
+    name: Deploy to Cloudflare Pages
+    runs-on: ubuntu-latest
+    needs: build
+    steps:
+
+      - name: Deploy to Cloudflare Pages
         if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: cloudflare/wrangler-action@v3.13.0
         with:
