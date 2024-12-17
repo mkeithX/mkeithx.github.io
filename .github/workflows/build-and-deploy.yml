@@ -17,7 +17,6 @@ jobs:
   build:
     name: Build Website
     runs-on: ubuntu-latest
-    if: github.event_name == 'pull_request'
 
     permissions:
       contents: read
@@ -29,7 +28,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Node setup
+      - name: Setup Node.js
         uses: actions/setup-node@v4.1.0
         with:
           node-version: lts/*
@@ -40,21 +39,32 @@ jobs:
           npm ci && npm run build
       
       - name: Upload pages artifact
-        if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+        if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3.0.1
         with:
+          name: build-artifact
           path: website/build
 
   deploy:
-    if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
+    if: github.event_name == 'push'
     name: Deploy to GitHub Pages
     concurrency: build-deploy-pages
+    runs-on: ubuntu-latest
+    needs: build
+    permissions:
+      pages: write
+
     environment:
       name: github-pages
       url: ${{ steps.deployment.outputs.page_url }}
-    runs-on: ubuntu-latest
-    needs: build
+    
     steps:
+      - name: Download Build Artifact
+        uses: actions/download-artifact@v3.0.0
+        with:
+          name: build-artifact
+          path: website/build
+    
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4.0.5
@@ -69,11 +79,6 @@ jobs:
       deployments: write
 
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4.2.2
-        with:
-          fetch-depth: 0
-
       - name: Deploy to Cloudflare
         if: ${{ github.event_name != 'pull_request' && github.ref == 'refs/heads/main' }}
         uses: cloudflare/wrangler-action@v3.13.0
