@@ -44,13 +44,13 @@ jobs:
         uses: actions/upload-artifact@v4.4.3
         with:
           name: mkeithx__build
-          path: build
+          path: website/build
           
       - name: Upload pages artifact
         if: github.event_name == 'push'
         uses: actions/upload-pages-artifact@v3.0.1
         with:
-          path: build
+          path: website/build
 
   deploy:
     if: github.event_name == 'push'
