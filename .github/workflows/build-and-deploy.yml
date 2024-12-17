@@ -47,21 +47,17 @@ jobs:
   deploy:
     name: Deploy to GitHub Pages
     needs: build
-    runs-on: ubuntu-latest
+    
     permissions:
       pages: write
       id-token: write
     
     environment:
       name: github-pages
-      url: ${{steps.deployment.outputs.page_url}}
+      url: ${{ steps.deployment.outputs.page_url }}
 
+    runs-on: ubuntu-latest
     steps:
-      - name: Checkout repository
-        uses: actions/checkout@v4.2.2
-        with:
-          fetch-depth: 0
-
       - name: Deploy to GitHub Pages
         id: deployment
         uses: actions/deploy-pages@v4.0.5
