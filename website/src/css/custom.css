@@ -112,24 +112,30 @@ html[data-navbar='false'] .navbar {
 /* Announcement Bar */
 
 div[class^='announcementBar_'] {
-  /* font-size: 17px; */
   font-weight: 650;
-  background: linear-gradient(90deg, #00ff88, #12a4ff) !important;
+  background: linear-gradient(90deg, #d1ffeb, #1da1f2) !important;
   color: var(--ifm-site-dark);
-  /* height: 1.5em; */
+  
 }
 
 
-/* div[class^="announcementBar_"] {
+/* div[class^='announcementBar_'] {
+  font-weight: 650;
 
-  a {
-    display: inline-block;
-    color: var(--brand);
-    &:hover {
-      color: var(--ifm-color-primary) !important;
-    }
-  }
+  --site-announcement-bar-stripe-color1: #00ff84;
+  --site-announcement-bar-stripe-color2: #1da1f2;
+
+  background: repeating-linear-gradient(
+    35deg,
+    var(--site-announcement-bar-stripe-color1),
+    var(--site-announcement-bar-stripe-color1) 20px,
+    var(--site-announcement-bar-stripe-color2) 10px,
+    var(--site-announcement-bar-stripe-color2) 40px
+  );
+  font-weight: bold;
 } */
+
+
 
 .contentTableContainer th:first-child {
   width: 15%;
@@ -194,6 +200,7 @@ div[class^='announcementBar_'] {
 
 .footer {
   text-align: center;
+  font: optional;
 }
 
 .footer .container {
