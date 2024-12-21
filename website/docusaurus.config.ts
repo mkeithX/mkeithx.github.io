@@ -91,7 +91,9 @@ const config: Config = {
 
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
+    { href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap", type: "text/css", crossorigin:"anonymous" },
   ],
+
 
 
   i18n: {
@@ -218,9 +220,9 @@ const config: Config = {
       id: `announcementBar_`,
       content:
         `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
-        // backgroundColor: '#010409',
-        // textColor: 'white',
-        isCloseable: true,
+      // backgroundColor: '#fafbfc',
+      // textColor: '#091E42',
+      isCloseable: true,
     },
     docs: {
       versionPersistence: 'localStorage',
@@ -245,12 +247,12 @@ const config: Config = {
       },
       items: [
         {
-          type: "dropdown" ,
+          type: "dropdown",
           label: "Development",
           position: "left",
           items: [
-            {type: "doc",  docId: "introduction", label: "Guides",},
-            {type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
+            { type: "doc", docId: "introduction", label: "Guides", },
+            { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
             { to: "/projects", label: "Showcase" },
           ]
         },
@@ -273,7 +275,7 @@ const config: Config = {
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
         },
-        
+
         // {
         //   type: "html",
         //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
@@ -290,7 +292,7 @@ const config: Config = {
       ],
     },
     algolia: {
-      apiKey:  "b63e590c0b5a9ab7c0930991ea785aeb",
+      apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       appId: "XVSOLYZXNV",
       indexName: "mkeithx",
       contextualSearch: false,

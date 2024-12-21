@@ -6,6 +6,8 @@
 
 /* You can override the default Infima variables here. */
 
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
 :root {
   --ifm-color-primary: #0b84ce;
   --ifm-color-primary-dark: #0a77b9;
@@ -15,6 +17,8 @@
   --ifm-color-primary-lighter: #0d98ed;
   --ifm-color-primary-lightest: #27a6f3;
 
+  --ifm-font-family-base: 'Montserrat', sans-serif;
+
   /* --site-background-color: #f5f3f7; */
   /* --site-background-color: #bbeffd4d; */
 
@@ -22,7 +26,7 @@
   --site-color-feedback-background: #f0f8ff;
 
   --ifm-code-font-size: 90%;
-  --ifm-font-size-base: 16px;
+  --ifm-font-size-base: 15px;
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
 
@@ -66,6 +70,16 @@
 
 }
 
+article p {
+  font-size: 15px;
+  font-weight: 500;
+}
+
+article li {
+  font-size: 15px;
+  font-weight: 500;
+}
+
 .navbar {
   background-color: var(--ifm-site-dark);
   
@@ -89,7 +103,7 @@
 .navbar__title {
   font-weight: bold;
   font-size: normal;
-  color: var(--ifm-color-primary-lighter) !important;
+  /* color: var(--ifm-color-primary-lighter) !important; */
 }
 
 /* Dropdown separator styling */
@@ -111,13 +125,31 @@ html[data-navbar='false'] .navbar {
 
 /* Announcement Bar */
 
-div[class^='announcementBar_'] {
-  font-weight: 650;
-  background: linear-gradient(90deg, #d1ffeb, #1da1f2) !important;
-  color: var(--ifm-site-dark);
-  
+div[class^='announcementBar'][role='banner'] {
+  border-bottom-color: var(--ifm-site-dark);
 }
 
+div[class^='announcementBar_'] {
+  font-weight: bold;
+  /* font-size: 20px; */
+  background: var(--ifm-site-dark) !important;
+  /* background: linear-gradient(80deg, #d1ffeb, #1da1f2) !important; */
+  color: #fffdd1;
+
+}
+
+div[class^='announcementBar_'] a {
+  /* color: var(--ifm-site-dark) !important; */
+  text-decoration: none;
+}
+
+div[class^='announcementBar_'] a:hover {
+  color: #12a4ff !important;
+}
+
+div[class^='announcementBar_'] button {
+  color: #fff !important;
+}
 
 /* div[class^='announcementBar_'] {
   font-weight: 650;
@@ -200,10 +232,9 @@ div[class^='announcementBar_'] {
 
 .footer {
   text-align: center;
-  font: optional;
 }
 
-.footer .container {
+.footer .col .col {
   max-width: 996px;
 }
 
