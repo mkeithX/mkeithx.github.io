@@ -194,9 +194,9 @@ const config: Config = {
     [
       "ideal-image",
       {
-        quality: 70,
-        max: 1030,
-        min: 640,
+        quality: 80,
+        max: 1050,
+        min: 680,
         steps: 2,
         disableInDev: true,
       } satisfies IdealImageOptions,
@@ -291,12 +291,11 @@ const config: Config = {
 
       ],
     },
+
     algolia: {
       apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       appId: "XVSOLYZXNV",
       indexName: "mkeithx",
-      contextualSearch: false,
-      insights: false,
     },
 
     footer: {
@@ -305,7 +304,7 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/kitiplex-devops.svg",
         href: "/",
-        width: "350",
+        width: "300",
       },
       links: [
         {
