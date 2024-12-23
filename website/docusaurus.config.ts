@@ -60,11 +60,12 @@ const config: Config = {
   titleDelimiter: "•",
 
   customFields: {
+    custom_heroBanner: "",
     description: "Representing humanity from Dimension C-137 and beyond.",
     custom_header: "Guides and Samples from mkeith",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
-    custom_tagline: "Alternative Resources for Software Development",
+    custom_tagline: "Stuff for Software Development",
     custom_projectDescription: "Demos and other good stuff.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -239,11 +240,13 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      title: "mkeithX",
       logo: {
         alt: "SpaceHub",
-        src: "img/logo/nav-logo.png",
+        src: "img/banner/code-icon-demo.svg",
         target: "_self",
+        width: "32",
+        height: "32",
       },
       items: [
         {

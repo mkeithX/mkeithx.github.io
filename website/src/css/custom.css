@@ -31,7 +31,7 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
   /* --ifm-breadcrumb-color-active: var(--ifm-color-primary) !important; */
-  /* --ifm-menu-color-active: var(--ifm-color-primary-lightest) !important; */
+  --ifm-menu-color-active: var(--ifm-color-primary) !important;
 
   --ifm-menu-color-background-active: var(--ifm-color-emphasis-100) !important;
 
@@ -71,19 +71,20 @@ article li {
 }
 
 .navbar {
-  background-color: var(--ifm-site-dark);
+  background-color: var(--ifm-site-dark)!important;
   /* font-size: 15px; */
 }
 
 .navbar__brand {
   margin-right: 2.0rem;
-  
+  /* font-size: 17px; */
+  /* color: var(--ifm-color-primary-light) !important; */
 }
 
 
 .navbar .navbar__items {
   flex: auto;
-
+  align-items: center;
 }
 
 /* Header Dropdown Menu */
@@ -122,7 +123,7 @@ div[class^='announcementBar'][role='banner'] {
 
 div[class^='announcementBar_'] {
   font-weight: bold;
-  font-size: 16px;
+  font-size: 15px;
   background: #242526 !important;
   /* background: linear-gradient(80deg, #d1ffeb, #1da1f2) !important; */
   /* color: #fffdd1; */
@@ -133,10 +134,11 @@ div[class^='announcementBar_'] {
 div[class^='announcementBar_'] a {
   /* color: var(--ifm-site-dark) !important; */
   text-decoration: none;
+  color: var(--ifm-color-primary-light) !important;
 }
 
 div[class^='announcementBar_'] a:hover {
-  color: #12a4ff !important;
+  color: #d1ffeb !important;
 }
 
 div[class^='announcementBar_'] button {
