@@ -29,10 +29,10 @@
     "@docusaurus/remark-plugin-npm2yarn": "3.6.3",
     "@docusaurus/theme-live-codeblock": "3.6.3",
     "@docusaurus/theme-mermaid": "3.6.3",
-    "@fortawesome/fontawesome-svg-core": "^6.7.1",
-    "@fortawesome/free-brands-svg-icons": "^6.7.1",
-    "@fortawesome/free-regular-svg-icons": "^6.7.1",
-    "@fortawesome/free-solid-svg-icons": "^6.7.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
+    "@fortawesome/free-brands-svg-icons": "^6.7.2",
+    "@fortawesome/free-regular-svg-icons": "^6.7.2",
+    "@fortawesome/free-solid-svg-icons": "^6.7.2",
     "@fortawesome/react-fontawesome": "^0.2.2",
     "@mdx-js/react": "^3.1.0",
     "clsx": "^2.1.0",
@@ -45,7 +45,7 @@
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20241205.0",
+    "@cloudflare/workers-types": "4.20241218.0",
     "@docusaurus/eslint-plugin": "3.6.3",
     "@docusaurus/module-type-aliases": "3.6.3",
     "@docusaurus/theme-classic": "3.6.3",
@@ -55,7 +55,7 @@
     "@types/react": "^18.3.12",
     "typescript": "5.7.2",
     "wrangler": "3.95.0",
-    "@dotenvx/dotenvx": "1.31.0"
+    "@dotenvx/dotenvx": "1.31.3"
   },
   "browserslist": {
     "production": [
