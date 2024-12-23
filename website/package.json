@@ -29,7 +29,7 @@
     "@docusaurus/remark-plugin-npm2yarn": "3.6.3",
     "@docusaurus/theme-live-codeblock": "3.6.3",
     "@docusaurus/theme-mermaid": "3.6.3",
-    "@fortawesome/fontawesome-svg-core": "^6.7.1",
+    "@fortawesome/fontawesome-svg-core": "^6.7.2",
     "@fortawesome/free-brands-svg-icons": "^6.7.2",
     "@fortawesome/free-regular-svg-icons": "^6.7.2",
     "@fortawesome/free-solid-svg-icons": "^6.7.2",
