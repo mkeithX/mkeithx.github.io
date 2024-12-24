@@ -60,7 +60,6 @@ const config: Config = {
   titleDelimiter: "•",
 
   customFields: {
-    custom_heroBanner: "",
     description: "Representing humanity from Dimension C-137 and beyond.",
     custom_header: "Guides and Samples from mkeith",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
@@ -92,7 +91,6 @@ const config: Config = {
 
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
-    { href: "https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap", type: "text/css", crossorigin:"anonymous" },
   ],
 
 
@@ -245,8 +243,8 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/banner/code-icon-demo.svg",
         target: "_self",
-        width: "32",
-        height: "32",
+        // width: "32",
+        // height: "32",
       },
       items: [
         {

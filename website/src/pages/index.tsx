@@ -26,6 +26,7 @@ function HomepageHeader(): JSX.Element {
     custom_tagline: string;
     custom_description: string;
     custom_header: string;
+    custom_heroBanner: string;
   };
 
   return (

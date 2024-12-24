@@ -21,7 +21,7 @@
   background-color: var(--ifm-site-dark);
   /* background-color: #2b3137; */
   display: flex;
-  height: 34rem;
+  height: 36rem;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
 }
 
@@ -32,10 +32,19 @@
 
 .heroBannerTitle {
   font-size: 46px;
-  font-weight: 700;
+  font-weight: 750;
   /* margin-bottom: 0.3rem; */
   position: relative;
 }
+
+.heroTitleTextHtml b {
+  color: transparent;
+  background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
+  background-clip: text;
+  font-weight: 750;
+  /* font-size: 55px; */
+}
+
 
 .heading {
   font-weight: bold;
@@ -44,7 +53,7 @@
 
 .heroSubtitle {
   font-size: 20px;
-  font-weight: normal;
+  font-weight: 400px;
   margin-bottom: 1em;
   margin-top: auto;
 }
@@ -66,8 +75,8 @@
 .heroBannerLogo {
   max-width: 35%;
   max-height: 35%;
-  width: 22rem;
-  height: 22rem;
+  width: 25rem;
+  height: 25rem;
   animation: kit-in-the-box infinite 60s linear;
   float: right;
   height: auto;
@@ -88,13 +97,6 @@
   font-weight: normal;
 }
 
-.heroTitleTextHtml b {
-  color: transparent;
-  background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
-  background-clip: text;
-  font-weight: 700;
-  font-size: 54px;
-}
 
 .heroCustomSubTitleHtml b {
   color: transparent;
@@ -102,6 +104,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 600;
+  font-size: 20px;
 }
 
 .heroSubTitleTextHtml b {
