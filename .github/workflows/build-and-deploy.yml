@@ -25,6 +25,8 @@ jobs:
     steps:
       - name: Checkout
         uses: actions/checkout@v4.2.2
+        with:
+          fetch-depth: 0
 
       - name: Setup Node.js
         uses: actions/setup-node@v4.1.0
@@ -73,32 +75,3 @@ jobs:
         id: deployment
         uses: actions/deploy-pages@v4.0.5
 
-
-  publish:
-    if: ${{ github.event_name == 'push' && github.ref == 'refs/heads/main' }}
-    name: Deploy to Cloudflare
-    runs-on: ubuntu-latest
-    needs: build
-
-    permissions:
-      contents: read
-      deployments: write
-
-    steps:
-      - name: Download WF Artifact
-        uses: actions/download-artifact@v4.1.8
-        with: 
-          name: mkeithx__build
-          path: website/build
-          
-      - name: Deploy to Cloudflare
-        uses: cloudflare/wrangler-action@v3.13.0
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: website/build
-          command: |
-            pages project list
-            pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-
-# https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
