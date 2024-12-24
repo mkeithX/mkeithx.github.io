@@ -61,10 +61,10 @@ const config: Config = {
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
-    custom_header: "Guides and Samples from mkeith",
+    custom_header: "Guides and Code Samples",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
-    custom_tagline: "Alternative Resources for Software Development",
+    custom_tagline: "For Web Developers and DevOps Engineers",
     custom_projectDescription: "Demos and other good stuff.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -92,6 +92,7 @@ const config: Config = {
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
+
 
 
   i18n: {
@@ -192,9 +193,9 @@ const config: Config = {
     [
       "ideal-image",
       {
-        quality: 70,
-        max: 1030,
-        min: 640,
+        quality: 80,
+        max: 1050,
+        min: 680,
         steps: 2,
         disableInDev: true,
       } satisfies IdealImageOptions,
@@ -218,9 +219,9 @@ const config: Config = {
       id: `announcementBar_`,
       content:
         `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
-        // backgroundColor: '#010409',
-        // textColor: 'white',
-        isCloseable: true,
+      // backgroundColor: '#fafbfc',
+      // textColor: '#091E42',
+      isCloseable: true,
     },
     docs: {
       versionPersistence: 'localStorage',
@@ -237,20 +238,22 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      title: "mkeithx",
       logo: {
         alt: "SpaceHub",
-        src: "img/logo/nav-logo.png",
+        src: "img/rocket.svg",
         target: "_self",
+        // width: "32",
+        // height: "32",
       },
       items: [
         {
-          type: "dropdown" ,
+          type: "dropdown",
           label: "Development",
           position: "left",
           items: [
-            {type: "doc",  docId: "introduction", label: "Guides",},
-            {type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
+            { type: "doc", docId: "introduction", label: "Guides", },
+            { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
             { to: "/projects", label: "Showcase" },
           ]
         },
@@ -273,7 +276,7 @@ const config: Config = {
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
         },
-        
+
         // {
         //   type: "html",
         //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
@@ -289,12 +292,11 @@ const config: Config = {
 
       ],
     },
+
     algolia: {
-      apiKey:  "b63e590c0b5a9ab7c0930991ea785aeb",
+      apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       appId: "XVSOLYZXNV",
       indexName: "mkeithx",
-      contextualSearch: false,
-      insights: false,
     },
 
     footer: {
@@ -303,7 +305,7 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/kitiplex-devops.svg",
         href: "/",
-        width: "350",
+        width: "300",
       },
       links: [
         {
