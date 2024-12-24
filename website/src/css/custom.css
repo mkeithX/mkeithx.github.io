@@ -6,34 +6,29 @@
 
 /* You can override the default Infima variables here. */
 
-@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 :root {
-  --ifm-color-primary: #0b84ce;
-  --ifm-color-primary-dark: #0a77b9;
-  --ifm-color-primary-darker: #0970af;
-  --ifm-color-primary-darkest: #085c90;
-  --ifm-color-primary-light: #0c91e3;
-  --ifm-color-primary-lighter: #0d98ed;
-  --ifm-color-primary-lightest: #27a6f3;
-
-  /* --ifm-font-family-base: 'Montserrat', sans-serif; */
-  --ifm-font-family-base: 'Montserrat', serif;
-  --ifm-font-family-monospace: 'Fira Code', monospace;
+  --ifm-color-primary: #3578e5;
+  --ifm-color-primary-dark: #1d68e1;
+  --ifm-color-primary-darker: #1b62d4;
+  --ifm-color-primary-darkest: #1751af;
+  --ifm-color-primary-light: #4e89e8;
+  --ifm-color-primary-lighter: #5a91ea;
+  --ifm-color-primary-lightest: #80aaef;
   --ifm-site-dark: #010409;
   --site-color-feedback-background: #f0f8ff;
 
   --ifm-code-font-size: 90%;
-  --ifm-font-size-base: 15px;
+  --ifm-font-size-base: 16px;
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
   --ifm-link-hover-decoration: none;
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
-  --ifm-menu-color-active: var(--ifm-color-primary) !important;
+  /* --ifm-menu-color-active: var(--ifm-color-primary) !important; */
 
-  --ifm-menu-color-background-active: var(--ifm-color-emphasis-100) !important;
+  /* --ifm-menu-color-background-active: var(--ifm-color-emphasis-100) !important; */
 
 }
 
@@ -46,12 +41,14 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
-  --ifm-background-color: #0D1118 !important;
-  --ifm-background-surface-color: #0D1116 !important;
+  /* --ifm-background-color: #0D1118 !important; */
+  /* --ifm-background-surface-color: #0D1116 !important; */
   --site-color-feedback-background: #2a2930;
-  --ifm-background-color: var(--ifm-background-surface-color) !important;
+  /* --ifm-background-color: var(--ifm-background-surface-color) !important; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
+  --ifm-background-surface-color: #0D1116 !important;
+  --ifm-background-color: var(--ifm-background-surface-color) !important;
 
 }
 
@@ -61,31 +58,35 @@
 
 
 article p {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  /* font-weight: 400; */
 }
 
 article li {
-  font-size: 15px;
-  font-weight: 500;
+  font-size: 16px;
+  /* font-weight: 400; */
 }
 
 .navbar {
-  background-color: var(--ifm-site-dark);
-  font-size: 15px;
+  background-color: var(--ifm-site-dark)!important;
+  align-items: center;
 }
 
 .navbar__brand {
   margin-right: 2.0rem;
-  /* font-size: 17px; */
+  font-size: 17px;
+  font-weight: 600;
+  color: #1da1f2;
   /* color: var(--ifm-color-primary-light) !important; */
 }
 
 
 .navbar .navbar__items {
   flex: auto;
-  /* align-items: center; */
+  align-items: center;
+  font-size: 16px;
 }
+
 
 /* Header Dropdown Menu */
 .dropdown__link {
@@ -93,8 +94,8 @@ article li {
 }
 
 .navbar__title {
-  /* font-weight: bold; */
-  font-size: 15px;
+  font-weight: bold;
+  font-size: normal;
   /* color: var(--ifm-color-primary-lighter) !important; */
 }
 
@@ -118,12 +119,13 @@ html[data-navbar='false'] .navbar {
 /* Announcement Bar */
 
 div[class^='announcementBar'][role='banner'] {
-  border-bottom-color: var(--ifm-site-dark);
+  /* border-bottom-color: var(--ifm-site-dark); */
+  border-bottom-color: #242526;
 }
 
 div[class^='announcementBar_'] {
-  font-weight: 700;
-  /* font-size: 15px; */
+  font-weight: 650;
+  font-size: 17px;
   background: #242526 !important;
   /* background: linear-gradient(80deg, #d1ffeb, #1da1f2) !important; */
   /* color: #fffdd1; */

@@ -61,10 +61,10 @@ const config: Config = {
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
-    custom_header: "Guides and Samples from mkeith",
+    custom_header: "Guides and Code Samples",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
-    custom_tagline: "Stuff for Software Development",
+    custom_tagline: "For Web Developers and DevOps Engineers",
     custom_projectDescription: "Demos and other good stuff.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -238,10 +238,10 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "mkeithX",
+      title: "mkeithx",
       logo: {
         alt: "SpaceHub",
-        src: "img/banner/code-icon-demo.svg",
+        src: "img/rocket.svg",
         target: "_self",
         // width: "32",
         // height: "32",

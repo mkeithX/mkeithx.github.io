@@ -34,10 +34,10 @@ function HomepageHeader(): JSX.Element {
       className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
         <BannerLogo
-          className={clsx(styles.heroBannerLogo)}
+          className={clsx(styles.heroLogo)}
           title="Banner Logo"
-          width={980}
-          height={500}
+          width={180}
+          height={180}
         />
         <div className="hero__subtitle">
           <span className={clsx(styles.heroSubTitleTextHtml)}>{'OpenSource'}</span>
@@ -47,13 +47,14 @@ function HomepageHeader(): JSX.Element {
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
               {custom_header}
-              <b>{'X'}</b>
+              {/* <b>{'X'}</b> */}
             </div>
           </span>
         </Heading>
         <div className={styles.heroSubtitle}>
           <span className={styles.heroCustomSubTitleHtml}>
             <b>{custom_tagline}</b>
+            {/* <b>{"Built with"}</b> ❤️ <b>{"by Keith"}</b>  */}
             {/* {custom_description} */}
           </span>
         </div>
