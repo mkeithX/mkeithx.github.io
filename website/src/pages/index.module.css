@@ -4,20 +4,20 @@
  */
 
  .hero {
-  display: flex;
+  /* display: flex;
   padding: 4rem 0;
   text-align: center;
   align-items: center;
   vertical-align: center;
-  position: relative;
+  position: relative; */
   background-color: var(--ifm-site-dark);
 }
 
 .heroBanner {
-  padding: 10rem 0;
+  padding: 8em 0;
+  overflow: hidden;
   text-align: left;
   position: relative;
-  overflow: hidden;
   background-color: var(--ifm-site-dark);
   /* background-color: #2b3137; */
   display: flex;
@@ -32,10 +32,10 @@
 }
 
 .heroBannerTitle {
-  font-size: 48px;
-  font-weight: 700;
+  font-size: 60px;
+  font-weight: bold;
   /* margin-bottom: 0.3rem; */
-  position: relative;
+  /* position: relative; */
 }
 
 .heading {
@@ -52,7 +52,7 @@
 
 .heroCustomTagline {
   color: transparent;
-  background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%) !important;
+  background: linear-gradient(90deg, #fffdd1 0%, #7ce3b1 50%, #1da1f2 100%) !important;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
@@ -65,17 +65,22 @@
 
 
 
-.heroLogo {
-  /* max-width: 35%;
-  max-height: 35%;
-  width: 22rem;
-  height: 22rem; */
-  height: auto;
+/* .heroLogo {
   animation: kit-in-the-box infinite 60s linear;
   float: right;
   height: auto;
   display: block;
   pointer-events: none;
+} */
+
+.heroLogo {
+  width: auto;
+  /* margin: 3px 30px; */
+  float: right;
+  transition: transform 0.3s ease-in-out;
+  &:hover {
+    transform: scale(1.15) rotate(2deg);
+  }
 }
 
 
@@ -101,11 +106,11 @@
 
 .heroCustomSubTitleHtml b {
   color: transparent;
-  background: linear-gradient(90deg, #f2f89c 0%, #4affaa 50%, #12a4ff 100%);
+  background: linear-gradient(90deg, #f2f89c 0%, #4affaa 50%, #4fbbff 100%);
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 500;
-  font-size: 20px;
+  font-size: 22px;
 }
 
 .heroSubTitleTextHtml b {
