@@ -61,10 +61,10 @@ const config: Config = {
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
-    custom_header: "Guides and Code Samples",
+    custom_header: "The SpaceHub Project",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
-    custom_tagline: "For Web Developers and DevOps Engineers",
+    custom_tagline: "Guides and Samples from the SpaceHub Project",
     custom_projectDescription: "Demos and other good stuff.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -221,7 +221,7 @@ const config: Config = {
         `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
       // backgroundColor: '#fafbfc',
       // textColor: '#091E42',
-      isCloseable: true,
+      isCloseable: false,
     },
     docs: {
       versionPersistence: 'localStorage',
