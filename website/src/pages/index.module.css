@@ -32,8 +32,8 @@
 }
 
 .heroBannerTitle {
-  font-size: 58px;
-  font-weight: 700;
+  font-size: 60px;
+  font-weight: bold;
   /* margin-bottom: 0.3rem; */
   /* position: relative; */
 }
@@ -52,16 +52,16 @@
 
 .heroCustomTagline {
   color: transparent;
-  background: linear-gradient(90deg, #fffdd1 0%, #00ff84 50%, #1da1f2 100%) !important;
+  background: linear-gradient(90deg, #fffdd1 0%, #7ce3b1 50%, #1da1f2 100%) !important;
   -webkit-text-fill-color: transparent;
   background-clip: text;
   font-weight: 600;
   font-size: 18px;
 }
 
-/* .main {
+.main {
   padding: 12px;
-} */
+}
 
 
 
@@ -109,8 +109,8 @@
   background: linear-gradient(90deg, #f2f89c 0%, #4affaa 50%, #4fbbff 100%);
   -webkit-background-clip: text;
   background-clip: text;
-  font-weight: 700;
-  font-size: 20px;
+  font-weight: 500;
+  font-size: 22px;
 }
 
 .heroSubTitleTextHtml b {

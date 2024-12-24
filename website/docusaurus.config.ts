@@ -64,7 +64,7 @@ const config: Config = {
     custom_header: "The SpaceHub Project",
     custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
-    custom_tagline: "Guides and Samples from the SpaceHub Project",
+    custom_tagline: "Guides and Samples from Kitiplex",
     custom_projectDescription: "Demos and other good stuff.",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
