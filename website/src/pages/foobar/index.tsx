@@ -34,12 +34,12 @@ function Foobar(): JSX.Element {
 
           </div>
           <Heading as="h1" className={clsx(styles.fooTitle)}>
-            SpaceHub Project
+            {"Author's Note"}
           </Heading>
           <span className={clsx("hero__subtitle margin-left--xs")}>
             {" | "}
             <span className="text--primary text--light text--small">
-              {"Author's note"}
+              {"The SpaceHub Project"}
             </span>
             {/* <Link to="https://github.com/mkeithX" className="text--no-decoration">
               <b></b>{"Foobar"}
