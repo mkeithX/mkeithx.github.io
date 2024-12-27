@@ -124,7 +124,7 @@
 }
 
 
-@keyframes kit-in-the-box {
+/* @keyframes kit-in-the-box {
   from {
     transform: rotate(360deg) scale(1.3);
   }
@@ -137,4 +137,4 @@
   .heroBannerLogo {
     animation: kit-in-the-box infinite 60s linear;
   }
-}
+} */
