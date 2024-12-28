@@ -1,4 +1,4 @@
-:root {
+/* :root {
   --docsearch-primary-color: var(--ifm-color-primary);
   --docsearch-text-color: var(--ifm-font-color-base);
 }
@@ -11,4 +11,4 @@
 
 .DocSearch-Container {
   z-index: calc(var(--ifm-z-index-fixed) + 1);
-}
+} */

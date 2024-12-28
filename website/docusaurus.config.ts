@@ -62,10 +62,8 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     custom_header: "The SpaceHub Project",
-    custom_description: "Streamlined Resources for Software Development at Kitiplex",
     custom_title: "mkeithX",
-    custom_tagline: "Guides and Samples from Kitiplex",
-    custom_projectDescription: "Demos and other good stuff.",
+    custom_tagline: "Guides, Samples and Random Stuff",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -155,8 +153,8 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         sitemap: {
-          changefreq: "hourly",
-          priority: 0.5,
+          changefreq: "weekly",
+          priority: 0.8,
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
           filename: "sitemap.xml",
         },
@@ -217,14 +215,12 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    announcementBar: {
-      id: `announcementBar_`,
-      content:
-        `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
-      // backgroundColor: '#fafbfc',
-      // textColor: '#091E42',
-      isCloseable: false,
-    },
+    // announcementBar: {
+    //   id: `announcementBar_`,
+    //   content:
+    //     `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
+    //   isCloseable: true,
+    // },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {
@@ -280,7 +276,7 @@ const config: Config = {
 
         // {
         //   type: "html",
-        //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
+        //   value: '<span class="badge badge--sm badge--secondary">Beta</span>',
         //   position: 'right'
         // },
         {
@@ -289,8 +285,8 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
-        { type: "search", position: "right" },
-
+   
+        { type: "search", position: "right", className:"DocSearch" },
       ],
     },
 

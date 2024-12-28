@@ -1,5 +1,5 @@
 import React from 'react';
-import SearchBar from '@theme-original/SearchBar';
+// import SearchBar from '@theme-original/SearchBar';
 import type SearchBarType from '@theme/SearchBar';
 import type {WrapperProps} from '@docusaurus/types';
 import { DocSearch } from '@docsearch/react';

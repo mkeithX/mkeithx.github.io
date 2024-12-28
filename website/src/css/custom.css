@@ -6,12 +6,12 @@
 
 /* You can override the default Infima variables here. */
 
-.flex-center--wrap {
+/* .flex-center--wrap {
   display: flex;
   flex-wrap: wrap;
   align-items: center;
   justify-content: center;
-}
+} */
 
 :root {
   --ifm-color-primary: #3578e5;
@@ -59,7 +59,6 @@
 }
 
 
-
 article p {
   font-size: 16px;
   /* font-weight: 400; */
@@ -87,7 +86,7 @@ article li {
 .navbar .navbar__items {
   flex: auto;
   align-items: center;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 
@@ -110,6 +109,7 @@ article li {
 html[data-navbar='false'] .navbar {
   display: none;
 }
+
 
 /* Content table container */
 .contentTableContainer table {
@@ -211,6 +211,7 @@ div[class^='announcementBar_'] button {
   background-color: var(--ifm-navbar-link-hover-color);
 }
 
+
 /* Tabs styling */
 .unique-tabs .tabs__item {
   line-height: 16px;
@@ -224,7 +225,7 @@ div[class^='announcementBar_'] button {
   background-color: var(--ifm-tabs-color-active);
 }
 
-/* Footer styling */
+
 .footer--dark {
   --ifm-footer-background-color: #1e2126;
   
@@ -232,7 +233,7 @@ div[class^='announcementBar_'] button {
 
 .footer {
   text-align: center;
-  
+  align-items: center;
 }
 
 
@@ -246,6 +247,8 @@ div[class^='announcementBar_'] button {
   max-width: 560px;
   margin: 0 auto;
 }
+
+
 
 [data-theme='light'] .DocSearch {
   /* --docsearch-primary-color: var(--ifm-color-primary); */
@@ -264,6 +267,7 @@ div[class^='announcementBar_'] button {
   /* Footer */
   --docsearch-footer-background: var(--ifm-color-white);
 }
+
 
 [data-theme='dark'] .DocSearch {
   --docsearch-text-color: var(--ifm-font-color-base);
@@ -287,8 +291,8 @@ div[class^='announcementBar_'] button {
   );
 }
 
-/* 
-.screen-reader-only {
+
+/* .screen-reader-only {
   clip: rect(0, 0, 0, 0);
   height: 1px;
   margin: -1px;

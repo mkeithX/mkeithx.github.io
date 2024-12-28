@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import BannerLogo from '@site/static/img/astronaut.svg';
+import BannerLogo from '@site/static/img/astro.svg';
 import React from 'react';
 import TopBanner from '@site/src/components/TopBanner';
 import FeatureBrands from '@site/src/components/FeatureBrands';
@@ -18,15 +18,15 @@ function HomepageHeader(): JSX.Element {
     hero_header,
     custom_footer,
     custom_tagline,
-    custom_description,
+    description,
     custom_header,
   } = customFields as {
     hero_header: string;
     custom_footer: string;
     custom_tagline: string;
-    custom_description: string;
     custom_header: string;
     custom_heroBanner: string;
+    description: string;
   };
 
   return (
@@ -35,37 +35,35 @@ function HomepageHeader(): JSX.Element {
       <div className="container">
         <BannerLogo
           className={clsx(styles.heroLogo)}
-          title="Banner Logo"
-          width={160}
-          height={140}
+          title="Kitoy"
+          width={170}
+          height={170}
         />
         <div className="hero__subtitle">
-          <span className={clsx(styles.heroSubTitleTextHtml)}>{'OpenSource'}</span>
-          <span className="text--primary">{' |'}</span>
+          <span className={clsx(styles.heroSubTitleTextHtml)}>{''}</span>
+          <span className="text--info"><b>{' '}</b></span>
         </div>
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-              {custom_header}
-              {/* <b>{'X'}</b> */}
+             {custom_header}
             </div>
           </span>
         </Heading>
-        <div className={styles.heroSubtitle}>
+        
+        <div className={clsx(styles.heroSubtitle)}>
           <span className={styles.heroCustomSubTitleHtml}>
             <b>{custom_tagline}</b>
-            {/* <b>{"Built with"}</b> ❤️ <b>{"by Keith"}</b>  */}
-            {/* {custom_description} */}
           </span>
         </div>
         <div className={clsx(styles.buttons)}>
           <Link
-            className="button button--outline button--primary button--lg"
+            className="button button--outline button--info button--lg"
             to="/docs">
             {'Explore'}
           </Link>
           <Link
-            className="button button--outline button--primary button--lg"
+            className="button button--outline button--info button--lg"
             to="/cosmos">
             {'Space'}
           </Link>
