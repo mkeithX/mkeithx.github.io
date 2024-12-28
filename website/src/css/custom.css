@@ -6,6 +6,12 @@
 
 /* You can override the default Infima variables here. */
 
+.flex-center--wrap {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: center;
+}
 
 :root {
   --ifm-color-primary: #3578e5;

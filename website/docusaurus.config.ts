@@ -93,7 +93,9 @@ const config: Config = {
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
 
-
+  scripts: [
+    { src: "https://XVSOLYZXNV-dsn.algolia.net", rel: "preconnect", crossorigin: "anonymous" },
+  ],
 
   i18n: {
     defaultLocale: "en",
@@ -260,7 +262,6 @@ const config: Config = {
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
-        // { label: 'Login', href: process.env.LOGIN_URL || '/login' },
         {
           type: "dropdown",
           label: "More",
@@ -291,12 +292,6 @@ const config: Config = {
         { type: "search", position: "right" },
 
       ],
-    },
-
-    algolia: {
-      apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
-      appId: "XVSOLYZXNV",
-      indexName: "mkeithx",
     },
 
     footer: {

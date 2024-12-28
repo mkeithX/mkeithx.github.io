@@ -32,7 +32,7 @@
 }
 
 .heroBannerTitle {
-  font-size: 60px;
+  font-size: 56px;
   font-weight: bold;
   /* margin-bottom: 0.3rem; */
   /* position: relative; */
@@ -88,9 +88,9 @@
 .buttons {
   display: flex;
   justify-content: left;
-  width: fit-content;
+  /* width: fit-content; */
   align-items: center;
-  gap: 9px;
+  gap: 12px;
   /* border-radius: 18px; */
   /* text-decoration: none !important; */
   font-weight: normal;
@@ -138,3 +138,4 @@
     animation: kit-in-the-box infinite 60s linear;
   }
 } */
+
