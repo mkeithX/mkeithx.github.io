@@ -19,7 +19,7 @@
 
 .heroBannerTitle {
   font-size: 54px;
-  font-weight: bold;
+  font-weight: 700;
   margin-bottom: 0.4rem;
 }
 
@@ -122,7 +122,7 @@
   /* height: 200px; */
   margin: 0px 0;
   float: center;
-  transition: transform 0.5s;
+  transition: transform 0.8s;
   
   &:hover {
     transform: scale(1.2) rotate(10deg);
@@ -151,11 +151,11 @@
     90deg,
     #69e9dae3 0%,
     #39b3ff 50%,
-    #b375ff 100%
+    #be88ff 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
-  font-weight: 500;
+  font-weight:600;
   font-size: 20px;
 }
 

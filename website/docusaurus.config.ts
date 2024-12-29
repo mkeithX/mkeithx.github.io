@@ -57,7 +57,6 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
-  titleDelimiter: "•",
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
@@ -184,8 +183,8 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
+        showLastUpdateAuthor: false,
+        showLastUpdateTime: false,
         ...commonDocsConfig,
         sidebarPath: "./sidebarsCommunity.ts",
       } as DocsOptions,
@@ -232,7 +231,7 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/mkx-social-banner.png",
+    image: "img/spacehub-proj-banner.png",
     navbar: {
       style: "dark",
       hideOnScroll: true,
