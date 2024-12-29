@@ -24,3 +24,8 @@
 .featuresRowCenter {
   justify-content: center;
 }
+
+
+.section {
+  padding: 40px 0;
+}

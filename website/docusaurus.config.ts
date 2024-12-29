@@ -47,8 +47,8 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "mkeithx",
-  tagline: "Building Innovative Solutions",
+  title: "mkeithX",
+  tagline: "The official docs for building The SpaceHub Project at Kitiplex.",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -57,15 +57,11 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
-  titleDelimiter: "•",
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     custom_header: "The SpaceHub Project",
-    custom_description: "Streamlined Resources for Software Development at Kitiplex",
-    custom_title: "mkeithX",
-    custom_tagline: "Guides and Samples from Kitiplex",
-    custom_projectDescription: "Demos and other good stuff.",
+    custom_tagline: "Guides, Samples and Random Stuff",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -88,6 +84,7 @@ const config: Config = {
     },
     experimental_router: 'browser',
   },
+
 
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
@@ -155,8 +152,8 @@ const config: Config = {
           customCss: "./src/css/custom.css",
         },
         sitemap: {
-          changefreq: "hourly",
-          priority: 0.5,
+          changefreq: "weekly",
+          priority: 0.8,
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
           filename: "sitemap.xml",
         },
@@ -186,8 +183,8 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        showLastUpdateAuthor: true,
-        showLastUpdateTime: true,
+        showLastUpdateAuthor: false,
+        showLastUpdateTime: false,
         ...commonDocsConfig,
         sidebarPath: "./sidebarsCommunity.ts",
       } as DocsOptions,
@@ -212,19 +209,18 @@ const config: Config = {
   ],
 
   themeConfig: {
+
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    announcementBar: {
-      id: `announcementBar_`,
-      content:
-        `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
-      // backgroundColor: '#fafbfc',
-      // textColor: '#091E42',
-      isCloseable: false,
-    },
+    // announcementBar: {
+    //   id: `announcementBar_`,
+    //   content:
+    //     `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
+    //   isCloseable: true,
+    // },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {
@@ -236,11 +232,11 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/mkx-social-banner.png",
+    image: "img/social-banner-temp.png",
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "mkeithx",
+      title: "mkeithX",
       logo: {
         alt: "SpaceHub",
         src: "img/rocket.svg",
@@ -280,7 +276,7 @@ const config: Config = {
 
         // {
         //   type: "html",
-        //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
+        //   value: '<span class="badge badge--sm badge--secondary">Beta</span>',
         //   position: 'right'
         // },
         {
@@ -289,8 +285,8 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
-        { type: "search", position: "right" },
 
+        { type: "search", position: "right", className: "DocSearch" },
       ],
     },
 
@@ -298,9 +294,10 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/kitiplex-devops.svg",
+        src: "img/logo/spacehub-x-logo-light-test.png",
         href: "/",
-        width: "300",
+        width: "350",
+        // height: "300"
       },
       links: [
         {
@@ -347,6 +344,13 @@ const config: Config = {
       ],
     },
     playgroundPosition: "bottom",
+    metadata: [
+      { name: 'og:title', content: 'mkeithX' },
+      {
+        name: 'og:description',
+        content: 'The official docs for building The SpaceHub Project at Kitiplex.'
+      },
+    ],
   } satisfies Preset.ThemeConfig,
 };
 
