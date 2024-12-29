@@ -9,7 +9,7 @@
   overflow: hidden;
   text-align: center;
   position: relative;
-  background-color: var(--ifm-site-dark) !important;
+  background-color: var(--ifm-site-dark);
   display: flex;
   height: 36rem;
   align-items: center;
@@ -34,14 +34,43 @@
 .buttons {
   display: flex;
   justify-content: center;
-  /* width: 100%; */
-  /* height: 100%; */
+  width: 100%;
+  height: 100%;
   align-items: center;
   gap: 12px;
   /* border-radius: 18px; */
   /* text-decoration: none !important; */
   font-weight: normal;
 }
+
+.section {
+  padding: 40px 0;
+}
+
+.btnCta {
+  font-size: 18px;
+  font-weight: bold;
+  }
+
+  .indexCtas {
+    --ifm-button-size-multiplier: 0.8;
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+    /* margin-top: 24px; */
+  }
+  
+  .indexCtas a,
+  .indexCtas a:hover {
+    color: black !important;
+  }
+  
+  .indexCtas a:last-of-type {
+    margin: 0 12px;
+  }
+  
+  
 
 .hero h1 {
   font-size: 4rem;
@@ -88,17 +117,25 @@
 } */
 
 .heroLogo {
-  width: auto;
+  /* width: 250px; */
   /* margin: 5px 30px; */
+  /* height: 200px; */
+  margin: 0px 0;
   float: center;
-  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s;
   
   &:hover {
-    transform: scale(1.25) rotate(10deg);
+    transform: scale(1.2) rotate(10deg);
   }
 }
 
-
+/*   height: 200px;
+  width: 250px;
+  margin: 16px 0;
+  transition: transform 0.3s;
+  &:hover {
+    transform: scale(1.1);
+  } */
 
 
 /* .heroTitleTextHtml b {
@@ -110,7 +147,7 @@
 
 .heroCustomSubTitleHtml b {
   color: transparent;
-  background: linear-gradient(90deg, #f2f89c 0%, #4affaa 50%, #4fbbff 100%);
+  background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: 700;

@@ -294,9 +294,10 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/kitiplex-devops.svg",
+        src: "img/logo/spacehub-x-logo-light-test.png",
         href: "/",
-        width: "300",
+        width: "350",
+        // height: "300"
       },
       links: [
         {

@@ -9,10 +9,11 @@ import React from 'react';
 import TopBanner from '@site/src/components/TopBanner';
 import FeatureBrands from '@site/src/components/FeatureBrands';
 import styles from './index.module.css';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function HomepageHeader(): JSX.Element {
   const {
-    siteConfig: {tagline, customFields},
+    siteConfig: { tagline, customFields },
   } = useDocusaurusContext();
   const {
     hero_header,
@@ -35,9 +36,9 @@ function HomepageHeader(): JSX.Element {
       <div className="container">
         <BannerLogo
           className={clsx(styles.heroLogo)}
-          title="Kitoy"
-          width={170}
-          height={170}
+          title=""
+          width={250}
+          height={200}
         />
         <div className="hero__subtitle">
           <span className={clsx(styles.heroSubTitleTextHtml)}>{''}</span>
@@ -46,25 +47,25 @@ function HomepageHeader(): JSX.Element {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-             {custom_header}
+              {custom_header}
             </div>
           </span>
         </Heading>
-        
+
         <div className={clsx(styles.heroSubtitle)}>
           <span className={styles.heroCustomSubTitleHtml}>
             <b>{custom_tagline}</b>
           </span>
         </div>
-        <div className={clsx(styles.buttons)}>
+        <div className={clsx(styles.indexCtas)}>
           <Link
-            className="button button--outline button--info button--lg"
-            to="/docs">
+            className={clsx("button button--primary button--lg")}
+            to={useBaseUrl('/docs')}>
             {'Explore'}
           </Link>
           <Link
-            className="button button--outline button--info button--lg"
-            to="/cosmos">
+            className={clsx("button button--secondary button--lg")}
+            to={useBaseUrl('/cosmos')}>
             {'Space'}
           </Link>
         </div>
@@ -75,9 +76,9 @@ function HomepageHeader(): JSX.Element {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: {tagline, customFields},
+    siteConfig: { tagline, customFields },
   } = useDocusaurusContext();
-  const {custom_description} = customFields as {custom_description: string};
+  const { custom_description } = customFields as { custom_description: string };
 
   return (
     <Layout title={tagline} description={custom_description}>
@@ -86,6 +87,7 @@ export default function Home(): JSX.Element {
         <HomepageHeader />
         <div className={clsx(styles.section)}>
           <HomepageFeatures />
+
         </div>
         <FeatureBrands />
       </main>

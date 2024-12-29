@@ -14,6 +14,7 @@
 } */
 
 :root {
+
   --ifm-color-primary: #3578e5;
   --ifm-color-primary-dark: #1d68e1;
   --ifm-color-primary-darker: #1b62d4;
@@ -22,6 +23,7 @@
   --ifm-color-primary-lighter: #5a91ea;
   --ifm-color-primary-lightest: #80aaef;
   --ifm-site-dark: #010409;
+
   --site-color-feedback-background: #f0f8ff;
 
   --ifm-code-font-size: 90%;
@@ -32,11 +34,14 @@
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
+  --ifm-menu-color-active: var(--ifm-color-primary) !important;
   /* --ifm-menu-color-active: var(--ifm-color-primary) !important; */
 
   /* --ifm-menu-color-background-active: var(--ifm-color-emphasis-100) !important; */
-
+  --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
+  --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
 }
+
 
 /* Dark theme overrides */
 [data-theme='dark'] {
@@ -47,10 +52,10 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
+
   /* --ifm-background-color: #0D1118 !important; */
   /* --ifm-background-surface-color: #0D1116 !important; */
   --site-color-feedback-background: #2a2930;
-  /* --ifm-background-color: var(--ifm-background-surface-color) !important; */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   --ifm-background-surface-color: #0D1116 !important;
@@ -70,7 +75,7 @@ article li {
 }
 
 .navbar {
-  background-color: var(--ifm-site-dark)!important;
+  background-color: var(--ifm-site-dark);
   align-items: center;
 }
 
@@ -79,9 +84,13 @@ article li {
   font-size: 17px;
   font-weight: 600;
   color: #1da1f2;
-  /* color: var(--ifm-color-primary-light) !important; */
 }
 
+/* .navbar .navbar__title {
+  font-weight: bold;
+  font-size: normal;
+  
+} */
 
 .navbar .navbar__items {
   flex: auto;
@@ -95,11 +104,7 @@ article li {
   font-size: inherit;
 }
 
-.navbar__title {
-  font-weight: bold;
-  font-size: normal;
-  /* color: var(--ifm-color-primary-lighter) !important; */
-}
+
 
 /* Dropdown separator styling */
 .dropdown-separator {
@@ -212,6 +217,8 @@ div[class^='announcementBar_'] button {
 }
 
 
+
+
 /* Tabs styling */
 .unique-tabs .tabs__item {
   line-height: 16px;
@@ -249,12 +256,11 @@ div[class^='announcementBar_'] button {
 }
 
 
-
 [data-theme='light'] .DocSearch {
   /* --docsearch-primary-color: var(--ifm-color-primary); */
   /* --docsearch-text-color: var(--ifm-font-color-base); */
-  --docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  --docsearch-muted-color: var(--ifm-color-emphasis-700);
+  --docsearch-container-background: rgb(94 100 112 / 70%);
   /* Modal */
   --docsearch-modal-background: var(--ifm-color-secondary-lighter);
   /* Search box */
@@ -268,11 +274,10 @@ div[class^='announcementBar_'] button {
   --docsearch-footer-background: var(--ifm-color-white);
 }
 
-
 [data-theme='dark'] .DocSearch {
   --docsearch-text-color: var(--ifm-font-color-base);
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
-  --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  --docsearch-container-background: rgb(47 55 69 / 70%);
   /* Modal */
   --docsearch-modal-background: var(--ifm-background-color);
   /* Search box */
@@ -290,7 +295,6 @@ div[class^='announcementBar_'] button {
     var(--ifm-color-emphasis-100) 100%
   );
 }
-
 
 /* .screen-reader-only {
   clip: rect(0, 0, 0, 0);

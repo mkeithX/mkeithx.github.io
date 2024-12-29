@@ -6,22 +6,25 @@ import Link from "@docusaurus/Link";
 
 type FeatureItem = {
   title: string;
+  scale: number;
   Svg: React.ComponentType<React.ComponentProps<"svg">>;
   description: JSX.Element;
 };
 
 const FeatureList: FeatureItem[] = [
   {
+    scale: 0.8,
     title: "Easy Navigation",
     Svg: require("@site/static/img/undraw_experience_design.svg").default,
     description: (
       <>
-        Find resources easily with  a robust search functionality.
+        Find resources easily with  a robust search functionality. <Link to="/projects">Learn more</Link>
       </>
     ),
   },
 
   {
+    scale: 0.8,
     title: "Built with React",
     Svg: require("@site/static/img/undraw_react.svg").default,
     description: (
@@ -32,6 +35,7 @@ const FeatureList: FeatureItem[] = [
   },
 
   {
+    scale: 0.8,
     title: "Project Docs",
     Svg: require("@site/static/img/undraw_website.svg").default,
     description: (
@@ -41,6 +45,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    scale: 0.8,
     title: "Code Snippets",
     Svg: require("@site/static/img/undraw_hello.svg").default,
     description: (
@@ -50,6 +55,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
+    scale: 0.8,
     title: "Developers",
     Svg: require("@site/static/img/undraw_code_review.svg").default,
     description: (
@@ -60,11 +66,15 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({ title, Svg, description }: FeatureItem) {
+function Feature({ scale, title, Svg, description }: FeatureItem) {
   return (
     <div className={clsx("col col--4")}>
       <div className={"text--center"}>
-        <Svg className={styles.featureSvg} role="img" />
+      <Svg
+          transform={"scale(" + scale + ")"}
+          className={styles.featureSvg}
+          role="img"
+        />
       </div>
       <div className="text--center padding-horiz--md">
         <Heading as="h3">{title}</Heading>
