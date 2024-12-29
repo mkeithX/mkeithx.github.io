@@ -76,12 +76,12 @@ function HomepageHeader(): JSX.Element {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { tagline, customFields },
+    siteConfig: { title, tagline, customFields },
   } = useDocusaurusContext();
   const { custom_description } = customFields as { custom_description: string };
 
   return (
-    <Layout title={tagline} description={custom_description}>
+    <Layout title={`${title}`} description={tagline}>
       <main>
         {/* <TopBanner /> */}
         <HomepageHeader />

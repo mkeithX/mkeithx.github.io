@@ -47,8 +47,8 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "mkeithx",
-  tagline: "Building Innovative Solutions",
+  title: "mkeithX",
+  tagline: "The official docs for building The SpaceHub Project at Kitiplex.",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -61,7 +61,6 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     custom_header: "The SpaceHub Project",
-    custom_title: "mkeithX",
     custom_tagline: "Guides, Samples and Random Stuff",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -85,6 +84,7 @@ const config: Config = {
     },
     experimental_router: 'browser',
   },
+
 
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
@@ -209,6 +209,15 @@ const config: Config = {
   ],
 
   themeConfig: {
+
+    metadata: [
+      { name: 'og:title', content: 'mkeithX' },
+      {
+        name: 'og:description',
+        content: 'The official docs for building The SpaceHub Project at Kitiplex.'
+      },
+    ],
+
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
@@ -284,8 +293,8 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
-   
-        { type: "search", position: "right", className:"DocSearch" },
+
+        { type: "search", position: "right", className: "DocSearch" },
       ],
     },
 
