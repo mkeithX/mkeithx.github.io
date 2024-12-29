@@ -210,14 +210,6 @@ const config: Config = {
 
   themeConfig: {
 
-    metadata: [
-      { name: 'og:title', content: 'mkeithX' },
-      {
-        name: 'og:description',
-        content: 'The official docs for building The SpaceHub Project at Kitiplex.'
-      },
-    ],
-
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
@@ -352,6 +344,13 @@ const config: Config = {
       ],
     },
     playgroundPosition: "bottom",
+    metadata: [
+      { name: 'og:title', content: 'mkeithX' },
+      {
+        name: 'og:description',
+        content: 'The official docs for building The SpaceHub Project at Kitiplex.'
+      },
+    ],
   } satisfies Preset.ThemeConfig,
 };
 

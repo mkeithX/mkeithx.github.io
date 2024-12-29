@@ -81,7 +81,7 @@ export default function Home(): JSX.Element {
   const { custom_description } = customFields as { custom_description: string };
 
   return (
-    <Layout title={`${title}`} description={tagline}>
+    <Layout>
       <main>
         {/* <TopBanner /> */}
         <HomepageHeader />
