@@ -46,14 +46,14 @@
 .section {
   padding: 40px 0;
 }
-
+/* 
 .btnCta {
   font-size: 18px;
   font-weight: bold;
-  }
+  } */
 
   .indexCtas {
-    --ifm-button-size-multiplier: 0.8;
+    --ifm-button-size-multiplier: 1.0;
     display: flex;
     flex-wrap: wrap;
     align-items: center;
@@ -63,7 +63,7 @@
   
   .indexCtas a,
   .indexCtas a:hover {
-    color: black !important;
+    color: #161616 !important;
   }
   
   .indexCtas a:last-of-type {
@@ -147,10 +147,15 @@
 
 .heroCustomSubTitleHtml b {
   color: transparent;
-  background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
+  background: linear-gradient(
+    90deg,
+    #69e9dae3 0%,
+    #39b3ff 50%,
+    #b375ff 100%
+  );
   -webkit-background-clip: text;
   background-clip: text;
-  font-weight: 700;
+  font-weight: 500;
   font-size: 20px;
 }
 
