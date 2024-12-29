@@ -232,11 +232,11 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/spacehub-proj-banner.png",
+    image: "img/social-banner-temp.png",
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "mkeithx",
+      title: "mkeithX",
       logo: {
         alt: "SpaceHub",
         src: "img/rocket.svg",
