@@ -16,7 +16,7 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
         apiKey="b63e590c0b5a9ab7c0930991ea785aeb"
         indexName="mkeithx"
         appId="XVSOLYZXNV"
-        placeholder="Search like a boss..."
+        placeholder="What's on your mind?"
 
         getMissingResultsUrl={({ query }) => {
           
