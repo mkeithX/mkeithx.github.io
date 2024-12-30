@@ -23,7 +23,7 @@ dotenv.config({
     : '.env.development.local',
 });
 
-const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
+const copyright = `Copyright © ${new Date().getFullYear()} Designed by Keith Tan`;
 
 const commonExclusions = {
   exclude: [
@@ -47,7 +47,7 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "mkeithX",
+  title: "mkeithx",
   tagline: "The official docs for building The SpaceHub Project at Kitiplex.",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
@@ -61,7 +61,7 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     custom_header: "The SpaceHub Project",
-    custom_tagline: "Guides, Samples and Random Stuff",
+    custom_tagline: "Guides and Code Samples for Techs",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -215,12 +215,12 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    // announcementBar: {
-    //   id: `announcementBar_`,
-    //   content:
-    //     `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        `UPDATE: <a target="_blank" rel="noopener noreferrer" href="https://eyes.nasa.gov/apps/solar-system/#/story/psp_perihelion?slide=slide_2">The FASTEST man-made object!</a>`,
+      isCloseable: false,
+    },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {
@@ -232,7 +232,7 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/social-banner-temp.png",
+    image: "img/social-banner-astro.png",
     navbar: {
       style: "dark",
       hideOnScroll: true,
@@ -345,7 +345,7 @@ const config: Config = {
     },
     playgroundPosition: "bottom",
     metadata: [
-      { name: 'og:title', content: 'mkeithX' },
+      { name: 'og:title', content: 'mkeithx' },
       {
         name: 'og:description',
         content: 'The official docs for building The SpaceHub Project at Kitiplex.'

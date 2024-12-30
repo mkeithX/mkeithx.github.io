@@ -37,24 +37,27 @@ function HomepageHeader(): JSX.Element {
         <BannerLogo
           className={clsx(styles.heroLogo)}
           title=""
-          width={250}
-          height={200}
+          width={300}
+          height={160}
         />
-        <div className="hero__subtitle">
-          <span className={clsx(styles.heroSubTitleTextHtml)}>{''}</span>
-          <span className="text--info"><b>{' '}</b></span>
+        <div className={clsx("hero__subtitle")}>
+          {/* <span className={clsx(styles.heroSubTitleTextHtml)}>{custom_tagline}</span> */}
+          {/* <p className="text--warning text--justify">{' Bar'}</p> */}
         </div>
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-              {custom_header}
+              {/* The{" "}<b>SpaceHub Project</b>  */}
+              {" "}<b>{custom_header}</b>{" "}
+             {/* <br></br>{" from mkeithX"} */}
             </div>
           </span>
         </Heading>
 
         <div className={clsx(styles.heroSubtitle)}>
           <span className={styles.heroCustomSubTitleHtml}>
-            <b>{custom_tagline}</b>
+            {/* <b>{custom_tagline}</b> */}
+            {custom_tagline}
           </span>
         </div>
         <div className={clsx(styles.indexCtas)}>
