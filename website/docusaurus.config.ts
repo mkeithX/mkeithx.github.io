@@ -1,3 +1,4 @@
+import path from 'path';
 import type { Config } from "@docusaurus/types";
 import * as Preset from "@docusaurus/preset-classic";
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
@@ -48,7 +49,7 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline: "The official docs for building The SpaceHub Project at Kitiplex.",
+  tagline: "Guide to Building Project Docs at Kitiplex.",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -57,6 +58,11 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
+
+  staticDirectories: [
+    'static',
+    path.join(__dirname, 'non-existent'),
+  ],
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
