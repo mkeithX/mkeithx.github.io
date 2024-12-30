@@ -55,7 +55,7 @@
     "@types/react": "^18.3.12",
     "typescript": "5.7.2",
     "wrangler": "3.99.0",
-    "@dotenvx/dotenvx": "1.31.3"
+    "@dotenvx/dotenvx": "1.32.0"
   },
   "browserslist": {
     "production": [
