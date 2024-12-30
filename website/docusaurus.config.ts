@@ -218,7 +218,7 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `More about the <a target="_blank" rel="noopener noreferrer" href="https://eyes.nasa.gov/apps/solar-system/#/story/psp_perihelion?slide=slide_2">fastest man-made object</a> ever built!`,
+        `UPDATE: <a target="_blank" rel="noopener noreferrer" href="https://eyes.nasa.gov/apps/solar-system/#/story/psp_perihelion?slide=slide_2">The FASTEST man-made object!</a>`,
       isCloseable: false,
     },
     docs: {

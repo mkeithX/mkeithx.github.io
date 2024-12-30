@@ -137,7 +137,7 @@ div[class^='announcementBar'][role='banner'] {
 }
 
 div[class^='announcementBar_'] {
-  font-weight: 700;
+  font-weight: 600;
   font-size: 16px;
   background: #050606 !important;
   /* background: linear-gradient(80deg, #d1ffeb, #1da1f2) !important; */
@@ -149,7 +149,7 @@ div[class^='announcementBar_'] {
 div[class^='announcementBar_'] a {
   /* color: var(--ifm-site-dark) !important; */
   text-decoration: none;
-  color: #a963ff !important;
+  color: #ba82ff !important;
   
 }
 
