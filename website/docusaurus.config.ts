@@ -215,12 +215,12 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    // announcementBar: {
-    //   id: `announcementBar_`,
-    //   content:
-    //     `Discover what's new in our <a target="_blank" rel="noopener noreferrer" href="/blog">latest blog updates!</a>`,
-    //   isCloseable: true,
-    // },
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        `Perihelion: Parker Solar Probe <a target="_blank" rel="noopener noreferrer" href="https://eyes.nasa.gov/apps/solar-system/#/story/psp_perihelion?slide=slide_2">closest approach to the Sun ☀️</a>`,
+      isCloseable: true,
+    },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {

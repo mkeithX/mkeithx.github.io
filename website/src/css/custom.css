@@ -133,13 +133,13 @@ html[data-navbar='false'] .navbar {
 
 div[class^='announcementBar'][role='banner'] {
   /* border-bottom-color: var(--ifm-site-dark); */
-  border-bottom-color: #242526;
+  border-bottom-color: #050606;
 }
 
 div[class^='announcementBar_'] {
-  font-weight: 650;
-  font-size: 17px;
-  background: #242526 !important;
+  font-weight: 500;
+  font-size: 16px;
+  background: #050606 !important;
   /* background: linear-gradient(80deg, #d1ffeb, #1da1f2) !important; */
   /* color: #fffdd1; */
   color: #d1ffeb;
@@ -149,7 +149,8 @@ div[class^='announcementBar_'] {
 div[class^='announcementBar_'] a {
   /* color: var(--ifm-site-dark) !important; */
   text-decoration: none;
-  color: var(--ifm-color-primary-light) !important;
+  color: var(--ifm-color-info) !important;
+  
 }
 
 div[class^='announcementBar_'] a:hover {
