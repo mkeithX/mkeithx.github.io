@@ -45,7 +45,7 @@
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20241218.0",
+    "@cloudflare/workers-types": "4.20241224.0",
     "@docusaurus/eslint-plugin": "3.6.3",
     "@docusaurus/module-type-aliases": "3.6.3",
     "@docusaurus/theme-classic": "3.6.3",
@@ -55,7 +55,7 @@
     "@types/react": "^18.3.12",
     "typescript": "5.7.2",
     "wrangler": "3.99.0",
-    "@dotenvx/dotenvx": "1.31.3"
+    "@dotenvx/dotenvx": "1.32.0"
   },
   "browserslist": {
     "production": [
