@@ -7,14 +7,14 @@
 
 .thisTitle {
     font-size: 50px;
-    font-weight: 500;
+    font-weight: 700;
     margin-bottom: auto;
 }
 
 .thisSubtitle {
     font-size: 20px;
     font-weight: 400;
-    margin-top: auto;
+    /* margin-top: auto; */
 }
 
 

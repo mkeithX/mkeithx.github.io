@@ -5,22 +5,36 @@
 
 
 .heroBanner {
-  padding: 8em 0;
+  padding: 6em 0;
   overflow: hidden;
   text-align: center;
   position: relative;
   background-color: var(--ifm-site-dark);
   display: flex;
-  height: 36rem;
+  /* height: auto; */
   align-items: center;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
   
 }
 
 .heroBannerTitle {
-  font-size: 54px;
+  font-size: 56px;
   font-weight: 700;
-  margin-bottom: 0.4rem;
+  margin-bottom: 0.8rem;
+}
+
+.heroBannerTitle b {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #69e9daff 0%,
+    #39b3ff 50%,
+    #a55bff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-weight: 700;
+  font-size: 54px;
 }
 
 @media only screen and (max-width: 768px) {
@@ -29,6 +43,42 @@
   }
 }
 
+/* subtitle */
+
+.heroSubTitleTextHtml {
+  color: var(--ifm-color-emphasis) !important;
+  text-align: center;
+  position: relative;
+  font-size: 26px;
+  font-weight: 400;
+}
+
+
+.heroSubtitle {
+  font-size: 24px;
+  font-weight: 300;
+  margin-bottom: 1em;
+  /* margin-top: auto; */
+}
+
+.heroCustomSubTitleHtml b {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #69e9da 0%,
+    #39b3ff 50%,
+    #d5b3ff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  /* font-weight:600; */
+  font-size: 18px;
+}
+
+.heroSubTitleTextHtml b {
+  color: var(--ifm-color-primary);
+  font-size: 20px;
+}
 
 
 .buttons {
@@ -61,7 +111,7 @@
     /* margin-top: 24px; */
   }
   
-  .indexCtas a,
+  .indexCtas a, 
   .indexCtas a:hover {
     color: #161616 !important;
   }
@@ -83,20 +133,7 @@
   font-size: 20px;
 }
 
-.heroSubTitleTextHtml {
-  color: var(--ifm-color-info);
-  float: center;
-  font-size: 28px;
-  font-weight: 500;
-}
 
-
-.heroSubtitle {
-  font-size: 20px;
-  font-weight: 600;
-  margin-bottom: 1em;
-  margin-top: auto;
-}
 
 .heroCustomTagline {
   color: transparent;
@@ -145,24 +182,7 @@
   font-weight: 700;
 } */
 
-.heroCustomSubTitleHtml b {
-  color: transparent;
-  background: linear-gradient(
-    90deg,
-    #69e9dae3 0%,
-    #39b3ff 50%,
-    #be88ff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-weight:600;
-  font-size: 20px;
-}
 
-.heroSubTitleTextHtml b {
-  color: var(--ifm-color-primary);
-  font-size: 20px;
-}
 
 
 

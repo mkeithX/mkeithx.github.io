@@ -22,6 +22,7 @@
   --ifm-color-primary-light: #4e89e8;
   --ifm-color-primary-lighter: #5a91ea;
   --ifm-color-primary-lightest: #80aaef;
+
   --ifm-site-dark: #010409;
 
   --site-color-feedback-background: #f0f8ff;
@@ -29,8 +30,9 @@
   --ifm-code-font-size: 90%;
   --ifm-font-size-base: 16px;
   --ifm-heading-font-weight: 600;
-  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-semibold: 500;
   --ifm-link-hover-decoration: none;
+
 
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
 
@@ -86,6 +88,9 @@ article li {
   color: #1da1f2;
 }
 
+.navbar {
+  --ifm-navbar-link-hover-color: #1da1f2;
+}
 /* .navbar .navbar__title {
   font-weight: bold;
   font-size: normal;
@@ -95,7 +100,7 @@ article li {
 .navbar .navbar__items {
   flex: auto;
   align-items: center;
-  /* font-size: 16px; */
+  font-size: 16px;
 }
 
 

@@ -9,7 +9,7 @@ import useBaseUrl from "@docusaurus/useBaseUrl";
 
 function This(): JSX.Element {
     const {
-        siteConfig: { tagline, customFields },
+        siteConfig: { title, tagline, customFields },
     } = useDocusaurusContext();
 
     const {
@@ -29,8 +29,8 @@ function This(): JSX.Element {
     const resumeUrl = useBaseUrl("./files/resume.pdf");
 
     return (
-        <Layout title="About me" description={description}>
-            <div className={clsx(styles.thisHead, "hero")}>
+        <Layout title="About" description={description}>
+            <div className={clsx(styles.thisHead, "hero hero--dark")}>
                 <div className="container">
                     <div className="avatar">
                         <img
@@ -39,10 +39,10 @@ function This(): JSX.Element {
                             alt="ProfileAvatar" />
                         <div className="avatar__intro">
                             <Heading as="h1" className={clsx(styles.thisTitle)}>
-                                <b>{"About"}</b>
+                                {title}
                             </Heading>
                             <div className={clsx("avatar__subtitle")}>
-                                <span className={clsx(styles.thisSubtitle)}>{"@"}{custom_title}</span>
+                                <span className={clsx(styles.thisSubtitle)}>{"about"}</span>
                             </div>
                         </div>
                     </div>
