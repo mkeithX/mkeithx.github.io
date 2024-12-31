@@ -49,8 +49,8 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline: "Guide to Building Project Docs at Kitiplex.",
-  favicon: "icons/favicon/round-dark.ico",
+  tagline: "Guide to Building Project Docs at Kitiplex", // A Cosmic-Flavored Website
+  favicon: "icons/favicon/slash-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
   organizationName: "mkeithX",
@@ -67,7 +67,7 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     custom_header: "The SpaceHub Project",
-    custom_tagline: "Guides and Code Samples for Techs",
+    custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -135,7 +135,7 @@ const config: Config = {
           ...commonRemarkConfig,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
-          onUntruncatedBlogPosts: "throw",
+          onUntruncatedBlogPosts: "ignore",
           feedOptions: {
             type: "all",
             title: "The MKX SpaceHub Blog",
@@ -224,7 +224,7 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `UPDATE: <a target="_blank" rel="noopener noreferrer" href="https://eyes.nasa.gov/apps/solar-system/#/story/psp_perihelion?slide=slide_2">The FASTEST man-made object!</a>`,
+        `HELLO, WORLD...<a href="#">WELCOME 2025!</a> 🎉`,
       isCloseable: false,
     },
     docs: {
@@ -242,7 +242,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "mkeithX",
+      title: "mkeithx",
       logo: {
         alt: "SpaceHub",
         src: "img/rocket.svg",
@@ -352,10 +352,10 @@ const config: Config = {
     playgroundPosition: "bottom",
     metadata: [
       { name: 'og:title', content: 'mkeithx' },
-      {
-        name: 'og:description',
-        content: 'The official docs for building The SpaceHub Project at Kitiplex.'
-      },
+      // {
+      //   name: 'og:description',
+      //   content: 'The official docs for building The SpaceHub Project at Kitiplex.'
+      // },
     ],
   } satisfies Preset.ThemeConfig,
 };

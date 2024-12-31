@@ -137,9 +137,9 @@ div[class^='announcementBar'][role='banner'] {
 }
 
 div[class^='announcementBar_'] {
-  font-weight: 600;
-  font-size: 16px;
-  background: #050606 !important;
+  font-weight: 700;
+  font-size: 14px;
+  background: var(--ifm-site-dark) !important;
   /* background: linear-gradient(80deg, #d1ffeb, #1da1f2) !important; */
   /* color: #fffdd1; */
   color: #d1ffeb;

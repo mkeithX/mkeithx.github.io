@@ -1,7 +1,7 @@
 import React from 'react';
 // import SearchBar from '@theme-original/SearchBar';
 import type SearchBarType from '@theme/SearchBar';
-import type {WrapperProps} from '@docusaurus/types';
+import type { WrapperProps } from '@docusaurus/types';
 import { DocSearch } from '@docsearch/react';
 
 import '@docsearch/css';
@@ -19,11 +19,11 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
         placeholder="What's on your mind?"
 
         getMissingResultsUrl={({ query }) => {
-          
-          return `https://github.com/mkeithX/mkeithx.github.io/issues/new?title=${query}`;
-        
+
+          return `https://github.com/mkeithX/mkeithx.github.io/issues/new?assignees=mkeithX&labels=needs+triage%2Cdocumentation&template=documentation.yml&title=%5BDocs%5D%3A ${encodeURIComponent(query)}`;
+
         }}
-        
+
         resultsFooterComponent={({ state }) => {
           return <h3>{(state.context.nbHits as number)} Match found</h3>;
         }}
@@ -35,4 +35,4 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
   );
 }
 
-export {default as SearchBar} from '@theme-original/SearchBar';
+export { default as SearchBar } from '@theme-original/SearchBar';

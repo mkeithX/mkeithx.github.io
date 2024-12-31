@@ -37,19 +37,18 @@ function HomepageHeader(): JSX.Element {
         <BannerLogo
           className={clsx(styles.heroLogo)}
           title=""
-          width={300}
-          height={160}
+          width={150}
+          height={150}
         />
         <div className={clsx("hero__subtitle")}>
-          {/* <span className={clsx(styles.heroSubTitleTextHtml)}>{custom_tagline}</span> */}
-          {/* <p className="text--warning text--justify">{' Bar'}</p> */}
+          {/* <span className={clsx(styles.heroSubTitleTextHtml)}>{"OpenSource"}</span> */}
+          {/* <p className="text--info">{' Bar'}</p> */}
         </div>
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-              {/* The{" "}<b>SpaceHub Project</b>  */}
-              {" "}<b>{custom_header}</b>{" "}
-             {/* <br></br>{" from mkeithX"} */}
+            <b>{custom_header}</b>
+             {/* <br></br>{tagline} */}
             </div>
           </span>
         </Heading>
@@ -57,10 +56,10 @@ function HomepageHeader(): JSX.Element {
         <div className={clsx(styles.heroSubtitle)}>
           <span className={styles.heroCustomSubTitleHtml}>
             {/* <b>{custom_tagline}</b> */}
-            {custom_tagline}
+            {custom_tagline}X
           </span>
         </div>
-        <div className={clsx(styles.indexCtas)}>
+        <div className={clsx(styles.indexCtas,'margin-vert--md')}>
           <Link
             className={clsx("button button--primary button--lg")}
             to={useBaseUrl('/docs')}>
