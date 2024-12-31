@@ -49,7 +49,7 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline: "Guide to Building Project Docs at Kitiplex", // A Cosmic-Flavored Website
+  tagline: "A Cosmic-Flavored Docs Website for Software Development and More",
   favicon: "icons/favicon/slash-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -352,10 +352,10 @@ const config: Config = {
     playgroundPosition: "bottom",
     metadata: [
       { name: 'og:title', content: 'mkeithx' },
-      // {
-      //   name: 'og:description',
-      //   content: 'The official docs for building The SpaceHub Project at Kitiplex.'
-      // },
+      {
+        name: 'og:description',
+        content: 'A Cosmic-Flavored Docs Website for Software Development and More'
+      },
     ],
   } satisfies Preset.ThemeConfig,
 };
