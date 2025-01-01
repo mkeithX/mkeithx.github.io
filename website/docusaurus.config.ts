@@ -208,7 +208,6 @@ const config: Config = {
     [
       "client-redirects",
       {
-        fromExtensions: ['html'],
         redirects: redirects,
       } satisfies ClientRedirectsOptions,
     ],
