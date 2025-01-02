@@ -91,11 +91,13 @@ const config: Config = {
     experimental_router: 'browser',
   },
 
-
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
 
+  scripts: [
+    { src: "https://static.cloudflareinsights.com/beacon.min.js?token=919bf5ad0a4b4bc2bb3462fce6b40cda", defer: "true" }
+  ],
 
   i18n: {
     defaultLocale: "en",
