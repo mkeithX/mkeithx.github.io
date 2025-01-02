@@ -72,7 +72,7 @@ const config: Config = {
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
-    LOGIN_URL: process.env.LOGIN_URL || '/login',
+    // LOGIN_URL: process.env.LOGIN_URL || '/login',
   },
 
   future: {
@@ -96,7 +96,7 @@ const config: Config = {
   ],
 
   scripts: [
-    { src: "https://static.cloudflareinsights.com/beacon.min.js?token=919bf5ad0a4b4bc2bb3462fce6b40cda", defer: "true" }
+    { src: `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.SITE_TOKEN}`, defer: "true" }
   ],
 
   i18n: {
@@ -269,7 +269,12 @@ const config: Config = {
           items: [
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { to: "/feature-requests", label: "Feature Requests ❓" },
+            {
+              label: "Login",
+              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL}`,
+            },
             { type: "html", value: '<hr class="dropdown-separator">' },
+
             {
               label: "Bugs",
               href: "https://github.com/mkeithX/mkeithx.github.io/issues/new/choose",
@@ -327,7 +332,10 @@ const config: Config = {
           title: "Developers",
           items: [
             { label: "Meta", href: "https://developers.facebook.com/" },
-            { label: "Vercel", href: "https://vercel.com/" },
+            {
+              label: "Login",
+              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL}`,
+            },
             { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
           ],
         },
