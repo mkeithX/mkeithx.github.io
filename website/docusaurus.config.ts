@@ -17,11 +17,8 @@ import { admonitionsConfig } from "./admonitionsConfig";
 
 import * as dotenv from 'dotenv';
 
-const environment = process.env.NODE_ENV || 'development';
 dotenv.config({
-  path: environment === 'production'
-    ? '.env.production.local'
-    : '.env.development.local',
+  path: process.env.NODE_ENV === 'production' ? '.env.production.local' : '.env.development.local',
 });
 
 const copyright = `Copyright © ${new Date().getFullYear()} Designed by Keith Tan`;
@@ -72,7 +69,6 @@ const config: Config = {
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
-    // LOGIN_URL: process.env.LOGIN_URL || '/login',
   },
 
   future: {
@@ -96,8 +92,9 @@ const config: Config = {
   ],
 
   scripts: [
-    { src: `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.SITE_TOKEN}`, defer: "true" }
+    { src: `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.SITE_TOKEN}`, defer: true },
   ],
+
 
   i18n: {
     defaultLocale: "en",
@@ -271,7 +268,7 @@ const config: Config = {
             { to: "/feature-requests", label: "Feature Requests ❓" },
             {
               label: "Login",
-              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL}`,
+              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL || ' '}`,
             },
             { type: "html", value: '<hr class="dropdown-separator">' },
 
@@ -334,7 +331,7 @@ const config: Config = {
             { label: "Meta", href: "https://developers.facebook.com/" },
             {
               label: "Login",
-              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL}`,
+              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL || ''}`,
             },
             { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
           ],
