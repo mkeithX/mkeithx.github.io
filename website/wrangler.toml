@@ -1,9 +1,6 @@
 name = "mkeithx"
 pages_build_output_dir = "build"
-compatibility_date = "2024-12-13"
+compatibility_date = "2024-11-11"
 
-
-[env.production]
-
-vars = { ENVIRONMENT = "production" }
-route = "mkeithx.pages.dev"
+[env]
+production = { }
