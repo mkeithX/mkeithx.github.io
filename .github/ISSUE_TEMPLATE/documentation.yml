@@ -7,13 +7,19 @@ body:
   - type: markdown
     attributes:
       value: |
-        ## Help us help you!
 
         > [!IMPORTANT]  
-        > For **DOCUMENTATION-RELATED** issues only.
+        > This template is for **DOCUMENTATION-RELATED** issues only.
 
-        Use this template if you're having issues related to documentation according to the following category.
-
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Description
+      description: A clear description of the issue.
+      placeholder: Clearly describe the issue/request in detail.
+    validations:
+      required: true
+      
   - type: dropdown
     id: issue
     attributes:
@@ -29,14 +35,7 @@ body:
     validations:
       required: true
 
-  - type: textarea
-    id: what-happened
-    attributes:
-      label: Description
-      description: A clear description of the issue.
-      placeholder: Clearly describe the issue/request in detail.
-    validations:
-      required: true
+
 
   - type: checkboxes
     id: terms
