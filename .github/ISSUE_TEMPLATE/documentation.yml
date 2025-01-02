@@ -12,10 +12,12 @@ body:
         > [!IMPORTANT]  
         > For **DOCUMENTATION-RELATED** issues only.
 
+        Use this template if you're having issues related to documentation according to the following category.
+
   - type: dropdown
     id: issue
     attributes:
-      label: Use this template if you're having issues related to
+      label: Category
       description: Please select the nearest category
       multiple: false
       options:
