@@ -30,13 +30,22 @@ body:
     validations:
       required: true
 
+  - type: checkboxes
+    id: duplicates
+    attributes:
+      label: No duplicates
+      description: Check both the [issue tracker](https://github.com/mkeithX/mkeithx.github.io/issues) and the [feedback board](https://mkeithx.pages.dev/feature-requests) confirming this is NOT A DUPLICATE.
+      options:
+        - label: Yes I'm more than sure
+          required: true
 
   - type: checkboxes
+    id: terms
     attributes:
-      label: Prerequisites
-      description: In addition, please make sure that you
+      label: Code of Conduct
+      description: By submitting, you agree to our [Code of Conduct](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md)
       options:
-        - label: Read the Guidelines in [reporting bugs](https://mkeithx.pages.dev/community/issue/report).
+        - label: I agree to follow this project's Code of Conduct.
           required: true
-        - label: Check both the [Issue tracker](https://github.com/mkeithX/mkeithx.github.io/issues) and the [Feedback board](https://mkeithx.pages.dev/feature-requests) confirming this is NOT A DUPLICATE.
-          required: true
+
+    
