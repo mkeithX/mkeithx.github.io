@@ -1,11 +1,8 @@
 import React from 'react';
-// import SearchBar from '@theme-original/SearchBar';
 import type SearchBarType from '@theme/SearchBar';
 import type { WrapperProps } from '@docusaurus/types';
 import { DocSearch } from '@docsearch/react';
-
 import '@docsearch/css';
-// import '@styles/DocSearch.css';
 
 type Props = WrapperProps<typeof SearchBarType>;
 
@@ -20,7 +17,7 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
 
         getMissingResultsUrl={({ query }) => {
 
-          return `https://github.com/mkeithX/mkeithx.github.io/issues/new?assignees=mkeithX&labels=needs+triage%2Cdocumentation&template=documentation.yml&title=%5BDocs%5D%3A ${encodeURIComponent(query)}`;
+          return `https://github.com/mkeithX/mkeithx.github.io/issues/new?labels=needs+triage%2Cdocumentation&template=documentation.yml&title=%5BDocs%5D%3A ${encodeURIComponent(query)}`;
 
         }}
 

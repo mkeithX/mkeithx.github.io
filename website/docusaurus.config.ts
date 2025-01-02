@@ -96,10 +96,6 @@ const config: Config = {
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
 
-  scripts: [
-    { src: "https://XVSOLYZXNV-dsn.algolia.net", rel: "preconnect", crossorigin: "anonymous" },
-    { src: "https://static.cloudflareinsights.com/beacon.min.js?token=74571e4bd1ed4d12a97b7635e360b645", defer: "true",},
-  ],
 
   i18n: {
     defaultLocale: "en",
@@ -127,7 +123,7 @@ const config: Config = {
           path: "blog",
           blogTitle: "Blog",
           blogDescription:
-            "Keep up to date with what's going on with the SpaceHub project.",
+            "Keep up to date with what's going on with The SpaceHub Project!",
           routeBasePath: "blog",
           blogSidebarTitle: "Updates",
           blogSidebarCount: "ALL",
@@ -139,7 +135,7 @@ const config: Config = {
           onUntruncatedBlogPosts: "ignore",
           feedOptions: {
             type: "all",
-            title: "The MKX SpaceHub Blog",
+            title: "The SpaceHub Project",
             description:
               "Stay tuned with upcoming updates releases and articles by following our feed!",
             xslt: true,
