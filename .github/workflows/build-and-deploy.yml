@@ -90,18 +90,34 @@ jobs:
         with: 
           name: mkeithx__build
           path: website/build
-          
+
       - name: Deploy to Cloudflare
         uses: cloudflare/wrangler-action@v3.13.0
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+          workingDirectory: ${{ secrets.CLOUDFLARE_ROOT_DIRECTORY}}
+          command: |
+            pages deploy --env production ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+        env:
           LOGIN_URL: ${{ secrets.LOGIN_URL}}
           SITE_TOKEN: ${{ secrets.SITE_TOKEN}}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: ${{ secrets.CLOUDFLARE_ROOT_DIRECTORY }}
-          command: |
-            pages project list
-            pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+
+          
+      # - name: Deploy to Cloudflare
+      #   uses: cloudflare/wrangler-action@v3.13.0
+      #   with:
+      #     apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
+      #     accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
+      #     workingDirectory: ${{ secrets.CLOUDFLARE_ROOT_DIRECTORY }}
+      #     command: |
+      #       pages project list
+      #       pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
+
+
+
 
         #   environment: production
         #   secrets: |
