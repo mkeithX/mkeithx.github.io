@@ -2,5 +2,4 @@ name = "mkeithx"
 pages_build_output_dir = "build"
 compatibility_date = "2024-12-13"
 
-[env]
-production = { }
+[env.production]
