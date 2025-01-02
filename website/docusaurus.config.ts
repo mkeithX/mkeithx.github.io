@@ -98,6 +98,7 @@ const config: Config = {
 
   scripts: [
     { src: "https://XVSOLYZXNV-dsn.algolia.net", rel: "preconnect", crossorigin: "anonymous" },
+    { src: "https://static.cloudflareinsights.com/beacon.min.js?token=74571e4bd1ed4d12a97b7635e360b645", defer: "true",},
   ],
 
   i18n: {
