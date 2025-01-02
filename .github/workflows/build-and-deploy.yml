@@ -101,20 +101,5 @@ jobs:
             pages project list
             pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
 
-          
-
-
-
-
-
-        #   environment: production
-        #   secrets: |
-        #     LOGIN_URL
-        #     SITE_TOKEN
-
-        # env:
-        #   LOGIN_URL: ${{ secrets.LOGIN_URL}}
-        #   SITE_TOKEN: ${{ secrets.SITE_TOKEN}}
-          
 
 # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler

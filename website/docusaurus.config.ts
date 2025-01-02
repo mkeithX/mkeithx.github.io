@@ -268,7 +268,7 @@ const config: Config = {
             { to: "/feature-requests", label: "Feature Requests ❓" },
             {
               label: "Login",
-              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL || ''}`,
+              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL || ' '}`,
             },
             { type: "html", value: '<hr class="dropdown-separator">' },
 
@@ -331,7 +331,7 @@ const config: Config = {
             { label: "Meta", href: "https://developers.facebook.com/" },
             {
               label: "Login",
-              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL}`,
+              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL || ''}`,
             },
             { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
           ],
