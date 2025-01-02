@@ -1,29 +1,39 @@
 name: 🪲 Bug Report
 description: Report those pesky bugs!
 title: '[Bug]: '
-labels: ['needs triage']
-projects: ['SpaceHub']
+labels: ["bug","needs triage"]
 assignees:
   - mkeithX
 
 body:
+  - type: markdown
+    attributes:
+      value: |
+        ## Please help us help you!
+        Before filing your issue, we kindly ask you to:
+        - Clearly describe the problem in detail, rather than just saying "it doesn't work."
+        - Provide a minimal reproduction that we can easily run.
+        - Include a live deployment URL that demonstrates the issue (if applicable).
+        - Share as much relevant information as possible: code snippets, repository URLs, git branch links, full stack traces, screenshots, and videos.
+        - Present your request clearly and concisely, demonstrating that you've put in effort to assist us in helping you.
+
   - type: checkboxes
     attributes:
       label: Prerequisites
-      description: Please review these items before submitting an issue to ensure you’ve completed the necessary steps.
+      description: In addition, please make sure that you
       options:
-        - label: I have read the Guidelines in [reporting bugs](https://mkeithx.pages.dev/community/issue/report).
+        - label: Read the Guidelines in [reporting bugs](https://mkeithx.pages.dev/community/issue/report).
           required: true
-        - label: I have performed [basic troubleshooting](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
+        - label: Performed [basic troubleshooting](https://mkeithx.pages.dev/community/issue/style-guide/troubleshoot) (if applicable).
           required: false
-        - label: I'd be willing to address this issue myself.
+        - label: Be willing to address this issue myself.
           required: false
 
   - type: textarea
     id: what-happened
     attributes:
-      label: What happened?
-      description: Also tell us what you expected to happen.
+      label: Description
+      description: A clear and concise description of what the bug is.
       placeholder: Tell us what you see!
     validations:
       required: true
@@ -41,18 +51,23 @@ body:
     validations:
       required: true
 
-  - type: dropdown
-    id: browsers
+  - type: textarea
     attributes:
-      label: What browsers are you seeing the problem on?
-      multiple: false
-      options:
-        - Firefox
-        - Chrome
-        - Safari
-        - Microsoft Edge
-        - Brave
-        - DuckDuck Go
+      label: Expected behavior
+      description: |
+        How did you expect your project to behave?
+      placeholder: Write what you thought would happen.
+    validations:
+      required: true
+
+  - type: textarea
+    attributes:
+      label: Actual behavior
+      description: |
+        Describe what exactly happen.
+      placeholder: Write what exactly happened.
+    validations:
+      required: true
 
   - type: dropdown
     id: device

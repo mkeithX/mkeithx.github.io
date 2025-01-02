@@ -1,0 +1,51 @@
+name: 💡 Feature proposal
+description: Propose a feature with detailed and intricate design
+labels: [feature, "needs triage"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        ## We value your suggestion
+
+        Use this template if you intend to make any non-trivial changes to existing implementation, design and/APIs. For "casual" feature request, please use the [Feedback board](https://mkeithx.pages.dev/feature-requests).
+
+
+  
+  - type: textarea
+    id: what-happened
+    attributes:
+      label: Description
+      description: A clear and concise description of what the feature is.
+      placeholder: Clearly describe the feature in detail.
+    validations:
+      required: true
+
+
+  - type: textarea
+    id: motivation
+    attributes:
+      label: Motivation
+      description: A clear description of the proposal.
+      placeholder: Your motivation for this proposal and why it should be implemented.
+    validations:
+      required: true
+
+  - type: checkboxes
+    id: duplicates
+    attributes:
+      label: No duplicates
+      description: Check both the [issue tracker](https://github.com/mkeithX/mkeithx.github.io/issues) and the [feedback board](https://mkeithx.pages.dev/feature-requests) confirming this is NOT A DUPLICATE.
+      options:
+        - label: Yes I'm more than sure
+          required: true
+
+  - type: checkboxes
+    id: terms
+    attributes:
+      label: Code of Conduct
+      description: By submitting, you agree to our [Code of Conduct](https://github.com/mkeithX/mkeithx.github.io/blob/main/CONTRIBUTING.md)
+      options:
+        - label: I agree to follow this project's Code of Conduct.
+          required: true
+
+    

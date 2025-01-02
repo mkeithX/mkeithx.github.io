@@ -2,7 +2,12 @@ blank_issues_enabled: false
 contact_links:
   - name: 🚀 Feature Requests
     url: https://mkeithx.pages.dev/feature-requests
-    about: Not ready to open a pull request yet? We got that covered.
-  - name: 💡 Proposals
-    url: https://forms.office.com/r/sQBiMJ8bQ3
-    about: If you intend to make any non-trivial changes to existing implementations, let's discuss the change you wish to make.
+    about: Casual Feature Requests
+
+  - name: Simple Question
+    url: https://github.com/mkeithX/mkeithx.github.io/issues
+    about: Use the tracker and submit an issue
+    
+  # - name: 💻 Kitiplex - Internal
+  #   url: https://aka.ms/my-account
+  #   about: Sample description

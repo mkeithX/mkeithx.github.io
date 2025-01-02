@@ -1,32 +1,15 @@
 name: 📒 Documentation
 description: Report an issue related to documentation
 title: '[Docs]: '
-labels: ['needs triage','documentation']
-assignees:
-  - mkeithX
+labels: ["documentation","needs triage"]
 
 body:
   - type: markdown
     attributes:
       value: |
-        ## Important!
 
-        Use this template to report documentation-related issues. Make sure that you read the [Guidelines](https://mkeithx.pages.dev/community/issue/report#docs) before submitting.
-
-  - type: dropdown
-    id: issue
-    attributes:
-      label: What's this about?
-      description: Help us categorize this issue.
-      multiple: false
-      options:
-        - Undocumented API
-        - Elaboration needed
-        - Outdated or incorrect information
-        - Formatting or readability improvement
-        - Other
-    validations:
-      required: true
+        > [!IMPORTANT]  
+        > This template is for **DOCUMENTATION-RELATED** issues only.
 
   - type: textarea
     id: what-happened
@@ -36,6 +19,23 @@ body:
       placeholder: Clearly describe the issue/request in detail.
     validations:
       required: true
+      
+  - type: dropdown
+    id: issue
+    attributes:
+      label: Category
+      description: Please select the nearest category
+      multiple: false
+      options:
+        - Undocumented API
+        - Elaboration needed
+        - Outdated or incorrect information
+        - Formatting or readability improvement
+        - Others (Kindly specify in the description)
+    validations:
+      required: true
+
+
 
   - type: checkboxes
     id: terms
