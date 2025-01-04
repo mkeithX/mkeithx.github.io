@@ -69,6 +69,8 @@ const config: Config = {
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
+    CLOUDFLARE_WEB_ANALYTICS: process.env.CLOUDFLARE_WEB_ANALYTICS,
+    ENTRA_TENANT_ID: process.env.ENTRA_TENANT_ID,
   },
 
   future: {
