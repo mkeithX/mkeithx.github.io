@@ -18,7 +18,7 @@ import { admonitionsConfig } from "./admonitionsConfig";
 import * as dotenv from 'dotenv';
 
 dotenv.config({
-  path: process.env.NODE_ENV === 'production' ? '.env.production.local' : '.env.development.local',
+  path: process.env.NODE_ENV === 'production' ? '.env.production.local' : '.env.development.local', 
 });
 
 const copyright = `Copyright © ${new Date().getFullYear()} Designed by Keith Tan`;
@@ -92,7 +92,7 @@ const config: Config = {
   ],
 
   scripts: [
-    { src: `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.SITE_TOKEN}`, defer: true },
+    { src: `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.CLOUDFLARE_WEB_ANALYTICS}`, defer: true },
   ],
 
 
@@ -268,7 +268,7 @@ const config: Config = {
             { to: "/feature-requests", label: "Feature Requests ❓" },
             {
               label: "Login",
-              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL || ' '}`,
+              href: `https://myapps.microsoft.com/?tenantid=${process.env.ENTRA_TENANT_ID || ' '}`,
             },
             { type: "html", value: '<hr class="dropdown-separator">' },
 
