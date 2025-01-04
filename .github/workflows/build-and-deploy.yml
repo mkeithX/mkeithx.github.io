@@ -100,6 +100,6 @@ jobs:
           command: |
             pages project list
             pages deploy ./build --project-name=${{ secrets.CLOUDFLARE_PROJECT_NAME }}
-
+          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
 
 # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
