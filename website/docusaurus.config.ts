@@ -22,7 +22,6 @@ import { admonitionsConfig } from "./admonitionsConfig";
 // });
 
 const LoginUrl = process.env.LOGIN_URL ?? 'https://aka.ms/my-account';
-const webAnalytics = process.env.WEB_ANALYTICS;
 
 const copyright = `Copyright © ${new Date().getFullYear()} Designed by Keith Tan`;
 
@@ -158,6 +157,15 @@ const config: Config = {
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
           filename: "sitemap.xml",
         },
+
+
+        gtag: {
+
+          trackingID: 'G-YYZ6V070LQ',
+          anonymizeIP: true,
+
+        },
+
       } satisfies Preset.Options,
     ],
   ],
