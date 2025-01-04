@@ -96,14 +96,7 @@ jobs:
         with:          
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          workingDirectory: ${{ secrets.CLOUDFLARE_ROOT_DIRECTORY }}
-          command: deploy --env production
-          secrets: |
-            ENTRA_TENANT_ID
-            CLOUDFLARE_WEB_ANALYTICS
-          environment: production
-        env:
-          ENTRA_TENANT_ID: ${{ secrets.ENTRA_TENANT_ID }}
-          CLOUDFLARE_WEB_ANALYTICS: ${{ secrets.CLOUDFLARE_WEB_ANALYTICS}}
+          command: |
+            pages project list
 
 # https://github.com/marketplace/actions/deploy-to-cloudflare-workers-with-wrangler
