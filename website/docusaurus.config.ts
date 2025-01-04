@@ -274,7 +274,7 @@ const config: Config = {
 
             {
               label: "Bugs",
-              href: "https://github.com/mkeithX/mkeithx.github.io/issues/new/choose",
+              href: "https://github.com/mkeithX/mkeithx.github.io/issues",
             },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
@@ -331,7 +331,7 @@ const config: Config = {
             { label: "Meta", href: "https://developers.facebook.com/" },
             {
               label: "Login",
-              href: `https://myapps.microsoft.com/?tenantid=${process.env.LOGIN_URL || ''}`,
+              href: `https://myapps.microsoft.com/?tenantid=${process.env.ENTRA_TENANT_ID || ' '}`,
             },
             { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
           ],
