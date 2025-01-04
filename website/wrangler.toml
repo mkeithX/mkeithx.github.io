@@ -1,9 +1,0 @@
-name = "mkeithx"
-pages_build_output_dir = "build"
-compatibility_date = "2024-11-11"
-
-[env]
-production = { }
-
-
-[env.production]
