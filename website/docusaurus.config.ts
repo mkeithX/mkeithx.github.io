@@ -15,11 +15,14 @@ import { socialProfiles } from "./social.json";
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 
-import * as dotenv from 'dotenv';
+// import * as dotenv from 'dotenv';
 
-dotenv.config({
-  path: process.env.NODE_ENV === 'production' ? '.env.production.local' : '.env.development.local', 
-});
+// dotenv.config({
+//   path: process.env.NODE_ENV === 'development' ? '.env.production.local' : '.env.development.local', 
+// });
+
+const LoginUrl = process.env.LOGIN_URL ?? 'https://aka.ms/my-account';
+const webAnalytics = process.env.WEB_ANALYTICS;
 
 const copyright = `Copyright © ${new Date().getFullYear()} Designed by Keith Tan`;
 
@@ -69,8 +72,6 @@ const config: Config = {
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
-    CLOUDFLARE_WEB_ANALYTICS: process.env.CLOUDFLARE_WEB_ANALYTICS,
-    ENTRA_TENANT_ID: process.env.ENTRA_TENANT_ID,
   },
 
   future: {
@@ -91,10 +92,6 @@ const config: Config = {
 
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
-  ],
-
-  scripts: [
-    { src: `https://static.cloudflareinsights.com/beacon.min.js?token=${process.env.CLOUDFLARE_WEB_ANALYTICS}`, defer: true },
   ],
 
 
@@ -270,7 +267,7 @@ const config: Config = {
             { to: "/feature-requests", label: "Feature Requests ❓" },
             {
               label: "Login",
-              href: `https://myapps.microsoft.com/?tenantid=${process.env.ENTRA_TENANT_ID || ' '}`,
+              href: `${LoginUrl}`,
             },
             { type: "html", value: '<hr class="dropdown-separator">' },
 
@@ -333,7 +330,7 @@ const config: Config = {
             { label: "Meta", href: "https://developers.facebook.com/" },
             {
               label: "Login",
-              href: `https://myapps.microsoft.com/?tenantid=${process.env.ENTRA_TENANT_ID || ' '}`,
+              href: `${LoginUrl}`,
             },
             { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
           ],
