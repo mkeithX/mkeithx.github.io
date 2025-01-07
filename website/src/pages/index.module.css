@@ -18,7 +18,7 @@
 }
 
 .heroBannerTitle {
-  font-size: 48px;
+  font-size: 50px;
   font-weight: 700;
   margin-bottom: 0.3rem;
 }
@@ -34,7 +34,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: bold;
-  font-size: 48px;
+  font-size: 50px;
   margin-bottom: 0.3rem;
 }
 
@@ -59,8 +59,8 @@
 .heroSubtitle {
   font-size: 22px;
   font-weight: 300;
-  margin-bottom: 1em;
-  /* margin-top: auto; */
+  /* margin-bottom: 0.8em; */
+  margin-top: auto;
 }
 
 .heroCustomSubTitleHtml b {
@@ -74,7 +74,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   /* font-weight:600; */
-  font-size: 18px;
+  /* font-size: 18px; */
 }
 
 .heroSubTitleTextHtml b {

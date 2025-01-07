@@ -57,7 +57,7 @@ function HomepageHeader(): JSX.Element {
         <div className={clsx(styles.heroSubtitle)}>
           <span className={styles.heroCustomSubTitleHtml}>
             {/* <b>{custom_tagline}</b> */}
-            {"For Software Development, Documentation and More"}
+            {"4 Software Documentation & Beyond..."}
             {/* <Link to={"https://github.com/kitiplex"}>{"@Kitiplex"}</Link> */}
           </span>
         </div>

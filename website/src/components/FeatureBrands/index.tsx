@@ -14,10 +14,10 @@ type FeatureBrandItems = {
 const FeatureList: FeatureBrandItems[] = [
 
   {
-    scale: 1.0,
+    scale: 0.5,
     title: "",
     
-    Svg: require("@site/static/img/logo/KitimiPlatforms-svg-logo.svg").default,
+    Svg: require("@site/static/img/logo/vscode.svg").default,
     description: (
       <>
 
@@ -45,11 +45,15 @@ const FeatureList: FeatureBrandItems[] = [
       </>
     )
   },
-  // {
-    
-  //   Svg: require("@site/static/img/logo/meta_opensource.svg").default,
-
-  // },
+  {
+    scale: 0.5,
+    Svg: require("@site/static/img/logo/docusaurus-logo.svg").default,
+    title: "",
+    description: (
+      <>
+      </>
+    )
+  },
   {
     scale: 1.0,
     title: "",
@@ -61,7 +65,7 @@ const FeatureList: FeatureBrandItems[] = [
     )
   },
   {
-    scale: 0.8,
+    scale: 1.0,
     title: "",
     
     Svg: require("@site/static/img/logo/Algolia_logo.svg").default,

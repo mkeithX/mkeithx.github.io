@@ -1,14 +1,14 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 3rem 0;
+  padding: 6rem 0;
   width: 100%;
   background-color: var(--ifm-site-dark);
   position: relative;
 }
 
 .featureSvg {
-  height: 170px;
+  height: 180px;
   width: 200px;
 }
 
