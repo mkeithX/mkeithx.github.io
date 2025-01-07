@@ -32,22 +32,23 @@ function HomepageHeader(): JSX.Element {
 
   return (
     <header
+    
       className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
-        <BannerLogo
+      <BannerLogo
           className={clsx(styles.heroLogo)}
           title=""
-          width={150}
+          width={180}
           height={150}
         />
         <div className={clsx("hero__subtitle")}>
-          {/* <span className={clsx(styles.heroSubTitleTextHtml)}>{"OpenSource"}</span> */}
+          <span className={clsx(styles.heroSubTitleTextHtml)}>{"OpenSource"}</span>
           {/* <p className="text--info">{' Bar'}</p> */}
         </div>
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-            <b>{custom_header}</b>
+            <b>{"Guides and Code Samples"}</b>
              {/* <br></br>{tagline} */}
             </div>
           </span>
@@ -56,7 +57,8 @@ function HomepageHeader(): JSX.Element {
         <div className={clsx(styles.heroSubtitle)}>
           <span className={styles.heroCustomSubTitleHtml}>
             {/* <b>{custom_tagline}</b> */}
-            {custom_tagline}X
+            {"For Software Development, Documentation and More"}
+            {/* <Link to={"https://github.com/kitiplex"}>{"@Kitiplex"}</Link> */}
           </span>
         </div>
         <div className={clsx(styles.indexCtas,'margin-vert--md')}>
