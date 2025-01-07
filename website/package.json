@@ -17,7 +17,7 @@
     "start:fast": "npm start -- --host 0.0.0.0 --no-open",
     "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
     "build:local": "docusaurus build && docusaurus serve",
-    "deploy:cf": "npm run build && wrangler pages deploy ./build",
+    "deploy:cloudflare": "npm run build && wrangler pages deploy ./build",
     "purge": "pwsh -Command \"@('node_modules','.yarn','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue\""
   },
   "dependencies": {
