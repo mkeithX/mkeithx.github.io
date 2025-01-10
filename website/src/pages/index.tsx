@@ -17,12 +17,14 @@ function HomepageHeader(): JSX.Element {
   } = useDocusaurusContext();
   const {
     hero_header,
+    hero_tagline,
     custom_footer,
     custom_tagline,
     description,
     custom_header,
   } = customFields as {
     hero_header: string;
+    hero_tagline: string;
     custom_footer: string;
     custom_tagline: string;
     custom_header: string;
@@ -48,16 +50,14 @@ function HomepageHeader(): JSX.Element {
         <Heading as="h1" className="hero__title">
           <span className={styles.heroTitleTextHtml}>
             <div className={styles.heroBannerTitle}>
-            <b>{"Guides and Code Samples"}</b>
-             {/* <br></br>{tagline} */}
+            <b>{hero_header}</b>
             </div>
           </span>
         </Heading>
 
         <div className={clsx(styles.heroSubtitle)}>
           <span className={styles.heroCustomSubTitleHtml}>
-            {/* <b>{custom_tagline}</b> */}
-            {"4 Software Documentation & Beyond..."}
+            {hero_tagline}
             {/* <Link to={"https://github.com/kitiplex"}>{"@Kitiplex"}</Link> */}
           </span>
         </div>

@@ -68,6 +68,8 @@ const config: Config = {
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
+    hero_header: "Guides and Code Samples",
+    hero_tagline: "4 Software Documentation & Beyond...",
     custom_header: "The SpaceHub Project",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
@@ -100,7 +102,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
         },
         blog: {
@@ -167,7 +169,7 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        showLastUpdateAuthor: true,
+        showLastUpdateAuthor: false,
         showLastUpdateTime: true,
         ...commonDocsConfig,
         sidebarPath: "./sidebarsCosmos.ts",

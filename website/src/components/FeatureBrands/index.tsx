@@ -13,18 +13,18 @@ type FeatureBrandItems = {
 
 const FeatureList: FeatureBrandItems[] = [
 
-  {
-    scale: 0.5,
-    title: "",
+  // {
+  //   scale: 0.8,
+  //   title: "Kitimi Platforms",
     
-    Svg: require("@site/static/img/logo/vscode.svg").default,
-    description: (
-      <>
+  //   Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
+  //   description: (
+  //     <>
 
-      </>
-    )
+  //     </>
+  //   )
 
-  },
+  // },
   
    {
     scale: 1.0,
@@ -46,8 +46,8 @@ const FeatureList: FeatureBrandItems[] = [
     )
   },
   {
-    scale: 0.5,
-    Svg: require("@site/static/img/logo/docusaurus-logo.svg").default,
+    scale: 0.8,
+    Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
     title: "",
     description: (
       <>
