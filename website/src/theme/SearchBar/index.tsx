@@ -1,14 +1,15 @@
-import React from 'react';
+import React, {type ReactNode} from 'react';
+import SearchBar from '@theme-original/SearchBar';
 import type SearchBarType from '@theme/SearchBar';
-import type { WrapperProps } from '@docusaurus/types';
+import type {WrapperProps} from '@docusaurus/types';
 import { DocSearch } from '@docsearch/react';
 import '@docsearch/css';
 
 type Props = WrapperProps<typeof SearchBarType>;
 
-export default function SearchBarWrapper(props: Props): JSX.Element {
+export default function SearchBarWrapper(props: Props): ReactNode {
   return (
-    <div>
+    <>
       <DocSearch
         apiKey="b63e590c0b5a9ab7c0930991ea785aeb"
         indexName="mkeithx"
@@ -28,8 +29,7 @@ export default function SearchBarWrapper(props: Props): JSX.Element {
         maxResultsPerGroup={7}
         insights={true}
       />
-    </div>
+    </>
   );
 }
-
 export { default as SearchBar } from '@theme-original/SearchBar';

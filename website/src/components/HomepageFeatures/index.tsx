@@ -18,7 +18,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/undraw_experience_design.svg").default,
     description: (
       <>
-        Find resources easily with  a robust search functionality. <Link to="/projects">Learn more</Link>
+        Find resources easily with  a robust search functionality.
       </>
     ),
   },

@@ -57,6 +57,9 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
+  future: {
+    experimental_faster: true,
+  },
 
   staticDirectories: [
     'static',
@@ -65,28 +68,14 @@ const config: Config = {
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
+    hero_header: "Guides and Code Samples",
+    hero_tagline: "4 Software Documentation & Beyond...",
     custom_header: "The SpaceHub Project",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
-  },
-
-  future: {
-    experimental_faster: {
-      swcJsLoader: true,
-      swcJsMinimizer: true,
-      swcHtmlMinimizer: true,
-      lightningCssMinimizer: true,
-      rspackBundler: true,
-      mdxCrossCompilerCache: true,
-    },
-    experimental_storage: {
-      type: 'localStorage',
-      namespace: true,
-    },
-    experimental_router: 'browser',
   },
 
   stylesheets: [
@@ -113,7 +102,7 @@ const config: Config = {
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
           ...commonDocsConfig,
-          showLastUpdateAuthor: true,
+          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
         },
         blog: {
@@ -180,7 +169,7 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        showLastUpdateAuthor: true,
+        showLastUpdateAuthor: false,
         showLastUpdateTime: true,
         ...commonDocsConfig,
         sidebarPath: "./sidebarsCosmos.ts",
@@ -223,12 +212,12 @@ const config: Config = {
       disableSwitch: false,
       respectPrefersColorScheme: true,
     },
-    announcementBar: {
-      id: `announcementBar_`,
-      content:
-        `HELLO, WORLD...<a href="#">WELCOME 2025!</a> 🎉`,
-      isCloseable: false,
-    },
+    // announcementBar: {
+    //   id: `announcementBar_`,
+    //   content:
+    //     `HELLO, WORLD...<a href="#">WELCOME 2025!</a> 🎉`,
+    //   isCloseable: false,
+    // },
     docs: {
       versionPersistence: 'localStorage',
       sidebar: {
@@ -299,10 +288,9 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
 
-        { type: "search", position: "right", className: "DocSearch" },
+        { type: "search", position: "right", className: "DocSearch"},
       ],
     },
-
     footer: {
       style: "dark",
       logo: {
