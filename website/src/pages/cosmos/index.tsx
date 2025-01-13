@@ -44,7 +44,7 @@ function Cosmos(): JSX.Element {
                 </div>
                 <div className={clsx(styles.buttons, 'margin-vert--md')}>
                     <Link
-                        className={clsx("button button--warning button--outline button--lg")}
+                        className={clsx("button button--secondary button--lg")}
                         to={useBaseUrl('/cosmos/timeline')}>
                         {'Get Started'}
                     </Link>
