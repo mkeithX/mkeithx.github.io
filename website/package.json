@@ -53,7 +53,7 @@
     "@docusaurus/types": "3.7.0",
     "typescript": "5.7.2",
     "wrangler": "3.99.0",
-    "@dotenvx/dotenvx": "1.32.0"
+    "@dotenvx/dotenvx": "1.32.1"
   },
   "browserslist": {
     "production": [
