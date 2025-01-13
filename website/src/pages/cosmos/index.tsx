@@ -4,26 +4,10 @@ import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
 import clsx from "clsx";
 import styles from "./styles.module.css";
-import useDocusaurusContext from "@docusaurus/useDocusaurusContext";
 import useBaseUrl from '@docusaurus/useBaseUrl';
 
 function CosmospageHeader(): JSX.Element {
-    const {
-        siteConfig: { tagline, customFields },
-    } = useDocusaurusContext();
-    const {
-        custom_footer,
-        custom_tagline,
-        custom_description,
-        custom_title,
-        custom_header,
-    } = customFields as {
-        custom_footer: string;
-        custom_tagline: string;
-        custom_description: string;
-        custom_header: string;
-        custom_title: string;
-    };
+
 
     return (
         <header>
@@ -39,7 +23,7 @@ function CosmospageHeader(): JSX.Element {
                         {"Highlighting scientific discoveries, technological advancements, physics, astronomy, and space exploration."}
 
                     </span>
-                    <div className={clsx(styles.buttons, 'margin-vert--md')}>
+                    <div className={clsx(styles.buttons, 'text--no-decoration margin-vert--md')}>
                         <Link
                             className={clsx("button button--secondary button--lg")}
                             to={useBaseUrl('/cosmos/timeline')}>
@@ -62,13 +46,9 @@ function CosmospageHeader(): JSX.Element {
 }
 
 export default function Cosmos(): JSX.Element {
-    const {
-        siteConfig: { title, tagline, customFields },
-    } = useDocusaurusContext();
-    const { custom_description } = customFields as { custom_description: string };
 
     return (
-        <Layout title="Cosmos" description="The Universe">
+        <Layout title="Cosmos" description="Articles about scientific discoveries, technological advances, physics, astronomy, and space exploration.">
             <CosmospageHeader />
 
         </Layout>
