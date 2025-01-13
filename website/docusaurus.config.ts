@@ -48,7 +48,7 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline: "A Cosmic-Flavored Docs Website for Software Development and More",
+  tagline: "A Cosmic-Flavored Website for Software Development, Documentation and Beyond",
   favicon: "icons/favicon/slash-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -69,7 +69,7 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
-    hero_tagline: "4 Software Documentation & Beyond...",
+    hero_tagline: "For Software Development, Documentation & Beyond...",
     custom_header: "The SpaceHub Project",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
@@ -347,7 +347,7 @@ const config: Config = {
       { name: 'og:title', content: 'mkeithx' },
       {
         name: 'og:description',
-        content: 'A Cosmic-Flavored Docs Website for Software Development and More'
+        content: 'A Cosmic-Flavored Website for Software Development, Documentation and Beyond'
       },
     ],
   } satisfies Preset.ThemeConfig,
