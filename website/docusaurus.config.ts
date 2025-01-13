@@ -260,19 +260,14 @@ const config: Config = {
           label: "More",
           position: "right",
           items: [
-            { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
-            { to: "/feature-requests", label: "Feature Requests ❓" },
+            { to: "/feature-requests", label: "Feedback" },
             {
-              label: "Login",
-              href: `${LoginUrl}`,
-            },
-            { type: "html", value: '<hr class="dropdown-separator">' },
-
-            {
-              label: "Bugs",
+              label: "Issue tracker",
               href: "https://github.com/mkeithX/mkeithx.github.io/issues",
             },
+            { type: "html", value: '<hr class="dropdown-separator">' },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
+            { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
           ],
         },
 
