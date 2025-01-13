@@ -7,7 +7,7 @@
 </div>
 
 ## Introduction
-**Welcome!** This repo contains the website configuration and documentation powering [**MKX SpaceHub**](https://mkeithx.github.io)™.
+**Welcome!** This repo contains the website configuration and documentation powering [**mkeithX website**](https://mkeithx.github.io).
 
 ## Motivation
 This website is part of the [**The SpaceHub Project**](https://mkeithx.pages.dev/foobar) at [**Kitiplex**](https://github.com/kitiplex) focusing on creating an intuitive Knowledge Base Portal using powerful, low-maintenance technology, ensuring that content remains both accessible and reliable. It highlights the importance of effective documentation as a roadmap that guides users through the site's purpose, features, and functionalities.
