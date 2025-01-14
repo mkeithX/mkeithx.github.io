@@ -27,50 +27,54 @@ const FeatureList: FeatureBrandItems[] = [
   // },
   
    {
-    scale: 1.0,
+    scale: 1.2,
     title: "",    
     Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
     description: (
       <>
+      {/* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  */}
       </>
     )
   },
   {
     scale: 1.0,
     title: "",
-    Svg: require("@site/static/img/logo/MSAzure.svg").default,
+    Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
     description: (
       <>
-      
+            {/* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  */}
       </>
     )
   },
   {
-    scale: 0.8,
-    Svg: require("@site/static/img/logo/NASA_Worm_logo.svg").default,
+    scale: 0.6,
+    Svg: require("@site/static/img/space/NASA_logo.svg").default,
     title: "",
     description: (
       <>
+            {/* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  */}
       </>
     )
   },
   {
-    scale: 1.0,
+    scale: 1.2,
     title: "",
     
     Svg: require("@site/static/img/logo/Cloudflare.svg").default,
     description: (
       <>
+            {/* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  */}
       </>
     )
   },
   {
-    scale: 1.0,
+    scale: 0.8,
     title: "",
     
     Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
     description: (
       <>
+            {/* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  */}
       </>
     )
   },
@@ -87,7 +91,7 @@ function Feature({ scale, title, description, Svg }: FeatureBrandItems) {
           role="img"
         />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding-horiz--sm">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
@@ -98,7 +102,7 @@ function Feature({ scale, title, description, Svg }: FeatureBrandItems) {
 export default function FeatureBrands(): JSX.Element {
   return (
     <section className={clsx(styles.features)}>
-      <div className={clsx("container text--center")}>
+      <div className={clsx("container")}>
       <div className={clsx("row", styles.featuresRowCenter)}>
           {FeatureList.map((props, idx) => (
             <Feature key={idx} {...props} />

@@ -11,17 +11,9 @@ import PrismDark from "./src/utils/prismDark";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
-import { socialProfiles } from "./social.json";
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
-
-// import * as dotenv from 'dotenv';
-
-// dotenv.config({
-//   path: process.env.NODE_ENV === 'development' ? '.env.production.local' : '.env.development.local', 
-// });
-
-const LoginUrl = process.env.LOGIN_URL ?? 'https://aka.ms/my-account';
+import socialProfiles from './social';
 
 const copyright = `Copyright © ${new Date().getFullYear()} Designed by Keith Tan`;
 
@@ -206,7 +198,7 @@ const config: Config = {
   ],
 
   themeConfig: {
-
+    playgroundPosition: 'bottom',
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
@@ -238,8 +230,8 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/rocket.svg",
         target: "_self",
-        // width: "32",
-        // height: "32",
+        width: "32",
+        height: "32",
       },
       items: [
         {
@@ -254,6 +246,11 @@ const config: Config = {
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
+        // {
+        //   type: "html",
+        //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
+        //   position: 'right'
+        // },
         {
           type: "dropdown",
           label: "More",
@@ -264,17 +261,12 @@ const config: Config = {
               label: "Issue tracker",
               href: "https://github.com/mkeithX/mkeithx.github.io/issues",
             },
+            { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-            { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
+  
           ],
         },
-
-        // {
-        //   type: "html",
-        //   value: '<span class="badge badge--sm badge--secondary">Beta</span>',
-        //   position: 'right'
-        // },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
@@ -282,7 +274,8 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
 
-        { type: "search", position: "right", className: "DocSearch"},
+
+        { type: "search", position: "right"},
       ],
     },
     footer: {
@@ -291,8 +284,7 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/spacehub-x-logo-light-test.png",
         href: "/",
-        width: "350",
-        // height: "300"
+        width: "330",
       },
       links: [
         {
@@ -304,10 +296,11 @@ const config: Config = {
           ],
         },
         {
-          title: "More",
+          title: "Community",
           items: [
             { label: "Updates", to: "/blog" },
             { label: "Contributing", href: "/community" },
+            socialProfiles.kitiplex,
           ],
         },
         {
@@ -317,12 +310,9 @@ const config: Config = {
         {
           title: "Developers",
           items: [
-            { label: "Meta", href: "https://developers.facebook.com/" },
-            {
-              label: "Login",
-              href: `${LoginUrl}`,
-            },
-            { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
+            socialProfiles.m365dev,
+            socialProfiles.cloudflare,
+            socialProfiles.metadev,
           ],
         },
       ],
@@ -341,7 +331,6 @@ const config: Config = {
         "yaml",
       ],
     },
-    playgroundPosition: "bottom",
     metadata: [
       { name: 'og:title', content: 'mkeithx' },
       {

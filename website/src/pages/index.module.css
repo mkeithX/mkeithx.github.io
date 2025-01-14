@@ -3,6 +3,9 @@
  * and scoped locally.
  */
 
+ .section {
+  padding: 40px 0;
+}
 
 .heroBanner {
   padding: 8rem 0;
@@ -95,9 +98,7 @@
   font-weight: normal;
 }
 
-.section {
-  padding: 40px 0;
-}
+
 /* 
 .btnCta {
   font-size: 18px;
