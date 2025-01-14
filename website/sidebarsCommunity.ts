@@ -23,18 +23,11 @@ const sidebars: SidebarsConfig = {
       label: 'More',
       collapsed: true,
       items: [
-
-        {
-          type: "link",
-          label: "The SpaceHub Project",
-          href: "/foobar",
-          description: "The SpaceHub Project"
-        },
-        {
-          type: 'link',
-          label: 'Showcase',
-          href: '/projects'
-        },
+        // {
+        //   type: 'link',
+        //   label: 'Showcase',
+        //   href: '/projects'
+        // },
         {
           type: 'link',
           label: 'Feature Requests',

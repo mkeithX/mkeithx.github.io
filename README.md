@@ -10,7 +10,7 @@
 **Welcome!** This repo contains the website configuration and documentation powering [**mkeithX website**](https://mkeithx.github.io).
 
 ## Motivation
-This website is part of the [**The SpaceHub Project**](https://mkeithx.pages.dev/foobar) at [**Kitiplex**](https://github.com/kitiplex) focusing on creating an intuitive Knowledge Base Portal using powerful, low-maintenance technology, ensuring that content remains both accessible and reliable. It highlights the importance of effective documentation as a roadmap that guides users through the site's purpose, features, and functionalities.
+This website is part of the [**The SpaceHub Project**](https://mkeithx.pages.dev/docs) at [**Kitiplex**](https://github.com/kitiplex) focusing on creating an intuitive Knowledge Base Portal using powerful, low-maintenance technology, ensuring that content remains both accessible and reliable. It highlights the importance of effective documentation as a roadmap that guides users through the site's purpose, features, and functionalities.
 
 ## Configuration
 **MKX SpaceHub**™ is powered by [**Docusaurus**](https://docusaurus.io/), a powerful static website generator, and hosted on [**Cloudflare**](https://developers.cloudflare.com/pages) for optimal performance and security. The main [configuration](https://mkeithx.pages.dev/docs/configs) file can be found in `website/docusaurus.config.ts`.

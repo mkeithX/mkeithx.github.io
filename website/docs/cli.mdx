@@ -22,10 +22,10 @@ import TabItem from "@theme/TabItem";
 <td>
 
 ```sh
- net user administrator /active:yes
+ NET USER administrator /active:yes
 ```
 ```sh
- net user administrator /active:no
+ NET USER administrator /active:no
 ```
 </td>
 <td>
@@ -38,31 +38,47 @@ Enable/Disable Admin
 <td>
 
 ```sh
-net user /add Kitoy p@ssw0rd
+NET USER /add LocalAdmin Secr3t
 ```
 
 </td>
 <td>
 
-Add new user "Kitoy" with password
+Add new user "LocalAdmin" with password
 
 </td>
 </tr>
+
+
 <tr>
 <td>
 
 ```sh
-net localgroup administrators Kitoy /add
+NET USER LocalAdmin Secr3t
 ```
 
 </td>
 <td>
 
-Add the user "Kitoy" to the Local Administrators Group
+Change User Password
 
 </td>
 </tr>
 
+<tr>
+<td>
+
+```sh
+NET USER Ella | findstr "Password"
+```
+
+</td>
+<td>
+
+View password properties of user account "Ella"
+
+</td>
+</tr>
 
 </table>
 

@@ -249,7 +249,6 @@ const config: Config = {
           items: [
             { type: "doc", docId: "introduction", label: "Guides", },
             { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
-            { to: "/projects", label: "Showcase" },
           ]
         },
         { to: "/cosmos", label: "Cosmos" },
