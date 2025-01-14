@@ -23,7 +23,8 @@
   --ifm-color-primary-lighter: #5a91ea;
   --ifm-color-primary-lightest: #80aaef;
 
-  --ifm-site-dark: #010409;
+  --ifm-site-dark: #000000
+  ;
 
   --site-color-feedback-background: #f0f8ff;
 
@@ -55,12 +56,10 @@
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
 
-  /* --ifm-background-color: #0D1118 !important; */
-  /* --ifm-background-surface-color: #0D1116 !important; */
   --site-color-feedback-background: #2a2930;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  --ifm-background-surface-color: #0D1116 !important;
+  --ifm-background-surface-color: #0d1117 !important;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 
 }
@@ -402,3 +401,4 @@ html[data-theme='dark'] .alert--discord {
   --ifm-alert-foreground-color: rgb(255, 255, 255);
   --ifm-alert-border-color: #5865F2;
 }
+

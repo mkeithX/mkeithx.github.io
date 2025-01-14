@@ -57,7 +57,6 @@ const config: Config = {
     'static',
     path.join(__dirname, 'non-existent'),
   ],
-
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
@@ -69,22 +68,18 @@ const config: Config = {
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
-
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
-
 
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   markdown: {
     format: "detect",
     mermaid: true,
   },
-
   presets: [
     [
       "classic",
@@ -202,7 +197,7 @@ const config: Config = {
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
     // announcementBar: {
     //   id: `announcementBar_`,

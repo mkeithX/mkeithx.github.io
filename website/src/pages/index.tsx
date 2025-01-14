@@ -40,8 +40,8 @@ function HomepageHeader(): JSX.Element {
       <BannerLogo
           className={clsx(styles.heroLogo)}
           title=""
-          width={180}
-          height={150}
+          width={200}
+          height={200}
         />
         <div className={clsx("hero__subtitle")}>
           <span className={clsx(styles.heroSubTitleTextHtml)}>{"OpenSource"}</span>

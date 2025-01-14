@@ -7,6 +7,10 @@
   padding: 40px 0;
 }
 
+.container {
+  --ifm-container-width: 900px;
+}
+
 .heroBanner {
   padding: 8rem 0;
   overflow: hidden;
@@ -30,18 +34,18 @@
   color: transparent;
   background: linear-gradient(
     90deg,
-    #b3ebd2 0%,
-    #38acf5 50%,
-    #9e68df 100%
+    #d1ffeb 0%,
+    #1da1f2 50%,
+    #ba82ff 100%
   );
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: bold;
-  font-size: 50px;
-  margin-bottom: 0.3rem;
+  font-size: 56px;
+  margin-bottom: 0.2rem;
 }
 
-@media only screen and (max-width: 786px) {
+@media only screen and (max-width: 996px) {
   .heroBannerTitle {
     font-size: 40px;
     font-weight: bold;
@@ -159,10 +163,10 @@
 .heroLogo {
   /* width: 250px; */
   /* margin: 5px 30px; */
-  /* height: 200px; */
+  height: 100%;
   /* margin: 0px 0; */
   float: right;
-  display: block;
+  display: flex;
   transition: transform 0.8s;
   
   &:hover {
