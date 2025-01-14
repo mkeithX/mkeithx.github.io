@@ -13,19 +13,20 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    scale: 0.8,
+    scale: 1,
     title: "Developer",
     Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
     description: (
       <>
         Build applications and solutions that integrate with Microsoft 365 services.
+        <Link></Link>
       </>
     ),
   },
 
 
   {
-    scale: 0.8,
+    scale: 1,
     title: "Cloudflare",
     Svg: require("@site/static/img/logo/Cloudflare_Logo.svg").default,
     description: (
@@ -35,7 +36,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    scale: 0.8,
+    scale: 1,
     title: "Algolia",
     Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
     description: (
@@ -46,7 +47,7 @@ const FeatureList: FeatureItem[] = [
   },
   
   {
-    scale: 0.6,
+    scale: 1,
     title: "Code Made Easy",
     Svg: require("@site/static/img/logo/vscode.svg").default,
     description: (
@@ -57,7 +58,7 @@ const FeatureList: FeatureItem[] = [
   },
 
   {
-    scale: 0.8,
+    scale: 1,
     title: "Built with React",
     Svg: require("@site/static/img/logo/react-logo.svg").default,
     description: (

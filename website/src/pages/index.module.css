@@ -8,11 +8,11 @@
 } */
 
 .container {
-  --ifm-container-width: 900px;
+  --ifm-container-width: 996px;
 }
 
 .heroBanner {
-  padding: 8rem 0;
+  padding: 4rem 0;
   overflow: hidden;
   text-align: left;
   position: relative;
@@ -167,7 +167,7 @@
   /* margin: 0px 0; */
   float: right;
   display: flex;
-  transition: transform 0.8s;
+  transition: transform 0.6s;
   
   &:hover {
     transform: scale(1.2) rotate(10deg);

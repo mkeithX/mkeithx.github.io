@@ -60,7 +60,7 @@ const FeatureList: FeatureBrandItems[] = [
     scale: 1.2,
     title: "",
     
-    Svg: require("@site/static/img/logo/Cloudflare.svg").default,
+    Svg: require("@site/static/img/logo/Cloudflare_Logo.svg").default,
     description: (
       <>
             {/* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  */}

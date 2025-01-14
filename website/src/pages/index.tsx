@@ -92,7 +92,8 @@ export default function Home(): JSX.Element {
         <div className={clsx(styles.section)}>
         <HomepageFeatures />
         </div>
-        {/* <FeatureBrands /> */}
+
+        <FeatureBrands />
       </main>
     </Layout>
   );

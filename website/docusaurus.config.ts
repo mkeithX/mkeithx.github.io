@@ -106,6 +106,7 @@ const config: Config = {
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "ignore",
+        
           feedOptions: {
             type: "all",
             title: "The SpaceHub Project",
@@ -177,9 +178,9 @@ const config: Config = {
     [
       "ideal-image",
       {
-        quality: 80,
-        max: 1050,
-        min: 680,
+        quality: 70,
+        max: 1030,
+        min: 640,
         steps: 2,
         disableInDev: true,
       } satisfies IdealImageOptions,
@@ -243,7 +244,7 @@ const config: Config = {
         { to: "/blog", label: "Blog" },
         // {
         //   type: "html",
-        //   value: '<span class="badge badge--sm badge--primary">Beta</span>',
+        //   value: '<span class="badge badge--lg badge--secondary">Beta</span>',
         //   position: 'right'
         // },
         {

@@ -225,7 +225,7 @@ div[class^='announcementBar_'] button {
 
 
 /* Tabs styling */
-.unique-tabs .tabs__item {
+/* .unique-tabs .tabs__item {
   line-height: 16px;
   margin-right: 8px;
 }
@@ -235,7 +235,7 @@ div[class^='announcementBar_'] button {
   color: #fff;
   border-radius: var(--ifm-global-radius);
   background-color: var(--ifm-tabs-color-active);
-}
+} */
 
 
 .footer--dark {
@@ -245,7 +245,7 @@ div[class^='announcementBar_'] button {
 
 .footer {
   text-align: center;
-  align-items: center;
+
 }
 
 
