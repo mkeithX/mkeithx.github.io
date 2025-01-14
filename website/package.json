@@ -54,6 +54,7 @@
     "typescript": "5.7.3",
     "wrangler": "3.99.0",
     "@dotenvx/dotenvx": "1.33.0"
+    "wrangler": "3.101.0",
   },
   "browserslist": {
     "production": [
