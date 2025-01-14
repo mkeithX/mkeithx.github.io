@@ -14,11 +14,44 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     scale: 0.8,
-    title: "Easy Navigation",
-    Svg: require("@site/static/img/undraw_experience_design.svg").default,
+    title: "Developer",
+    Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
     description: (
       <>
-        Find resources easily with  a robust search functionality.
+        Build applications and solutions that integrate with Microsoft 365 services.
+      </>
+    ),
+  },
+
+
+  {
+    scale: 0.8,
+    title: "Cloudflare",
+    Svg: require("@site/static/img/logo/Cloudflare_Logo.svg").default,
+    description: (
+      <>
+        Provides a suite of services to improve website performance and security.
+      </>
+    ),
+  },
+  {
+    scale: 0.8,
+    title: "Algolia",
+    Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
+    description: (
+      <>
+        Build fast and relevant search experiences for their applications and websites.
+      </>
+    ),
+  },
+  
+  {
+    scale: 0.6,
+    title: "Code Made Easy",
+    Svg: require("@site/static/img/logo/vscode.svg").default,
+    description: (
+      <>
+        Designed with developers in mind for a seamless experience.
       </>
     ),
   },
@@ -26,41 +59,10 @@ const FeatureList: FeatureItem[] = [
   {
     scale: 0.8,
     title: "Built with React",
-    Svg: require("@site/static/img/undraw_react.svg").default,
+    Svg: require("@site/static/img/logo/react-logo.svg").default,
     description: (
       <>
         Experience a fast, dynamic interface powered by React for optimal performance.
-      </>
-    ),
-  },
-
-  {
-    scale: 0.8,
-    title: "Project Docs",
-    Svg: require("@site/static/img/undraw_website.svg").default,
-    description: (
-      <>
-        Clear docs to showcase and manage various projects effectively.
-      </>
-    ),
-  },
-  {
-    scale: 0.8,
-    title: "Code Snippets",
-    Svg: require("@site/static/img/undraw_hello.svg").default,
-    description: (
-      <>
-        Quick solutions with practical code snippets, shared gists and more.
-      </>
-    ),
-  },
-  {
-    scale: 0.8,
-    title: "Developers",
-    Svg: require("@site/static/img/undraw_code_review.svg").default,
-    description: (
-      <>
-        Designed with developers in mind for a seamless experience.
       </>
     ),
   },
@@ -68,9 +70,10 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ scale, title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx("col col--4")}>
+    <>
+    <div className={clsx("col col--4 margin-bottom--lg")}>
       <div className={"text--center"}>
-      <Svg
+        <Svg
           transform={"scale(" + scale + ")"}
           className={styles.featureSvg}
           role="img"
@@ -81,6 +84,7 @@ function Feature({ scale, title, Svg, description }: FeatureItem) {
         <p>{description}</p>
       </div>
     </div>
+    </>
   );
 }
 

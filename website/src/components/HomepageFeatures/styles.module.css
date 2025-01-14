@@ -1,7 +1,7 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 2rem 0;
+  padding: 4rem 0;
   width: 100%;
   /* background-color: var(--ifm-site-dark) !important; */
 }
@@ -13,6 +13,7 @@
 
 .heroTitleTextHtml b {
   color: var(--ifm-color-primary);
+  font-size: 20px;
 }
 
 .featuresRowCenter {

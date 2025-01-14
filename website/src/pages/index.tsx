@@ -40,8 +40,8 @@ function HomepageHeader(): JSX.Element {
       <BannerLogo
           className={clsx(styles.heroLogo)}
           title=""
-          width={200}
-          height={200}
+          width={160}
+          height={180}
         />
         <div className={clsx("hero__subtitle")}>
           <span className={clsx(styles.heroSubTitleTextHtml)}>{"OpenSource"}</span>
@@ -92,7 +92,7 @@ export default function Home(): JSX.Element {
         <div className={clsx(styles.section)}>
         <HomepageFeatures />
         </div>
-        <FeatureBrands />
+        {/* <FeatureBrands /> */}
       </main>
     </Layout>
   );

@@ -3,9 +3,9 @@
  * and scoped locally.
  */
 
- .section {
+ /* .section {
   padding: 40px 0;
-}
+} */
 
 .container {
   --ifm-container-width: 900px;
@@ -17,7 +17,7 @@
   text-align: left;
   position: relative;
   background-color: var(--ifm-site-dark);
-  display: flex;
+  display: block;
   /* height: auto; */
   align-items: start;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
@@ -41,7 +41,7 @@
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: bold;
-  font-size: 56px;
+  font-size: 54px;
   margin-bottom: 0.2rem;
 }
 
@@ -161,9 +161,9 @@
 } */
 
 .heroLogo {
-  /* width: 250px; */
+  width: auto;
   /* margin: 5px 30px; */
-  height: 100%;
+  height: auto;
   /* margin: 0px 0; */
   float: right;
   display: flex;
