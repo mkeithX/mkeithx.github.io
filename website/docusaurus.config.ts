@@ -221,7 +221,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "mkeithx",
+      title: "SpaceHub Project",
       logo: {
         alt: "SpaceHub",
         src: "img/rocket.svg",

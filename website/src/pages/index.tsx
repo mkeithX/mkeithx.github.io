@@ -43,22 +43,21 @@ function HomepageHeader(): JSX.Element {
           width={160}
           height={180}
         />
-        <div className={clsx("hero__subtitle")}>
-          <span className={clsx(styles.heroSubTitleTextHtml)}>{"OpenSource"}</span>
-          {/* <p className="text--info">{' Bar'}</p> */}
+        <div className={clsx(styles.heroSubtitle)}>
+          <span className={clsx(styles.heroSubTitleText)}>{"OpenSource"}</span>
         </div>
-        <Heading as="h1" className="hero__title">
-          <span className={styles.heroTitleTextHtml}>
-            <div className={styles.heroBannerTitle}>
-            <b>{hero_header}</b>
-            </div>
-          </span>
+        <Heading as="h1">
+          <div className={styles.heroBannerTitle}>
+            <span className={styles.heroBannerTitleText}>
+            {hero_header}
+            </span>
+            {/* <br></br>{"from mkeithX"} */}
+          </div>
         </Heading>
 
-        <div className={clsx(styles.heroSubtitle)}>
-          <span className={styles.heroCustomSubTitleHtml}>
-            {hero_tagline}
-            {/* <Link to={"https://github.com/kitiplex"}>{"@Kitiplex"}</Link> */}
+        <div className={styles.heroSubtitle}>
+          <span className={styles.heroSubtitleText}>
+          {hero_tagline}
           </span>
         </div>
         <div className={clsx(styles.indexCtas,'margin-vert--md')}>
@@ -92,8 +91,7 @@ export default function Home(): JSX.Element {
         <div className={clsx(styles.section)}>
         <HomepageFeatures />
         </div>
-
-        <FeatureBrands />
+        {/* <FeatureBrands /> */}
       </main>
     </Layout>
   );

@@ -25,9 +25,9 @@
   .topBannerTitleText {
     background: linear-gradient(
       90deg,
-      rgb(131 58 180 / 100%) 0%,
-      rgb(253 29 29 / 100%) 50%,
-      rgb(252 176 69 / 100%) 100%
+      #833ab4 0%,
+      #fd1d1d 50%,
+      #fcb045 100%
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;
@@ -41,9 +41,9 @@
   html[data-theme='dark'] .topBannerTitleText {
     background: linear-gradient(
       90deg,
-      rgb(152 0 255) 0%,
-      rgb(246 41 41) 50%,
-      rgb(255 169 8) 100%
+      #9800ff 0%,
+      #f62929 50%,
+      #ffa908 100%
     );
     background-clip: text;
     -webkit-text-fill-color: transparent;

@@ -7,87 +7,71 @@
   padding: 40px 0;
 } */
 
-.container {
+/* .container {
   --ifm-container-width: 996px;
-}
+} */
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 8rem 0;
   overflow: hidden;
   text-align: left;
   position: relative;
+  /* margin: 0 auto; */
   background-color: var(--ifm-site-dark);
-  display: block;
+  display: flex;
+  flex-direction: column;
   /* height: auto; */
-  align-items: start;
-  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
+  /* align-items: start; */
+  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%); */
   
 }
 
+
 .heroBannerTitle {
-  font-size: 50px;
-  font-weight: 700;
-  margin-bottom: 0.3rem;
-}
-
-.heroBannerTitle b {
-  color: transparent;
-  background: linear-gradient(
-    90deg,
-    #d1ffeb 0%,
-    #1da1f2 50%,
-    #ba82ff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
+  font-size: 56px;
   font-weight: bold;
-  font-size: 54px;
-  margin-bottom: 0.2rem;
+  margin-bottom: 0.4rem;
 }
 
-@media only screen and (max-width: 996px) {
+@media only screen and (max-width: 768px) {
   .heroBannerTitle {
-    font-size: 40px;
-    font-weight: bold;
+    font-size: 42px;
   }
 }
 
-/* subtitle */
+.heroBannerTitleText{
+  background: linear-gradient(
+    90deg,
+    #69e9d9 0%,
+    #1da1f2 50%,
+    #c061ff 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+}
 
-.heroSubTitleTextHtml {
-  color: var(--ifm-color-emphasis) !important;
-  text-align: start;
-  position: relative;
-  font-size: 20px;
-  font-weight: 400;
+.heroBannerDescription {
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 786px) {
+  .heroBannerDescription {
+    font-size: 18px;
+    white-space: normal;
+  }
 }
 
 
 .heroSubtitle {
-  font-size: 22px;
+  font-size: 24px;
   font-weight: 300;
-  /* margin-bottom: 0.8em; */
-  margin-top: auto;
+}
+@media only screen and (max-width: 768px) {
+  .heroSubtitleText {
+    font-size: 20px;
+  }
 }
 
-.heroCustomSubTitleHtml b {
-  color: transparent;
-  background: linear-gradient(
-    90deg,
-    #d1ffeb 0%,
-    #39b3ff 50%,
-    #b070ff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  /* font-weight:600; */
-  /* font-size: 18px; */
-}
-
-.heroSubTitleTextHtml b {
-  color: var(--ifm-color-primary);
-  font-size: 20px;
-}
 
 
 .buttons {
@@ -99,8 +83,71 @@
   gap: 12px;
   /* border-radius: 18px; */
   /* text-decoration: none !important; */
-  font-weight: normal;
+  /* font-weight: normal; */
 }
+
+/*  */
+/* 
+
+@media only screen and (max-width: 768px) {
+  .heroBannerTitle b {
+    font-size: 40px;
+    font-weight: bold;
+  }
+}
+.heroBannerTitle b {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #69e9d9 0%,
+    #1da1f2 50%,
+    #c061ff 100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+
+} */
+
+
+/* subtitle */
+
+.heroSubTitleTextHtml {
+  color: var(--ifm-color-emphasis) !important;
+  text-align: start;
+  position: relative;
+  font-size: 20px;
+  /* font-weight: 400; */
+}
+
+/* 
+
+.heroCustomSubTitleHtml b {
+  color: transparent;
+  background: linear-gradient(
+    90deg,
+    #d1ffeb 0%,
+    #39b3ff 50%,
+    #b070ff 100%
+  );
+  -webkit-background-clip: text;
+  background-clip: text;
+  font-size: 22px;
+}
+
+@media only screen and (max-width: 768px) {
+  .heroCustomSubTitleHtml {
+    font-size: 20px;
+
+  }
+} */
+
+
+.heroSubTitleTextHtml b {
+  color: var(--ifm-color-primary);
+  font-size: 20px;
+}
+
+
 
 
 /* 
@@ -141,7 +188,7 @@
 }
 
 
-
+/* 
 .heroCustomTagline {
   color: transparent;
   background: linear-gradient(90deg, #fffdd1 0%, #7ce3b1 50%, #1da1f2 100%);
@@ -149,7 +196,7 @@
   background-clip: text;
   font-weight: 600;
   font-size: 20px;
-}
+} */
 
 
 /* .heroLogo {

@@ -13,22 +13,21 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    scale: 1,
+    scale: 1.0,
     title: "Developer",
-    Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
+    Svg: require("@site/static/img/terminal_icon.svg").default,
     description: (
       <>
-        Build applications and solutions that integrate with Microsoft 365 services.
-        <Link></Link>
+Quick solutions with practical code snippets, shared gists and more.
       </>
     ),
   },
 
 
   {
-    scale: 1,
-    title: "Cloudflare",
-    Svg: require("@site/static/img/logo/Cloudflare_Logo.svg").default,
+    scale: 1.0,
+    title: "Container",
+    Svg: require("@site/static/img/container_solid.svg").default,
     description: (
       <>
         Provides a suite of services to improve website performance and security.
@@ -36,9 +35,9 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    scale: 1,
-    title: "Algolia",
-    Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
+    scale: 1.0,
+    title: "API",
+    Svg: require("@site/static/img/api_icon.svg").default,
     description: (
       <>
         Build fast and relevant search experiences for their applications and websites.
@@ -47,9 +46,9 @@ const FeatureList: FeatureItem[] = [
   },
   
   {
-    scale: 1,
+    scale: 1.0,
     title: "Code Made Easy",
-    Svg: require("@site/static/img/logo/vscode.svg").default,
+    Svg: require("@site/static/img/logo/terminal-no-slash.svg").default,
     description: (
       <>
         Designed with developers in mind for a seamless experience.
@@ -58,9 +57,9 @@ const FeatureList: FeatureItem[] = [
   },
 
   {
-    scale: 1,
+    scale: 1.0,
     title: "Built with React",
-    Svg: require("@site/static/img/logo/react-logo.svg").default,
+    Svg: require("@site/static/img/logo/terminal-demo.svg").default,
     description: (
       <>
         Experience a fast, dynamic interface powered by React for optimal performance.
@@ -80,7 +79,7 @@ function Feature({ scale, title, Svg, description }: FeatureItem) {
           role="img"
         />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding-horiz--sm">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
