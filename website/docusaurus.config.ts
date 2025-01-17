@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-const copyright = `Copyright © ${new Date().getFullYear()} Designed by Keith Tan`;
+const copyright = `Copyright © ${new Date().getFullYear()} <br> Developed & Designed by Keith Tan`;
 
 const commonExclusions = {
   exclude: [
@@ -60,7 +60,7 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
-    hero_tagline: "For Software Development, Documentation & Beyond...",
+    hero_tagline: "For Software Development & Beyond...",
     custom_header: "The SpaceHub Project",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
@@ -221,7 +221,7 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub Project",
+      title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
         src: "img/rocket.svg",

@@ -33,8 +33,7 @@ function HomepageHeader(): JSX.Element {
   };
 
   return (
-    <header
-    
+    <div
       className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
       <BannerLogo
@@ -43,8 +42,10 @@ function HomepageHeader(): JSX.Element {
           width={160}
           height={180}
         />
-        <div className={clsx(styles.heroSubtitle)}>
-          <span className={clsx(styles.heroSubTitleText)}>{"OpenSource"}</span>
+        <div className={styles.heroSubtitle}>
+          <span className={styles.heroSubTitleText}>
+            {"OpenSource"}
+            </span>
         </div>
         <Heading as="h1">
           <div className={styles.heroBannerTitle}>
@@ -53,16 +54,21 @@ function HomepageHeader(): JSX.Element {
             </span>
             {/* <br></br>{"from mkeithX"} */}
           </div>
-        </Heading>
-
-        <div className={styles.heroSubtitle}>
+          <div className={styles.heroSubtitle}>
           <span className={styles.heroSubtitleText}>
           {hero_tagline}
           </span>
         </div>
+        </Heading>
+
+        {/* <div className={styles.heroSubtitle}>
+          <span className={styles.heroSubtitleText}>
+          {hero_tagline}
+          </span>
+        </div> */}
         <div className={clsx(styles.indexCtas,'margin-vert--md')}>
           <Link
-            className={clsx("button button--primary button--lg")}
+            className={clsx("button button--outline button--primary button--lg")}
             to={useBaseUrl('/docs')}>
             {'Explore'}
           </Link>
@@ -73,7 +79,7 @@ function HomepageHeader(): JSX.Element {
           </Link>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 

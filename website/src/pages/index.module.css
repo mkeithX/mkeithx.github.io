@@ -12,7 +12,7 @@
 } */
 
 .heroBanner {
-  padding: 8rem 0;
+  padding: 6rem 0;
   overflow: hidden;
   text-align: left;
   position: relative;
@@ -35,7 +35,7 @@
 
 @media only screen and (max-width: 768px) {
   .heroBannerTitle {
-    font-size: 42px;
+    font-size: 40px;
   }
 }
 
@@ -44,7 +44,7 @@
     90deg,
     #69e9d9 0%,
     #1da1f2 50%,
-    #c061ff 100%
+    #b070ff 100%
   );
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -68,7 +68,7 @@
 }
 @media only screen and (max-width: 768px) {
   .heroSubtitleText {
-    font-size: 20px;
+    font-size: 18px;
   }
 }
 
@@ -162,24 +162,24 @@
     flex-wrap: wrap;
     align-items: start;
     justify-content: start;
-    /* margin-top: 24px; */
+    margin-top: 24px;
   }
   
-  .indexCtas a, 
+  /* .indexCtas a, 
   .indexCtas a:hover {
-    color: #161616 !important;
-  }
+    color: #161616;
+  } */
   
   .indexCtas a:last-of-type {
     margin: 0 12px;
   }
   
   
-
+/* 
 .hero h1 {
   font-size: 4rem;
   padding-bottom: 1rem;
-}
+} */
 
 
 .heading {

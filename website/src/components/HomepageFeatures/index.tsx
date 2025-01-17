@@ -13,7 +13,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    scale: 1.0,
+    scale: 0.8,
     title: "Developer",
     Svg: require("@site/static/img/terminal_icon.svg").default,
     description: (
@@ -25,7 +25,7 @@ Quick solutions with practical code snippets, shared gists and more.
 
 
   {
-    scale: 1.0,
+    scale: 0.8,
     title: "Container",
     Svg: require("@site/static/img/container_solid.svg").default,
     description: (
@@ -35,7 +35,7 @@ Quick solutions with practical code snippets, shared gists and more.
     ),
   },
   {
-    scale: 1.0,
+    scale: 0.8,
     title: "API",
     Svg: require("@site/static/img/api_icon.svg").default,
     description: (
