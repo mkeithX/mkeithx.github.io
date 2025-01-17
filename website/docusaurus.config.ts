@@ -271,7 +271,7 @@ const config: Config = {
         },
 
 
-        { type: "search", position: "right"},
+        { type: "search", position: "right", className: "DocSearch"},
       ],
     },
     footer: {

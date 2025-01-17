@@ -28,14 +28,14 @@
 
 
 .heroBannerTitle {
-  font-size: 56px;
+  font-size: 58px;
   font-weight: bold;
   margin-bottom: 0.4rem;
 }
 
 @media only screen and (max-width: 768px) {
   .heroBannerTitle {
-    font-size: 40px;
+    font-size: 50px;
   }
 }
 
@@ -68,7 +68,8 @@
 }
 @media only screen and (max-width: 768px) {
   .heroSubtitleText {
-    font-size: 18px;
+    font-size: 20px;
+    white-space: normal;
   }
 }
 

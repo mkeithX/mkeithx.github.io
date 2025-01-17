@@ -34,27 +34,41 @@ Enable/Disable Admin
 
 </td>
 </tr>
+
 <tr>
 <td>
 
 ```sh
-NET USER /add LocalAdmin Secr3t
+NET USER /add LocalAdmin "Secr3t"
 ```
 
 </td>
 <td>
 
-Add new user "LocalAdmin" with password
+Add new user with password
 
 </td>
 </tr>
-
 
 <tr>
 <td>
 
 ```sh
-NET USER LocalAdmin Secr3t
+NET LOCALGROUP administrator Ella /add
+```
+
+</td>
+<td>
+
+Add User to Local Administrator Group
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+NET USER LocalAdmin "Secr3t"
 ```
 
 </td>
@@ -75,7 +89,7 @@ NET USER Ella | findstr "Password"
 </td>
 <td>
 
-View password properties of user account "Ella"
+View password properties
 
 </td>
 </tr>
