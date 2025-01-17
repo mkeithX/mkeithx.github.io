@@ -1,7 +1,7 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 6rem 0;
+  padding: 8rem 0;
   width: 100%;
   background-color: var(--ifm-site-dark);
   position: relative;
@@ -12,20 +12,16 @@
   width: 200px;
 }
 
-.heroTitleTextHtml b {
+/* .heroTitleTextHtml b {
   color: transparent;
   background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
   -webkit-background-clip: text;
   background-clip: text;
   font-weight: bold;
   font-size: 28px;
-}
+} */
 
 .featuresRowCenter {
   justify-content: center;
 }
 
-
-.section {
-  padding: 40px 0;
-}

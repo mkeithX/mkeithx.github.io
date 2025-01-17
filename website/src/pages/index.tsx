@@ -33,37 +33,42 @@ function HomepageHeader(): JSX.Element {
   };
 
   return (
-    <header
-    
+    <div
       className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
       <BannerLogo
           className={clsx(styles.heroLogo)}
           title=""
-          width={180}
-          height={150}
+          width={160}
+          height={180}
         />
-        <div className={clsx("hero__subtitle")}>
-          <span className={clsx(styles.heroSubTitleTextHtml)}>{"OpenSource"}</span>
-          {/* <p className="text--info">{' Bar'}</p> */}
+        <div className={styles.heroSubtitle}>
+          <span className={styles.heroSubTitleText}>
+            {"OpenSource"}
+            </span>
         </div>
-        <Heading as="h1" className="hero__title">
-          <span className={styles.heroTitleTextHtml}>
-            <div className={styles.heroBannerTitle}>
-            <b>{hero_header}</b>
-            </div>
+        <Heading as="h1">
+          <div className={styles.heroBannerTitle}>
+            <span className={styles.heroBannerTitleText}>
+            {hero_header}
+            </span>
+            {/* <br></br>{"from mkeithX"} */}
+          </div>
+          <div className={styles.heroSubtitle}>
+          <span className={styles.heroSubtitleText}>
+          {hero_tagline}
           </span>
+        </div>
         </Heading>
 
-        <div className={clsx(styles.heroSubtitle)}>
-          <span className={styles.heroCustomSubTitleHtml}>
-            {hero_tagline}
-            {/* <Link to={"https://github.com/kitiplex"}>{"@Kitiplex"}</Link> */}
+        {/* <div className={styles.heroSubtitle}>
+          <span className={styles.heroSubtitleText}>
+          {hero_tagline}
           </span>
-        </div>
+        </div> */}
         <div className={clsx(styles.indexCtas,'margin-vert--md')}>
           <Link
-            className={clsx("button button--primary button--lg")}
+            className={clsx("button button--outline button--primary button--lg")}
             to={useBaseUrl('/docs')}>
             {'Explore'}
           </Link>
@@ -74,7 +79,7 @@ function HomepageHeader(): JSX.Element {
           </Link>
         </div>
       </div>
-    </header>
+    </div>
   );
 }
 
@@ -90,10 +95,9 @@ export default function Home(): JSX.Element {
         {/* <TopBanner /> */}
         <HomepageHeader />
         <div className={clsx(styles.section)}>
-          <HomepageFeatures />
-
+        <HomepageFeatures />
         </div>
-        <FeatureBrands />
+        {/* <FeatureBrands /> */}
       </main>
     </Layout>
   );

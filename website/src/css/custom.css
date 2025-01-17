@@ -23,7 +23,8 @@
   --ifm-color-primary-lighter: #5a91ea;
   --ifm-color-primary-lightest: #80aaef;
 
-  --ifm-site-dark: #010409;
+  --ifm-site-dark: #000000
+  ;
 
   --site-color-feedback-background: #f0f8ff;
 
@@ -55,12 +56,10 @@
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
 
-  /* --ifm-background-color: #0D1118 !important; */
-  /* --ifm-background-surface-color: #0D1116 !important; */
   --site-color-feedback-background: #2a2930;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
-  --ifm-background-surface-color: #0D1116 !important;
+  --ifm-background-surface-color: #0d1117 !important;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 
 }
@@ -68,12 +67,12 @@
 
 article p {
   font-size: 16px;
-  /* font-weight: 400; */
+  font-weight: 400;
 }
 
 article li {
   font-size: 16px;
-  /* font-weight: 400; */
+  font-weight: 400;
 }
 
 .navbar {
@@ -82,7 +81,7 @@ article li {
 }
 
 .navbar__brand {
-  margin-right: 2.0rem;
+  /* margin-right: 2.0rem; */
   font-size: 17px;
   font-weight: 600;
   color: #1da1f2;
@@ -100,7 +99,7 @@ article li {
 .navbar .navbar__items {
   flex: auto;
   align-items: center;
-  font-size: 16px;
+  /* font-size: 16px; */
 }
 
 
@@ -226,7 +225,7 @@ div[class^='announcementBar_'] button {
 
 
 /* Tabs styling */
-.unique-tabs .tabs__item {
+/* .unique-tabs .tabs__item {
   line-height: 16px;
   margin-right: 8px;
 }
@@ -236,7 +235,7 @@ div[class^='announcementBar_'] button {
   color: #fff;
   border-radius: var(--ifm-global-radius);
   background-color: var(--ifm-tabs-color-active);
-}
+} */
 
 
 .footer--dark {
@@ -246,7 +245,7 @@ div[class^='announcementBar_'] button {
 
 .footer {
   text-align: center;
-  align-items: center;
+
 }
 
 
@@ -402,3 +401,4 @@ html[data-theme='dark'] .alert--discord {
   --ifm-alert-foreground-color: rgb(255, 255, 255);
   --ifm-alert-border-color: #5865F2;
 }
+

@@ -11,19 +11,11 @@ import PrismDark from "./src/utils/prismDark";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
-import { socialProfiles } from "./social.json";
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
+import socialProfiles from './social';
 
-// import * as dotenv from 'dotenv';
-
-// dotenv.config({
-//   path: process.env.NODE_ENV === 'development' ? '.env.production.local' : '.env.development.local', 
-// });
-
-const LoginUrl = process.env.LOGIN_URL ?? 'https://aka.ms/my-account';
-
-const copyright = `Copyright © ${new Date().getFullYear()} Designed by Keith Tan`;
+const copyright = `Copyright © ${new Date().getFullYear()} <br> Developed & Designed by Keith Tan`;
 
 const commonExclusions = {
   exclude: [
@@ -48,7 +40,7 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "mkeithx",
-  tagline: "A Cosmic-Flavored Docs Website for Software Development and More",
+  tagline: "A Cosmic-Flavored Website for Software Development, Documentation and Beyond",
   favicon: "icons/favicon/slash-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -65,11 +57,10 @@ const config: Config = {
     'static',
     path.join(__dirname, 'non-existent'),
   ],
-
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
-    hero_tagline: "4 Software Documentation & Beyond...",
+    hero_tagline: "For Software Development & Beyond...",
     custom_header: "The SpaceHub Project",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
@@ -77,22 +68,18 @@ const config: Config = {
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
-
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
-
 
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
-
   markdown: {
     format: "detect",
     mermaid: true,
   },
-
   presets: [
     [
       "classic",
@@ -119,6 +106,7 @@ const config: Config = {
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "ignore",
+        
           feedOptions: {
             type: "all",
             title: "The SpaceHub Project",
@@ -190,9 +178,9 @@ const config: Config = {
     [
       "ideal-image",
       {
-        quality: 80,
-        max: 1050,
-        min: 680,
+        quality: 70,
+        max: 1030,
+        min: 640,
         steps: 2,
         disableInDev: true,
       } satisfies IdealImageOptions,
@@ -206,11 +194,11 @@ const config: Config = {
   ],
 
   themeConfig: {
-
+    playgroundPosition: 'bottom',
     colorMode: {
       defaultMode: "dark",
       disableSwitch: false,
-      respectPrefersColorScheme: true,
+      respectPrefersColorScheme: false,
     },
     // announcementBar: {
     //   id: `announcementBar_`,
@@ -233,13 +221,13 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "mkeithx",
+      title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
         src: "img/rocket.svg",
         target: "_self",
-        // width: "32",
-        // height: "32",
+        width: "32",
+        height: "32",
       },
       items: [
         {
@@ -249,12 +237,16 @@ const config: Config = {
           items: [
             { type: "doc", docId: "introduction", label: "Guides", },
             { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
-            { to: "/projects", label: "Showcase" },
           ]
         },
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
+        // {
+        //   type: "html",
+        //   value: '<span class="badge badge--lg badge--secondary">Beta</span>',
+        //   position: 'right'
+        // },
         {
           type: "dropdown",
           label: "More",
@@ -265,23 +257,19 @@ const config: Config = {
               label: "Issue tracker",
               href: "https://github.com/mkeithX/mkeithx.github.io/issues",
             },
+            { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-            { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
+  
           ],
         },
-
-        // {
-        //   type: "html",
-        //   value: '<span class="badge badge--sm badge--secondary">Beta</span>',
-        //   position: 'right'
-        // },
         {
           href: "https://github.com/mkeithX/mkeithx.github.io",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
+
 
         { type: "search", position: "right", className: "DocSearch"},
       ],
@@ -292,8 +280,7 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/logo/spacehub-x-logo-light-test.png",
         href: "/",
-        width: "350",
-        // height: "300"
+        width: "330",
       },
       links: [
         {
@@ -305,10 +292,11 @@ const config: Config = {
           ],
         },
         {
-          title: "More",
+          title: "Community",
           items: [
             { label: "Updates", to: "/blog" },
             { label: "Contributing", href: "/community" },
+            socialProfiles.kitiplex,
           ],
         },
         {
@@ -318,12 +306,9 @@ const config: Config = {
         {
           title: "Developers",
           items: [
-            { label: "Meta", href: "https://developers.facebook.com/" },
-            {
-              label: "Login",
-              href: `${LoginUrl}`,
-            },
-            { label: "Cloudflare", href: "https://dash.cloudflare.com/login" },
+            socialProfiles.m365dev,
+            socialProfiles.cloudflare,
+            socialProfiles.metadev,
           ],
         },
       ],
@@ -342,12 +327,11 @@ const config: Config = {
         "yaml",
       ],
     },
-    playgroundPosition: "bottom",
     metadata: [
       { name: 'og:title', content: 'mkeithx' },
       {
         name: 'og:description',
-        content: 'A Cosmic-Flavored Docs Website for Software Development and More'
+        content: 'A Cosmic-Flavored Website for Software Development, Documentation and Beyond'
       },
     ],
   } satisfies Preset.ThemeConfig,
