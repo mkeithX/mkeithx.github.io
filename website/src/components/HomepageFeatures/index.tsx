@@ -14,53 +14,55 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     scale: 0.8,
-    title: "Easy Navigation",
-    Svg: require("@site/static/img/undraw_experience_design.svg").default,
+    title: "Developer",
+    Svg: require("@site/static/img/terminal_icon.svg").default,
     description: (
       <>
-        Find resources easily with  a robust search functionality.
+Quick solutions with practical code snippets, shared gists and more.
       </>
     ),
   },
 
-  {
-    scale: 0.8,
-    title: "Built with React",
-    Svg: require("@site/static/img/undraw_react.svg").default,
-    description: (
-      <>
-        Experience a fast, dynamic interface powered by React for optimal performance.
-      </>
-    ),
-  },
 
   {
     scale: 0.8,
-    title: "Project Docs",
-    Svg: require("@site/static/img/undraw_website.svg").default,
+    title: "Container",
+    Svg: require("@site/static/img/container_solid.svg").default,
     description: (
       <>
-        Clear docs to showcase and manage various projects effectively.
+        Provides a suite of services to improve website performance and security.
       </>
     ),
   },
   {
     scale: 0.8,
-    title: "Code Snippets",
-    Svg: require("@site/static/img/undraw_hello.svg").default,
+    title: "API",
+    Svg: require("@site/static/img/api_icon.svg").default,
     description: (
       <>
-        Quick solutions with practical code snippets, shared gists and more.
+        Build fast and relevant search experiences for their applications and websites.
       </>
     ),
   },
+  
   {
-    scale: 0.8,
-    title: "Developers",
-    Svg: require("@site/static/img/undraw_code_review.svg").default,
+    scale: 1.0,
+    title: "Code Made Easy",
+    Svg: require("@site/static/img/logo/terminal-no-slash.svg").default,
     description: (
       <>
         Designed with developers in mind for a seamless experience.
+      </>
+    ),
+  },
+
+  {
+    scale: 1.0,
+    title: "Built with React",
+    Svg: require("@site/static/img/logo/terminal-demo.svg").default,
+    description: (
+      <>
+        Experience a fast, dynamic interface powered by React for optimal performance.
       </>
     ),
   },
@@ -68,19 +70,21 @@ const FeatureList: FeatureItem[] = [
 
 function Feature({ scale, title, Svg, description }: FeatureItem) {
   return (
-    <div className={clsx("col col--4")}>
+    <>
+    <div className={clsx("col col--4 margin-bottom--lg")}>
       <div className={"text--center"}>
-      <Svg
+        <Svg
           transform={"scale(" + scale + ")"}
           className={styles.featureSvg}
           role="img"
         />
       </div>
-      <div className="text--center padding-horiz--md">
+      <div className="text--center padding-horiz--sm">
         <Heading as="h3">{title}</Heading>
         <p>{description}</p>
       </div>
     </div>
+    </>
   );
 }
 

@@ -9,7 +9,7 @@ type Props = WrapperProps<typeof SearchBarType>;
 
 export default function SearchBarWrapper(props: Props): ReactNode {
   return (
-    <>
+    <div>
       <DocSearch
         apiKey="b63e590c0b5a9ab7c0930991ea785aeb"
         indexName="mkeithx"
@@ -29,7 +29,7 @@ export default function SearchBarWrapper(props: Props): ReactNode {
         maxResultsPerGroup={7}
         insights={true}
       />
-    </>
+    </div>
   );
 }
-export { default as SearchBar } from '@theme-original/SearchBar';
+// export { default as SearchBar } from '@theme-original/SearchBar';

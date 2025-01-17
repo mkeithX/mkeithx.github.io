@@ -15,23 +15,15 @@ const sidebars: SidebarsConfig = {
   // By default, Docusaurus generates a sidebar from the docs folder structure
 
   mySidebar: [
-    // "keyword",
     "introduction",
     {
       type: "category",
       label: "Getting Started",
       collapsed: false,
       items: [
-        // 'troubleshoot',
         'cli',
         'aka-ms',
         'mailbox-archive',
-
-        // 'core-concept',
-        // 'sdlc',
-
-
-
         {
           type: 'category',
           label: 'How tos',

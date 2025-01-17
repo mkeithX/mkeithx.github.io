@@ -7,8 +7,6 @@ import Link from "@docusaurus/Link";
 
 
 function TopBanner() {
-    // TODO We should be able to strongly type customFields
-    //  Refactor to use a CustomFields interface + TS declaration merging
     const announcedVersion = useDocusaurusContext().siteConfig.customFields
       ?.announcedVersion as string;
   

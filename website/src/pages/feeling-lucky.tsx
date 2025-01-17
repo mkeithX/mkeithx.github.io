@@ -5,9 +5,9 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 
 const Page: React.FC = () => {
   return (
-    <Layout title="Feeling Lucky" description="I just got lucky!">
+    <Layout title="Never Gonna Give You Up!" description="I just got lucky and Rickrolled!">
       <Head>
-        <meta property="og:image" content="image.png" />
+        <meta property="og:image" content="https://mkeithx.pages.dev/img/social-banner-astro.png" />
         <meta name="twitter:card" content="summary_large_image" />
         <link rel="preconnect" href="https://mkeithx.pages.dev/feeling-lucky" />
         <script type="application/ld+json">
@@ -16,7 +16,7 @@ const Page: React.FC = () => {
             "@type": "Website",
             name: "EasterEggs on SpaceHub",
             url: "https://mkeithx.pages.dev/",
-            logo: "https://mkeithx.pages.dev/img/mkx-social.png",
+            logo: "https://mkeithx.pages.dev/img/rocket.svg",
           })}
         </script>
       </Head>
