@@ -224,10 +224,8 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/rocket.svg",
+        src: "img/nav-logo.svg",
         target: "_self",
-        width: "32",
-        height: "32",
       },
       items: [
         {

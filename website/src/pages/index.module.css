@@ -82,6 +82,7 @@
   height: 100%;
   align-items: start;
   gap: 12px;
+  background-color: #ffff;
   /* border-radius: 18px; */
   /* text-decoration: none !important; */
   /* font-weight: normal; */
@@ -164,12 +165,14 @@
     align-items: start;
     justify-content: start;
     margin-top: 24px;
+
   }
   
-  /* .indexCtas a, 
+  .indexCtas a, 
   .indexCtas a:hover {
-    color: #161616;
-  } */
+    background-color: var(--ifm-site-dark) !important;
+    color: #ffff !important;
+  }
   
   .indexCtas a:last-of-type {
     margin: 0 12px;
@@ -183,10 +186,10 @@
 } */
 
 
-.heading {
+/* .heading {
   font-weight: bold;
   font-size: 20px;
-}
+} */
 
 
 /* 

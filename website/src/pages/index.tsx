@@ -60,12 +60,6 @@ function HomepageHeader(): JSX.Element {
           </span>
         </div>
         </Heading>
-
-        {/* <div className={styles.heroSubtitle}>
-          <span className={styles.heroSubtitleText}>
-          {hero_tagline}
-          </span>
-        </div> */}
         <div className={clsx(styles.indexCtas,'margin-vert--md')}>
           <Link
             className={clsx("button button--outline button--primary button--lg")}
