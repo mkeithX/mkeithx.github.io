@@ -21,7 +21,7 @@
   display: flex;
   flex-direction: column;
   /* height: auto; */
-  /* align-items: start; */
+  align-items: start;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%); */
   
 }
@@ -35,7 +35,9 @@
 
 @media only screen and (max-width: 768px) {
   .heroBannerTitle {
+    padding: 1rem 0;
     font-size: 50px;
+    margin-bottom: 0.1rem;
   }
 }
 

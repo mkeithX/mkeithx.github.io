@@ -221,9 +221,9 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: true,
-      title: "SpaceHub",
+      title: "Andromeda",
       logo: {
-        alt: "SpaceHub",
+        alt: "Andromeda",
         src: "img/nav-logo.svg",
         target: "_self",
       },
