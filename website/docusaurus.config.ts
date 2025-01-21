@@ -17,6 +17,7 @@ import socialProfiles from './social';
 
 const copyright = `Copyright © ${new Date().getFullYear()} <br> Developed & Designed by Keith Tan`;
 
+
 const commonExclusions = {
   exclude: [
     "**/_*.{js,jsx,ts,tsx,md,mdx}",
@@ -279,6 +280,7 @@ const config: Config = {
         src: "img/logo/spacehub-x-logo-light-test.png",
         href: "/",
         width: "330",
+        height: "30"
       },
       links: [
         {
@@ -295,11 +297,12 @@ const config: Config = {
             { label: "Updates", to: "/blog" },
             { label: "Contributing", href: "/community" },
             socialProfiles.kitiplex,
+
           ],
         },
         {
           title: "Connect",
-          items: [socialProfiles.facebook, socialProfiles.linkedin,],
+          items: [socialProfiles.facebook, socialProfiles.linkedin, socialProfiles.github,],
         },
         {
           title: "Developers",

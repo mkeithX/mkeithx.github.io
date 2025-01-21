@@ -243,10 +243,11 @@ div[class^='announcementBar_'] button {
 
 .footer {
   text-align: center;
-
 }
 
-
+.footer .container {
+  max-width: 996px;
+}
 
 
 /* Video container styling */
