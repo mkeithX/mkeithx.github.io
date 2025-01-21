@@ -23,6 +23,7 @@ const sidebars: SidebarsConfig = {
       items: [
         'cli',
         'aka-ms',
+        'downloads',
         'mailbox-archive',
         {
           type: 'category',
