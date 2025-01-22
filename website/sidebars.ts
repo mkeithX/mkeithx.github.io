@@ -22,8 +22,8 @@ const sidebars: SidebarsConfig = {
       collapsed: false,
       items: [
         'cli',
-        'aka-ms',
         'downloads',
+        'aka-ms',
         'mailbox-archive',
         {
           type: 'category',

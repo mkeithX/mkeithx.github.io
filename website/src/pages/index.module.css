@@ -7,50 +7,43 @@
   padding: 40px 0;
 } */
 
-/* .container {
+.container {
   --ifm-container-width: 996px;
-} */
+}
 
 .heroBanner {
   padding: 6rem 0;
   overflow: hidden;
   text-align: left;
   position: relative;
-  /* margin: 0 auto; */
   background-color: var(--ifm-site-dark);
   display: flex;
   flex-direction: column;
-  /* height: auto; */
-  align-items: start;
-  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%); */
-  
+  align-items: flex-start;
 }
 
 
 .heroBannerTitle {
   font-size: 58px;
   font-weight: bold;
-  margin-bottom: 0.4rem;
+  margin: 2px 0 0.4rem;
 }
 
 @media only screen and (max-width: 768px) {
   .heroBannerTitle {
     padding: 1rem 0;
     font-size: 50px;
-    margin-bottom: 0.1rem;
+    font-weight: bold;
+    margin: 0.8px 0 2px;
   }
 }
 
-.heroBannerTitleText{
-  background: linear-gradient(
-    90deg,
-    #69e9d9 0%,
-    #1da1f2 50%,
-    #b070ff 100%
-  );
+.heroBannerTitleText {
+  background: linear-gradient(90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
+
 
 .heroBannerDescription {
   font-size: 22px;
@@ -68,16 +61,17 @@
   font-size: 24px;
   font-weight: 300;
 }
+
 @media only screen and (max-width: 768px) {
   .heroSubtitleText {
     font-size: 20px;
-    white-space: normal;
+    /* white-space: normal; */
   }
 }
 
 
 
-.buttons {
+/* .buttons {
   display: flex;
   justify-content: start;
   width: 100%;
@@ -85,10 +79,7 @@
   align-items: start;
   gap: 12px;
   background-color: #ffff;
-  /* border-radius: 18px; */
-  /* text-decoration: none !important; */
-  /* font-weight: normal; */
-}
+} */
 
 /*  */
 /* 
@@ -153,32 +144,32 @@
 
 
 
-
-/* 
-.btnCta {
-  font-size: 18px;
-  font-weight: bold;
-  } */
-
   .indexCtas {
     --ifm-button-size-multiplier: 1;
     display: flex;
     flex-wrap: wrap;
-    align-items: start;
-    justify-content: start;
+    align-items: flex-start;
+    justify-content: flex-start;
     margin-top: 24px;
-
   }
   
-  .indexCtas a, 
+  .indexCtas a,
   .indexCtas a:hover {
     background-color: var(--ifm-site-dark) !important;
-    color: #ffff !important;
+    color: #fff !important;
+    border: 2px solid #1da1f2;
+    transition: background-color 0.3s;
+    border-radius: 12px;
+    padding: 0.5rem 1.5rem; 
   }
   
   .indexCtas a:last-of-type {
-    margin: 0 12px;
+    margin: 0 0.75rem; /* 12px */
   }
+  .indexCtas a:hover {
+    background-color: #1da1f2 !important; /* Changing background color on hover for better interaction */
+  }
+  
   
   
 /* 
@@ -215,17 +206,16 @@
 
 .heroLogo {
   width: auto;
-  /* margin: 5px 30px; */
   height: auto;
-  /* margin: 0px 0; */
   float: right;
   display: flex;
-  transition: transform 0.6s;
-  
-  &:hover {
-    transform: scale(1.2) rotate(10deg);
-  }
+  transition: transform 0.6s ease-in-out;
 }
+
+.heroLogo:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
 
 /*   height: 200px;
   width: 250px;

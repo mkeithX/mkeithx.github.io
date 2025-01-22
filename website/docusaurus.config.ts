@@ -221,7 +221,7 @@ const config: Config = {
     image: "img/social-banner-astro.png",
     navbar: {
       style: "dark",
-      hideOnScroll: true,
+      hideOnScroll: false,
       title: "Andromeda",
       logo: {
         alt: "Andromeda",
