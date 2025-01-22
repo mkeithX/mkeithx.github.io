@@ -61,8 +61,8 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
-    hero_tagline: "For Software Development & Beyond...",
-    custom_header: "The SpaceHub Project",
+    hero_tagline: "for Software Development and More...",
+    custom_header: "The SpaceHub Project @Kitiplex",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
@@ -218,7 +218,7 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/banner/social-banner.png",
+    image: "img/social-banner-astro.png",
     navbar: {
       style: "dark",
       hideOnScroll: false,
@@ -318,6 +318,7 @@ const config: Config = {
     prism: {
       theme: PrismLight,
       darkTheme: PrismDark,
+      defaultLanguage: "tsx",
       additionalLanguages: [
         "powershell",
         "python",
