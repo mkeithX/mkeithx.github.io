@@ -16,7 +16,7 @@ const Page: React.FC = () => {
             "@type": "Website",
             name: "EasterEggs on SpaceHub",
             url: "https://mkeithx.pages.dev/",
-            logo: "https://mkeithx.pages.dev/img/rocket.svg",
+            logo: "https://mkeithx.pages.dev/img/nav-logo.svg",
           })}
         </script>
       </Head>
@@ -30,7 +30,7 @@ const Page: React.FC = () => {
           height: '100%',
           fontSize: '20px',
         }}
-        alt="A nice space-themed GIF" // Always include an alt attribute for accessibility
+        alt="A nice space-themed GIF" 
       />
     </Layout>
   );

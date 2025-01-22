@@ -52,7 +52,7 @@ function HomepageHeader(): JSX.Element {
             <span className={styles.heroBannerTitleText}>
             {hero_header}
             </span>
-            {/* <br></br>{"from mkeithX"} */}
+            {/* <br></br>{hero_tagline} */}
           </div>
           <div className={styles.heroSubtitle}>
           <span className={styles.heroSubtitleText}>
@@ -88,7 +88,7 @@ export default function Home(): JSX.Element {
       <main>
         {/* <TopBanner /> */}
         <HomepageHeader />
-        <div className={clsx(styles.section)}>
+        <div className={styles.section}>
         <HomepageFeatures />
         </div>
         {/* <FeatureBrands /> */}
