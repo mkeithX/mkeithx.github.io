@@ -218,7 +218,7 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/social-banner-astro.png",
+    image: "img/banner/social-banner.png",
     navbar: {
       style: "dark",
       hideOnScroll: false,
@@ -270,7 +270,7 @@ const config: Config = {
         },
 
 
-        { type: "search", position: "right", className: "DocSearch"},
+        { type: "search", position: "right"},
       ],
     },
     footer: {

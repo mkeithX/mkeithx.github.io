@@ -6,13 +6,6 @@
 
 /* You can override the default Infima variables here. */
 
-/* .flex-center--wrap {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: center;
-  justify-content: center;
-} */
-
 :root {
 
   --ifm-color-primary: #3578e5;
@@ -24,7 +17,7 @@
   --ifm-color-primary-lightest: #80aaef;
   --site-color-feedback-background: #f0f8ff;
   --ifm-code-font-size: 90%;
-  --ifm-font-size-base: 16px;
+  /* --ifm-font-size-base: 16px; */
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 500;
   --ifm-link-hover-decoration: none;
@@ -62,15 +55,15 @@
 }
 
 
-article p {
+/* article p {
   font-size: 16px;
   font-weight: 400;
-}
+} */
 
-article li {
+/* article li {
   font-size: 16px;
   font-weight: 400;
-}
+} */
 
 .navbar {
   background-color: var(--ifm-site-dark);
@@ -202,6 +195,13 @@ div[class^='announcementBar_'] button {
   height: 100px;
   margin-bottom: 1rem;
   margin-left: 5px;
+}
+
+.logoCard {
+  width: 120px;
+  height: 120px;
+  /* padding: auto; */
+  margin-bottom: 0.5rem;
 }
 
 /* GitHub link styling */
@@ -353,15 +353,6 @@ div[class^='announcementBar_'] button {
   );
 }
 
-/* .screen-reader-only {
-  clip: rect(0, 0, 0, 0);
-  height: 1px;
-  margin: -1px;
-  overflow: hidden;
-  position: absolute;
-  width: 1px;
-  white-space: nowrap;
-} */
 
 
 div.theme-admonition.theme-admonition-tip.alert.alert--success {

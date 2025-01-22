@@ -46,9 +46,9 @@ Quick solutions with practical code snippets, shared gists and more.
   },
   
   {
-    scale: 1.0,
+    scale: 0.8,
     title: "Code Made Easy",
-    Svg: require("@site/static/img/logo/terminal-no-slash.svg").default,
+    Svg: require("@site/static/img/rocket.svg").default,
     description: (
       <>
         Designed with developers in mind for a seamless experience.
@@ -59,7 +59,7 @@ Quick solutions with practical code snippets, shared gists and more.
   {
     scale: 1.0,
     title: "Built with React",
-    Svg: require("@site/static/img/logo/terminal-demo.svg").default,
+    Svg: require("@site/static/img/logo/react-logo.svg").default,
     description: (
       <>
         Experience a fast, dynamic interface powered by React for optimal performance.

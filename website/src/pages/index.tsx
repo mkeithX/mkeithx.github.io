@@ -88,7 +88,7 @@ export default function Home(): JSX.Element {
       <main>
         {/* <TopBanner /> */}
         <HomepageHeader />
-        <div className={clsx(styles.section)}>
+        <div className={styles.section}>
         <HomepageFeatures />
         </div>
         {/* <FeatureBrands /> */}
