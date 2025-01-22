@@ -17,6 +17,7 @@ import socialProfiles from './social';
 
 const copyright = `Copyright © ${new Date().getFullYear()} <br> Developed & Designed by Keith Tan`;
 
+
 const commonExclusions = {
   exclude: [
     "**/_*.{js,jsx,ts,tsx,md,mdx}",
@@ -220,14 +221,12 @@ const config: Config = {
     image: "img/social-banner-astro.png",
     navbar: {
       style: "dark",
-      hideOnScroll: true,
-      title: "SpaceHub",
+      hideOnScroll: false,
+      title: "Andromeda",
       logo: {
-        alt: "SpaceHub",
-        src: "img/rocket.svg",
+        alt: "Andromeda",
+        src: "img/nav-logo.svg",
         target: "_self",
-        width: "32",
-        height: "32",
       },
       items: [
         {
@@ -281,6 +280,7 @@ const config: Config = {
         src: "img/logo/spacehub-x-logo-light-test.png",
         href: "/",
         width: "330",
+        height: "30"
       },
       links: [
         {
@@ -297,11 +297,12 @@ const config: Config = {
             { label: "Updates", to: "/blog" },
             { label: "Contributing", href: "/community" },
             socialProfiles.kitiplex,
+
           ],
         },
         {
           title: "Connect",
-          items: [socialProfiles.facebook, socialProfiles.linkedin,],
+          items: [socialProfiles.facebook, socialProfiles.linkedin, socialProfiles.github,],
         },
         {
           title: "Developers",
