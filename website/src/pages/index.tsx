@@ -44,7 +44,7 @@ function HomepageHeader(): JSX.Element {
         />
         <div className={styles.heroSubtitle}>
           <span className={styles.heroSubTitleText}>
-            {"Explore"}
+            {"OpenSource"}
             </span>
         </div>
         <Heading as="h1">
@@ -64,12 +64,12 @@ function HomepageHeader(): JSX.Element {
           <Link
             className={clsx("button button--outline button--primary button--lg")}
             to={useBaseUrl('/docs')}>
-            {'Get Started'}
+            {'Explore'}
           </Link>
           <Link
             className={clsx("button button--secondary button--lg")}
             to="https://eyes.nasa.gov/apps/solar-system/#/home">
-            {'Solar System'}
+            {'Space'}
           </Link>
         </div>
       </div>
