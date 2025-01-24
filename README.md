@@ -7,25 +7,19 @@
   </h1>
 </div>
 
-This repo contains the configurations and source code powering the **SpaceHub Project** docs website.
+This repo contains the configurations and source code powering the **SpaceHub Project** docs [website](https://mkeithx.github.io).
 
 ## Motivation
 The project is part of an internal initiative at [Kitiplex](https://github.com/kitiplex) focusing on standard practices in software development. It emphasizes the importance of providing clear and comprehensive documentation for all projects.
 
 
-## Configs & Base Features
-> [!NOTE]  
-> This project is constantly updating and some functionalities may or may not work for you. 
-
-Organized as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md), this project also includes some [basic code examples](./examples/README.md) and includes examples. 
+## Configs overview
+Organized as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md), this project also includes some [basic code examples](./examples/python-starters/README.md) and includes examples. 
 
 ### Directory Structure
 
 ```
 mkeithx.github.io/
-+---.github
-|   +---ISSUE_TEMPLATE
-|   \---workflows
 +---examples
 +---public
 \---website
@@ -49,10 +43,11 @@ npx create-docusaurus@latest website classic --typescript
 For detailed installation instructions, please visit the [Docusaurus Installation Guide](https://docusaurus.io/docs/installation).
 
 ### Seach Indexing
-The search functionality powered by [Algolia DocSearch](https://docsearch.algolia.com) through custom crawlers configuration.
+The search functionality powered by [Algolia DocSearch](https://docsearch.algolia.com) using custom crawlers configuration.
 
-> [!NOTE]  
-> This project is continuously being updated, so some functionalities may not always work as expected.
+
+> [!IMPORTANT]  
+> This project is constantly updating and some functionalities may or may not work for you. 
 
 ## Contributing
 While the project is publicly available and contributions are welcome, we highly encourage future contributors to join **Kitiplex**! Joining us gets you:
