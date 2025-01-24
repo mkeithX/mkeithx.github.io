@@ -1,35 +1,77 @@
 <div align="center">
-  <h1 align="center">
+  <h1 align="left">
     <a href="https://mkeithx.github.io">
       <img src="./public/img/github-banner.png" alt="The SpaceHub Project">
     </a>
-<b>The SpaceHub Project</b>
+<b>SpaceHub Project</b>
   </h1>
 </div>
 
-This repository contains the configurations and source code for the **SpaceHub Project** documentation website.
+This repo contains the configurations and source code powering the **SpaceHub Project** docs website.
 
-## About the Project
-The SpaceHub Project aims to provide clear and comprehensive documentation to support the development team. Our goal is to establish best practices, tools, and workflows that enhance collaboration and streamline the software development process.
-
-## Configs `base`
-Organized as a monorepo, the website is built with [Docusaurus](https://docusaurus.io/docs/installation#scaffold-project-website) along with the search functionality powered by [Algolia DocSearch](https://docsearch.algolia.com/).
+## Motivation
+The project is part of an internal initiative at [Kitiplex](https://github.com/kitiplex) focusing on standard practices in software development. It emphasizes the importance of providing clear and comprehensive documentation for all projects.
 
 
+## Configs & Base Features
+> [!NOTE]  
+> This project is constantly updating and some functionalities may or may not work for you. 
+
+Organized as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md), this project also includes some [basic code examples](./examples/README.md) and includes examples. 
+
+### Directory Structure
+
+```
+mkeithx.github.io/
++---.github
+|   +---ISSUE_TEMPLATE
+|   \---workflows
++---examples
++---public
+\---website
+    +---blog
+    +---community
+    +---cosmos
+    +---docs
+    +---src
+    |   +---pages
+    |   +---plugins
+    |   +---theme
+    \---static
+    
+```
+### Build
+The website is built with the latest Docusaurus version and hosted on [Cloudflare](https://pages.cloudflare.com/).
+
+```
+npx create-docusaurus@latest website classic --typescript
+```
+For detailed installation instructions, please visit the [Docusaurus Installation Guide](https://docusaurus.io/docs/installation).
+
+### Seach Indexing
+The search functionality powered by [Algolia DocSearch](https://docsearch.algolia.com) through custom crawlers configuration.
+
+> [!NOTE]  
+> This project is continuously being updated, so some functionalities may not always work as expected.
 
 ## Contributing
-Contributions are welcome! We highly encourage future contributors to join **Kitiplex**. Learn more about contributing in this article.
+While the project is publicly available and contributions are welcome, we highly encourage future contributors to join **Kitiplex**! Joining us gets you:
 
-> [!IMPORTANT]  
-> This project is constantly updating and some functionalities may or may not work for you. 
+- [x] Access to a supportive community
+- [x] Additional resources and tools
+- [x] Collaborative opportunities
+- [x] Enhanced professional growth
+
+Learn more [how to get involved](https://mkeithx.github.io/community).
+
 
 <!-- > _A documentation website representing humanity from Dimension C-137 🚀_ -->
 
-<p align="center">
+<!-- <p align="center">
   <a href="#">
     <img src="https://skillicons.dev/icons?i=react,cloudflare,ts,githubactions,vscode" />
   </a>
-</p>
+</p> -->
 
 
 
