@@ -1,29 +1,35 @@
 <div align="center">
   <h1 align="center">
-    <a href="https://mkeithx.pages.dev">
-      <img src="./public/img/github-banner.png" alt="mkeithx">
+    <a href="https://mkeithx.github.io">
+      <img src="./public/img/github-banner.png" alt="The SpaceHub Project">
     </a>
+<b>The SpaceHub Project</b>
   </h1>
 </div>
 
-## Introduction
-**Welcome!** This repo contains the website configuration and documentation powering [**mkeithX website**](https://mkeithx.github.io).
+This repository contains the configurations and source code for the **SpaceHub Project** documentation website.
 
-## Motivation
-This website is part of the [**The SpaceHub Project**](https://mkeithx.pages.dev/docs) at [**Kitiplex**](https://github.com/kitiplex) focusing on creating an intuitive Knowledge Base Portal using powerful, low-maintenance technology, ensuring that content remains both accessible and reliable. It highlights the importance of effective documentation as a roadmap that guides users through the site's purpose, features, and functionalities.
+## About the Project
+The SpaceHub Project aims to provide clear and comprehensive documentation to support the development team. Our goal is to establish best practices, tools, and workflows that enhance collaboration and streamline the software development process.
 
-## Configuration
-**MKX SpaceHub**™ is powered by [**Docusaurus**](https://docusaurus.io/), a powerful static website generator, and hosted on [**Cloudflare**](https://developers.cloudflare.com/pages) for optimal performance and security. The main [configuration](https://mkeithx.pages.dev/docs/configs) file can be found in `website/docusaurus.config.ts`.
-
+## Configs `base`
+Organized as a monorepo, the website is built with [Docusaurus](https://docusaurus.io/docs/installation#scaffold-project-website) along with the search functionality powered by [Algolia DocSearch](https://docsearch.algolia.com/).
 
 
-
-<!-- ## Contents
-
-Apart from tech docs, you'll get to find articles covering fascinating topics about [the universe](../cosmos/). Ranging from our very own [solar system](https://mkeithx.github.io/cosmos), facts about [celestial mechanics](https://mkeithx.github.io/cosmos/astrophysics), some influential [figures in physics](https://mkeithx.github.io/cosmos/legacy), astronomy, and space exploration, and beyond. -->
 
 ## Contributing
-Contributions are welcome but we highly encourage future contributors to join [Kitiplex](https://github.com/kitiplex). More about contributing in [this article](https://mkeithx.pages.dev/community).
+Contributions are welcome! We highly encourage future contributors to join **Kitiplex**. Learn more about contributing in this article.
 
+> [!IMPORTANT]  
+> This project is constantly updating and some functionalities may or may not work for you. 
 
 <!-- > _A documentation website representing humanity from Dimension C-137 🚀_ -->
+
+<p align="center">
+  <a href="#">
+    <img src="https://skillicons.dev/icons?i=react,cloudflare,ts,githubactions,vscode" />
+  </a>
+</p>
+
+
+

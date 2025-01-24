@@ -30,7 +30,7 @@ type ProfileProps = {
   className?: string;
   name: string;
   subTitle: string;
-  //   children: ReactNode;
+  children: ReactNode;
   githubUrl: string;
   twitterUrl?: string;
 };
@@ -39,7 +39,7 @@ function TeamProfileCard({
   className,
   name,
   subTitle,
-  //   children,
+  children,
   githubUrl,
   twitterUrl,
 }: ProfileProps) {
@@ -59,7 +59,7 @@ function TeamProfileCard({
             </div>
           </div>
         </div>
-        {/* <div className="card__body">{children}</div> */}
+        <div className="card__body">{children}</div>
         <div className={clsx("card__footer")}>
           <div className="button-group button-group--block">
             {githubUrl && (
@@ -92,29 +92,39 @@ export function CoreTeamRow(): JSX.Element {
         name="Keith Tan"
         subTitle="Maintainer @ Kitiplex"
         githubUrl="https://github.com/mkeithX"
-        twitterUrl="https://twitter.com/mkeithtan"
-      >
-        {/* {"Building the web before bedtime."} */}
+        twitterUrl="https://twitter.com/mkeithtan" 
+        children={"Guides and Code Samples from Kitimi. Although written in python, the same principles can be applied to other programming language."}>
       </TeamProfileCardCol>
+      <TeamProfileCardCol
+        name="ayitsmeprincess"
+        subTitle="Contributor @ Kitiplex"
+        githubUrl="https://github.com/ayitsmeprincess"
+        twitterUrl="https://twitter.com/"         children={"Guides and Code Samples from Kitimi. Although written in python, the same principles can be applied to other programming language."}>
+      </TeamProfileCardCol>
+      <TeamProfileCardCol
+        name="Gina"
+        subTitle="Contributor @ Kitiplex"
+        githubUrl="https://github.com/botgina"
+        twitterUrl="https://twitter.com/" children={""}>
+        </TeamProfileCardCol>
       <TeamProfileCardCol
         name="Kean Ortiga"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/rkortiga"
-        twitterUrl="https://twitter.com/"
-      ></TeamProfileCardCol>
+        twitterUrl="https://twitter.com/" children={""}      >
+        </TeamProfileCardCol>
 
-      <TeamProfileCardCol
+      {/* <TeamProfileCardCol
         name="doorinel"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/doorinel"
         twitterUrl="https://twitter.com/"
-      ></TeamProfileCardCol>
+      ></TeamProfileCardCol> */}
       <TeamProfileCardCol
         name="PrimmieDoll"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/PrimmieDoll"
-        twitterUrl="https://twitter.com/"
-      >
+        twitterUrl="https://twitter.com/" children={""}      >
         {/* {"Building the web before bedtime."} */}
       </TeamProfileCardCol>
 
@@ -122,8 +132,7 @@ export function CoreTeamRow(): JSX.Element {
         name="Venice"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/Portiaporkshap"
-        twitterUrl="https://twitter.com/"
-      >
+        twitterUrl="https://twitter.com/" children={""}      >
         {/* {"Trust me I'm an engineer."} */}
       </TeamProfileCardCol>
 
@@ -131,31 +140,23 @@ export function CoreTeamRow(): JSX.Element {
         name="Joei"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/JoeiX"
-        twitterUrl="https://twitter.com/angajoei"
-      ></TeamProfileCardCol>
+        twitterUrl="https://twitter.com/angajoei" children={""}      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="PriMx"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/PriMaxima"
-        twitterUrl="https://twitter.com/"
-      >
+        twitterUrl="https://twitter.com/" children={""}      >
         {/* {"Teammate is about to update profile. Be right back!"} */}
       </TeamProfileCardCol>
 
-      <TeamProfileCardCol
-        name="Gina"
-        subTitle="Contributor @ Kitiplex"
-        githubUrl="https://github.com/botgina"
-        twitterUrl="https://twitter.com/"
-      ></TeamProfileCardCol>
+
 
       <TeamProfileCardCol
         name="Kiti"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/kitimi88"
-        twitterUrl="https://twitter.com/"
-      ></TeamProfileCardCol>
+        twitterUrl="https://twitter.com/" children={""}      ></TeamProfileCardCol>
 
 
     </div>
@@ -169,29 +170,25 @@ export function ContributorsTeamRow(): JSX.Element {
         name="Topsy"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/topsykretts8520"
-        twitterUrl="https://twitter.com/"
-      ></TeamProfileCardCol>
+        twitterUrl="https://twitter.com/" children={""}      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="MeganB"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/MeganB143"
-        twitterUrl="#"
-      ></TeamProfileCardCol>
+        twitterUrl="#" children={""}      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="Johanna Lorenz"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/JLorenz143"
-        twitterUrl="https://twitter.com/"
-      ></TeamProfileCardCol>
+        twitterUrl="https://twitter.com/" children={""}      ></TeamProfileCardCol>
 
       <TeamProfileCardCol
         name="Miriam G"
         subTitle="Contributor @ Kitiplex"
         githubUrl="https://github.com/MiriamG416"
-        twitterUrl="https://twitter.com/"
-      ></TeamProfileCardCol>
+        twitterUrl="https://twitter.com/" children={""}      ></TeamProfileCardCol>
     </div>
   );
 }

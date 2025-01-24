@@ -37,7 +37,7 @@ function HomepageHeader(): JSX.Element {
       className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
       <BannerLogo
-          className={clsx(styles.heroLogo)}
+          className={styles.heroLogo}
           title=""
           width={160}
           height={180}
