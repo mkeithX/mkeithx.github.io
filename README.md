@@ -14,7 +14,7 @@ The project is part of an internal initiative at [Kitiplex](https://github.com/k
 
 
 ## Configs overview
-Organized as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md), this project also includes some [basic code examples](./examples/python-starters/README.md) and includes examples. 
+Organized as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md), this project also includes some [basic code examples](./examples/python-starters/README.md). 
 
 ### Directory Structure
 
@@ -35,12 +35,12 @@ mkeithx.github.io/
     
 ```
 ### Build
-The website is built with the latest Docusaurus version and hosted on [Cloudflare](https://pages.cloudflare.com/).
+The website is built with the [latest Docusaurus](https://docusaurus.io/) version and hosted on [Cloudflare](https://pages.cloudflare.com/).
 
 ```
 npx create-docusaurus@latest website classic --typescript
 ```
-For detailed installation instructions, please visit the [Docusaurus Installation Guide](https://docusaurus.io/docs/installation).
+For detailed installation instructions, please visit the [installation guide](https://docusaurus.io/docs/installation).
 
 ### Seach Indexing
 The search functionality powered by [Algolia DocSearch](https://docsearch.algolia.com) using custom crawlers configuration.
