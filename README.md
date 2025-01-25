@@ -1,29 +1,72 @@
-<div align="center">
-  <h1 align="center">
-    <a href="https://mkeithx.pages.dev">
-      <img src="./public/img/github-banner.png" alt="mkeithx">
+<div align="left">
+  <h1 align="left">
+    <a href="https://mkeithx.github.io">
+      <img src="./website/static/img/banner/social-banner.png" target="_blank" alt="The SpaceHub Project" width="1920">
     </a>
+    <b>SpaceHub Project</b>
   </h1>
 </div>
 
-## Introduction
-**Welcome!** This repo contains the website configuration and documentation powering [**mkeithX website**](https://mkeithx.github.io).
+This repo contains the configurations and source code powering the **SpaceHub Project** docs [website](https://mkeithx.github.io).
 
-## Motivation
-This website is part of the [**The SpaceHub Project**](https://mkeithx.pages.dev/docs) at [**Kitiplex**](https://github.com/kitiplex) focusing on creating an intuitive Knowledge Base Portal using powerful, low-maintenance technology, ensuring that content remains both accessible and reliable. It highlights the importance of effective documentation as a roadmap that guides users through the site's purpose, features, and functionalities.
+## Overview
+
+The SpaceHub Project is part of an internal initiative at [Kitiplex](https://github.com/kitiplex) to set standard practices for software development. It focuses on making sure all projects have clear and comprehensive documentation.
+
+
 
 ## Configuration
-**MKX SpaceHub**™ is powered by [**Docusaurus**](https://docusaurus.io/), a powerful static website generator, and hosted on [**Cloudflare**](https://developers.cloudflare.com/pages) for optimal performance and security. The main [configuration](https://mkeithx.pages.dev/docs/configs) file can be found in `website/docusaurus.config.ts`.
+
+The SpaceHub Project website is a static site generated using the latest version of [Docusaurus](https://docusaurus.io/). It is organized as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md).
 
 
 
+```
+mkeithx.github.io/
++---examples
++---public
+\---website
+    +---blog
+    +---community
+    +---cosmos
+    +---docs
+    +---src
+    |   +---pages
+    |   +---plugins
+    |   +---theme
+    \---static
+```
 
-<!-- ## Contents
+### Installation
 
-Apart from tech docs, you'll get to find articles covering fascinating topics about [the universe](../cosmos/). Ranging from our very own [solar system](https://mkeithx.github.io/cosmos), facts about [celestial mechanics](https://mkeithx.github.io/cosmos/astrophysics), some influential [figures in physics](https://mkeithx.github.io/cosmos/legacy), astronomy, and space exploration, and beyond. -->
+Clone this repository to your desktop and run `npm install` to install all dependencies.
+
+> [!IMPORTANT]  
+> For local installation, it is assumed that you are familiar with how the site is built using [Docusaurus](https://docusaurus.io/docs/installation).
 
 ## Contributing
-Contributions are welcome but we highly encourage future contributors to join [Kitiplex](https://github.com/kitiplex). More about contributing in [this article](https://mkeithx.pages.dev/community).
+
+While this project is publicly available and contributions are welcome, we highly encourage future contributors to join **Kitiplex**! Joining us offers you:
+
+- [x] Access to a supportive community
+- [x] Additional resources and tools
+- [x] Collaborative opportunities
+
+> [!NOTE]  
+> This project is constantly being updated, and some features may not work as expected.
+
+Learn more about [how to get involved](https://mkeithx.github.io/community).
+
+
 
 
 <!-- > _A documentation website representing humanity from Dimension C-137 🚀_ -->
+
+<!-- <p align="center">
+  <a href="#">
+    <img src="https://skillicons.dev/icons?i=react,cloudflare,ts,githubactions,vscode" />
+  </a>
+</p> -->
+
+
+

@@ -97,6 +97,63 @@ View password properties
 </table>
 
 
+## Cache/Temp files
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+del /q /f /s %temp%\*
+```
+
+</td>
+<td>
+
+Delete temp files as `User`
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+del /s /q C:\Windows\temp\*
+```
+
+</td>
+<td>
+
+Delete temp files as `Administrator`
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+del /q /f /s %temp%\* && del /s /q C:\Windows\temp\*
+```
+
+</td>
+<td>
+
+Delete temp files both `Administrator and User`
+
+</td>
+</tr>
+
+
+</table>
+
+
+
 
 ## Management
 

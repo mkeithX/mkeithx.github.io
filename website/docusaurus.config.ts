@@ -40,8 +40,8 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "mkeithx",
-  tagline: "A Cosmic-Flavored Website for Software Development, Documentation and Beyond",
+  title: "MKX",
+  tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
   favicon: "icons/favicon/slash-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -50,6 +50,7 @@ const config: Config = {
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
+  titleDelimiter: '·',
   future: {
     experimental_faster: true,
   },
@@ -218,13 +219,13 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/social-banner-astro.png",
+    image: "img/banner/social-banner.png",
     navbar: {
       style: "dark",
       hideOnScroll: false,
-      title: "Andromeda",
+      title: "SpaceHub",
       logo: {
-        alt: "Andromeda",
+        alt: "SpaceHub",
         src: "img/nav-logo.svg",
         target: "_self",
       },
@@ -263,14 +264,14 @@ const config: Config = {
           ],
         },
         {
-          href: "https://github.com/mkeithX/mkeithx.github.io",
+          href: "https://github.com/mkeithX",
           position: "right",
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
 
 
-        { type: "search", position: "right"},
+        { type: "search", position: "right", className: "DocSearch"},
       ],
     },
     footer: {
@@ -330,10 +331,10 @@ const config: Config = {
       ],
     },
     metadata: [
-      { name: 'og:title', content: 'mkeithx' },
+      { name: 'og:title', content: 'MKX' },
       {
         name: 'og:description',
-        content: 'A Cosmic-Flavored Website for Software Development, Documentation and Beyond'
+        content: 'A cosmic-flavored website for Software Development, Documentation and more!'
       },
     ],
   } satisfies Preset.ThemeConfig,

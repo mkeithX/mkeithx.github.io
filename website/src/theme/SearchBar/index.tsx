@@ -32,4 +32,4 @@ export default function SearchBarWrapper(props: Props): ReactNode {
     </div>
   );
 }
-// export { default as SearchBar } from '@theme-original/SearchBar';
+export { default as SearchBar } from '@theme-original/SearchBar';
