@@ -40,8 +40,8 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "mkeithx",
-  tagline: "A Cosmic-Flavored Website for Software Development, Documentation and Beyond",
+  title: "MKX",
+  tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
   favicon: "icons/favicon/slash-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -219,13 +219,13 @@ const config: Config = {
       minHeadingLevel: 2,
       maxHeadingLevel: 5,
     },
-    image: "img/social-banner-astro.png",
+    image: "img/banner/social-banner.png",
     navbar: {
       style: "dark",
       hideOnScroll: false,
-      title: "Andromeda",
+      title: "SpaceHub",
       logo: {
-        alt: "Andromeda",
+        alt: "SpaceHub",
         src: "img/nav-logo.svg",
         target: "_self",
       },
@@ -331,10 +331,10 @@ const config: Config = {
       ],
     },
     metadata: [
-      { name: 'og:title', content: 'mkeithx' },
+      { name: 'og:title', content: 'MKX' },
       {
         name: 'og:description',
-        content: 'A Cosmic-Flavored Website for Software Development, Documentation and Beyond'
+        content: 'A cosmic-flavored website for Software Development, Documentation and more!'
       },
     ],
   } satisfies Preset.ThemeConfig,
