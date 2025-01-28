@@ -7,7 +7,6 @@
 /* You can override the default Infima variables here. */
 
 :root {
-
   --ifm-color-primary: #3578e5;
   --ifm-color-primary-dark: #1d68e1;
   --ifm-color-primary-darker: #1b62d4;
@@ -17,24 +16,14 @@
   --ifm-color-primary-lightest: #80aaef;
   --site-color-feedback-background: #f0f8ff;
   --ifm-code-font-size: 90%;
-  /* --ifm-font-size-base: 16px; */
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 500;
   --ifm-link-hover-decoration: none;
-
-
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
-
   --ifm-menu-color-active: var(--ifm-color-primary) !important;
-
-  /* --ifm-menu-color-background-active: var(--ifm-color-emphasis-100) !important; */
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
-  --ifm-menu-color-active: var(--ifm-color-primary-darker) !important;
-
-  /* --ifm-site-light: #f6f8fa; */
   --ifm-site-dark: #000000;
 }
-
 
 /* Dark theme overrides */
 [data-theme='dark'] {
@@ -45,26 +34,13 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
-
   --site-color-feedback-background: #2a2930;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-
   --ifm-background-surface-color: #0d1117 !important;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
-
 }
 
-
-/* article p {
-  font-size: 16px;
-  font-weight: 400;
-} */
-
-/* article li {
-  font-size: 16px;
-  font-weight: 400;
-} */
-
+/* Navbar */
 .navbar {
   background-color: var(--ifm-site-dark);
   align-items: center;
@@ -72,102 +48,38 @@
 }
 
 .navbar__brand {
-  margin-right: 2.0rem;
+  margin-right: 2rem;
   font-size: 17px;
   font-weight: 600;
   color: #1da1f2;
 }
 
-/* .navbar {
-  --ifm-navbar-link-hover-color: #1da1f2;
-} */
-/* .navbar .navbar__title {
-  font-weight: bold;
-  font-size: normal;
-  
-} */
-
 .navbar .navbar__items {
   flex: auto;
   align-items: center;
-  /* font-size: 16px; */
 }
-
 
 /* Header Dropdown Menu */
 .dropdown__link {
   font-size: inherit;
 }
 
-
-
-/* Dropdown separator styling */
 .dropdown-separator {
   margin: 0.3rem 0;
 }
 
+/* Hide navbar if not needed */
 html[data-navbar='false'] .navbar {
   display: none;
 }
 
-
-/* Content table container */
+/* Content Table */
 .contentTableContainer table {
   display: table;
   text-align: left;
   width: 100%;
   margin: 0;
 }
-
-/* Announcement Bar */
-
-div[class^='announcementBar'][role='banner'] {
-  /* border-bottom-color: var(--ifm-site-dark); */
-  border-bottom-color: #050606;
-}
-
-div[class^='announcementBar_'] {
-  font-weight: 700;
-  font-size: 14px;
-  background: var(--ifm-site-dark) !important;
-  /* background: linear-gradient(80deg, #d1ffeb, #1da1f2) !important; */
-  /* color: #fffdd1; */
-  color: #d1ffeb;
-
-}
-
-div[class^='announcementBar_'] a {
-  /* color: var(--ifm-site-dark) !important; */
-  text-decoration: none;
-  color: #ba82ff !important;
-  
-}
-
-div[class^='announcementBar_'] a:hover {
-  color: #d1ffeb !important;
-}
-
-div[class^='announcementBar_'] button {
-  color: #d1ffeb !important;
-}
-
-/* div[class^='announcementBar_'] {
-  font-weight: 650;
-
-  --site-announcement-bar-stripe-color1: #00ff84;
-  --site-announcement-bar-stripe-color2: #1da1f2;
-
-  background: repeating-linear-gradient(
-    35deg,
-    var(--site-announcement-bar-stripe-color1),
-    var(--site-announcement-bar-stripe-color1) 20px,
-    var(--site-announcement-bar-stripe-color2) 10px,
-    var(--site-announcement-bar-stripe-color2) 40px
-  );
-  font-weight: bold;
-} */
-
-
 
 .contentTableContainer th:first-child {
   width: 15%;
@@ -182,14 +94,32 @@ div[class^='announcementBar_'] button {
   text-align: left;
 }
 
-/* Winstore styling */
-.winstore {
-  width: 180px;
-  border-radius: 45px;
-  margin-bottom: 0rem;
+/* Announcement Bar */
+div[class^='announcementBar'][role='banner'] {
+  border-bottom-color: #050606;
 }
 
-/* Logo badge styling */
+div[class^='announcementBar_'] {
+  font-weight: 700;
+  font-size: 14px;
+  background: var(--ifm-site-dark) !important;
+  color: #d1ffeb;
+}
+
+div[class^='announcementBar_'] a {
+  text-decoration: none;
+  color: #ba82ff !important;
+}
+
+div[class^='announcementBar_'] a:hover {
+  color: #d1ffeb !important;
+}
+
+div[class^='announcementBar_'] button {
+  color: #d1ffeb !important;
+}
+
+/* Logo Badge Styling */
 .logoBadge {
   width: 200px;
   height: 100px;
@@ -200,12 +130,10 @@ div[class^='announcementBar_'] button {
 .logoCard {
   width: 120px;
   height: 120px;
-  /* padding: auto; */
   margin-bottom: 0.5rem;
 }
 
 /* GitHub link styling */
-
 .header-github-link::before {
   content: '';
   width: 24px;
@@ -220,12 +148,9 @@ div[class^='announcementBar_'] button {
   background-color: var(--ifm-navbar-link-hover-color);
 }
 
-
 /* Footer */
-
 .footer--dark {
   --ifm-footer-background-color: #25292e;
-  
 }
 
 .footer {
@@ -241,7 +166,6 @@ div[class^='announcementBar_'] button {
 }
 
 .footer .footer__item {
-  /* font-size: 14px; */
   padding: 8px 0 0;
   min-height: 30px;
 }
@@ -259,7 +183,6 @@ div[class^='announcementBar_'] button {
   padding-left: 0 !important;
 }
 
-
 .footer .footer__link-item {
   line-height: 1.3;
   display: inline-block;
@@ -270,16 +193,10 @@ div[class^='announcementBar_'] button {
 }
 
 .footer .footer__logo {
-  /* height: 54px; */
   max-width: 100%;
 }
 
-/* .footer svg[class^="iconExternalLink"] {
-  color: var(--subtle);
-  right: -1px;
-  width: 9px;
-} */
-
+/* Media Queries */
 @media only screen and (max-width: 996px) {
   .footer .footer__col {
     text-align: center;
@@ -302,8 +219,7 @@ div[class^='announcementBar_'] button {
   }
 }
 
-/* Video container */
-
+/* Video Container */
 .video-container {
   position: relative;
   overflow: hidden;
@@ -312,22 +228,16 @@ div[class^='announcementBar_'] button {
   margin: 0 auto;
 }
 
-
+/* DocSearch styling */
 [data-theme='light'] .DocSearch {
-  /* --docsearch-primary-color: var(--ifm-color-primary); */
-  /* --docsearch-text-color: var(--ifm-font-color-base); */
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(94, 100, 112, 0.7);
-  /* Modal */
   --docsearch-modal-background: var(--ifm-color-secondary-lighter);
-  /* Search box */
   --docsearch-searchbox-background: var(--ifm-color-secondary);
   --docsearch-searchbox-focus-background: var(--ifm-color-white);
-  /* Hit */
   --docsearch-hit-color: var(--ifm-font-color-base);
   --docsearch-hit-active-color: var(--ifm-color-white);
   --docsearch-hit-background: var(--ifm-color-white);
-  /* Footer */
   --docsearch-footer-background: var(--ifm-color-white);
 }
 
@@ -335,113 +245,63 @@ div[class^='announcementBar_'] button {
   --docsearch-text-color: var(--ifm-font-color-base);
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(47, 55, 69, 0.7);
-  /* Modal */
   --docsearch-modal-background: var(--ifm-background-color);
-  /* Search box */
   --docsearch-searchbox-background: var(--ifm-background-color);
   --docsearch-searchbox-focus-background: var(--ifm-color-black);
-  /* Hit */
   --docsearch-hit-color: var(--ifm-font-color-base);
   --docsearch-hit-active-color: var(--ifm-color-white);
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
-  /* Footer */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(
-    -26.5deg,
-    var(--ifm-color-emphasis-200) 0%,
-    var(--ifm-color-emphasis-100) 100%
-  );
+  --docsearch-key-gradient: linear-gradient(-26.5deg, var(--ifm-color-emphasis-200) 0%, var(--ifm-color-emphasis-100) 100%);
 }
 
-
-
-div.theme-admonition.theme-admonition-tip.alert.alert--success {
-  background-color: #9ccfd8;
-  border-color: #56949f;
-}
-
-html[data-theme="dark"] div.theme-admonition.theme-admonition-tip {
-  color: #102445;
-}
-
-html[data-theme="dark"] div.theme-admonition.theme-admonition-tip svg {
-  fill: #102445;
-}
-
-html[data-theme="dark"] div.theme-admonition.theme-admonition-tip a {
-  color: #102445;
-}
-
+/* Alert Styling */
 .alert--docusaurus {
   --ifm-alert-background-color: rgba(43, 253, 71, 0.5);
-  --ifm-alert-background-color-highlight: rgba(10, 133, 6, 0.15);
   --ifm-alert-foreground-color: rgb(65, 63, 63);
   --ifm-alert-border-color: #e5ff00;
 }
 
 html[data-theme='dark'] .alert--docusaurus {
-  --ifm-alert-background-color: rgba(43, 253, 71, 0.5);
-  --ifm-alert-background-color-highlight: rgba(10, 133, 6, 0.15);
   --ifm-alert-foreground-color: rgb(255, 255, 255);
-  --ifm-alert-border-color: #e5ff00;
 }
 
 .alert--release {
   --ifm-alert-background-color: rgba(114, 137, 218, 0.5);
-  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
   --ifm-alert-foreground-color: rgb(66, 69, 73);
   --ifm-alert-border-color: #5865F2;
 }
 
 html[data-theme='dark'] .alert--release {
-  --ifm-alert-background-color: rgba(114, 137, 218, 0.5);
-  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
   --ifm-alert-foreground-color: rgb(255, 255, 255);
-  --ifm-alert-border-color: #5865F2;
 }
-
 
 .alert--security {
   --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
-  --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
   --ifm-alert-foreground-color: rgb(66, 69, 73);
   --ifm-alert-border-color: #d4351c;
 }
 
 html[data-theme='dark'] .alert--security {
-  --ifm-alert-background-color: rgba(212, 53, 28, 0.5);
-  --ifm-alert-background-color-highlight: rgba(212, 53, 28, 0.15);
   --ifm-alert-foreground-color: rgb(255, 255, 255);
-  --ifm-alert-border-color: #d4351c;
 }
-
 
 .alert--credit {
   --ifm-alert-background-color: rgba(181, 127, 12, 0.5);
-  --ifm-alert-background-color-highlight: rgba(181, 127, 12, 0.15);
   --ifm-alert-foreground-color: rgb(66, 69, 73);
   --ifm-alert-border-color: #B57F0C;
 }
 
 html[data-theme='dark'] .alert--credit {
-  --ifm-alert-background-color: rgba(181, 127, 12, 0.5);
-  --ifm-alert-background-color-highlight: rgba(181, 127, 12, 0.15);
   --ifm-alert-foreground-color: rgb(255, 255, 255);
-  --ifm-alert-border-color: #B57F0C;
 }
-
 
 .alert--discord {
   --ifm-alert-background-color: rgba(114, 137, 218, 0.5);
-  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
   --ifm-alert-foreground-color: rgb(66, 69, 73);
   --ifm-alert-border-color: #5865F2;
 }
 
 html[data-theme='dark'] .alert--discord {
-  --ifm-alert-background-color: rgba(114, 137, 218, 0.5);
-  --ifm-alert-background-color-highlight: rgba(84, 199, 236, 0.15);
   --ifm-alert-foreground-color: rgb(255, 255, 255);
-  --ifm-alert-border-color: #5865F2;
 }
-

@@ -7,10 +7,12 @@
   padding: 40px 0;
 } */
 
+/* General Container */
 .container {
   --ifm-container-width: 996px;
 }
 
+/* Hero Banner */
 .heroBanner {
   padding: 6rem 0;
   overflow: hidden;
@@ -22,14 +24,13 @@
   align-items: flex-start;
 }
 
-
 .heroBannerTitle {
   font-size: 58px;
   font-weight: bold;
   margin: 2px 0 0.4rem;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .heroBannerTitle {
     padding: 1rem 0;
     font-size: 50px;
@@ -44,166 +45,69 @@
   -webkit-text-fill-color: transparent;
 }
 
-
 .heroBannerDescription {
   font-size: 22px;
 }
 
-@media only screen and (max-width: 786px) {
+@media (max-width: 786px) {
   .heroBannerDescription {
     font-size: 18px;
     white-space: normal;
   }
 }
 
-
 .heroSubtitle {
   font-size: 24px;
   font-weight: 300;
 }
 
-@media only screen and (max-width: 768px) {
+@media (max-width: 768px) {
   .heroSubtitleText {
     font-size: 20px;
-    /* white-space: normal; */
   }
 }
 
-
-
-/* .buttons {
-  display: flex;
-  justify-content: start;
-  width: 100%;
-  height: 100%;
-  align-items: start;
-  gap: 12px;
-  background-color: #ffff;
-} */
-
-/*  */
-/* 
-
-@media only screen and (max-width: 768px) {
-  .heroBannerTitle b {
-    font-size: 40px;
-    font-weight: bold;
-  }
-}
-.heroBannerTitle b {
-  color: transparent;
-  background: linear-gradient(
-    90deg,
-    #69e9d9 0%,
-    #1da1f2 50%,
-    #c061ff 100%
-  );
-  background-clip: text;
-  -webkit-text-fill-color: transparent;
-
-} */
-
-
-/* subtitle */
-
+/* Hero Subtitle Text */
 .heroSubTitleTextHtml {
   color: var(--ifm-color-emphasis) !important;
   text-align: start;
-  position: relative;
   font-size: 20px;
-  /* font-weight: 400; */
 }
-
-/* 
-
-.heroCustomSubTitleHtml b {
-  color: transparent;
-  background: linear-gradient(
-    90deg,
-    #d1ffeb 0%,
-    #39b3ff 50%,
-    #b070ff 100%
-  );
-  -webkit-background-clip: text;
-  background-clip: text;
-  font-size: 22px;
-}
-
-@media only screen and (max-width: 768px) {
-  .heroCustomSubTitleHtml {
-    font-size: 20px;
-
-  }
-} */
-
 
 .heroSubTitleTextHtml b {
   color: var(--ifm-color-primary);
   font-size: 20px;
 }
 
+/* Call-to-Action Buttons */
+.indexCtas {
+  --ifm-button-size-multiplier: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
 
+.indexCtas a,
+.indexCtas a:hover {
+  background-color: var(--ifm-site-dark) !important;
+  color: #fff !important;
+  border: 2px solid #1da1f2;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+}
 
-  .indexCtas {
-    --ifm-button-size-multiplier: 1;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: flex-start;
-    justify-content: flex-start;
-    margin-top: 24px;
-  }
-  
-  .indexCtas a,
-  .indexCtas a:hover {
-    background-color: var(--ifm-site-dark) !important;
-    color: #fff !important;
-    border: 2px solid #1da1f2;
-    transition: background-color 0.3s;
-    border-radius: 12px;
-    padding: 0.5rem 1.5rem; 
-  }
-  
-  .indexCtas a:last-of-type {
-    margin: 0 0.75rem; /* 12px */
-  }
-  .indexCtas a:hover {
-    background-color: #1da1f2 !important; /* Changing background color on hover for better interaction */
-  }
-  
-  
-  
-/* 
-.hero h1 {
-  font-size: 4rem;
-  padding-bottom: 1rem;
-} */
+.indexCtas a:last-of-type {
+  margin: 0 0.75rem;
+}
 
+.indexCtas a:hover {
+  background-color: #1da1f2 !important;
+}
 
-/* .heading {
-  font-weight: bold;
-  font-size: 20px;
-} */
-
-
-/* 
-.heroCustomTagline {
-  color: transparent;
-  background: linear-gradient(90deg, #fffdd1 0%, #7ce3b1 50%, #1da1f2 100%);
-  -webkit-text-fill-color: transparent;
-  background-clip: text;
-  font-weight: 600;
-  font-size: 20px;
-} */
-
-
-/* .heroLogo {
-  animation: kit-in-the-box infinite 60s linear;
-  float: right;
-  height: auto;
-  display: block;
-  pointer-events: none;
-} */
-
+/* Hero Logo */
 .heroLogo {
   width: auto;
   height: auto;
@@ -215,40 +119,3 @@
 .heroLogo:hover {
   transform: scale(1.2) rotate(10deg);
 }
-
-
-/*   height: 200px;
-  width: 250px;
-  margin: 16px 0;
-  transition: transform 0.3s;
-  &:hover {
-    transform: scale(1.1);
-  } */
-
-
-/* .heroTitleTextHtml b {
-  color: transparent;
-  background: linear-gradient(90deg, #1da1f2 0%, #00ff88 50%, #f6ff7f 100%);
-  background-clip: text;
-  font-weight: 700;
-} */
-
-
-
-
-
-/* @keyframes kit-in-the-box {
-  from {
-    transform: rotate(360deg) scale(1.3);
-  }
-  to {
-    transform: rotate(-360deg) scale(1.3);
-  }
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .heroBannerLogo {
-    animation: kit-in-the-box infinite 60s linear;
-  }
-} */
-
