@@ -78,28 +78,24 @@ const teamMembers = [
     githubUrl: "https://github.com/mkeithX",
     twitterUrl: "https://twitter.com/mkeithtan",
   },
-  {
-    name: "Venice",
-    subTitle: "Contributor @ Kitiplex",
-    githubUrl: "https://github.com/Portiaporkshap",
-    twitterUrl: "https://twitter.com/",
-  },
+
   {
     name: "Gina",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/botgina",
     twitterUrl: "https://twitter.com/",
   },
-  {
-    name: "Kiti",
-    subTitle: "Contributor @ Kitiplex",
-    githubUrl: "https://github.com/kitimi88",
-    twitterUrl: "https://twitter.com/",
-  },
+
 
 ];
 
 const contributors = [
+  {
+    name: "Dcst0301",
+    subTitle: "Contributor @ Kitiplex",
+    githubUrl: "https://github.com/Dcst0301",
+    twitterUrl: "https://twitter.com/",
+  },
   {
     name: "ayitsmeprincess",
     subTitle: "Contributor @ Kitiplex",
@@ -111,6 +107,12 @@ const contributors = [
     name: "Kean Ortiga",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/rkortiga",
+    twitterUrl: "https://twitter.com/",
+  },
+  {
+    name: "Venice",
+    subTitle: "Contributor @ Kitiplex",
+    githubUrl: "https://github.com/Portiaporkshap",
     twitterUrl: "https://twitter.com/",
   },
   {
@@ -154,6 +156,12 @@ const contributors = [
     name: "Miriam G",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/MiriamG416",
+    twitterUrl: "https://twitter.com/",
+  },
+  {
+    name: "Kiti",
+    subTitle: "Contributor @ Kitiplex",
+    githubUrl: "https://github.com/kitimi88",
     twitterUrl: "https://twitter.com/",
   },
 ];
