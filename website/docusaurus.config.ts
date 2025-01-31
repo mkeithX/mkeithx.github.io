@@ -269,10 +269,16 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
-
+        
 
         { type: "search", position: "right", className: "DocSearch"},
       ],
+    },
+    algolia:{
+      apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
+      indexName: "mkeithx",
+      appId: "XVSOLYZXNV",
+      contextualSearch: false
     },
     footer: {
       style: "dark",
