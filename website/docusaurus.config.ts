@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-const copyright = `Copyright © ${new Date().getFullYear()} <br> Developed & Designed by Keith Tan`;
+const copyright = `Copyright © ${new Date().getFullYear()} <br> Developed & Designed by <a href='https://github.com/mkeithx' target='_blank'>Keith Tan</a> for the SpaceHub Project at <a href='https://github.com/kitiplex' target='_blank'>Kitiplex</a>`;
 
 
 const commonExclusions = {

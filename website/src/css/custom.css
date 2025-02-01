@@ -305,3 +305,21 @@ html[data-theme='dark'] .alert--credit {
 html[data-theme='dark'] .alert--discord {
   --ifm-alert-foreground-color: rgb(255, 255, 255);
 }
+
+
+div.theme-admonition.theme-admonition-tip.alert.alert--success {
+  background-color: #9ccfd8;
+  border-color: #56949f;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-tip {
+  color: #102445;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-tip svg {
+  fill: #102445;
+}
+
+html[data-theme="dark"] div.theme-admonition.theme-admonition-tip a {
+  color: #102445;
+}
