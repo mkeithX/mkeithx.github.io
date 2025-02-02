@@ -236,6 +236,7 @@ const config: Config = {
           position: "left",
           items: [
             { type: "doc", docId: "introduction", label: "Guides", },
+            { type: "docSidebar", sidebarId: "tutorialSidebar", label: "Tutorials" },
             { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
           ]
         },
