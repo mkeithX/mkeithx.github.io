@@ -228,6 +228,8 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/nav-logo.svg",
         target: "_self",
+        // width: 80,
+        // height: 70
       },
       items: [
         {
