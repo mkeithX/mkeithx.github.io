@@ -23,11 +23,6 @@ const sidebars: SidebarsConfig = {
       label: 'More',
       collapsed: true,
       items: [
-        // {
-        //   type: 'link',
-        //   label: 'Showcase',
-        //   href: '/projects'
-        // },
         {
           type: 'link',
           label: 'Feature Requests',
