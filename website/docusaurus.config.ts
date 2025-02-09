@@ -42,7 +42,7 @@ const commonDocsConfig = {
 const config: Config = {
   title: "MKX",
   tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
-  favicon: "icons/favicon/slash-dark.ico",
+  favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
   organizationName: "mkeithX",
