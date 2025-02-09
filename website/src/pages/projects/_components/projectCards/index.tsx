@@ -4,16 +4,16 @@ export const dataDir: string = 'img/projects';
 
 export const projects: ProjectData[] = [
     {
+        title: "Python for Starters",
+        description: "Various python mini apps for starters.",
+        url: "/docs/examples/python",
+        image: `${dataDir}/default.png`,
+    },
+    {
         title: "django-crud-demo",
         description: "Demonstrating simple crud application built with Django.",
         url: "https://github.com/mkeithX/django-crud-demo",
         image: `${dataDir}/django-crud-demo.png`,
-    },
-    {
-        title: "Python Starters",
-        description: "Basic Python examples for starters.",
-        url: "https://github.com/mkeithX/python-starters",
-        image: `${dataDir}/default.png`,
     },
     {
         title: "Flask Tutorial - Demo",

@@ -33,7 +33,7 @@ const ProjectsHeader = (): JSX.Element => {
                 </Heading>
                 <div className={styles.heroSubtitle}>
                     <span className={styles.heroCustomSubTitleHtml}>
-                        {custom_projectDescription}
+                        {"Some projects"}
                         <br />
                     </span>
                 </div>
@@ -44,7 +44,7 @@ const ProjectsHeader = (): JSX.Element => {
 
 export default function Projects(): JSX.Element {
     return (
-        <Layout title="Projects" description="Explore my projects">
+        <Layout title="Projects" description="Explore some projects">
             <ProjectsHeader />
             <main className={clsx("container margin-vert--lg")}>
 
