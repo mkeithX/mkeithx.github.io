@@ -239,8 +239,9 @@ const config: Config = {
           items: [
             { type: "doc", docId: "introduction", label: "Guides", },
             { type: "docSidebar", sidebarId: "tutorialSidebar", label: "Tutorials" },
-            { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
-            { type: "docSidebar", sidebarId: "pythonStarters", label: "Python" },
+            { to: "/projects", label: "Showcase" },
+            // { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
+            // { type: "docSidebar", sidebarId: "pythonStarters", label: "Python" },
           ]
         },
         { to: "/cosmos", label: "Cosmos" },
