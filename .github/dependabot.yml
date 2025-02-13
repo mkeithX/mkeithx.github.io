@@ -28,8 +28,8 @@ updates:
   - package-ecosystem: 'npm'
     directory: '/website'
     schedule:
-      interval: 'weekly'
-    open-pull-requests-limit: 99
+      interval: 'daily'
+    open-pull-requests-limit: 0
     labels:
       - 'pr: dependencies'
     reviewers:

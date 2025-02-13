@@ -232,19 +232,17 @@ const config: Config = {
         // height: 70
       },
       items: [
-        {
-          type: "dropdown",
-          label: "Development",
-          position: "left",
-          items: [
-            { type: "doc", docId: "introduction", label: "Guides", },
-            { type: "docSidebar", sidebarId: "tutorialSidebar", label: "Tutorials" },
-            { to: "/projects", label: "Showcase" },
-            // { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
-            // { type: "docSidebar", sidebarId: "pythonStarters", label: "Python" },
-          ]
-        },
+        { type: "doc", docId: "introduction", label: "Docs", },
         { to: "/docs/learn", label: "Learn" },
+        // {
+        //   type: "dropdown",
+        //   label: "Development",
+        //   position: "left",
+        //   items: [
+        //     { type: "doc", docId: "introduction", label: "Guides", },
+        //     { to: "/docs/learn", label: "Learn" },
+        //   ]
+        // },
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
