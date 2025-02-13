@@ -244,6 +244,7 @@ const config: Config = {
             // { type: "docSidebar", sidebarId: "pythonStarters", label: "Python" },
           ]
         },
+        { to: "/docs/learn", label: "Learn" },
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
@@ -330,7 +331,7 @@ const config: Config = {
     prism: {
       theme: PrismLight,
       darkTheme: PrismDark,
-      defaultLanguage: "tsx",
+      // defaultLanguage: "tsx",
       additionalLanguages: [
         "powershell",
         "python",
