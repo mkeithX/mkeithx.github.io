@@ -4,6 +4,7 @@
     "position": 3,
     "link": {
         "type": "generated-index",
-        "description": "Learn Version Control"
+        "description": "Learn Version Control",
+        "slug": "/learn/git"
     }
 }
