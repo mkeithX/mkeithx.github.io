@@ -2,29 +2,36 @@
     "version": "0.2.0",
     "configurations": [
         {
-            "type": "node-terminal",
-            "name": "START",
+            "name": "Python Debug",
+            "type": "debugpy",
             "request": "launch",
-            "command": "npm run start",
+            "program": "${file}",
+            "console": "integratedTerminal"
+        },
+        {
+            "type": "node-terminal",
+            "name": "WEBSITE:START",
+            "request": "launch",
+            "command": "npm start",
             "cwd": "${workspaceFolder}\\website"
         },
         {
             "type": "node-terminal",
-            "name": "START:FAST",
+            "name": "WEBSITE:START:FAST",
             "request": "launch",
             "command": "npm run start:fast",
             "cwd": "${workspaceFolder}\\website"
         },
         {
             "type": "node-terminal",
-            "name": "SERVE:FAST",
+            "name": "WEBSITE:SERVE:FAST",
             "request": "launch",
             "command": "npm run serve:fast",
             "cwd": "${workspaceFolder}\\website"
         },
         {
             "type": "node-terminal",
-            "name": "Clear",
+            "name": "WEBSITE:CLEAR",
             "request": "launch",
             "command": "npm run clear",
             "cwd": "${workspaceFolder}\\website"

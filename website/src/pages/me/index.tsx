@@ -39,7 +39,7 @@ function This(): JSX.Element {
                             alt="ProfileAvatar" />
                         <div className="avatar__intro">
                             <Heading as="h1" className={clsx(styles.thisTitle)}>
-                                {title}
+                                {"mkeithX"}
                             </Heading>
                             <div className={clsx("avatar__subtitle")}>
                                 <span className={clsx(styles.thisSubtitle)}>{"about"}</span>
@@ -76,7 +76,7 @@ function This(): JSX.Element {
                                 <p>
                                     Thank you for visiting!
                                 </p>
-                                <p>
+                                {/* <p>
                                 <Link
                                     className="text--no-decoration"
                                     to="/feeling-lucky"
@@ -85,7 +85,7 @@ function This(): JSX.Element {
                                 >
                                     {"Keith"}
                                 </Link>
-                                </p>
+                                </p> */}
                             </div>
                         </div>
                     </div>
