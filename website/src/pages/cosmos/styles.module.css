@@ -44,3 +44,33 @@
 /* button {
     color: #d1ffeb !important;
   } */
+
+
+  
+/* Call-to-Action Buttons */
+.indexCtas {
+  --ifm-button-size-multiplier: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
+.indexCtas a,
+.indexCtas a:hover {
+  background-color: var(--ifm-site-dark) !important;
+  color: #ffffff !important;
+  border: 2px solid #1da1f2;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+}
+
+.indexCtas a:last-of-type {
+  margin: 0 0.75rem;
+}
+
+.indexCtas a:hover {
+  background-color: #1da1f2 !important;
+}

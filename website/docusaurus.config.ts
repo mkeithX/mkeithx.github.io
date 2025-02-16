@@ -62,7 +62,7 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
-    hero_tagline: "for Software Development and More...",
+    hero_tagline: "for Software Development and More",
     custom_header: "The SpaceHub Project @Kitiplex",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
@@ -212,7 +212,7 @@ const config: Config = {
       versionPersistence: 'localStorage',
       sidebar: {
         hideable: true,
-        autoCollapseCategories: false,
+        autoCollapseCategories: true,
       },
     },
     tableOfContents: {
@@ -329,15 +329,14 @@ const config: Config = {
     prism: {
       theme: PrismLight,
       darkTheme: PrismDark,
-      // defaultLanguage: "tsx",
       additionalLanguages: [
         "powershell",
         "python",
-        "java",
         "bash",
         "json",
         "batch",
         "yaml",
+        "tsx"
       ],
     },
     metadata: [

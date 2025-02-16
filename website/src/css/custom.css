@@ -23,6 +23,7 @@
   --ifm-menu-color-active: var(--ifm-color-primary) !important;
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
   --ifm-site-dark: #000000;
+  --ifm-background-surface-color: #0d1117 !important;
 }
 
 /* Dark theme overrides */
@@ -36,7 +37,7 @@
   --ifm-color-primary-lightest: #6ac1f6;
   --site-color-feedback-background: #2a2930;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-surface-color: #0d1117 !important;
+
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 }
 

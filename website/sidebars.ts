@@ -1,6 +1,4 @@
 import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
-import { dir } from "console";
-import { dirname } from "path";
 
 /**
  * Sidebar configuration for organized documentation.
@@ -105,7 +103,6 @@ const sidebars: SidebarsConfig = {
         },
 
         "devops/glossary",
-        // "devops/sdlc",
       ],
     },
 
@@ -147,7 +144,6 @@ const sidebars: SidebarsConfig = {
       ],
     },
   ],
-
   learnSidebar: [
     "learn",
     "software-development-lifecycle",
@@ -157,6 +153,7 @@ const sidebars: SidebarsConfig = {
     },
 
   ]
+
 
 
   // Example Sidebar (for demos or specific examples)

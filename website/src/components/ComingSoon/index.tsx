@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import Link from "@docusaurus/Link";
 import CTAButton from "@site/src/components/CTAButton";
 import GridFlexRow from "@site/src/components/GridFlexRow";
-import ComingSoonImageUrl from "@site/static/img/undraw_bug_fix.svg";
+import ComingSoonImageUrl from "@site/static/img/undraw_drone.svg";
 import clsx from "clsx";
 
 function ComingSoon() {
