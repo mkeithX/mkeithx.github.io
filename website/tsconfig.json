@@ -6,5 +6,6 @@
     "types": [
         "@cloudflare/workers-types"
     ]
-  }
+  },
+  "exclude": [".docusaurus", "build"]
 }

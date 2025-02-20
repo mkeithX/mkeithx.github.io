@@ -23,7 +23,7 @@ function CosmospageHeader(): JSX.Element {
                         {"Highlighting scientific discoveries, technological advancements, physics, astronomy, and space exploration."}
 
                     </span>
-                    <div className={clsx(styles.buttons, 'text--no-decoration margin-vert--md')}>
+                    <div className={clsx(styles.indexCtas, 'text--no-decoration margin-vert--md')}>
                         <Link
                             className={clsx("button button--secondary button--lg")}
                             to={useBaseUrl('/cosmos/timeline')}>
