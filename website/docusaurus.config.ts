@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan <br> Built for the <a href='https://github.com/kitiplex' target='_blank'>SpaceHub Project</a> at <a href='https://github.com/kitiplex' target='_blank'>Kitiplex</a>`;
+const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan <br> Built for the SpaceHub Project at <a href='https://github.com/kitiplex' target='_blank'>Kitiplex</a>`;
 
 
 const commonExclusions = {
@@ -246,11 +246,11 @@ const config: Config = {
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
-        // {
-        //   type: "html",
-        //   value: '<span class="badge badge--lg badge--secondary">Beta</span>',
-        //   position: 'right'
-        // },
+        {
+          type: "html",
+          value: '<span class="badge badge--secondary">Beta</span>',
+          position: 'right'
+        },
         {
           type: "dropdown",
           label: "More",
