@@ -1,11 +1,13 @@
 <div align="left">
   <h1 align="left">
     <a href="https://mkeithx.github.io">
-      <img src="./website/static/img/banner/social-banner.png" target="_blank" alt="The SpaceHub Project" width="1920">
+      <img src="./public/img/github-banner-new.png" target="_blank" alt="The SpaceHub Project">
     </a>
-    <b>SpaceHub Project</b>
+    <!-- <b>Welcome</b>! -->
   </h1>
 </div>
+
+
 
 This repo contains the configurations and source code powering the **SpaceHub Project** docs [website](https://mkeithx.github.io).
 

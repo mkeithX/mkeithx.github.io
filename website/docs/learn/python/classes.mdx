@@ -1,0 +1,102 @@
+---
+sidebar_position: 1
+---
+
+# Classes
+
+
+In Python, a class is a blueprint for creating objects (instances) that possess attributes (variables) and behaviors (methods). It serves as a template or prototype from which objects are instantiated.
+
+### Syntax
+
+The syntax for defining a class in Python:
+
+```python showLineNumbers
+class ClassName:
+    """Optional class docstring."""
+    
+    # Class-level attributes
+    class_variable = value
+    
+    def __init__(self, parameters):
+        # Instance attributes
+        self.instance_variable = parameters
+    
+    def method(self):
+        # Method definition
+        # Access instance variables with self
+        return something
+```
+
+- **`class`**: Keyword to define a class followed by `ClassName`.
+- **`__init__`**: Special method (constructor) called when creating an instance of the class.
+- **`self`**: Refers to the instance of the class and allows access to instance variables and methods.
+
+### Example
+
+```python showLineNumbers
+class Dog:
+    """A simple class representing a dog."""
+    
+    # Class-level attribute
+    species = "mammal"
+    
+    def __init__(self, name, age):
+        # Instance attributes
+        self.name = name
+        self.age = age
+    
+    def bark(self):
+        return "Woof!"
+    
+    def description(self):
+        return f"{self.name} is {self.age} years old."
+```
+
+### Creating Instances
+
+```python showLineNumbers
+# Create instances of the Dog class
+dog1 = Dog("Buddy", 5)
+dog2 = Dog("Milo", 3)
+
+# Access instance attributes and methods
+print(dog1.description())  # Output: Buddy is 5 years old.
+print(dog2.bark())         # Output: Woof!
+```
+
+## Attributes and Methods
+
+### Attributes
+
+Attributes are variables that hold data associated with a class and its instances. They can be class-level (shared among all instances) or instance-level (unique to each instance).
+
+### Methods
+
+Methods are functions defined within a class that perform operations on objects created from the class. They can access and modify instance attributes.
+
+## Inheritance
+
+Inheritance allows one class (subclass) to inherit attributes and methods from another class (superclass). It facilitates code reuse and enables hierarchical relationships between classes.
+
+### Example of Inheritance
+
+```python showLineNumbers
+class GoldenRetriever(Dog):
+    def fetch(self):
+        return "Fetching a ball!"
+```
+
+In this example, `GoldenRetriever` inherits from `Dog` and adds a new method `fetch`.
+
+## Best Practices for Using Classes
+
+1. **Naming Conventions**: Use CamelCase for class names (e.g., `ClassName`).
+   
+2. **Encapsulation**: Encapsulate data within classes using private attributes and methods (prefix with `_`).
+   
+3. **Documentation**: Include docstrings to describe class functionality, attributes, and methods.
+   
+4. **Single Responsibility Principle**: Design classes to have a single purpose or responsibility for better maintainability.
+   
+5. **Composition over Inheritance**: Prefer composition (using instances of other classes as attributes) over complex inheritance hierarchies.

@@ -24,6 +24,21 @@
   align-items: flex-start;
 }
 
+/* Hero Logo */
+.heroLogo {
+  /* width: auto; */
+  /* height: auto; */
+  float: right;
+  display: flex;
+  transition: transform 0.6s ease-in-out;
+}
+
+.heroLogo:hover {
+  transform: scale(1.2) rotate(10deg);
+}
+
+/*  */
+
 .heroBannerTitle {
   font-size: 58px;
   font-weight: bold;
@@ -34,18 +49,35 @@
   .heroBannerTitle {
     padding: 1rem 0;
     font-size: 50px;
-    font-weight: bold;
-    margin: 0.8px 0 2px;
+    margin: 0.8px 0 0.2rem;
   }
 }
 
 .heroBannerTitleText {
-  background: linear-gradient(90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
+  background: linear-gradient(
+    -90deg,
+    #8affff 0%,
+    #1da1f2 50%,
+    #b070ff 100%
+  );
   background-clip: text;
   -webkit-text-fill-color: transparent;
 }
 
-.heroBannerDescription {
+/* For future reference - Do not delete */
+
+/* html[data-theme='dark'] .heroBannerTitleText {
+  background: linear-gradient(
+    90deg,
+    #8affff 0%,
+    #5ac8fa 50%,
+    #b070ff  100%
+  );
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+} */
+
+/* .heroBannerDescription {
   font-size: 22px;
 }
 
@@ -54,7 +86,7 @@
     font-size: 18px;
     white-space: normal;
   }
-}
+} */
 
 .heroSubtitle {
   font-size: 24px;
@@ -63,7 +95,8 @@
 
 @media (max-width: 768px) {
   .heroSubtitleText {
-    font-size: 20px;
+    font-size: 22px;
+    white-space: normal;
   }
 }
 
@@ -92,7 +125,7 @@
 .indexCtas a,
 .indexCtas a:hover {
   background-color: var(--ifm-site-dark) !important;
-  color: #fff !important;
+  color: #ffffff !important;
   border: 2px solid #1da1f2;
   transition: background-color 0.3s;
   border-radius: 12px;
@@ -107,15 +140,3 @@
   background-color: #1da1f2 !important;
 }
 
-/* Hero Logo */
-.heroLogo {
-  width: auto;
-  height: auto;
-  float: right;
-  display: flex;
-  transition: transform 0.6s ease-in-out;
-}
-
-.heroLogo:hover {
-  transform: scale(1.2) rotate(10deg);
-}

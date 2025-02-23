@@ -50,9 +50,11 @@ function HomepageHeader(): JSX.Element {
         <Heading as="h1">
           <div className={styles.heroBannerTitle}>
             <span className={styles.heroBannerTitleText}>
-            {hero_header}
+              {hero_header}
+            {/* {"Guides"}<br></br>{"and Code Samples"} */}
             </span>
-            {/* <br></br>{hero_tagline} */}
+            <br></br>
+            {/* <b>{"from Kitimi"}</b> */}
           </div>
           <div className={styles.heroSubtitle}>
           <span className={styles.heroSubtitleText}>

@@ -23,6 +23,7 @@
   --ifm-menu-color-active: var(--ifm-color-primary) !important;
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
   --ifm-site-dark: #000000;
+
 }
 
 /* Dark theme overrides */
@@ -322,4 +323,10 @@ html[data-theme="dark"] div.theme-admonition.theme-admonition-tip svg {
 
 html[data-theme="dark"] div.theme-admonition.theme-admonition-tip a {
   color: #102445;
+}
+
+
+[data-theme='light'] img[src$='#gh-dark-mode-only'],
+[data-theme='dark'] img[src$='#gh-light-mode-only'] {
+  display: none;
 }

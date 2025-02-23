@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan <br> Built for the <a href='https://github.com/kitiplex' target='_blank'>SpaceHub Project</a> at <a href='https://github.com/kitiplex' target='_blank'>Kitiplex</a>`;
+const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan <br> Built for the SpaceHub Project at <a href='https://github.com/kitiplex' target='_blank'>Kitiplex</a>`;
 
 
 const commonExclusions = {
@@ -42,7 +42,7 @@ const commonDocsConfig = {
 const config: Config = {
   title: "MKX",
   tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
-  favicon: "icons/favicon/slash-dark.ico",
+  favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
   organizationName: "mkeithX",
@@ -62,7 +62,7 @@ const config: Config = {
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
-    hero_tagline: "for Software Development and More...",
+    hero_tagline: "for Software Development and More",
     custom_header: "The SpaceHub Project @Kitiplex",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
@@ -212,7 +212,7 @@ const config: Config = {
       versionPersistence: 'localStorage',
       sidebar: {
         hideable: true,
-        autoCollapseCategories: false,
+        autoCollapseCategories: true,
       },
     },
     tableOfContents: {
@@ -232,24 +232,25 @@ const config: Config = {
         // height: 70
       },
       items: [
-        {
-          type: "dropdown",
-          label: "Development",
-          position: "left",
-          items: [
-            { type: "doc", docId: "introduction", label: "Guides", },
-            { type: "docSidebar", sidebarId: "tutorialSidebar", label: "Tutorials" },
-            { type: "docSidebar", sidebarId: "exampleSidebar", label: "Examples" },
-          ]
-        },
+        { type: "doc", docId: "introduction", label: "Docs", },
+        { to: "/docs/learn", label: "Learn" },
+        // {
+        //   type: "dropdown",
+        //   label: "Development",
+        //   position: "left",
+        //   items: [
+        //     { type: "doc", docId: "introduction", label: "Guides", },
+        //     { to: "/docs/learn", label: "Learn" },
+        //   ]
+        // },
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
-        // {
-        //   type: "html",
-        //   value: '<span class="badge badge--lg badge--secondary">Beta</span>',
-        //   position: 'right'
-        // },
+        {
+          type: "html",
+          value: '<span class="badge badge--secondary">Beta</span>',
+          position: 'right'
+        },
         {
           type: "dropdown",
           label: "More",
@@ -328,15 +329,14 @@ const config: Config = {
     prism: {
       theme: PrismLight,
       darkTheme: PrismDark,
-      defaultLanguage: "tsx",
       additionalLanguages: [
         "powershell",
         "python",
-        "java",
         "bash",
         "json",
         "batch",
         "yaml",
+        "tsx"
       ],
     },
     metadata: [

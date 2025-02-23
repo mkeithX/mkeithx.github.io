@@ -20,36 +20,35 @@ A step by step guide that will tell you how to get the development environment u
 
 1. **Clone repository**
 
-```bash
-git clone https://github.com/mkeithX/mkeithx.github.io/tree/main/examples/python-starters.git
-```
+    ```bash
+    git clone https://github.com/mkeithX/mkeithx.github.io/tree/main/examples/python-starters.git
+    ```
 2. **Go to your project directory**
 
-```bash
-cd python-starters
-```
+    ```bash
+    cd python-starters
+    ```
 
 3. **Setup Virtual Environment**
 
 
-```bash
-py -m venv .venv
-```
+    ```bash
+    py -m venv .venv
+    ```
 
 4. **Activate Virtual Environment**
 
-```bash
-.venv\scripts\activate.ps1
-```
+    ```bash
+    .venv\scripts\activate.ps1
+    ```
 
 5. **Install dependencies**
 
-```py
-py -m pip install --upgrade -r requirements.txt
-```
+    ```py
+    py -m pip install --upgrade -r requirements.txt
+    ```
 
 
 
 ## Additional Documentation and Acknowledgments
 
-Read the [docs](https://mkeithx.github.io/docs/repo/python-starters) to learn more.
