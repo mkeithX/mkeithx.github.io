@@ -20,16 +20,16 @@ function CosmospageHeader(): JSX.Element {
                         {"Universe"}
                     </Heading>
                     <span className={clsx("hero__subtitle margin-left-x text--info text--light text--small")}>
-                        {"Highlighting scientific discoveries, technological advancements, physics, astronomy, and space exploration."}
+                        {"Physics, Astronomy and Space. "}<Link to={'/cosmos/timeline'}>{'Learn more.'}</Link>
 
                     </span>
-                    <div className={clsx(styles.indexCtas, 'text--no-decoration margin-vert--md')}>
+                    {/* <div className={clsx(styles.indexCtas, 'text--no-decoration margin-vert--md')}>
                         <Link
                             className={clsx("button button--secondary button--lg")}
                             to={useBaseUrl('/cosmos/timeline')}>
                             {'Get Started'}
                         </Link>
-                    </div>
+                    </div> */}
                 </div>
 
             </div>

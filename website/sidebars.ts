@@ -11,14 +11,13 @@ const sidebars: SidebarsConfig = {
 
     {
       type: "category",
-      label: "Getting Started",
+      label: "Quick Links",
       collapsed: false,
       items: [
         "cli",
         "downloads",
         "aka-ms",
         "mailbox-archive",
-
         {
           type: "category",
           label: "How-Tos",

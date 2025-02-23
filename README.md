@@ -1,11 +1,19 @@
-<div align="left">
-  <h1 align="left">
+<div align="center">
+  <h1 align="center">
     <a href="https://mkeithx.github.io">
-      <img src="./website/static/img/banner/social-banner.png" target="_blank" alt="The SpaceHub Project" width="1920">
+      <img src="./public/img/github-banner-new.png" target="_blank" alt="The SpaceHub Project">
     </a>
-    <b>SpaceHub Project</b>
+    The <b>SpaceHub Project</b>
   </h1>
 </div>
+
+<div align="center">
+
+![CI/CD Workflow](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/build-and-deploy.yml?style=for-the-badge&logo=github-actions&label=CI%2FCD&labelColor=%230d1117&color=%231da1f2)
+![Website](https://img.shields.io/website?url=https%3A%2F%2Fmkeithx.github.io%2F&style=for-the-badge&logo=cloudflare&labelColor=%230d1117&color=%231da1f2)
+
+</div>
+
 
 This repo contains the configurations and source code powering the **SpaceHub Project** docs [website](https://mkeithx.github.io).
 
