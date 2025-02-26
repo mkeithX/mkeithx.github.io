@@ -6,11 +6,13 @@ sidebar_label: CLI
 
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
-
+import WinTerminal from "@site/static/img/logo/Windows_Terminal_logo.svg";
 
 # Win Tools & Utils
 
-## Account
+<WinTerminal />
+
+## Local Account
 
 <table>
 
@@ -31,7 +33,7 @@ import TabItem from "@theme/TabItem";
 </td>
 <td>
 
-Enable/Disable Admin
+Enable/Disable Superadmin
 
 </td>
 </tr>
@@ -46,7 +48,7 @@ NET USER /add LocalAdmin "Secr3t"
 </td>
 <td>
 
-Add new user with password
+Add new user "_LocalAdmin_" with password
 
 </td>
 </tr>
@@ -55,13 +57,13 @@ Add new user with password
 <td>
 
 ```sh
-NET LOCALGROUP administrator Ella /add
+NET LOCALGROUP administrators LocalAdmin /add
 ```
 
 </td>
 <td>
 
-Add User to Local Administrator Group
+Add user "_LocalAdmin_" to Local Administrator Group
 
 </td>
 </tr>
@@ -98,65 +100,7 @@ View password properties
 </table>
 
 
-## Cache/Temp files
-<table>
-
-<tr>
-  <th>Command</th>
-  <th>Description</th>
-</tr>
-
-<tr>
-<td>
-
-```sh
-del /q /f /s %temp%\*
-```
-
-</td>
-<td>
-
-Delete temp files as `User`
-
-</td>
-</tr>
-
-<tr>
-<td>
-
-```sh
-del /s /q C:\Windows\temp\*
-```
-
-</td>
-<td>
-
-Delete temp files as `Administrator`
-
-</td>
-</tr>
-<tr>
-<td>
-
-```sh
-del /q /f /s %temp%\* && del /s /q C:\Windows\temp\*
-```
-
-</td>
-<td>
-
-Delete temp files both `Administrator and User`
-
-</td>
-</tr>
-
-
-</table>
-
-
-
-
-## Management
+## Device Management
 
 <div class="contentTableContainer">
 
@@ -607,6 +551,65 @@ System Properties Control
 
 
 ## Misc.
+
+
+### Cache/Temp files
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+del /q /f /s %temp%\*
+```
+
+</td>
+<td>
+
+Delete temp files as `User`
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+del /s /q C:\Windows\temp\*
+```
+
+</td>
+<td>
+
+Delete temp files as `Administrator`
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+del /q /f /s %temp%\* && del /s /q C:\Windows\temp\*
+```
+
+</td>
+<td>
+
+Delete temp files both `Administrator and User`
+
+</td>
+</tr>
+
+
+</table>
+
+
+
 
 ### URIs
 
