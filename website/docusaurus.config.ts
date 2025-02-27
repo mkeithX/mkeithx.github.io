@@ -289,8 +289,8 @@ const config: Config = {
           title: "Docs",
           items: [
             { label: "Gists", to: "/docs/gists" },
-            { label: "DevOps", to: "https://dev.azure.com/kitiplex" },
-            { label: "Keyword", to: "/docs" },
+            { label: "MS Portals", to: "/docs/aka-ms" },
+            { label: "Astro Stuff", to: "/cosmos/astrophysics" },
           ],
         },
         {
@@ -311,7 +311,7 @@ const config: Config = {
           items: [
             socialProfiles.m365dev,
             socialProfiles.cloudflare,
-            socialProfiles.metadev,
+            socialProfiles.azSpaceHub,
           ],
         },
       ],

@@ -17,7 +17,6 @@
     "start:fast": "npm start -- --host 0.0.0.0 --no-open",
     "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
     "build:local": "docusaurus build && docusaurus serve",
-    "deploy:cloudflare": "npm run build && wrangler pages deploy ./build",
     "purge": "pwsh -Command \"@('node_modules','.yarn','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue\""
   },
   "dependencies": {
@@ -52,7 +51,6 @@
     "@docusaurus/tsconfig": "3.7.0",
     "@docusaurus/types": "3.7.0",
     "typescript": "5.7.3",
-    "wrangler": "3.109.2",
     "@dotenvx/dotenvx": "1.36.0"
   },
   "browserslist": {

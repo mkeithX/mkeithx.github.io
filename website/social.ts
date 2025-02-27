@@ -28,6 +28,10 @@ const socialProfiles: Record<string, SocialProfile> = {
     label: "Login",
     href: "https://aka.ms/my-account"
   },
+  azSpaceHub: {
+    label: "Azure",
+    href: "https://dev.azure.com/kitiplex/spacehub",
+  },
   crawlers: {
     label: "Algolia",
     href: "https://crawler.algolia.com/admin"
