@@ -20,7 +20,7 @@ function CosmospageHeader(): JSX.Element {
                         {"Universe"}
                     </Heading>
                     <span className={clsx(styles.cosmosBody,"hero__subtitle margin-left-x text--light text--small")}>
-                        {"Physics, Astronomy and Space. "}<Link className={styles.indexCtas} to={'/cosmos/timeline'}>{'Learn more.'}</Link>
+                        {"Space stuff for nerds."}<Link className={styles.indexCtas} to={'/cosmos/timeline'}>{' Learn more.'}</Link>
 
                     </span>
                     {/* <div className={clsx(styles.indexCtas, 'text--no-decoration margin-vert--md')}>
