@@ -5,7 +5,7 @@ import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import BannerLogo from '@site/static/img/astro.svg';
-import React from 'react';
+import React, { JSX } from 'react';
 import TopBanner from '@site/src/components/TopBanner';
 import FeatureBrands from '@site/src/components/FeatureBrands';
 import styles from './index.module.css';

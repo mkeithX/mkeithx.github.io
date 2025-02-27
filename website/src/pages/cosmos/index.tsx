@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from "react";
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";
@@ -14,13 +14,14 @@ function CosmospageHeader(): JSX.Element {
             <div className={clsx(styles.cosmosHead, "hero hero--dark")}>
                 <div className="container">
                     <div className="hero__subtitle">
-                        <span className={clsx(styles.heroSubTitleTextHtml, "text--light")}>{'The'}</span>
+                        <span className={clsx("text--light")}>{'The'}</span>
                     </div>
                     <Heading as="h1" className={clsx(styles.cosmosTitle)}>
                         {"Universe"}
                     </Heading>
-                    <span className={clsx("hero__subtitle margin-left-x text--info text--light text--small")}>
-                        {"Physics, Astronomy and Space. "}<Link to={'/cosmos/timeline'}>{'Learn more.'}</Link>
+                    <span className={clsx(styles.cosmosBody, "hero__subtitle margin-left-x text--light text--small")}>
+                        {"From Quarks to Black Holes."}
+                        <Link className={styles.indexCtas} to={'/cosmos/timeline'}>{' Start here'}</Link>{"."}
 
                     </span>
                     {/* <div className={clsx(styles.indexCtas, 'text--no-decoration margin-vert--md')}>
@@ -48,7 +49,7 @@ function CosmospageHeader(): JSX.Element {
 export default function Cosmos(): JSX.Element {
 
     return (
-        <Layout title="Cosmos" description="Articles about scientific discoveries, technological advances, physics, astronomy, and space exploration.">
+        <Layout title="The Universe" description="From Quarks to Black Holes and Beyond">
             <CosmospageHeader />
 
         </Layout>

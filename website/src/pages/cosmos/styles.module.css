@@ -2,11 +2,12 @@
     background-color: var(--ifm-site-dark) !important;
     flex-direction: column;
     /* padding: 3.6rem 0 1rem; */
+    padding: 6rem 0;
 }
 
 .cosmosTitle {
-    font-size: 50px;
-    font-weight: bold;
+    font-size: 60px;
+    font-weight: 600;
     /* margin-bottom: 0.4rem; */
 }
 
@@ -14,22 +15,18 @@
 .cosmosBody {
     /* background-color: var(--ifm-color-primary) !important; */
     background-color: var(--ifm-site-dark) !important;
-    flex-direction: column;
-    font-size: 20px;
+    /* flex-direction: column; */
+    font-size: 28px;
     font-weight: 300;
 }
 
-.buttons {
-    display: flex;
-    justify-content: start;
-    width:fit-content;
-    height: 100%;
-    align-items: start;
-    gap: 12px;
-    /* border-radius: 18px; */
-    /* text-decoration: none !important; */
-    font-weight: normal;
+@media (max-width: 768px) {
+  .cosmosBody {
+    font-size: 26px;
+    white-space: normal;
   }
+}
+
 
   /* a {
     text-decoration: none;
@@ -49,28 +46,14 @@
   
 /* Call-to-Action Buttons */
 .indexCtas {
-  --ifm-button-size-multiplier: 1;
-  display: flex;
+  /* --ifm-button-size-multiplier: 1; */
+  /* display: flex; */
   flex-wrap: wrap;
   align-items: flex-start;
-  justify-content: flex-start;
-  margin-top: 24px;
+  color: #1da1f2 !important;
 }
 
-.indexCtas a,
-.indexCtas a:hover {
-  background-color: var(--ifm-site-dark) !important;
-  color: #ffffff !important;
-  border: 2px solid #1da1f2;
-  transition: background-color 0.3s;
-  border-radius: 12px;
-  padding: 0.5rem 1.5rem;
-}
-
-.indexCtas a:last-of-type {
-  margin: 0 0.75rem;
-}
 
 .indexCtas a:hover {
-  background-color: #1da1f2 !important;
+  color: #ffffff;
 }

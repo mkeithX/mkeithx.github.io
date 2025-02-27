@@ -4,7 +4,7 @@ import styles from "./styles.module.css";
 import Link from "@docusaurus/Link";
 import CTAButton from "@site/src/components/CTAButton";
 import GridFlexRow from "@site/src/components/GridFlexRow";
-import ComingSoonImageUrl from "@site/static/img/undraw_drone.svg";
+import ComingSoonImageUrl from "@site/static/img/undraw_towing.svg";
 import clsx from "clsx";
 
 function ComingSoon() {
@@ -35,11 +35,11 @@ return (
               alignItems: 'center',
               textAlign: 'center',
             }}>
-              <h2 style={{color: 'var(--ifm-color-primary)', fontSize: '48px', textAlign: 'center'}}>
-               {"Rolling out soon"}
+              <h2 style={{color: 'var(--ifm-color-primary)', fontSize: '46px', fontWeight: 600, textAlign: 'center'}}>
+               {"Rolling out soon!"}
               </h2>
-              <h3>{"Exciting things are on the way!"}</h3>
-              {/* <h3>{"Stay tuned."}</h3> */}
+              {/* <h3>{"Exciting things are on the way!"}</h3> */}
+              <h3>{"Stay tuned."}</h3>
               {/* <GridFlexRow type={'evenly'}>
                 <CTAButton
                   href={'/'}
