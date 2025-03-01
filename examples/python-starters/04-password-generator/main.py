@@ -1,16 +1,16 @@
 import os
 import sys
-import random
+import secrets
 import string
 
 def generate_password(complexity,length):
     while True:
         
-        if complexity == '1': # weak
+        if complexity == '1':
             characters = string.ascii_letters
-        elif complexity == '2': # medium
+        elif complexity == '2':
             characters = string.ascii_letters + string.digits
-        elif complexity == '3': # strong
+        elif complexity == '3':
             characters = string.ascii_letters + string.digits + string.punctuation
         elif complexity == '4':
             print('\nThank you and have a great day!\n')
@@ -20,13 +20,13 @@ def generate_password(complexity,length):
             print('\nError: Invalid Choice.')
             break
 
-        password = ''.join(random.choice(characters) for _ in range(length))
+        password = ''.join(secrets.choice(characters) for _ in range(length))
         return password
 
 def user_input():
     while True:
         try:
-            length = int(input("\nEnter password length (min. 8 max. 64): "))
+            length = int(input("Preferred password length (min. 8 max. 64): "))
             break
         except ValueError:
             print('\nError: Password length must be a number.\n')
@@ -36,11 +36,10 @@ def user_input():
         print('\nError: Invalid range.\n')
         return
 
-    print("Select complexity level:")
+    print("Select complexity level or [4] to quit:")
     print("[1] Weak")
     print("[2] Medium")
     print("[3] Strong")
-    print("[4] Quit")
     choice_complexity = input('Your choice: ')
     
     if choice_complexity not in ("1","2","3","4"):
