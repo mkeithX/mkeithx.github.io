@@ -20,8 +20,9 @@ workplace:
   description: "A page dedicated to my colleagues"
   label: Workplace
   permalink: /workplace
+user_story:
+  description: "A user story from The SpaceHub project in AzureDevops"
+  label: User story
+  permalink: /user-story
 mkeithX:
   label: mkeithX
-
-
-# TODO #265 remove all unused tags
