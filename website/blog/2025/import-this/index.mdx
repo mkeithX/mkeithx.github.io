@@ -2,7 +2,7 @@
 title: The Zen of Python
 description: Aphorisms that capture Python's philosophy
 authors: mkeithx
-date: 2025-03-01
+date: 2025-03-02
 slug: /updates/import-this
 image: ./img/import-this.png
 tags: [user_story, facts]
@@ -16,7 +16,7 @@ import BrowserWindow from '@site/src/components/BrowserWindow';
 
 ![import-this](./img/import-this.png)
 
-In this post, we'll explore a set of principles, along with simple definitions and examples, that will help us write better code. 
+The **Zen of Python** is a set of guiding principles for writing Pythonic code. In this post, we'll explore each of the 19 aphorisms with simple explanations and practical examples.
 
 **Let's go SAGO!** 😆
 
@@ -27,7 +27,7 @@ In this post, we'll explore a set of principles, along with simple definitions a
 
 :::tip[Know this]
 
-For starters, the Zen of Python is not just a set of guiding principles; it's also a fun [Easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) hidden within Python itself. 
+For starters, the Zen of Python - authored by [Tim Peters](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer)) - is not just a set of guiding principles; it's also a fun [Easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) hidden within Python itself. 
 
 :::
 
@@ -84,168 +84,158 @@ If you run into issues, it's likely that Python is not installed on your machine
 
 ## `import this`
 
-### **_Beautiful is better than ugly_**
+### Beautiful is better than ugly
 
 <details>
-<summary>Clean, readable code is easier to understand and maintain.</summary>
+<summary>Code for humans.</summary>
 
+Clean, readable code is easier to understand and maintain.
 
-* **Beauty**
+* **❌ Bad**
     ```python
-    def calculate_area(radius):
-        return 3.14 * radius ** 2
+    def f(x): return x*x + 2*x + 1
     ```
-* **Ugly**
+* **✅ Good:**
     ```python
-    def calcArea(r): 
-        return 3.14*r*r
+    def quadratic(x):
+        return x * x + 2 * x + 1
     ```
 </details>
 
-### **_Explicit is better than implicit_**
+### Explicit is better than implicit
 
 <details>
 <summary>Make it obvious.</summary>
 
-Avoid hidden meanings and ensure that the purpose of the code is obvious.
+Avoid hidden meanings and ensure that the purpose of the code is obvious. Clear code is easier to understand than clever shortcuts.
 
-* **Explicit**
+* **❌ Bad**
     ```python
-    import datetime
-    current_date = datetime.datetime.now()
+    from math import *  # What is being imported?
     ```
-* **Implicit**
+* **✅ Good**
     ```python
-    from datetime import *
-    current_date = now()
+    from math import sqrt, pi  # Explicit and clear
     ```
 
 </details>
 
 
-### **_Simple is better than complex_**
+### Simple is better than complex
 
 <details>
-<summary>Simplicity leads to better code.</summary>
+<summary>Avoid unnecessary complexity.</summary>
 
- Complex solutions should only be used when absolutely necessary.
+Complex solutions should only be used when absolutely necessary. Simplicity leads to better code.
 
-* **Simple**
+* **❌ Complicated**
+    ```python
+    def add(a, b): 
+        return (lambda x, y: x + y)(a, b)
+    ```
+* **✅ Simplified**
     ```python
     def add(a, b):
         return a + b
     ```
-* **Complex**
+
+</details>
+
+
+
+
+### Complex is better than complicated
+
+<details>
+<summary>If complexity is necessary, structure it well.</summary>
+
+Code should be well-structured and understandable, not convoluted or confusing.
+
+
+* **❌ Complicated**
     ```python
-    def add(a, b):
-        result = 0
-        for i in range(a):
-            result += 1
-        for i in range(b):
-            result += 1
+    def factorial(n):
+        return 1 if n == 0 else n * factorial(n - 1)
+    ```
+* **✅ Complex but better**
+    ```python
+    def factorial(n):
+        result = 1
+        for i in range(1, n + 1):
+            result *= i
         return result
     ```
 
 </details>
 
 
-
-
-### **_Complex is better than complicated_**
+### Flat is better than nested
 
 <details>
-<summary>If complexity is unavoidable</summary>
-
-It should be well-structured and understandable, not convoluted or confusing.
-
-
-* **Complex**
-    ```python
-    def factorial(n):
-        if n == 0:
-            return 1
-        else:
-            return n * factorial(n-1)
-    ```
-* **Complicated**
-    ```python
-    def fact(n):
-        return 1 if n == 0 else n * fact(n-1)
-    ```
-
-</details>
-
-
-### **_Flat is better than nested_**
-
-<details>
-<summary>Avoid deep nesting of code structures. </summary>
+<summary>Avoid deep nesting that makes code hard to follow.</summary>
 
 Flat code is easier to read and manage.
 
-* **Flat**
+* **❌ Bad**
     ```python
-    if condition1:
-        do_something()
-    elif condition2:
-        do_something_else()
+    if user:
+    if user.is_active:
+        if user.has_permission():
+            print("Access granted")
     ```
-* **Nested**
+* **✅ Good**
     ```python
-    if condition1:
-        if condition2:
-            do_something()
-        else:
-            do_something_else()
+    if user and user.is_active and user.has_permission():
+        print("Access granted")
     ```
 </details>
 
 
-### **_Sparse is better than dense_**
+### Sparse is better than dense
+
 <details>
-<summary>Spread out code with appropriate spacing. </summary>
+<summary>Whitespace improves readability.</summary>
 
-Dense code can be hard to read and understand.
+Dense code can be hard to read and understand. Spread out code with appropriate spacing. 
 
-* **Sparse**
+* **❌ Bad**
     ```python
-    def greet(name):
-        print(f"Hello, {name}!")
+    x=[1,2,3];y=4;z=x+y
     ```
-* **Dense**
+* **✅ Good**
     ```python
-    def greet(name):print(f"Hello, {name}!")
+    x = [1, 2, 3]
+    y = 4
+    z = x + y
     ```
 
 
 </details>
 
 
-### **_Readability counts_**
+### Readability counts
+
 <details>
 <summary>Code is read more often than it is written. </summary>
 
 Prioritize readability to make it easier for others (and yourself) to understand and maintain.
 
-* **Readable**
+* **❌ Less Readable**
     ```python
-    def calculate_sum(numbers):
-        total = 0
-        for number in numbers:
-            total += number
-        return total
+    def d(a,b,c):
+        return (a+b)*c
     ```
-* **Less Readable**
+* **✅ Readable**
     ```python
-    def calc_sum(nums):
-        return sum(nums)
+    def calculate(a, b, c):
+        return (a + b) * c
     ```
 
 
 </details>
 
 
-### **_Special cases aren't special enough to break the rules_**
+### Special cases aren't special enough to break the rules
 
 <details>
 <summary>Consistency is key.</summary>
@@ -272,12 +262,20 @@ Stick to the rules and conventions of the language, even for special cases.
 
 
 
-### **_Although practicality beats purity_**
+### Although practicality beats purity
 
 <details>
-<summary>While following best practices is important ...</summary>
+<summary>Sometimes, breaking a rule is okay for practical reasons.</summary>
 
-Practical solutions should take precedence when necessary.
+While following best practices is important, practical solutions should take precedence when necessary. Using `try-except` instead of checking every possible edge case:
+
+```python
+try:
+    value = int(user_input)
+except ValueError:
+    print("Invalid number")
+```
+**Comparison**
 
 * **Practical**
     ```python
@@ -295,60 +293,68 @@ Practical solutions should take precedence when necessary.
             return file.read()
     ```
 
+
 </details>
 
 
 
-### **_Errors should never pass silently_**
+### Errors should never pass silently
+
 <details>
-<summary>Errors should be handled properly. </summary>
+<summary>Handle errors explicitly.</summary>
 
 Ignoring errors can lead to unexpected behavior and bugs.
 
-* **Handling errors**
+* **❌ Bad**
     ```python
     try:
-        result = 10 / 0
-    except ZeroDivisionError as e:
+        risky_function()
+    except:
+        pass  # Silently ignores all errors
+    ```
+* **✅ Good**
+    ```python
+    try:
+        risky_function()
+    except Exception as e:
         print(f"Error: {e}")
     ```
-* **Silently passing errors**
-    ```python
-    try:
-        result = 10 / 0
-    except ZeroDivisionError:
-        pass
-    ```
 
 </details>
 
 
-### **_Unless explicitly silenced_**
+### Unless explicitly silenced
 <details>
-<summary>If an error must be ignored ...</summary>
+<summary>If ignoring an error is intentional, document it.</summary>
 
 
-it should be done explicitly and with good reason.
+If an error must be ignored, it should be done explicitly and with good reason.
 
     ```python
     try:
-        result = 10 / 0
-    except ZeroDivisionError:
-        result = None  # Explicitly handling the error
+        os.remove("foobar.txt")
+    except FileNotFoundError:
+        pass  # It's okay if the file doesn't exist
     ```
 </details>
 
 
 
-### **_In the face of ambiguity, refuse the temptation to guess_**
+### In the face of ambiguity, refuse the temptation to guess
 
 <details>
 <summary>Do not make assumptions.</summary>
 
 
-When code behavior is unclear, seek clarity and ensure the code's intent is explicit.
+Write clear logic rather than making assumptions. When code behavior is unclear, seek clarity and ensure the code's intent is explicit.
 
-* **Seeking clarity**
+
+* **❌ Guessing**
+    ```python
+    def get_user_age(user):
+        return user.get('age', 0)  # Assuming age is 0 if not found
+    ```
+* **✅ Seeking clarity**
     ```python
     def get_user_age(user):
         if 'age' in user:
@@ -356,91 +362,67 @@ When code behavior is unclear, seek clarity and ensure the code's intent is expl
         else:
             raise KeyError("User age not found")
     ```
-* **Guessing**
-    ```python
-    def get_user_age(user):
-        return user.get('age', 0)  # Assuming age is 0 if not found
-    ```
 </details>
 
 
 
-### **_There should be one—and preferably only one—obvious way to do it_**
+### There should be one—and preferably only one—obvious way to do it
 
 <details>
-<summary></summary>
+<summary>Clear and consistent.</summary>
 
 Python emphasizes having a single, clear way to accomplish a task, reducing confusion and increasing consistency.
 
-* **One obvious way**
+* **❌ Multiple ways (Confusing)**
     ```python
-    def square(x):
-        return x * x
+    import os
+    os.system("ls")  # One way
+    import subprocess
+    subprocess.run(["ls"])  # Another way
     ```
-* **Multiple ways**
+* **✅ Preferred**
     ```python
-    def square(x):
-        return x ** 2
-    ```
-
-</details>
-
-
-
-### **_Although that way may not be obvious at first unless you're Dutch_**
-<details>
-<summary>Not immediately obvious</summary>
-
-It suggests that the best way may not always be immediately apparent.
-
-    ```python
-    def reverse_string(s):
-        return s[::-1]  # Using slicing to reverse a string
+    import pathlib
+    print(list(pathlib.Path(".").iterdir()))
     ```
 
 </details>
 
 
 
-### **_Now is better than never_**
+### Although that way may not be obvious at first unless you're Dutch
+
+> A nod to Python’s creator, [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) (who is Dutch).
+
+
+### Now is better than never
+
 <details>
-<summary>Just do it.</summary>
+<summary>Don’t over-optimize; ship working code.</summary>
 
 
 It's better to take action and write code now rather than procrastinate.
 
-* **Taking action**
-    ```python
-    def start_project():
-        print("Project started")
+```python
+print("Launching Project...")
+```
 
-    start_project()
-    ```
 </details>
 
 
 
-### **_Although never is often better than *right* now_**
+### Although never is often better than *right* now
 
 <details>
-<summary>Careful consideration</summary>
+<summary>Don’t rush bad code—balance speed and quality.</summary>
 
-However, rushing to write code without proper thought can lead to poor quality. Balance urgency with careful consideration.
-
-    ```python
-    def start_project():
-        # Plan and design before starting
-        print("Project started after planning")
-
-    start_project()
-    ```
-
+Rushing to write code without proper thought can lead to poor quality. Balance urgency with careful consideration.
 
 </details>
 
 
 
-### **_If the implementation is hard to explain, it's a bad idea_**
+### If the implementation is hard to explain, it's a bad idea
 
 <details>
 <summary>Code should be simple enough to explain easily.</summary>
@@ -448,25 +430,20 @@ However, rushing to write code without proper thought can lead to poor quality. 
 
 If it's too complex to explain, it likely needs to be simplified.
 
-* **Easy to explain**
-    ```python
-    def add(a, b):
-        return a + b
-    ```
-* **Hard to explain**
-    ```python
-    def add(a, b):
-        result = 0
-        for i in range(a):
-            result += 1
-        for i in range(b):
-            result += 1
-        return result
-    ```
 
+* **❌ Difficult to explain**
+    ```python
+    def mystery(x):
+        return (x & (x - 1)) == 0
+    ```
+* **✅ Better**
+    ```python
+    def is_power_of_two(x):
+        return x > 0 and (x & (x - 1)) == 0
+    ```
 </details>
 
-### **_If the implementation is easy to explain, it may be a good idea_**
+### If the implementation is easy to explain, it may be a good idea
 
 <details>
 <summary>The value of simplicity and clarity in coding.</summary>
@@ -486,7 +463,7 @@ When an implementation is easy to explain, it usually means that the code is str
 
 
 
-### **_Namespaces are one honking great idea—let's do more of those!_**
+### Namespaces are one honking great idea—let's do more of those!
 
 <details>
 <summary>Using namespaces</summary>
@@ -504,12 +481,10 @@ Namespaces help organize code and avoid naming conflicts. Use them liberally to 
 
 ## References
 
-* [Tim Peters](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer))
-* [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum)
 * [PEP 20](https://peps.python.org/pep-0020/)
 * [Easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media))
 * [BDFL](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life)
 
 ---
 
-**'Thanks'!**
+**Happy coding!** 🚀
