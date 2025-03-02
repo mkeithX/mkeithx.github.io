@@ -1,24 +1,25 @@
 ---
-title: The Zen of Python
+title: PEP 20
 description: Aphorisms that capture Python's philosophy
 authors: mkeithx
 date: 2025-03-02
 slug: /updates/import-this
 image: ./img/import-this.png
 tags: [user_story, facts]
+sidebar_label: The Zen of Python
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 
-**Python's Philosophy**
+
+**The Zen of Python**
+
+In this post, let's talk about the 19 aphorisms along with simple definitions and practical examples.
 
 ![import-this](./img/import-this.png)
 
-The **Zen of Python** is a set of guiding principles for writing Pythonic code. In this post, we'll explore each of the 19 aphorisms with simple explanations and practical examples.
-
-**Let's go SAGO!** 😆
 
 
 {/* truncate */}
@@ -27,26 +28,23 @@ The **Zen of Python** is a set of guiding principles for writing Pythonic code. 
 
 :::tip[Know this]
 
-For starters, the Zen of Python - authored by [Tim Peters](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer)) - is not just a set of guiding principles; it's also a fun [Easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) hidden within Python itself. 
+The **Zen of Python**, authored by [Tim Peters](https://en.wikipedia.org/wiki/Tim_Peters_(software_engineer)), is both a set of guiding principles for writing Pythonic code and a fun [Easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media)) hidden within Python itself.
 
 :::
 
-To see the Zen of Python, follow these simple steps:
+To see Zen of Python, run either:
 
 <Tabs>
-  <TabItem value="pyscript" label="Python script" default>
-     You need to be in a Python environment (like a Python shell or a script) to run this command.
+  <TabItem value="pyscript" label="Python shell" default>
 
      ```python
      import this
      ```
   </TabItem>
-  <TabItem value="pyshell" label="Command line">
+  <TabItem value="pyshell" label="Terminal">
 
-  This runs a Python command directly from the command line without entering the Python interactive shell.
-    
     ```sh
-    py -c 'import this'
+    python -c 'import this'
     ```
 
   </TabItem>
@@ -77,7 +75,13 @@ Namespaces are one honking great idea -- let's do more of those!
 
 </pre>
 
+:::caution[important]
+
 If you run into issues, it's likely that Python is not installed on your machine. [Download it here](https://www.python.org/downloads/).
+
+:::
+
+
 
 
 ---
@@ -91,11 +95,12 @@ If you run into issues, it's likely that Python is not installed on your machine
 
 Clean, readable code is easier to understand and maintain.
 
-* **❌ Bad**
+* **⭕ Good**
     ```python
-    def f(x): return x*x + 2*x + 1
+    def f(x):
+        return x*x + 2*x + 1
     ```
-* **✅ Good:**
+* **✅ Better**
     ```python
     def quadratic(x):
         return x * x + 2 * x + 1
@@ -109,7 +114,7 @@ Clean, readable code is easier to understand and maintain.
 
 Avoid hidden meanings and ensure that the purpose of the code is obvious. Clear code is easier to understand than clever shortcuts.
 
-* **❌ Bad**
+* **⭕ Good**
     ```python
     from math import *  # What is being imported?
     ```
@@ -176,7 +181,7 @@ Code should be well-structured and understandable, not convoluted or confusing.
 
 Flat code is easier to read and manage.
 
-* **❌ Bad**
+* **⭕ Good**
     ```python
     if user:
     if user.is_active:
@@ -198,7 +203,7 @@ Flat code is easier to read and manage.
 
 Dense code can be hard to read and understand. Spread out code with appropriate spacing. 
 
-* **❌ Bad**
+* **⭕ Good**
     ```python
     x=[1,2,3];y=4;z=x+y
     ```
@@ -260,8 +265,6 @@ Stick to the rules and conventions of the language, even for special cases.
 </details>
 
 
-
-
 ### Although practicality beats purity
 
 <details>
@@ -305,7 +308,7 @@ except ValueError:
 
 Ignoring errors can lead to unexpected behavior and bugs.
 
-* **❌ Bad**
+* **⭕ Good**
     ```python
     try:
         risky_function()
@@ -392,7 +395,12 @@ Python emphasizes having a single, clear way to accomplish a task, reducing conf
 
 ### Although that way may not be obvious at first unless you're Dutch
 
-> A nod to Python’s creator, [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum) (who is Dutch).
+<details>
+<summary>Here's why</summary>
+
+Python might seem tricky at first, but it makes more sense once you get used to it, especially if you're familiar with its Dutch creator, [Guido van Rossum](https://en.wikipedia.org/wiki/Guido_van_Rossum).
+
+</details>
 
 
 ### Now is better than never
@@ -479,12 +487,14 @@ Namespaces help organize code and avoid naming conflicts. Use them liberally to 
 
 
 
-## References
+## Learn more!
 
-* [PEP 20](https://peps.python.org/pep-0020/)
+* [PEP](https://peps.python.org/)
+* [Index](https://peps.python.org/pep-0020/)
 * [Easter egg](https://en.wikipedia.org/wiki/Easter_egg_(media))
 * [BDFL](https://en.wikipedia.org/wiki/Benevolent_dictator_for_life)
 
 ---
 
 **Happy coding!** 🚀
+
