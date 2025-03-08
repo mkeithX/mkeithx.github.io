@@ -29,11 +29,13 @@ jobs:
 
       - name: Install Requirements
         run: |
-          cd examples/python-starters
+          cd examples/python-script-template
           python -m pip install --upgrade -r requirements.txt
 
-      - name: Run Python
+      - name: Run and Test
         run: |
-          cd examples/python-starters
-          python hello.py
+          cd examples/python-script-template
+          pytest
           python -c 'import this'
+      
+      
