@@ -1,0 +1,32 @@
+---
+title: Conditional Access
+description: Recommended Conditional Access Policies in Entra
+---
+
+# Conditional Access in EntraID
+
+Conditional Access in Entra helps control who can access your organization’s resources by setting rules based on specific conditions like user identity, location, device status, and more. This ensures secure access while protecting sensitive data.
+
+
+
+## Recommended Policies
+
+| **Policy**                                                               | **Assignments**                                             | **Conditions**                                                                                  | **Access**                                                                                              |
+|--------------------------------------------------------------------------|------------------------------------------------------------|-------------------------------------------------------------------------------------------------|---------------------------------------------------------------------------------------------------------|
+| **Require Multifactor Authentication for Admins**                        | Administrators, Global Admins                              | None                                                                                             | Require Multi-Factor Authentication (MFA) for all admin sign-ins.                                      |
+| **Securing Security Info Registration**                                  | All Users                                                  | None                                                                                             | Require users to secure their security information (e.g., phone number, email) before registering for MFA. |
+| **Block Legacy Authentication**                                          | All Users or Specific Groups                               | None                                                                                             | Block access from legacy authentication methods (e.g., POP, IMAP, SMTP).                               |
+| **Require Multifactor Authentication for Admins Accessing Microsoft Admin Portals** | Administrators, Admin Roles                                | None                                                                                             | Require MFA for access to Microsoft admin portals (e.g., Microsoft 365 Admin Center).                  |
+| **Require Multifactor Authentication for All Users**                     | All Users                                                   | None                                                                                             | Require MFA for all user sign-ins to secure access to corporate resources.                             |
+| **Require Multifactor Authentication for Azure Management**             | Azure Administrators, Azure Roles                          | None                                                                                             | Enforce MFA for access to Azure management resources.                                                   |
+| **Require Compliant or Microsoft Entra Hybrid Joined Device or Multifactor Authentication for All Users** | All Users                                                   | Device Compliance (e.g., Compliant or Hybrid-joined devices) or MFA                              | Require either compliant or Microsoft Entra hybrid-joined devices, or MFA, for all users.               |
+| **Require Compliant Device**                                             | All Users or Specific Groups                               | Device Compliance (e.g., must be enrolled or compliant with organization’s security policies)     | Block or limit access from non-compliant or unmanaged devices.                                          |
+
+## Benefits of These Policies
+
+- **Improved Security**: Mitigate risks by enforcing multi-layered security controls, such as MFA, location-based policies, and device compliance.
+- **Adaptability**: Customize policies based on the type of user, device, and location to ensure access is granted only under safe conditions.
+- **Reduced Risk**: Prevent unauthorized access by using risk-based sign-ins, legacy authentication blocking, and location-based restrictions.
+
+
+
