@@ -13,6 +13,6 @@ const redirects: ClientRedirects.Options['redirects'] = [
   { from: '/docs/devops/troubleshoot/windows-hardware-issues', to: '/docs/how-tos/fix-windows-hardware-issues' },
   { from: '/docs/devops/guides-and-workarounds', to: '/docs/how-tos' },
   { from: ['/docs/tutorials', '/docs/examples'], to: '/docs/learn' },
-  { from: ['/test', '/dogfooding', 'dogfood'], to: '/tests' }
+  { from: ['/test', '/dogfooding', '/dogfood'], to: '/tests' }
 ];
 export default redirects;
