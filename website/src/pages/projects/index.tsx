@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { JSX } from 'react';
 import clsx from 'clsx';
 import { Project } from '@site/src/components/ProjectCards/Projects';
 import Layout from '@theme/Layout';
