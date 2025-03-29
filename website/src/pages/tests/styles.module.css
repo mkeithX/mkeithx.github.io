@@ -1,0 +1,38 @@
+.testsHead {
+    background-color: var(--ifm-site-dark) !important;
+    flex-direction: column;
+    padding: 6rem 0;
+}
+
+.testsTitle {
+    font-size: 60px;
+    font-weight: 600;
+}
+
+
+.testsBody {
+    background-color: var(--ifm-site-dark) !important;
+    font-size: 28px;
+    font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .testsBody {
+    font-size: 26px;
+    white-space: normal;
+  }
+}
+
+
+  
+/* Call-to-Action Buttons */
+.indexCtas {
+  flex-wrap: wrap;
+  align-items: flex-start;
+  color: #1da1f2 !important;
+}
+
+
+.indexCtas a:hover {
+  color: #ffffff;
+}

@@ -15,7 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target='_blank'>Keith Tan </a> <br> Built for the SpaceHub Project at <a href='https://github.com/kitiplex' target='_blank'>Kitiplex</a>`;
+const copyright = `Copyright © ${new Date().getFullYear()} The SpaceHub Project · <a href='/me' target='_blank'>Keith Tan </a>`;
 
 
 const commonExclusions = {
@@ -279,10 +279,10 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/spacehub-x-logo-light-test.png",
+        src: "img/logo/developers-a.png",
         href: "/",
-        width: "330",
-        height: "30"
+        // width: "330",
+        height: "60"
       },
       links: [
         {
