@@ -10,7 +10,7 @@ export default function TestsComponent() {
             style={{
                 display: 'flex',
                 justifyContent: 'center',
-                alignItems: 'center',
+                // alignItems: 'center',
                 height: '50vh',
                 fontSize: '20px',
             }}>
