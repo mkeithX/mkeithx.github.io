@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { JSX, ReactNode } from "react";
 import Link from "@docusaurus/Link";
 import styles from "./styles.module.css";
 import clsx from "clsx";
@@ -100,8 +100,8 @@ export function DevOpsCardRow(): JSX.Element {
       />
       <QuickStartCol
         title="aka.ms"
-        subTitle="All about aka.ms"
-        webUrl="/docs/aka-ms"
+        subTitle="M365 Portals & Admin Centers"
+        webUrl="/docs/system-administration/ms-admin-portals"
       />
     </div>
   );

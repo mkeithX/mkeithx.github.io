@@ -16,7 +16,6 @@ const sidebars: SidebarsConfig = {
       items: [
         "cli",
         "downloads",
-        "aka-ms",
         "mailbox-archive",
         {
           type: "category",

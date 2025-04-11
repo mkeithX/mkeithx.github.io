@@ -51,7 +51,7 @@
 .navbar__brand {
   margin-right: 2rem;
   font-size: 17px;
-  font-weight: 600;
+  font-weight: 400;
   color: #1da1f2;
 }
 
@@ -122,10 +122,10 @@ div[class^='announcementBar_'] button {
 
 /* Logo Badge Styling */
 .logoBadge {
-  width: 200px;
-  height: 100px;
-  margin-bottom: 1rem;
-  margin-left: 5px;
+  max-width: 250px;
+  max-height: 100px;
+  /* margin-bottom: 1rem; */
+  /* margin-left: 5px; */
 }
 
 .logoCard {

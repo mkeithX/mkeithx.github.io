@@ -4,6 +4,158 @@ description: Body Mass Index Calculator
 
 # BMI Calculator
 
-import ComingSoon from "@site/src/components/ComingSoon";
+:::caution[work in progress]
 
-<ComingSoon />
+This article is being updated and expanded. Please check back shortly for the complete version.
+
+:::
+
+
+This article provides an explanation of a Python script designed to calculate the Body Mass Index (BMI) based on user input for height and weight. The script offers an interactive experience, guiding the user through the process of entering data and displaying the results with a classification of their BMI.
+
+### Key Features
+- **User-Friendly Input**: The script requests height and weight from the user and ensures the input is a valid number.
+- **BMI Calculation**: The BMI is calculated using the following formula:
+
+$$
+
+{BMI} = \frac{\text{weight (kg)}}{\text{height (m)}^2}
+
+$$
+
+- **Classification**: Based on the calculated BMI, the user is categorized into one of several classifications (e.g., Normal, Overweight, Obese).
+- **Reusability**: After displaying the result, the user is given the option to calculate BMI again or exit the program.
+
+## Code 
+
+<details>
+<summary>View</summary>
+
+```python
+import os
+import sys
+
+# Function to get valid float input from the user
+def get_float_input(prompt):
+    while True:
+        try:
+            value = float(input(prompt))
+            return value
+        except ValueError:
+            print('Invalid input. Please enter a valid number.\n')
+
+# Function to calculate BMI and display classification
+def calculate_bmi():
+    height = get_float_input('Your height in meters (ex. 1.73): ')
+    weight = get_float_input('Your weight in kilograms (ex. 75): ')
+    bmi = weight / (height ** 2)
+    bmi = round(bmi, 2)
+
+    normal_bmi_range = 'Normal BMI is from 18.50 to 24.90.'
+
+    if bmi < 18.5:
+        classification = 'SEVERELY UNDERWEIGHT'
+    elif 18.5 <= bmi <= 24.9:
+        classification = 'NORMAL'
+    elif 25 <= bmi <= 29.9:
+        classification = 'OVERWEIGHT'
+    elif 30 <= bmi <= 34.9:
+        classification = 'SEVERELY OVERWEIGHT'
+    elif 35 <= bmi <= 39.9:
+        classification = 'OBESE'
+    else:
+        classification = 'SEVERELY OBESE'
+
+    print(f'\nYour BODY MASS INDEX is {bmi:0.2f} and classified as {classification}.')
+    
+    if 18.5 <= bmi <= 24.9:
+        print(normal_bmi_range)
+
+# Main function to clear screen and manage user interaction
+def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    app_name = 'BMI Calculator'
+    print(f'{"-" * 40}\n{" " * 8}{app_name}{" " * 8}\n{"-" * 40}')
+    calculate_bmi()
+
+    while True:
+        response = input('\nDo you want to continue? (Y/N) ')
+        if response.lower() == 'y':
+            main()
+        elif response.lower() == 'n':
+            print('\nThank you and have a great day.\n')
+            sys.exit()
+        else:
+            print('\nError: Please select Y or N.\n')
+
+# Entry point of the program
+if __name__ == '__main__':
+    main()
+```
+</details>
+
+
+
+
+## Functionality and Flow
+
+### `get_float_input(prompt)`
+This function prompts the user to enter a value and ensures the input is a valid floating-point number. If the user enters an invalid value (non-numeric), the function will print an error message and prompt the user again.
+
+#### Example Usage:
+```python
+height = get_float_input('Your height in meters (ex. 1.73): ')
+weight = get_float_input('Your weight in kilograms (ex. 75): ')
+```
+
+### `calculate_bmi()`
+This function handles the logic for calculating BMI. It uses the `get_float_input` function to gather the user's height and weight, calculates the BMI, and then classifies the result based on predefined BMI categories:
+
+
+| Severely Underweight | Normal              | Overweight         | Severely Overweight | Obese              | Severely Obese   |
+|:----------------------|:---------------------|:---------------------|:----------------------|:---------------------|:------------------|
+| Less than 18.5           | 18.5 to 24.9   | 25 to 29.9     | 30 to 34.9      | 35 to 39.9     | > 40.0       |
+
+
+
+
+It also prints the BMI result and a corresponding classification. If the BMI is within the normal range, it will display the normal BMI range.
+
+#### Example Output:
+
+<pre>
+Your BODY MASS INDEX is 23.45 and classified as NORMAL.
+Normal BMI is from 18.50 to 24.90.
+</pre>
+
+### `main()`
+The `main()` function is the entry point of the script. It:
+- Clears the screen (based on the operating system).
+- Displays the program's name ("BMI Calculator").
+- Calls `calculate_bmi()` to start the BMI calculation process.
+- After showing the result, it prompts the user to either continue with another BMI calculation or exit the program.
+- If the user enters an invalid response (other than 'Y' or 'N'), it will prompt the user again.
+
+#### Example Interaction:
+
+<pre>
+<div>----------------------------------------
+                BMI Calculator        
+----------------------------------------</div>
+<span>
+  Your height in meters (ex. 1.73): 1.75
+  Your weight in kilograms (ex. 75): 70
+  Your BODY MASS INDEX is 22.86 and classified as NORMAL.
+  Normal BMI is from 18.50 to 24.90.
+  Do you want to continue? (Y/N)
+</span>
+</pre>
+
+### 4. Repetition & Exit
+Once the user receives their BMI result, they are asked if they want to continue. If they choose 'Y', the script will restart from the `main()` function. If they choose 'N', the script will terminate and display a thank-you message. If the input is anything other than 'Y' or 'N', the script will prompt the user to make a valid choice.
+
+#### Example Exit:
+```
+Do you want to continue? (Y/N) N
+Thank you and have a great day.
+```

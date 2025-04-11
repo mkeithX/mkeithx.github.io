@@ -7,6 +7,140 @@ import TabItem from "@theme/TabItem";
 
 # Caesar Cipher
 
-import ComingSoon from "@site/src/components/ComingSoon";
+:::caution[work in progress]
 
-<ComingSoon />
+This article is being updated and expanded. Please check back shortly for the complete version.
+
+:::
+
+This article explains a Python script that implements the Caesar cipher algorithm, a simple encryption and decryption technique. The script provides users with the option to either encrypt or decrypt messages using a shift value. The Caesar cipher shifts each letter of the alphabet by a certain number of positions, making it easy to encode and decode text.
+
+### Key Features
+- **Encrypt and Decrypt**: The user can choose to either encrypt or decrypt a message.
+- **Shift Value**: The user specifies the shift value (between 1 and 25) to apply for encryption or decryption.
+- **Preserves Non-Alphabet Characters**: The script keeps non-alphabet characters (such as punctuation and spaces) unchanged during encryption and decryption.
+- **Reusability**: After processing one message, the user is prompted to either encrypt/decrypt another message or exit the program.
+
+## Functionality and Flow
+
+### 1. `caesar_cipher(message, shift, encrypt=True)`
+This function is responsible for encrypting or decrypting a message based on the Caesar cipher algorithm. It loops through each character of the message:
+- If the character is a letter, it applies the shift according to whether the operation is encryption (`encrypt=True`) or decryption (`encrypt=False`).
+- Non-alphabetic characters (e.g., spaces, punctuation) are added to the result without modification.
+
+#### Example Usage:
+```python
+# Encrypting a message with a shift of 3
+encrypted_message = caesar_cipher('Hello, World!', 3)
+# Decrypting the message with a shift of 3
+decrypted_message = caesar_cipher('Khoor, Zruog!', 3, encrypt=False)
+```
+
+### 2. `user_input()`
+The `user_input` function prompts the user to select whether they want to encrypt or decrypt a message. Depending on the user's choice:
+  - For encryption, it asks for the plain text message and a shift value (between 1 and 25).
+  - For decryption, it asks for the encrypted message and the shift value.
+  - If the user provides invalid input (anything other than 'E' for encrypt or 'D' for decrypt), the function prints an error message and prompts the user again.
+
+#### Example Interaction:
+```
+Encrypt [E] or Decrypt [D]: E
+Message you want to encrypt: Hello, World!
+Enter shift value (1-25): 3
+Your encrypted message: Khoor, Zruog!
+```
+
+### 3. `main()`
+The `main()` function is the entry point of the program. It:
+  - Clears the screen (depending on the operating system).
+  - Displays the program's name ("Caesar Cipher").
+  - Calls the `user_input()` function to prompt the user for input.
+  - After completing one encryption or decryption task, it asks the user whether they want to process another message or exit the program.
+  - If the user provides anything other than 'Y' or 'N', the program prompts for valid input again.
+
+#### Example Interaction:
+```
+------------------------------------------------
+           Caesar Cipher           
+------------------------------------------------
+Encrypt [E] or Decrypt [D]: E
+Message you want to encrypt: Hello, World!
+Enter shift value (1-25): 3
+Your encrypted message: Khoor, Zruog!
+Encrypt/Decrypt another message? (Y/N): Y
+```
+
+### 4. Repeat & Exit
+After each operation (encryption or decryption), the user is asked if they want to continue. If they answer 'Y', the program will repeat. If they answer 'N', the program will exit with a thank-you message. If the input is invalid, the user will be prompted again.
+
+#### Example Exit:
+```
+Encrypt/Decrypt another message? (Y/N): N
+Thanks for using the tool. Have a great day!
+```
+
+## Code Walkthrough
+
+<details>
+<summary>View</summary>
+
+```python
+import os
+import sys
+
+# Function to encrypt or decrypt a message using Caesar Cipher
+def caesar_cipher(message, shift, encrypt=True):
+    result = ''
+    for char in message:
+        if char.isalpha():
+            ascii_offset = ord('A') if char.isupper() else ord('a')
+            if encrypt:
+                shifted_char = chr((ord(char) - ascii_offset + shift) % 26 + ascii_offset)
+            else:
+                shifted_char = chr((ord(char) - ascii_offset - shift) % 26 + ascii_offset)
+            result += shifted_char
+        else:
+            result += char
+    return result
+
+# Function to handle user input for encryption or decryption
+def user_input():
+    choice = input('Encrypt [E] or Decrypt [D]: ').upper()
+    if choice == 'E':
+        plain_message = input('Message you want to encrypt: ')
+        shift = int(input('Enter shift value (1-25): '))
+        encrypted_message = caesar_cipher(plain_message, shift)
+        print('\nYour encrypted message: ', encrypted_message)
+    elif choice == 'D':
+        encrypted_message = input('Message you want to decrypt: ')
+        shift = int(input('Enter shift value (1-25): '))
+        decrypted_message = caesar_cipher(encrypted_message, shift, encrypt=False)
+        print('\nYour decrypted message: ', decrypted_message)
+    else:
+        print('\nInvalid choice. Please select either Encrypt (E) or Decrypt (D).\n')
+        user_input()
+
+# Main function to manage user interaction
+def main():
+    os.system('cls' if os.name == 'nt' else 'clear')
+    app_name = 'Caesar Cipher'
+    print(f'{"-" * 48}\n{" " * 14}{app_name}{" " * 14}\n{"-" * 48}')
+    user_input()
+
+while True:
+    print('\nEncrypt/Decrypt another message? (Y/N): ', end='')
+    check = input()
+    if check == 'y' or check == 'Y':
+        main()
+    elif check == 'n' or check == 'N':
+        print('\nThanks for using the tool. Have a great day!\n')
+        sys.exit()
+    else:
+        print('\nPlease select Y or N.')
+        continue
+
+# Entry point of the program
+if __name__ == '__main__':
+    main()
+```
+</details>

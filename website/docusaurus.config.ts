@@ -289,7 +289,8 @@ const config: Config = {
           title: "Docs",
           items: [
             { label: "Gists", to: "/docs/gists" },
-            { label: "MS Portals", to: "/docs/aka-ms" },
+            // { label: "MS Portals", to: "/docs/aka-ms" },
+            { label: "System Admin", to: "/docs/system-administration"},
             { label: "Astro Stuff", to: "/cosmos/astrophysics" },
           ],
         },

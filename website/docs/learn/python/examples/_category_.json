@@ -3,6 +3,7 @@
     "collapsed": true,
     "position": 5,
     "link": {
-        "slug": "/examples"
+        "type": "doc",
+        "id": "learn/python/examples/index"
     }
 }
