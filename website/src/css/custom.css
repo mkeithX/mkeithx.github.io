@@ -122,10 +122,10 @@ div[class^='announcementBar_'] button {
 
 /* Logo Badge Styling */
 .logoBadge {
-  width: 200px;
-  height: 100px;
-  margin-bottom: 1rem;
-  margin-left: 5px;
+  max-width: 250px;
+  max-height: 100px;
+  /* margin-bottom: 1rem; */
+  /* margin-left: 5px; */
 }
 
 .logoCard {
