@@ -1,0 +1,21 @@
+.cosmicFeatures {
+    display: flex;
+    align-items: center;
+    padding: 6rem 0;
+    width: 100%;
+    position: relative;
+  }
+  
+  .cosmicSvg {
+    height: 100px;
+    width: 200px;
+  }
+  
+  .heroTitleTextHtml b {
+    color: var(--ifm-color-primary);
+    font-size: 20px;
+  }
+  
+  .featuresRowCenter {
+    justify-content: center;
+  }

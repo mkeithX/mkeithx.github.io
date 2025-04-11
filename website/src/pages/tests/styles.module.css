@@ -9,6 +9,13 @@
     font-weight: 600;
 }
 
+.testsTitle b {
+  color: transparent;
+  background: linear-gradient(90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
+  background-clip: text;
+  font-weight: 700;
+}
+
 
 .testsBody {
     background-color: var(--ifm-site-dark) !important;
