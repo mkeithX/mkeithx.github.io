@@ -1,3 +1,13 @@
+.cosmosBanner {
+  /* padding: 4rem 0; */
+  text-align: left;
+  position: relative;
+  overflow: hidden;
+  background-color: var(--ifm-site-dark);
+  display: flex;
+  height: auto;
+}
+
 .cosmosHead {
     background-color: var(--ifm-site-dark) !important;
     flex-direction: column;
@@ -9,6 +19,14 @@
     font-size: 60px;
     font-weight: 600;
     /* margin-bottom: 0.4rem; */
+}
+
+.cosmosTitle b {
+  color: transparent;
+  background: linear-gradient(90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
+  background-clip: text;
+  font-weight: 700;
+  /* font-size: 54px; */
 }
 
 
