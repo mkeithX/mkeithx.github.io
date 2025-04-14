@@ -1,0 +1,50 @@
+---
+description: Set Lock Screen Image Using Intune
+title: Set Lock Screen Image
+---
+This guide outlines the steps to set a lock screen image using Intune, which is especially useful in large organizations to communicate important information to employees.
+
+:::tip[Storage Account]
+Before proceeding, the lock screen image must be stored in a publicly accessible location. Consider these hosting options:
+
+- [Azure Storage](https://portal.azure.com/)
+- [Cloudflare](https://www.cloudflare.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [Amazon S3](https://aws.amazon.com/s3/)
+- [Google Cloud Storage](https://cloud.google.com/storage)
+:::
+
+While users can set their own wallpapers, managing lock screen and desktop images centrally with Intune ensures a consistent and professional appearance across all devices. This approach provides several benefits:
+
+- **Security Information**: Centralized wallpaper management lets organizations display important security reminders and emergency contact details on lock screens and desktops.
+- **Corporate Identity**: Uniform corporate wallpapers across devices reinforce brand identity, showcasing the company logo, colors, and branding to leave a lasting impression on clients and visitors.
+
+## Create a Device Configuration Profile
+
+### **Sign In to Endpoint Manager**
+- Log in to the [Microsoft 365 admin center](https://portal.office.com) with a global or Intune administrator account.
+- Navigate to the **Endpoint Manager admin center**.
+
+### **Create a Configuration Profile**
+- In the admin center, go to **Devices** > **Configuration Profiles** > **Create Profile**.
+- Select **Windows 10 and later** as the platform.
+- Choose **Device Restrictions** as the profile type and click **Create**.
+
+![intune-lockscreen-profile](/img/guides/intune-lockscreen-profile.png)
+
+### **Configure the Lock Screen Experience**
+- Provide a name and description for the profile.
+- Under **Lock Screen Experience**, paste the URL of the image you want to use. Ensure the image is publicly accessible and in JPEG or PNG format.
+
+![intune-lockscreen-image](/img/guides/intune-lockscreen-image.png)
+
+### **Assign the Profile**
+- Click **Next** and select **All Devices** or specify exclusions if needed.
+- Review the settings and click **Create** to apply the profile.
+
+### **Verify the Changes**
+- Wait a few minutes for the devices to sync with Intune.
+- Check the lock screens of the devices to confirm the image has been applied.
+
+## Conclusion
+Using Intune to manage lock screen images ensures consistency across devices while allowing organizations to convey important information and reinforce corporate branding.
