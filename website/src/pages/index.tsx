@@ -69,12 +69,9 @@ function HomepageHeader(): JSX.Element {
             {'Explore'}
           </Link>
           <Link
-            // className={clsx("button button--secondary button--lg")}
-            // to="https://eyes.nasa.gov/apps/solar-system/#/home">
-            // {'Space'}
             className={clsx("button button--secondary button--lg")}
-            to="https://kitimi.sharepoint.com/">
-            {'Login'}
+            to="https://eyes.nasa.gov/apps/solar-system/#/home">
+            {'Space'}
           </Link>
         </div>
       </div>

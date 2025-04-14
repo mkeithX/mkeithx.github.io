@@ -226,7 +226,7 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/logo/kitimi-icon-new.svg",
+        src: "img/nav-logo.svg",
         target: "_self",
         // width: 80,
         // height: 70
@@ -255,7 +255,7 @@ const config: Config = {
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-  
+            { href: "https://kitimi.sharepoint.com", label:"MissionControl" },
           ],
         },
         {

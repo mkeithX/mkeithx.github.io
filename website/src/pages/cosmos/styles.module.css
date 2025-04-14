@@ -54,24 +54,8 @@
   
  /* a:hover {
     color: #d1ffeb !important;
-  }
-   */
-/* button {
-    color: #d1ffeb !important;
   } */
+  
 
 
   
-/* Call-to-Action Buttons */
-.indexCtas {
-  /* --ifm-button-size-multiplier: 1; */
-  /* display: flex; */
-  flex-wrap: wrap;
-  align-items: flex-start;
-  color: #1da1f2 !important;
-}
-
-
-.indexCtas a:hover {
-  color: #ffffff;
-}
