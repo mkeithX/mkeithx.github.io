@@ -255,7 +255,7 @@ const config: Config = {
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-  
+            { href: "https://kitimi.sharepoint.com", label:"MissionControl" },
           ],
         },
         {
@@ -288,9 +288,8 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            { label: "Gists", to: "/docs/gists" },
-            // { label: "MS Portals", to: "/docs/aka-ms" },
             { label: "System Admin", to: "/docs/system-administration"},
+            { label: "Python Examples", to: "/docs/learn/python/examples" },
             { label: "Astro Stuff", to: "/cosmos/astrophysics" },
           ],
         },

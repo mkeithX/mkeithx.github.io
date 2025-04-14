@@ -5,23 +5,25 @@ import Heading from "@theme/Heading";
 import clsx from "clsx";
 import styles from "./styles.module.css";
 import useBaseUrl from '@docusaurus/useBaseUrl';
+import CosmicFeatures from "./_components/CosmicFeatures";
 
 function CosmospageHeader(): JSX.Element {
 
 
     return (
         <header>
-            <div className={clsx(styles.cosmosHead, "hero hero--dark")}>
+            <div className={clsx(styles.cosmosBanner, "hero hero--dark")}>
                 <div className="container">
                     <div className="hero__subtitle">
                         <span className={clsx("text--light")}>{'The'}</span>
                     </div>
                     <Heading as="h1" className={clsx(styles.cosmosTitle)}>
-                        {"Universe"}
+                        <b>{"Universe"}</b>
+
                     </Heading>
                     <span className={clsx(styles.cosmosBody, "hero__subtitle margin-left-x text--light text--small")}>
                         {"From Quarks to Black Holes."}
-                        <Link className={styles.indexCtas} to={'/cosmos/timeline'}>{' Start here'}</Link>{"."}
+                        <Link className={clsx(styles.indexCtas)} to={'/cosmos/timeline'}>{' Start here'}</Link>{"."}
 
                     </span>
                     {/* <div className={clsx(styles.indexCtas, 'text--no-decoration margin-vert--md')}>
@@ -34,6 +36,7 @@ function CosmospageHeader(): JSX.Element {
                 </div>
 
             </div>
+
             <div className={clsx(styles.cosmosBody, "hero hero--dark")}>
                 <div className="container">
                     <p>
@@ -41,6 +44,7 @@ function CosmospageHeader(): JSX.Element {
                     </p>
                 </div>
             </div>
+
 
         </header>
     );
@@ -51,7 +55,7 @@ export default function Cosmos(): JSX.Element {
     return (
         <Layout title="The Universe" description="From Quarks to Black Holes and Beyond">
             <CosmospageHeader />
-
+            {/* <CosmicFeatures /> */}
         </Layout>
     );
 }

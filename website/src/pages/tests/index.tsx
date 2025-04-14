@@ -16,7 +16,8 @@ function DogfoodingHeader(): JSX.Element {
                         <span className={("text--light")}>{"The"}
                         </span>
                         <Heading as="h1" className={clsx(styles.testsTitle)}>
-                            {"SpaceHub DogFooding"}
+                            <b>{"SpaceHub DogFooding"}</b>
+                            
                         </Heading>
                         <span className={clsx(styles.testsBody, "hero__subtitle margin-left-x text--light text--small")}>
                             {"...where all testing begins."}
