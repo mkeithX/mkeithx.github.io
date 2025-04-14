@@ -226,7 +226,7 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/nav-logo.svg",
+        src: "img/logo/kitimi-icon-new.svg",
         target: "_self",
         // width: 80,
         // height: 70

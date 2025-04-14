@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from 'react';
 import Layout from "@theme/Layout";
 import Link from "@docusaurus/Link";
 import Heading from "@theme/Heading";

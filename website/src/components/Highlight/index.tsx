@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import React, { JSX, type ReactNode } from "react";
 
 export default function Highlight({
   children,

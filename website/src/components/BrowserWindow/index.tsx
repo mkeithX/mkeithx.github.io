@@ -1,5 +1,5 @@
 
-import React, {type CSSProperties, type ReactNode} from 'react';
+import React, {JSX, type CSSProperties, type ReactNode} from 'react';
 import clsx from 'clsx';
 
 import styles from './styles.module.css';

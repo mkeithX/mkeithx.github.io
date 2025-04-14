@@ -1,4 +1,4 @@
-import React, { type ReactNode } from "react";
+import React, { JSX, type ReactNode } from "react";
 import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";

@@ -55,7 +55,7 @@ export default function Cosmos(): JSX.Element {
     return (
         <Layout title="The Universe" description="From Quarks to Black Holes and Beyond">
             <CosmospageHeader />
-            <CosmicFeatures />
+            {/* <CosmicFeatures /> */}
         </Layout>
     );
 }

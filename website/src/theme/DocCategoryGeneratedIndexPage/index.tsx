@@ -1,4 +1,4 @@
-import React from "react";
+import React, { JSX } from 'react';
 import Link from "@docusaurus/Link";
 import Translate from "@docusaurus/Translate";
 import DocCategoryGeneratedIndexPage from "@theme-original/DocCategoryGeneratedIndexPage";
