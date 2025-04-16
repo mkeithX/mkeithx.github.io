@@ -75,6 +75,6 @@
   padding: 1rem;
 }
 
-.browserWindowBody > *:last-child {
+.browserWindowBody>*:last-child {
   margin-bottom: 0;
 }
