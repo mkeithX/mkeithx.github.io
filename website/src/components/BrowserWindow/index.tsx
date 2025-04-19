@@ -1,5 +1,5 @@
 
-import React, {JSX, type CSSProperties, type ReactNode} from 'react';
+import React, { JSX, type CSSProperties, type ReactNode } from 'react';
 import clsx from 'clsx';
 
 import styles from './styles.module.css';
@@ -20,12 +20,12 @@ export default function BrowserWindow({
   bodyStyle,
 }: Props): JSX.Element {
   return (
-    <div className={styles.browserWindow} style={{...style, minHeight}}>
+    <div className={styles.browserWindow} style={{ ...style, minHeight }}>
       <div className={styles.browserWindowHeader}>
         <div className={styles.buttons}>
-          <span className={styles.dot} style={{background: '#f25f58'}} />
-          <span className={styles.dot} style={{background: '#fbbe3c'}} />
-          <span className={styles.dot} style={{background: '#58cb42'}} />
+          <span className={styles.dot} style={{ background: '#f25f58' }} />
+          <span className={styles.dot} style={{ background: '#fbbe3c' }} />
+          <span className={styles.dot} style={{ background: '#58cb42' }} />
         </div>
         <div className={clsx(styles.browserWindowAddressBar, 'text--truncate')}>
           {url}
