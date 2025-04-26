@@ -15,5 +15,7 @@ const redirects: ClientRedirects.Options['redirects'] = [
   { from: ['/docs/tutorials', '/docs/examples'], to: '/docs/learn' },
   { from: ['/test', '/dogfooding', '/dogfood'], to: '/tests' },
   { from: ['/docs/aka-ms'], to: '/docs/system-administration/ms-admin-portals'},
+  { from: ['/docs/cli'], to: '/docs/system-administration/cli' },
+  { from: ['/docs/mailbox-archive'], to: '/docs/system-administration/ms-exchange/mailbox-archive' },
 ];
 export default redirects;

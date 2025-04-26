@@ -1,7 +1,7 @@
 {
     "label": "Intune",
     "collapsed": true,
-    "position": 2,
+    "position": 6,
     "link": {
         "type": "doc",
         "id": "system-administration/ms-intune/index"
