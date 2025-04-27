@@ -14,27 +14,28 @@
 
 /* Hero Banner */
 .heroBanner {
-  padding: 6rem 0;
+  padding: 8rem 0;
   overflow: hidden;
   text-align: left;
   position: relative;
   background-color: var(--ifm-site-dark);
-  display: flex;
+  /* display: flex; */
   flex-direction: column;
   align-items: flex-start;
+  /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%); */
 }
 
 /* Hero Logo */
 .heroLogo {
-  /* width: auto; */
-  /* height: auto; */
+  width: auto;
+  height: auto;
   float: right;
   display: flex;
   transition: transform 0.6s ease-in-out;
 }
 
 .heroLogo:hover {
-  transform: scale(1.2) rotate(10deg);
+  transform: scale(1.3) rotate(12deg);
 }
 
 /*  */

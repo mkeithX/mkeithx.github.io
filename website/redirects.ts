@@ -17,5 +17,6 @@ const redirects: ClientRedirects.Options['redirects'] = [
   { from: ['/docs/aka-ms'], to: '/docs/system-administration/ms-admin-portals'},
   { from: ['/docs/cli'], to: '/docs/system-administration/cli' },
   { from: ['/docs/mailbox-archive'], to: '/docs/system-administration/ms-exchange/mailbox-archive' },
+  { from: ['/docs/devops/admin-center/emergency-accounts'], to: '/docs/system-administration/ms-entra/emergency-access' },
 ];
 export default redirects;

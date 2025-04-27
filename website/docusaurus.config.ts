@@ -53,9 +53,9 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
   titleDelimiter: '·',
-  future: {
-    experimental_faster: true,
-  },
+  // future: {
+  //   experimental_faster: true,
+  // },
 
   staticDirectories: [
     'static',
