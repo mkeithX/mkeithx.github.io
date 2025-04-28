@@ -6,7 +6,7 @@ export default function IframeWindow({ url }: { url: string }): JSX.Element {
   return (
     <div style={{ padding: 10 }}>
       <BrowserWindow
-        url="localhost"
+        url=""
         style={{
           minWidth: 'min(100%,45vw)',
           width: 996,
