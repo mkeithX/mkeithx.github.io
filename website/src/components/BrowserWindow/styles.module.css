@@ -1,5 +1,5 @@
 .browserWindow {
-  border: 3px solid var(--ifm-color-emphasis-300);
+  border: 3px solid var(--ifm-color-emphasis-200) !important;
   border-radius: var(--ifm-global-radius);
   box-shadow: var(--ifm-global-shadow-lw);
   margin-bottom: var(--ifm-leading);
@@ -7,7 +7,7 @@
 
 .browserWindowHeader {
   align-items: center;
-  background: var(--ifm-color-emphasis-300);
+  background: var(--ifm-color-emphasis-200) !important;
   display: flex;
   padding: 0.5rem 1rem;
 }
@@ -75,6 +75,6 @@
   padding: 1rem;
 }
 
-.browserWindowBody > *:last-child {
+.browserWindowBody>*:last-child {
   margin-bottom: 0;
 }

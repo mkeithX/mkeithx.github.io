@@ -15,6 +15,8 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
+// require('@dotenvx/dotenvx').config({path: ['.env.local']})
+
 const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target='_blank'>Keith Tan </a> <br>· The SpaceHub Project · `;
 
 
@@ -51,9 +53,9 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
   titleDelimiter: '·',
-  future: {
-    experimental_faster: true,
-  },
+  // future: {
+  //   experimental_faster: true,
+  // },
 
   staticDirectories: [
     'static',
@@ -137,9 +139,8 @@ const config: Config = {
           filename: "sitemap.xml",
         },
 
-
         gtag: {
-
+          // trackingID: process.env.GTAG_ID,
           trackingID: 'G-YYZ6V070LQ',
           anonymizeIP: true,
 

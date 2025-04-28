@@ -1,0 +1,66 @@
+---
+description: Create a Dynamic Group in Entra
+title: Create a Dynamic Group
+---
+
+Dynamic groups in Microsoft Entra ID allow administrators to automatically manage group membership based on user or device attributes. This article provides a step-by-step guide to creating a dynamic group that includes members with Windows OS and corporate devices.
+
+
+
+## Prerequisites
+- Microsoft Entra ID P1 license or Intune for Education license.
+- Administrative access to the Microsoft Entra admin center.
+
+## Steps to Create a Dynamic Group
+
+### Sign in to Microsoft Entra Admin Center
+   - Navigate to the [Microsoft Entra admin center](https://aka.ms/msentraportal) and sign in with your administrative credentials.
+
+### Create a New Group
+   - In the left-hand navigation pane, select **Groups** > **All groups**.
+   - Click on **New group**.
+
+### Configure Group Settings
+   - **Group Type:** Select **Security**.
+   - **Group Name:** Enter a meaningful name for the group (e.g., "Windows Corporate Devices").
+   - **Group Description:** Provide a description for the group.
+
+![create-new-group](/img/guides/entra-create-dynamic-group.png)
+
+
+### Set Membership Type to Dynamic
+   - Under **Membership type**, select **Dynamic Device**.
+   - Click on **Add dynamic query**.
+
+![create-new-group](/img/guides/dynamic-membership-rules.png)
+
+
+#### Define Membership Rules
+   - Use the rule builder or text box to define the membership rules. For this example, we'll use the text box to add two expressions:
+     - **Expression 1:** `device.deviceOSType -eq "Windows"`
+     - **Expression 2:** `device.deviceOwnership -eq "Corporate"`
+
+Example Dynamic Query
+```bash
+(device.deviceOSType -eq "Windows") and (device.deviceOwnership -eq "Corporate")
+```
+
+#### Save the Group
+   - Click on **Save** to create the group with the defined dynamic membership rules.
+
+![entra-dynamic-group](/img/guides/entra-dynamic-group.png)
+
+
+**Verification:**
+- After saving the group, the dynamic membership rules will be processed. You can verify the members of the group by navigating to the group's **Members** section.
+
+## Summary
+
+:::tip[Summary]
+Creating dynamic groups in Microsoft Entra ID simplifies the management of users and devices by automating group membership based on specific attributes. This example demonstrates how to create a dynamic group for Windows OS corporate devices, ensuring efficient and organized device management.
+:::
+
+For more detailed information:
+- [Managing Dynamic Groups](https://learn.microsoft.com/en-us/entra/identity/users/groups-create-rule)
+- [Manage rules for dynamic membership](https://learn.microsoft.com/en-us/entra/identity/users/groups-dynamic-membership).
+

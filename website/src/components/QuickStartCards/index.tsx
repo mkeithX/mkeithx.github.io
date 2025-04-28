@@ -96,7 +96,7 @@ export function DevOpsCardRow(): JSX.Element {
       <QuickStartCol
         title="Win + Rs"
         subTitle="Win utilities shortcuts"
-        webUrl="/docs/cli"
+        webUrl="/docs/system-administration/cli"
       />
       <QuickStartCol
         title="aka.ms"
