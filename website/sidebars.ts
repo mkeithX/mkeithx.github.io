@@ -124,7 +124,7 @@ const sidebars: SidebarsConfig = {
       items: [
         {
           type: "category",
-          label: "How-Tos",
+          label: "Workarounds",
           collapsed: true,
           link: { type: "doc", id: "how-tos/index" },
           items: [

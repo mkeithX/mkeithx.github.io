@@ -15,7 +15,8 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-// require('@dotenvx/dotenvx').config({path: ['.env.local']})
+require('@dotenvx/dotenvx').config({ path: '.env.local' });
+
 
 const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target='_blank'>Keith Tan </a> <br>· The SpaceHub Project · `;
 
@@ -138,13 +139,14 @@ const config: Config = {
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
           filename: "sitemap.xml",
         },
-
-        gtag: {
-          // trackingID: process.env.GTAG_ID,
-          trackingID: 'G-YYZ6V070LQ',
-          anonymizeIP: true,
-
-        },
+        
+        gtag: process.env.GTAG_ID
+        ? {
+            trackingID: process.env.GTAG_ID,
+            anonymizeIP: true,
+          }
+        : undefined,
+      
 
       } satisfies Preset.Options,
     ],
@@ -274,6 +276,11 @@ const config: Config = {
       apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       indexName: "mkeithx",
       appId: "XVSOLYZXNV",
+      replaceSearchResultPathname: {
+        from: /^\/docs\/next/g.source,
+        to: '/docs',
+      },
+
       contextualSearch: false
     },
     footer: {

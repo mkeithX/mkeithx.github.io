@@ -3,11 +3,12 @@
   align-items: center;
   padding: 8rem 0;
   width: 100%;
-  background-color: var(--ifm-background-surface-color);
+  /* background-color: var(--ifm-background-surface-color); */
+  background-color: var(--ifm-site-dark) !important;
   position: relative;
 }
 
-.featureSvg {
+.featureBrandSvg {
   height: 180px;
   width: 200px;
 }
