@@ -12,19 +12,6 @@ type FeatureBrandItems = {
 };
 
 const FeatureList: FeatureBrandItems[] = [
-
-  // {
-  //   scale: 0.8,
-  //   title: "Kitimi Platforms",
-    
-  //   Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
-  //   description: (
-  //     <>
-
-  //     </>
-  //   )
-
-  // },
   
    {
     scale: 1.2,
@@ -78,6 +65,7 @@ const FeatureList: FeatureBrandItems[] = [
       </>
     )
   },
+  
 
 ];
 
@@ -87,7 +75,7 @@ function Feature({ scale, title, description, Svg }: FeatureBrandItems) {
       <div className={clsx("text--center")}>
       <Svg
           transform={"scale(" + scale + ")"}
-          className={styles.featureSvg}
+          className={styles.featureBrandSvg}
           role="img"
         />
       </div>

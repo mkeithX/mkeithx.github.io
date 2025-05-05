@@ -99,6 +99,92 @@ View password properties
 
 </table>
 
+### Active Directory
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dsregcmd /status
+```
+</td>
+<td>
+
+Display the device join status.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dsregcmd /join
+```
+
+</td>
+<td>
+
+Schedule and monitor the Autojoin task to Hybrid Join the device.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dsregcmd /leave
+```
+
+</td>
+<td>
+
+Perform a Hybrid Unjoin.
+Removes the device from azure and then re-joins on the next delta sync.
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+dsregcmd /forcerecovery
+```
+
+</td>
+<td>
+
+For Azure AD joined devices, will force a Sign out and Sign back in.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dsregcmd /?
+```
+
+</td>
+<td>
+
+All `dsregcmd` commands.
+
+</td>
+</tr>
+
+</table>
+
+
 
 ## Device Management
 
