@@ -139,19 +139,10 @@ const config: Config = {
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
           filename: "sitemap.xml",
         },
-        
-        // gtag: process.env.GTAG_ID
-        // ? {
-        //     trackingID: process.env.GTAG_ID,
-        //     anonymizeIP: true,
-        //   }
-        // : undefined,
-      
           gtag: {
             trackingID: 'G-YYZ6V070LQ',
             anonymizeIP: true,
           },
-        
 
       } satisfies Preset.Options,
     ],
@@ -283,7 +274,7 @@ const config: Config = {
       appId: "XVSOLYZXNV",
       replaceSearchResultPathname: {
         from: /^\/docs\/next/g.source,
-        to: '/docs',
+        to: '/',
       },
 
       contextualSearch: false
