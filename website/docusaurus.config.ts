@@ -263,7 +263,7 @@ const config: Config = {
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-            { href: "https://kitimi.sharepoint.com", label:"MissionControl" },
+            { href: "https://kitimi.sharepoint.com/sites/Hub", label:"MissionControl" },
           ],
         },
         {
