@@ -54,14 +54,12 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
   titleDelimiter: '·',
-  // future: {
-  //   experimental_faster: true,
-  // },
 
   staticDirectories: [
     'static',
     path.join(__dirname, 'non-existent'),
   ],
+  
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
@@ -183,7 +181,7 @@ const config: Config = {
         max: 1030,
         min: 640,
         steps: 2,
-        disableInDev: true,
+        disableInDev: false,
       } satisfies IdealImageOptions,
     ],
     [
@@ -272,11 +270,6 @@ const config: Config = {
       apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       indexName: "mkeithx",
       appId: "XVSOLYZXNV",
-      replaceSearchResultPathname: {
-        from: /^\/docs\/next/g.source,
-        to: '/',
-      },
-
       contextualSearch: false
     },
     footer: {
