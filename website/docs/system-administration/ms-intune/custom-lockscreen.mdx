@@ -1,117 +1,88 @@
 ---
-description: Manage Lock Screen and Desktop Wallpaper in Microsoft Intune
 title: Lock Screen and Desktop Wallpaper
+description: Manage Lock Screen and Desktop Wallpaper in Microsoft Intune
 sidebar_label: Lock Screen and Desktop Image
 ---
 
-This article focuses on managing the lock screen and desktop wallpaper across corporate devices to help maintain a consistent corporate identity and convey important information.
+This guide explains how to centrally manage lock screen and desktop wallpaper on Windows devices using Microsoft Intune. This helps reinforce corporate branding and communicate important information consistently.
 
 
-:::caution
+:::tip[Note]
 
-
+The sample configuration in this article focuses on **Windows Corporate Device** only and will restrict users from changing lock screen image and desktop wallpaper.
 
 :::
-
 
 ## Prerequisites
-- Microsoft Intune subscription.
-- Administrative access to the Microsoft Intune admin center.
-- Two wallpaper images (one for the lock screen and one for the desktop), stored in a publicly accessible location.
-   <details>
-   <summary>Hosting options</summary>
-   
-   Before proceeding, the lock screen image must be stored in a publicly accessible location. Consider these hosting    options:
-   - [Azure Storage](https://portal.azure.com/)
-   - [Cloudflare](https://www.cloudflare.com/)
-   - [Cloudinary](https://cloudinary.com/)
-   - [Amazon S3](https://aws.amazon.com/s3/)
-   - [Google Cloud Storage](https://cloud.google.com/storage)
-   
-   </details>
 
+- Active Microsoft Intune subscription  
+- Administrative access to the Microsoft Intune admin center  
+- Two wallpaper images (lock screen and desktop), stored in a publicly accessible location
 
+<details>
+<summary>Image Hosting Options</summary>
 
-## Steps to Set Lock Screen and Desktop Image
+Before proceeding, host your images in a publicly accessible location. Suitable options include:
 
-### Sign in to Microsoft Intune Admin Center
-   - Navigate to the [Microsoft Intune admin center](https://aka.ms/in) and sign in with your administrative credentials.
+- [Azure Storage](https://portal.azure.com/)
+- [Cloudflare](https://www.cloudflare.com/)
+- [Cloudinary](https://cloudinary.com/)
+- [Amazon S3](https://aws.amazon.com/s3/)
+- [Google Cloud Storage](https://cloud.google.com/storage)
 
-### Create a Dynamic Group for Corporate Devices
-    You can either follow the steps below or [visit this article](/docs/system-administration/ms-entra/create-dynamic-group)
-
-   <details>
-      - In the left-hand navigation pane, select **Groups** > **New group**.
-      - **Group Type:** Select **Security**.
-      - **Group Name:** Enter a meaningful name for the group (e.g., "Corporate Devices").
-      - **Group Description:** Provide a description for the group.
-      - **Membership Type:** Select **Dynamic Device**.
-      - Click on **Add dynamic query** and use the following rule:
-        ```plaintext
-        (device.deviceOwnership -eq "Corporate")
-        ```
-      - Click **Save** to create the group.
-   
-   </details>
-
-
+</details>
 
 ## Create a Device Configuration Profile
-   - In the Intune admin center, go to **Devices** > **Configuration profiles** > **Create profile**.
-   - **Platform:** Select **Windows 10 and later**.
-   - **Profile Type:** Select **Templates** > **Device restrictions**.
-   - **Name:** Enter a name for the profile (e.g., "Corporate Wallpaper Settings").
-   - **Description:** Provide a description for the profile.
 
-   ![intune-lockscreen-profile-start](/img/guides/intune-lockscreen-profile-start.png)
+1. Sign in to [ Microsoft Intune Admin Center](https://aka.ms/in) 
+1. Go to **Devices** > **Configuration profiles** > **Create profile**
+2. **Platform:** Select **Windows 10 and later**
+3. **Profile Type:** Choose **Templates** > **Device restrictions**
+4. Enter a name (e.g., `Corporate Wallpaper Settings`) and an optional description
 
-
-### Configure Lock Screen Image
-   - Under **Settings**, select **Locked Screen Experience**.
-   - **Lock screen image URL:** Enter the URL of the lock screen wallpaper image.
-   - **Desktop background URL:** Enter the URL of the desktop wallpaper image.
-   - Click **Next**.
-
-   ![intune-lockscreen-device-restriction](/img/guides/intune-lockscreen-device-restriction.png)
-
-### Configure Desktop Wallpaper
-   - Under **Settings**, select **Personalization**.
-   - **Lock screen image URL:** Enter the URL of the lock screen wallpaper image.
-   - **Desktop background URL:** Enter the URL of the desktop wallpaper image.
-   - Click **Next**.
-
-   ![intune-wallpaper-device-restriction](/img/guides/intune-wallpaper-device-restriction.png)
-
-
-<!-- ![intune-lockscreen-image](/img/guides/intune-lockscreen-image.png) -->
+   ![Profile Creation](/img/guides/intune-lockscreen-profile-start.png)
 
 
 
-<!-- ![intune-lockscreen-profile](/img/guides/intune-lockscreen-profile.png) -->
+
+## Configure Lock Screen and Desktop Wallpaper
+
+### `Locked Screen Experience`
+
+1. Under **Settings**, select **Locked Screen Experience**
+2. **Lock screen image URL**: Enter the URL of the lock screen wallpaper
+3. **Desktop background URL**: Enter the URL of the desktop wallpaper
+4. Click **Next**
+
+   ![Lock Screen Settings](/img/guides/intune-lockscreen-device-restriction.png)
+
+### `Personalization`
+
+1. Under **Settings**, select **Personalization**
+2. Enter the same URLs again:
+   * **Lock screen image URL**
+   * **Desktop background URL**
+3. Click **Next**
+
+   ![Desktop Wallpaper Settings](/img/guides/intune-wallpaper-device-restriction.png)
+
+## Assign the Profile to the Dynamic Group
+
+1. In the **Assignments** step, click **Included groups** > **Add groups**
+2. Select the dynamic group created earlier (e.g., `Corporate Devices`)
+3. Click **Next**, then **Create**
+
+## Verify Deployment
+
+Once the profile is assigned, the configuration will apply to all devices in the group. Confirm by inspecting lock screen and desktop wallpaper settings on a managed device.
+
+   ![PC Settings - Wallpaper](/img/guides/pc-settings-wallpaper.png)
+   ![PC Settings - Lock Screen](/img/guides/pc-settings-lockscreen.png)
 
 
-6. **Assign the Profile to the Dynamic Group:**
-   - Under **Assignments**, select **Included groups** > **Add groups**.
-   - Select the dynamic group created in step 2 (e.g., "Corporate Devices").
-   - Click **Next** and then **Create** to save the profile.
+## Additional Resources
+
+* [Assign policies in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-assign)
+* [Add groups fundamentals](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/groups-add)
 
 
-**Verification:**
-- Once the profile is assigned, the settings will be applied to all devices in the dynamic group. You can verify the deployment by checking the lock screen and desktop wallpaper on the target devices.
-
-![pc-settings-wallpaper](/img/guides/pc-settings-wallpaper.png)
-
-![pc-settings-lockscreen](/img/guides/pc-settings-lockscreen.png)
-
-## Summary
-
-:::tip
-While users can set their own wallpapers, managing lock screen and desktop images centrally with Intune ensures a consistent and professional appearance across all devices. This approach provides several benefits:
-- **Security Information**: Centralized wallpaper management lets organizations display important security reminders and emergency contact details on lock screens and desktops.
-- **Corporate Identity**: Uniform corporate wallpapers across devices reinforce brand identity, showcasing the company logo, colors, and branding to leave a lasting impression on clients and visitors.
-
-:::
-
-For more detailed information: 
-- [Assign policies in Microsoft Intune](https://learn.microsoft.com/en-us/mem/intune/configuration/device-profile-assign)
-- [Add groups fundamentals](https://learn.microsoft.com/en-us/intune/intune-service/fundamentals/groups-add)
