@@ -4,29 +4,31 @@ export const dataDir: string = 'img/projects';
 
 export const projects: ProjectData[] = [
     {
-        title: "Python for Starters",
-        description: "Code samples for algorithm, API calls, and data structures written in Python.",
-        url: "/docs/python-for-starters/overview",
-        image: `${dataDir}/default.png`,
+        title: "Python",
+        description: "Code samples written in Python.",
+        url: "/docs/learn/python",
+        image: `${dataDir}/download.png`,
     },
     {
-        title: "Hyper Text Markup Language",
-        description: "Explore the fundamental concepts of HTML, covering its syntax, basic elements, and attributes.",
+        title: "HTML",
+        description: "Explore the fundamental concepts of HTML",
         url: "#",
-        image: `${dataDir}/default.png`,
+        image: `${dataDir}/download.png`,
     },
+
     {
-        title: "django-crud-demo",
-        description: "Demonstrating simple crud application built with Django.",
-        url: "#",
-        image: `${dataDir}/django-crud-demo.png`,
-    },
+        title: "Git",
+        description: "Building web applications with Python.",
+        url: "/docs/learn/git",
+        image: `${dataDir}/download.png`,
+    }
     // {
-    //     title: "Flask Tutorial - Demo",
-    //     description: "Building web applications with Python.",
-    //     url: "https://github.com/mkeithX/flask-tutorial-demo",
-    //     image: `${dataDir}/default.png`,
+    //     title: "django-crud-demo",
+    //     description: "Demonstrating simple crud application built with Django.",
+    //     url: "#",
+    //     image: `${dataDir}/django-crud-demo.png`,
     // },
+,
     // {
     //     title: "MKX Website",
     //     description: "A unified docs for IT Developers and Astronomers.",
