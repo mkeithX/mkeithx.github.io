@@ -43,7 +43,7 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "MKX",
+  title: "MKXSpaceHub",
   tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
@@ -230,7 +230,7 @@ const config: Config = {
       },
       items: [
         { type: "doc", docId: "introduction", label: "Docs", },
-        { to: "/docs/learn", label: "Learn" },
+        { to: "/learn", label: "Learn" },
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
