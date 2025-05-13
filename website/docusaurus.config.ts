@@ -230,7 +230,7 @@ const config: Config = {
       },
       items: [
         { type: "doc", docId: "introduction", label: "Docs", },
-        { to: "/learn", label: "Learn" },
+        { to: "/projects", label: "Learn" },
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },

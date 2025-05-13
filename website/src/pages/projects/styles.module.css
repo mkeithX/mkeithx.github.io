@@ -14,7 +14,7 @@
 }
 
 .heroBanner {
-  padding: 4rem 0;
+  padding: 6rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
@@ -93,8 +93,8 @@
 }
 
 .heroCustomSubTitleHtml {
-  font-weight: 500;
-  font-size: 22px
+  font-weight: 400;
+  font-size: 24px
 }
 
 .heroCustomSubTitleHtml b {
