@@ -18,8 +18,8 @@ function LearnHeader(): JSX.Element {
                             <b>{"Developers"}</b>
                         </Heading>
                         <span className={clsx(styles.learnBody, "hero__subtitle margin-left-x text--light text--small")}>
-                            {"where all testing begins."}
-                            <Link className={styles.indexCtas} to={'/docs/learn'}>{" Let's go"}</Link>{"!"}
+                            {"More Code Samples."}
+                            <Link className={styles.indexCtas} to={'/projects'}>{" Let's go"}</Link>{"!"}
 
                         </span>
                     </div>
