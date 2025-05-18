@@ -13,7 +13,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "System Administration",
-      collapsed: false,
+      collapsed: true,
       link: {
         type: "generated-index",
         slug: "/system-administration",

@@ -81,15 +81,38 @@ const teamMembers = [
 
   {
     name: "Gina",
-    subTitle: "Contributor @ Kitiplex",
+    subTitle: "Maintainer @ Kitiplex",
     githubUrl: "https://github.com/botgina",
     twitterUrl: "https://twitter.com/",
   },
 
-
 ];
 
 const contributors = [
+    {
+    name: "Leo Go",
+    subTitle: "Contributor @ Kitiplex",
+    githubUrl: "https://github.com/GuLeeDev",
+    twitterUrl: "https://twitter.com/",
+  },
+    {
+    name: "Megan",
+    subTitle: "Contributor @ Kitiplex",
+    githubUrl: "https://github.com/CodeByMegan",
+    twitterUrl: "https://twitter.com/",
+  },
+  {
+    name: "Adele",
+    subTitle: "Contributor @ Kitiplex",
+    githubUrl: "https://github.com/CodeByAdele",
+    twitterUrl: "https://twitter.com/",
+  },
+  {
+    name: "Joni Sy",
+    subTitle: "Contributor @ Kitiplex",
+    githubUrl: "https://github.com/SyJoniDev",
+    twitterUrl: "https://twitter.com/",
+  },
   {
     name: "Dcst0301",
     subTitle: "Contributor @ Kitiplex",
