@@ -4,6 +4,8 @@ description: Manage Lock Screen and Desktop Wallpaper in Microsoft Intune
 sidebar_label: Lock Screen and Desktop Image
 ---
 
+import BrowserWindow from '@site/src/components/BrowserWindow';
+
 This guide explains how to centrally manage lock screen and desktop wallpaper on Windows devices using Microsoft Intune. This helps reinforce corporate branding and communicate important information consistently.
 
 
@@ -40,8 +42,10 @@ Before proceeding, host your images in a publicly accessible location. Suitable 
 3. **Profile Type:** Choose **Templates** > **Device restrictions**
 4. Enter a name (e.g., `Corporate Wallpaper Settings`) and an optional description
 
+   <BrowserWindow url="aka.ms/in">
    ![Profile Creation](/img/guides/intune-lockscreen-profile-start.png)
 
+   </BrowserWindow>
 
 
 
@@ -54,7 +58,13 @@ Before proceeding, host your images in a publicly accessible location. Suitable 
 3. **Desktop background URL**: Enter the URL of the desktop wallpaper
 4. Click **Next**
 
+   <BrowserWindow url="aka.ms/in">
+
    ![Lock Screen Settings](/img/guides/intune-lockscreen-device-restriction.png)
+
+   </BrowserWindow >
+
+
 
 ### `Personalization`
 
@@ -64,7 +74,13 @@ Before proceeding, host your images in a publicly accessible location. Suitable 
    * **Desktop background URL**
 3. Click **Next**
 
-   ![Desktop Wallpaper Settings](/img/guides/intune-wallpaper-device-restriction.png)
+   <BrowserWindow url="aka.ms/in">
+
+      ![Desktop Wallpaper Settings](/img/guides/intune-wallpaper-device-restriction.png)
+
+   </BrowserWindow >
+
+
 
 ## Group Assignment
 
@@ -76,6 +92,8 @@ Before proceeding, host your images in a publicly accessible location. Suitable 
 Once the profile is assigned, the configuration will apply to all devices in the group. Confirm by inspecting lock screen and desktop wallpaper settings on a managed device.
 
 ### Lock screen
+
+
    ![PC Settings - Lock Screen](/img/guides/pc-settings-lockscreen.png)
 
 

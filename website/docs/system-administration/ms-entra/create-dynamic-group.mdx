@@ -3,6 +3,8 @@ description: Create a Dynamic Group in Entra
 title: Create a Dynamic Group
 ---
 
+import BrowserWindow from '@site/src/components/BrowserWindow';
+
 Dynamic groups in Microsoft Entra ID allow administrators to automatically manage group membership based on user or device attributes. This article provides a step-by-step guide to creating a dynamic group that includes members with Windows OS and corporate devices.
 
 
@@ -25,14 +27,27 @@ Dynamic groups in Microsoft Entra ID allow administrators to automatically manag
    - **Group Name:** Enter a meaningful name for the group (e.g., "Windows Corporate Devices").
    - **Group Description:** Provide a description for the group.
 
-![create-new-group](/img/guides/entra-create-dynamic-group.png)
+   <BrowserWindow url="aka.ms/msentraportal">
+
+      ![create-new-group](/img/guides/entra-create-dynamic-group.png)
+
+   </BrowserWindow>
+
+
+
 
 
 ### Set Membership Type to Dynamic
    - Under **Membership type**, select **Dynamic Device**.
    - Click on **Add dynamic query**.
 
-![create-new-group](/img/guides/dynamic-membership-rules.png)
+   <BrowserWindow url="aka.ms/msentraportal">
+
+    ![create-new-group](/img/guides/dynamic-membership-rules.png)
+   
+   </BrowserWindow>
+
+
 
 
 #### Define Membership Rules
@@ -48,7 +63,13 @@ Example Dynamic Query
 #### Save the Group
    - Click on **Save** to create the group with the defined dynamic membership rules.
 
-![entra-dynamic-group](/img/guides/entra-dynamic-group.png)
+   <BrowserWindow url="aka.ms/msentraportal">
+
+      
+    ![entra-dynamic-group](/img/guides/entra-dynamic-group.png)
+   
+   </BrowserWindow>
+
 
 
 **Verification:**

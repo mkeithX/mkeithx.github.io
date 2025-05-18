@@ -31,7 +31,7 @@ export const Project: FunctionComponent<ProjectData> = ({
         <div className="card__footer">
           <a
             href={url}
-            target="_blank"
+            // target="_blank"
             className="button button--outline button--primary"
           >
 

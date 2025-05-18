@@ -21,19 +21,26 @@ const ProjectsHeader = (): JSX.Element => {
     };
 
     return (
-        <header className={clsx('hero hero--dark', styles.heroBanner)}>
+        <header className={clsx('hero hero--dark', styles.projectsheroBanner)}>
             <div className="container">
+                <div className='hero__subtitle'>
+                    <span className='text--light'>
+                        {"Explore"}
+
+                    </span>
                 <Heading as="h1" className="hero__title">
-                    <span className={styles.heroTitleTextHtml}>
+                    <span className={styles.projectsheroTitleTextHtml}>
                         <div className={styles.heroBannerTitle}>
-                            <b>{"Explore"}</b>
+                            <b>{"More Code Samples"}</b>
 
                         </div>
                     </span>
                 </Heading>
+                </div>
+
                 <div className={styles.heroSubtitle}>
-                    <span className={styles.heroCustomSubTitleHtml}>
-                        {"Some projects"}
+                    <span className={styles.projectsheroCustomSubTitleHtml}>
+                        {"for software devlelopment"}
                         <br />
                     </span>
                 </div>
@@ -44,7 +51,7 @@ const ProjectsHeader = (): JSX.Element => {
 
 export default function Projects(): JSX.Element {
     return (
-        <Layout title="Projects" description="Explore some projects">
+        <Layout title="SpaceHub for Developers" description="All about programming fundamentals">
             <ProjectsHeader />
             <main className={clsx("container margin-vert--lg")}>
 

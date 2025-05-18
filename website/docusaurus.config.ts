@@ -43,7 +43,7 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "MKX",
+  title: "MKXSpaceHub",
   tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
@@ -54,14 +54,12 @@ const config: Config = {
   onBrokenMarkdownLinks: "warn",
   trailingSlash: false,
   titleDelimiter: '·',
-  // future: {
-  //   experimental_faster: true,
-  // },
 
   staticDirectories: [
     'static',
     path.join(__dirname, 'non-existent'),
   ],
+  
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
@@ -183,7 +181,7 @@ const config: Config = {
         max: 1030,
         min: 640,
         steps: 2,
-        disableInDev: true,
+        disableInDev: false,
       } satisfies IdealImageOptions,
     ],
     [
@@ -232,7 +230,7 @@ const config: Config = {
       },
       items: [
         { type: "doc", docId: "introduction", label: "Docs", },
-        { to: "/docs/learn", label: "Learn" },
+        { to: "/projects", label: "Developers" },
         { to: "/cosmos", label: "Cosmos" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
@@ -272,11 +270,6 @@ const config: Config = {
       apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       indexName: "mkeithx",
       appId: "XVSOLYZXNV",
-      replaceSearchResultPathname: {
-        from: /^\/docs\/next/g.source,
-        to: '/',
-      },
-
       contextualSearch: false
     },
     footer: {

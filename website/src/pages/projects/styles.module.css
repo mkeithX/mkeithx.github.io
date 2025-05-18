@@ -3,7 +3,7 @@
  * and scoped locally.
  */
 
- .hero {
+ .projectshero {
   display: flex;
   padding: 4rem 0;
   text-align: center;
@@ -13,8 +13,8 @@
   background-color: var(--ifm-site-dark) !important;
 }
 
-.heroBanner {
-  padding: 4rem 0;
+.projectsheroBanner {
+  padding: 3.5rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
@@ -25,25 +25,25 @@
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
 }
 
-.hero h1 {
+.projectshero h1 {
   font-size: 3rem;
   padding-bottom: 1rem;
 }
 
-.heroBannerTitle {
+.projectsheroBannerTitle {
   font-size: 1em;
   font-weight: bold;
   margin-bottom: 0.3rem;
   position: relative;
 }
 
-.heroSubtitle {
+.projectsheroSubtitle {
   font-size: 22px;
   /* font-weight: normal; */
   margin-bottom: 1em;
 }
 
-.heroCustomTagline {
+.projectsheroCustomTagline {
   color: transparent;
   background: linear-gradient(90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
   -webkit-text-fill-color: transparent;
@@ -55,12 +55,12 @@
   padding: 12px;
 }
 
-.heading {
+.projectsheading {
   font-weight: bold;
   font-size: 20px;
 }
 
-.heroBannerLogo {
+.projectsheroBannerLogo {
   max-width: 34%;
   width: 22rem;
   height: 22rem;
@@ -84,7 +84,7 @@
   font-weight: normal;
 }
 
-.heroTitleTextHtml b {
+.projectsheroTitleTextHtml b {
   color: transparent;
   background: linear-gradient(90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
   background-clip: text;
@@ -92,12 +92,12 @@
   font-size: 54px;
 }
 
-.heroCustomSubTitleHtml {
-  font-weight: 500;
-  font-size: 22px
+.projectsheroCustomSubTitleHtml {
+  font-weight: 300;
+  font-size: 24px
 }
 
-.heroCustomSubTitleHtml b {
+.projectsheroCustomSubTitleHtml b {
   color: transparent;
   background: linear-gradient(90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
   -webkit-background-clip: text;
@@ -105,8 +105,8 @@
   font-weight: 400;
 }
 
-.heroSubTitleTextHtml b {
-  color: var(--ifm-color-primary);
+.projectsheroSubTitleTextHtml b {
+  color: var(--ifm-color-primary) !important;
   font-size: 22px;
 }
 
@@ -120,7 +120,7 @@
 }
 
 @media (prefers-reduced-motion: no-preference) {
-  .heroBannerLogo {
+  .projectsheroBannerLogo {
     animation: kit-in-the-box infinite 60s linear;
   }
 }
