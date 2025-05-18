@@ -21,7 +21,7 @@ const ProjectsHeader = (): JSX.Element => {
     };
 
     return (
-        <header className={clsx('hero hero--dark', styles.heroBanner)}>
+        <header className={clsx('hero hero--dark', styles.projectsheroBanner)}>
             <div className="container">
                 <div className='hero__subtitle'>
                     <span className='text--light'>
@@ -29,7 +29,7 @@ const ProjectsHeader = (): JSX.Element => {
 
                     </span>
                 <Heading as="h1" className="hero__title">
-                    <span className={styles.heroTitleTextHtml}>
+                    <span className={styles.projectsheroTitleTextHtml}>
                         <div className={styles.heroBannerTitle}>
                             <b>{"More Code Samples"}</b>
 
@@ -39,7 +39,7 @@ const ProjectsHeader = (): JSX.Element => {
                 </div>
 
                 <div className={styles.heroSubtitle}>
-                    <span className={styles.heroCustomSubTitleHtml}>
+                    <span className={styles.projectsheroCustomSubTitleHtml}>
                         {"for software devlelopment"}
                         <br />
                     </span>

@@ -17,9 +17,9 @@ export const projects: ProjectData[] = [
     },
 
     {
-        title: "Git",
-        description: "Building web applications with Python.",
-        url: "/docs/learn/git",
+        title: "React",
+        description: "React live code editing",
+        url: "/docs/learn/react-live-demo",
         image: `${dataDir}/download.png`,
     }
 ];

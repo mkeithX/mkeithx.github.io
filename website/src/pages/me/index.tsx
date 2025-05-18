@@ -60,7 +60,7 @@ function This(): JSX.Element {
                                 <p>
                                     I earned my degree in Information Technology when ReactJS was about a year old. Despite never dreaming of being part of the IT industry, I’ve embraced this path wholeheartedly, and I’m blessed to have a wonderful family that supports me.
                                 </p>
-                                Currently, I’m working on something cool and, of course, maintaining the projects I’ve authored and contributed to, including this <Link
+                                Currently, I’m working on something cool and, of course, maintaining the projects I’ve authored and contributed to, including <Link
                                     className="text--no-decoration"
                                     to="/"
                                     target="_blank"
