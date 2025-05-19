@@ -18,7 +18,8 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/terminal_icon.svg").default,
     description: (
       <>
-        Quick solutions with practical code snippets, shared gists, and helpful resources.
+        Quick solutions with practical code snippets, shared gists, and helpful resources. 
+        <Link to="/projects"> more</Link>.
       </>
     ),
   },
@@ -38,7 +39,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/api_icon.svg").default,
     description: (
       <>
-        Build fast and relevant search experiences for applications and websites efficiently.
+        Explore guides and best practices for System Admin.
       </>
     ),
   },
@@ -48,7 +49,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/rocket.svg").default,
     description: (
       <>
-        Designed with developers in mind for a seamless and intuitive experience.
+      Explore the properties and behaviors of celestial bodies within the <Link to="/cosmos">cosmos</Link> .
       </>
     ),
   },
@@ -58,7 +59,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/logo/react-logo.svg").default,
     description: (
       <>
-        Experience a fast, dynamic interface powered by React for optimal performance.
+      Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/guides/create-doc">React</Link>  components.
       </>
     ),
   },
