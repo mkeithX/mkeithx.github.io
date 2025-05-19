@@ -93,7 +93,7 @@ const contributors = [
     name: "Leo Go",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/GuLeeDev",
-    twitterUrl: "https://twitter.com/",
+    twitterUrl: "https://twitter.com/GuLeeDev",
   },
     {
     name: "Megan",
