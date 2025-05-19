@@ -95,18 +95,21 @@ const contributors = [
     githubUrl: "https://github.com/GuLeeDev",
     twitterUrl: "https://twitter.com/GuLeeDev",
   },
-    {
+  
+  {
     name: "Megan",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/CodeByMegan",
-    twitterUrl: "https://twitter.com/",
+    twitterUrl: "https://twitter.com/kitiplex",
   },
+
   {
     name: "Adele",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/CodeByAdele",
     twitterUrl: "https://twitter.com/",
   },
+
   {
     name: "Joni Sy",
     subTitle: "Contributor @ Kitiplex",
@@ -119,6 +122,7 @@ const contributors = [
     githubUrl: "https://github.com/Dcst0301",
     twitterUrl: "https://twitter.com/",
   },
+
   {
     name: "ayitsmeprincess",
     subTitle: "Contributor @ Kitiplex",
@@ -132,24 +136,28 @@ const contributors = [
     githubUrl: "https://github.com/rkortiga",
     twitterUrl: "https://twitter.com/",
   },
+
   {
     name: "Venice",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/Portiaporkshap",
     twitterUrl: "https://twitter.com/",
   },
+
   {
     name: "PrimmieDoll",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/PrimmieDoll",
     twitterUrl: "https://twitter.com/",
   },
+
   {
     name: "Joei",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/JoeiX",
     twitterUrl: "https://twitter.com/angajoei",
   },
+
   {
     name: "PriMx",
     subTitle: "Contributor @ Kitiplex",
@@ -163,30 +171,35 @@ const contributors = [
     githubUrl: "https://github.com/topsykretts8520",
     twitterUrl: "https://twitter.com/",
   },
+
   {
     name: "MeganB",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/MeganB143",
     twitterUrl: "#",
   },
+
   {
     name: "Johanna Lorenz",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/JLorenz143",
     twitterUrl: "https://twitter.com/",
   },
+
   {
     name: "Miriam G",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/MiriamG416",
     twitterUrl: "https://twitter.com/",
   },
+
   {
     name: "Kiti",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/kitimi88",
     twitterUrl: "https://twitter.com/",
   },
+
 ];
 
 export function CoreTeamRow(): JSX.Element {
