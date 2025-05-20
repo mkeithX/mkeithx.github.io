@@ -75,9 +75,10 @@ const config: Config = {
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
-  // stylesheets: [
-  //   { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
-  // ],
+  
+  stylesheets: [
+    { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
+  ],
 
   i18n: {
     defaultLocale: "en",
