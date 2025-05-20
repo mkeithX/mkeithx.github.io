@@ -122,6 +122,11 @@ const sidebars: SidebarsConfig = {
     },
     'downloads',
     'speedtest',
+        {
+      type: 'html',
+      value: '<img src="/img/Microsoft_icon.svg" alt="dev" />',
+      defaultStyle: true, // Default menu item styling
+    },
   ],
 
   learnSidebar: [

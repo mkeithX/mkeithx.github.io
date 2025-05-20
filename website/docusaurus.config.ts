@@ -31,7 +31,7 @@ const commonExclusions = {
 };
 
 const commonRemarkConfig = {
-  remarkPlugins: [[npm2yarn,  { sync: true }], remarkMath],
+  remarkPlugins: [[npm2yarn, {sync: true}], remarkMath],
   rehypePlugins: [rehypeKatex],
 };
 
@@ -55,10 +55,14 @@ const config: Config = {
   trailingSlash: false,
   titleDelimiter: '·',
 
-  staticDirectories: [
-    'static',
-    path.join(__dirname, 'non-existent'),
-  ],
+  future: {
+    experimental_faster: true,
+  },
+
+  // staticDirectories: [
+  //   'static',
+  //   path.join(__dirname, 'non-existent'),
+  // ],
   
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
@@ -71,18 +75,20 @@ const config: Config = {
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
-  stylesheets: [
-    { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
-  ],
+  // stylesheets: [
+  //   { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
+  // ],
 
   i18n: {
     defaultLocale: "en",
     locales: ["en"],
   },
-  markdown: {
-    format: "detect",
-    mermaid: true,
-  },
+
+  // markdown: {
+  //   format: "detect",
+  //   mermaid: true,
+  // },
+
   presets: [
     [
       "classic",
@@ -182,13 +188,13 @@ const config: Config = {
         min: 640,
         steps: 2,
         disableInDev: false,
-      } satisfies IdealImageOptions,
+      } as IdealImageOptions,
     ],
     [
       "client-redirects",
       {
         redirects: redirects,
-      } satisfies ClientRedirectsOptions,
+      } as ClientRedirectsOptions,
     ],
   ],
 
@@ -328,7 +334,7 @@ const config: Config = {
       ],
     },
     metadata: [
-      { name: 'og:title', content: 'MKX' },
+      { name: 'og:title', content: 'MKXSpaceHub' },
       {
         name: 'og:description',
         content: 'A cosmic-flavored website for Software Development, Documentation and more!'
