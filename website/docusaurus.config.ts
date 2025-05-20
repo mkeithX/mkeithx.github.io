@@ -84,10 +84,10 @@ const config: Config = {
     locales: ["en"],
   },
 
-  // markdown: {
-  //   format: "detect",
-  //   mermaid: true,
-  // },
+  markdown: {
+    format: "detect",
+    mermaid: true,
+  },
 
   presets: [
     [
