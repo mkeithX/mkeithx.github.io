@@ -59,7 +59,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/logo/react-logo.svg").default,
     description: (
       <>
-      Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/guides/create-doc">React</Link>  components.
+      Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/configs/create-doc">React</Link>  components.
       </>
     ),
   },

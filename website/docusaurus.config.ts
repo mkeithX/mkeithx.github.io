@@ -31,7 +31,7 @@ const commonExclusions = {
 };
 
 const commonRemarkConfig = {
-  remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
+  remarkPlugins: [[npm2yarn,  { sync: true }], remarkMath],
   rehypePlugins: [rehypeKatex],
 };
 
