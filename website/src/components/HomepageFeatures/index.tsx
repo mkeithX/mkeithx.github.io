@@ -25,11 +25,11 @@ const FeatureList: FeatureItem[] = [
   },
   {
     scale: 0.8,
-    title: "Container",
+    title: "Playground",
     Svg: require("@site/static/img/container_solid.svg").default,
     description: (
       <>
-        Comprehensive services to enhance website performance, security, and reliability.
+        Write and test your <code>React</code> on the live code-editor - Powered by <Link to="https://nearform.com/open-source/react-live/">React Live</Link>.
       </>
     ),
   },
