@@ -1,6 +1,6 @@
 import { themes, type PrismTheme } from 'prism-react-renderer';
 
-const baseTheme = themes.vsLight; 
+const baseTheme = themes.nightOwlLight; 
 export default {
   plain: {
     color: "#393A34",

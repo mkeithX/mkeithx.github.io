@@ -1,6 +1,6 @@
 import { themes, type PrismTheme } from "prism-react-renderer";
 
-const baseTheme = themes.dracula;
+const baseTheme = themes.nightOwl;
 
 export default {
   plain: {

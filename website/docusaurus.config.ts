@@ -286,7 +286,7 @@ const config: Config = {
         src: "img/logo/developers-a.png",
         href: "/",
         // width: "330",
-        height: "60"
+        height: "50"
       },
       links: [
         {
