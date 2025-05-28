@@ -71,7 +71,7 @@ function HomepageHeader(): JSX.Element {
           <Link
             className={clsx("button button--secondary button--lg")}
             to="https://eyes.nasa.gov/apps/solar-system/#/home">
-            {'Space'}
+            {'Cosmos'}
           </Link>
         </div>
       </div>

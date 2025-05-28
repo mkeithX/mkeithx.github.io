@@ -1,76 +1,94 @@
-import { themes, type PrismTheme } from 'prism-react-renderer';
+import {themes, type PrismTheme} from 'prism-react-renderer';
 
-const baseTheme = themes.nightOwlLight; 
+const baseTheme = themes.github;
+
 export default {
-  plain: {
-    color: "#393A34",
-    backgroundColor: "#f6f8fa",
-  },
+  ...baseTheme,
   styles: [
+    ...baseTheme.styles,
     {
-      types: ["comment", "prolog", "doctype", "cdata"],
+      types: ['title'],
       style: {
-        color: "#999988",
-        fontStyle: "italic",
+        color: '#0550AE',
+        fontWeight: 'bold',
       },
     },
     {
-      types: ["namespace"],
+      types: ['parameter'],
       style: {
-        opacity: 0.7,
+        color: '#953800',
       },
     },
     {
-      types: ["string", "attr-value"],
+      types: ['boolean', 'rule', 'color', 'number', 'constant', 'property'],
       style: {
-        color: "#e3116c",
+        color: '#005CC5',
       },
     },
     {
-      types: ["punctuation", "operator"],
+      types: ['atrule', 'tag'],
       style: {
-        color: "#393A34",
+        color: '#22863A',
       },
     },
     {
-      types: [
-        "entity",
-        "url",
-        "symbol",
-        "number",
-        "boolean",
-        "variable",
-        "constant",
-        "property",
-        "regex",
-        "inserted",
-      ],
+      types: ['script'],
       style: {
-        color: "#36acaa",
+        color: '#24292E',
       },
     },
     {
-      types: ["atrule", "keyword", "attr-name", "selector"],
+      types: ['operator', 'unit', 'rule'],
       style: {
-        color: "#00a4db",
+        color: '#D73A49',
       },
     },
     {
-      types: ["function", "deleted", "tag"],
+      types: ['font-matter', 'string', 'attr-value'],
       style: {
-        color: "#d73a49",
+        color: '#C6105F',
       },
     },
     {
-      types: ["function-variable"],
+      types: ['class-name'],
       style: {
-        color: "#6f42c1",
+        color: '#116329',
       },
     },
     {
-      types: ["tag", "selector", "keyword"],
+      types: ['attr-name'],
       style: {
-        color: "#00009f",
+        color: '#0550AE',
+      },
+    },
+    {
+      types: ['keyword'],
+      style: {
+        color: '#CF222E',
+      },
+    },
+    {
+      types: ['function'],
+      style: {
+        color: '#8250DF',
+      },
+    },
+    {
+      types: ['selector'],
+      style: {
+        color: '#6F42C1',
+      },
+    },
+    {
+      types: ['variable'],
+      style: {
+        color: '#E36209',
+      },
+    },
+    {
+      types: ['comment'],
+      style: {
+        color: '#6B6B6B',
       },
     },
   ],

@@ -14,32 +14,31 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     scale: 0.8,
-    title: "Developer",
+    title: "Dev Basics",
     Svg: require("@site/static/img/terminal_icon.svg").default,
     description: (
       <>
-        Quick solutions with practical code snippets, shared gists, and helpful resources. 
-        <Link to="/projects"> more</Link>.
+        Easy, beginner-friendly guides to <Link to="/projects"> learn the basics</Link> of coding and essential tools.
       </>
     ),
   },
   {
     scale: 0.8,
-    title: "Playground",
+    title: "Sandbox",
     Svg: require("@site/static/img/container_solid.svg").default,
     description: (
       <>
-        Write and test your <code>React</code> on the live code-editor - Powered by <Link to="https://nearform.com/open-source/react-live/">React Live</Link>.
+        With built-in <Link to="/docs/learn/react-live-demo#get-started">Live Code-Editor </Link> to write and test your React code instantly.
       </>
     ),
   },
   {
     scale: 0.8,
-    title: "API",
+    title: "SysOps",
     Svg: require("@site/static/img/api_icon.svg").default,
     description: (
       <>
-        Explore guides and best practices for System Admin.
+        Practical guides and best practices for system operations and administration.
       </>
     ),
   },

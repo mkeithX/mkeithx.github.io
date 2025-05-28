@@ -1,6 +1,6 @@
-import { themes, type PrismTheme } from "prism-react-renderer";
+import {themes, type PrismTheme} from 'prism-react-renderer';
 
-const baseTheme = themes.nightOwl;
+const baseTheme = themes.dracula;
 
 export default {
   plain: {
@@ -8,59 +8,66 @@ export default {
     backgroundColor: "#282A36",
   },
   styles: [
+    ...baseTheme.styles,
     {
-      types: ["prolog", "constant", "builtin"],
+      types: ['title'],
       style: {
-        color: "rgb(189, 147, 249)",
+        color: '#569CD6',
+        fontWeight: 'bold',
       },
     },
     {
-      types: ["inserted", "function"],
+      types: ['property', 'parameter'],
       style: {
-        color: "rgb(80, 250, 123)",
+        color: '#9CDCFE',
       },
     },
     {
-      types: ["deleted"],
+      types: ['script'],
       style: {
-        color: "rgb(255, 85, 85)",
+        color: '#D4D4D4',
       },
     },
     {
-      types: ["changed"],
+      types: ['boolean', 'arrow', 'atrule', 'tag'],
       style: {
-        color: "rgb(255, 184, 108)",
+        color: '#569CD6',
       },
     },
     {
-      types: ["punctuation", "symbol"],
+      types: ['number', 'color', 'unit'],
       style: {
-        color: "rgb(248, 248, 242)",
+        color: '#B5CEA8',
       },
     },
     {
-      types: ["string", "char", "tag", "selector"],
+      types: ['font-matter'],
       style: {
-        color: "rgb(255, 121, 198)",
+        color: '#CE9178',
       },
     },
     {
-      types: ["keyword", "variable"],
+      types: ['keyword', 'rule'],
       style: {
-        color: "rgb(189, 147, 249)",
-        fontStyle: "italic",
+        color: '#C586C0',
       },
     },
     {
-      types: ["comment"],
+      types: ['regex'],
       style: {
-        color: "rgb(98, 114, 164)",
+        color: '#D16969',
       },
     },
     {
-      types: ["attr-name"],
+      types: ['maybe-class-name'],
       style: {
-        color: "rgb(241, 250, 140)",
+        color: '#4EC9B0',
+      },
+    },
+    {
+      types: ['constant'],
+      style: {
+        color: '#4FC1FF',
       },
     },
   ],

@@ -1,6 +1,6 @@
 ---
 title: Introduction
-description: The official DevPortal for the Kitiplex DevOps team
+description: Intro to The SpaceHub docs website:The official documentation for The SpaceHub Project
 slug: /
 sidebar_label: Welcome
 keywords:
@@ -16,18 +16,76 @@ import BrowserWindow from "@site/src/components/BrowserWindow";
 
 # Introduction
 
-**Welcome** to the '_cosmic-flavored_' documentation website of **The SpaceHub Project**! — featuring code samples, snippets, and practical guides for system administration and web development. The goal of the project is to emphasize that every successful [Software Development Lifecycle (SDLC)](https://github.com/resources/articles/software-development/what-is-sdlc#sdlc-best-practices-and-challenges) comes with a helpful documentation. 🚀
+Welcome to **MKX SpaceHub** 🚀
+
+The official documentation hub for **The SpaceHub Project** - offering basic code samples, snippets for web development as well as practical guides for system administration specifically on the Microsoft 365 and Azure environment.
+
+
+The goal of the project is to emphasize that every successful [Software Development Lifecycle (SDLC)](https://github.com/resources/articles/software-development/what-is-sdlc#sdlc-best-practices-and-challenges) comes with a helpful documentation. 
 
 
 ## Features
-The project is build on top of [Docusaurus](https://docusaurus.io) - documentation framework along with additional markdown features to allow developers to publish high quality, modern documentation for their tools such as:
+The project is build on top of [Docusaurus](https://docusaurus.io) - documentation framework along with additional markdown features and a few custom plugins allowing developers and tech writers to publish high quality, modern and flexible documentation for their projects.
 
-- Math Rendering, ($ E = mc^2 $)
-- Diagrams
+
+### MDX
+
+<BrowserWindow>
+
+<Tabs>
+<TabItem value="sh" label="PowerShell">
+
+```sh
+Restart-Computer -Force
+```
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+import this
+```
+
+</TabItem>
+<TabItem value="git" label="Git">
+
+```bash
+git add --all && git commit -m "refactor doc structure"
+```
+
+</TabItem>
+</Tabs>
+
+</BrowserWindow>
+
+<!-- <BrowserWindow>
+
+
+</BrowserWindow> -->
+
+
+<details>
+<summary><h3>Math Rendering</h3></summary>
+
+For displaying complex equations
+
+- $ E = mc^2 $
+- $ F = ma $
+- $ I = \int_0^{2\pi} \sin(x)\,dx $
+
+</details>
+
+
+
+
+<details>
+<summary>Diagrams</summary>
+
+For clear visual explanations
 
   ```mermaid
     graph LR;
-    A-->B;
+    A-->B-->C;
   ```
 
   ```mermaid
@@ -50,12 +108,19 @@ The project is build on top of [Docusaurus](https://docusaurus.io) - documentati
     id12[Can't reproduce]
       id3[Weird flickering in Firefox]
   ```
+
+</details>
+
 - The **Search Functionality** is powered by [Algolia DocSearch](https://docsearch.algolia.com) with a custom crawler configuration.
 
 
 - **Hosted on [Cloudflare](https://pages.cloudflare.com/)**: This website is securely hosted on Cloudflare for fast and reliable performance.
 
-
+<p align="center">
+  <a href="#">
+    <img src="https://skillicons.dev/icons?i=git,azure,react,vscode,cloudflare" />
+  </a>
+</p>
 
 ## History
 Historically, _SpaceHub_ are among many other project titles developed at Google at the height of the pandemic by 3 boring individuals who named themselves (group) as Kitimi. The group eventually retired and this effort was put in place to revive the effort.
@@ -66,80 +131,6 @@ Among its projects were [chatai assist](https://ginabot.vercel.app/) and a [docu
 
 
 
-## Explore
-
-Begin your journey by exploring the sections that interest you:
-
-<Columns className='item margin-bottom-lg' >
-
-<Column className="text--left item  padding--sm">
-  <Card
-    shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}
-  >
-    <CardHeader>
-      <h3>
-        <a href="/docs/learn">Tutorials</a>
-      </h3>
-    </CardHeader>
-    <CardBody>
-    Get started with the basics and fundamentals of HTML, Version Control, Python and More.
-    </CardBody>
-  </Card>
-</Column>
-
-<Column className="text--left item  padding--sm">
-  <Card
-    shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}
-  >
-    <CardHeader>
-      <h3>
-        <a href="/docs/configs/create-doc">Create a Doc</a>
-      </h3>
-    </CardHeader>
-    <CardBody>Learn how to create a Markdown document using plain `.md` files or a page using React components.</CardBody>
-  </Card>
-</Column>
-</Columns> 
-<Columns className='item margin-bottom-lg' >
-
-<Column className="text--left item  padding--sm">
-  <Card
-    shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}
-  >
-    <CardHeader>
-      <h3>
-        <a href="/cosmos/astrophysics">Astrophysics</a>
-      </h3>
-    </CardHeader>
-    <CardBody>Explore the properties and behaviors of celestial bodies within the cosmos.</CardBody>
-  </Card>
-</Column>
-
-<Column className="text--left item  padding--sm">
-  <Card
-    shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}
-  >
-    <CardHeader>
-      <h3>
-        <a href="/cosmos/solar-system">Solar System</a>
-      </h3>
-    </CardHeader>
-    <CardBody>
-Discover the star at the center of our system and the planets that orbit it due to gravity.
-    </CardBody>
-  </Card>
-</Column>
-</Columns>
-
-
-## Feedback and Support
-
-We value your feedback! If you have suggestions for improvement or encounter any issues, please [let us know](/community).
-
 
 import KitimiLogo from "@site/static/img/logo/kitimi-long-new.svg";
 
@@ -148,3 +139,5 @@ import KitimiTest from "@site/static/img/logo/kitimi-test.svg";
 <!-- <KitimiTest class="logoCard" /> -->
 
 <KitimiLogo class="logoBadge" />
+
+

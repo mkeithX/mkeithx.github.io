@@ -15,11 +15,7 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-// require('@dotenvx/dotenvx').config({ path: '.env.local' });
-
-
-const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target='_blank'>Keith Tan </a> <br>· The SpaceHub Project · `;
-
+const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target='_blank'>Keith Tan </a> and Contributors <br>· The SpaceHub Project · `;
 
 const commonExclusions = {
   exclude: [
@@ -43,7 +39,7 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "MKXSpaceHub",
+  title: "MKX SpaceHub",
   tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
@@ -59,10 +55,10 @@ const config: Config = {
     experimental_faster: true,
   },
 
-  // staticDirectories: [
-  //   'static',
-  //   path.join(__dirname, 'non-existent'),
-  // ],
+  staticDirectories: [
+    'static',
+    path.join(__dirname, 'non-existent'),
+  ],
   
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
@@ -230,20 +226,32 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/nav-logo.svg",
+        src: "img/side_icon.svg",
         target: "_self",
         // width: 80,
         // height: 70
       },
+      
       items: [
-        { type: "doc", docId: "introduction", label: "Docs", },
-        { to: "/projects", label: "Developers" },
-        { to: "/cosmos", label: "Cosmos" },
-        { to: "/community", label: "Community" },
+        {
+          type: 'dropdown',
+          label: 'Development',
+          position: 'left',
+          items: [
+            { type: "doc", docId: "introduction", label: "Docs", },
+            { to: "/projects", label: "Developers" },
+            { to: "/cosmos", label: "The Universe" },
+          ],
+        },
+        
+        
+        
+        { to: "/community", label: "Contributing" },
         { to: "/blog", label: "Blog" },
+        
         // {
         //   type: "html",
-        //   value: '<span class="badge badge--secondary">Beta</span>',
+        //   value: '<span class="badge badge--primary">Beta</span>',
         //   position: 'right'
         // },
         {
@@ -283,7 +291,7 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/developers-a.png",
+        src: "img/logo/mkx-kitidev.png",
         href: "/",
         // width: "330",
         height: "50"
@@ -335,7 +343,7 @@ const config: Config = {
       ],
     },
     metadata: [
-      { name: 'og:title', content: 'MKXSpaceHub' },
+      { name: 'og:title', content: 'MKX SpaceHub' },
       {
         name: 'og:description',
         content: 'A cosmic-flavored website for Software Development, Documentation and more!'
