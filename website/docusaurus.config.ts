@@ -52,7 +52,8 @@ const config: Config = {
   titleDelimiter: '·',
 
   future: {
-    experimental_faster: true,
+    v4: true,
+    experimental_faster: true
   },
 
   staticDirectories: [
@@ -278,7 +279,7 @@ const config: Config = {
         },
         
 
-        { type: "search", position: "right", className: "DocSearch"},
+        { type: "search", position: "right"},
       ],
     },
     algolia:{
