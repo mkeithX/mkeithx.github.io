@@ -19,15 +19,25 @@ const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target
 
 const commonExclusions = {
   exclude: [
-    "**/_*.{js,jsx,ts,tsx,md,mdx}",
-    "**/_*/**",
-    "**/*.test.{js,jsx,ts,tsx}",
-    "**/__tests__/**",
+    '**/_*.{js,jsx,ts,tsx,md,mdx}',
+    '**/_*/**',
+    '**/*.test.{js,jsx,ts,tsx}',
+    '**/__tests__/**',
   ],
 };
 
+const commonInclusions = {
+  include: [
+    '**/*.{js,jsx,ts,tsx,md,mdx}',
+    '**/*.{md,mdx}',
+    '**/*.md',
+    '**/*.mdx'
+  ]
+};
+
+
 const commonRemarkConfig = {
-  remarkPlugins: [[npm2yarn, {sync: true}], remarkMath],
+  remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
   rehypePlugins: [rehypeKatex],
 };
 
@@ -35,6 +45,7 @@ const commonDocsConfig = {
   ...admonitionsConfig,
   ...commonRemarkConfig,
   ...commonExclusions,
+  ...commonInclusions,
 };
 
 
@@ -57,10 +68,10 @@ const config: Config = {
   },
 
   staticDirectories: [
-    'static',
+    'static','public',
     path.join(__dirname, 'non-existent'),
   ],
-  
+
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
@@ -72,7 +83,7 @@ const config: Config = {
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
-  
+
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
@@ -95,9 +106,9 @@ const config: Config = {
           path: "docs",
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
-          ...commonDocsConfig,
           showLastUpdateAuthor: false,
           showLastUpdateTime: true,
+          ...commonDocsConfig,
         },
         blog: {
           path: "blog",
@@ -108,12 +119,11 @@ const config: Config = {
           blogSidebarTitle: "Updates",
           blogSidebarCount: "ALL",
           postsPerPage: 5,
-          ...admonitionsConfig,
-          ...commonRemarkConfig,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "ignore",
-        
+          ...commonDocsConfig,
+
           feedOptions: {
             type: "all",
             title: "The SpaceHub Project",
@@ -128,8 +138,8 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
-          ...commonDocsConfig,
           mdxPageComponent: "@theme/MDXPage",
+          ...commonDocsConfig,
         } satisfies PageOptions,
 
         theme: {
@@ -141,10 +151,10 @@ const config: Config = {
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
           filename: "sitemap.xml",
         },
-          gtag: {
-            trackingID: 'G-YYZ6V070LQ',
-            anonymizeIP: true,
-          },
+        gtag: {
+          trackingID: 'G-YYZ6V070LQ',
+          anonymizeIP: true,
+        },
 
       } satisfies Preset.Options,
     ],
@@ -162,8 +172,8 @@ const config: Config = {
         routeBasePath: "cosmos",
         showLastUpdateAuthor: false,
         showLastUpdateTime: true,
-        ...commonDocsConfig,
         sidebarPath: "./sidebarsCosmos.ts",
+        ...commonDocsConfig,
       } as DocsOptions,
     ],
     [
@@ -174,8 +184,8 @@ const config: Config = {
         routeBasePath: "community",
         showLastUpdateAuthor: false,
         showLastUpdateTime: false,
-        ...commonDocsConfig,
         sidebarPath: "./sidebarsCommunity.ts",
+        ...commonDocsConfig,
       } as DocsOptions,
     ],
     [
@@ -227,12 +237,12 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/side_icon.svg",
+        src: "img/mkx-new-test.svg",
         target: "_self",
-        // width: 80,
-        // height: 70
+        width: 70,
+        height: 70
       },
-      
+
       items: [
         {
           type: 'dropdown',
@@ -244,12 +254,12 @@ const config: Config = {
             { to: "/cosmos", label: "The Universe" },
           ],
         },
-        
-        
-        
+
+
+
         { to: "/community", label: "Contributing" },
         { to: "/blog", label: "Blog" },
-        
+
         // {
         //   type: "html",
         //   value: '<span class="badge badge--primary">Beta</span>',
@@ -268,7 +278,7 @@ const config: Config = {
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-            { href: "https://kitimi.sharepoint.com/sites/Hub", label:"MissionControl" },
+            { href: "https://kitimi.sharepoint.com/sites/Hub", label: "MissionControl" },
           ],
         },
         {
@@ -277,12 +287,12 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
-        
 
-        { type: "search", position: "right"},
+
+        { type: "search", position: "right" },
       ],
     },
-    algolia:{
+    algolia: {
       apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       indexName: "mkeithx",
       appId: "XVSOLYZXNV",
@@ -292,16 +302,16 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/mkx-kitidev.png",
+        src: "img/logo/developers-a.png",
         href: "/",
         // width: "330",
-        height: "50"
+        height: "70"
       },
       links: [
         {
           title: "Docs",
           items: [
-            { label: "System Admin", to: "/docs/system-administration"},
+            { label: "System Admin", to: "/docs/system-administration" },
             { label: "Python Examples", to: "/docs/learn/python/examples" },
             { label: "Astro Stuff", to: "/cosmos/astrophysics" },
           ],

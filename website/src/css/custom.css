@@ -41,6 +41,7 @@
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 }
 
+
 /* Navbar */
 .navbar {
   background-color: var(--ifm-site-dark);
@@ -49,10 +50,15 @@
 }
 
 .navbar__brand {
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   font-size: 17px;
-  font-weight: 400;
-  color: #1da1f2;
+  font-weight: 600;
+  background: linear-gradient(-90deg,
+      #8affff 0%,
+      #1da1f2 50%,
+      #b070ff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
 .navbar .navbar__items {
@@ -70,9 +76,10 @@
 }
 
 /* Hide navbar if not needed */
-html[data-navbar='false'] .navbar {
+
+/* html[data-navbar='false'] .navbar {
   display: none;
-}
+} */
 
 /* Content Table */
 .contentTableContainer table {
