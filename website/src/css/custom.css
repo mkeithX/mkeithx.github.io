@@ -7,6 +7,14 @@
 /* You can override the default Infima variables here. */
 
 :root {
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0,0,0,.1);
+  --ifm-global-shadow-md: 0 2px 4px 0 rgba(0,0,0,.14);
+  --ifm-global-shadow-tl: 0 3px 6px 0 rgba(0,0,0,.18);
+  --ifm-global-shadow-xl: 0 4px 8px 0 rgba(0,0,0,.22);
+}
+
+
+:root {
   --ifm-color-primary: #3578e5;
   --ifm-color-primary-dark: #1d68e1;
   --ifm-color-primary-darker: #1b62d4;
@@ -47,12 +55,27 @@
   background-color: var(--ifm-site-dark);
   align-items: center;
   --ifm-navbar-link-hover-color: #1da1f2;
+  font-size: 16px;
+  font-weight: 600;
 }
 
+.navbar__link--active:after {
+  --navbar-border-overflow: 5px;
+  content: "";
+  display: flex;
+  width: calc(100% + var(--navbar-border-overflow) * 2);
+  height: 4px;
+  margin-top: -4px;
+  margin-left: calc(var(--navbar-border-overflow) * -1);
+  margin-right: calc(var(--navbar-border-overflow) * -1);
+  position: relative;
+  top: 18px;
+  background: var(--ifm-color-primary-light) !important;
+}
+
+
 .navbar__brand {
-  /* margin-right: 1rem; */
-  font-size: 17px;
-  font-weight: 600;
+  margin-right: 1rem;
   background: linear-gradient(-90deg,
       #8affff 0%,
       #1da1f2 50%,
@@ -61,7 +84,7 @@
   -webkit-text-fill-color: transparent;
 }
 
-.navbar .navbar__items {
+.navbar__items {
   flex: auto;
   align-items: center;
 }

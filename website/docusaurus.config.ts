@@ -24,20 +24,21 @@ const commonExclusions = {
     '**/*.test.{js,jsx,ts,tsx}',
     '**/__tests__/**',
   ],
+  showLastUpdateAuthor: false,
 };
 
 const commonInclusions = {
   include: [
     '**/*.{js,jsx,ts,tsx,md,mdx}',
-    '**/*.{md,mdx}',
-    '**/*.md',
-    '**/*.mdx'
-  ]
+    '**/*.mdx',
+  ],
 };
 
-
 const commonRemarkConfig = {
-  remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
+  remarkPlugins: [
+    [npm2yarn, { sync: true }],
+    remarkMath,
+  ],
   rehypePlugins: [rehypeKatex],
 };
 
@@ -68,7 +69,7 @@ const config: Config = {
   },
 
   staticDirectories: [
-    'static','public',
+    'static', 'public',
     path.join(__dirname, 'non-existent'),
   ],
 
@@ -106,7 +107,6 @@ const config: Config = {
           path: "docs",
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
-          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
           ...commonDocsConfig,
         },
@@ -116,7 +116,7 @@ const config: Config = {
           blogDescription:
             "Keep up to date with what's going on with The SpaceHub Project!",
           routeBasePath: "blog",
-          blogSidebarTitle: "Updates",
+          blogSidebarTitle: "Recent updates",
           blogSidebarCount: "ALL",
           postsPerPage: 5,
           onInlineTags: "throw",
@@ -170,7 +170,6 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        showLastUpdateAuthor: false,
         showLastUpdateTime: true,
         sidebarPath: "./sidebarsCosmos.ts",
         ...commonDocsConfig,
@@ -182,7 +181,6 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        showLastUpdateAuthor: false,
         showLastUpdateTime: false,
         sidebarPath: "./sidebarsCommunity.ts",
         ...commonDocsConfig,
@@ -244,21 +242,10 @@ const config: Config = {
       },
 
       items: [
-        {
-          type: 'dropdown',
-          label: 'Development',
-          position: 'left',
-          items: [
-            { type: "doc", docId: "introduction", label: "Docs", },
-            { to: "/projects", label: "Developers" },
-            { to: "/cosmos", label: "The Universe" },
-          ],
-        },
-
-
-
+        { type: "doc", docId: "introduction", label: "Docs", },
+        { to: "/learn", label: "Learn" },
         { to: "/community", label: "Contributing" },
-        { to: "/blog", label: "Blog" },
+        { to: "/blog", label: "Updates" },
 
         // {
         //   type: "html",
@@ -287,8 +274,6 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
-
-
         { type: "search", position: "right" },
       ],
     },

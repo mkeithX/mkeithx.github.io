@@ -6,6 +6,9 @@ sidebar_label: Welcome
 keywords:
   - docs
   - mkeithX
+  - mkeithx
+  - Kitiplex
+  - Kitiplex Engineering
 ---
 
 import Tabs from "@theme/Tabs";
@@ -18,16 +21,19 @@ import BrowserWindow from "@site/src/components/BrowserWindow";
 
 Welcome to **MKX SpaceHub** 🚀
 
-The official documentation hub for **The SpaceHub Project** - offering basic code samples, snippets for web development as well as practical guides for system administration specifically on the Microsoft 365 and Azure environment.
+The official docs website of **The SpaceHub Project** maintained by the [Kitiplex Core Engineering Team](https://github.com/kitiplex) - featuring basic code samples and snippets for web development as well as practical guides for system administration specifically on the Microsoft 365 and Entra ID environment.
 
-
-The goal of the project is to emphasize that every successful [Software Development Lifecycle (SDLC)](https://github.com/resources/articles/software-development/what-is-sdlc#sdlc-best-practices-and-challenges) comes with a helpful documentation. 
+## Motivation
+The project started as enhancement proposal that requires project owners to include a title and a short description on their `README.md` file prior initializing their repos making it a standard practice in respect to [Software Development Lifecycle (SDLC)](https://github.com/resources/articles/software-development/what-is-sdlc#sdlc-best-practices-and-challenges).
 
 
 ## Features
-The project is build on top of [Docusaurus](https://docusaurus.io) - documentation framework along with additional markdown features and a few custom plugins allowing developers and tech writers to publish high quality, modern and flexible documentation for their projects.
+The project is built on top of [Docusaurus](https://docusaurus.io) -  a modern and flexible documentation framework allowing developers:
 
-
+  - Customize their website using `React` components;
+  - Extend features using plugins;
+  - Easily deploy to [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), [Netlify](https://www.netlify.com/with/react/), [Vercel](https://vercel.com/new), [Cloudflare](https://pages.cloudflare.com/) and many more.
+  
 
 <BrowserWindow>
 
@@ -110,29 +116,47 @@ For clear visual explanations
 
 </details>
 
-<!-- - The **Search Functionality** is powered by [Algolia DocSearch](https://docsearch.algolia.com) with a custom crawler configuration.
+
+## Explore
+
+<Columns className='item margin-bottom-lg' >
+
+<Column className="text--left item  padding--sm">
+  <Card
+    shadow="tl"
+    style={{ border: "2.0px solid var(--ifm-color-primary)", height: "100%" }}
+  >
+    <CardHeader>
+      <h3>
+        <a href="/docs/system-administration/ms-entra/create-dynamic-group">Create a Dynamic Group</a>
+      </h3>
+    </CardHeader>
+    <CardBody>
+    A quick guide to creating a dynamic group in Entra ID.
+    </CardBody>
+  </Card>
+</Column>
 
 
-- **Hosted on [Cloudflare](https://pages.cloudflare.com/)**: This website is securely hosted on Cloudflare for fast and reliable performance. -->
-
-
-## History
-Historically, _SpaceHub_ are among many other project titles developed at Google at the height of the pandemic by 3 individuals who named themselves (group) as Kitimi. The group eventually retired and this effort was put in place to revive the effort.
-
-In 2023, 
-
-In 2023, @mkeithX along with new interns took on reviving the team naming it Kitimi Platforms and Kitiplex as its first project soon after it became part of the [Microsoft365 Developer Program](https://developer.microsoft.com/en-us/microsoft-365). 
-
-Among its projects were [chatai assist](https://ginabot.vercel.app/) and a [documentation](https://kitiplex.github.io/blog/welcome) site using Docusaurus.
-
-
-
+<Column className="text--left item  padding--sm">
+  <Card
+    shadow="tl"
+    style={{ border: "2.0px solid var(--ifm-color-primary)", height: "100%" }}
+  >
+    <CardHeader>
+      <h3>
+        <a href="/cosmos/solar-system/moons/phases-of-the-moon">Moon Phases</a>
+      </h3>
+    </CardHeader>
+    <CardBody>
+    Discover stuff about our solar system starting with our Moon.
+    </CardBody>
+  </Card>
+</Column>
+</Columns> 
+---
 
 import KitimiLogo from "@site/static/img/logo/kitimi-long-new.svg";
-
-import KitimiTest from "@site/static/img/logo/kitimi-test.svg";
-
-<!-- <KitimiTest class="logoCard" /> -->
 
 <KitimiLogo class="logoBadge" />
 

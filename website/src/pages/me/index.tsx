@@ -26,7 +26,6 @@ function This(): JSX.Element {
     };
 
     const profilePicUrl = "https://github.com/mkeithx.png";
-    const resumeUrl = useBaseUrl("./files/resume.pdf");
 
     return (
         <Layout title="About" description={description}>

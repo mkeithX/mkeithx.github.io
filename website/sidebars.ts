@@ -6,16 +6,7 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
  */
 const sidebars: SidebarsConfig = {
   mySidebar: [
-    // Root-level documents
     "introduction",
-    // {
-    //   type: 'category',
-    //   label: 'Getting started',
-    //   collapsed: true,
-    //   items: [
-    //     'configuration',
-    //   ]
-    // },
     {
       type: "category",
       label: "Getting started",
@@ -37,32 +28,6 @@ const sidebars: SidebarsConfig = {
             "configs/deployment/cloudflare-pages",
           ]
         }
-        // {
-        //   type: "category",
-        //   label: "Deployment",
-        //   collapsed: true,
-        //   link: { type: "generated-index", slug: "/deployment", description: "Deployment configuration (GitHub & Cloudflare)" },
-        //   items: [
-        //     "configs/guides/deployment/deploy-cloudflare",
-        //     "configs/guides/deployment/deploy-github",
-        //   ],
-        // },
-
-        // {
-        //   type: "category",
-        //   label: "Plugins",
-        //   collapsed: true,
-        //   link: { type: "generated-index", slug: "/plugins" },
-        //   items: ["configs/guides/plugins/plugins-algolia"],
-        // },
-
-        // {
-        //   type: "category",
-        //   label: "Configs",
-        //   collapsed: true,
-        //   link: { type: "generated-index", slug: "/guides", description: "Guidelines for creating docs, pages, and blog articles." },
-        //   items: [],
-        // },
       ],
 
     },
