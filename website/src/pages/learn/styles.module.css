@@ -1,12 +1,23 @@
 .learnHead {
-    background-color: var(--ifm-site-dark) !important;
-    flex-direction: column;
-    padding: 8rem 0;
+  background-color: var(--ifm-site-dark) !important;
+  flex-direction: column;
+  padding: 8rem 0;
+  text-align: center;
+  align-items: center;
+  /* vertical-align: center; */
 }
 
 .learnTitle {
-    font-size: 60px;
-    font-weight: 600;
+  font-size: 58px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .learnTitle {
+    font-size: 48px;
+    /* white-space: normal; */
+  }
+  
 }
 
 .learnTitle b {
@@ -18,28 +29,29 @@
 
 
 .learnBody {
-    background-color: var(--ifm-site-dark) !important;
-    font-size: 28px;
-    font-weight: 300;
+  background-color: var(--ifm-site-dark) !important;
+  font-size: 28px;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {
   .learnBody {
-    font-size: 26px;
+    font-size: 24px;
     white-space: normal;
   }
 }
 
 
-  
+
 /* Call-to-Action Buttons */
 .indexCtas {
   --ifm-button-size-multiplier: 1;
   display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: flex-start;
+  /* align-items: center; */
+  justify-content: center;
   margin-top: 24px;
+  position: relative;
 }
 
 .indexCtas a,
@@ -47,7 +59,7 @@
   background-color: var(--ifm-site-dark) !important;
   color: #ffffff !important;
   border: 2px solid #b070ff;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
   border-radius: 12px;
   padding: 0.5rem 1.5rem;
 }
@@ -57,5 +69,6 @@
 }
 
 .indexCtas a:hover {
-  background-color: #000 !important;
+  background-color: #ffffff !important;
+  color: #000 !important;
 }

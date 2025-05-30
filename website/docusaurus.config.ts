@@ -237,15 +237,25 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/mkx-new-test.svg",
         target: "_self",
-        width: 70,
-        height: 70
+        width: 80,
+        height: 80
       },
 
       items: [
-        { type: "doc", docId: "introduction", label: "Docs", },
+        { type: "doc", docId: "introduction", label: "Development", },
         { to: "/learn", label: "Learn" },
         { to: "/community", label: "Contributing" },
         { to: "/blog", label: "Updates" },
+        {
+          type: 'localeDropdown',
+          position: 'right',
+                    dropdownItemsAfter: [
+            {
+              to: 'https://my-site.com/help-us-translate',
+              label: 'Help us translate',
+            },
+          ],
+        },
 
         // {
         //   type: "html",
