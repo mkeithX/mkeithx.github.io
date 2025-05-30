@@ -105,6 +105,12 @@ const sidebars: SidebarsConfig = {
         'legacy/kardashev-scale',
       ]
     },
+        {
+      type: 'html',
+      value: '<a href="https://eyes.nasa.gov/apps/solar-system/#/home" target="_blank"><img src="/img/space/NASA_logo.svg" alt="beta" /></a>',
+      defaultStyle: true,
+      // href: 'https://example.com',
+    },
   ],
 };
 

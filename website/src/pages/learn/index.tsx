@@ -12,19 +12,24 @@ function LearnHeader(): JSX.Element {
         <header>
             <div className={clsx(styles.learnHead, "hero hero--dark")}>
                 <div className="container">
-                    <div className="hero__subtitle">
-                        <span className={("text--light")}>{"SpaceHub For"}</span>
+                    <div className={clsx(styles.learnSubtitle, "hero__subtitle")}>
+                        <span className={clsx("text--light")}>{"Explore more"}</span>
                         <Heading as="h1" className={clsx(styles.learnTitle)}>
-                            <b>{"Developers"}</b>
+                            <b>{"SpaceHub for Developers"}</b>
                         </Heading>
-                        <span className={clsx(styles.learnBody, "hero__subtitle margin-left-x text--light text--small")}>
-                            {"More Code Samples."}
-                            <Link className={styles.indexCtas} to={'/projects'}>{" Let's go"}</Link>{"!"}
+                        <span className={clsx(styles.learnBody, "text--small text--light")}>{"Snippets, code stuff and more."}</span>
+
+                        <span className={clsx(styles.learnindexCtas, "hero__subtitle margin-left-x text--light text--small")}>
+                            <Link
+                                className={clsx("button button--outline button--primary button--lg")} to={'/docs/learn/react-live-demo'}>{"Live Editor"}
+                            </Link>
+                            <Link
+                                className={clsx("button button--outline button--warning button--lg")} to={'/docs/learn/python'}>{"Python"}
+                            </Link>
 
                         </span>
                     </div>
                 </div>
-
             </div>
             <div className={clsx(styles.learnBody, "hero hero--dark")}>
                 <div className="container">

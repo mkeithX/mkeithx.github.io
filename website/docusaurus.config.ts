@@ -15,23 +15,30 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-// require('@dotenvx/dotenvx').config({ path: '.env.local' });
-
-
-const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target='_blank'>Keith Tan </a> <br>· The SpaceHub Project · `;
-
+const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target='_blank'>Keith Tan </a> and Contributors <br>· The SpaceHub Project · `;
 
 const commonExclusions = {
   exclude: [
-    "**/_*.{js,jsx,ts,tsx,md,mdx}",
-    "**/_*/**",
-    "**/*.test.{js,jsx,ts,tsx}",
-    "**/__tests__/**",
+    '**/_*.{js,jsx,ts,tsx,md,mdx}',
+    '**/_*/**',
+    '**/*.test.{js,jsx,ts,tsx}',
+    '**/__tests__/**',
+  ],
+  showLastUpdateAuthor: false,
+};
+
+const commonInclusions = {
+  include: [
+    '**/*.{js,jsx,ts,tsx,md,mdx}',
+    '**/*.mdx',
   ],
 };
 
 const commonRemarkConfig = {
-  remarkPlugins: [[npm2yarn, { sync: true }], remarkMath],
+  remarkPlugins: [
+    [npm2yarn, { sync: true }],
+    remarkMath,
+  ],
   rehypePlugins: [rehypeKatex],
 };
 
@@ -39,11 +46,12 @@ const commonDocsConfig = {
   ...admonitionsConfig,
   ...commonRemarkConfig,
   ...commonExclusions,
+  ...commonInclusions,
 };
 
 
 const config: Config = {
-  title: "MKXSpaceHub",
+  title: "MKX SpaceHub",
   tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
@@ -55,11 +63,16 @@ const config: Config = {
   trailingSlash: false,
   titleDelimiter: '·',
 
+  future: {
+    v4: true,
+    experimental_faster: true
+  },
+
   staticDirectories: [
-    'static',
+    'static', 'public',
     path.join(__dirname, 'non-existent'),
   ],
-  
+
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
     hero_header: "Guides and Code Samples",
@@ -71,6 +84,7 @@ const config: Config = {
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
+
   stylesheets: [
     { href: "/katex/katex.min.css", type: "text/css", rel: "stylesheet", crossorigin: "anonymous" },
   ],
@@ -79,10 +93,12 @@ const config: Config = {
     defaultLocale: "en",
     locales: ["en"],
   },
+
   markdown: {
     format: "detect",
     mermaid: true,
   },
+
   presets: [
     [
       "classic",
@@ -91,9 +107,8 @@ const config: Config = {
           path: "docs",
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
-          ...commonDocsConfig,
-          showLastUpdateAuthor: false,
           showLastUpdateTime: true,
+          ...commonDocsConfig,
         },
         blog: {
           path: "blog",
@@ -101,15 +116,14 @@ const config: Config = {
           blogDescription:
             "Keep up to date with what's going on with The SpaceHub Project!",
           routeBasePath: "blog",
-          blogSidebarTitle: "Updates",
+          blogSidebarTitle: "Recent updates",
           blogSidebarCount: "ALL",
           postsPerPage: 5,
-          ...admonitionsConfig,
-          ...commonRemarkConfig,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "ignore",
-        
+          ...commonDocsConfig,
+
           feedOptions: {
             type: "all",
             title: "The SpaceHub Project",
@@ -124,8 +138,8 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
-          ...commonDocsConfig,
           mdxPageComponent: "@theme/MDXPage",
+          ...commonDocsConfig,
         } satisfies PageOptions,
 
         theme: {
@@ -137,10 +151,10 @@ const config: Config = {
           ignorePatterns: ["/tests/{blog,pages}/**", "/tags/**"],
           filename: "sitemap.xml",
         },
-          gtag: {
-            trackingID: 'G-YYZ6V070LQ',
-            anonymizeIP: true,
-          },
+        gtag: {
+          trackingID: 'G-YYZ6V070LQ',
+          anonymizeIP: true,
+        },
 
       } satisfies Preset.Options,
     ],
@@ -156,10 +170,9 @@ const config: Config = {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        showLastUpdateAuthor: false,
         showLastUpdateTime: true,
-        ...commonDocsConfig,
         sidebarPath: "./sidebarsCosmos.ts",
+        ...commonDocsConfig,
       } as DocsOptions,
     ],
     [
@@ -168,10 +181,9 @@ const config: Config = {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        showLastUpdateAuthor: false,
         showLastUpdateTime: false,
-        ...commonDocsConfig,
         sidebarPath: "./sidebarsCommunity.ts",
+        ...commonDocsConfig,
       } as DocsOptions,
     ],
     [
@@ -182,13 +194,13 @@ const config: Config = {
         min: 640,
         steps: 2,
         disableInDev: false,
-      } satisfies IdealImageOptions,
+      } as IdealImageOptions,
     ],
     [
       "client-redirects",
       {
         redirects: redirects,
-      } satisfies ClientRedirectsOptions,
+      } as ClientRedirectsOptions,
     ],
   ],
 
@@ -223,20 +235,21 @@ const config: Config = {
       title: "SpaceHub",
       logo: {
         alt: "SpaceHub",
-        src: "img/nav-logo.svg",
+        src: "img/mkx-new-test.svg",
         target: "_self",
-        // width: 80,
-        // height: 70
+        width: 80,
+        height: 80
       },
+
       items: [
         { type: "doc", docId: "introduction", label: "Docs", },
-        { to: "/projects", label: "Developers" },
-        { to: "/cosmos", label: "Cosmos" },
-        { to: "/community", label: "Community" },
-        { to: "/blog", label: "Blog" },
+        { to: "/learn", label: "Learn" },
+        { to: "/community", label: "Contributing" },
+        { to: "/blog", label: "Updates" },
+
         // {
         //   type: "html",
-        //   value: '<span class="badge badge--secondary">Beta</span>',
+        //   value: '<span class="badge badge--primary">Beta</span>',
         //   position: 'right'
         // },
         {
@@ -252,7 +265,7 @@ const config: Config = {
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-            { href: "https://kitimi.sharepoint.com/sites/Hub", label:"MissionControl" },
+            { href: "https://kitimi.sharepoint.com/sites/Hub", label: "MissionControl" },
           ],
         },
         {
@@ -261,12 +274,10 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
-        
-
-        { type: "search", position: "right", className: "DocSearch"},
+        { type: "search", position: "right" },
       ],
     },
-    algolia:{
+    algolia: {
       apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
       indexName: "mkeithx",
       appId: "XVSOLYZXNV",
@@ -279,13 +290,13 @@ const config: Config = {
         src: "img/logo/developers-a.png",
         href: "/",
         // width: "330",
-        height: "60"
+        height: "70"
       },
       links: [
         {
           title: "Docs",
           items: [
-            { label: "System Admin", to: "/docs/system-administration"},
+            { label: "System Admin", to: "/docs/system-administration" },
             { label: "Python Examples", to: "/docs/learn/python/examples" },
             { label: "Astro Stuff", to: "/cosmos/astrophysics" },
           ],
@@ -328,7 +339,7 @@ const config: Config = {
       ],
     },
     metadata: [
-      { name: 'og:title', content: 'MKX' },
+      { name: 'og:title', content: 'MKX SpaceHub' },
       {
         name: 'og:description',
         content: 'A cosmic-flavored website for Software Development, Documentation and more!'

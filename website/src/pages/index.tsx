@@ -36,33 +36,33 @@ function HomepageHeader(): JSX.Element {
     <div
       className={clsx('hero hero--dark', styles.heroBanner)}>
       <div className="container">
-      <BannerLogo
+        <BannerLogo
           className={styles.heroLogo}
-          title=""
+          title="Kitoy"
           width={160}
           height={180}
         />
         <div className={styles.heroSubtitle}>
           <span className={styles.heroSubTitleText}>
             {"OpenSource"}
-            </span>
+          </span>
         </div>
         <Heading as="h1">
           <div className={styles.heroBannerTitle}>
             <span className={styles.heroBannerTitleText}>
               {hero_header}
-            {/* {"Guides"}<br></br>{"and Code Samples"} */}
+              {/* {"Guides"}<br></br>{"and Code Samples"} */}
             </span>
             <br></br>
             {/* <b>{"from Kitimi"}</b> */}
           </div>
           <div className={styles.heroSubtitle}>
-          <span className={styles.heroSubtitleText}>
-          {hero_tagline}
-          </span>
-        </div>
+            <span className={styles.heroSubtitleText}>
+              {hero_tagline}
+            </span>
+          </div>
         </Heading>
-        <div className={clsx(styles.indexCtas,'margin-vert--md')}>
+        <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
           <Link
             className={clsx("button button--outline button--primary button--lg")}
             to={useBaseUrl('/docs')}>
@@ -70,7 +70,7 @@ function HomepageHeader(): JSX.Element {
           </Link>
           <Link
             className={clsx("button button--secondary button--lg")}
-            to="https://eyes.nasa.gov/apps/solar-system/#/home">
+            to="/cosmos">
             {'Space'}
           </Link>
         </div>
@@ -91,7 +91,7 @@ export default function Home(): JSX.Element {
         {/* <TopBanner /> */}
         <HomepageHeader />
         <div className={styles.section}>
-        <HomepageFeatures />
+          <HomepageFeatures />
         </div>
         {/* <FeatureBrands /> */}
       </main>

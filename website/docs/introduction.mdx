@@ -1,11 +1,14 @@
 ---
 title: Introduction
-description: The official DevPortal for the Kitiplex DevOps team
+description: Intro to The SpaceHub docs website:The official documentation for The SpaceHub Project
 slug: /
 sidebar_label: Welcome
 keywords:
   - docs
   - mkeithX
+  - mkeithx
+  - Kitiplex
+  - Kitiplex Engineering
 ---
 
 import Tabs from "@theme/Tabs";
@@ -13,106 +16,160 @@ import TabItem from "@theme/TabItem";
 import IframeWindow from "@site/src/components/BrowserWindow/IframeWindow";
 import BrowserWindow from "@site/src/components/BrowserWindow";
 
-
 # Introduction
 
-**Welcome** to the '_cosmic-flavored_' documentation hub of **The SpaceHub Project**! — featuring code samples, snippets, and practical guides for system administration and web development. 🚀 
+Welcome to **MKX SpaceHub** 🚀
+
+The official docs website of **The SpaceHub Project** maintained by the [Kitiplex Core Engineering Team](https://github.com/kitiplex) - featuring basic code samples and snippets for web development as well as practical guides for system administration specifically on the Microsoft 365 and Entra ID environment.
 
 ## Motivation
 
-This project is part of an internal effort at [Kitiplex](https://github.com/kitiplex) to encourage good habits in software development — especially the habit of writing clear and helpful documentation. It follows ideas shared in these useful articles:
+The project started as enhancement proposal that requires project owners to include a title and a short description on their `README.md` file prior initializing their repos making it a standard practice in respect to [Software Development Lifecycle (SDLC)](https://github.com/resources/articles/software-development/what-is-sdlc#sdlc-best-practices-and-challenges).
 
-- [Software Development Life Cycle (SDLC)](https://github.com/resources/articles/software-development/what-is-sdlc)
-- [What Makes Documentation Good](https://cookbook.openai.com/articles/what_makes_documentation_good)
+## Features
+
+The project is built on top of [Docusaurus](https://docusaurus.io) - a modern and flexible documentation framework allowing developers:
+
+- Customize their website using `React` components;
+- Extend features using plugins;
+- Easily deploy to [GitHub Pages](https://docs.github.com/en/pages/getting-started-with-github-pages/configuring-a-publishing-source-for-your-github-pages-site), [Netlify](https://www.netlify.com/with/react/), [Vercel](https://vercel.com/new), [Cloudflare](https://pages.cloudflare.com/) and many more.
+
+<BrowserWindow>
+
+<Tabs>
+<TabItem value="sh" label="PowerShell">
+
+```sh
+Restart-Computer -Force
+```
+
+</TabItem>
+
+<TabItem value="py" label="Python">
+
+```py
+import this
+```
+
+</TabItem>
+<TabItem value="git" label="Git">
+
+```bash
+git add --all && git commit -m "refactor doc structure"
+```
+
+</TabItem>
+</Tabs>
+
+</BrowserWindow>
+
+<!-- <BrowserWindow>
+
+
+</BrowserWindow> -->
+
+<details>
+<summary>Math Rendering</summary>
+
+For displaying complex equations
+
+- $ E = mc^2 $
+- $ F = ma $
+- $ I = \int_0^{2\pi} \sin(x)\,dx $
+
+</details>
+
+<details>
+<summary>Diagrams</summary>
+
+For clear visual explanations
+
+```mermaid
+  graph LR;
+  A-->B-->C;
+```
+
+```mermaid
+kanban
+  Todo
+    [Create Documentation]
+    docs[Create Blog about the new diagram]
+  [In progress]
+    id6[Create renderer so that it works in all cases.  We also add som extra text here for testing  purposes. And some more just for the extra flare.]
+  id9[Ready for deploy]
+    id8[Design grammar]@{ assigned: 'knsv' }
+  id10[Ready for test]
+    id4[Create parsing tests]@{ ticket: MC-2038,  assigned: 'K.Sveidqvist', priority: 'High' }
+    id66[last item]@{ priority: 'Very Low', assigned:   'knsv' }
+  id11[Done]
+    id5[define getData]
+    id2[Title of diagram is more than 100 chars when  user duplicates diagram with 100 char]@{ ticket:   MC-2036, priority: 'Very High'}
+    id3[Update DB function]@{ ticket: MC-2037,  assigned: knsv, priority: 'High' }
+
+  id12[Can't reproduce]
+    id3[Weird flickering in Firefox]
+```
+
+</details>
 
 ## Explore
 
-Begin your journey by exploring the sections that interest you:
-
-<Columns className='item margin-bottom-lg' >
+<Columns className='item margin-bottom-lg'>
 
 <Column className="text--left item  padding--sm">
   <Card
     shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}
+    style={{ border: "2.0px solid var(--ifm-color-primary)", height: "100%" }}
   >
     <CardHeader>
       <h3>
-        <a href="/docs/learn">Tutorials</a>
+        <a href="/docs/system-administration/ms-entra/create-dynamic-group">
+          Create a Dynamic Group
+        </a>
+      </h3>
+    </CardHeader>
+    <CardBody>A quick guide to creating a dynamic group in Entra ID.</CardBody>
+  </Card>
+</Column>
+
+<Column className="text--left item  padding--sm">
+  <Card
+    shadow="tl"
+    style={{ border: "2.0px solid var(--ifm-color-primary)", height: "100%" }}
+  >
+    <CardHeader>
+      <h3>
+        <a href="/cosmos/solar-system/moons/phases-of-the-moon">Moon Phases</a>
       </h3>
     </CardHeader>
     <CardBody>
-    Get started with the basics and fundamentals of HTML, Version Control, Python and More.
-    </CardBody>
-  </Card>
-</Column>
-
-<Column className="text--left item  padding--sm">
-  <Card
-    shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}
-  >
-    <CardHeader>
-      <h3>
-        <a href="/docs/guides/create-doc">Create a Doc</a>
-      </h3>
-    </CardHeader>
-    <CardBody>Learn how to create a Markdown document using plain `.md` files or a page using React components.</CardBody>
-  </Card>
-</Column>
-</Columns> 
-<Columns className='item margin-bottom-lg' >
-
-<Column className="text--left item  padding--sm">
-  <Card
-    shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}
-  >
-    <CardHeader>
-      <h3>
-        <a href="/cosmos/astrophysics">Astrophysics</a>
-      </h3>
-    </CardHeader>
-    <CardBody>Explore the properties and behaviors of celestial bodies within the cosmos.</CardBody>
-  </Card>
-</Column>
-
-<Column className="text--left item  padding--sm">
-  <Card
-    shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}
-  >
-    <CardHeader>
-      <h3>
-        <a href="/cosmos/solar-system">Solar System</a>
-      </h3>
-    </CardHeader>
-    <CardBody>
-Discover the star at the center of our system and the planets that orbit it due to gravity.
+    Discover stuff about our solar system starting with our Moon.
     </CardBody>
   </Card>
 </Column>
 </Columns>
 
-### Features
+---
 
-- The **Search Functionality** is powered by [Algolia DocSearch](https://docsearch.algolia.com) with a custom crawler configuration.
+import M365 from "@site/static/img/logo/Microsoft_365.svg";
 
-- **Developer-Friendly**: Designed with developers in mind to provide a seamless experience.
+import MSFT from "@site/static/img/Microsoft_icon.svg";
 
-- **Hosted on Cloudflare**: This website is securely hosted on Cloudflare for fast and reliable performance.
+import AZD from "@site/static/img/logo/MSAzure.svg";
+
+import Kpx from "@site/static/img/logo/kitimi-icon-new.svg"
+
+<div>
+
+<div align="justify">
+
+<M365 height="65" width="200" />
+
+<AZD height="75" width="200" />
 
 
+<Kpx height="70" width="50" />
 
-## Feedback and Support
+</div>
 
-We value your feedback! If you have suggestions for improvement or encounter any issues, please [let us know](/community).
-
-
-import KitimiLogo from "@site/static/img/logo/kitimi-long-new.svg";
-
-import KitimiTest from "@site/static/img/logo/kitimi-test.svg";
-
-<!-- <KitimiTest class="logoCard" /> -->
-
-<KitimiLogo class="logoBadge" />
+</div>

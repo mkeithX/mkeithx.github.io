@@ -25,13 +25,13 @@ const ProjectsHeader = (): JSX.Element => {
             <div className="container">
                 <div className='hero__subtitle'>
                     <span className='text--light'>
-                        {"Explore"}
+                        {"More Code Samples"}
 
                     </span>
                 <Heading as="h1" className="hero__title">
                     <span className={styles.projectsheroTitleTextHtml}>
                         <div className={styles.heroBannerTitle}>
-                            <b>{"More Code Samples"}</b>
+                            <b>{"SpaceHub for Developers"}</b>
 
                         </div>
                     </span>
@@ -40,7 +40,7 @@ const ProjectsHeader = (): JSX.Element => {
 
                 <div className={styles.heroSubtitle}>
                     <span className={styles.projectsheroCustomSubTitleHtml}>
-                        {"for software devlelopment"}
+                        {"Snippets, Live Code Editor and More. "}
                         <br />
                     </span>
                 </div>

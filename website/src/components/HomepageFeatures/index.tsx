@@ -14,31 +14,31 @@ type FeatureItem = {
 const FeatureList: FeatureItem[] = [
   {
     scale: 0.8,
-    title: "Developer",
+    title: "Dev Basics",
     Svg: require("@site/static/img/terminal_icon.svg").default,
     description: (
       <>
-        Quick solutions with practical code snippets, shared gists, and helpful resources.
+        Easy, beginner-friendly guides to <Link to="/projects"> learn the basics</Link> of coding and essential tools.
       </>
     ),
   },
   {
     scale: 0.8,
-    title: "Container",
+    title: "Sandbox",
     Svg: require("@site/static/img/container_solid.svg").default,
     description: (
       <>
-        Comprehensive services to enhance website performance, security, and reliability.
+        With built-in <Link to="/docs/learn/react-live-demo#get-started">Live Code-Editor </Link> to write and test your React code instantly.
       </>
     ),
   },
   {
     scale: 0.8,
-    title: "API",
+    title: "SysOps",
     Svg: require("@site/static/img/api_icon.svg").default,
     description: (
       <>
-        Build fast and relevant search experiences for applications and websites efficiently.
+        Practical guides and best practices for system operations and administration.
       </>
     ),
   },
@@ -48,7 +48,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/rocket.svg").default,
     description: (
       <>
-        Designed with developers in mind for a seamless and intuitive experience.
+      Explore the properties and behaviors of celestial bodies within the <Link to="/cosmos">cosmos</Link> .
       </>
     ),
   },
@@ -58,7 +58,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/logo/react-logo.svg").default,
     description: (
       <>
-        Experience a fast, dynamic interface powered by React for optimal performance.
+      Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/configs/create-doc">React</Link>  components.
       </>
     ),
   },

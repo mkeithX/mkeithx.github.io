@@ -1,6 +1,7 @@
 ---
 description: The custom configuration powering MKX SpaceHub
-custom_edit_url: null
+title: Getting started
+sidebar_label: Getting started
 ---
 
 import DocCardList from '@theme/DocCardList';
@@ -8,288 +9,33 @@ import Admonition from "@theme/Admonition";
 import Tabs from "@theme/Tabs";
 import TabItem from "@theme/TabItem";
 
-# Configuration {#website-configuration}
+# Website Configuration {#website-configuration}
 
-![cicd](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/build-and-deploy.yml?style=for-the-badge&logo=github-actions&logoSize=auto&label=CI%2FCD&labelColor=%23222d3d&color=%23000017)
-![python](https://img.shields.io/github/actions/workflow/status/mkeithx/mkeithx.github.io/python-setup.yml?style=for-the-badge&logo=python&logoSize=auto&label=Build&labelColor=%23222d3d&color=%23000017)
-![site-pages](https://img.shields.io/website?url=https://mkeithx.github.io/%2F&style=for-the-badge&logo=cloudflare&label=Website&labelColor=%23222d3d&color=%23000017)
+This section covers the site's configuration along with some basic guides about:
 
-
-This section covers the custom configuration powering the **MKX SpaceHub**™ website.
-From its initial GitHub commit, the **MKX SpaceHub**™ has been organized as a monorepo with [examples](https://github.com/mkeithX/mkeithx.github.io/tree/main/examples) and built with [Docusaurus TypeScript](https://docusaurus.io/docs/typescript-support) variant along with some awesome tools like [VS Code](https://code.visualstudio.com/).
+Install [Node.js 18+](https://nodejs.org/en/download/) and your preferred package manager ([npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [yarn](https://yarnpkg.com/))
 
 
-## Installation
+:::info[workspaces]
+
+If you are using [**yarn workspaces**](https://yarnpkg.com/features/workspaces), add `website` to your workspace list and run `yarn install` again.
+
+:::
+
+
+
+### Installation
 
 ```bash
 npx create-docusaurus@latest website classic --typescript
 ```
-
-
+```bash
+cd website
+```
 ```bash npm2yarn
 npm run start
 ```
 
-### Structure
-
-Here is a broad overview of the important files and folders.
-
-<pre>
-  <b>
-
-mkeithx.github.io/
-├──  /
-│   ├── [````]
-│   └── ...
-└── website/
-    ├── blog/
-    │   ├── [BLOG POSTS]
-    │   └── ...
-    ├── community/
-    │   ├── [CONTRIBUTING DOC FILES]
-    │   └── ...
-    ├── cosmos/
-    │   ├── [ ARTICLES ABOUT SPACE ]
-    │   └── ...
-    ├── docs/
-    │   ├── [ MAIN DOCS]
-    │   └── ...
-    ├── src/
-    │   ├── css/
-    │   │   ├── [CUSTOM STYLES]
-    │   │   └── ...
-    │   ├── pages/
-    │   │   ├── [STATIC PAGES]
-    │   │   └── ...
-    │   └── theme/
-    │   │   ├── [SWIZZLED COMPONENTS]
-    │   │   └── ...
-    ├── static/
-    │   ├── .../
-    │   │   └── assets/
-    │   ├── .../
-    │   │   └── assets/
-    │   └── img/
-    ├── docusaurus.config.ts
-    ├── package.json
-    ├── sidebars.json
-    ├── sidebarsCommunity.ts
-    ├── sidebarsCosmos.ts
-    └── .../
-  </b>
-</pre>
-
-## Defaults
-
-### `docusaurus.config.ts`
-
-<details>
-<summary>Configs</summary>
-
-
-<Tabs>
-  <TabItem value="js" label="JavaScript" default>
-    
-```js title="docusaurus.config.js" showLineNumbers
-// @ts-check
-
-/** @type {import('@docusaurus/types').Config} */
-const config = {
-  tagline: 'Dinosaurs are cool',
-  favicon: 'img/favicon.ico',
-
-  /* Your site config here */
-
-  presets: [
-    [
-      '@docusaurus/preset-classic',
-      /** @type {import('@docusaurus/preset-classic').Options} */
-      (
-        {
-          /* Your preset config here */
-        }
-      ),
-    ],
-  ],
-  themeConfig:
-    /** @type {import('@docusaurus/preset-classic').ThemeConfig} */
-    (
-      {
-        /* Your theme config here */
-      }
-    ),
-};
-
-export default config;
-```
-
-  </TabItem>
-  <TabItem value="ts" label="TypeScript">
-
-```ts title="docusaurus.config.ts"
-import type {Config} from '@docusaurus/types';
-import type * as Preset from '@docusaurus/preset-classic';
-
-const config: Config = {
-  title: 'My Site',
-  favicon: 'img/favicon.ico',
-
-  /* Your site config here */
-
-  presets: [
-    [
-      'classic',
-      {
-        /* Your preset config here */
-      } satisfies Preset.Options,
-    ],
-  ],
-
-  themeConfig: {
-    /* Your theme config here */
-  } satisfies Preset.ThemeConfig,
-};
-
-export default config;
-```
-
-  </TabItem>
-</Tabs>
-</details>
-
-
-### `sidebars.ts`
-
-
-<details>
-<summary>Default</summary>
-
-
-<Tabs>
-  <TabItem value="js" label="JavaScript" default>
-
-```jsx title="sidebars.js" showLineNumbers
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
-
-// @ts-check
-
-/** @type {import('@docusaurus/plugin-content-docs').SidebarsConfig} */
-const sidebars = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
-  tutorialSidebar: [{type: 'autogenerated', dirName: '.'}],
-
-  // But you can create a sidebar manually
-  /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-   */
-};
-
-export default sidebars;
-```
-
-  </TabItem>
-  <TabItem value="ts" label="TypeScript">
-
-```ts title="sidebars.ts" showLineNumbers
-import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
-
-/**
- * Creating a sidebar enables you to:
- - create an ordered group of docs
- - render a sidebar for each doc of that group
- - provide next/previous navigation
-
- The sidebars can be generated from the filesystem, or explicitly defined here.
-
- Create as many sidebars as you want.
- */
-const sidebars: SidebarsConfig = {
-  // By default, Docusaurus generates a sidebar from the docs folder structure
-  tutorialSidebar: [{type: 'autogenerated', dirName: '.'}],
-
-  // But you can create a sidebar manually
-  /*
-  tutorialSidebar: [
-    'intro',
-    'hello',
-    {
-      type: 'category',
-      label: 'Tutorial',
-      items: ['tutorial-basics/create-a-document'],
-    },
-  ],
-   */
-};
-
-export default sidebars;
-```
-
-
-  </TabItem>
-
-</Tabs>
-
-</details>
-
-
-## Troubleshooting
-Resolve issues caused by mismatching cached dependencies - especially during upgrades.
-
-### Step one
-
-Clear all generated assets, caches and build artifacts:
-
-```bash npm2yarn
-npm run clear
-```
-### Step two
-
-Remove `node_modules` and the lock file(s):
-
-<Tabs>
-
-  <TabItem value="bash" label="Bash" default>
-
-```bash
-rm -rf node_modules yarn.lock package-lock.json
-```
-
-
-  </TabItem>
-  <TabItem value="pwsh" label="PowerShell">
-
-```sh
-@('node_modules','yarn.lock','package-lock.json') | Remove-Item -Force -Recurse -ErrorAction SilentlyContinue
-```
-  </TabItem>
-
-</Tabs>
-
-### Step three
-Reinstall packages:
-
-```bash npm2yarn
-npm install
-```
-
-## More
+## Getting started
 
 <DocCardList />
-

@@ -7,17 +7,25 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-color-primary: #3578e5;
-  --ifm-color-primary-dark: #1d68e1;
-  --ifm-color-primary-darker: #1b62d4;
-  --ifm-color-primary-darkest: #1751af;
-  --ifm-color-primary-light: #4e89e8;
-  --ifm-color-primary-lighter: #5a91ea;
-  --ifm-color-primary-lightest: #80aaef;
+  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0,0,0,.1);
+  --ifm-global-shadow-md: 0 2px 4px 0 rgba(0,0,0,.14);
+  --ifm-global-shadow-tl: 0 3px 6px 0 rgba(0,0,0,.18);
+  --ifm-global-shadow-xl: 0 4px 8px 0 rgba(0,0,0,.22);
+}
+
+
+:root {
+  --ifm-color-primary: #0b84ce;
+  --ifm-color-primary-dark: #0a77b9;
+  --ifm-color-primary-darker: #0970af;
+  --ifm-color-primary-darkest: #085c90;
+  --ifm-color-primary-light: #0c91e3;
+  --ifm-color-primary-lighter: #0d98ed;
+  --ifm-color-primary-lightest: #27a6f3;
   --site-color-feedback-background: #f0f8ff;
   --ifm-code-font-size: 90%;
   --ifm-heading-font-weight: 600;
-  --ifm-font-weight-semibold: 500;
+  --ifm-font-weight-semibold: 600;
   --ifm-link-hover-decoration: none;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-menu-color-active: var(--ifm-color-primary) !important;
@@ -41,24 +49,45 @@
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 }
 
+
 /* Navbar */
 .navbar {
   background-color: var(--ifm-site-dark);
   align-items: center;
   --ifm-navbar-link-hover-color: #1da1f2;
+  font-size: 17px;
+  font-weight: bold;
 }
+
+.navbar__link--active:after {
+  --navbar-border-overflow: 4px;
+  content: "";
+  display: flex;
+  width: calc(100% + var(--navbar-border-overflow) * 2);
+  height: 4px;
+  margin-top: -4px;
+  margin-left: calc(var(--navbar-border-overflow) * -1);
+  margin-right: calc(var(--navbar-border-overflow) * -1);
+  position: relative;
+  top: 18px;
+  background: #43b1f4 !important;
+}
+
 
 .navbar__brand {
   margin-right: 1rem;
-  font-size: 17px;
-  font-weight: 400;
-  color: #1da1f2;
+  background: linear-gradient(-90deg,
+      #8affff 0%,
+      #1da1f2 50%,
+      #b070ff 100%);
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
 
-.navbar .navbar__items {
+/* .navbar__items {
   flex: auto;
   align-items: center;
-}
+} */
 
 /* Header Dropdown Menu */
 .dropdown__link {
@@ -70,9 +99,10 @@
 }
 
 /* Hide navbar if not needed */
-html[data-navbar='false'] .navbar {
+
+/* html[data-navbar='false'] .navbar {
   display: none;
-}
+} */
 
 /* Content Table */
 .contentTableContainer table {

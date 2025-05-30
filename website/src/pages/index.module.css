@@ -41,7 +41,7 @@
 /*  */
 
 .heroBannerTitle {
-  font-size: 58px;
+  font-size: 60px;
   font-weight: bold;
   margin: 2px 0 0.4rem;
 }
@@ -55,6 +55,7 @@
 }
 
 .heroBannerTitleText {
+  font-weight: bold;
   background: linear-gradient(
     -90deg,
     #8affff 0%,
@@ -139,5 +140,6 @@
 
 .indexCtas a:hover {
   background-color: #1da1f2 !important;
+  /* color: #000; */
 }
 

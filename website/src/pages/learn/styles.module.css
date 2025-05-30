@@ -1,45 +1,74 @@
 .learnHead {
-    background-color: var(--ifm-site-dark) !important;
-    flex-direction: column;
-    padding: 6rem 0;
+  background-color: var(--ifm-site-dark) !important;
+  flex-direction: column;
+  padding: 8rem 0;
+  text-align: center;
+  align-items: center;
+  /* vertical-align: center; */
 }
 
 .learnTitle {
-    font-size: 60px;
-    font-weight: 600;
+  font-size: 58px;
+  font-weight: 600;
+}
+
+@media (max-width: 768px) {
+  .learnTitle {
+    font-size: 48px;
+    /* white-space: normal; */
+  }
+  
 }
 
 .learnTitle b {
   color: transparent;
-  background: linear-gradient(90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
+  background: linear-gradient(-90deg, #69e9d9 0%, #1da1f2 50%, #b070ff 100%);
   background-clip: text;
   font-weight: 700;
 }
 
 
 .learnBody {
-    background-color: var(--ifm-site-dark) !important;
-    font-size: 28px;
-    font-weight: 300;
+  background-color: var(--ifm-site-dark) !important;
+  font-size: 28px;
+  font-weight: 300;
 }
 
 @media (max-width: 768px) {
   .learnBody {
-    font-size: 26px;
+    font-size: 24px;
     white-space: normal;
   }
 }
 
 
-  
+
 /* Call-to-Action Buttons */
-.indexCtas {
+.learnindexCtas {
+  --ifm-button-size-multiplier: 1;
+  display: flex;
   flex-wrap: wrap;
-  align-items: flex-start;
-  color: #1da1f2 !important;
+  /* align-items: center; */
+  justify-content: center;
+  margin-top: 24px;
+  position: relative;
 }
 
+.learnindexCtas a,
+.learnindexCtas a:hover {
+  background-color: var(--ifm-site-dark) !important;
+  color: #ffffff !important;
+  border: 2px solid #b070ff;
+  transition: background-color 0.5s;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+}
 
-.indexCtas a:hover {
-  color: #ffffff;
+.learnindexCtas a:last-of-type {
+  margin: 0 0.75rem;
+}
+
+.learnindexCtas a:hover {
+  color: #ffffff !important;
+  background-color: #d61df2 !important;
 }

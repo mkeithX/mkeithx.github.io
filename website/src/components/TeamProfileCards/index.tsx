@@ -86,6 +86,13 @@ const teamMembers = [
     twitterUrl: "https://twitter.com/",
   },
 
+    {
+    name: "Kitiplex Engineering",
+    subTitle: "Maintainer @ Kitiplex",
+    githubUrl: "https://github.com/kpxengineering",
+    twitterUrl: "https://twitter.com/",
+  },
+
 ];
 
 const contributors = [
