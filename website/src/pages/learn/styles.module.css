@@ -44,7 +44,7 @@
 
 
 /* Call-to-Action Buttons */
-.indexCtas {
+.learnindexCtas {
   --ifm-button-size-multiplier: 1;
   display: flex;
   flex-wrap: wrap;
@@ -54,8 +54,8 @@
   position: relative;
 }
 
-.indexCtas a,
-.indexCtas a:hover {
+.learnindexCtas a,
+.learnindexCtas a:hover {
   background-color: var(--ifm-site-dark) !important;
   color: #ffffff !important;
   border: 2px solid #b070ff;
@@ -64,11 +64,11 @@
   padding: 0.5rem 1.5rem;
 }
 
-.indexCtas a:last-of-type {
+.learnindexCtas a:last-of-type {
   margin: 0 0.75rem;
 }
 
-.indexCtas a:hover {
-  background-color: #ffffff !important;
-  color: #000 !important;
+.learnindexCtas a:hover {
+  color: #ffffff !important;
+  background-color: #d61df2 !important;
 }

@@ -242,20 +242,10 @@ const config: Config = {
       },
 
       items: [
-        { type: "doc", docId: "introduction", label: "Development", },
+        { type: "doc", docId: "introduction", label: "Docs", },
         { to: "/learn", label: "Learn" },
         { to: "/community", label: "Contributing" },
         { to: "/blog", label: "Updates" },
-        {
-          type: 'localeDropdown',
-          position: 'right',
-                    dropdownItemsAfter: [
-            {
-              to: 'https://my-site.com/help-us-translate',
-              label: 'Help us translate',
-            },
-          ],
-        },
 
         // {
         //   type: "html",

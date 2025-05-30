@@ -12,14 +12,14 @@ function LearnHeader(): JSX.Element {
         <header>
             <div className={clsx(styles.learnHead, "hero hero--dark")}>
                 <div className="container">
-                    <div className={clsx(styles.learnSubtitle,"hero__subtitle")}>
+                    <div className={clsx(styles.learnSubtitle, "hero__subtitle")}>
                         <span className={clsx("text--light")}>{"Explore more"}</span>
                         <Heading as="h1" className={clsx(styles.learnTitle)}>
                             <b>{"SpaceHub for Developers"}</b>
                         </Heading>
                         <span className={clsx(styles.learnBody, "text--small text--light")}>{"Snippets, code stuff and more."}</span>
-                       
-                        <span className={clsx(styles.indexCtas, "hero__subtitle margin-left-x text--light text--small")}>
+
+                        <span className={clsx(styles.learnindexCtas, "hero__subtitle margin-left-x text--light text--small")}>
                             <Link
                                 className={clsx("button button--outline button--primary button--lg")} to={'/docs/learn/react-live-demo'}>{"Live Editor"}
                             </Link>
