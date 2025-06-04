@@ -107,7 +107,7 @@ const sidebars: SidebarsConfig = {
     },
         {
       type: 'html',
-      value: '<a href="https://eyes.nasa.gov/apps/solar-system/#/home" target="_blank"><img src="/img/space/NASA_logo.svg" alt="beta" /></a>',
+      value: '<a href="https://eyes.nasa.gov/apps/solar-system/#/home" target="_blank"><img src="/img/space/NASA_logo.svg" alt="beta" height="45"/></a>',
       defaultStyle: true,
       // href: 'https://example.com',
     },
