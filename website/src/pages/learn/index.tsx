@@ -46,9 +46,9 @@ export default function Learn(): JSX.Element {
     return (
         <Layout title="SpaceHub for Developers" description="All about programming fundamentals">
             <Head>
-                 <meta property="og:image" content="img/banner/social-banner-dev.png"/>
+                 <meta property="og:image" content="https://mkeithx.pages.dev/img/banner/social-banner-dev.png"/>
                  <meta name="twitter:card" content="summary_large_image" />
-                 <link rel="canonical" href="https://mkeithx.pages.dev/" />
+                 <link rel="preconnect" href="https://mkeithx.pages.dev/learn" />
             </Head>
             <LearnHeader />
         </Layout>
