@@ -6,6 +6,7 @@ import clsx from "clsx";
 import styles from "./styles.module.css";
 import useBaseUrl from '@docusaurus/useBaseUrl';
 import CosmicFeatures from "./_components/CosmicFeatures";
+import Head from "@docusaurus/Head";
 
 function CosmospageHeader(): JSX.Element {
 
@@ -54,6 +55,11 @@ export default function Cosmos(): JSX.Element {
 
     return (
         <Layout title="The Universe" description="From Quarks to Black Holes and Beyond">
+            <Head>
+                <meta property="og:image" content="/img/banner/social-banner-cosmos.png" />
+                <meta name="twitter:card" content="summary_large_image" />
+                <link rel="canonical" href="https://mkeithx.pages.dev/" />
+            </Head>
             <CosmospageHeader />
             {/* <CosmicFeatures /> */}
         </Layout>
