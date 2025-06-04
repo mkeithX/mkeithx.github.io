@@ -112,13 +112,13 @@ const config: Config = {
         },
         blog: {
           path: "blog",
-          blogTitle: "Blog",
+          blogTitle: "Updates",
           blogDescription:
             "Keep up to date with what's going on with The SpaceHub Project!",
           routeBasePath: "blog",
           blogSidebarTitle: "Recent updates",
-          blogSidebarCount: "ALL",
-          postsPerPage: 5,
+          blogSidebarCount: "ALL", // "All"
+          postsPerPage: 3,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
           onUntruncatedBlogPosts: "ignore",

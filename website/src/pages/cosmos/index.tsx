@@ -56,7 +56,7 @@ export default function Cosmos(): JSX.Element {
     return (
         <Layout title="The Universe" description="From Quarks to Black Holes and Beyond">
             <Head>
-                <meta property="og:image" content="/img/banner/social-banner-cosmos.png" />
+                <meta property="og:image" content="img/banner/social-banner-cosmos.png" />
                 <meta name="twitter:card" content="summary_large_image" />
                 <link rel="canonical" href="https://mkeithx.pages.dev/" />
             </Head>

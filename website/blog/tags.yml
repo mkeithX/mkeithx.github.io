@@ -2,7 +2,7 @@ welcome:
   description: "Introducing mkeithx website."
   label: Welcome
 updates:
-  description: "Posts about new updates"
+  description: "Posts about new updates, releases and some announcements."
   label: Updates
   permalink: /updates
 docs:
