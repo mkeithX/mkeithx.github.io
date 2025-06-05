@@ -193,7 +193,7 @@ const config: Config = {
         max: 1030,
         min: 640,
         steps: 2,
-        disableInDev: false,
+        disableInDev: true,
       } as IdealImageOptions,
     ],
     [
@@ -290,7 +290,7 @@ const config: Config = {
         src: "img/logo/developers-a.png",
         href: "/",
         // width: "330",
-        height: "70"
+        height: "60"
       },
       links: [
         {

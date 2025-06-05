@@ -31,17 +31,17 @@ function This(): JSX.Element {
         <Layout title="About" description={description}>
             <div className={clsx(styles.thisHead, "hero hero--dark")}>
                 <div className="container">
-                    <div className="avatar">
+                    <div className={clsx(styles.thisAvatar, "avatar")}>
                         <img
                             className="avatar__photo avatar__photo--xl"
                             src={profilePicUrl}
                             alt="ProfileAvatar" />
                         <div className="avatar__intro">
                             <Heading as="h1" className={clsx(styles.thisTitle)}>
-                                {"mkeithX"}
+                                {"About"}
                             </Heading>
                             <div className={clsx("avatar__subtitle")}>
-                                <span className={clsx(styles.thisSubtitle)}>{"about"}</span>
+                                <span className={clsx(styles.thisSubtitle)}>{"Software Engineer · System Admin · Potato"}</span>
                             </div>
                         </div>
                     </div>
@@ -52,7 +52,7 @@ function This(): JSX.Element {
                     <div className="avatar">
                         <div className="avatar__intro">
                             <div>
-                                <h3 className="text text--light">Hello, world!</h3>
+                                <h2 className="text text--light">Hello, world!</h2>
                                 <p>
                                     I'm Keith. I’m an independent software engineer with a soft spot for web development and a true aficionado of Django, Python’s web framework. While I work as a systems administrator at a private company, I’m also focused on improving my frontend skills to enhance user experience.
                                 </p>
@@ -66,7 +66,7 @@ function This(): JSX.Element {
                                     rel="noreferrer noopener"
                                 >
                                     {"this website"}
-                                </Link>. 
+                                </Link>.
 
                                 <p>
                                     Feel free to explore and hope you enjoy!

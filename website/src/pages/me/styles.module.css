@@ -6,9 +6,9 @@
 }
 
 .thisTitle {
-    font-size: 60px;
+    font-size: 58px;
     font-weight: 700;
-    margin-bottom: auto;
+    margin-bottom:0.1rem;
 }
 
 .thisSubtitle {
@@ -26,7 +26,7 @@
     font-weight: 300;
 }
 
-/* .thisAvatar {
-    max-height: 196px;
-    max-width: 196px;
-} */
+.thisAvatar {
+    max-height: 596px;
+    max-width: 896px;
+}
