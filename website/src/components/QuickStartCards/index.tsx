@@ -123,6 +123,23 @@ export function ReportsCardRow(): JSX.Element {
   );
 }
 
+export function MyProjectsDocsRow(): JSX.Element {
+  return (
+    <div className="row">
+      <QuickStartCol 
+      title="Project One"
+      subTitle="Subtitle One"
+      webUrl="https://mkeithx.github.io"
+      />
+      <QuickStartCol 
+      title="Project Two"
+      subTitle="Subtitle Two"
+      webUrl="https://github.com/mkeithX"
+      />
+    </div>
+  );
+}
+
 // export function ProjectsDocsRow(): JSX.Element {
 //   return (
 //     <div className="row">

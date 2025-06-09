@@ -17,12 +17,14 @@ function This(): JSX.Element {
         custom_tagline,
         custom_title,
         custom_header,
+        custom_keyword,
     } = customFields as {
         description: string;
         custom_tagline: string;
         custom_description: string;
         custom_header: string;
         custom_title: string;
+        custom_keyword: string;
     };
 
     const profilePicUrl = "https://github.com/mkeithx.png";
@@ -31,17 +33,17 @@ function This(): JSX.Element {
         <Layout title="About" description={description}>
             <div className={clsx(styles.thisHead, "hero hero--dark")}>
                 <div className="container">
-                    <div className="avatar">
+                    <div className={clsx(styles.thisAvatar, "avatar")}>
                         <img
                             className="avatar__photo avatar__photo--xl"
                             src={profilePicUrl}
                             alt="ProfileAvatar" />
                         <div className="avatar__intro">
                             <Heading as="h1" className={clsx(styles.thisTitle)}>
-                                {"mkeithX"}
+                                {"Keyword"}
                             </Heading>
                             <div className={clsx("avatar__subtitle")}>
-                                <span className={clsx(styles.thisSubtitle)}>{"about"}</span>
+                                <span className={clsx(styles.thisSubtitle)}>{custom_keyword}</span>
                             </div>
                         </div>
                     </div>
@@ -52,39 +54,34 @@ function This(): JSX.Element {
                     <div className="avatar">
                         <div className="avatar__intro">
                             <div>
-                                <h3 className="text text--light">Hello, world!</h3>
+                                <h2 className="text text--light">History</h2>
                                 <p>
-                                    I'm Keith. I’m an independent software engineer with a soft spot for web development and a true aficionado of Django, Python’s web framework. While I work as a systems administrator at a private company, I’m also focused on improving my frontend skills to enhance user experience.
+                                    Stuff I built <i>{description}</i> <br></br>
+                                    
+                                    Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.
                                 </p>
+
+                                <h2 className="text text--light">Roadmap</h2>
                                 <p>
-                                    I earned my degree in Information Technology when ReactJS was about a year old. Despite never dreaming of being part of the IT industry, I’ve embraced this path wholeheartedly, and I’m blessed to have a wonderful family that supports me.
+                                    Quisque faucibus ex sapien vitae pellentesque sem placerat. In id cursus mi pretium tellus duis convallis. Tempus leo eu aenean sed diam urna tempor. Pulvinar vivamus fringilla lacus nec metus bibendum egestas.
                                 </p>
-                                Currently, I’m working on something cool and, of course, maintaining the projects I’ve authored and contributed to, including <Link
-                                    className="text--no-decoration"
-                                    to="/"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    {"this website"}
-                                </Link>. 
+
 
                                 <p>
-                                    Feel free to explore and hope you enjoy!
+                                     Thank you and hope you find something useful or interesting during your visit.
                                 </p>
                                 {""}
                                 <p>
-                                    Thank you for visiting!
+                                    <Link
+                                        className="text--no-decoration"
+                                        to="https://github.com/mkeithX"
+                                        target="_blank"
+                                        rel="noreferrer noopener"
+                                    >
+                                        {"Keith Tan"}<br></br>
+                                    </Link>
+                                    {"Software Engineer"}
                                 </p>
-                                {/* <p>
-                                <Link
-                                    className="text--no-decoration"
-                                    to="/feeling-lucky"
-                                    target="_blank"
-                                    rel="noreferrer noopener"
-                                >
-                                    {"Keith"}
-                                </Link>
-                                </p> */}
                             </div>
                         </div>
                     </div>

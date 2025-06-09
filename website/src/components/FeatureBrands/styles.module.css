@@ -1,9 +1,9 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 8rem 0;
+  padding: 4rem 0;
   width: 100%;
-  /* background-color: var(--ifm-background-surface-color); */
+  /* background-color: var(--ifm-background-surface-color) !important; */
   background-color: var(--ifm-site-dark) !important;
   position: relative;
 }

@@ -14,7 +14,7 @@ type FeatureBrandItems = {
 const FeatureList: FeatureBrandItems[] = [
   
    {
-    scale: 1.2,
+    scale: 0.8,
     title: "",    
     Svg: require("@site/static/img/logo/Microsoft_365.svg").default,
     description: (
@@ -26,7 +26,7 @@ const FeatureList: FeatureBrandItems[] = [
   {
     scale: 1.0,
     title: "",
-    Svg: require("@site/static/img/logo/kitiplex-svg-banner.svg").default,
+    Svg: require("@site/static/img/logo/MSAzure.svg").default,
     description: (
       <>
             {/* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  */}
@@ -44,7 +44,7 @@ const FeatureList: FeatureBrandItems[] = [
     )
   },
   {
-    scale: 1.2,
+    scale: 0.8,
     title: "",
     
     Svg: require("@site/static/img/logo/Cloudflare_Logo.svg").default,
