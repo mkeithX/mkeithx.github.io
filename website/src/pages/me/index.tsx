@@ -17,12 +17,14 @@ function This(): JSX.Element {
         custom_tagline,
         custom_title,
         custom_header,
+        custom_keyword,
     } = customFields as {
         description: string;
         custom_tagline: string;
         custom_description: string;
         custom_header: string;
         custom_title: string;
+        custom_keyword: string;
     };
 
     const profilePicUrl = "https://github.com/mkeithx.png";
@@ -38,10 +40,10 @@ function This(): JSX.Element {
                             alt="ProfileAvatar" />
                         <div className="avatar__intro">
                             <Heading as="h1" className={clsx(styles.thisTitle)}>
-                                {"About"}
+                                {"Keyword"}
                             </Heading>
                             <div className={clsx("avatar__subtitle")}>
-                                <span className={clsx(styles.thisSubtitle)}>{"Software Engineer · System Admin · Potato"}</span>
+                                <span className={clsx(styles.thisSubtitle)}>{custom_keyword}</span>
                             </div>
                         </div>
                     </div>
@@ -52,9 +54,9 @@ function This(): JSX.Element {
                     <div className="avatar">
                         <div className="avatar__intro">
                             <div>
-                                <h2 className="text text--light">Hello, world!</h2>
+                                <h2 className="text text--light">Hi there! I'm Keith. </h2>
                                 <p>
-                                    I'm Keith. I’m an independent software engineer with a soft spot for web development and a true aficionado of Django, Python’s web framework. While I work as a systems administrator at a private company, I’m also focused on improving my frontend skills to enhance user experience.
+                                    I’m an independent software engineer with a soft spot for web development and a true aficionado of Django, Python’s web framework. While I work as a systems administrator at a private company, I’m also focused on improving my frontend skills to enhance user experience.
                                 </p>
                                 <p>
                                     I earned my degree in Information Technology when ReactJS was about a year old. Despite never dreaming of being part of the IT industry, I’ve embraced this path wholeheartedly, and I’m blessed to have a wonderful family that supports me.

@@ -79,6 +79,7 @@ const config: Config = {
     hero_tagline: "for Software Development and More",
     custom_header: "The SpaceHub Project @Kitiplex",
     custom_tagline: "Guides and Code Samples from mkeith",
+    custom_keyword: " | Author's note",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -244,8 +245,8 @@ const config: Config = {
       items: [
         { type: "doc", docId: "introduction", label: "Docs", },
         { to: "/learn", label: "Learn" },
-        { to: "/community", label: "Contributing" },
-        { to: "/blog", label: "Updates" },
+        { to: "/community", label: "Community" },
+        { to: "/blog", label: "Blog" },
 
         // {
         //   type: "html",

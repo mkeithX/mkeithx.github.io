@@ -1,4 +1,4 @@
-import React, { JSX, type ReactNode } from "react";
+import React, { Children, JSX, type ReactNode } from "react";
 import Translate from "@docusaurus/Translate";
 import Link from "@docusaurus/Link";
 import clsx from "clsx";
@@ -20,7 +20,7 @@ type ProfileProps = {
   subTitle: string;
   children: ReactNode;
   githubUrl: string;
-  twitterUrl?: string;
+  xUrl?: string;
 };
 
 function TeamProfileCard({
@@ -29,7 +29,7 @@ function TeamProfileCard({
   subTitle,
   children,
   githubUrl,
-  twitterUrl,
+  xUrl,
 }: ProfileProps) {
   return (
     <div className={clsx("col col--6", styles.cardContainer)}>
@@ -55,8 +55,8 @@ function TeamProfileCard({
                 <FontAwesomeIcon icon={faGithub} size="2x" />
               </Link>
             )}
-            {twitterUrl && (
-              <Link className="button button--sm button--secondary" href={twitterUrl}>
+            {xUrl && (
+              <Link className="button button--sm button--secondary" href={xUrl}>
                 <FontAwesomeIcon icon={faXTwitter} size="2x" />
               </Link>
             )}
@@ -76,21 +76,21 @@ const teamMembers = [
     name: "Keith Tan",
     subTitle: "Maintainer @ Kitiplex",
     githubUrl: "https://github.com/mkeithX",
-    twitterUrl: "https://twitter.com/mkeithtan",
+    xUrl: "https://twitter.com/mkeithtan",
   },
 
   {
     name: "Gina",
     subTitle: "Maintainer @ Kitiplex",
     githubUrl: "https://github.com/botgina",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
     {
     name: "Kitiplex Engineering",
     subTitle: "Maintainer @ Kitiplex",
     githubUrl: "https://github.com/kpxengineering",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
 ];
@@ -100,111 +100,111 @@ const contributors = [
     name: "Leo Go",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/GuLeeDev",
-    twitterUrl: "https://twitter.com/GuLeeDev",
+    xUrl: "https://twitter.com/GuLeeDev",
   },
   
   {
     name: "Megan",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/CodeByMegan",
-    twitterUrl: "https://twitter.com/kitiplex",
+    xUrl: "https://twitter.com/kitiplex",
   },
 
   {
     name: "Adele",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/CodeByAdele",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "Joni Sy",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/SyJoniDev",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
   {
     name: "Dcst0301",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/Dcst0301",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "ayitsmeprincess",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/ayitsmeprincess",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "Kean Ortiga",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/rkortiga",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "Venice",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/Portiaporkshap",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "PrimmieDoll",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/PrimmieDoll",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "Joei",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/JoeiX",
-    twitterUrl: "https://twitter.com/angajoei",
+    xUrl: "https://twitter.com/angajoei",
   },
 
   {
     name: "PriMx",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/PriMaxima",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "Topsy",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/topsykretts8520",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "MeganB",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/MeganB143",
-    twitterUrl: "#",
+    xUrl: "#",
   },
 
   {
     name: "Johanna Lorenz",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/JLorenz143",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "Miriam G",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/MiriamG416",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
   {
     name: "Kiti",
     subTitle: "Contributor @ Kitiplex",
     githubUrl: "https://github.com/kitimi88",
-    twitterUrl: "https://twitter.com/",
+    xUrl: "https://twitter.com/",
   },
 
 ];
