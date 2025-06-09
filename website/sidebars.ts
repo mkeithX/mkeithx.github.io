@@ -10,7 +10,7 @@ const sidebars: SidebarsConfig = {
     {
       type: "category",
       label: "Getting started",
-      collapsed: true,
+      collapsed: false,
       link: { type: "doc", id: "configs/index" },
       items: [
         "configs/create-doc",

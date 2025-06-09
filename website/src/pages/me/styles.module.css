@@ -6,13 +6,13 @@
 }
 
 .thisTitle {
-    font-size: 60px;
-    font-weight: 700;
-    margin-bottom: auto;
+    font-size: 58px;
+    font-weight: 600;
+    margin-bottom:0.1rem;
 }
 
 .thisSubtitle {
-    font-size: 20px;
+    font-size: 22px;
     font-weight: 400;
     /* margin-top: auto; */
 }
@@ -20,13 +20,13 @@
 
 .thisBody {
     /* background-color: var(--ifm-color-primary) !important; */
-    background-color: var(--ifm-site-dark) !important;
+    background-color: #0d1117;
     flex-direction: column;
     font-size: 18px;
     font-weight: 300;
 }
 
-/* .thisAvatar {
-    max-height: 196px;
-    max-width: 196px;
-} */
+.thisAvatar {
+    max-height: 596px;
+    max-width: 896px;
+}

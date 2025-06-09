@@ -1,27 +1,29 @@
 <div align="left">
+  <a href="https://mkeithx.github.io">
+    <img src="./public/img/github-banner-new.png" target="_blank" alt="The SpaceHub Project">
+  </a>
   <h1 align="left">
-    <a href="https://mkeithx.github.io">
-      <img src="./public/img/github-banner-new.png" target="_blank" alt="The SpaceHub Project">
-    </a>
-    <!-- <b>Welcome</b>! -->
+    <!-- <span>SpaceHub Project</span> -->
   </h1>
 </div>
 
+<!-- Welcome to the repo powering the SpaceHub Project docs and blog website! -->
 
+This repo contains the configurations and source code powering the SpaceHub Project docs and blog website!
 
-This repo contains the configurations and source code powering the **SpaceHub Project** docs [website](https://mkeithx.github.io).
+## Project overview
 
-## Overview
+SpaceHub Project is an initiative under [Kitiplex](https://github.com/kitiplex) aims to establish standardized best practices for software development. The project's primary focus is to ensure that all projects are:
 
-The SpaceHub Project is part of an internal initiative at [Kitiplex](https://github.com/kitiplex) to set standard practices for software development. It focuses on making sure all projects have clear and comprehensive documentation.
+- Clearly documented
+- Consistently organized
+- Easy to onboard for new contributors
 
+This site also serves as the central hub for guides, community standards, and resources related to the SpaceHub initiative.
 
+## Repo structure
 
-## Configuration
-
-The SpaceHub Project website is a static site generated using the latest version of [Docusaurus](https://docusaurus.io/). It is organized as a [monorepo](https://github.com/babel/babel/blob/master/doc/design/monorepo.md).
-
-
+The website is a static site generated using [Docusaurus](https://docusaurus.io) and is structured as a lightweight monorepo:
 
 ```
 mkeithx.github.io/
@@ -39,28 +41,43 @@ mkeithx.github.io/
     \---static
 ```
 
-### Installation
+In it, you'll can find practical code and configuration snippets that demonstrate usage patterns, best practices and reference implementation for the SpaceHub Project.
 
-Clone this repository to your desktop and run `npm install` to install all dependencies.
+## Getting started
 
-> [!IMPORTANT]  
-> For local installation, it is assumed that you are familiar with how the site is built using [Docusaurus](https://docusaurus.io/docs/installation).
+### Clone
+
+```bash
+git clone https://github.com/mkeithX/mkeithx.github.io.git
+```
+
+### Install dependencies and run locally
+
+```bash
+npm install
+```
+
+```bash
+npm start
+```
+
+> [!TIP]  
+> For detailed configuration and/advance usage, visit [docs](https://docusaurus.io/docs/installation)
 
 ## Contributing
 
-While this project is publicly available and contributions are welcome, we highly encourage future contributors to join **Kitiplex**! Joining us offers you:
+Contributions of all kinds are welcome! If you'd like to contribute, consider joining our team for:
 
-- [x] Access to a supportive community
-- [x] Additional resources and tools
-- [x] Collaborative opportunities
+- [x] Supportive, collaborative community
+- [x] More cool resources and tools
+- [x] Opportunities to work on more projects!
 
-> [!NOTE]  
-> This project is constantly being updated, and some features may not work as expected.
+> [!WARNING]  
+> SpaceHub is under active development. Some features and docs may be incomplete outdated.
 
-Learn more about [how to get involved](https://mkeithx.github.io/community).
+## Getting involved?
 
-
-
+Checkout out the [community page](https://mkeithx.github.io/community) to know more how to participate!
 
 <!-- > _A documentation website representing humanity from Dimension C-137 🚀_ -->
 
@@ -69,6 +86,3 @@ Learn more about [how to get involved](https://mkeithx.github.io/community).
     <img src="https://skillicons.dev/icons?i=react,cloudflare,ts,githubactions,vscode" />
   </a>
 </p> -->
-
-
-
