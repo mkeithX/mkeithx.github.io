@@ -299,7 +299,7 @@ const config: Config = {
           items: [
             { label: "System Admin", to: "/docs/system-administration" },
             { label: "Python Examples", to: "/docs/learn/python/examples" },
-            { label: "Astro Stuff", to: "/cosmos/astrophysics" },
+            { label: "Keyword", to: "/me" },
           ],
         },
         {

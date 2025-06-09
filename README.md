@@ -2,9 +2,8 @@
   <a href="https://mkeithx.github.io">
     <img src="./public/img/github-banner-new.png" target="_blank" alt="The SpaceHub Project">
   </a>
-  <span>The</span>
   <h1 align="left">
-    <span>SpaceHub Project</span>
+    <!-- <span>SpaceHub Project</span> -->
   </h1>
 </div>
 
