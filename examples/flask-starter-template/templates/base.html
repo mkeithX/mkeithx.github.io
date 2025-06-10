@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>{% block title %}{% endblock %}</title>
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.6/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-4Q6Gf2aSP4eDXB8Miphtr37CMZZQ5oXLH2yaXMJ2w8e2ZtHTl7GptT4jmndRuHDT"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="shortcut icon"
+      href="{{ url_for('static', filename='favicon.ico')}}"
+    />
+    <link
+      rel="stylesheet"
+      type="text/css"
+      href="{{ url_for('static', filename='main.css')}}"
+    />
+  </head>
+  <body>
+    <div class="navbar">
+      <a href="{{ url_for('home') }}" class="navbar-brand">Home</a>
+      <a href="{{ url_for('about') }}" class="navbar-item">About</a>
+      <a href="{{ url_for('contact') }}" class="navbar-item">Contact</a>
+    </div>
+
+    <div class="body-content">
+      {% block content %} {% endblock %}
+      <hr />
+      <footer>
+        <p>&copy; 2025</p>
+      </footer>
+    </div>
+  </body>
+</html>

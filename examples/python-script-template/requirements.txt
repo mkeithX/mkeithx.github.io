@@ -1,1 +1,1 @@
-pytest
+-r requirements/development.txt
