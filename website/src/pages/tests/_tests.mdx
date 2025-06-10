@@ -521,6 +521,22 @@ py -m pip install --upgrade pip
       </div>
     </CardFooter> 
   </Card>
+  <br />
+
+  ```jsx showLineNumbers
+   <Card>
+    <CardImage
+      cardImageUrl='/img/mkx-social.png'
+    />
+    <CardFooter style={{ backgroundColor: 'rgb(33 126 209)' , color:'black'}} className='text--center'> 
+      <div className='button-group button-md button-group--block'>
+        <button className='button button--success'>Like</button>
+        <button className='button button--warning'>Comment</button>
+        <button className='button button--danger'>Share</button>
+      </div>
+    </CardFooter> 
+  </Card>
+  ```
 
 <br></br>
  
@@ -544,6 +560,31 @@ py -m pip install --upgrade pip
       </div>
 </CardHeader>
 </Card>
+
+<br />
+
+```jsx showLineNumbers
+  <Card>
+    <CardHeader
+      className='padding-top--lg'
+      style={{ backgroundColor: 'rgb(33 126 209)' , color:'black'}}
+    >
+      <div className='avatar avatar--vertical'>
+        <img
+          className='avatar__photo avatar__photo--xl' 
+          src='https://github.com/mkeithx.png'
+        />
+        <div className='avatar__intro'>
+          <div className='avatar__name'>Keith Tan (@mkeithX)</div>
+          <span className='avatar__subtitle'>
+            humble author of:
+            <a style={{ color:'white'}} href='https://mkeithx.pages.dev/'>MKX SpaceHub</a>
+          </span>
+        </div>
+      </div>
+</CardHeader>
+</Card>
+```
 
 <hr></hr>
   <Card shadow='tl'  style={{border: '1.5px solid var(--ifm-color-primary)'}}>

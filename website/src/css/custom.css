@@ -7,14 +7,13 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0,0,0,.1);
-  --ifm-global-shadow-md: 0 2px 4px 0 rgba(0,0,0,.14);
-  --ifm-global-shadow-tl: 0 3px 6px 0 rgba(0,0,0,.18);
-  --ifm-global-shadow-xl: 0 4px 8px 0 rgba(0,0,0,.22);
-}
+  /* Shadows */
+  --ifm-global-shadow-lw: 0 1px 2px rgba(0, 0, 0, 0.1);
+  --ifm-global-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.14);
+  --ifm-global-shadow-tl: 0 3px 6px rgba(0, 0, 0, 0.18);
+  --ifm-global-shadow-xl: 0 4px 8px rgba(0, 0, 0, 0.22);
 
-
-:root {
+  /* Primary color palette */
   --ifm-color-primary: #0b84ce;
   --ifm-color-primary-dark: #0a77b9;
   --ifm-color-primary-darker: #0970af;
@@ -22,16 +21,21 @@
   --ifm-color-primary-light: #0c91e3;
   --ifm-color-primary-lighter: #0d98ed;
   --ifm-color-primary-lightest: #27a6f3;
-  --site-color-feedback-background: #f0f8ff;
+
+  /* Typography & UI */
   --ifm-code-font-size: 90%;
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
   --ifm-link-hover-decoration: none;
+
+  /* Custom site variables */
+  --site-color-feedback-background: #f0f8ff;
+  --ifm-site-dark: #000000;
+
+  /* UI highlights */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-menu-color-active: var(--ifm-color-primary) !important;
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
-  --ifm-site-dark: #000000;
-
 }
 
 /* Dark theme overrides */
@@ -43,11 +47,14 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
+
   --site-color-feedback-background: #2a2930;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+
   --ifm-background-surface-color: #0d1117 !important;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 }
+
 
 
 /* Navbar */
@@ -55,7 +62,7 @@
   background-color: var(--ifm-site-dark);
   align-items: center;
   --ifm-navbar-link-hover-color: #1da1f2;
-  font-size: 17px;
+  /* font-size: 17px; */
   font-weight: bold;
 }
 
@@ -69,7 +76,7 @@
   margin-left: calc(var(--navbar-border-overflow) * -1);
   margin-right: calc(var(--navbar-border-overflow) * -1);
   position: relative;
-  top: 18px;
+  top: 17px;
   background: #43b1f4 !important;
 }
 

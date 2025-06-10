@@ -24,7 +24,7 @@ const FeatureList: FeatureBrandItems[] = [
     )
   },
   {
-    scale: 1.0,
+    scale: 0.8,
     title: "",
     Svg: require("@site/static/img/logo/MSAzure.svg").default,
     description: (
@@ -34,8 +34,8 @@ const FeatureList: FeatureBrandItems[] = [
     )
   },
   {
-    scale: 0.6,
-    Svg: require("@site/static/img/space/NASA_logo.svg").default,
+    scale: 0.4,
+    Svg: require("@site/static/img/logo/vscode.svg").default,
     title: "",
     description: (
       <>
@@ -44,7 +44,7 @@ const FeatureList: FeatureBrandItems[] = [
     )
   },
   {
-    scale: 0.8,
+    scale: 0.6,
     title: "",
     
     Svg: require("@site/static/img/logo/Cloudflare_Logo.svg").default,
@@ -55,7 +55,7 @@ const FeatureList: FeatureBrandItems[] = [
     )
   },
   {
-    scale: 0.8,
+    scale: 0.6,
     title: "",
     
     Svg: require("@site/static/img/logo/Algolia_logo.svg").default,
@@ -71,7 +71,7 @@ const FeatureList: FeatureBrandItems[] = [
 
 function Feature({ scale, title, description, Svg }: FeatureBrandItems) {
   return (
-    <div className={clsx("col col--4")}>
+    <div className={clsx("row col--2")}>
       <div className={clsx("text--center")}>
       <Svg
           transform={"scale(" + scale + ")"}

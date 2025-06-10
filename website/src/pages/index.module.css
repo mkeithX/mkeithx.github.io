@@ -19,7 +19,7 @@
   text-align: left;
   position: relative;
   background-color: var(--ifm-site-dark);
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%); */
@@ -48,9 +48,10 @@
 
 @media (max-width: 768px) {
   .heroBannerTitle {
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     font-size: 50px;
     margin: 0.8px 0 0.2rem;
+    
   }
 }
 
@@ -129,7 +130,7 @@
   background-color: var(--ifm-site-dark) !important;
   color: #ffffff !important;
   border: 2px solid #1da1f2;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
   border-radius: 12px;
   padding: 0.5rem 1.5rem;
 }
@@ -139,7 +140,7 @@
 }
 
 .indexCtas a:hover {
+  color: #ffffff !important;
   background-color: #1da1f2 !important;
-  /* color: #000; */
 }
 

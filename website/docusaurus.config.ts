@@ -239,7 +239,7 @@ const config: Config = {
         src: "img/mkx-new-test.svg",
         target: "_self",
         width: 80,
-        height: 80
+        // height: 60
       },
 
       items: [
