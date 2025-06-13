@@ -4,7 +4,7 @@
  */
 
  /* .section {
-  padding: 40px 0;
+  padding: 1rem 0;
 } */
 
 /* General Container */
@@ -14,7 +14,7 @@
 
 /* Hero Banner */
 .heroBanner {
-  padding: 8rem 0;
+  padding: 7rem 0;
   overflow: hidden;
   text-align: left;
   position: relative;
@@ -27,8 +27,8 @@
 
 /* Hero Logo */
 .heroLogo {
-  width: auto;
-  height: auto;
+  /* width: auto; */
+  /* height: auto; */
   float: right;
   display: flex;
   transition: transform 0.6s ease-in-out;

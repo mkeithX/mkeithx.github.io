@@ -194,7 +194,7 @@ const config: Config = {
         max: 1030,
         min: 640,
         steps: 2,
-        disableInDev: true,
+        disableInDev: false,
       } as IdealImageOptions,
     ],
     [
@@ -243,8 +243,8 @@ const config: Config = {
       },
 
       items: [
-        { type: "doc", docId: "introduction", label: "Docs", },
-        { to: "/learn", label: "Learn" },
+        { type: "doc", docId: "introduction", label: "Explore", },
+        { to: "/learn", label: "Developer" },
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
 
