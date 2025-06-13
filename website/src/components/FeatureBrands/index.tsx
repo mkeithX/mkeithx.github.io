@@ -100,7 +100,7 @@ function Feature({ scale, title, description, Svg }: FeatureBrandItems) {
 
 export default function FeatureBrands(): JSX.Element {
   return (
-    <section className={clsx(styles.features)}>
+    <section className={clsx(styles.featureBrand)}>
       <div className={clsx("container")}>
       <div className={clsx("row", styles.featuresRowCenter)}>
           {FeatureList.map((props, idx) => (

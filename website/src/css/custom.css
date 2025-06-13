@@ -8,12 +8,13 @@
 
 :root {
   /* Shadows */
-  --ifm-global-shadow-lw: 0 1px 2px rgba(0, 0, 0, 0.1);
-  --ifm-global-shadow-md: 0 2px 4px rgba(0, 0, 0, 0.14);
-  --ifm-global-shadow-tl: 0 3px 6px rgba(0, 0, 0, 0.18);
-  --ifm-global-shadow-xl: 0 4px 8px rgba(0, 0, 0, 0.22);
+  --ifm-global-shadow-lw: 0 1px 2px #0000001a;
+  --ifm-global-shadow-md: 0 2px 4px #00000024;
+  --ifm-global-shadow-tl: 0 3px 6px #0000002e;
+  --ifm-global-shadow-xl: 0 4px 8px #00000038;
 
   /* Primary color palette */
+  --ifm-background-color: #fff;
   --ifm-color-primary: #0b84ce;
   --ifm-color-primary-dark: #0a77b9;
   --ifm-color-primary-darker: #0970af;
@@ -31,6 +32,9 @@
   /* Custom site variables */
   --site-color-feedback-background: #f0f8ff;
   --ifm-site-dark: #000000;
+   --spacehub-color-light: #9feaf9;
+   --spacehub-color-dark: #1b1c26;
+   --spacehub-color-semidark: #25292e;
 
   /* UI highlights */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
@@ -61,10 +65,17 @@
 .navbar {
   background-color: var(--ifm-site-dark);
   align-items: center;
-  --ifm-navbar-link-hover-color: #1da1f2;
-  /* font-size: 17px; */
+  --ifm-navbar-link-hover-color: #8affff;
+  font-size: 17px;
   font-weight: bold;
 }
+
+/* .navbar__link--active {
+  color: var(--spacehub-color-light);
+   border-bottom-color: var(--ifm-link-color);
+} */
+
+
 
 .navbar__link--active:after {
   --navbar-border-overflow: 4px;
@@ -107,9 +118,9 @@
 
 /* Hide navbar if not needed */
 
-/* html[data-navbar='false'] .navbar {
+html[data-navbar='false'] .navbar {
   display: none;
-} */
+}
 
 /* Content Table */
 .contentTableContainer table {
@@ -131,9 +142,9 @@
   width: 30%;
   text-align: left;
 }
-
+ 
 /* Announcement Bar */
-div[class^='announcementBar'][role='banner'] {
+div[class*=announcementBar][role='banner'] {
   border-bottom-color: #050606;
 }
 
@@ -188,7 +199,8 @@ div[class^='announcementBar_'] button {
 
 /* Footer */
 .footer--dark {
-  --ifm-footer-background-color: #25292e;
+  /* --ifm-footer-background-color: #25292e; */
+  background-color: var(--spacehub-color-dark);
 }
 
 .footer {

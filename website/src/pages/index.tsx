@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import BannerLogo from '@site/static/img/astronaut.svg';
+import BannerLogo from '@site/static/img/logo/react-fb.svg';
 import React, { JSX } from 'react';
 import TopBanner from '@site/src/components/TopBanner';
 import FeatureBrands from '@site/src/components/FeatureBrands';
@@ -38,9 +38,9 @@ function HomepageHeader(): JSX.Element {
       <div className="container">
         <BannerLogo
           className={styles.heroLogo}
-          title="Kitoy"
-          width={160}
-          height={180}
+          title=""
+          width={170} // 160
+          height={150} // 180
         />
         <div className={styles.heroSubtitle}>
           <span className={styles.heroSubTitleText}>
@@ -51,10 +51,8 @@ function HomepageHeader(): JSX.Element {
           <div className={styles.heroBannerTitle}>
             <span className={styles.heroBannerTitleText}>
               {hero_header}
-              {/* {"Guides"}<br></br>{"and Code Samples"} */}
             </span>
             <br></br>
-            {/* <b>{"from Kitimi"}</b> */}
           </div>
           <div className={styles.heroSubtitle}>
             <span className={styles.heroSubtitleText}>
@@ -70,7 +68,7 @@ function HomepageHeader(): JSX.Element {
           </Link>
           <Link
             className={clsx("button button--secondary button--lg")}
-            to="/cosmos">
+            to="/space">
             {'Space'}
           </Link>
         </div>

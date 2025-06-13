@@ -4,6 +4,7 @@
   padding: 4rem 0;
   width: 100%;
   position: relative;
+  background-color: var(--ifm-background-surface-color) !important;
 }
 
 .featureSvg {
@@ -11,10 +12,10 @@
   width: 200px;
 }
 
-.heroTitleTextHtml b {
+/* .heroTitleTextHtml b {
   color: var(--ifm-color-primary);
   font-size: 20px;
-}
+} */
 
 .featuresRowCenter {
   justify-content: center;

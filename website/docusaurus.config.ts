@@ -51,7 +51,7 @@ const commonDocsConfig = {
 
 
 const config: Config = {
-  title: "MKX SpaceHub",
+  title: "Kitimi Universe",
   tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
@@ -208,9 +208,7 @@ const config: Config = {
   themeConfig: {
     playgroundPosition: 'bottom',
     colorMode: {
-      defaultMode: "dark",
-      disableSwitch: false,
-      respectPrefersColorScheme: false,
+      respectPrefersColorScheme: true,
     },
     // announcementBar: {
     //   id: `announcementBar_`,
@@ -233,18 +231,20 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: false,
-      title: "SpaceHub",
+      title: "Ai",
       logo: {
-        alt: "SpaceHub",
-        src: "img/mkx-new-test.svg",
+        alt: "Developers",
+        src: "img/logo/kitimi-icon-new.svg", //  img/mkx-new-test.svg || img/logo/kitimi-icon-new.svg
         target: "_self",
-        width: 80,
-        // height: 60
+        width: 32,
+        height: 32
       },
 
       items: [
-        { type: "doc", docId: "introduction", label: "Explore", },
-        { to: "/learn", label: "Developer" },
+        { type: "doc", docId: "introduction", label: "Explore" },
+        // { to: "/learn", label: "Developer" },
+        { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn"},
+        {to: "/cosmos/timeline", label: "Universe"},
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
 
@@ -313,7 +313,7 @@ const config: Config = {
         },
         {
           title: "Connect",
-          items: [socialProfiles.facebook, socialProfiles.linkedin, socialProfiles.github,],
+          items: [socialProfiles.xdotcom, socialProfiles.facebook,  socialProfiles.github,],
         },
         {
           title: "Developers",
@@ -340,7 +340,7 @@ const config: Config = {
       ],
     },
     metadata: [
-      { name: 'og:title', content: 'MKX SpaceHub' },
+      { name: 'og:title', content: 'Kitimi Universe' },
       {
         name: 'og:description',
         content: 'A cosmic-flavored website for Software Development, Documentation and more!'

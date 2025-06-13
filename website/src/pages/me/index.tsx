@@ -72,10 +72,10 @@ function AboutPage(): JSX.Element {
                   target="_blank"
                   rel="noreferrer noopener"
                 >
-                  <b>Keith WT · {organizationName}</b>
+                  <b>Keith WT | {organizationName}</b>
                 </Link>
                 <br />
-                Software Engineer · Systems Admin · Tech Builder
+                Software Engineer · Systems Admin · Flight Simmer
               </p>
             </div>
           </div>

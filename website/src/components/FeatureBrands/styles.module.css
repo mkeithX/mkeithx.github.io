@@ -1,11 +1,12 @@
-.features {
+.featureBrand {
   display: flex;
   align-items: center;
-  padding:4rem 0;
+  padding: 4rem 0;
   width: 100%;
-  /* background-color: var(--ifm-background-surface-color) !important; */
-  background-color: var(--ifm-site-dark) !important;
+  /* background-color: #0d1117; */
+  background-color: var(--spacehub-color-dark) !important;
   position: relative;
+  /* border-bottom: 5px solid var(--spacehub-color-light); */
 }
 
 .featureBrandSvg {

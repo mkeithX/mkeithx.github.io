@@ -1,6 +1,6 @@
 <div align="left">
   <a href="https://mkeithx.github.io">
-    <img src="./public/img/github-banner-new.png" target="_blank" alt="The SpaceHub Project">
+    <img src="./public/img/github-new.png" target="_blank" alt="The SpaceHub Project">
   </a>
   <h1 align="left">
     <!-- <span>SpaceHub Project</span> -->
