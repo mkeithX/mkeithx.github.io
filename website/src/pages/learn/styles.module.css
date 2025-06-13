@@ -15,7 +15,7 @@
 @media (max-width: 768px) {
   .learnTitle {
     font-size: 48px;
-    /* white-space: normal; */
+    white-space: normal;
   }
   
 }
