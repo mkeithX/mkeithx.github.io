@@ -65,18 +65,6 @@ const FeatureList: FeatureBrandItems[] = [
       </>
     )
   },
-    {
-    scale: 0.5,
-    title: "",
-    
-    Svg: require("@site/static/img/logo/docusaurus-logo.svg").default,
-    description: (
-      <>
-            {/* Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.  */}
-      </>
-    )
-  },
-
 
 ];
 

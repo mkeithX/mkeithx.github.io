@@ -210,14 +210,14 @@ const config: Config = {
     colorMode: {
       respectPrefersColorScheme: true,
     },
-    // announcementBar: {
-    //   id: `announcementBar_`,
-    //   content:
-    //     `<a href="#">CHECK OUT WHAT'S NEW</a> 🎉`,
-    //   isCloseable: false,
-    // },
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        `<a href="#">CHECK OUT WHAT'S NEW</a> 🎉`,
+      isCloseable: false,
+    },
     docs: {
-      // versionPersistence: 'localStorage',
+      versionPersistence: 'localStorage',
       sidebar: {
         hideable: true,
         autoCollapseCategories: true,
@@ -231,19 +231,17 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: false,
-      title: "",
+      title: "Developers",
       logo: {
         alt: "Kitimi Universe",
-        src: "img/space-labs.png", //  img/mkx-new-test.svg || img/logo/kitimi-icon-new.svg
+        src: "img/logo/kitimi-icon-new.svg", //  img/mkx-new-test.svg || img/logo/kitimi-icon-new.svg
         target: "_self",
-        // width: 100,
-        height: 60
+        // width: 32,
+        // height: 32
       },
 
       items: [
         { type: "doc", docId: "introduction", label: "Explore" },
-        // { to: "/docs/learn", label: "Learn" },
-        // { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn"},
         {to: "/cosmos/timeline", label: "Universe"},
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
