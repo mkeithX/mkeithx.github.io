@@ -89,7 +89,7 @@ export default function Home(): JSX.Element {
         {/* <TopBanner /> */}
         <HomepageHeader />
         <HomepageFeatures />
-        {/* <FeatureBrands /> */}
+        <FeatureBrands />
       </main>
     </Layout>
   );

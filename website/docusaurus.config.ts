@@ -118,7 +118,7 @@ const config: Config = {
             "Keep up to date with what's going on with The SpaceHub Project!",
           routeBasePath: "blog",
           blogSidebarTitle: "Recent updates",
-          blogSidebarCount: "ALL", // "All"
+          blogSidebarCount: 10, // "All"
           postsPerPage: 3,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
@@ -194,7 +194,7 @@ const config: Config = {
         max: 1030,
         min: 640,
         steps: 2,
-        disableInDev: false,
+        disableInDev: true,
       } as IdealImageOptions,
     ],
     [
@@ -213,11 +213,11 @@ const config: Config = {
     // announcementBar: {
     //   id: `announcementBar_`,
     //   content:
-    //     `HELLO, WORLD...<a href="#">WELCOME 2025!</a> 🎉`,
+    //     `<a href="#">CHECK OUT WHAT'S NEW</a> 🎉`,
     //   isCloseable: false,
     // },
     docs: {
-      versionPersistence: 'localStorage',
+      // versionPersistence: 'localStorage',
       sidebar: {
         hideable: true,
         autoCollapseCategories: true,
@@ -231,19 +231,19 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: false,
-      title: "Ai",
+      title: "",
       logo: {
-        alt: "Developers",
-        src: "img/logo/kitimi-icon-new.svg", //  img/mkx-new-test.svg || img/logo/kitimi-icon-new.svg
+        alt: "Kitimi Universe",
+        src: "img/space-labs.png", //  img/mkx-new-test.svg || img/logo/kitimi-icon-new.svg
         target: "_self",
-        width: 32,
-        height: 32
+        // width: 100,
+        height: 60
       },
 
       items: [
         { type: "doc", docId: "introduction", label: "Explore" },
-        // { to: "/learn", label: "Developer" },
-        { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn"},
+        // { to: "/docs/learn", label: "Learn" },
+        // { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn"},
         {to: "/cosmos/timeline", label: "Universe"},
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
