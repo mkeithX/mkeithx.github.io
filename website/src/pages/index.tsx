@@ -85,7 +85,7 @@ export default function Home(): JSX.Element {
         <HomepageHeader />
         <HomepageFeatures />
       </main>
-      <FeatureBrands />
+      {/* <FeatureBrands /> */}
     </Layout>
   );
 }

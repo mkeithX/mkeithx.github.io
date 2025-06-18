@@ -3,26 +3,31 @@
  * and scoped locally.
  */
 
- .projectshero {
+ /* .projectsheroHead {
   display: flex;
   padding: 4rem 0;
   text-align: center;
   align-items: center;
   vertical-align: center;
   position: relative;
-  background-color: var(--ifm-site-dark) !important;
-}
+  background-color: var(--ifm-site-dark) !important; 
+} */
 
 .projectsheroBanner {
   padding: 8rem 0;
   text-align: left;
   position: relative;
   overflow: hidden;
-  background-color: var(--ifm-site-dark);
+  background-color: var(--ifm-site-dark) !important;
   /* background-color: #2b3137; */
   display: flex;
   height: auto;
+  border-bottom: 2px solid var(--spacehub-color-light);
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
+}
+
+.projectsHeroCards {
+  background-color: var(--spacehub-color-semidark);
 }
 
 .projectshero h1 {
@@ -51,9 +56,9 @@
   font-weight: 600;
 }
 
-.main {
+/* .main {
   padding: 12px;
-}
+} */
 
 .projectsheading {
   font-weight: bold;

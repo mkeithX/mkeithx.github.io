@@ -8,13 +8,14 @@
 
 :root {
   /* Shadows */
-  --ifm-global-shadow-lw: 0 1px 2px #0000001a;
+  /* --ifm-global-shadow-lw: 0 1px 2px #0000001a;
   --ifm-global-shadow-md: 0 2px 4px #00000024;
   --ifm-global-shadow-tl: 0 3px 6px #0000002e;
-  --ifm-global-shadow-xl: 0 4px 8px #00000038;
+  --ifm-global-shadow-xl: 0 4px 8px #00000038; */
+
 
   /* Primary color palette */
-  --ifm-background-color: #fff;
+  /* --ifm-background-color: #fff; */
   --ifm-color-primary: #0b84ce;
   --ifm-color-primary-dark: #0a77b9;
   --ifm-color-primary-darker: #0970af;
@@ -28,8 +29,7 @@
   --ifm-heading-font-weight: 600;
   --ifm-font-weight-semibold: 600;
   --ifm-link-hover-decoration: none;
-  --ifm-link-hover-color: #ba82ff;
-  /* --ifm-navbar-link-hover-color: #8affff; */
+  --ifm-link-hover-color: var(--spacehub-color-purple);
   
 
   /* Custom site variables */
@@ -74,11 +74,15 @@
   background-color: var(--ifm-site-dark);
   /* --ifm-navbar-link-hover-color: var(--spacehub-color-purple); */
   font-size: inherit;
-  /* font-weight: bold; */
+  /* font-weight: 700; */
   align-items: center;
   /* font-size: 18px; */
   /* margin-bottom: auto; */
 }
+
+/* .navbar__link {
+  background-color: var(#43b1f4) !important;
+} */
 
 .navbar__link:hover {
   color: var(--spacehub-color-purple) !important;
@@ -104,12 +108,14 @@
 
 
 .navbar__brand {
-  margin-right: 2rem;
-  font-size: inherit;
-  font-weight: 700px;
-  background: linear-gradient(-90deg,
+  margin-right: 1rem 0;
+  /* font-size: inherit; */
+  /* color: transparent; */
+  font-weight: 500;
+  font-size: 20px;
+  background: linear-gradient(90deg,
       #8affff 0%,
-      #1da1f2 50%,
+      #1da1f2 30%,
       #b070ff 100%);
   background-clip: text;
   -webkit-text-fill-color: transparent;
@@ -118,7 +124,6 @@
 .navbar__items {
   flex: auto;
   align-items: center;
-  
 }
 
 /* Header Dropdown Menu */
@@ -133,8 +138,19 @@
 
 /* Hide navbar if not needed */
 
-html[data-navbar='false'] .navbar {
+/* html[data-navbar='false'] .navbar {
   display: none;
+} */
+
+
+html[data-navbar='false'] {
+  .navbar {
+    display: none;
+  }
+
+  .theme-announcement-bar {
+    display: none;
+  }
 }
 
 /* Content Table */
@@ -165,7 +181,6 @@ html[data-navbar='false'] .navbar {
   font-weight: 500;
   font-size: 14px;
   background: var(--ifm-site-dark);
-  /* color: #8affff; */
   border-bottom-color: var(--ifm-site-dark);
 }
 

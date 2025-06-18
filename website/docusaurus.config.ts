@@ -69,7 +69,7 @@ const config: Config = {
   },
 
   staticDirectories: [
-    'static', 'public',
+    'static',
     path.join(__dirname, 'non-existent'),
   ],
 
@@ -118,7 +118,7 @@ const config: Config = {
             "Keep up to date with what's going on with The SpaceHub Project!",
           routeBasePath: "blog",
           blogSidebarTitle: "Recent updates",
-          blogSidebarCount: 10, // "All"
+          blogSidebarCount: 'ALL', // "All"
           postsPerPage: 3,
           onInlineTags: "throw",
           onInlineAuthors: "throw",
@@ -213,7 +213,7 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW</a> 🎉`,
+        `<b><a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW</a></b>`,
       isCloseable: false,
     },
     docs: {
@@ -231,20 +231,20 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: false,
-      title: "SpaceHub",
+      title: "Developers",
       logo: {
         alt: "SpaceHub",
         src: "img/logo/kitimi-icon-new.svg", //  img/mkx-new-test.svg || img/logo/kitimi-icon-new.svg || img/space-labs.png
         target: "_self",
-        // width: 100,
-        // height: 160
+        // width: "50",
+        height: "60"
       },
 
       items: [
-        { type: "doc", docId: "introduction", label: "Explore" },
-        { to: "/docs/learn", label: "Learn" },
-        {to: "/cosmos/timeline", label: "Universe"},
-        { to: "/community", label: "Community" },
+        { type: "doc", docId: "introduction", label: "Explore", position: 'left' },
+        { type: 'docSidebar', sidebarId: 'learnSidebar', label: "Learn", position: 'left' },
+        {to: "/cosmos/timeline", label: "Universe",  position: 'left' },
+        { to: "/community", label: "Community", position: 'left' },
         { to: "/blog", label: "Blog" },
 
         // {
@@ -287,7 +287,7 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/developers-a.png",
+        src: "img/space-labs.png",
         href: "/",
         // width: "330",
         height: "60"
