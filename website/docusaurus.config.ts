@@ -213,7 +213,7 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `<a href="#">CHECK OUT WHAT'S NEW</a> 🎉`,
+        `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW</a> 🎉`,
       isCloseable: false,
     },
     docs: {
@@ -231,17 +231,18 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: false,
-      title: "Developers",
+      title: "SpaceHub",
       logo: {
-        alt: "Kitimi Universe",
-        src: "img/logo/kitimi-icon-new.svg", //  img/mkx-new-test.svg || img/logo/kitimi-icon-new.svg
+        alt: "SpaceHub",
+        src: "img/logo/kitimi-icon-new.svg", //  img/mkx-new-test.svg || img/logo/kitimi-icon-new.svg || img/space-labs.png
         target: "_self",
-        // width: 32,
-        // height: 32
+        // width: 100,
+        // height: 160
       },
 
       items: [
         { type: "doc", docId: "introduction", label: "Explore" },
+        { to: "/docs/learn", label: "Learn" },
         {to: "/cosmos/timeline", label: "Universe"},
         { to: "/community", label: "Community" },
         { to: "/blog", label: "Blog" },
@@ -297,7 +298,7 @@ const config: Config = {
           items: [
             { label: "System Admin", to: "/docs/system-administration" },
             { label: "Python Examples", to: "/docs/learn/python/examples" },
-            { label: "Keyword", to: "/me" },
+            { label: "The Keyword", to: "/me" },
           ],
         },
         {

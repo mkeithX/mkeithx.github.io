@@ -2,15 +2,18 @@
   display: flex;
   align-items: center;
   padding: 4rem 0;
-  width: 100%;
-  /* background-color: #0d1117; */
-  background-color: #25292e;
-  position: relative;
-  /* border-bottom: 5px solid var(--spacehub-color-light); */
+  border-top: 1px solid var(--spacehub-color-purple);
+  margin-top: auto;
+  background-color: var(--ifm-site-dark) !important;
+  /* border-bottom: 2px solid var(--spacehub-color-purple); */
+}
+
+.featureTitleText {
+  color: var(--spacehub-color-light);
 }
 
 .featureBrandSvg {
-  height: 180px;
+  height: 100px;
   width: 200px;
 }
 

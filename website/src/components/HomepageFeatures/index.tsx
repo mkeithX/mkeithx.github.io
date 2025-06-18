@@ -48,17 +48,17 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/rocket.svg").default,
     description: (
       <>
-      Explore the properties and behaviors of celestial bodies within the <Link to="/cosmos">cosmos</Link> .
+        Explore the properties and behaviors of celestial bodies within the <Link to="/cosmos">cosmos</Link> .
       </>
     ),
   },
   {
-    scale: 1.0,
+    scale: 0.8,
     title: "Built with React",
-    Svg: require("@site/static/img/logo/react-logo.svg").default,
+    Svg: require("@site/static/img/logo/kitimi-icon-new.svg").default,
     description: (
       <>
-      Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/configs/create-doc">React</Link>  components.
+        Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/configs/create-doc">React</Link>  components.
       </>
     ),
   },

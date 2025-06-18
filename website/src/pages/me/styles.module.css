@@ -1,5 +1,6 @@
 .thisHead {
-    background-color: #1da1f2 !important;
+    /* background-color: #1da1f2 !important; */
+    background-color: var(--spacehub-color-purple);
     color: var(--ifm-site-dark) !important;
     flex-direction: column;
     padding: 4rem 0 2rem;
@@ -9,7 +10,15 @@
 .thisTitle {
     font-size: 4rem;
     font-weight: bold;
-    margin-bottom:0.3rem;
+    margin-bottom: 0.3rem;
+}
+
+@media (max-width: 768px) {
+    .thisTitle {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
 }
 
 .thisSubtitle {
@@ -17,6 +26,14 @@
     font-weight: normal;
     margin-top: auto;
 }
+
+@media (max-width: 768px) {
+    .thisSubtitle {
+        font-size: 20px;
+    }
+
+}
+
 
 
 .thisBody {
@@ -29,5 +46,6 @@
 
 .thisAvatar {
     max-height: 596px;
-    max-width: 896px;
+    max-width: 596px;
+    /* background-color: var(--spacehub-color-purple); */
 }

@@ -18,10 +18,6 @@ function HomepageHeader(): JSX.Element {
   const {
     hero_header,
     hero_tagline,
-    custom_footer,
-    custom_tagline,
-    description,
-    custom_header,
   } = customFields as {
     hero_header: string;
     hero_tagline: string;
@@ -79,7 +75,7 @@ function HomepageHeader(): JSX.Element {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { title, tagline, customFields },
+    siteConfig: { customFields },
   } = useDocusaurusContext();
   const { custom_description } = customFields as { custom_description: string };
 
@@ -89,6 +85,7 @@ export default function Home(): JSX.Element {
         <HomepageHeader />
         <HomepageFeatures />
       </main>
+      <FeatureBrands />
     </Layout>
   );
 }
