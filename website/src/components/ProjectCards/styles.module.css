@@ -1,23 +1,24 @@
 .card {
-    border: 1.5px solid var(--ifm-color-emphasis-200) !important;
-    box-shadow: var(--ifm-global-shadow-md);
-    margin-bottom: var(--ifm-leading);
+    border: 1.5px solid var(--spacehub-color-light);
+    box-shadow: var(--ifm-global-shadow-tl);
+    /* margin-bottom: var(--ifm-leading); */
     height: 100%;
     overflow: hidden;
+    background-color: var(--spacehub-color-semidark);
 }
 
 .cardContainer {
-    margin-bottom: calc(var(--ifm-spacing-horizontal) * 2);
-}
-
-.image {
-    background: var(--ifm-color-emphasis-200) !important;
-    position: relative;
+    margin-bottom: calc(var(--ifm-spacing-horizontal) * 1);
     
 }
 
-/* .role {
+.image {
+    background: var(--spacehub-color-light);
+    position: relative;
+}
+
+.role {
     position: absolute;
     left: 1rem;
     bottom: 1rem;
-} */
+}

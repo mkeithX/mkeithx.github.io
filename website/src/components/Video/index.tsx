@@ -1,56 +1,61 @@
-const Video = ({
-  src,
-  type,
-  maxWidth,
-  alt,
-}:
-  | {
-      type: "youtube";
-      src: {
-        youtube: string;
-      };
-      maxWidth?: string;
-      alt?: string;
-    }
-  | {
-      type: "local";
-      src: {
-        webm: string;
-        mp4: string;
-        ogg?: string;
-      };
-      maxWidth?: string;
-      alt?: string;
-    }) => {
-  return type === "youtube" ? (
-    <iframe
-      width="100%"
-      style={{
-        aspectRatio: "16 / 9",
-        maxWidth: maxWidth || "100%",
-      }}
-      src={src.youtube}
-      title={alt}
-      allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share"
-      allowFullScreen={true}
-    ></iframe>
-  ) : type === "local" ? (
-    <video
-      autoPlay={true}
-      loop={true}
-      muted={true}
-      playsInline={true}
-      width={"100%"}
-      style={{
-        borderRadius: "8px",
-        maxWidth: maxWidth || "100%",
-      }}
-    >
-      <source src={src.webm} title={alt} type="video/webm" />
-      <source src={src.mp4} title={alt} type="video/mp4" />
-      <source src={src.ogg} title={alt} type="video/ogg" />
-    </video>
-  ) : null;
+import styles from './styles.module.css';
+import React, { useRef, useState } from 'react';
+import Video from './_component';
+
+type PlayerProps = {
+  type: 'youtube' | 'local';
+  src: any;
+  alt?: string;
+  maxWidth?: string;
+  poster?: string;
 };
 
-export default Video;
+const Player: React.FC<PlayerProps> = ({ type, src, alt, maxWidth, poster }) => {
+  const videoRef = useRef<HTMLVideoElement | null>(null);
+  const [isPlaying, setIsPlaying] = useState(true);
+
+  const togglePlayback = () => {
+    if (videoRef.current) {
+      if (videoRef.current.paused) {
+        videoRef.current.play();
+        setIsPlaying(true);
+      } else {
+        videoRef.current.pause();
+        setIsPlaying(false);
+      }
+    }
+  };
+
+  return (
+    <div className={styles.playerContainer} style={{ maxWidth }}>
+      {type === 'local' ? (
+        <>
+          <video
+            ref={videoRef}
+            autoPlay
+            loop
+            muted
+            playsInline
+            className={styles.videoElement}
+            poster={poster}
+            title={alt}
+            aria-label={alt}
+          >
+            <source src={src.webm} type="video/webm" />
+            <source src={src.mp4} type="video/mp4" />
+            {src.ogg && <source src={src.ogg} type="video/ogg" />}
+            Your browser does not support the video tag.
+          </video>
+
+          <button onClick={togglePlayback} className={styles.controlButton}>
+            {isPlaying ? 'Pause' : 'Play'}
+          </button>
+        </>
+      ) : (
+        <Video type="youtube" src={src} alt={alt} maxWidth={maxWidth} />
+      )}
+    </div>
+  );
+};
+
+export default Player;

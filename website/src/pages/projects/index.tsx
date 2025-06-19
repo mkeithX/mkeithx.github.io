@@ -21,7 +21,7 @@ const ProjectsHeader = (): JSX.Element => {
     };
 
     return (
-        <header className={clsx('hero hero--dark', styles.projectsheroBanner)}>
+        <header className={clsx(styles.projectsheroBanner, "hero hero--dark")}>
             <div className="container">
                 <div className='hero__subtitle'>
                     <span className='text--light'>
@@ -53,14 +53,17 @@ export default function Projects(): JSX.Element {
     return (
         <Layout title="SpaceHub for Developers" description="All about programming fundamentals">
             <ProjectsHeader />
-            <main className={clsx("container margin-vert--lg")}>
+            <div className={clsx(styles.projectsHeroCards, 'hero hero--dark' )}>
+            <main className={clsx("container margin-vert--md")}>
 
-                <div className={clsx(styles.section, "row")}>
+                <div className={clsx("row")}>
                     {projects.map((project) => (
                         <Project key={project.title} {...project} />
                     ))}
                 </div>
+           
             </main>
+                     </div>      
         </Layout>
     );
 }

@@ -6,6 +6,7 @@ import { fas } from "@fortawesome/free-solid-svg-icons";
 import MDXComponents from "@theme-original/MDXComponents";
 import Code from '@theme/MDXComponents/Code';
 import Highlight from '@site/src/components/Highlight';
+import ComingSoon from "../components/ComingSoon";
 
 import Card from '@site/src/components/Card';
 import CardBody from '@site/src/components/Card/CardBody';
@@ -26,6 +27,7 @@ const components: Components = {
   Highlight,
   FAIcon: FontAwesomeIcon,
   Code,
+  ComingSoon,
   Card, 
   CardHeader, 
   CardBody, 

@@ -7,14 +7,17 @@
 /* You can override the default Infima variables here. */
 
 :root {
-  --ifm-global-shadow-lw: 0 1px 2px 0 rgba(0,0,0,.1);
-  --ifm-global-shadow-md: 0 2px 4px 0 rgba(0,0,0,.14);
-  --ifm-global-shadow-tl: 0 3px 6px 0 rgba(0,0,0,.18);
-  --ifm-global-shadow-xl: 0 4px 8px 0 rgba(0,0,0,.22);
-}
+  /* Shadows */
 
 
-:root {
+  /* --ifm-global-shadow-lw: 0 1px 2px #0000001a;
+  --ifm-global-shadow-md: 0 2px 4px #00000024;
+  --ifm-global-shadow-tl: 0 3px 6px #0000002e;
+  --ifm-global-shadow-xl: 0 4px 8px #00000038; */
+
+
+  /* Primary color palette */
+  --ifm-background-color: #fff;
   --ifm-color-primary: #0b84ce;
   --ifm-color-primary-dark: #0a77b9;
   --ifm-color-primary-darker: #0970af;
@@ -22,16 +25,33 @@
   --ifm-color-primary-light: #0c91e3;
   --ifm-color-primary-lighter: #0d98ed;
   --ifm-color-primary-lightest: #27a6f3;
-  --site-color-feedback-background: #f0f8ff;
+
+  /* Typography & UI */
   --ifm-code-font-size: 90%;
   --ifm-heading-font-weight: 600;
-  --ifm-font-weight-semibold: 600;
+  --ifm-font-weight-semibold: 500;
+  /* --ifm-link-color:  #1da1f2; */
+  --ifm-link-decoration: none;
   --ifm-link-hover-decoration: none;
+  --ifm-link-hover-color: var(--spacehub-color-purple);
+  /* --ifm-pagination-color-active: var(--spacehub-color-light); */
+
+
+  /* Custom site variables */
+  --site-color-feedback-background: #f0f8ff;
+  --ifm-site-dark: #000000;
+  --spacehub-color-light: #9feaf9;
+  --spacehub-color-dark: #1b1c26;
+  --spacehub-color-cooldark: #0d1117;
+  --spacehub-color-semidark: #25292e;
+  --spacehub-color-purple: #ba82ff;
+  --spacehub-color-hover: #8affff;
+
+  /* UI highlights */
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   --ifm-menu-color-active: var(--ifm-color-primary) !important;
-  --ifm-breadcrumb-color-active: var(--ifm-color-primary-darker) !important;
-  --ifm-site-dark: #000000;
-
+  --ifm-breadcrumb-color-active: var(--ifm-color-primary-dark) !important;
+  --ifm-menu-color-background-active: var(--ifm-color-emphasis-200);
 }
 
 /* Dark theme overrides */
@@ -43,9 +63,13 @@
   --ifm-color-primary-light: #37acf3;
   --ifm-color-primary-lighter: #43b1f4;
   --ifm-color-primary-lightest: #6ac1f6;
+
   --site-color-feedback-background: #2a2930;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
-  --ifm-background-surface-color: #0d1117 !important;
+
+  --ifm-menu-color-background-active: var(--ifm-color-emphasis-100);
+  --ifm-breadcrumb-color-active: var(--ifm-color-emphasis-100);
+  --ifm-background-surface-color: var(--spacehub-color-cooldark) !important;
   --ifm-background-color: var(--ifm-background-surface-color) !important;
 }
 
@@ -53,10 +77,22 @@
 /* Navbar */
 .navbar {
   background-color: var(--ifm-site-dark);
+  /* font-weight: 700; */
   align-items: center;
-  --ifm-navbar-link-hover-color: #1da1f2;
-  font-size: 17px;
-  font-weight: bold;
+  /* font-size: 18px; */
+  margin-bottom: auto;
+}
+
+.navbar__link {
+  color: var(--spacehub-color-hover) !important
+}
+
+.navbar__link:hover {
+  color: var(--spacehub-color-purple) !important;
+}
+
+.navbar__link--active {
+  color: var(--spacehub-color-purple) !important;
 }
 
 .navbar__link--active:after {
@@ -70,12 +106,16 @@
   margin-right: calc(var(--navbar-border-overflow) * -1);
   position: relative;
   top: 18px;
-  background: #43b1f4 !important;
+  background: var(--spacehub-color-purple) !important;
 }
 
 
 .navbar__brand {
   margin-right: 1rem;
+  /* font-size: inherit; */
+  /* color: transparent; */
+  font-weight: 600;
+  /* font-size: 20px; */
   background: linear-gradient(-90deg,
       #8affff 0%,
       #1da1f2 50%,
@@ -90,19 +130,62 @@
 } */
 
 /* Header Dropdown Menu */
+
+
 .dropdown__link {
-  font-size: inherit;
+  font-size: 15px;
+  font-weight: 500;
 }
 
 .dropdown-separator {
-  margin: 0.3rem 0;
+  margin: 0.5rem 0;
+  background-color: var(--spacehub-color-light);
 }
 
 /* Hide navbar if not needed */
 
-/* html[data-navbar='false'] .navbar {
+html[data-navbar='false'] .navbar {
   display: none;
+}
+
+
+html[data-navbar='false'] {
+  .navbar {
+    display: none;
+  }
+
+  .theme-announcement-bar {
+    display: none;
+  }
+}
+
+
+/* Announcement Bar */
+
+
+.theme-announcement-bar {
+  font-weight: 500;
+  font-size: 14px;
+  background: var(--ifm-site-dark);
+  border-bottom-color: var(--ifm-site-dark);
+}
+
+/* div[class*='announcementBar_'][role='banner'] {
+  border-bottom-color: #050606;
 } */
+
+div[class*='announcementBar_'] a {
+  text-decoration: none;
+  color: #8affff !important;
+}
+
+div[class*='announcementBar_'] a:hover {
+  color: var(--spacehub-color-purple) !important;
+}
+
+div[class*='announcementBar_'] button {
+  color: #8affff !important;
+}
 
 /* Content Table */
 .contentTableContainer table {
@@ -125,30 +208,6 @@
   text-align: left;
 }
 
-/* Announcement Bar */
-div[class^='announcementBar'][role='banner'] {
-  border-bottom-color: #050606;
-}
-
-div[class^='announcementBar_'] {
-  font-weight: 700;
-  font-size: 14px;
-  background: var(--ifm-site-dark) !important;
-  color: #d1ffeb;
-}
-
-div[class^='announcementBar_'] a {
-  text-decoration: none;
-  color: #ba82ff !important;
-}
-
-div[class^='announcementBar_'] a:hover {
-  color: #d1ffeb !important;
-}
-
-div[class^='announcementBar_'] button {
-  color: #d1ffeb !important;
-}
 
 /* Logo Badge Styling */
 .logoBadge {
@@ -181,7 +240,8 @@ div[class^='announcementBar_'] button {
 
 /* Footer */
 .footer--dark {
-  --ifm-footer-background-color: #25292e;
+  /* --ifm-footer-background-color: #25292e; */
+  background-color: var(--spacehub-color-dark) !important;
 }
 
 .footer {
@@ -202,7 +262,8 @@ div[class^='announcementBar_'] button {
 }
 
 .footer .footer__title {
-  color: #858a96;
+  /* color: #858a96; */
+  color: var(--spacehub-color-light);
   font-size: 18px;
   font-weight: 600;
   margin: 0 0 8px;
@@ -251,6 +312,7 @@ div[class^='announcementBar_'] button {
 }
 
 /* Video Container */
+
 .video-container {
   position: relative;
   overflow: hidden;
@@ -259,16 +321,23 @@ div[class^='announcementBar_'] button {
   margin: 0 auto;
 }
 
+
 /* DocSearch styling */
 [data-theme='light'] .DocSearch {
+  /* --docsearch-primary-color: var(--ifm-color-primary); */
+  /* --docsearch-text-color: var(--ifm-font-color-base); */
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(94, 100, 112, 0.7);
+  /* Modal */
   --docsearch-modal-background: var(--ifm-color-secondary-lighter);
+  /* Search box */
   --docsearch-searchbox-background: var(--ifm-color-secondary);
   --docsearch-searchbox-focus-background: var(--ifm-color-white);
+  /* Hit */
   --docsearch-hit-color: var(--ifm-font-color-base);
   --docsearch-hit-active-color: var(--ifm-color-white);
   --docsearch-hit-background: var(--ifm-color-white);
+  /* Footer */
   --docsearch-footer-background: var(--ifm-color-white);
 }
 
@@ -276,14 +345,20 @@ div[class^='announcementBar_'] button {
   --docsearch-text-color: var(--ifm-font-color-base);
   --docsearch-muted-color: var(--ifm-color-secondary-darkest);
   --docsearch-container-background: rgba(47, 55, 69, 0.7);
+  /* Modal */
   --docsearch-modal-background: var(--ifm-background-color);
+  /* Search box */
   --docsearch-searchbox-background: var(--ifm-background-color);
   --docsearch-searchbox-focus-background: var(--ifm-color-black);
+  /* Hit */
   --docsearch-hit-color: var(--ifm-font-color-base);
   --docsearch-hit-active-color: var(--ifm-color-white);
   --docsearch-hit-background: var(--ifm-color-emphasis-100);
+  /* Footer */
   --docsearch-footer-background: var(--ifm-background-surface-color);
-  --docsearch-key-gradient: linear-gradient(-26.5deg, var(--ifm-color-emphasis-200) 0%, var(--ifm-color-emphasis-100) 100%);
+  --docsearch-key-gradient: linear-gradient(-26.5deg,
+      var(--ifm-color-emphasis-200) 0%,
+      var(--ifm-color-emphasis-100) 100%);
 }
 
 /* Alert Styling */

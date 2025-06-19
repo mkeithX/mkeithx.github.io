@@ -4,9 +4,9 @@ interface SocialProfile {
 }
 
 const socialProfiles: Record<string, SocialProfile> = {
-  linkedin: {
-    label: "LinkedIn",
-    href: "https://www.linkedin.com/in/mkeithtan"
+  xdotcom:{
+    label: "X",
+    href: "https://x.com/kitiplex"
   },
   github: {
     label: "GitHub",
@@ -14,7 +14,7 @@ const socialProfiles: Record<string, SocialProfile> = {
   },
   facebook: {
     label: "Facebook",
-    href: "https://fb.com/mkeithx"
+    href: "https://fb.com/kitimi.platforms"
   },
   kitiplex: {
     label: "Kitiplex",
