@@ -23,3 +23,59 @@ kpxeng:
   socials:
     github: kpxengineering
     x: kitiplex
+
+botgina:
+  name: Gina V
+  title: Software Engineer @ Kitiplex
+  url: https://github.com/botgina
+  image_url: https://github.com/botgina.png
+  email: pr@kitimi.onmicrosoft.com
+  page: true
+  socials:
+    github: botgina
+    x: kitiplex
+
+guleedev:
+  name: Leo Go
+  title: Software Engineer @ Kitiplex
+  url: https://github.com/GuLeeDev
+  image_url: https://github.com/GuLeeDev.png
+  email: pr@kitimi.onmicrosoft.com
+  page: true
+  socials:
+    github: GuLeeDev
+    x: GuLeeDev
+
+adele:
+  name: Adele
+  title: Software Engineer @ Kitiplex
+  url: https://github.com/CodeByAdele
+  image_url: https://github.com/CodeByAdele.png
+  email: pr@kitimi.onmicrosoft.com
+  page: true
+  socials:
+    github: CodeByAdele
+    x: kitiplex
+
+megan:
+  name: Megan
+  title: Software Engineer @ Kitiplex
+  url: https://github.com/CodeByMegan
+  image_url: https://github.com/CodeByMegan.png
+  email: pr@kitimi.onmicrosoft.com
+  page: true
+  socials:
+    github: CodeByMegan
+    x: kitiplex
+
+
+jonisy:
+  name: Jony Sy
+  title: Software Engineer @ Kitiplex
+  url: https://github.com/SyJoniDev
+  image_url: https://github.com/SyJoniDev.png
+  email: pr@kitimi.onmicrosoft.com
+  page: true
+  socials:
+    github: SyJoniDev
+    x: kitiplex

@@ -3,9 +3,17 @@
  * and scoped locally.
  */
 
- /* .section {
+ .section {
   padding: 1rem 0;
-} */
+}
+
+.sectionAlt {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.sectionInner {
+  margin: 0 auto;
+}
 
 /* General Container */
 .container {

@@ -59,7 +59,7 @@ function HomepageHeader(): JSX.Element {
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
           <Link
             className={clsx("button button--outline button--primary button--lg")}
-            to={useBaseUrl('/docs')}>
+            to="/docs">
             {'Explore'}
           </Link>
           <Link
@@ -82,10 +82,16 @@ export default function Home(): JSX.Element {
   return (
     <Layout>
       <main>
+        {/* <TopBanner /> */}
         <HomepageHeader />
-        <HomepageFeatures />
+
+        <div className={styles.section}>
+          <HomepageFeatures />
+
+        </div>
+        {/* <FeatureBrands /> */}
       </main>
-      {/* <FeatureBrands /> */}
+
     </Layout>
   );
 }
