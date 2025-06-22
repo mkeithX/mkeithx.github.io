@@ -22,7 +22,7 @@
   /* background-color: #2b3137; */
   display: flex;
   height: auto;
-  border-bottom: 2px solid var(--spacehub-color-light);
+  border-bottom: 2px solid var(--spacehub-color-dark);
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
 }
 

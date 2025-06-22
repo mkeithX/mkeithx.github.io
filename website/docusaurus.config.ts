@@ -225,6 +225,13 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
 
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
+      isCloseable: false,
+    },
+
     docs: {
       versionPersistence: "localStorage",
       sidebar: {
@@ -308,7 +315,7 @@ const config: Config = {
           items: [
             { label: "Updates", to: "/blog" },
             { label: "Contributing", href: "/community" },
-            socialProfiles.kitiplex,
+            { label: "Examples", to: "/examples" },
           ],
         },
         {

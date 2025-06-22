@@ -64,7 +64,7 @@ function HomepageHeader(): JSX.Element {
           </Link>
           <Link
             className={clsx("button button--secondary button--lg")}
-            to="/space">
+            to="/cosmos/timeline">
             {'Space'}
           </Link>
         </div>
