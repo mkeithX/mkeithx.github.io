@@ -7,6 +7,7 @@ import styles from "./styles.module.css";
 export interface ProjectData {
   title: string;
   description: string;
+  role: string;
   url: string;
   image: string;
 }
@@ -15,7 +16,7 @@ export const Project: FunctionComponent<ProjectData> = ({
   title,
   description,
   url,
-  // role,
+  role,
   image,
 }) => {
   return (
@@ -27,11 +28,13 @@ export const Project: FunctionComponent<ProjectData> = ({
         <div className="card__body">
           <h2>{title}</h2>
           <p>{description}</p>
+
+          <p>{role}</p>
         </div>
         <div className="card__footer">
           <a
             href={url}
-            // target="_blank"
+            target="_blank"
             className="button button--outline button--primary"
           >
 

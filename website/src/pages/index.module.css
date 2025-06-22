@@ -3,9 +3,17 @@
  * and scoped locally.
  */
 
- /* .section {
-  padding: 40px 0;
-} */
+ .section {
+  padding: 1rem 0;
+}
+
+.sectionAlt {
+  background-color: var(--ifm-color-emphasis-100);
+}
+
+.sectionInner {
+  margin: 0 auto;
+}
 
 /* General Container */
 .container {
@@ -19,14 +27,18 @@
   text-align: left;
   position: relative;
   background-color: var(--ifm-site-dark);
-  /* display: flex; */
+  display: flex;
   flex-direction: column;
   align-items: flex-start;
+  border-bottom: 1px solid var(--spacehub-color-light);
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%); */
 }
 
 /* Hero Logo */
-.heroLogo {
+
+/* Option1: Ease-in-out */
+
+/* .heroLogo {
   width: auto;
   height: auto;
   float: right;
@@ -36,7 +48,43 @@
 
 .heroLogo:hover {
   transform: scale(1.3) rotate(12deg);
+} */
+
+/* Option2: Rotating effect */
+.heroLogo {
+  width: auto;
+  height: auto;
+  float: right;
+  display: flex;
+  justify-content: flex-end; 
+  animation: kit-in-the-box infinite 30s linear;
 }
+
+@keyframes kit-in-the-box {
+  from {
+    transform: rotate(360deg) scale(1.3);
+  }
+  to {
+    transform: rotate(-360deg) scale(1.3);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heroLogo {
+    animation: kit-in-the-box infinite 60s linear;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroLogo {
+    justify-content: center;
+    animation-duration: 30s;      
+    /* transform: scale(0.5);           */
+    height: 110px;
+    width: 160px
+  }
+}
+
 
 /*  */
 
@@ -48,9 +96,10 @@
 
 @media (max-width: 768px) {
   .heroBannerTitle {
-    padding: 1rem 0;
+    /* padding: 1rem 0; */
     font-size: 50px;
     margin: 0.8px 0 0.2rem;
+    
   }
 }
 
@@ -129,7 +178,7 @@
   background-color: var(--ifm-site-dark) !important;
   color: #ffffff !important;
   border: 2px solid #1da1f2;
-  transition: background-color 0.3s;
+  transition: background-color 0.5s;
   border-radius: 12px;
   padding: 0.5rem 1.5rem;
 }
@@ -139,7 +188,7 @@
 }
 
 .indexCtas a:hover {
+  color: #ffffff !important;
   background-color: #1da1f2 !important;
-  /* color: #000; */
 }
 

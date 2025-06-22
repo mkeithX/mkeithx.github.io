@@ -2,9 +2,9 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 
 const sidebars: SidebarsConfig = {
   cosmicSidebar: [
-    "genesis",
+    // "genesis",
     "timeline",
-    "forces-and-mysteries",
+    // "forces-and-mysteries",
     {
       type: "category",
       label: "The Solar System",
@@ -105,12 +105,12 @@ const sidebars: SidebarsConfig = {
         'legacy/kardashev-scale',
       ]
     },
-        {
-      type: 'html',
-      value: '<a href="https://eyes.nasa.gov/apps/solar-system/#/home" target="_blank"><img src="/img/space/NASA_logo.svg" alt="beta" height="45"/></a>',
-      defaultStyle: true,
-      // href: 'https://example.com',
-    },
+    //     {
+    //   type: 'html',
+    //   value: '<a href="https://eyes.nasa.gov/apps/solar-system/#/home" target="_blank"><img src="/img/space/NASA_logo.svg" alt="beta" height="45"/></a>',
+    //   defaultStyle: true,
+    //   // href: 'https://example.com',
+    // },
   ],
 };
 

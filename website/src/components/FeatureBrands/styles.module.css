@@ -1,15 +1,19 @@
-.features {
+.featureBrand {
   display: flex;
   align-items: center;
   padding: 4rem 0;
-  width: 100%;
-  /* background-color: var(--ifm-background-surface-color) !important; */
-  background-color: var(--ifm-site-dark) !important;
-  position: relative;
+  border-top: 1px solid var(--spacehub-color-purple);
+  margin-top: auto;
+  /* background-color: var(--ifm-site-dark) !important; */
+  /* border-bottom: 2px solid var(--spacehub-color-purple); */
+}
+
+.featureTitleText {
+  color: var(--spacehub-color-light);
 }
 
 .featureBrandSvg {
-  height: 180px;
+  height: 100px;
   width: 200px;
 }
 

@@ -1,0 +1,9 @@
+{
+    "label": "Learn",
+    "collapsed": true,
+    "position": 1,
+    "link": {
+        "type": "doc",
+        "id": "docs/learn/index"
+    }
+}

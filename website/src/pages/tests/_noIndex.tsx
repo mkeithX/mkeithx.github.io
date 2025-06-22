@@ -16,7 +16,7 @@ export default function TestsComponent() {
             }}>
             <p>
                 More <code>.mdx features</code>
-                <a href='./mdx-features'> here</a>
+                <a href='./mdx-features' target='_blank'> here</a>
             </p>
 
         </div>

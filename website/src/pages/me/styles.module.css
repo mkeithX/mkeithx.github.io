@@ -1,32 +1,51 @@
 .thisHead {
-    background-color: #1da1f2 !important;
+    /* background-color: #1da1f2 !important; */
+    background-color: var(--spacehub-color-purple);
     color: var(--ifm-site-dark) !important;
     flex-direction: column;
-    padding: 4rem 0 1rem;
+    padding: 4rem 0 2rem;
+    display: flex;
 }
 
 .thisTitle {
-    font-size: 58px;
-    font-weight: 600;
-    margin-bottom:0.1rem;
+    font-size: 4rem;
+    font-weight: bold;
+    margin-bottom: 0.3rem;
+}
+
+@media (max-width: 768px) {
+    .thisTitle {
+        font-size: 30px;
+        font-weight: bold;
+    }
+
 }
 
 .thisSubtitle {
-    font-size: 22px;
-    font-weight: 400;
-    /* margin-top: auto; */
+    font-size: 24px;
+    font-weight: normal;
+    margin-top: auto;
 }
+
+@media (max-width: 768px) {
+    .thisSubtitle {
+        font-size: 20px;
+    }
+
+}
+
 
 
 .thisBody {
     /* background-color: var(--ifm-color-primary) !important; */
     background-color: #0d1117;
-    flex-direction: column;
+    /* flex-direction: column; */
     font-size: 18px;
     font-weight: 300;
 }
 
 .thisAvatar {
     max-height: 596px;
-    max-width: 896px;
+    max-width: 596px;
+    /* background-color: var(--spacehub-color-purple); */
 }
