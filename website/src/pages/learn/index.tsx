@@ -6,6 +6,8 @@ import styles from './styles.module.css';
 import Link from '@docusaurus/Link';
 import Head from '@docusaurus/Head';
 
+
+
 function LearnHeader(): JSX.Element {
 
     return (
@@ -21,7 +23,7 @@ function LearnHeader(): JSX.Element {
 
                         <span className={clsx(styles.learnindexCtas, "hero__subtitle margin-left-x text--light text--small")}>
                             <Link
-                                className={clsx("button button--outline button--primary button--lg")} to={'/docs/learn/react-live-demo'}>{"Live Editor"}
+                                className={clsx("button button--outline button--primary button--lg")} to={'/docs/learn'}>{"Get started"}
                             </Link>
                             <Link
                                 className={clsx("button button--outline button--warning button--lg")} to={'/docs/learn/python'}>{"Python"}

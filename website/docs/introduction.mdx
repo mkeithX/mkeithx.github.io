@@ -3,7 +3,7 @@ title: Introduction
 hide_title: true
 description: Intro to The SpaceHub docs website:The official documentation for The SpaceHub Project
 slug: /
-sidebar_label: Welcome
+sidebar_label: Introduction
 keywords:
   - docs
   - mkeithX
@@ -12,34 +12,38 @@ keywords:
   - Kitiplex Engineering
 ---
 
-import Tabs from "@theme/Tabs";
-import TabItem from "@theme/TabItem";
-import IframeWindow from "@site/src/components/BrowserWindow/IframeWindow";
-import BrowserWindow from "@site/src/components/BrowserWindow";
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import Video from '@site/src/components/Video';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+import useBaseUrl from '@docusaurus/useBaseUrl';
 
 <br />
-<div align="left">
+
+<img src={useBaseUrl('/img/intro-banner-docs.png')} width="300" />
+
+
+<!-- <div align="left">
   <h1 align="left">
-  <a href="https://github.com/kitiplex" target="_blank">
-    <img
-      src="/img/intro-banner.png"
-      alt="The SpaceHub Project"
-      width="380"
-      height=""
-    />
-     </a>
+    <a href="https://github.com/kitiplex" target="_blank">
+      <img
+        src="/img/intro-banner-docs.png"
+        alt="The SpaceHub Project"
+        width="300"
+        height=""
+      />
+    </a>
   </h1>
-</div>
+</div> -->
 
 
-<!-- Welcome to **MKX SpaceHub** 🚀 -->
 
-
-**Welcome!**
+## Welcome!
 
 The official docs website of **The SpaceHub Project** maintained by the [Kitiplex Core Engineering Team](https://github.com/kitiplex) - featuring basic code samples and snippets for web development as well as practical guides for system administration specifically on the Microsoft 365 and Entra ID environment.
 
-## Motivation
+### Motivation
 
 The project started as enhancement proposal that requires project owners to include a title and a short description on their `README.md` file prior initializing their repos making it a standard practice in respect to [Software Development Lifecycle (SDLC)](https://github.com/resources/articles/software-development/what-is-sdlc#sdlc-best-practices-and-challenges).
 
@@ -135,9 +139,8 @@ kanban
 
 <Column className="text--left item  padding--sm">
   <Card
-    shadow="tl"
-    style={{ border: "2.0px solid var(--ifm-color-primary)", height: "100%" }}
-  >
+    shadow="lw"
+    style={{ border: "1.8px solid var(--spacehub-color-purple)", height: "100%" }}>
     <CardHeader>
       <h3>
         <a href="/docs/system-administration/ms-entra/create-dynamic-group">
@@ -151,8 +154,8 @@ kanban
 
 <Column className="text--left item  padding--sm">
   <Card
-    shadow="tl"
-    style={{ border: "2.0px solid var(--ifm-color-primary)", height: "100%" }}
+    shadow="lw"
+    style={{ border: "1.8px solid var(--spacehub-color-purple)", height: "100%" }}
   >
     <CardHeader>
       <h3>
@@ -166,27 +169,8 @@ kanban
 </Column>
 </Columns>
 
----
-
-import M365 from "@site/static/img/logo/Microsoft_365.svg";
-
-import MSFT from "@site/static/img/Microsoft_icon.svg";
-
-import AZD from "@site/static/img/logo/MSAzure.svg";
-
-import Kpx from "@site/static/img/logo/kitimi-icon-new.svg"
-
-<div>
-
-<div align="justify">
-
-<M365 height="65" width="200" />
-
-<AZD height="75" width="200" />
+<br />
 
 
-<Kpx height="70" width="50" />
 
-</div>
-
-</div>
+<img src={useBaseUrl('/img/intro-banner.png')} width="250" />

@@ -8,6 +8,8 @@ import useBaseUrl from '@docusaurus/useBaseUrl';
 import CosmicFeatures from "./_components/CosmicFeatures";
 import Head from "@docusaurus/Head";
 
+import BannerLogo from '@site/static/img/astronaut.svg';
+
 function CosmospageHeader(): JSX.Element {
 
 

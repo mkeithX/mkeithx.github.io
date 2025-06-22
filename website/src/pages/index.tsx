@@ -4,7 +4,7 @@ import useDocusaurusContext from '@docusaurus/useDocusaurusContext';
 import Layout from '@theme/Layout';
 import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
-import BannerLogo from '@site/static/img/astronaut.svg';
+import BannerLogo from '@site/static/img/logo/react-fb.svg';
 import React, { JSX } from 'react';
 import TopBanner from '@site/src/components/TopBanner';
 import FeatureBrands from '@site/src/components/FeatureBrands';
@@ -18,10 +18,6 @@ function HomepageHeader(): JSX.Element {
   const {
     hero_header,
     hero_tagline,
-    custom_footer,
-    custom_tagline,
-    description,
-    custom_header,
   } = customFields as {
     hero_header: string;
     hero_tagline: string;
@@ -38,9 +34,9 @@ function HomepageHeader(): JSX.Element {
       <div className="container">
         <BannerLogo
           className={styles.heroLogo}
-          title="Kitoy"
-          width={160}
-          height={180}
+          title=""
+          width={170} // 160
+          height={150} // 180
         />
         <div className={styles.heroSubtitle}>
           <span className={styles.heroSubTitleText}>
@@ -51,10 +47,8 @@ function HomepageHeader(): JSX.Element {
           <div className={styles.heroBannerTitle}>
             <span className={styles.heroBannerTitleText}>
               {hero_header}
-              {/* {"Guides"}<br></br>{"and Code Samples"} */}
             </span>
             <br></br>
-            {/* <b>{"from Kitimi"}</b> */}
           </div>
           <div className={styles.heroSubtitle}>
             <span className={styles.heroSubtitleText}>
@@ -65,12 +59,12 @@ function HomepageHeader(): JSX.Element {
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
           <Link
             className={clsx("button button--outline button--primary button--lg")}
-            to={useBaseUrl('/docs')}>
+            to="/docs">
             {'Explore'}
           </Link>
           <Link
             className={clsx("button button--secondary button--lg")}
-            to="/cosmos">
+            to="/cosmos/timeline">
             {'Space'}
           </Link>
         </div>
@@ -81,7 +75,7 @@ function HomepageHeader(): JSX.Element {
 
 export default function Home(): JSX.Element {
   const {
-    siteConfig: { title, tagline, customFields },
+    siteConfig: { customFields },
   } = useDocusaurusContext();
   const { custom_description } = customFields as { custom_description: string };
 
@@ -90,11 +84,14 @@ export default function Home(): JSX.Element {
       <main>
         {/* <TopBanner /> */}
         <HomepageHeader />
+
         <div className={styles.section}>
           <HomepageFeatures />
+
         </div>
         {/* <FeatureBrands /> */}
       </main>
+
     </Layout>
   );
 }
