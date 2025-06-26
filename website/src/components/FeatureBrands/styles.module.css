@@ -2,10 +2,10 @@
   display: flex;
   align-items: center;
   padding: 4rem 0;
-  border-top: 1px solid var(--spacehub-color-purple);
+  /* border-top: 1px solid var(--spacehub-color-purple); */
   margin-top: auto;
-  /* background-color: var(--ifm-site-dark) !important; */
-  /* border-bottom: 2px solid var(--spacehub-color-purple); */
+  background-color: var(--spacehub-color-dark) !important;
+  border-bottom: 1px solid var(--spacehub-color-purple);
 }
 
 .featureTitleText {
@@ -15,6 +15,13 @@
 .featureBrandSvg {
   height: 100px;
   width: 200px;
+}
+
+@media (max-width: 768px) {
+  .featureBrandSvg {
+    height: 85px;
+    width: 85px;
+  }
 }
 
 /* .heroTitleTextHtml b {
