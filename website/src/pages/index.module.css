@@ -183,7 +183,7 @@
 .indexCtas a:hover {
   background-color: var(--ifm-site-dark) !important;
   color: #ffffff !important;
-  border: 2px solid #b070ff;
+  border: 2px solid #1da1f2;
   transition: background-color 0.5s;
   border-radius: 12px;
   padding: 0.5rem 1.5rem;
@@ -195,6 +195,6 @@
 
 .indexCtas a:hover {
   color: #ffffff !important;
-  background-color: #d61df2 !important;
+  background-color: #1da1f2 !important;
 }
 
