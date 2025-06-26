@@ -225,12 +225,12 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
 
-    // announcementBar: {
-    //   id: `announcementBar_`,
-    //   content:
-    //     `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
-    //   isCloseable: false,
-    // },
+    announcementBar: {
+      id: `announcementBar_`,
+      content:
+        `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
+      isCloseable: false,
+    },
 
     docs: {
       versionPersistence: "localStorage",
@@ -259,8 +259,17 @@ const config: Config = {
         // width: "85"
       },
       items: [
-        { type: "doc", docId: "introduction", label: "Docs", position: "left" },
-        { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn", position: "left" },
+        {
+          type: "dropdown",
+          label: "Development",
+          position: "left",
+          items: [
+            { type: "doc", docId: "introduction", label: "Docs" },
+            { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn" },
+            // { to: "/learn", label: "Learn" },
+            { to: "/coming-soon", label: "Examples" },
+          ],
+        },
         { to: "/cosmos/timeline", label: "Universe", position: "left" },
         { to: "/community", label: "Community", position: "left" },
         { to: "/blog", label: "Blog" },
@@ -306,14 +315,14 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/space-labs.png",
         href: "/",
-        height: "50",
+        height: "45",
       },
       links: [
         {
           title: "Docs",
           items: [
+            { label: "Quick Links", to: "/docs/quick-links" },            
             { label: "System Admin", to: "/docs/system-administration" },
-            { label: "Python Examples", to: "/docs/learn/python/examples" },
             { label: "The Keyword", to: "/me" },
           ],
         },
@@ -322,7 +331,7 @@ const config: Config = {
           items: [
             { label: "Updates", to: "/blog" },
             { label: "Contributing", href: "/community" },
-            { label: "Examples", to: "/examples" },
+            { label: "Feedback", to: "/feature-requests" },
           ],
         },
         {

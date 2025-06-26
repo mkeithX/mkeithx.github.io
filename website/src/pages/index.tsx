@@ -40,7 +40,7 @@ function HomepageHeader(): JSX.Element {
         />
         <div className={styles.heroSubtitle}>
           <span className={styles.heroSubTitleText}>
-            {"OpenSource"}
+            {"New & Improved"}
           </span>
         </div>
         <Heading as="h1">
@@ -84,8 +84,8 @@ export default function Home(): JSX.Element {
       <main>
         {/* <TopBanner /> */}
         <HomepageHeader />
+        <HomepageFeatures />
         <div className={styles.section}>
-          <HomepageFeatures />
         </div>
         {/* <FeatureBrands /> */}
       </main>

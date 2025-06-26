@@ -75,9 +75,6 @@
   --ifm-menu-color-active: var(--ifm-color-primary) !important;
   --ifm-breadcrumb-color-active: var(--ifm-color-primary-dark) !important;
   --ifm-menu-color-background-active: var(--ifm-color-emphasis-200);
-
-
-
 }
 
 /* Dark theme overrides */
@@ -138,7 +135,7 @@
 .navbar__brand {
   margin-right: 1rem;
   font-weight: 600;
-  font-size: 18px;
+  /* font-size: 18px; */
   background: linear-gradient(90deg,
       #8affff 0%,
       #1da1f2 50%,
@@ -284,7 +281,6 @@ div[class*='announcementBar_'] button {
 /* Footer */
 
 .footer--dark {
-  /* --ifm-footer-background-color: #25292e; */
   background-color: var(--spacehub-color-dark) !important;
 }
 

@@ -3,7 +3,7 @@
  * and scoped locally.
  */
 
- .section {
+.section {
   padding: 1rem 0;
 }
 
@@ -25,7 +25,7 @@
   padding: 8rem 0;
   overflow: hidden;
   text-align: left;
-  position: relative;
+  /* position: relative; */
   background-color: var(--ifm-site-dark);
   display: flex;
   flex-direction: column;
@@ -89,7 +89,7 @@
 /*  */
 
 .heroBannerTitle {
-  font-size: 58px;
+  font-size: 60px;
   font-weight: bold;
   margin: 2px 0 0.4rem;
 }
@@ -98,8 +98,8 @@
   .heroBannerTitle {
     /* padding: 1rem 0; */
     font-size: 48px;
-    margin: 0.8px 0 0.2rem;
-    
+    font-weight: bold;
+    /* margin: 0.8px 0 0.2rem; */
   }
 }
 
@@ -140,13 +140,19 @@
 } */
 
 .heroSubtitle {
-  font-size: 22px;
+  font-size: 20px;
   font-weight: 300;
 }
 
 @media (max-width: 768px) {
+  .heroSubtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
   .heroSubtitleText {
-    font-size: 20px;
+    font-size: 18px;
     white-space: normal;
   }
 }
@@ -177,7 +183,7 @@
 .indexCtas a:hover {
   background-color: var(--ifm-site-dark) !important;
   color: #ffffff !important;
-  border: 2px solid #1da1f2;
+  border: 2px solid #b070ff;
   transition: background-color 0.5s;
   border-radius: 12px;
   padding: 0.5rem 1.5rem;
@@ -189,6 +195,6 @@
 
 .indexCtas a:hover {
   color: #ffffff !important;
-  background-color: #1da1f2 !important;
+  background-color: #d61df2 !important;
 }
 
