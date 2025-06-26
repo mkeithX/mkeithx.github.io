@@ -16,9 +16,9 @@
 }
 
 /* General Container */
-.container {
+/* .container {
   --ifm-container-width: 996px;
-}
+} */
 
 /* Hero Banner */
 .heroBanner {
@@ -89,7 +89,7 @@
 /*  */
 
 .heroBannerTitle {
-  font-size: 60px;
+  font-size: 58px;
   font-weight: bold;
   margin: 2px 0 0.4rem;
 }
@@ -97,7 +97,7 @@
 @media (max-width: 768px) {
   .heroBannerTitle {
     /* padding: 1rem 0; */
-    font-size: 50px;
+    font-size: 48px;
     margin: 0.8px 0 0.2rem;
     
   }
@@ -140,13 +140,13 @@
 } */
 
 .heroSubtitle {
-  font-size: 24px;
+  font-size: 22px;
   font-weight: 300;
 }
 
 @media (max-width: 768px) {
   .heroSubtitleText {
-    font-size: 22px;
+    font-size: 20px;
     white-space: normal;
   }
 }
@@ -155,12 +155,12 @@
 .heroSubTitleTextHtml {
   color: var(--ifm-color-emphasis) !important;
   text-align: start;
-  font-size: 20px;
+  font-size: 18px;
 }
 
 .heroSubTitleTextHtml b {
   color: var(--ifm-color-primary);
-  font-size: 20px;
+  font-size: 18px;
 }
 
 /* Call-to-Action Buttons */

@@ -18,7 +18,7 @@ import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
 // Dynamic copyright
-const copyright = `Copyright © ${new Date().getFullYear()} <a href='/me' target='_blank'>Keith Tan</a> and Contributors <br>· The SpaceHub Project ·`;
+const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
 // Shared file include/exclude logic
 const fileFilters = {
@@ -225,12 +225,12 @@ const config: Config = {
       respectPrefersColorScheme: true,
     },
 
-    announcementBar: {
-      id: `announcementBar_`,
-      content:
-        `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
-      isCloseable: false,
-    },
+    // announcementBar: {
+    //   id: `announcementBar_`,
+    //   content:
+    //     `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
+    //   isCloseable: false,
+    // },
 
     docs: {
       versionPersistence: "localStorage",
@@ -250,15 +250,16 @@ const config: Config = {
     navbar: {
       style: "dark",
       hideOnScroll: false,
-      title: "",
+      title: "Kitimi Universe",
       logo: {
         alt: "SpaceHub",
-        src: "img/space-labs.png",
+        src: "img/logo/kitimi-icon-new.svg",
         target: "_self",
-        // width: "80",
+        height: "50",
+        // width: "85"
       },
       items: [
-        { type: "doc", docId: "introduction", label: "Explore", position: "left" },
+        { type: "doc", docId: "introduction", label: "Docs", position: "left" },
         { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn", position: "left" },
         { to: "/cosmos/timeline", label: "Universe", position: "left" },
         { to: "/community", label: "Community", position: "left" },
@@ -282,6 +283,12 @@ const config: Config = {
           className: "header-github-link",
           "aria-label": "GitHub repository",
         },
+        {
+          href: "https://X.com/Kitiplex",
+          position: "right",
+          className: "header-x-link",
+          "aria-label": "X",
+        },        
         { type: "search", position: "right" },
       ],
     },

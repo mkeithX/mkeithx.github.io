@@ -13,17 +13,17 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    scale: 0.8,
-    title: "Dev Basics",
+    scale: 0.6,
+    title: "Easy Navigation",
     Svg: require("@site/static/img/terminal_icon.svg").default,
     description: (
       <>
-        Easy, beginner-friendly guides to <Link to="/projects"> learn the basics</Link> of coding and essential tools.
+        Easy, beginner-friendly guides to <Link to="/docs"> learn the basics</Link> of coding and essential tools.
       </>
     ),
   },
   {
-    scale: 0.8,
+    scale: 0.7,
     title: "Sandbox",
     Svg: require("@site/static/img/container_solid.svg").default,
     description: (
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    scale: 0.8,
+    scale: 0.7,
     title: "SysOps",
     Svg: require("@site/static/img/api_icon.svg").default,
     description: (
@@ -43,17 +43,17 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    scale: 0.8,
+    scale: 0.7,
     title: "Code Made Easy",
     Svg: require("@site/static/img/rocket.svg").default,
     description: (
       <>
-        Explore the properties and behaviors of celestial bodies within the <Link to="/cosmos">cosmos</Link> .
+        Explore the properties and behaviors of celestial bodies within the <Link to="/cosmos">cosmos</Link>.
       </>
     ),
   },
   {
-    scale: 0.8,
+    scale: 0.7,
     title: "Built with React",
     Svg: require("@site/static/img/logo/kitimi-icon-new.svg").default,
     description: (
@@ -67,7 +67,7 @@ const FeatureList: FeatureItem[] = [
 function Feature({ scale, title, Svg, description }: FeatureItem) {
   return (
     <>
-      <div className={clsx("col col--4 margin-bottom--lg")}>
+      <div className={clsx("col col--4")}>
         <div className={"text--center"}>
           <Svg
             transform={"scale(" + scale + ")"}
@@ -75,7 +75,7 @@ function Feature({ scale, title, Svg, description }: FeatureItem) {
             role="img"
           />
         </div>
-        <div className={clsx("text--center padding-horiz--sm")}>
+        <div className="text--center padding-horiz--md">
           <Heading as="h3">{title}</Heading>
           <p>{description}</p>
         </div>
