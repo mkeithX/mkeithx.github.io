@@ -79,7 +79,6 @@ const config: Config = {
     hero_tagline: "for Software Development and More",
     custom_header: "The SpaceHub Project @Kitiplex",
     custom_tagline: "Guides and Code Samples from mkeith",
-    custom_keyword: " | Author's note",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
@@ -266,7 +265,6 @@ const config: Config = {
           items: [
             { type: "doc", docId: "introduction", label: "Docs" },
             { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn" },
-            // { to: "/learn", label: "Learn" },
             { to: "/coming-soon", label: "Examples" },
           ],
         },
@@ -293,7 +291,7 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
         {
-          href: "https://X.com/Kitiplex",
+          href: "https://X.com/mkeithtan",
           position: "right",
           className: "header-x-link",
           "aria-label": "X",
@@ -335,7 +333,7 @@ const config: Config = {
           ],
         },
         {
-          title: "Connect",
+          title: "Kitiplex",
           items: [
             socialProfiles.xdotcom,
             socialProfiles.facebook,

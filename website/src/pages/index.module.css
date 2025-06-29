@@ -30,7 +30,7 @@
   display: flex;
   flex-direction: column;
   align-items: flex-start;
-  border-bottom: 1px solid var(--spacehub-color-light);
+  border-bottom: 1px solid var(--spacehub-light);
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%); */
 }
 
@@ -79,9 +79,9 @@
   .heroLogo {
     justify-content: center;
     animation-duration: 30s;      
-    /* transform: scale(0.5);           */
-    height: 110px;
-    width: 160px
+    transform: scale(0.5);
+    height: 120px;
+    width: 150px
   }
 }
 
@@ -112,7 +112,7 @@
     #b070ff 100%
   );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 /* For future reference - Do not delete */

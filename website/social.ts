@@ -10,15 +10,11 @@ const socialProfiles: Record<string, SocialProfile> = {
   },
   github: {
     label: "GitHub",
-    href: "https://github.com/mkeithx"
+    href: "https://github.com/kitiplex"
   },
   facebook: {
     label: "Facebook",
     href: "https://fb.com/kitimi.platforms"
-  },
-  kitiplex: {
-    label: "Kitiplex",
-    href: "https://github.com/kitiplex"
   },
   cloudflare: {
     label: "Cloudflare",
