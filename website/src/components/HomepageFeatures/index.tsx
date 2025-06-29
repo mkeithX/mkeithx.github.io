@@ -58,7 +58,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/logo/kitimi-icon-new.svg").default,
     description: (
       <>
-        Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/configs/create-doc">React</Link>  components.
+        Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/guides/docs/create-doc">React</Link>  components.
       </>
     ),
   },

@@ -271,6 +271,7 @@ const config: Config = {
         { to: "/cosmos/timeline", label: "Universe", position: "left" },
         { to: "/community", label: "Community", position: "left" },
         { to: "/blog", label: "Blog" },
+        // { to: "/help", label: "Support" },
         {
           type: "dropdown",
           label: "More",
