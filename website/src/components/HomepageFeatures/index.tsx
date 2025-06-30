@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/container_solid.svg").default,
     description: (
       <>
-        With built-in <Link to="/docs/learn/react-live-demo#get-started">Live Code-Editor </Link> to write and test your React code instantly.
+        With built-in <Link to="/docs/learn/react-live-demo">Live Code-Editor </Link> to write and test your React code instantly.
       </>
     ),
   },

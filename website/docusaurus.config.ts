@@ -1,5 +1,5 @@
 import path from 'path';
-import type { Config } from "@docusaurus/types";
+import type { Config } from '@docusaurus/types';
 import * as Preset from "@docusaurus/preset-classic";
 import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
 import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
@@ -17,10 +17,8 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social';
 
-// Dynamic copyright
 const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
-// Shared file include/exclude logic
 const fileFilters = {
   exclude: [
     '**/_*.{js,jsx,ts,tsx,md,mdx}',
@@ -34,7 +32,6 @@ const fileFilters = {
   ],
 };
 
-// Shared remark/rehype plugins
 const markdownPlugins = {
   remarkPlugins: [
     [npm2yarn, { sync: true }],
@@ -43,7 +40,6 @@ const markdownPlugins = {
   rehypePlugins: [rehypeKatex],
 };
 
-// Shared config for docs/blog/pages
 const commonDocsConfig = {
   ...fileFilters,
   ...markdownPlugins,
@@ -62,11 +58,18 @@ const config: Config = {
   titleDelimiter: "·",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+  onBrokenAnchors: "throw",
 
   future: {
     v4: true,
     experimental_faster: true,
+
+    experimental_storage: {
+      type: 'localStorage',
+      namespace: true,
+    }
   },
+
 
   staticDirectories: [
     "static", "public",
@@ -95,8 +98,8 @@ const config: Config = {
   ],
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   markdown: {
@@ -141,7 +144,6 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
-          mdxPageComponent: "@theme/MDXPage",
           ...commonDocsConfig,
         } satisfies PageOptions,
 
@@ -169,7 +171,7 @@ const config: Config = {
     ],
   ],
 
-  themes: ["live-codeblock"],
+  themes: ['@docusaurus/theme-live-codeblock'],
 
   plugins: [
     "@docusaurus/theme-mermaid",
@@ -219,7 +221,9 @@ const config: Config = {
   ],
 
   themeConfig: {
-    playgroundPosition: "bottom",
+    liveCodeBlock: {
+      playgroundPosition: 'bottom',
+    },
     colorMode: {
       respectPrefersColorScheme: true,
     },
@@ -230,12 +234,19 @@ const config: Config = {
         `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
       isCloseable: false,
     },
-
+    
     docs: {
       versionPersistence: "localStorage",
+
       sidebar: {
         hideable: true,
         autoCollapseCategories: true,
+      },
+    },
+
+    blog: {
+      sidebar: {
+        groupByYear: true,
       },
     },
 
@@ -271,7 +282,6 @@ const config: Config = {
         { to: "/cosmos/timeline", label: "Universe", position: "left" },
         { to: "/community", label: "Community", position: "left" },
         { to: "/blog", label: "Blog" },
-        // { to: "/help", label: "Support" },
         {
           type: "dropdown",
           label: "More",
@@ -296,7 +306,7 @@ const config: Config = {
           position: "right",
           className: "header-x-link",
           "aria-label": "X",
-        },        
+        },
         { type: "search", position: "right" },
       ],
     },
@@ -320,7 +330,7 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            { label: "Quick Links", to: "/docs/quick-links" },            
+            { label: "Quick Links", to: "/docs/quick-links" },
             { label: "System Admin", to: "/docs/system-administration" },
             { label: "The Keyword", to: "/me" },
           ],
@@ -363,7 +373,6 @@ const config: Config = {
         "json",
         "batch",
         "yaml",
-        "tsx",
       ],
     },
 
@@ -378,4 +387,3 @@ const config: Config = {
 };
 
 export default config;
-

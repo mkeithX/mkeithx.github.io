@@ -4,70 +4,70 @@ const baseTheme = themes.dracula;
 
 export default {
   plain: {
-    color: "#F8F8F2",
-    backgroundColor: "#282A36",
+    color: 'rgba(248, 248, 242, 1)',
+    backgroundColor: 'rgba(40, 42, 54, 1)',
   },
   styles: [
     ...baseTheme.styles,
     {
       types: ['title'],
       style: {
-        color: '#569CD6',
+        color: 'rgba(86, 156, 214, 1)',
         fontWeight: 'bold',
       },
     },
     {
       types: ['property', 'parameter'],
       style: {
-        color: '#9CDCFE',
+        color: 'rgba(156, 220, 254, 1)',
       },
     },
     {
       types: ['script'],
       style: {
-        color: '#D4D4D4',
+        color: 'rgba(212, 212, 212, 1)',
       },
     },
     {
       types: ['boolean', 'arrow', 'atrule', 'tag'],
       style: {
-        color: '#569CD6',
+        color: 'rgba(86, 156, 214, 1)',
       },
     },
     {
       types: ['number', 'color', 'unit'],
       style: {
-        color: '#B5CEA8',
+        color: 'rgba(181, 206, 168, 1)',
       },
     },
     {
       types: ['font-matter'],
       style: {
-        color: '#CE9178',
+        color: 'rgba(206, 145, 120, 1)',
       },
     },
     {
       types: ['keyword', 'rule'],
       style: {
-        color: '#C586C0',
+        color: 'rgba(197, 134, 192, 1)',
       },
     },
     {
       types: ['regex'],
       style: {
-        color: '#D16969',
+        color: 'rgba(209, 105, 105, 1)',
       },
     },
     {
       types: ['maybe-class-name'],
       style: {
-        color: '#4EC9B0',
+        color: 'rgba(78, 201, 176, 1)',
       },
     },
     {
       types: ['constant'],
       style: {
-        color: '#4FC1FF',
+        color: 'rgba(79, 193, 255, 1)',
       },
     },
   ],

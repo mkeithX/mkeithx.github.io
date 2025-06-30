@@ -24,13 +24,14 @@
 .heroBanner {
   padding: 8rem 0;
   overflow: hidden;
-  text-align: left;
-  /* position: relative; */
+  width: 100%;
+  /* text-align: left; */
+  position: relative;
   background-color: var(--ifm-site-dark);
   display: flex;
   flex-direction: column;
-  align-items: flex-start;
-  border-bottom: 1px solid var(--spacehub-light);
+  /* align-items: flex-start; */
+  border-bottom: 2px solid var(--spacehub-light);
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%); */
 }
 
@@ -89,7 +90,7 @@
 /*  */
 
 .heroBannerTitle {
-  font-size: 60px;
+  font-size: 62px;
   font-weight: bold;
   margin: 2px 0 0.4rem;
 }
@@ -99,7 +100,7 @@
     /* padding: 1rem 0; */
     font-size: 48px;
     font-weight: bold;
-    /* margin: 0.8px 0 0.2rem; */
+    margin: 0.8px 0 0.2rem;
   }
 }
 
@@ -140,7 +141,7 @@
 } */
 
 .heroSubtitle {
-  font-size: 20px;
+  font-size: 22px;
   font-weight: 300;
 }
 
@@ -170,14 +171,15 @@
 }
 
 /* Call-to-Action Buttons */
-.indexCtas {
+
+/* .indexCtas {
   --ifm-button-size-multiplier: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: 24px;
-}
+} */
 
 .indexCtas a,
 .indexCtas a:hover {
