@@ -1,11 +1,10 @@
 import path from 'path';
 import type { Config } from '@docusaurus/types';
 import * as Preset from "@docusaurus/preset-classic";
-import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
-import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
-import type { Options as PageOptions } from "@docusaurus/plugin-content-pages";
-import type { Options as IdealImageOptions } from "@docusaurus/plugin-ideal-image";
-import type { Options as ClientRedirectsOptions } from "@docusaurus/plugin-client-redirects";
+
+import type { Options as PluginDocs } from "@docusaurus/plugin-content-docs";
+import type { Options as PluginIdealImage } from "@docusaurus/plugin-ideal-image";
+import type { Options as PluginClientRedirects } from "@docusaurus/plugin-client-redirects";
 
 import PrismLight from "./src/utils/prismLight";
 import PrismDark from "./src/utils/prismDark";
@@ -15,34 +14,19 @@ import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
 
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
-import socialProfiles from './social';
+
+import socialProfiles from './social.json';
 
 const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
-const fileFilters = {
-  exclude: [
-    '**/_*.{js,jsx,ts,tsx,md,mdx}',
-    '**/_*/**',
-    '**/*.test.{js,jsx,ts,tsx}',
-    '**/__tests__/**',
-  ],
-  include: [
-    '**/*.{js,jsx,ts,tsx,md,mdx}',
-    '**/*.mdx',
-  ],
-};
-
-const markdownPlugins = {
+const commonDocsConfig = {
+  showLastUpdateAuthor: false,
+  showLastUpdateTime: true,
   remarkPlugins: [
     [npm2yarn, { sync: true }],
     remarkMath,
   ],
   rehypePlugins: [rehypeKatex],
-};
-
-const commonDocsConfig = {
-  ...fileFilters,
-  ...markdownPlugins,
   ...admonitionsConfig,
 };
 
@@ -63,13 +47,11 @@ const config: Config = {
   future: {
     v4: true,
     experimental_faster: true,
-
     experimental_storage: {
       type: 'localStorage',
       namespace: true,
     }
   },
-
 
   staticDirectories: [
     "static", "public",
@@ -115,9 +97,8 @@ const config: Config = {
           path: "docs",
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
-          showLastUpdateTime: true,
           ...commonDocsConfig,
-        } satisfies DocsOptions,
+        },
 
         blog: {
           path: "blog",
@@ -138,14 +119,14 @@ const config: Config = {
             copyright,
           },
           ...commonDocsConfig,
-        } satisfies BlogOptions,
+        },
 
         pages: {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
           ...commonDocsConfig,
-        } satisfies PageOptions,
+        },
 
         theme: {
           customCss: "./src/css/custom.css",
@@ -162,6 +143,7 @@ const config: Config = {
           trackingID: "G-YYZ6V070LQ",
           anonymizeIP: true,
         },
+
         svgr: {
           svgrConfig: {
             svgoConfig: undefined,
@@ -176,29 +158,25 @@ const config: Config = {
   plugins: [
     "@docusaurus/theme-mermaid",
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
-
     [
       "content-docs",
       {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        showLastUpdateTime: true,
         sidebarPath: "./sidebarsCosmos.ts",
         ...commonDocsConfig,
-      } as DocsOptions,
+      } as PluginDocs,
     ],
-
     [
       "content-docs",
       {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        showLastUpdateTime: false,
         sidebarPath: "./sidebarsCommunity.ts",
         ...commonDocsConfig,
-      } as DocsOptions,
+      } as PluginDocs,
     ],
 
     [
@@ -209,14 +187,14 @@ const config: Config = {
         min: 640,
         steps: 2,
         disableInDev: true,
-      } as IdealImageOptions,
+      } as PluginIdealImage,
     ],
 
     [
       "client-redirects",
       {
         redirects,
-      } as ClientRedirectsOptions,
+      } as PluginClientRedirects,
     ],
   ],
 
@@ -226,6 +204,7 @@ const config: Config = {
     },
     colorMode: {
       respectPrefersColorScheme: true,
+      disableSwitch: false,
     },
 
     announcementBar: {
@@ -265,7 +244,7 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/logo/kitimi-icon-new.svg",
         target: "_self",
-        height: "50",
+        height: "40",
         // width: "85"
       },
       items: [
@@ -366,6 +345,7 @@ const config: Config = {
     prism: {
       theme: PrismLight,
       darkTheme: PrismDark,
+      defaultLanguage: "tsx",
       additionalLanguages: [
         "powershell",
         "python",
@@ -375,7 +355,6 @@ const config: Config = {
         "yaml",
       ],
     },
-
     metadata: [
       { name: "og:title", content: "Kitimi Universe" },
       {

@@ -5,15 +5,11 @@ concurrency:
   cancel-in-progress: true
 
 on:
-  pull_request:
-    branches:
-      - main
+  pull_request_target:
+    branches: [main]
   push:
-    branches:
-      - main
-
+    branches: [main]
 jobs:
-
   build:
     name: Build
     runs-on: ubuntu-latest
@@ -36,7 +32,7 @@ jobs:
       - name: Install and build
         run: |
           cd website
-          npm ci && npm run build
+          npm ci --no-audit && npm run build
 
       - name: Archive production build
         uses: actions/upload-artifact@v4.6.2

@@ -1,7 +1,10 @@
 {
   "name": "website",
+  "description": "Official docs website built for the SpaceHub Project at Kitiplex",  
   "version": "0.1.0",
   "private": true,
+  "homepage": "https://mkeithx.pages.dev/",
+  "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -47,7 +50,7 @@
     "@docusaurus/module-type-aliases": "^3.8.1",
     "@docusaurus/tsconfig": "^3.8.1",
     "@docusaurus/types": "^3.8.1",
-    "typescript": "5.7.3"
+    "typescript": "^5.7.3"
   },
   "browserslist": {
     "production": [
@@ -62,7 +65,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
-  },
-  "description": "Guides and Code Samples for Software Development and More"
+    "node": ">=20"
+  }
 }
