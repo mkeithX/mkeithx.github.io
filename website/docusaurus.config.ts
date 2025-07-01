@@ -17,6 +17,7 @@ import { admonitionsConfig } from "./admonitionsConfig";
 
 import socialProfiles from './social.json';
 
+
 const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
 const commonDocsConfig = {
@@ -76,9 +77,14 @@ const config: Config = {
       type: "text/css",
       rel: "stylesheet",
       crossorigin: "anonymous",
-    },
+    }
   ],
-
+  scripts:[
+    {
+      src: "https://cdn.jsdelivr.net/npm/@docsearch/react@",
+      async: true,
+    }
+  ],
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -286,17 +292,9 @@ const config: Config = {
           className: "header-x-link",
           "aria-label": "X",
         },
-        { type: "search", position: "right" },
+        { type: "search", position: "right", className: "DocSearch"},
       ],
     },
-
-    algolia: {
-      apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
-      indexName: "mkeithx",
-      appId: "XVSOLYZXNV",
-      contextualSearch: false,
-    },
-
     footer: {
       style: "dark",
       logo: {
