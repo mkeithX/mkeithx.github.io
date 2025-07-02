@@ -1,95 +1,90 @@
-import {themes, type PrismTheme} from 'prism-react-renderer';
+import { themes, type PrismTheme } from 'prism-react-renderer';
 
 const baseTheme = themes.github;
 
-export default {
-  ...baseTheme,
+const customTheme: PrismTheme = {
+  ...baseTheme, // Spread first to allow overriding below
+  plain: {
+    ...baseTheme.plain,
+    backgroundColor: 'rgb(242, 242, 242)', // override only backgroundColor
+    // color intentionally left out or can be overridden if needed
+  },
   styles: [
     ...baseTheme.styles,
     {
       types: ['title'],
       style: {
-        color: 'rgba(5, 80, 174, 1)',
+        color: 'rgb(5, 80, 174)',
         fontWeight: 'bold',
       },
     },
     {
-      types: ['parameter'],
+      types: ['comment', 'prolog', 'doctype', 'cdata'],
       style: {
-        color: 'rgba(149, 56, 0, 1)',
+        color: 'rgb(153, 153, 136)',
+        fontStyle: 'italic',
       },
     },
     {
-      types: ['boolean', 'rule', 'color', 'number', 'constant', 'property'],
+      types: ['namespace'],
       style: {
-        color: 'rgba(0, 92, 197, 1)',
+        opacity: 0.7,
       },
     },
     {
-      types: ['atrule', 'tag'],
+      types: ['string', 'attr-value'],
       style: {
-        color: 'rgba(34, 134, 58, 1)',
+        color: 'rgb(227, 17, 108)',
       },
     },
     {
-      types: ['script'],
+      types: ['punctuation', 'operator'],
       style: {
-        color: 'rgba(36, 41, 46, 1)',
+        color: 'rgb(57, 58, 52)',
       },
     },
     {
-      types: ['operator', 'unit', 'rule'],
+      types: [
+        'entity',
+        'url',
+        'symbol',
+        'number',
+        'boolean',
+        'variable',
+        'constant',
+        'property',
+        'regex',
+        'inserted',
+      ],
       style: {
-        color: 'rgba(215, 58, 73, 1)',
+        color: 'rgb(54, 172, 170)',
       },
     },
     {
-      types: ['font-matter', 'string', 'attr-value'],
+      types: ['atrule', 'keyword', 'attr-name', 'selector'],
       style: {
-        color: 'rgba(198, 16, 95, 1)',
+        color: 'rgb(0, 164, 219)',
       },
     },
     {
-      types: ['class-name'],
+      types: ['function', 'deleted', 'tag'],
       style: {
-        color: 'rgba(17, 99, 41, 1)',
+        color: 'rgb(215, 58, 73)',
       },
     },
     {
-      types: ['attr-name'],
+      types: ['function-variable'],
       style: {
-        color: 'rgba(5, 80, 174, 1)',
+        color: 'rgb(111, 66, 193)',
       },
     },
     {
-      types: ['keyword'],
+      types: ['tag', 'selector', 'keyword'],
       style: {
-        color: 'rgba(207, 34, 46, 1)',
-      },
-    },
-    {
-      types: ['function'],
-      style: {
-        color: 'rgba(130, 80, 223, 1)',
-      },
-    },
-    {
-      types: ['selector'],
-      style: {
-        color: 'rgba(111, 66, 193, 1)',
-      },
-    },
-    {
-      types: ['variable'],
-      style: {
-        color: 'rgba(227, 98, 9, 1)',
-      },
-    },
-    {
-      types: ['comment'],
-      style: {
-        color: 'rgba(107, 107, 107, 1)',
+        color: 'rgb(0, 0, 159)',
       },
     },
   ],
-} satisfies PrismTheme;
+};
+
+export default customTheme;

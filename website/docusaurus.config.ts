@@ -1,24 +1,43 @@
 import path from 'path';
 import type { Config } from '@docusaurus/types';
 import * as Preset from "@docusaurus/preset-classic";
-
 import type { Options as PluginDocs } from "@docusaurus/plugin-content-docs";
 import type { Options as PluginIdealImage } from "@docusaurus/plugin-ideal-image";
 import type { Options as PluginClientRedirects } from "@docusaurus/plugin-client-redirects";
-
 import PrismLight from "./src/utils/prismLight";
 import PrismDark from "./src/utils/prismDark";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
-
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
-
 import socialProfiles from './social.json';
 
-
 const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
+
+const commonStylesheets = [
+  {
+    href: "/katex/katex.min.css",
+    type: "text/css",
+    rel: "stylesheet",
+    crossorigin: "anonymous",
+  },
+  {
+    href: "https://XVSOLYZXNV-dsn.algolia.net",
+    rel: "preconnect",
+    crossorigin: "anonymous",
+  }
+]
+const commonScripts = [
+  {
+    src: "https://cdn.jsdelivr.net/npm/@docsearch/react@",
+    async: true,
+  },
+  {
+    src: "https://static.cloudflareinsights.com/beacon.min.js?token=69d41ca9ce4d4388887ff7048c49c607&spa=false", // &spa=false
+    defer: true,
+  }
+]
 
 const commonDocsConfig = {
   showLastUpdateAuthor: false,
@@ -71,20 +90,9 @@ const config: Config = {
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
 
-  stylesheets: [
-    {
-      href: "/katex/katex.min.css",
-      type: "text/css",
-      rel: "stylesheet",
-      crossorigin: "anonymous",
-    }
-  ],
-  scripts:[
-    {
-      src: "https://cdn.jsdelivr.net/npm/@docsearch/react@",
-      async: true,
-    }
-  ],
+  stylesheets: commonStylesheets,
+  scripts: commonScripts,
+
   i18n: {
     defaultLocale: 'en',
     locales: ['en'],
@@ -219,7 +227,7 @@ const config: Config = {
         `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
       isCloseable: false,
     },
-    
+
     docs: {
       versionPersistence: "localStorage",
 
@@ -292,7 +300,7 @@ const config: Config = {
           className: "header-x-link",
           "aria-label": "X",
         },
-        { type: "search", position: "right", className: "DocSearch"},
+        { type: "search", position: "right", className: "DocSearch" },
       ],
     },
     footer: {
