@@ -1,52 +1,52 @@
 import path from 'path';
-import type { Config } from "@docusaurus/types";
+import type { Config } from '@docusaurus/types';
 import * as Preset from "@docusaurus/preset-classic";
-import type { Options as DocsOptions } from "@docusaurus/plugin-content-docs";
-import type { Options as BlogOptions } from "@docusaurus/plugin-content-blog";
-import type { Options as PageOptions } from "@docusaurus/plugin-content-pages";
-import type { Options as IdealImageOptions } from "@docusaurus/plugin-ideal-image";
-import type { Options as ClientRedirectsOptions } from "@docusaurus/plugin-client-redirects";
-
+import type { Options as PluginDocs } from "@docusaurus/plugin-content-docs";
+import type { Options as PluginIdealImage } from "@docusaurus/plugin-ideal-image";
+import type { Options as PluginClientRedirects } from "@docusaurus/plugin-client-redirects";
 import PrismLight from "./src/utils/prismLight";
 import PrismDark from "./src/utils/prismDark";
 import remarkMath from "remark-math";
 import rehypeKatex from "rehype-katex";
 import npm2yarn from "@docusaurus/remark-plugin-npm2yarn";
-
 import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
-import socialProfiles from './social';
+import socialProfiles from './social.json';
 
-// Dynamic copyright
 const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
-// Shared file include/exclude logic
-const fileFilters = {
-  exclude: [
-    '**/_*.{js,jsx,ts,tsx,md,mdx}',
-    '**/_*/**',
-    '**/*.test.{js,jsx,ts,tsx}',
-    '**/__tests__/**',
-  ],
-  include: [
-    '**/*.{js,jsx,ts,tsx,md,mdx}',
-    '**/*.mdx',
-  ],
-};
+const commonStylesheets = [
+  {
+    href: "/katex/katex.min.css",
+    type: "text/css",
+    rel: "stylesheet",
+    crossorigin: "anonymous",
+  },
+  {
+    href: "https://XVSOLYZXNV-dsn.algolia.net",
+    rel: "preconnect",
+    crossorigin: "anonymous",
+  }
+]
+const commonScripts = [
+  {
+    src: "https://cdn.jsdelivr.net/npm/@docsearch/react@",
+    async: true,
+  },
+  {
+    src: "https://static.cloudflareinsights.com/beacon.min.js?token=69d41ca9ce4d4388887ff7048c49c607&spa=false", // &spa=false
+    defer: true,
+  }
+]
 
-// Shared remark/rehype plugins
-const markdownPlugins = {
+const commonDocsConfig = {
+  showLastUpdateAuthor: false,
+  showLastUpdateTime: true,
   remarkPlugins: [
     [npm2yarn, { sync: true }],
     remarkMath,
   ],
   rehypePlugins: [rehypeKatex],
-};
-
-// Shared config for docs/blog/pages
-const commonDocsConfig = {
-  ...fileFilters,
-  ...markdownPlugins,
   ...admonitionsConfig,
 };
 
@@ -62,10 +62,15 @@ const config: Config = {
   titleDelimiter: "·",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
+  onBrokenAnchors: "throw",
 
   future: {
     v4: true,
     experimental_faster: true,
+    experimental_storage: {
+      type: 'localStorage',
+      namespace: true,
+    }
   },
 
   staticDirectories: [
@@ -79,25 +84,18 @@ const config: Config = {
     hero_tagline: "for Software Development and More",
     custom_header: "The SpaceHub Project @Kitiplex",
     custom_tagline: "Guides and Code Samples from mkeith",
-    custom_keyword: " | Author's note",
     GIT_USER: process.env.GIT_USER,
     USE_SSH: process.env.USE_SSH,
     GIT_USER_NAME: process.env.GIT_USER_NAME,
     GIT_USER_EMAIL: process.env.GIT_USER_EMAIL,
   },
 
-  stylesheets: [
-    {
-      href: "/katex/katex.min.css",
-      type: "text/css",
-      rel: "stylesheet",
-      crossorigin: "anonymous",
-    },
-  ],
+  stylesheets: commonStylesheets,
+  scripts: commonScripts,
 
   i18n: {
-    defaultLocale: "en",
-    locales: ["en"],
+    defaultLocale: 'en',
+    locales: ['en'],
   },
 
   markdown: {
@@ -113,9 +111,8 @@ const config: Config = {
           path: "docs",
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
-          showLastUpdateTime: true,
           ...commonDocsConfig,
-        } satisfies DocsOptions,
+        },
 
         blog: {
           path: "blog",
@@ -136,15 +133,14 @@ const config: Config = {
             copyright,
           },
           ...commonDocsConfig,
-        } satisfies BlogOptions,
+        },
 
         pages: {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
-          mdxPageComponent: "@theme/MDXPage",
           ...commonDocsConfig,
-        } satisfies PageOptions,
+        },
 
         theme: {
           customCss: "./src/css/custom.css",
@@ -161,6 +157,7 @@ const config: Config = {
           trackingID: "G-YYZ6V070LQ",
           anonymizeIP: true,
         },
+
         svgr: {
           svgrConfig: {
             svgoConfig: undefined,
@@ -170,34 +167,30 @@ const config: Config = {
     ],
   ],
 
-  themes: ["live-codeblock"],
+  themes: ['@docusaurus/theme-live-codeblock'],
 
   plugins: [
     "@docusaurus/theme-mermaid",
     "./src/plugins/featureRequests/FeatureRequestsPlugin.js",
-
     [
       "content-docs",
       {
         id: "cosmos",
         path: "cosmos",
         routeBasePath: "cosmos",
-        showLastUpdateTime: true,
         sidebarPath: "./sidebarsCosmos.ts",
         ...commonDocsConfig,
-      } as DocsOptions,
+      } as PluginDocs,
     ],
-
     [
       "content-docs",
       {
         id: "community",
         path: "community",
         routeBasePath: "community",
-        showLastUpdateTime: false,
         sidebarPath: "./sidebarsCommunity.ts",
         ...commonDocsConfig,
-      } as DocsOptions,
+      } as PluginDocs,
     ],
 
     [
@@ -208,21 +201,24 @@ const config: Config = {
         min: 640,
         steps: 2,
         disableInDev: true,
-      } as IdealImageOptions,
+      } as PluginIdealImage,
     ],
 
     [
       "client-redirects",
       {
         redirects,
-      } as ClientRedirectsOptions,
+      } as PluginClientRedirects,
     ],
   ],
 
   themeConfig: {
-    playgroundPosition: "bottom",
+    liveCodeBlock: {
+      playgroundPosition: 'bottom',
+    },
     colorMode: {
       respectPrefersColorScheme: true,
+      disableSwitch: false,
     },
 
     announcementBar: {
@@ -234,9 +230,16 @@ const config: Config = {
 
     docs: {
       versionPersistence: "localStorage",
+
       sidebar: {
         hideable: true,
         autoCollapseCategories: true,
+      },
+    },
+
+    blog: {
+      sidebar: {
+        groupByYear: true,
       },
     },
 
@@ -255,7 +258,7 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/logo/kitimi-icon-new.svg",
         target: "_self",
-        height: "50",
+        height: "40",
         // width: "85"
       },
       items: [
@@ -266,7 +269,6 @@ const config: Config = {
           items: [
             { type: "doc", docId: "introduction", label: "Docs" },
             { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn" },
-            // { to: "/learn", label: "Learn" },
             { to: "/coming-soon", label: "Examples" },
           ],
         },
@@ -293,22 +295,14 @@ const config: Config = {
           "aria-label": "GitHub repository",
         },
         {
-          href: "https://X.com/Kitiplex",
+          href: "https://X.com/mkeithtan",
           position: "right",
           className: "header-x-link",
           "aria-label": "X",
-        },        
-        { type: "search", position: "right" },
+        },
+        { type: "search", position: "right", className: "DocSearch" },
       ],
     },
-
-    algolia: {
-      apiKey: "b63e590c0b5a9ab7c0930991ea785aeb",
-      indexName: "mkeithx",
-      appId: "XVSOLYZXNV",
-      contextualSearch: false,
-    },
-
     footer: {
       style: "dark",
       logo: {
@@ -321,7 +315,7 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            { label: "Quick Links", to: "/docs/quick-links" },            
+            { label: "Quick Links", to: "/docs/quick-links" },
             { label: "System Admin", to: "/docs/system-administration" },
             { label: "The Keyword", to: "/me" },
           ],
@@ -335,7 +329,7 @@ const config: Config = {
           ],
         },
         {
-          title: "Connect",
+          title: "Kitiplex",
           items: [
             socialProfiles.xdotcom,
             socialProfiles.facebook,
@@ -357,6 +351,7 @@ const config: Config = {
     prism: {
       theme: PrismLight,
       darkTheme: PrismDark,
+      defaultLanguage: "tsx",
       additionalLanguages: [
         "powershell",
         "python",
@@ -364,10 +359,8 @@ const config: Config = {
         "json",
         "batch",
         "yaml",
-        "tsx",
       ],
     },
-
     metadata: [
       { name: "og:title", content: "Kitimi Universe" },
       {
@@ -379,4 +372,3 @@ const config: Config = {
 };
 
 export default config;
-

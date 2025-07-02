@@ -6,14 +6,12 @@ import HomepageFeatures from '@site/src/components/HomepageFeatures';
 import Heading from '@theme/Heading';
 import BannerLogo from '@site/static/img/logo/react-fb.svg';
 import React, { JSX } from 'react';
-import TopBanner from '@site/src/components/TopBanner';
-import FeatureBrands from '@site/src/components/FeatureBrands';
 import styles from './index.module.css';
-import useBaseUrl from '@docusaurus/useBaseUrl';
+
 
 function HomepageHeader(): JSX.Element {
   const {
-    siteConfig: { tagline, customFields },
+    siteConfig: { customFields },
   } = useDocusaurusContext();
   const {
     hero_header,
@@ -21,11 +19,6 @@ function HomepageHeader(): JSX.Element {
   } = customFields as {
     hero_header: string;
     hero_tagline: string;
-    custom_footer: string;
-    custom_tagline: string;
-    custom_header: string;
-    custom_heroBanner: string;
-    description: string;
   };
 
   return (
@@ -60,12 +53,12 @@ function HomepageHeader(): JSX.Element {
           <Link
             className={clsx("button button--outline button--primary button--lg")}
             to="/docs">
-            {'Explore'}
+            {'Get Started'}
           </Link>
           <Link
             className={clsx("button button--secondary button--lg")}
-            to="/cosmos/timeline">
-            {'Space'}
+            to="/coming-soon">
+            {'Examples'}
           </Link>
         </div>
       </div>
@@ -82,14 +75,11 @@ export default function Home(): JSX.Element {
   return (
     <Layout>
       <main>
-        {/* <TopBanner /> */}
         <HomepageHeader />
         <HomepageFeatures />
         <div className={styles.section}>
         </div>
-        {/* <FeatureBrands /> */}
       </main>
-
     </Layout>
   );
 }

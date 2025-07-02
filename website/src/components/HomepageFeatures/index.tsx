@@ -28,7 +28,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/container_solid.svg").default,
     description: (
       <>
-        With built-in <Link to="/docs/learn/react-live-demo#get-started">Live Code-Editor </Link> to write and test your React code instantly.
+        With built-in <Link to="/docs/learn/react-live-demo">Live Code-Editor </Link> to write and test your React code instantly.
       </>
     ),
   },
@@ -58,7 +58,7 @@ const FeatureList: FeatureItem[] = [
     Svg: require("@site/static/img/logo/kitimi-icon-new.svg").default,
     description: (
       <>
-        Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/configs/create-doc">React</Link>  components.
+        Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/guides/docs/create-doc">React</Link>  components.
       </>
     ),
   },
@@ -77,7 +77,7 @@ function Feature({ scale, title, Svg, description }: FeatureItem) {
         </div>
         <div className="text--center padding-horiz--md">
           <Heading as="h3">{title}</Heading>
-          <p>{description}</p>
+          <span className={clsx(styles.featureDescription)}>{description}</span>
         </div>
       </div>
     </>
