@@ -7,7 +7,6 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
 const sidebars: SidebarsConfig = {
   mySidebar: [
     "introduction",
-
     {
       type: "category",
       label: "Getting Started",
@@ -106,7 +105,18 @@ const sidebars: SidebarsConfig = {
             "guides/docs/create-doc",
             "guides/docs/create-page",
             "guides/docs/create-blog",
-          ]
+            {
+              type: 'category',
+              label: 'Advanced',
+              collapsed: true,
+              items: [
+                'guides/docs/advanced/math-equations',
+                'guides/docs/advanced/custom-admonitions',
+                'guides/docs/advanced/custom-diagrams',
+                'guides/docs/advanced/custom-cards',
+              ]
+            }
+          ],
         },
 
         {
@@ -127,48 +137,14 @@ const sidebars: SidebarsConfig = {
       ]
       
     },
-    // {
-    //   type: "category",
-    //   label: "Additional resources",
-    //   collapsed: true,
-    //   items: [
-    //     {
-    //       type: "category",
-    //       label: "Workarounds",
-    //       collapsed: true,
-    //       link: { type: "doc", id: "how-tos/index" },
-    //       items: [
-    //         "how-tos/fix-ms-teams",
-    //         "how-tos/fix-connectivity",
-    //         "how-tos/fix-windows-hardware-issues",
-    //       ],
-    //     },
-
-    //     {
-    //       type: "category",
-    //       label: "Gists",
-    //       link: { type: "generated-index", slug: "/gists", description: "Quick examples, utilities, and demos." },
-    //       items: [
-    //         "gists/gists-git",
-    //         "gists/gists-powershell",
-    //         {
-    //           type: "category",
-    //           label: "Extras",
-    //           collapsed: true,
-    //           link: { type: "generated-index", slug: "/extras" },
-    //           items: ["gists/extras/quick-responses", "gists/extras/misc"],
-    //         },
-    //       ],
-    //     },
-    //   ],
-    // },
-
+    'archived',
     'speedtest',
     // {
     //   type: 'html',
     //   value: '<img src="/img/side_icon.svg" alt="beta" />',
     //   defaultStyle: true,
     // },
+
   ],
 
   learnSidebar: [
