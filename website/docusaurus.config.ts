@@ -226,7 +226,7 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `<a href="/blog/updates/kitiplex-for-dev" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
+        `<a href="/blog/updates/july-2025" target="_blank">CHECK OUT WHAT'S NEW!</a> 🚀`,
       isCloseable: false,
     },
 
@@ -278,6 +278,11 @@ const config: Config = {
         { to: "/cosmos/timeline", label: "Universe", position: "left" },
         { to: "/community", label: "Community", position: "left" },
         { to: "/blog", label: "Blog" },
+        ...(isDev ? [{
+          type: 'html',
+          position: "right" as const,
+          value: '<span class="badge badge--warning">Dev</span>',
+        }]:[]),
         {
           type: "dropdown",
           label: "More",

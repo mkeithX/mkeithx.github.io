@@ -3,13 +3,200 @@ title: Math Equations
 description: Rendering math equations KaTeX.
 ---
 
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
+import BrowserWindow from '@site/src/components/BrowserWindow';
+
 Simple-Complex equations can be rendered using [KaTeX](https://katex.org/docs/api).
 
 $$
 x^2 + (\frac{5y}{4}−{\sqrt{|x|}})^2=1
 $$
 
+
+## Enabling math equations
+
+To enable this feature, you can follow the detailed instruction outlined in [this article](https://docusaurus.io/docs/markdown-features/math-equations#configuration).
+
 ```bash npm2yarn
 npm install --save remark-math@6 rehype-katex@7
 ```
 
+## Rendering
+
+Write inline math equations by wrapping LaTeX equations between `$`:
+
+```tsx
+$ a^2 + b^2 = c^2 $
+$ E = mc^2 $
+$ F = ma $
+```
+
+<BrowserWindow url="KaTex">
+
+
+$ a^2 + b^2 = c^2 $
+
+$ E = mc^2 $
+
+$ F = ma $
+
+</BrowserWindow>
+
+Use line breaks and `$$` for equation block or display mode:
+
+```
+$$ a^2 + b^2 = c^2 $$
+$$ E = mc^2 $$
+$$ F = ma $$
+```
+
+<BrowserWindow url="KaTex">
+
+$$
+
+a^2 + b^2 = c^2
+
+$$
+
+
+
+$$
+
+E = mc^2
+
+$$
+
+$$
+
+F = ma
+
+$$
+
+</BrowserWindow>
+
+
+$Where:$
+- $ ( F ) $ is the gravitational force between two objects,
+- $ ( G ) $ is the gravitational constant,
+- $ ( m_1 ) $ and $ ( m_2 ) $ are the masses of the two objects, and
+- $ ( r ) $ is the distance between their centers.
+
+
+
+
+## More Examples
+
+<details>
+
+<summary>Binomial Coefficient</summary>
+
+```tsx
+$$
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+$$
+```
+$$
+\binom{n}{k} = \frac{n!}{k!(n-k)!}
+$$
+
+
+</details>
+
+<details>
+
+<summary>Quadratic Formula</summary>
+
+```tsx
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+```
+$$
+x = \frac{-b \pm \sqrt{b^2 - 4ac}}{2a}
+$$
+
+</details>
+
+<details>
+
+<summary>Quadratic Equation</summary>
+
+```
+$$
+ax^2 + bx + c = 0
+$$
+```
+$$
+ax^2 + bx + c = 0
+$$
+
+</details>
+
+<details>
+
+<summary>Cauchy-Schwarz Inequality</summary>
+
+```
+$$
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+$$
+```
+$$
+\left( \sum_{k=1}^n a_k b_k \right)^2 \leq \left( \sum_{k=1}^n a_k^2 \right) \left( \sum_{k=1}^n b_k^2 \right)
+$$
+
+</details>
+
+<details>
+
+<summary>Recurrence Relation</summary>
+
+```
+$$
+k_{n+1} = n^2 + k_n^2 - k_{n-1}
+$$
+```
+$$
+k_{n+1} = n^2 + k_n^2 - k_{n-1}
+$$
+
+
+</details>
+
+
+<details>
+
+<summary>Function Evaluation</summary>
+
+```
+$$
+f(n) = n^5 + 4n^2 + 2 \Big|_{n=17}
+$$
+```
+$$
+f(n) = n^5 + 4n^2 + 2 \Big|_{n=17}
+$$
+
+
+</details>
+
+<details>
+
+<summary>Colored Expression</summary>
+
+```
+$$
+k = {\color{red}x} \mathbin{\color{blue}-} 2
+$$
+```
+$$
+k = {\color{red}x} \mathbin{\color{blue}-} 2
+$$
+
+</details>
+
+<!-- <details>
+
+<summary></summary>
+
+</details> -->
