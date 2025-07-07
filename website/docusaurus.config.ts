@@ -13,6 +13,8 @@ import redirects from "./redirects";
 import { admonitionsConfig } from "./admonitionsConfig";
 import socialProfiles from './social.json';
 
+const isDev = process.env.NODE_ENV === 'development';
+
 const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
 const commonStylesheets = [
@@ -270,6 +272,7 @@ const config: Config = {
             { type: "doc", docId: "introduction", label: "Docs" },
             { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn" },
             { to: "/coming-soon", label: "Examples" },
+            ...(isDev ? [{ to: '/__docusaurus/debug', label: 'Debug ⚠️' }] : []),
           ],
         },
         { to: "/cosmos/timeline", label: "Universe", position: "left" },

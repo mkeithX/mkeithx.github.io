@@ -107,7 +107,7 @@ const sidebars: SidebarsConfig = {
             "guides/docs/create-blog",
             {
               type: 'category',
-              label: 'Advanced',
+              label: 'Advanced Configuration',
               collapsed: true,
               items: [
                 'guides/docs/advanced/math-equations',
