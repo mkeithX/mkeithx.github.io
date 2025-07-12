@@ -141,7 +141,12 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
-          ...commonDocsConfig,
+          remarkPlugins: [
+            [npm2yarn, { sync: true }],
+            remarkMath,
+          ],
+          rehypePlugins: [rehypeKatex],
+          // ...commonDocsConfig,
         },
 
         theme: {
@@ -266,7 +271,7 @@ const config: Config = {
       items: [
         {
           type: "dropdown",
-          label: "Development",
+          label: "CoreDev",
           position: "left",
           items: [
             { type: "doc", docId: "introduction", label: "Docs" },
@@ -277,12 +282,7 @@ const config: Config = {
         },
         { to: "/cosmos/timeline", label: "Universe", position: "left" },
         { to: "/community", label: "Community", position: "left" },
-        { to: "/blog", label: "Blog" },
-        ...(isDev ? [{
-          type: 'html',
-          position: "right" as const,
-          value: '<span class="badge badge--warning">Dev</span>',
-        }]:[]),
+        { to: "/blog", label: "Blog", position: 'left' },
         {
           type: "dropdown",
           label: "More",

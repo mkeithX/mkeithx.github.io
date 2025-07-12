@@ -77,7 +77,7 @@ function Feature({ scale, title, Svg, description }: FeatureItem) {
         </div>
         <div className="text--center padding-horiz--md">
           <Heading as="h3">{title}</Heading>
-          <span className={clsx(styles.featureDescription)}>{description}</span>
+          <p className={clsx(styles.featureDescription)}>{description}</p>
         </div>
       </div>
     </>
