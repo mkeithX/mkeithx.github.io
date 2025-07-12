@@ -8,7 +8,7 @@ import Component from './_helpComponent';
 
 # Need Help?
 
-:::tip
+:::tip[important note]
 
 SpaceHub is under active development. Some features and docs may be incomplete outdated.
 
@@ -21,37 +21,61 @@ SpaceHub is under active development. Some features and docs may be incomplete o
     shadow="tl"
     style={{border: '1.5px solid var(--ifm-color-primary)', height: '100%'}}>
     <CardHeader>
-      <h3>Browse the docs</h3>
+      <h3>Explore</h3>
     </CardHeader>
-    <CardBody>Find what you're looking for in our docs and guides</CardBody>
-    <CardFooter className="text--center">
-      <div className="button-group button-group--block">
-        <button className="button button--secondary">Like</button>
-        <button className="button button--secondary">Comment</button>
-        <button className="button button--secondary">Share</button>
-      </div>
-    </CardFooter>
+    <CardBody>Browse our docs</CardBody>
+    <ul>
+      <li class="menu__list-item">
+        <a target="_blank" href="/docs/system-administration">System Admin</a>
+      </li>    
+      <li class="menu__list-item">
+        <a target="_blank" href="/docs/guides/docs/advanced/math-equations">Math Equations</a>
+      </li>
+    </ul>
   </Card>
 </Column>
 
 <Column className="text--left item  padding--sm">
   <Card
     shadow="tl"
-    style={{border: '1.5px solid var(--ifm-color-primary)', height: '100%'}}>
+    style={{border: '1.5px solid var(--spacehub-purple-dark)', height: '100%'}}>
     <CardHeader>
-      <h3>Join the community</h3>
+      <h3>Our community</h3>
     </CardHeader>
-    <CardBody>Ask questions and find answers from</CardBody>
-    <CardFooter className="text--center">
-      <div className="button-group button-group--block">
-        <button className="button button--secondary">Like</button>
-        <button className="button button--secondary">Comment</button>
-        <button className="button button--secondary">Share</button>
-      </div>
-    </CardFooter>
+    <CardBody>Ways to get involve</CardBody>
+    <ul>
+      <li class="menu__list-item">
+        <a target="_blank" href="/community/issue/report">Reporting Issues</a>
+      </li>    
+      <li class="menu__list-item">
+        <a target="_blank" href="/feature-requests">Feature Requests</a>
+      </li>
+    </ul>    
   </Card>
 </Column>
 
+<Column className="text--left item  padding--sm">
+  <Card
+    shadow="tl"
+    style={{border: '1.5px solid var(--spacehub-hover)', height: '100%'}}>
+    <CardHeader>
+      <h3>Developers</h3>
+    </CardHeader>
+    <CardBody>Portals for Developers</CardBody>
+    <ul>
+      <li class="menu__list-item">
+        <a target="_blank" href="https://dash.cloudflare.com/">Cloudflare</a>
+      </li>    
+      <li class="menu__list-item">
+        <a target="_blank" href="https://developer.microsoft.com/en-us/microsoft-365/profile">M365 Dev</a>
+      </li>
+    </ul>    
+  </Card>
+</Column>
 </Columns>
+
+<br />
+
+If you're part of the **SpaceHub Mission Control**, navigate to [this link](https://kitimi.sharepoint.com/sites/Hub) to login.
 
 <Component />

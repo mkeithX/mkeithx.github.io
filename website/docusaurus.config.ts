@@ -277,7 +277,9 @@ const config: Config = {
             { type: "doc", docId: "introduction", label: "Docs" },
             { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn" },
             { to: "/coming-soon", label: "Examples" },
+            ...(isDev ? [{ type: "html", value: '<hr class="dropdown-separator">' }] : []),
             ...(isDev ? [{ to: '/__docusaurus/debug', label: 'Debug ⚠️' }] : []),
+            ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
           ],
         },
         { to: "/cosmos/timeline", label: "Universe", position: "left" },
@@ -292,8 +294,9 @@ const config: Config = {
             { label: "Issue tracker", href: "https://github.com/mkeithX/mkeithx.github.io/issues" },
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
+            { to: "/help", label: "Support" },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-            { href: "https://kitimi.sharepoint.com/sites/Hub", label: "MissionControl" },
+            // { href: "https://kitimi.sharepoint.com/sites/Hub", label: "MissionControl" },
           ],
         },
         {
@@ -331,8 +334,8 @@ const config: Config = {
         {
           title: "Community",
           items: [
-            { label: "Updates", to: "/blog" },
-            { label: "Contributing", href: "/community" },
+            { label: "Support", to: "/help" },
+            { label: "Contribute", href: "/community" },
             { label: "Feedback", to: "/feature-requests" },
           ],
         },
