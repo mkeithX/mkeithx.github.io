@@ -120,38 +120,76 @@ kanban
 
 ### Explore
 
+
+
 <Columns className='item margin-bottom-lg'>
 
 <Column className="text--left item  padding--sm">
   <Card
     shadow="tl"
-    style={{ border: "1.5px solid var(--ifm-color-primary)", height: "100%" }}>
+    style={{border: '2.0px solid var(--spacehub-hover)', height: '100%'}}>
     <CardHeader>
-      <h3>
-        <a href="/docs/system-administration/ms-entra/create-dynamic-group">Create a Dynamic Group</a>
-      </h3>
+      <h3>Guides & Tutorials</h3>
     </CardHeader>
-    <CardBody>A quick guide to creating a dynamic group in Entra ID.</CardBody>
+    <CardBody></CardBody>
+    <ul class="menu__list-item">
+      <li>
+        <a target="_blank" href="/docs/guides/docs/create-doc">Create a simple doc</a>
+      </li>    
+      <li>
+        <a target="_blank" href="/docs/guides/docs/advanced/math-equations">Rendering math equations</a>
+      </li>
+      <li>
+        <a target="_blank" href="/docs/guides/deployment">Custom deployments</a>
+      </li>
+    </ul>    
+  </Card>
+</Column>
+
+
+<Column className="text--left item  padding--sm">
+  <Card
+    shadow="tl"
+    style={{border: '2.0px solid var(--ifm-color-primary)', height: '100%'}}>
+    <CardHeader>
+      <h3>For Admins</h3>
+    </CardHeader>
+    <CardBody></CardBody>
+    <ul class="menu__list-item">
+      <li>
+        <a target="_blank" href="/docs/guides/system-administration/ms-admin-portals">Portals & Admin Centers</a>
+      </li>    
+      <li>
+        <a target="_blank" href="/docs/guides/system-administration/ms-intune/custom-lockscreen">Manage Wallpaper via Intune</a>
+      </li>
+      <li>
+        <a target="_blank" href="/docs/system-administration/ms-entra/create-dynamic-group">Dynamic Group in Entra ID</a>
+      </li>      
+    </ul>
   </Card>
 </Column>
 
 <Column className="text--left item  padding--sm">
   <Card
     shadow="tl"
-    style={{ border: "1.5px solid var(--spacehub-purple-dark)", height: "100%" }}
-  >
+    style={{border: '2.0px solid var(--spacehub-purple-dark)', height: '100%'}}>
     <CardHeader>
-      <h3>
-        <a href="/cosmos/solar-system/moons/phases-of-the-moon">Moon Phases</a>
-      </h3>
+      <h3>The Universe</h3>
     </CardHeader>
-    <CardBody>
-    Discover stuff about our solar system starting with our Moon.
-    </CardBody>
+    <CardBody></CardBody>
+    <ul>
+      <li class="menu__list-item">
+        <a target="_blank" href="/cosmos/solar-system">Solar System: Planets & more</a>
+      </li>    
+      <li class="menu__list-item">
+        <a target="_blank" href="/cosmos/solar-system/moons/phases-of-the-moon">All about Moons</a>
+      </li>
+      <li class="menu__list-item">
+        <a target="_blank" href="/cosmos/legacy">Legacies & Contributions</a>
+      </li>
+    </ul>    
   </Card>
 </Column>
+
+
 </Columns>
-
-<br />
-
-

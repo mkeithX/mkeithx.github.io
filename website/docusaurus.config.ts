@@ -141,12 +141,18 @@ const config: Config = {
           path: "src/pages",
           routeBasePath: "",
           showLastUpdateTime: false,
+          showLastUpdateAuthor: false,
+          // exclude: [
+          //   '**/_*.{js,jsx,ts,tsx,md,mdx}',
+          //   '**/_*/**',
+          //   '**/*.test.{js,jsx,ts,tsx}',
+          //   '**/__tests__/**',
+          // ],          
           remarkPlugins: [
             [npm2yarn, { sync: true }],
             remarkMath,
           ],
           rehypePlugins: [rehypeKatex],
-          // ...commonDocsConfig,
         },
 
         theme: {
@@ -320,7 +326,7 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/space-labs.png",
         href: "/",
-        height: "45",
+        height: "55",
       },
       links: [
         {

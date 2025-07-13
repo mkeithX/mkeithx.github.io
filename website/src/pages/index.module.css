@@ -3,7 +3,7 @@
  * and scoped locally.
  */
 
-.section {
+/* .section {
   padding: 1rem 0;
 }
 
@@ -13,7 +13,7 @@
 
 .sectionInner {
   margin: 0 auto;
-}
+} */
 
 /* General Container */
 /* .container {
@@ -25,13 +25,14 @@
   padding: 8rem 0;
   overflow: hidden;
   width: 100%;
+  display: flex;
   /* text-align: left; */
   position: relative;
   background-color: var(--ifm-site-dark);
   display: flex;
   flex-direction: column;
   /* align-items: flex-start; */
-  border-bottom: 1px solid var(--spacehub-light);
+  border-bottom: 1px solid var(--spacehub-hover) !important;
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 6vw), 0 100%); */
 }
 
@@ -90,7 +91,7 @@
 /*  */
 
 .heroBannerTitle {
-  font-size: 62px;
+  font-size: 64px;
   font-weight: bold;
   margin: 2px 0 0.4rem;
 }
@@ -105,7 +106,7 @@
 }
 
 .heroBannerTitleText {
-  font-weight: bold;
+  /* font-weight: bold; */
   background: linear-gradient(
     -90deg,
     #8affff 0%,
@@ -186,7 +187,7 @@
   background-color: var(--ifm-site-dark) !important;
   color: #ffffff !important;
   border: 2px solid #1da1f2;
-  transition: background-color 0.5s;
+  transition: background-color 0.3s;
   border-radius: 12px;
   padding: 0.5rem 1.5rem;
 }

@@ -7,7 +7,7 @@ import Heading from '@theme/Heading';
 import BannerLogo from '@site/static/img/logo/react-fb.svg';
 import React, { JSX } from 'react';
 import styles from './index.module.css';
-
+import FeatureBrands from '../components/FeatureBrands';
 
 function HomepageHeader(): JSX.Element {
   const {
@@ -51,12 +51,12 @@ function HomepageHeader(): JSX.Element {
         </Heading>
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
           <Link
-            className={clsx("button button--outline button--primary button--lg")}
+            className={clsx("button button--lg")}
             to="/docs">
             {'Get Started'}
           </Link>
           <Link
-            className={clsx("button button--secondary button--lg")}
+            className={clsx("button button--lg")}
             to="/docs/learn">
             {'Developers'}
           </Link>
@@ -79,6 +79,7 @@ export default function Home(): JSX.Element {
         <HomepageFeatures />
         <div className={styles.section}>
         </div>
+        {/* <FeatureBrands /> */}
       </main>
     </Layout>
   );

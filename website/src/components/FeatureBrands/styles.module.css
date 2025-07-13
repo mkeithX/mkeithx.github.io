@@ -5,7 +5,7 @@
   /* border-top: 1px solid var(--spacehub-purple); */
   margin-top: auto;
   background-color: var(--spacehub-dark) !important;
-  border-bottom: 1px solid var(--spacehub-purple);
+  /* border-bottom: 1px solid var(--spacehub-purple); */
 }
 
 .featureTitleText {

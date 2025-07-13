@@ -13,7 +13,7 @@ type FeatureItem = {
 
 const FeatureList: FeatureItem[] = [
   {
-    scale: 0.6,
+    scale: 0.8,
     title: "Easy Navigation",
     Svg: require("@site/static/img/terminal_icon.svg").default,
     description: (
@@ -23,7 +23,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    scale: 0.7,
+    scale: 0.8,
     title: "Sandbox",
     Svg: require("@site/static/img/container_solid.svg").default,
     description: (
@@ -33,7 +33,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    scale: 0.7,
+    scale: 0.8,
     title: "SysOps",
     Svg: require("@site/static/img/api_icon.svg").default,
     description: (
@@ -43,7 +43,7 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    scale: 0.7,
+    scale: 0.8,
     title: "Code Made Easy",
     Svg: require("@site/static/img/rocket.svg").default,
     description: (
@@ -53,9 +53,9 @@ const FeatureList: FeatureItem[] = [
     ),
   },
   {
-    scale: 0.7,
+    scale: 1.0,
     title: "Built with React",
-    Svg: require("@site/static/img/logo/kitimi-icon-new.svg").default,
+    Svg: require("@site/static/img/logo/terminal-no-slash.svg").default,
     description: (
       <>
         Create a Markdown document using plain <code>.md</code> files or a page using <Link to="/docs/guides/docs/create-doc">React</Link>  components.
@@ -75,7 +75,7 @@ function Feature({ scale, title, Svg, description }: FeatureItem) {
             role="img"
           />
         </div>
-        <div className="text--center padding-horiz--md">
+        <div className="text--center padding-horiz--sm">
           <Heading as="h3">{title}</Heading>
           <p className={clsx(styles.featureDescription)}>{description}</p>
         </div>

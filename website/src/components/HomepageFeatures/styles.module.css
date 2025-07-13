@@ -1,19 +1,21 @@
 .features {
   display: flex;
   align-items: center;
-  padding: 4rem 0;
+  padding: 6rem 0;
   width: 100%;
   position: relative;
+  margin-top: auto;
+  border-bottom: 1px solid var(--spacehub-purple);
 }
 
 .featureSvg {
   height: 100px;
-  width: 100px;
+  width: 200px;
 }
 
 .featureDescription {
   font-weight: 300;
-  font-size: 15px;
+  font-size: 16px;
 
 }
 
