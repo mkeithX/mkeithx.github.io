@@ -5,7 +5,7 @@
   width: 100%;
   position: relative;
   margin-top: auto;
-  border-bottom: 1px solid var(--spacehub-purple);
+  border-top: 1px solid var(--spacehub-hover);
 }
 
 .featureSvg {
