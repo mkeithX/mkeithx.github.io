@@ -2,23 +2,31 @@
 title: July
 description: Announcing some updates this July 2025
 authors: [mkeithx]
-date: 2025-07-07
+date: 2025-07-07T08:00
 slug: /updates/july-2025
 image: ./img/social-card.png
 tags: [updates]
-draft: false
+draft: true
 ---
 
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 import BrowserWindow from '@site/src/components/BrowserWindow';
 
+import Image from '@theme/IdealImage';
+import socialcard from './img/social-card.png';
+
+import debug from './img/debug-option.png';
+
 **Hello, world!** 
 
 Here's a look at what I've been working on recently!
 
-![social-card](./img/social-card.png)
+<!-- ![social-card](./img/social-card.png) -->
 
+<Image img={socialcard} />
+
+<!-- <Image img={require('./img/social-card.png')} /> -->
 
 <!-- truncate -->
 
@@ -38,4 +46,6 @@ If you're running the site locally, you’ll notice a few helpful development fe
 - A `Debug` option to assist with testing and troubleshooting.
 
 
-![debug-option](./img/debug-option.png)
+<!-- ![debug-option](./img/debug-option.png) -->
+
+<Image img={debug} />

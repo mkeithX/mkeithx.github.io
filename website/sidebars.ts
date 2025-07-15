@@ -80,7 +80,7 @@ const sidebars: SidebarsConfig = {
             },
             {
               type: "category",
-              label: "Entra ID",
+              label: "Exchange",
               collapsed: true,
               link: {
                 type: "doc",

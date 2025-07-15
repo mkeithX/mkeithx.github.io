@@ -142,15 +142,9 @@ const config: Config = {
           routeBasePath: "",
           showLastUpdateTime: false,
           showLastUpdateAuthor: false,
-          // exclude: [
-          //   '**/_*.{js,jsx,ts,tsx,md,mdx}',
-          //   '**/_*/**',
-          //   '**/*.test.{js,jsx,ts,tsx}',
-          //   '**/__tests__/**',
-          // ],          
           remarkPlugins: [
-            [npm2yarn, { sync: true }],
             remarkMath,
+            [npm2yarn, { sync: true }],
           ],
           rehypePlugins: [rehypeKatex],
         },
@@ -171,11 +165,11 @@ const config: Config = {
           anonymizeIP: true,
         },
 
-        svgr: {
-          svgrConfig: {
-            svgoConfig: undefined,
-          },
-        },
+        // svgr: {
+        //   svgrConfig: {
+        //     svgoConfig: undefined,
+        //   },
+        // },
       } satisfies Preset.Options,
     ],
   ],
@@ -213,7 +207,7 @@ const config: Config = {
         max: 1030,
         min: 640,
         steps: 2,
-        disableInDev: true,
+        disableInDev: false,
       } as PluginIdealImage,
     ],
 
