@@ -231,7 +231,7 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `<a href="/" target="_self">CHECK OUT WHAT'S NEW!</a> 🚀`,
+        `<a href="/" target="_self"><b>M31-PREVIEW</b></a> 🚀`,
       isCloseable: false,
     },
 
