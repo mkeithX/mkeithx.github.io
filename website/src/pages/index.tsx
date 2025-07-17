@@ -33,7 +33,7 @@ function HomepageHeader(): JSX.Element {
         />
         <div className={styles.heroSubtitle}>
           <span className={styles.heroSubTitleText}>
-            {"New & Improved"}
+            {"Explore"}
           </span>
         </div>
         <Heading as="h1">
@@ -57,8 +57,8 @@ function HomepageHeader(): JSX.Element {
           </Link>
           <Link
             className={clsx("button button--lg")}
-            to="/docs/learn">
-            {'Developers'}
+            to="/blog/updates/july-2025">
+            {"What's New"}
           </Link>
         </div>
       </div>

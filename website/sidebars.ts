@@ -114,6 +114,7 @@ const sidebars: SidebarsConfig = {
                 'guides/docs/advanced/custom-admonitions',
                 'guides/docs/advanced/custom-diagrams',
                 'guides/docs/advanced/custom-cards',
+                'guides/docs/advanced/algolia-search',
               ]
             }
           ],

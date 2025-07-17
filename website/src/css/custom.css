@@ -77,10 +77,9 @@
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
 
   --ifm-menu-color-background-active: var(--ifm-color-emphasis-100) !important;
-  --ifm-breadcrumb-color-active: var(--ifm-color-emphasis-100);
+  /* --ifm-breadcrumb-color-active: var(--ifm-color-emphasis-200); */
   --ifm-background-surface-color: var(--spacehub-cooldark) !important;
   --ifm-background-color: var(--spacehub-cooldark) !important;
-  /* --ifm-link-color: #9800ff !important; */
   --ifm-link-color: var(--spacehub-purple) !important;
 }
 
@@ -106,14 +105,15 @@
 .unique-tabs .tabs__item {
   line-height: 14px;
   margin-right: 8px;
-  border-radius: 15px;
-  border: 1.5px solid var(--ifm-color-primary-dark) !important;
+  /* border-radius: 15px; */
+  /* border: 1.5px solid var(--ifm-color-primary-dark) !important; */
 }
 
 
 .unique-tabs .tabs__item--active {
-  color: #ffffff !important;
-  background-color: var(--ifm-color-primary-darker) !important;
+  color: var(--spacehub-purple-dark) !important;
+  border-bottom: 2.5px solid var(--spacehub-purple-dark) !important;
+  /* background-color: var(--ifm-color-primary-darker) !important; */
 }
 
 .navbar {
@@ -147,11 +147,11 @@
   margin-right: -4px;
   position: relative;
   top: 18px;
-  background: var(--spacehub-purple) !important;
+  background: var(--spacehub-purple-dark) !important;
 }
 
 .navbar__brand {
-  margin-right: 1rem;
+  /* margin-right: 1rem; */
   font-weight: 600;
   font-size: 17px;
   background: linear-gradient(90deg,
@@ -172,11 +172,11 @@
 }
 
 .dropdown__link:hover {
-  color: var(--spacehub-purple) !important;
+  color: var(--spacehub-purple);
 }
 
-.dropdown__link--active {
-  color: var(--spacehub-purple-dark) !important;
+.dropdown__link:active {
+  color: var(--spacehub-purple-dark);
 }
 
 .dropdown-separator {
