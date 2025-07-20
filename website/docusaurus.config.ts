@@ -231,7 +231,7 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `<a href="/blog/updates/3I-atlas" target="_blank"><b>CHECK OUT WHAT'S NEW</b></a> 🚀`,
+        `<a href="/blog/updates/july-2025" target="_blank"><b>CHECK OUT WHAT'S NEW</b></a> 🚀`,
       isCloseable: false,
     },
 
@@ -265,7 +265,7 @@ const config: Config = {
         alt: "SpaceHub",
         src: "img/logo/kitimi-icon-new.svg",
         target: "_self",
-        height: "40",
+        // height: "40",
         // width: "85"
       },
       items: [
@@ -276,14 +276,17 @@ const config: Config = {
           items: [
             { type: "doc", docId: "introduction", label: "Docs" },
             { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn" },
-            { to: "/coming-soon", label: "Examples" },
-            ...(isDev ? [{ type: "html", value: '<hr class="dropdown-separator">' }] : []),
+            { to: "/cosmos/timeline", label: "Cosmos" },
+            { type: "html", value: '<hr class="dropdown-separator">' },
+            { to: "/help", label: "Support" },
+            // ...(isDev ? [{ type: "html", value: '<hr class="dropdown-separator">' }] : []),
+            ...(isDev ? [{ to: '/examples', label: 'Examples ⚠️' }] : []),
             ...(isDev ? [{ to: '/__docusaurus/debug', label: 'Debug ⚠️' }] : []),
             ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
           ],
         },
-        { to: "/cosmos/timeline", label: "Universe", position: "left" },
         { to: "/community", label: "Community", position: "left" },
+        // { to: "/help", label: "Support", position: "left" },
         { to: "/blog", label: "Blog", position: 'left' },
         {
           type: "dropdown",
@@ -296,7 +299,6 @@ const config: Config = {
             { type: "html", value: '<hr class="dropdown-separator">' },
             { to: "/help", label: "Support" },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
-            // { href: "https://kitimi.sharepoint.com/sites/Hub", label: "MissionControl" },
           ],
         },
         {
