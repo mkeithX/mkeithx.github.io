@@ -25,7 +25,7 @@
   padding: 8rem 0;
   overflow: hidden;
   width: 100%;
-  display: flex;
+  /* display: flex; */
   /* text-align: left; */
   position: relative;
   background-color: var(--ifm-site-dark);
@@ -173,14 +173,14 @@
 
 /* Call-to-Action Buttons */
 
-/* .indexCtas {
+.indexCtas {
   --ifm-button-size-multiplier: 1;
   display: flex;
   flex-wrap: wrap;
   align-items: flex-start;
   justify-content: flex-start;
   margin-top: 24px;
-} */
+}
 
 .indexCtas a,
 .indexCtas a:hover {

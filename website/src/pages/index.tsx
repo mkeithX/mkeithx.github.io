@@ -57,8 +57,8 @@ function HomepageHeader(): JSX.Element {
           </Link>
           <Link
             className={clsx("button button--lg")}
-            to="/coming-soon">
-            {"What's New"}
+            to="/help">
+            {"Support"}
           </Link>
         </div>
       </div>
