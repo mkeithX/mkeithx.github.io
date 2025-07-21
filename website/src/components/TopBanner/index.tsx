@@ -20,7 +20,7 @@ function TopBanner() {
             <Translate
               id="homepage.banner.launch.newVersion"
               values={{newVersion: announcedVersion}}>
-              {'A New Version of SpaceHub is out!️'}
+              {"SpaceHub M31-Preview"}
             </Translate>
           </Link>
           {'\xa0🥳'}

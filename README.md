@@ -68,9 +68,9 @@ npm start
 
 Contributions of all kinds are welcome! If you'd like to contribute, consider joining our team for:
 
-- [x] Supportive, collaborative community
-- [x] More cool resources and tools
-- [x] Opportunities to work on more projects!
+- ✅ Supportive, collaborative community
+- ✅ More cool resources and tools
+- ✅ Opportunities to work on more projects!
 
 > [!WARNING]  
 > SpaceHub is under active development. Some features and docs may be incomplete outdated.
@@ -86,3 +86,11 @@ Checkout out the [community page](https://mkeithx.github.io/community) to know m
     <img src="https://skillicons.dev/icons?i=react,cloudflare,ts,githubactions,vscode" />
   </a>
 </p> -->
+
+<div align="left">
+
+  <a href="https://mkeithx.github.io">
+    <img src="./website/static/img/intro-banner.png" target="_blank" alt="The SpaceHub Project" width="300">
+  </a>
+
+</div>

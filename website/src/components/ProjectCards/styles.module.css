@@ -1,10 +1,10 @@
 .card {
-    border: 1.5px solid var(--spacehub-color-light);
+    border: 1.5px solid var(--spacehub-light);
     box-shadow: var(--ifm-global-shadow-tl);
     /* margin-bottom: var(--ifm-leading); */
     height: 100%;
     overflow: hidden;
-    background-color: var(--spacehub-color-semidark);
+    background-color: var(--spacehub-semidark);
 }
 
 .cardContainer {
@@ -13,7 +13,7 @@
 }
 
 .image {
-    background: var(--spacehub-color-light);
+    background: var(--spacehub-light);
     position: relative;
 }
 

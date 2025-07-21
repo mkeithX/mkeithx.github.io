@@ -1,95 +1,90 @@
-import {themes, type PrismTheme} from 'prism-react-renderer';
+import { themes, type PrismTheme } from 'prism-react-renderer';
 
 const baseTheme = themes.github;
 
-export default {
-  ...baseTheme,
+const customTheme: PrismTheme = {
+  ...baseTheme, // Spread first to allow overriding below
+  plain: {
+    ...baseTheme.plain,
+    backgroundColor: 'rgb(242, 242, 242)', // override only backgroundColor
+    // color intentionally left out or can be overridden if needed
+  },
   styles: [
     ...baseTheme.styles,
     {
       types: ['title'],
       style: {
-        color: '#0550AE',
+        color: 'rgb(5, 80, 174)',
         fontWeight: 'bold',
       },
     },
     {
-      types: ['parameter'],
+      types: ['comment', 'prolog', 'doctype', 'cdata'],
       style: {
-        color: '#953800',
+        color: 'rgb(153, 153, 136)',
+        fontStyle: 'italic',
       },
     },
     {
-      types: ['boolean', 'rule', 'color', 'number', 'constant', 'property'],
+      types: ['namespace'],
       style: {
-        color: '#005CC5',
+        opacity: 0.7,
       },
     },
     {
-      types: ['atrule', 'tag'],
+      types: ['string', 'attr-value'],
       style: {
-        color: '#22863A',
+        color: 'rgb(227, 17, 108)',
       },
     },
     {
-      types: ['script'],
+      types: ['punctuation', 'operator'],
       style: {
-        color: '#24292E',
+        color: 'rgb(57, 58, 52)',
       },
     },
     {
-      types: ['operator', 'unit', 'rule'],
+      types: [
+        'entity',
+        'url',
+        'symbol',
+        'number',
+        'boolean',
+        'variable',
+        'constant',
+        'property',
+        'regex',
+        'inserted',
+      ],
       style: {
-        color: '#D73A49',
+        color: 'rgb(54, 172, 170)',
       },
     },
     {
-      types: ['font-matter', 'string', 'attr-value'],
+      types: ['atrule', 'keyword', 'attr-name', 'selector'],
       style: {
-        color: '#C6105F',
+        color: 'rgb(0, 164, 219)',
       },
     },
     {
-      types: ['class-name'],
+      types: ['function', 'deleted', 'tag'],
       style: {
-        color: '#116329',
+        color: 'rgb(215, 58, 73)',
       },
     },
     {
-      types: ['attr-name'],
+      types: ['function-variable'],
       style: {
-        color: '#0550AE',
+        color: 'rgb(111, 66, 193)',
       },
     },
     {
-      types: ['keyword'],
+      types: ['tag', 'selector', 'keyword'],
       style: {
-        color: '#CF222E',
-      },
-    },
-    {
-      types: ['function'],
-      style: {
-        color: '#8250DF',
-      },
-    },
-    {
-      types: ['selector'],
-      style: {
-        color: '#6F42C1',
-      },
-    },
-    {
-      types: ['variable'],
-      style: {
-        color: '#E36209',
-      },
-    },
-    {
-      types: ['comment'],
-      style: {
-        color: '#6B6B6B',
+        color: 'rgb(0, 0, 159)',
       },
     },
   ],
-} satisfies PrismTheme;
+};
+
+export default customTheme;

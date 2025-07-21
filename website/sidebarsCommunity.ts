@@ -30,8 +30,8 @@ const sidebars: SidebarsConfig = {
         },
         {
           type: 'link',
-          label: 'Le Me',
-          href: '/me'
+          label: 'Support',
+          href: '/help'
         },
       ],
 

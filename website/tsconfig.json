@@ -3,9 +3,6 @@
   "extends": "@docusaurus/tsconfig",
   "compilerOptions": {
     "baseUrl": ".",
-    "types": [
-        "@cloudflare/workers-types"
-    ]
   },
-  "exclude": [".docusaurus", "build"]
+  "exclude": ["build", ".docusaurus"]
 }

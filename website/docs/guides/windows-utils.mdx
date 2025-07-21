@@ -1,0 +1,794 @@
+---
+description: Curated list of Windows utilities you can access with Win + R.
+sidebar_label: CLI
+---
+
+import MsIcon from '@site/static/img/logo/Microsoft_icon.svg';
+
+# Windows Utilities
+
+
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+import WinTerminal from "@site/static/img/logo/Windows_Terminal_logo.svg";
+
+
+<WinTerminal />
+
+## Local Account
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+ NET USER administrator /active:yes
+```
+```sh
+ NET USER administrator /active:no
+```
+</td>
+<td>
+
+Enable/Disable Superadmin
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+NET USER /add LocalAdmin "Secr3t"
+```
+
+</td>
+<td>
+
+Add new user "_LocalAdmin_" with password
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+NET LOCALGROUP administrators LocalAdmin /add
+```
+
+</td>
+<td>
+
+Add user "_LocalAdmin_" to Local Administrator Group
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+NET USER LocalAdmin "Secr3t"
+```
+
+</td>
+<td>
+
+Change User Password
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+NET USER LocalAdmin | findstr "Password"
+```
+
+</td>
+<td>
+
+View password properties
+
+</td>
+</tr>
+
+</table>
+
+### Active Directory
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dsregcmd /status
+```
+</td>
+<td>
+
+Display the device join status.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dsregcmd /join
+```
+
+</td>
+<td>
+
+Schedule and monitor the Autojoin task to Hybrid Join the device.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dsregcmd /leave
+```
+
+</td>
+<td>
+
+Perform a Hybrid Unjoin.
+Removes the device from azure and then re-joins on the next delta sync.
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+dsregcmd /forcerecovery
+```
+
+</td>
+<td>
+
+For Azure AD joined devices, will force a Sign out and Sign back in.
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dsregcmd /?
+```
+
+</td>
+<td>
+
+All `dsregcmd` commands.
+
+</td>
+</tr>
+
+</table>
+
+
+
+## Device Management
+
+<div class="contentTableContainer">
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+compmgmt.msc
+```
+
+</td>
+<td>
+Computer Management
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+devmgmt.msc
+```
+
+</td>
+<td>
+Device Manager
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+diskmgmt.msc
+```
+
+</td>
+<td>
+Disk Management
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+dfrg.msc
+```
+
+</td>
+<td>
+Disk Defragmenter
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+eventvwr.msc
+```
+
+</td>
+<td>
+Event Viewer
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+fsmgmt.msc
+```
+
+</td>
+<td>
+Shared Folders
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+gpedit.msc
+```
+
+</td>
+<td>
+Group Policies
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+lusrmgr.msc
+```
+
+</td>
+<td>
+Local Users and Groups
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+perfmon.msc
+```
+
+</td>
+<td>
+Performance Monitor
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+rsop.msc
+```
+
+</td>
+<td>
+Resultant Set of Policies (Windows Server)
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+secpol.msc
+```
+
+</td>
+<td>
+Local Security Policy
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+services.msc
+```
+
+</td>
+<td>
+Various Services
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+msconfig
+```
+
+</td>
+<td>
+System Configuration Utility
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+regedit
+```
+
+</td>
+<td>
+Registry Editor
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+msinfo32
+```
+
+</td>
+<td>
+System Information
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+sysedit
+```
+
+</td>
+<td>
+System Edit
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+win.ini
+```
+
+</td>
+<td>
+Windows Loading Information (also system.ini)
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+winver
+```
+
+</td>
+<td>
+Shows Current Version of Windows
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+mailto:
+```
+
+</td>
+<td>
+Opens Default Email Client
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+netplwiz
+```
+
+</td>
+<td>
+Manage user accounts
+</td>
+</tr>
+
+</table>
+
+</div>
+
+## Control Panel
+
+
+
+<div class="contentTableContainer">
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+appwiz.cpl
+```
+
+</td>
+<td>
+Add/Remove Programs Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+timedate.cpl
+```
+
+</td>
+<td>
+Date/Time Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+desk.cpl
+```
+
+</td>
+<td>
+Display Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+findfast.cpl
+```
+
+</td>
+<td>
+FindFast Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+inetcpl.cpl
+```
+
+</td>
+<td>
+Internet Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+main.cpl keyboard
+```
+
+</td>
+<td>
+Keyboard Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+main.cpl
+```
+
+</td>
+<td>
+Mouse Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+mmsys.cpl
+```
+
+</td>
+<td>
+Multimedia Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+ncpa.cpl
+```
+
+</td>
+<td>
+Network Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+password.cpl
+```
+
+</td>
+<td>
+Password Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+mmsys.cpl sounds
+```
+
+</td>
+<td>
+Sound Properties Control
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+sysdm.cpl
+```
+
+</td>
+<td>
+System Properties Control
+</td>
+</tr>
+
+</table>
+
+</div>
+
+
+
+## Misc.
+
+
+### Cache/Temp files
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+```sh
+del /q /f /s %temp%\*
+```
+
+</td>
+<td>
+
+Delete temp files as `User`
+
+</td>
+</tr>
+
+<tr>
+<td>
+
+```sh
+del /s /q C:\Windows\temp\*
+```
+
+</td>
+<td>
+
+Delete temp files as `Administrator`
+
+</td>
+</tr>
+<tr>
+<td>
+
+```sh
+del /q /f /s %temp%\* && del /s /q C:\Windows\temp\*
+```
+
+</td>
+<td>
+
+Delete temp files both `Administrator and User`
+
+</td>
+</tr>
+
+
+</table>
+
+
+
+
+### URIs
+
+<details>
+<summary>ms-settings</summary>
+
+
+<div>
+  <ul>
+    <li>
+      <a class="code" href="ms-settings:about">ms-settings:about</a> - **About** page
+    </li>
+    <li>
+      <a class="code" href="ms-settings:accounts">ms-settings:accounts</a> - **Accounts** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:windowsupdate">ms-settings:windowsupdate</a> - **Windows Update**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:network-status">ms-settings:network-status</a> - **Network Status**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:privacy">ms-settings:privacy</a> - **Privacy** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:display">ms-settings:display</a> - **Display** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:personalization">ms-settings:personalization</a> - **Personalization**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:bluetooth">ms-settings:bluetooth</a> - **Bluetooth** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:storage">ms-settings:storage</a> - **Storage** settings
+    </li>
+    <li>
+      <a class="code" href="ms-settings:time-date">ms-settings:time-date</a> - **Time & Language**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:troubleshoot">ms-settings:troubleshoot</a> - **Troubleshoot**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:windowsdefender">ms-settings:windowsdefender</a> - **Windows Security**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:appnotifications">ms-settings:appnotifications</a> - **App Notifications**
+    </li>
+    <li>
+      <a class="code" href="ms-settings:background">ms-settings:background</a> - **Background** settings
+    </li>
+  </ul>
+</div>
+
+:::tip[Note]
+
+These **URI** (Uniform Resource Identifier) examples only work for **Windows** and can be use in several places, such as:
+
+- **Run Dialog**: Press Windows + R, type `ms-settings:windowsupdate`, and hit Enter. This will open the Windows Update section in the Settings app.
+- **Command Prompt**: You can also run this URI from the Command Prompt using the start command:
+
+```sh
+start ms-settings:windowsupdate
+```
+
+:::
+
+</details>
+
+
+
+
+<!-- 
+### Foo
+
+<table>
+
+<tr>
+  <th>Command</th>
+  <th>Description</th>
+</tr>
+
+<tr>
+<td>
+
+</td>
+<td>
+
+</td>
+</tr>
+
+</table> -->
+

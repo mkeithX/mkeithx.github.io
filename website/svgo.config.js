@@ -1,5 +1,3 @@
-const {prefix} = require('@fortawesome/free-brands-svg-icons');
-const {info} = require('console');
 const path = require('path');
 
 module.exports = {

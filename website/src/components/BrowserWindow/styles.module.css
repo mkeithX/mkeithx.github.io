@@ -28,7 +28,7 @@
 }
 
 [data-theme='light'] {
-  /* --ifm-background-color: #fff; */
+  --ifm-background-color: #fff;
   background-color: var(--ifm-background-color);
 }
 
