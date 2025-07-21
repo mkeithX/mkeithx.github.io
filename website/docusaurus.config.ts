@@ -285,9 +285,10 @@ const config: Config = {
             ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
           ],
         },
-        { to: "/community", label: "Community", position: "left" },
-        // { to: "/help", label: "Support", position: "left" },
         { to: "/blog", label: "Blog", position: 'left' },
+        { to: "/community", label: "Community", position: "left" },
+        { to: "/help", label: "Support", position: "left" },
+        
         {
           type: "dropdown",
           label: "More",
@@ -297,7 +298,7 @@ const config: Config = {
             { label: "Issue tracker", href: "https://github.com/mkeithX/mkeithx.github.io/issues" },
             { to: "/feeling-lucky", label: "Feeling Lucky 👍" },
             { type: "html", value: '<hr class="dropdown-separator">' },
-            { to: "/help", label: "Support" },
+            { to: "/coming-soon", label: "Examples" },
             { label: "RSS", href: "https://mkeithx.pages.dev/blog/rss.xml" },
           ],
         },
@@ -322,7 +323,7 @@ const config: Config = {
         alt: "footerLogo",
         src: "img/space-labs.png",
         href: "/",
-        height: "55",
+        height: "50",
       },
       links: [
         {
