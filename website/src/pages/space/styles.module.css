@@ -1,5 +1,5 @@
 .spacePageBanner {
-  padding: 6rem 0;
+  padding: 8rem 0;
   background-color: var(--ifm-site-dark) !important;
   flex-direction: column;
   text-align: center;
@@ -28,11 +28,12 @@
   margin: 2px 0 0.4rem;
   font-weight: bold;
   background: linear-gradient(-90deg,
-      #69e9d9 0%,
-      #1da1f2 50%,
-      #b070ff 100%);
+    #8affff 0%,
+    #1da1f2 50%,
+    #b070ff 100%
+      );
   background-clip: text;
-  -webkit-text-fill-color: transparent;
+  color: transparent;
 }
 
 @media (max-width: 768px) {

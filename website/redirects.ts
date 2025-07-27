@@ -8,5 +8,6 @@ const redirects: ClientRedirects.Options['redirects'] = [
   { from: ['/posts', '/updates'], to: '/blog' },
   { from: ['/home'], to: '/' },
   { from: '/showcase', to: '/projects' },
+  { from: ['/support'], to: '/help' },
 ];
 export default redirects;

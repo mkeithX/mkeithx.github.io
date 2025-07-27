@@ -291,7 +291,7 @@ div[class*='announcementBar_'] button {
 }
 
 .footer .text--center {
-  font-size: 16px;
+  font-size: 14px;
 }
 
 .footer .footer__item {
@@ -320,7 +320,7 @@ div[class*='announcementBar_'] button {
 }
 
 .footer .footer__links {
-  margin-bottom: 14px;
+  margin-bottom: 12px;
 }
 
 .footer .footer__logo {

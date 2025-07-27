@@ -1,4 +1,4 @@
-import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
+import type {SidebarsConfig} from '@docusaurus/plugin-content-docs';
 
 /**
  * Sidebar configuration for organized documentation.
@@ -6,37 +6,27 @@ import type { SidebarsConfig } from "@docusaurus/plugin-content-docs";
  */
 const sidebars: SidebarsConfig = {
   mySidebar: [
-    "introduction",
+    'introduction',
+    // {
+    //   type: "category",
+    //   label: "Getting Started",
+    //   collapsed: false,
+    //   items: [
+    
+    //   ]
+    // },
     {
-      type: "category",
-      label: "Getting Started",
+      type: 'category',
+      label: 'Guides',
       collapsed: false,
-      items: [
-        "configuration",
-        "quick-links",
-        "downloads",
-      ]
-      // link: {
-      //   type: "generated-index",
-      //   slug: "/getting-started",
-      // },
-      // items: [
-      //   "configuration",
-      //   "quick-links",
-      // ]
-    },
-    {
-      type: "category",
-      label: "Guides",
-      collapsed: true,
       link: {
-        type: "generated-index",
-        title: "Guides",
-        slug: "/guides",
-        // description: "More Guides",
+        type: 'generated-index',
+        title: 'Guides',
+        slug: '/guides',
+        description: "Explore guides for system admin and more.",
       },
       items: [
-        "guides/windows-utils",
+        'guides/windows-utils',
         {
           type: 'category',
           label: 'System Administration',
@@ -47,49 +37,47 @@ const sidebars: SidebarsConfig = {
             description: 'System admin guides',
           },
           items: [
-            "guides/system-administration/ms-admin-intro",
-            "guides/system-administration/ms-admin-portals",
-            // "guides/system-administration/ms-admin-intro",
+            'guides/system-administration/ms-admin-intro',
+            'guides/system-administration/ms-admin-portals',
             {
-              type: "category",
-              label: "Entra ID",
+              type: 'category',
+              label: 'Entra ID',
               collapsed: true,
               link: {
-                type: "doc",
-                id: "guides/system-administration/ms-entra/index",
+                type: 'doc',
+                id: 'guides/system-administration/ms-entra/index',
               },
               items: [
-                "guides/system-administration/ms-entra/conditional-access",
-                "guides/system-administration/ms-entra/emergency-access",
-                "guides/system-administration/ms-entra/custom-branding",
-              ]
+                'guides/system-administration/ms-entra/conditional-access',
+                'guides/system-administration/ms-entra/emergency-access',
+                'guides/system-administration/ms-entra/custom-branding',
+              ],
             },
             {
-              type: "category",
-              label: "Intune",
+              type: 'category',
+              label: 'Intune',
               collapsed: true,
               link: {
-                type: "doc",
-                id: "guides/system-administration/ms-intune/index",
+                type: 'doc',
+                id: 'guides/system-administration/ms-intune/index',
               },
               items: [
-                "guides/system-administration/ms-intune/custom-lockscreen",
-                "guides/system-administration/ms-intune/deploy-win32-app",
-                "guides/system-administration/ms-intune/enroll-device",
-              ]
+                'guides/system-administration/ms-intune/custom-lockscreen',
+                'guides/system-administration/ms-intune/deploy-win32-app',
+                'guides/system-administration/ms-intune/enroll-device',
+              ],
             },
             {
-              type: "category",
-              label: "Exchange",
+              type: 'category',
+              label: 'Exchange',
               collapsed: true,
               link: {
-                type: "doc",
-                id: "guides/system-administration/ms-exchange/index",
+                type: 'doc',
+                id: 'guides/system-administration/ms-exchange/index',
               },
               items: [
-                "guides/system-administration/ms-exchange/mailbox-archive",
-
-              ]
+                'guides/system-administration/ms-exchange/mailbox-archive',
+              ],
             },
           ],
         },
@@ -99,12 +87,12 @@ const sidebars: SidebarsConfig = {
           collapsed: true,
           link: {
             type: 'doc',
-            id: "guides/docs/introduction",
+            id: 'guides/docs/introduction',
           },
           items: [
-            "guides/docs/create-doc",
-            "guides/docs/create-page",
-            "guides/docs/create-blog",
+            'guides/docs/create-doc',
+            'guides/docs/create-page',
+            'guides/docs/create-blog',
             {
               type: 'category',
               label: 'Advanced Configuration',
@@ -115,8 +103,8 @@ const sidebars: SidebarsConfig = {
                 'guides/docs/advanced/custom-diagrams',
                 'guides/docs/advanced/custom-cards',
                 'guides/docs/advanced/algolia-search',
-              ]
-            }
+              ],
+            },
           ],
         },
 
@@ -129,32 +117,40 @@ const sidebars: SidebarsConfig = {
             id: 'guides/deployment/index',
           },
           items: [
-            "guides/deployment/github-pages",
-            "guides/deployment/cloudflare-pages",
-          ]
+            'guides/deployment/github-pages',
+            'guides/deployment/cloudflare-pages',
+          ],
         },
-            "guides/fix-ms-teams",
-            "guides/fix-cloud-pc",
-      ]
-      
+        'guides/fix-ms-teams',
+        'guides/fix-cloud-pc',
+      ],
     },
-    'archives',
+    {
+      type: 'category',
+      label: 'More',
+      collapsed: true,
+      items: [
+        'configuration',
+        'quick-links',
+        'downloads', 
+        'archives'
+      ],
+    },
+
     // {
     //   type: 'html',
     //   value: '<img src="/img/side_icon.svg" alt="beta" />',
     //   defaultStyle: true,
     // },
-
   ],
 
   learnSidebar: [
     {
-      type: "autogenerated",
-      dirName: "learn"
+      type: 'autogenerated',
+      dirName: 'learn',
     },
-    'speedtest',    
-  ]
-
+    'speedtest',
+  ],
 };
 
 export default sidebars;

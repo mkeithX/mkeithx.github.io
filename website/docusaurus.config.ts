@@ -15,7 +15,7 @@ import socialProfiles from './social.json';
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
+const copyright = `Copyright © ${new Date().getFullYear()} <br /> Keith Tan and Contributors`;
 
 const commonStylesheets = [
   {
@@ -82,8 +82,6 @@ const config: Config = {
 
   customFields: {
     description: "Representing humanity from Dimension C-137 and beyond.",
-    hero_header: "Guides and Code Samples",
-    hero_tagline: "for Software Development and More",
     custom_header: "The SpaceHub Project @Kitiplex",
     custom_tagline: "Guides and Code Samples from mkeith",
     GIT_USER: process.env.GIT_USER,
@@ -121,7 +119,7 @@ const config: Config = {
           blogTitle: "Updates",
           blogDescription: "Keep up to date with what's going on with The SpaceHub Project!",
           routeBasePath: "blog",
-          blogSidebarTitle: "Recent updates",
+          blogSidebarTitle: "Updates",
           blogSidebarCount: "ALL",
           postsPerPage: 3,
           onInlineTags: "throw",
@@ -271,12 +269,13 @@ const config: Config = {
       items: [
         {
           type: "dropdown",
-          label: "CoreDev",
+          label: "Development",
           position: "left",
           items: [
             { type: "doc", docId: "introduction", label: "Docs" },
             { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn" },
             { to: "/cosmos/timeline", label: "Cosmos" },
+            // { to: "/space", label: "Space" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { to: "/help", label: "Support" },
             // ...(isDev ? [{ type: "html", value: '<hr class="dropdown-separator">' }] : []),
@@ -285,9 +284,9 @@ const config: Config = {
             ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
           ],
         },
-        { to: "/blog", label: "Blog", position: 'left' },
+        { to: "/blog", label: "Updates", position: 'left' },
         { to: "/community", label: "Community", position: "left" },
-        { to: "/help", label: "Support", position: "left" },
+        // { to: "/help", label: "Support", position: "left" },
         
         {
           type: "dropdown",
@@ -321,7 +320,7 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/space-labs.png",
+        src: "img/logo/developers-a.png",
         href: "/",
         height: "50",
       },

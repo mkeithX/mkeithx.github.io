@@ -28,15 +28,15 @@ function HomepageHeader(): JSX.Element {
           height={150} // 180
         />
         <div className={styles.heroSubtitle}>
-          <span className={styles.heroSubTitleText}>{'Explore'}</span>
+          <span className={styles.heroSubTitleText}>{"Explore"}</span>
         </div>
         <Heading as="h1">
           <div className={styles.heroBannerTitle}>
-            <span className={styles.heroBannerTitleText}>{hero_header}</span>
+            <span className={styles.heroBannerTitleText}>{"Guides and Code Samples"}</span>
             <br></br>
           </div>
           <div className={styles.heroSubtitle}>
-            <span className={styles.heroSubtitleText}>{hero_tagline}</span>
+            <span className={styles.heroSubtitleText}>{"for Software Development and More"}</span>
           </div>
         </Heading>
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
