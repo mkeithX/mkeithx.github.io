@@ -1,6 +1,6 @@
 .thisHead {
     /* background-color: #1da1f2 !important; */
-    background-color: var(--spacehub-color-purple);
+    background-color: var(--spacehub-purple);
     color: var(--ifm-site-dark) !important;
     flex-direction: column;
     padding: 4rem 0 2rem;
@@ -47,5 +47,5 @@
 .thisAvatar {
     max-height: 596px;
     max-width: 596px;
-    /* background-color: var(--spacehub-color-purple); */
+    /* background-color: var(--spacehub-purple); */
 }

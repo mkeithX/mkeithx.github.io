@@ -1,0 +1,137 @@
+/**
+  * Custom CSS by Keith Tan.
+  * 
+  * Exclusively Developed forThe SpaceHub Project
+  */
+
+.heroBanner {
+  padding: 8rem 0;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+  background-color: var(--ifm-site-dark);
+  display: flex;
+  flex-direction: column;
+}
+
+.heroLogo {
+  width: auto;
+  height: auto;
+  float: right;
+  display: flex;
+  justify-content: flex-end; 
+  animation: kit-in-the-box infinite 30s linear;
+}
+
+@keyframes kit-in-the-box {
+  from {
+    transform: rotate(360deg) scale(1.3);
+  }
+  to {
+    transform: rotate(-360deg) scale(1.3);
+  }
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .heroLogo {
+    animation: kit-in-the-box infinite 60s linear;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroLogo {
+    justify-content: center;
+    animation-duration: 30s;      
+    transform: scale(0.5);
+    height: 120px;
+    width: 150px
+  }
+}
+
+.heroBannerTitle {
+  font-size: 64px;
+  font-weight: bold;
+  margin: 2px 0 0.4rem;
+}
+
+@media (max-width: 768px) {
+  .heroBannerTitle {
+    /* padding: 1rem 0; */
+    font-size: 48px;
+    font-weight: bold;
+    margin: 0.8px 0 0.2rem;
+  }
+}
+
+.heroBannerTitleText {
+  /* font-weight: bold; */
+  background: linear-gradient(
+    -90deg,
+    #8affff 0%,
+    #1da1f2 50%,
+    #b070ff 100%
+  );
+  background-clip: text;
+  color: transparent;
+}
+
+
+.heroSubtitle {
+  font-size: 22px;
+  font-weight: 300;
+}
+
+@media (max-width: 768px) {
+  .heroSubtitle {
+    font-size: 18px;
+  }
+}
+
+@media (max-width: 768px) {
+  .heroSubtitleText {
+    font-size: 18px;
+    white-space: normal;
+  }
+}
+
+/* Hero Subtitle Text */
+.heroSubTitleTextHtml {
+  color: var(--ifm-color-emphasis) !important;
+  text-align: start;
+  font-size: 18px;
+}
+
+.heroSubTitleTextHtml b {
+  color: var(--ifm-color-primary);
+  font-size: 18px;
+}
+
+/* Call-to-Action Buttons */
+
+.indexCtas {
+  --ifm-button-size-multiplier: 1;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: flex-start;
+  margin-top: 24px;
+}
+
+.indexCtas a,
+.indexCtas a:hover {
+  background-color: var(--ifm-site-dark) !important;
+  color: #ffffff !important;
+  border: 2px solid #1da1f2;
+  transition: background-color 0.3s;
+  border-radius: 12px;
+  padding: 0.5rem 1.5rem;
+}
+
+.indexCtas a:last-of-type {
+  margin: 0 0.75rem;
+}
+
+.indexCtas a:hover {
+  color: #ffffff !important;
+  background-color: #1da1f2 !important;
+}

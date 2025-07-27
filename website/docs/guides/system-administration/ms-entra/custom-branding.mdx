@@ -1,0 +1,31 @@
+---
+description: Customize your org's login page
+title: Custom branding
+---
+
+import ComingSoon from '@site/src/components/ComingSoon';
+
+<!-- <ComingSoon /> -->
+
+This article outlines an "_extended_" version about adding company branding to the Microsoft 365 sign-in page. For more details, visit the [official documentation](https://learn.microsoft.com/en-us/microsoft-365/admin/setup/customize-sign-in-page?view=o365-worldwide).
+
+```css title="corp-custom.css" showLineNumbers
+a:hover {
+  text-decoration: none;
+  color: #818c94;
+}
+
+.ext-sign-in-box {
+  border-radius: 20px;
+}
+
+.ext-button.ext-primary {
+  border-radius: 5px;
+  border-color: #1ca3f2;
+  background-color: #1ca3f2;
+}
+
+.ext-button.ext-secondary {
+  border-radius: 5px;
+}
+```

@@ -1,7 +1,10 @@
 {
   "name": "website",
-  "version": "0.0.1",
+  "description": "Official docs website built for the SpaceHub Project at Kitiplex",  
+  "version": "0.1.0",
   "private": true,
+  "homepage": "https://mkeithx.pages.dev/",
+  "license": "MIT",
   "scripts": {
     "docusaurus": "docusaurus",
     "start": "docusaurus start",
@@ -13,7 +16,7 @@
     "write-translations": "docusaurus write-translations",
     "write-heading-ids": "docusaurus write-heading-ids",
     "typecheck": "tsc",
-    "dev": "docusaurus start --host 0.0.0.0 --hot-only --no-open",
+    "dev": "docusaurus start --no-open",
     "start:fast": "docusaurus start --host 0.0.0.0 --no-open",
     "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
     "build:local": "docusaurus build && docusaurus serve",
@@ -44,14 +47,10 @@
     "remark-math": "^6.0.0"
   },
   "devDependencies": {
-    "@cloudflare/workers-types": "4.20250214.0",
-    "@docusaurus/eslint-plugin": "^3.8.1",
     "@docusaurus/module-type-aliases": "^3.8.1",
-    "@docusaurus/theme-classic": "^3.8.1",
     "@docusaurus/tsconfig": "^3.8.1",
     "@docusaurus/types": "^3.8.1",
-    "@dotenvx/dotenvx": "1.36.0",
-    "typescript": "5.7.3"
+    "typescript": "^5.7.3"
   },
   "browserslist": {
     "production": [
@@ -66,7 +65,6 @@
     ]
   },
   "engines": {
-    "node": ">=18.0"
-  },
-  "description": "Guides and Code Samples for Software Development and More"
+    "node": ">=20"
+  }
 }

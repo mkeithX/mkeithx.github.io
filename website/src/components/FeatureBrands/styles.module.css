@@ -2,14 +2,14 @@
   display: flex;
   align-items: center;
   padding: 4rem 0;
-  /* border-top: 1px solid var(--spacehub-color-purple); */
+  /* border-top: 1px solid var(--spacehub-purple); */
   margin-top: auto;
-  background-color: var(--spacehub-color-dark) !important;
-  border-bottom: 1px solid var(--spacehub-color-purple);
+  background-color: var(--spacehub-dark) !important;
+  /* border-bottom: 1px solid var(--spacehub-purple); */
 }
 
 .featureTitleText {
-  color: var(--spacehub-color-light);
+  color: var(--spacehub-light);
 }
 
 .featureBrandSvg {

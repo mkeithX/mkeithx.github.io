@@ -46,8 +46,8 @@ function SpacePageHeader(): JSX.Element {
                         </span>
 
                     </div>
-                    <Heading as="h1" className={clsx(styles.spacePageTitle)}>
-                        {"Stuff about Universe"}
+                    <Heading as="h1">
+                        <span className={clsx(styles.spacePageTitle)}>{"Stuff about Universe"}</span>
                     </Heading>
                     <span className={clsx("hero__subtitle margin-left--xs")}>
                         {""}
