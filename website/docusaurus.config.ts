@@ -132,7 +132,7 @@ const config: Config = {
             xslt: true,
             copyright,
           },
-          ...commonDocsConfig,
+          ...admonitionsConfig,
         },
 
         pages: {

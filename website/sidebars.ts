@@ -127,7 +127,7 @@ const sidebars: SidebarsConfig = {
     },
     {
       type: 'category',
-      label: 'More',
+      label: 'Extras',
       collapsed: true,
       items: [
         'configuration',
