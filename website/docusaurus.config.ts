@@ -15,7 +15,7 @@ import socialProfiles from './social.json';
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const copyright = `Copyright © ${new Date().getFullYear()} <br /> Keith Tan and Contributors`;
+const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors  <br /> Content of this website is licensed under <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">`;
 
 const commonStylesheets = [
   {
@@ -320,9 +320,9 @@ const config: Config = {
       style: "dark",
       logo: {
         alt: "footerLogo",
-        src: "img/logo/developers-a.png",
+        src: "img/logo/kitimi-platforms.png",
         href: "/",
-        height: "50",
+        height: "55",
       },
       links: [
         {
