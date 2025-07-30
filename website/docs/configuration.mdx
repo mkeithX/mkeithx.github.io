@@ -1,0 +1,37 @@
+---
+description: The custom configuration powering MKX SpaceHub
+# title: Getting started
+# sidebar_label: Getting started
+---
+
+import DocCardList from '@theme/DocCardList';
+import Admonition from "@theme/Admonition";
+import Tabs from "@theme/Tabs";
+import TabItem from "@theme/TabItem";
+
+# Configuration {#website-configuration}
+
+This section covers the site's configuration along with some basic guides about:
+
+Install [Node.js 18+](https://nodejs.org/en/download/) and your preferred package manager ([npm](https://www.npmjs.com/), [pnpm](https://pnpm.io/), [yarn](https://yarnpkg.com/))
+
+
+:::info[workspaces]
+
+If you are using [**yarn workspaces**](https://yarnpkg.com/features/workspaces), add `website` to your workspace list and run `yarn install` again.
+
+:::
+
+
+
+### Installation
+
+```bash
+npx create-docusaurus@latest website classic --typescript
+```
+```bash
+cd website
+```
+```bash npm2yarn
+npm run start
+```

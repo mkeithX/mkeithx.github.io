@@ -22,12 +22,12 @@
   /* background-color: #2b3137; */
   display: flex;
   height: auto;
-  border-bottom: 2px solid var(--spacehub-color-dark);
+  border-bottom: 2px solid var(--spacehub-dark);
   /* clip-path: polygon(0 0, 100% 0, 100% calc(100% - 4.2vw), 0 100%) !important; */
 }
 
 .projectsHeroCards {
-  background-color: var(--spacehub-color-semidark);
+  background-color: var(--spacehub-semidark);
 }
 
 .projectshero h1 {

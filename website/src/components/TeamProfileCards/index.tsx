@@ -92,7 +92,12 @@ const teamMembers = [
     githubUrl: "https://github.com/kpxengineering",
     xUrl: "https://twitter.com/",
   },
-
+    {
+    name: "Kitiplex InfraOps",
+    subTitle: "Maintainer @ Kitiplex",
+    githubUrl: "https://github.com/kpxcoredev",
+    xUrl: "https://twitter.com/",
+  },
 ];
 
 const contributors = [
