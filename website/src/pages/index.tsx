@@ -36,15 +36,15 @@ function HomepageHeader(): JSX.Element {
             <br></br>
           </div>
           <div className={styles.heroSubtitle}>
-            <span className={styles.heroSubtitleText}>{"for Software Development and More"}</span>
+            <span className={styles.heroSubtitleText}>{"for Software Dev, IT Admins and More"}</span>
           </div>
         </Heading>
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
           <Link className={clsx('button button--lg')} to="/docs">
-            {'Get Started'}
+            {"Get Started"}
           </Link>
-          <Link className={clsx('button button--lg')} to="/coming-soon">
-            {'Examples'}
+          <Link className={clsx('button button--lg')} to="/blog/updates/july-2025">
+            {"Latest"}
           </Link>
         </div>
       </div>

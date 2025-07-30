@@ -15,7 +15,7 @@ import socialProfiles from './social.json';
 
 const isDev = process.env.NODE_ENV === 'development';
 
-const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors  <br /> Content of this website is licensed under <a target="_blank" href="https://creativecommons.org/licenses/by/4.0/">CC BY 4.0</a><img src="https://mirrors.creativecommons.org/presskit/icons/cc.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;"><img src="https://mirrors.creativecommons.org/presskit/icons/by.svg" alt="" style="max-width: 1em;max-height:1em;margin-left: .2em;">`;
+const copyright = `Copyright © ${new Date().getFullYear()} Keith Tan and Contributors`;
 
 const commonStylesheets = [
   {
@@ -229,8 +229,9 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `<a href="/blog/updates/july-2025" target="_blank"><b>CHECK OUT WHAT'S NEW</b></a> 🚀`,
+        `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Articles published on this site are licensed under CC BY 4.0</a>`,
       isCloseable: false,
+      backgroundColor: '#051737ff',
     },
 
     docs: {
@@ -275,10 +276,8 @@ const config: Config = {
             { type: "doc", docId: "introduction", label: "Docs" },
             { type: "docSidebar", sidebarId: "learnSidebar", label: "Learn" },
             { to: "/cosmos/timeline", label: "Cosmos" },
-            // { to: "/space", label: "Space" },
             { type: "html", value: '<hr class="dropdown-separator">' },
             { to: "/help", label: "Support" },
-            // ...(isDev ? [{ type: "html", value: '<hr class="dropdown-separator">' }] : []),
             ...(isDev ? [{ to: '/examples', label: 'Examples ⚠️' }] : []),
             ...(isDev ? [{ to: '/__docusaurus/debug', label: 'Debug ⚠️' }] : []),
             ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
@@ -286,8 +285,6 @@ const config: Config = {
         },
         { to: "/blog", label: "Updates", position: 'left' },
         { to: "/community", label: "Community", position: "left" },
-        // { to: "/help", label: "Support", position: "left" },
-        
         {
           type: "dropdown",
           label: "More",

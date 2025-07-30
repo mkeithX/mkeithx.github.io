@@ -1,6 +1,6 @@
 <div align="left">
-  <a href="https://mkeithx.github.io">
-    <img src="./public/img/github-new.png" target="_blank" alt="The SpaceHub Project">
+  <a href="https://mkeithx.github.io" target="_blank" rel="noopener noreferrer">
+    <img src="./public/img/github-new.png" alt="The SpaceHub Project">
   </a>
   <h1 align="left">
     <!-- <span>SpaceHub Project</span> -->
@@ -89,8 +89,8 @@ Checkout out the [community page](https://mkeithx.github.io/community) to know m
 
 <div align="left">
 
-  <a href="https://mkeithx.github.io">
-    <img src="./website/static/img/intro-banner.png" target="_blank" alt="The SpaceHub Project" width="300">
+  <a href="https://mkeithx.github.io" target="_blank" rel="noopener noreferrer">
+    <img src="./website/static/img/intro-banner.png" alt="The SpaceHub Project" width="300">
   </a>
 
 </div>
