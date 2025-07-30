@@ -1,9 +1,8 @@
 <div align="left">
-  <a href="https://mkeithx.github.io">
-    <img src="./public/img/github-new.png" target="_blank" alt="The SpaceHub Project">
+  <a href="https://mkeithx.github.io" target="_blank" rel="noopener noreferrer">
+    <img src="./public/img/github-new.png" alt="Visit The SpaceHub Project on GitHub" style="max-width: 100%; height: auto;">
   </a>
   <h1 align="left">
-    <!-- <span>SpaceHub Project</span> -->
   </h1>
 </div>
 
@@ -75,7 +74,6 @@ Contributions of all kinds are welcome! If you'd like to contribute, consider jo
 > [!WARNING]  
 > SpaceHub is under active development. Some features and docs may be incomplete outdated.
 
-## Getting involved?
 
 Checkout out the [community page](https://mkeithx.github.io/community) to know more how to participate!
 
@@ -87,10 +85,10 @@ Checkout out the [community page](https://mkeithx.github.io/community) to know m
   </a>
 </p> -->
 
-<div align="left">
+<hr>
 
-  <a href="https://mkeithx.github.io">
-    <img src="./website/static/img/intro-banner.png" target="_blank" alt="The SpaceHub Project" width="300">
-  </a>
-
+<div align="center">
+<a href="https://mkeithx.github.io" target="_blank" rel="noopener noreferrer">
+  <img src="./website/static/img/intro-banner.png" alt="The SpaceHub Project banner" width="300" style="max-width:100%; height:auto;">
+</a>
 </div>

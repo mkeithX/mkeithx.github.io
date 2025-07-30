@@ -190,7 +190,8 @@ html[data-navbar='false'] .theme-announcement-bar {
 }
 
 .theme-announcement-bar {
-  font-size: 12px;
+  font-size: 14px;
+  font-weight: 400;
   background: var(--ifm-site-dark);
   border-bottom-color: var(--ifm-site-dark) !important;
   color: var(--spacehub-purple) !important; 
