@@ -54,7 +54,7 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "Kitimi Universe",
-  tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
+  tagline: "The official docs website for the SpaceHub Project, featuring Guides, Code samples for IT admins and software developers.",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -374,7 +374,7 @@ const config: Config = {
       { name: "og:title", content: "Kitimi Universe" },
       {
         name: "og:description",
-        content: "A cosmic-flavored website for Software Development, Documentation and more!",
+        content: "The official docs website for the SpaceHub Project, featuring Guides, Code samples for IT admins and software developers.",
       },
     ],
   } satisfies Preset.ThemeConfig,

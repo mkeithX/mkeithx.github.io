@@ -8,6 +8,7 @@ import BannerLogo from '@site/static/img/logo/react-fb.svg';
 import React, {JSX} from 'react';
 import styles from './styles.module.css';
 import FeatureBrands from '../components/FeatureBrands';
+import TopBanner from '../components/TopBanner';
 
 function HomepageHeader(): JSX.Element {
   const {
@@ -61,6 +62,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout>
       <main>
+        {/* <TopBanner /> */}
         <HomepageHeader />
         <HomepageFeatures />
         <div className={styles.section}></div>

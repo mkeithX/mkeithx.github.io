@@ -1,0 +1,66 @@
+---
+title: Enable Copilot in Edge
+description: Enable Copilot in managed Edge browser
+---
+
+This article outlines how to enable Copilot (Chat) in Microsoft Edge for managed environments.
+
+These steps are applicable only if your organization restricts which browser extensions can be installed.
+
+
+
+:::caution Important for Admins
+
+Use this configuration if your organization enforces policies that:
+
+- **Limit which extensions users can install**
+- **Silently install approved extensions**
+- **Block specific extensions from being installed**
+
+:::
+
+## Required
+To enable Copilot functionality, the following Microsoft Edge extensions must be allowed:
+
+- Copilot extension
+    ```
+    nkbndigcebkoaejohleckhekfmcecfja
+    ```
+
+- Sidebar Extension
+    ```
+    ofefcgjbeghpigppfmkologfjadafddi
+    ```
+
+## Configuration
+To configure these settings using Microsoft Intune:
+
+1. Navigate to Devices > Configuration profiles
+
+    ![alt text](image.png)
+
+1. Create or edit a profile using Administrative Templates
+1. Search for Microsoft Edge > Extensions
+Configure the following policies:
+1. Allow specific extensions to be installed: 
+
+    - Add both extension IDs Control which extensions are installed silently:
+        - Add both extension IDs
+
+    - Control which extensions cannot be installed: 
+        - Ensure these IDs are not listed
+
+
+
+
+Go to Devices > Configuration profiles
+Create or edit a profile with Administrative Templates
+Search for Microsoft Edge > Extensions
+Configure the same three policies as above
+For more details, refer to the official Microsoft documentation:
+
+Microsoft Edge Extension Settings via Group Policy
+Configure Microsoft Edge with Intune
+
+![alt text](image-1.png)
+
