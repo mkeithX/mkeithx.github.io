@@ -37,7 +37,7 @@ function HomepageHeader(): JSX.Element {
             <br></br>
           </div>
           <div className={styles.heroSubtitle}>
-            <span className={styles.heroSubtitleText}>{"for Software Dev, IT Admins and More"}</span>
+            <span className={styles.heroSubtitleText}>{"Built for IT Admins & Software Developers"}</span>
           </div>
         </Heading>
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>

@@ -54,7 +54,7 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "Kitimi Universe",
-  tagline: "The official docs website for the SpaceHub Project, featuring Guides, Code samples for IT admins and software developers.",
+  tagline: "The official SpaceHub Project site featuring guides and code samples for IT admins and developers.",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
@@ -283,7 +283,7 @@ const config: Config = {
           ],
         },
         { to: "/community", label: "Community", position: "left" },        
-        { to: "/blog", label: "Updates", position: 'left' },
+        { to: "/blog", label: "Blog", position: 'left' },
         {
           type: "dropdown",
           label: "More",
@@ -374,7 +374,7 @@ const config: Config = {
       { name: "og:title", content: "Kitimi Universe" },
       {
         name: "og:description",
-        content: "The official docs website for the SpaceHub Project, featuring Guides, Code samples for IT admins and software developers.",
+        content: "The official SpaceHub Project site featuring guides and code samples for IT admins and developers.",
       },
     ],
   } satisfies Preset.ThemeConfig,
