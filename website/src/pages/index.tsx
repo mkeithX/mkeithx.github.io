@@ -29,7 +29,7 @@ function HomepageHeader(): JSX.Element {
           height={150} // 180
         />
         <div className={styles.heroSubtitle}>
-          <span className={styles.heroSubTitleText}>{"Explore"}</span>
+          <span className={styles.heroSubTitleText}>{"OpenSource"}</span>
         </div>
         <Heading as="h1">
           <div className={styles.heroBannerTitle}>
@@ -37,12 +37,12 @@ function HomepageHeader(): JSX.Element {
             <br></br>
           </div>
           <div className={styles.heroSubtitle}>
-            <span className={styles.heroSubtitleText}>{"Built for IT Admins & Software Developers"}</span>
+            <span className={styles.heroSubtitleText}>{"Built for IT Admins & Developers"}</span>
           </div>
         </Heading>
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
           <Link className={clsx('button button--lg')} to="/docs">
-            {"Get Started"}
+            {"Explore"}
           </Link>
           <Link className={clsx('button button--lg')} to="/blog/updates/july-2025">
             {"Latest"}
