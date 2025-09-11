@@ -42,7 +42,7 @@ const commonScripts = [
 ]
 
 const commonDocsConfig = {
-  showLastUpdateAuthor: false,
+  showLastUpdateAuthor: true,
   showLastUpdateTime: true,
   remarkPlugins: [
     [npm2yarn, { sync: true }],
@@ -54,14 +54,14 @@ const commonDocsConfig = {
 
 const config: Config = {
   title: "Kitimi Universe",
-  tagline: "A cosmic-flavored website for Software Development, Documentation and more!",
+  tagline: "The official SpaceHub Project site featuring guides and code samples for IT admins and developers.",
   favicon: "icons/favicon/round-dark.ico",
   url: "https://mkeithx.pages.dev",
   baseUrl: "/",
   organizationName: "mkeithX",
   projectName: "mkeithx.github.io",
   trailingSlash: false,
-  titleDelimiter: "·",
+  titleDelimiter: "•",
   onBrokenLinks: "throw",
   onBrokenMarkdownLinks: "warn",
   onBrokenAnchors: "throw",
@@ -162,12 +162,11 @@ const config: Config = {
           trackingID: "G-YYZ6V070LQ",
           anonymizeIP: true,
         },
-
-        // svgr: {
-        //   svgrConfig: {
-        //     svgoConfig: undefined,
-        //   },
-        // },
+        svgr: {
+          svgrConfig: {
+            svgoConfig: undefined,
+          },
+        },
       } satisfies Preset.Options,
     ],
   ],
@@ -231,7 +230,7 @@ const config: Config = {
       content:
         `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Articles published on this site are licensed under CC BY 4.0</a>`,
       isCloseable: false,
-      backgroundColor: '#051737ff',
+      backgroundColor: '#001127ff', // #051737ff
     },
 
     docs: {
@@ -283,8 +282,8 @@ const config: Config = {
             ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
           ],
         },
-        { to: "/blog", label: "Updates", position: 'left' },
-        { to: "/community", label: "Community", position: "left" },
+        { to: "/community", label: "Community", position: "left" },        
+        { to: "/blog", label: "Blog", position: 'left' },
         {
           type: "dropdown",
           label: "More",
@@ -325,9 +324,9 @@ const config: Config = {
         {
           title: "Docs",
           items: [
-            { label: "Quick Links", to: "/docs/quick-links" },
-            { label: "System Admin", to: "/docs/system-administration" },
-            { label: "The Keyword", to: "/me" },
+            { label: "Introduction", to: "/docs" },
+            { label: "IT Admins", to: "/docs/system-administration" },
+            { label: "Author's Note", to: "/me" },
           ],
         },
         {
@@ -342,8 +341,8 @@ const config: Config = {
           title: "Kitiplex",
           items: [
             socialProfiles.xdotcom,
-            socialProfiles.facebook,
             socialProfiles.github,
+            socialProfiles.facebook,            
           ],
         },
         {
@@ -375,7 +374,7 @@ const config: Config = {
       { name: "og:title", content: "Kitimi Universe" },
       {
         name: "og:description",
-        content: "A cosmic-flavored website for Software Development, Documentation and more!",
+        content: "The official SpaceHub Project site featuring guides and code samples for IT admins and developers.",
       },
     ],
   } satisfies Preset.ThemeConfig,

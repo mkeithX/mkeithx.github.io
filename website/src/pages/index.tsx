@@ -8,6 +8,7 @@ import BannerLogo from '@site/static/img/logo/react-fb.svg';
 import React, {JSX} from 'react';
 import styles from './styles.module.css';
 import FeatureBrands from '../components/FeatureBrands';
+import TopBanner from '../components/TopBanner';
 
 function HomepageHeader(): JSX.Element {
   const {
@@ -28,7 +29,7 @@ function HomepageHeader(): JSX.Element {
           height={150} // 180
         />
         <div className={styles.heroSubtitle}>
-          <span className={styles.heroSubTitleText}>{"Explore"}</span>
+          <span className={styles.heroSubTitleText}>{"OpenSource"}</span>
         </div>
         <Heading as="h1">
           <div className={styles.heroBannerTitle}>
@@ -36,12 +37,12 @@ function HomepageHeader(): JSX.Element {
             <br></br>
           </div>
           <div className={styles.heroSubtitle}>
-            <span className={styles.heroSubtitleText}>{"for Software Dev, IT Admins and More"}</span>
+            <span className={styles.heroSubtitleText}>{"Built for IT Admins & Developers"}</span>
           </div>
         </Heading>
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
           <Link className={clsx('button button--lg')} to="/docs">
-            {"Get Started"}
+            {"Explore"}
           </Link>
           <Link className={clsx('button button--lg')} to="/blog/updates/july-2025">
             {"Latest"}
@@ -61,6 +62,7 @@ export default function Home(): JSX.Element {
   return (
     <Layout>
       <main>
+        {/* <TopBanner /> */}
         <HomepageHeader />
         <HomepageFeatures />
         <div className={styles.section}></div>

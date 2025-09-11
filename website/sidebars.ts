@@ -34,7 +34,7 @@ const sidebars: SidebarsConfig = {
           link: {
             type: 'generated-index',
             slug: '/system-administration',
-            description: 'System admin guides',
+            description: "This section covers guides for IT admins",
           },
           items: [
             'guides/system-administration/ms-admin-intro',
@@ -63,6 +63,7 @@ const sidebars: SidebarsConfig = {
               },
               items: [
                 'guides/system-administration/ms-intune/custom-lockscreen',
+                'guides/system-administration/ms-intune/enable-copilot-edge',
                 'guides/system-administration/ms-intune/deploy-win32-app',
                 'guides/system-administration/ms-intune/enroll-device',
               ],
