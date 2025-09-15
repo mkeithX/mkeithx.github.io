@@ -23,25 +23,28 @@ In this short article, I’ll share a simple Windows command that can be useful 
 
 <!-- truncate -->
 
-In less than a month, [Windows 10 will reach its end of support on October 14, 2025](https://support.microsoft.com/en-us/windows/windows-10-support-ends-on-october-14-2025-2ca8b313-1946-43d3-b55c-2b95b107f281). That means Microsoft will stop providing updates and security fixes, and many users and businesses are deciding what to do next.
+
+:::caution[End of Support for Window 10]
+
+Microsoft will officially [end support for Windows 10 on October 14, 2025](https://support.microsoft.com/en-us/windows/windows-10-support-ends-on-october-14-2025-2ca8b313-1946-43d3-b55c-2b95b107f281). As organizations and individuals prepare to upgrade to Windows 11, many are looking for ways to maintain control over their setup — especially when it comes to user accounts.
+
+:::
 
 
-## Introducing the ```start ms-cxh:localonly``` command.
+## ```start ms-cxh:localonly```
 
-
-### What does it do?
-
-This command tells Windows to launch certain Microsoft apps in local-only mode — meaning they won’t connect to the internet or send data to Microsoft. It’s part of a system that controls how apps interact with cloud services.
+This command launches certain Microsoft apps in local-only mode, preventing them from connecting to the internet or syncing with cloud services. It’s a handy trick for creating a local account during Windows 11 setup.
 
 
 
-### Why it matters?
+### Why Use a Local Account?
 
-As more features in Windows rely on cloud connections, some users prefer to keep things local — especially in schools, kiosks, or older business setups. This command helps:
+Some environments benefit from keeping things offline:
 
-- Avoid cloud syncing
-- Protect user privacy
-- Run apps offline
+- Schools – Simplified device management
+- Kiosks – No need for cloud integration
+- Legacy setups – Maintain traditional workflows
+- Privacy-conscious users – Avoid unnecessary data sharing
 
 
 ### How to use
@@ -63,16 +66,14 @@ Here’s a trick that might work:
 1. This may trigger a local-only experience, depending on your Windows build.
 1. You can then follow prompts to create a local user account without signing in online.
 
-:::caution[IMPORTANT]
+    :::tip[Note]
 
-This method doesn’t work on all devices or builds. Microsoft has made it harder to skip online setup in recent versions, but this command can still help in some cases — especially in enterprise or education environments.
+    This method may not work on all builds. Microsoft has been tightening restrictions, but it remains effective in many enterprise and education scenarios.
 
-:::
-
-
+    :::
 
 
 
 ## Final Thoughts
 
-As Windows 10 reaches its end, knowing small tricks like ``start ms-cxh:localonly`` can give you more control over your setup. Whether you're upgrading or keeping things simple, it’s good to know how to stay local when you need to.
+As Windows 11 becomes the new standard, knowing how to create a local account gives you more flexibility and control. Whether you're setting up devices for a school, business, or personal use, this command can help you stay local — and stay in charge.
