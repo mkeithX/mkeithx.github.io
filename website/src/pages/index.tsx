@@ -44,7 +44,7 @@ function HomepageHeader(): JSX.Element {
           <Link className={clsx('button button--lg')} to="/docs">
             {"Explore"}
           </Link>
-          <Link className={clsx('button button--lg')} to="/blog/updates/july-2025">
+          <Link className={clsx('button button--lg')} to="/blog/2025/windows-11-local-setup">
             {"Latest"}
           </Link>
         </div>
