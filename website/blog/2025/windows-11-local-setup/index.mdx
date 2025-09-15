@@ -1,20 +1,76 @@
 ---
-title: Windows 11 Local Setup
-description: How to Create A Local Account in Windows 11
+title: Windows 11 Local Account
+description: Creating a Local Account on a New Windows 11 Device
 authors: [mkeithx]
 tags: [updates]
 image: ./img/banner.png
 date: 2025-09-15
 ---
 
-**Windows 11**
+import Video from "@site/src/components/Video";
+import BrowserWindow from "@site/src/components/BrowserWindow";
+import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
 
-If you're setting up Windows 11 and prefer not to use a Microsoft account, you're not alone. 
+<br />
 
-![postbanner](./img/banner-test.png)
+**Getting ready for Windows 11**
+
+In this short article, I’ll be sharing a simple Windows command that might come in handy in setting up you **Windows 11-ready device.**
+
+![postbanner](./img/banner.png)
 
 <!-- truncate -->
 
-Many users—especially those concerned with privacy or deploying devices in bulk—want a simple way to create a local account.
+In less than a month, [Windows 10 will reach its end of support on October 14, 2025](https://support.microsoft.com/en-us/windows/windows-10-support-ends-on-october-14-2025-2ca8b313-1946-43d3-b55c-2b95b107f281). That means Microsoft will stop providing updates and security fixes, and many users and businesses are deciding what to do next.
 
-During the initial setup of Windows 11 (especially Home edition), when you're prompted to sign in with a Microsoft account and there's no visible option to create a local account.
+
+## Introducing the ```start ms-cxh:localonly``` command.
+
+
+### What does it do?
+
+This command tells Windows to launch certain Microsoft apps in local-only mode — meaning they won’t connect to the internet or send data to Microsoft. It’s part of a system that controls how apps interact with cloud services.
+
+
+
+### Why it matters?
+
+As more features in Windows rely on cloud connections, some users prefer to keep things local — especially in schools, kiosks, or older business setups. This command helps:
+
+- Avoid cloud syncing
+- Protect user privacy
+- Run apps offline
+
+
+### How to use
+
+When setting up a new Windows 11 PC, Microsoft usually asks you to sign in with a Microsoft account. But what if you want to create a local account instead?
+
+Here’s a trick that might work:
+
+1. During setup, press **Shift + F10** to open Command Prompt.
+
+1. Type
+
+    ```sh
+    start ms-cxh:localonly
+    ```
+
+    ![alt text](./img/command.png)
+
+1. This may trigger a local-only experience, depending on your Windows build.
+1. You can then follow prompts to create a local user account without signing in online.
+
+:::caution[IMPORTANT]
+
+This method doesn’t work on all devices or builds. Microsoft has made it harder to skip online setup in recent versions, but this command can still help in some cases — especially in enterprise or education environments.
+
+:::
+
+
+
+
+
+## Final Thoughts
+
+As Windows 10 reaches its end, knowing small tricks like ``start ms-cxh:localonly`` can give you more control over your setup. Whether you're upgrading or keeping things simple, it’s good to know how to stay local when you need to.
