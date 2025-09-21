@@ -1,79 +1,88 @@
 ---
-title: Create a Local Account on Windows 11 Device
-description: Creating a Local Account on a New Windows 11 Device
+title: Create a Local Account on Windows 11
+description: How to Bypass the Microsoft Account requirement and Create a Local Account on a Windows 11 Device.
 authors: [mkeithx]
 tags: [updates, win11]
+keywords: [Windows11, Windows Local Account, Offline Registration]
 image: ./img/banner.png
 date: 2025-09-15
 sidebar_label: Local Account on Windows 11
 ---
 
-import Video from "@site/src/components/Video";
-import BrowserWindow from "@site/src/components/BrowserWindow";
+import Video from '@site/src/components/Video';
+import BrowserWindow from '@site/src/components/BrowserWindow';
 import IframeWindow from '@site/src/components/BrowserWindow/IframeWindow';
 
-<br />
 
-**Getting ready for Windows 11**
+**Preparing for Windows 11**
 
-In this short article, I’ll share a simple Windows command that can be useful when setting up your **Windows 11-ready device**.
+With [Microsoft set to officially end support for Windows 10](https://support.microsoft.com/en-us/windows/windows-10-support-ends-on-october-14-2025-2ca8b313-1946-43d3-b55c-2b95b107f281) in the coming days, many users are preparing to transition to Windows 11. In this short guide, I’ll show you how to bypass the Microsoft Account requirement and set up a local account during the Windows 11 installation.
+
 
 
 ![postbanner](./img/banner.png)
 
 <!-- truncate -->
 
-
-:::caution[End of Support for Window 10]
-
-Microsoft will officially [end support for Windows 10 on October 14, 2025](https://support.microsoft.com/en-us/windows/windows-10-support-ends-on-october-14-2025-2ca8b313-1946-43d3-b55c-2b95b107f281). As organizations and individuals prepare to upgrade to Windows 11, many are looking for ways to maintain control over their setup — especially when it comes to user accounts.
-
-:::
+<!-- If you're setting up Windows 11 and prefer not to sign in with a Microsoft account—or you're working without an internet connection—you'll quickly notice that the option to create a local account is missing from the setup process. Fortunately, there's a simple command that lets you bypass this limitation and proceed with creating a local user account instead. In this post, we'll walk you through the steps to bypass the Microsoft Account requirement during Windows 11 installation. -->
 
 
-## ```start ms-cxh:localonly```
+## The Problem
+During the Windows 11 setup process, Microsoft now requires users to sign in with a Microsoft account. In most editions, especially Home and Pro, there's no visible option to create a local account—unless you’re offline, and even then, newer builds sometimes block that path too.
 
-This command launches certain Microsoft apps in local-only mode, preventing them from connecting to the internet or syncing with cloud services. It’s a handy trick for creating a local account during Windows 11 setup.
+![win_11_setup_01](./img/win_11_setup_01.png)
 
 
 
-### Why Use a Local Account?
 
-Some environments benefit from keeping things offline:
-
-- Schools – Simplified device management
-- Kiosks – No need for cloud integration
-- Legacy setups – Maintain traditional workflows
-- Privacy-conscious users – Avoid unnecessary data sharing
+If you want to avoid using a Microsoft account—whether for privacy reasons or lack of internet access—you'll need to take a different route.
 
 
-### How to use
+## The Solution
 
-When setting up a new Windows 11 PC, Microsoft usually asks you to sign in with a Microsoft account. But what if you want to create a local account instead?
+Thankfully, there's a hidden command you can use during setup to skip the Microsoft account requirement and go straight to local account creation.
 
-Here’s a trick that might work:
+## Get started
 
-1. During setup, press **Shift + F10** to open Command Prompt.
+Step-by-Step: Bypass Microsoft Account Requirement
 
-1. Type
+### **Windows 11 Setup**
 
-    ```sh
-    start ms-cxh:localonly
-    ```
+   Boot from your Windows 11 installation media (USB or ISO). Start the installation as usual and follow the prompts until you reach the “Let’s connect you to a network” screen.
 
-    ![alt text](./img/command.png)
+   ![win_11_setup_0](./img/win_11_setup_0.png)
 
-1. This may trigger a local-only experience, depending on your Windows build.
-1. You can then follow prompts to create a local user account without signing in online.
+### **Get to the Command Prompt**
 
-    :::tip[Note]
+   On the network screen, press Shift + F10 to open a Command Prompt window.
 
-    This method may not work on all builds. Microsoft has been tightening restrictions, but it remains effective in many enterprise and education scenarios.
+### **Enter the Bypass Command**
 
-    :::
+   In the Command Prompt, type the following command and press Enter:
+   
+   ```sh
+   start ms-cxh:localonly
+   ```
 
+   ![win_11_setup_03](./img/win_11_setup_03.png)
+
+### **Continue with Setup**
+
+   This command will close the current setup window and open the local account creation screen. From here, you can set a username and password just like in older versions of Windows.
+
+
+   ![win_11_setup_02](./img/win_11_setup_02.png)
+
+### **Finish Installation**
+
+   Complete the remaining steps to finish installing Windows 11 with your new local account—no Microsoft sign-in required.
 
 
 ## Final Thoughts
 
-As Windows 11 becomes the new standard, knowing how to create a local account gives you more flexibility and control. Whether you're setting up devices for a school, business, or personal use, this command can help you stay local — and stay in charge.
+This method is a quick and effective workaround for users who want to install Windows 11 without being forced into a Microsoft account. While Microsoft may continue tightening restrictions in future builds, as of now, this command works on current versions of Windows 11.
+
+If you're setting up multiple machines or just value your privacy, keeping this trick in your toolkit can save you time and frustration.
+
+---
+'till next time. - *K*
