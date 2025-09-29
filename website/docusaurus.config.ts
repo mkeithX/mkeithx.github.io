@@ -63,7 +63,6 @@ const config: Config = {
   trailingSlash: false,
   titleDelimiter: "•",
   onBrokenLinks: "throw",
-  onBrokenMarkdownLinks: "warn",
   onBrokenAnchors: "throw",
 
   future: {
@@ -101,6 +100,9 @@ const config: Config = {
   markdown: {
     format: "detect",
     mermaid: true,
+    hooks: {
+        onBrokenMarkdownLinks: 'warn',
+      },
   },
 
   presets: [
