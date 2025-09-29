@@ -2,11 +2,18 @@
 title: Custom Diagrams
 description: Rendering custom diagrams using Mermaid.
 ---
+
+import '@mermaid-js/layout-elk'
+
 :::caution[work in progress]
 
 :::
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 graph TD;
     A-->B;
     A-->C;
@@ -15,6 +22,10 @@ graph TD;
 ```
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 erDiagram
           CUSTOMER }|..|{ DELIVERY-ADDRESS : has
           CUSTOMER ||--o{ ORDER : places
@@ -29,6 +40,10 @@ erDiagram
 
 
 ```mermaid
+---
+config:
+  layout: elk
+---
 kanban
   Todo
     [Create Documentation]
