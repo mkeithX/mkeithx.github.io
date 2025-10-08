@@ -284,8 +284,10 @@ const config: Config = {
             ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
           ],
         },
+        { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community", position: "left" },        
-        { to: "/blog", label: "Blog", position: 'left' },
+        // { to: "/blog", label: "Blog", position: 'left' },
+        
         {
           type: "dropdown",
           label: "More",
