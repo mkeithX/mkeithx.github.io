@@ -109,7 +109,7 @@ const config: Config = {
     [
       "classic",
       {
-        docs: {
+        docs: {      
           path: "docs",
           sidebarPath: "./sidebars.ts",
           routeBasePath: "docs",
@@ -231,7 +231,7 @@ const config: Config = {
       id: `announcementBar_`,
       content:
         `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Articles published on this site are licensed under CC BY 4.0</a>`,
-      isCloseable: false,
+      isCloseable: true,
       backgroundColor: '#001127ff', // #051737ff
     },
 
@@ -262,7 +262,7 @@ const config: Config = {
       hideOnScroll: false,
       title: "Kitimi Universe",
       logo: {
-        alt: "SpaceHub",
+        alt: "Kitimi Universe",
         src: "img/logo/kitimi-icon-new.svg",
         target: "_self",
         // height: "40",
@@ -284,8 +284,10 @@ const config: Config = {
             ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
           ],
         },
+        { to: "/blog", label: "Blog" },
         { to: "/community", label: "Community", position: "left" },        
-        { to: "/blog", label: "Blog", position: 'left' },
+        // { to: "/blog", label: "Blog", position: 'left' },
+        
         {
           type: "dropdown",
           label: "More",
@@ -340,7 +342,7 @@ const config: Config = {
           ],
         },
         {
-          title: "Kitiplex",
+          title: "Social",
           items: [
             socialProfiles.xdotcom,
             socialProfiles.github,
