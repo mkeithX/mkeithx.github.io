@@ -26,3 +26,7 @@ user_story:
   permalink: /user-story
 mkeithX:
   label: mkeithX
+win11:
+  description: "Posts related to Windows 11."
+  label: Windows 11
+  permalink: /windows-11

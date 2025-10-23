@@ -56,19 +56,16 @@
 
 @media (max-width: 768px) {
   .heroBannerTitle {
-    /* padding: 1rem 0; */
     font-size: 48px;
     font-weight: bold;
-    margin: 0.8px 0 0.2rem;
   }
 }
 
 .heroBannerTitleText {
-  /* font-weight: bold; */
   background: linear-gradient(
     -90deg,
     #8affff 0%,
-    #1da1f2 50%,
+    #1da1f2 30%,
     #b070ff 100%
   );
   background-clip: text;
@@ -79,6 +76,7 @@
 .heroSubtitle {
   font-size: 22px;
   font-weight: 300;
+  margin: 2px 0.4rem;
 }
 
 @media (max-width: 768px) {
