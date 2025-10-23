@@ -230,7 +230,7 @@ const config: Config = {
     announcementBar: {
       id: `announcementBar_`,
       content:
-        `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Articles published on this site are licensed under CC BY 4.0</a>`,
+        `<a href="https://creativecommons.org/licenses/by/4.0/" target="_blank" rel="noopener noreferrer">Articles on this site are licensed under CC BY 4.0</a>`,
       isCloseable: true,
       backgroundColor: '#001127ff', // #051737ff
     },
@@ -284,7 +284,7 @@ const config: Config = {
             ...(isDev ? [{ to: '/tests', label: 'Test ⚠️' }] : []),
           ],
         },
-        { to: "/blog", label: "Blog" },
+        { to: "/blog", label: "Updates" },
         { to: "/community", label: "Community", position: "left" },        
         // { to: "/blog", label: "Blog", position: 'left' },
         
