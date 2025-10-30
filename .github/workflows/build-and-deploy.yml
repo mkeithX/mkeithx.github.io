@@ -35,7 +35,7 @@ jobs:
           npm ci --no-audit && npm run build
 
       - name: Archive production build
-        uses: actions/upload-artifact@v4.6.2
+        uses: actions/upload-artifact@v5.0.0
         with:
           name: build-artifact
           path: website/build
