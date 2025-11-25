@@ -19,7 +19,7 @@ jobs:
 
     steps:
       - name: Clone Repo
-        uses: actions/checkout@v5
+        uses: actions/checkout@v6
 
       - name: Configure Python Environment
         uses: actions/setup-python@v6.0.0
