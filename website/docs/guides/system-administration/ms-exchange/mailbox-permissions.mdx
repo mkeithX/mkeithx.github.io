@@ -1,0 +1,161 @@
+---
+title: Mailbox Permissions + PowerShell
+description: Change mailbox permissions in Exchange Online using PowerShell
+---
+
+# Mailbox Permissions with PowerShell
+
+This guide explains how to grant **Send on Behalf** permissions to a group of users in Exchange Online using PowerShell.
+
+:::tip[Scenario]
+In this example, we grant **Send on Behalf** permissions to all active users in the **Marketing Department** for the mailbox `mktg.update@your-mailbox.com`.
+:::
+
+
+
+## Prerequisites
+
+Before running the script, ensure you have:
+
+- **Exchange Online PowerShell Module**  
+  Install or update the module:
+
+  ```powershell
+  Install-Module ExchangeOnlineManagement -Scope CurrentUser
+  Update-Module ExchangeOnlineManagement
+  ```
+
+- **Permissions**  
+  You need appropriate admin rights in Exchange Online (e.g., **Organization Management** role).
+
+
+
+## Script Breakdown
+Here’s a breakdown of each command so you know exactly what it does and why it’s important. You can also see the [full-script](#full-script) 
+
+
+### Connect to Exchange Online
+Establishes a secure session with Exchange Online using your admin account.
+
+```powershell
+Connect-ExchangeOnline -UserPrincipalName Your.Name@your-mailbox.com
+```
+
+### Define Target Mailbox
+Stores the mailbox name in a variable for easy reuse.
+
+```powershell
+$targetMailbox = "mktg.update@your-mailbox.com"
+```
+
+### Get Current Delegates
+Retrieves existing **Send on Behalf** delegates for the target mailbox.
+
+```powershell
+$currentDelegates = (Get-Mailbox -Identity $targetMailbox).GrantSendOnBehalfTo
+```
+
+### Filter Users by Department
+Pulls all active user mailboxes from specified departments.
+
+```powershell
+$users = Get-User -ResultSize Unlimited | Where-Object {
+    ($_.Department -eq "Marketing" -or $_.Department -eq "Mktg") -and $_.RecipientTypeDetails -eq "UserMailbox"
+}
+```
+
+
+### Add Delegates if Missing
+
+Loops through each user:
+- Adds them as a delegate if not already present.
+- Handles errors gracefully with `try/catch`.
+
+
+```powershell
+foreach ($user in $users) {
+    if ($currentDelegates -notcontains $user.Identity) {
+        try {
+            Set-Mailbox -Identity $targetMailbox -GrantSendOnBehalfTo @{Add=$user.Identity}
+            Write-Host "Added $($user.DisplayName) as Send on Behalf delegate."
+        } catch {
+            Write-Warning "Failed to add $($user.DisplayName): $_"
+        }
+    } else {
+        Write-Host "$($user.DisplayName) already has Send on Behalf permission."
+    }
+}
+```
+
+
+
+### Disconnect Session
+Closes the session without prompting for confirmation.
+
+```powershell
+Disconnect-ExchangeOnline -Confirm:$false
+```
+
+
+
+## Troubleshooting Tips
+
+| Issue | Possible Cause | Fix |
+|-------|---------------|-----|
+| **Module not found** | ExchangeOnlineManagement module not installed | Run `Install-Module ExchangeOnlineManagement` |
+| **Authentication fails** | MFA or wrong UPN | Use an account with proper permissions and MFA support |
+| **User not found** | Department name mismatch | Verify department names in Azure AD |
+| **Permission denied** | Insufficient admin rights | Ensure you have **Organization Management** role |
+| **Script runs but no changes** | Users already have permissions | Check `$currentDelegates` before adding |
+
+
+
+## Full Script
+
+<details>
+<summary>Show Entire Code</summary>
+
+```powershell
+# Connect to Exchange Online
+Connect-ExchangeOnline -UserPrincipalName Your.Name@your-mailbox.com
+
+# Define target mailbox
+$targetMailbox = "mktg.update@your-mailbox.com"
+
+# Get current Send on Behalf delegates
+$currentDelegates = (Get-Mailbox -Identity $targetMailbox).GrantSendOnBehalfTo
+
+# Get active users from departments "Marketing" and "Mktg"
+$users = Get-User -ResultSize Unlimited | Where-Object {
+    ($_.Department -eq "Marketing" -or $_.Department -eq "Mktg") -and $_.RecipientTypeDetails -eq "UserMailbox"
+}
+
+# Loop through each user and add if not already a delegate
+foreach ($user in $users) {
+    if ($currentDelegates -notcontains $user.Identity) {
+        try {
+            Set-Mailbox -Identity $targetMailbox -GrantSendOnBehalfTo @{Add=$user.Identity}
+            Write-Host "Added $($user.DisplayName) as Send on Behalf delegate."
+        } catch {
+            Write-Warning "Failed to add $($user.DisplayName): $_"
+        }
+    } else {
+        Write-Host "$($user.DisplayName) already has Send on Behalf permission."
+    }
+}
+
+# Disconnect session
+Disconnect-ExchangeOnline -Confirm:$false
+```
+
+</details>
+
+
+## Related Commands
+
+- **Remove a delegate**:
+
+  ```powershell
+  Set-Mailbox -Identity $targetMailbox -GrantSendOnBehalfTo @{Remove="user@domain.com"}
+  ```
+
