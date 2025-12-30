@@ -12,7 +12,7 @@ const sidebars: SidebarsConfig = {
     //   label: "Getting Started",
     //   collapsed: false,
     //   items: [
-    
+
     //   ]
     // },
     {
@@ -23,7 +23,7 @@ const sidebars: SidebarsConfig = {
         type: 'generated-index',
         title: 'Guides',
         slug: '/guides',
-        description: "Explore guides for system admin and more.",
+        description: 'Explore guides for system admin and more.',
       },
       items: [
         'guides/windows-utils',
@@ -34,7 +34,7 @@ const sidebars: SidebarsConfig = {
           link: {
             type: 'generated-index',
             slug: '/system-administration',
-            description: "This section covers guides for IT admins",
+            description: 'This section covers guides for IT admins',
           },
           items: [
             'guides/system-administration/ms-admin-intro',
@@ -51,6 +51,8 @@ const sidebars: SidebarsConfig = {
                 'guides/system-administration/ms-entra/conditional-access',
                 'guides/system-administration/ms-entra/emergency-access',
                 'guides/system-administration/ms-entra/custom-branding',
+                'guides/system-administration/ms-entra/deploy-gsa',
+                //
               ],
             },
             {
@@ -78,6 +80,7 @@ const sidebars: SidebarsConfig = {
               },
               items: [
                 'guides/system-administration/ms-exchange/mailbox-archive',
+                'guides/system-administration/ms-exchange/mailbox-permissions',
               ],
             },
           ],
@@ -130,12 +133,7 @@ const sidebars: SidebarsConfig = {
       type: 'category',
       label: 'Extras',
       collapsed: true,
-      items: [
-        'configuration',
-        'quick-links',
-        'downloads', 
-        'archives'
-      ],
+      items: ['configuration', 'quick-links', 'downloads', 'archives'],
     },
 
     // {
