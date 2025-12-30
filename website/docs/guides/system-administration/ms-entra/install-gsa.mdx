@@ -1,6 +1,6 @@
 ---
 title: Global Secure Access
-description: Deploy Global Secure Access with Intune and Silently Install on Windows.
+description: Deploy Global Secure Access with Intune and Silently Install on Windows Devices.
 keywords: 
     - GSA
     - Global Secure Access
@@ -13,7 +13,15 @@ image: ./assets/gsa-kb-banner.png
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-Microsoft Global Secure Access (GSA) provides secure connectivity by converging identity, endpoint, and network access controls. Deploying the GSA client through Microsoft Intune allows administrators to centrally manage installation across Windows devices, ensuring silent deployment without user prompts.
+## What is Global Secure Access?
+Global Secure Access (GSA) is a Microsoft solution that helps keep your organization’s network safe when employees connect from anywhere. It combines three things:
+
+- Identity (who you are),
+- Device security (is your device trusted?),
+- Network access (what resources you can reach).
+
+This article outlines how to deploy Global Secure Access (GSA) with Intune and install it silently on Windows devices.
+
 
 ## Prerequisite
 
@@ -23,30 +31,25 @@ Microsoft Global Secure Access (GSA) provides secure connectivity by converging 
 - Access to Intune
 - GSA client installer
 - Packaging tool
-- Security Group either device or users
+- Security Group (Device or Users)
 
-## Download
+## Download the GSA Client
 
-### GSA Client (Entra)
 1. Sign in to the Microsoft Entra admin center.
 2. Navigate to Global Secure Access > Connect > Client Download.
 
     ![gsa-entra](./assets/gsa-entra.png)
 
+## Prepare the Installer
 
-### Utility Tool (GitHub)
+<!-- Download `IntuneWinAppUtil.exe` from [GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool) and convert the Windows client (`.exe`) to `.intunewin` format: -->
+
 1. Download the `IntuneWinAppUtil.exe` [GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool).
 
     ![intunewin-1](./assets/intunewin-1.png)
     ![intunewin-2](./assets/intunewin-2.png)
 
-### Package the Client
-The Windows Client (`.exe`) needs to be converted to `.intunewin`. To do this:
-
-
-<!-- 1. [Download](/files/GlobalSecureAccessClient.ps1) or copy the code below and create a file in `.ps1` and save it in your local machine. -->
-
-1. Copy the code below, create a `.ps1` file, and save it on your local machine:
+1. Copy the script below and save it as `.ps1` file.
     
     <details>
     <summary>PowerShell</summary>
@@ -178,60 +181,61 @@ The Windows Client (`.exe`) needs to be converted to `.intunewin`. To do this:
 
 1. Navigate to Intune Admin Center
 1. Select Apps > Windows > Create.
-1. On the Select app type pane, under the Other app types, select Windows app (Win32).
-1. Click Select. The Add app steps appear.
-1. Click Select app package file.
-1. Click the blue folder and open the .intunewin file you created in the previous section.
-
+1. On the Select app type pane.
+1. Under the **Select app types** > choose Windows app (Win32) and click Select.
+    
     ![winapps](./assets/winapps.png)
     ![win32](./assets/win32.png)
+
+1. Click Select app package file option.
+1. Click the blue folder to upload the `.intunewin` file
+
+
     ![appfile](./assets/appfile.png)
 
-1. Fill in the App information
+1. Complete the following steps:
 
-    ![appinfo](./assets/appinfo.png)
+    - Fill in the details on the app informantion.
 
-1. Specify the commands
+        ![appinfo](./assets/appinfo.png)
 
-    ![commands](./assets/commands.png)
+    - Specify install/uninstall commands.
 
-1. Fill in the requirements
+        ![commands](./assets/commands.png)
 
-    ![requirements](./assets/requirements.png)
+    - Define OS and architecture
 
-1. Configure detection rule
+        ![requirements](./assets/requirements.png)
 
-    ![detectionrule](./assets/detectionrule.png)
+    - Configure detection rule appropriately
 
-1. Click OK > Click Next.
-1. Click Next two more times to get to the Assignments tab.
+        ![detectionrule](./assets/detectionrule.png)
+
+1. Click OK, then Next twice to reach Assignments
 1. Under Required click +Add group. Select a group of users or devices and click Select.
 1. Click Next. Click Create.
 
 
 ## Monitor Installation
 
-Check Deployment Status via Intune Admin Center:
+Check deployment status via Intune Admin Center:
 
-1. In the Windows apps list > find the app you deployed.
-1. Select any of the following option in the Monitor dropdown.
+- Go to Windows apps list, find the deployed app
+- Use the **Monitor** dropdown for status options.
 
 When Installation Is Successful
 
-- Taskbar
+Taskbar 
 
-    ![gsa-taskicon](./assets/gsa-taskicon.png)
+![gsa-taskicon](./assets/gsa-taskicon.png)
 
-- UI
-    
-    ![gsaui](./assets/gsa-ui.png)
-
+GSA User Interface
+![gsaui](./assets/gsa-ui.png)
 
 
-## Reference
+
+## Learn more
 
 - [Package Script](https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-install-windows-client#package-the-client)
-
 - [aka.ms/GlobalSecureAccess-Windows](http://aka.ms/GlobalSecureAccess-Windows)
-
-- [Known Issues](https://microsoft.github.io/GlobalSecureAccess/Troubleshooting/KnownIssues)
+- [GSA Known Issues](https://microsoft.github.io/GlobalSecureAccess/Troubleshooting/KnownIssues)
