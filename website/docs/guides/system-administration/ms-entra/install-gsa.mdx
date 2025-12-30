@@ -1,6 +1,7 @@
 ---
 title: Global Secure Access
 description: Deploying Microsoft Global Secure Access via Intune with Silent Installation on Windows Devices
+image: ./assets/GSA-KB.png
 ---
 
 import Tabs from '@theme/Tabs';
@@ -200,6 +201,24 @@ The Windows Client (`.exe`) needs to be converted to `.intunewin`. To do this:
 1. Click Next two more times to get to the Assignments tab.
 1. Under Required click +Add group. Select a group of users or devices and click Select.
 1. Click Next. Click Create.
+
+
+## Monitor Installation
+
+Check Deployment Status via Intune Admin Center:
+
+1. In the Windows apps list > find the app you deployed.
+1. Select any of the following option in the Monitor dropdown.
+
+When Installation Is Successful
+
+- Taskbar
+
+    ![gsa-taskicon](./assets/gsa-taskicon.png)
+
+- UI
+    
+    ![gsaui](./assets/gsa-ui.png)
 
 
 
