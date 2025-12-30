@@ -13,23 +13,23 @@ image: ./assets/gsa-kb-banner.png
 import Tabs from '@theme/Tabs';
 import TabItem from '@theme/TabItem';
 
-## What is Global Secure Access?
+This article outlines how to deploy Global Secure Access (GSA) with Intune and install it silently on Windows devices.
+
+## What is GSA?
 Global Secure Access (GSA) is a Microsoft solution that helps keep your organization’s network safe when employees connect from anywhere. It combines three things:
 
 - Identity (who you are),
 - Device security (is your device trusted?),
 - Network access (what resources you can reach).
 
-This article outlines how to deploy Global Secure Access (GSA) with Intune and install it silently on Windows devices.
-
 
 ## Prerequisite
 
 - Microsoft Entra environment with Global Secure Access enabled.
-- Devices must be Entra joined or hybrid joined
-- Administrative role: [GSA Administrator](https://learn.microsoft.com/en-us/entra/global-secure-access/reference-role-based-permissions#role-based-permissions) in Entra.
-- Access to Intune
-- GSA client installer
+- Devices must be Entra joined or hybrid joined.
+- Admin role in Entra. [Learn more](https://learn.microsoft.com/en-us/entra/global-secure-access/reference-role-based-permissions#role-based-permissions).
+- Access to Intune.
+- GSA client installer.
 - Packaging tool
 - Security Group (Device or Users)
 
@@ -40,9 +40,7 @@ This article outlines how to deploy Global Secure Access (GSA) with Intune and i
 
     ![gsa-entra](./assets/gsa-entra.png)
 
-## Prepare the Installer
-
-<!-- Download `IntuneWinAppUtil.exe` from [GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool) and convert the Windows client (`.exe`) to `.intunewin` format: -->
+## Packaging
 
 1. Download the `IntuneWinAppUtil.exe` [GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool).
 
