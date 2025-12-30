@@ -1,0 +1,212 @@
+---
+title: Global Secure Access
+description: Deploying Microsoft Global Secure Access via Intune with Silent Installation on Windows Devices
+---
+
+import Tabs from '@theme/Tabs';
+import TabItem from '@theme/TabItem';
+
+Microsoft Global Secure Access (GSA) provides secure connectivity by converging identity, endpoint, and network access controls. Deploying the GSA client through Microsoft Intune allows administrators to centrally manage installation across Windows devices, ensuring silent deployment without user prompts.
+
+## Prerequisite
+
+- Microsoft Entra environment with Global Secure Access enabled.
+- Devices must be Entra joined or hybrid joined
+- Administrative role: [GSA Administrator](https://learn.microsoft.com/en-us/entra/global-secure-access/reference-role-based-permissions#role-based-permissions) in Entra.
+- Access to Intune
+- GSA client installer
+- Packaging tool
+- Security Group either device or users
+
+## Download
+
+### GSA Client (Entra)
+1. Sign in to the Microsoft Entra admin center.
+2. Navigate to Global Secure Access > Connect > Client Download.
+
+    ![gsa-entra](./assets/gsa-entra.png)
+
+
+### Utility Tool (GitHub)
+1. Download the `IntuneWinAppUtil.exe` [GitHub](https://github.com/microsoft/Microsoft-Win32-Content-Prep-Tool).
+
+    ![intunewin-1](./assets/intunewin-1.png)
+    ![intunewin-2](./assets/intunewin-2.png)
+
+### Package the Client
+The Windows Client (`.exe`) needs to be converted to `.intunewin`. To do this:
+
+
+<!-- 1. [Download](/files/GlobalSecureAccessClient.ps1) or copy the code below and create a file in `.ps1` and save it in your local machine. -->
+
+1. Copy the code below, create a `.ps1` file, and save it on your local machine:
+    
+    <details>
+    <summary>PowerShell</summary>
+
+    ```powershell showLineNumbers title="GlobalSecureAccessClient.ps1"
+    # Create log directory and log helper
+    $logFile = "$env:ProgramData\GSAInstall\install.log"
+    New-Item -ItemType Directory -Path (Split-Path $logFile) -Force |   Out-Null
+
+    function Write-Log {
+        param([string]$message)
+        $timestamp = Get-Date -Format "yyyy-MM-dd HH:mm:ss"
+        Add-Content -Path $logFile -Value "$timestamp - $message"
+    }
+
+    try {
+        $ErrorActionPreference = 'Stop'
+        Write-Log "Starting Global Secure Access client installation."
+
+    # IPv4 preferred via DisabledComponents registry value
+        $ipv4RegPath    =   "HKLM:\SYSTEM\CurrentControlSet\Services\Tcpip6\Parameters"
+        $ipv4RegName    = "DisabledComponents"
+        $ipv4RegValue   = 0x20  # Prefer IPv4 over IPv6
+        $rebootRequired = $false
+
+    # Ensure the key exists
+        if (-not (Test-Path $ipv4RegPath)) {
+            New-Item -Path $ipv4RegPath -Force | Out-Null
+            Write-Log "Created registry key: $ipv4RegPath"
+        }
+
+    # Get current value if present
+        $existingValue = $null
+        $valueExists = $false
+        try {
+            $existingValue = Get-ItemPropertyValue -Path $ipv4RegPath   -Name $ipv4RegName -ErrorAction Stop
+            $valueExists = $true
+        } catch {
+            $valueExists = $false
+        }
+
+    # Determine if we must change it
+        $expected = [int]$ipv4RegValue
+        $needsChange = -not $valueExists -or ([int]$existingValue -ne   $expected)
+
+    if ($needsChange) {
+            if (-not $valueExists) {
+                # Create as DWORD when missing
+                New-ItemProperty -Path $ipv4RegPath -Name $ipv4RegName  -PropertyType DWord -Value $expected -Force | Out-Null
+                Write-Log ("IPv4Preferred value missing. Created '{0}'  with value 0x{1} (dec {2})." -f $ipv4RegName, ([Convert] ::ToString($expected,16)), $expected)
+            } else {
+                # Update if different
+                Set-ItemProperty -Path $ipv4RegPath -Name $ipv4RegName  -Value $expected
+                Write-Log ("IPv4Preferred value differed. Updated '{0}'     from 0x{1} (dec {2}) to 0x{3} (dec {4})." -f    $ipv4RegName, ([Convert]::ToString([int]$existingValue,    16)), [int]$existingValue, ([Convert]::ToString ($expected,16)), $expected)
+            }
+            $rebootRequired = $true
+        } else {
+            Write-Log ("IPv4Preferred already set correctly: {0}=0x{1}  (dec {2}). No change." -f $ipv4RegName, ([Convert]::ToString ($expected,16)), $expected)
+        }
+
+    # Resolve installer path
+        $ScriptRoot = if ($PSScriptRoot) { $PSScriptRoot } else {   Split-Path -Parent $MyInvocation.MyCommand.Path }
+        $installerPath = Join-Path -Path $ScriptRoot -ChildPath     "GlobalSecureAccessClient.exe"
+        Write-Log "Running installer from $installerPath"
+
+    if (Test-Path $installerPath) {
+            $installProcess = Start-Process -FilePath $installerPath    -ArgumentList "/quiet" -Wait -PassThru
+
+    if ($installProcess.ExitCode -eq 1618) {
+                Write-Log "Another installation is in progress. Exiting     with code 1618."
+                exit 1618
+            } elseif ($installProcess.ExitCode -ne 0) {
+                Write-Log "Installer exited with code $($installProcess.    ExitCode)."
+                exit $installProcess.ExitCode
+            }
+
+    Write-Log "Installer completed successfully."
+        } else {
+            Write-Log "Installer not found at $installerPath"
+            exit 1
+        }
+
+    if ($rebootRequired) {
+            Write-Log "Reboot required due to registry value creation   or update."
+            exit 3010  # Soft reboot required
+        } else {
+            Write-Log "Installation complete. No reboot required."
+            exit 0
+        }
+    }
+    catch {
+        Write-Log "Fatal error: $_"
+        exit 1603
+    }
+    ```
+    </details>
+
+    :::security[important]
+
+    The Global Secure Access client and the PowerShell script must have     the same filename and be located in the same directory on your  machine. For example:
+
+    - `GlobalSecureAccessClient.ps1`
+    - `GlobalSecureAccessClient.exe`
+
+    ![LocalDir](./assets/local-dir.png)
+
+    :::
+
+
+1. Run the `IntuneWinAppUtil.exe` and follow the prompt:
+
+
+    <!-- <pre>
+      <b>Please specify the source: </b>C:\Users\Keith\Desktop\WindowGSAInstaller
+      <b>Please specify the setup file: </b>GlobalSecureAccessClient.ps1
+      <b>Please specify the output folder: </b>C:\Users\Keith\Desktop\WindowGSAInstaller
+      <b>Do you want to specify catalog folder (Y/N): </b>N
+    </pre> -->
+
+    
+    ```jsx
+    Please specify the source folder: C:\Users\Keith\Desktop\WindowGSAInstaller
+    Please specify the setup file: GlobalSecureAccessClient.ps1
+    Please specify the output folder: C:\Users\Keith\Desktop\WindowGSAInstaller
+    Do you want to specify catalog folder: N
+    ```
+
+## Deploy GSA with Intune
+
+1. Navigate to Intune Admin Center
+1. Select Apps > Windows > Create.
+1. On the Select app type pane, under the Other app types, select Windows app (Win32).
+1. Click Select. The Add app steps appear.
+1. Click Select app package file.
+1. Click the blue folder and open the .intunewin file you created in the previous section.
+
+    ![winapps](./assets/winapps.png)
+    ![win32](./assets/win32.png)
+    ![appfile](./assets/appfile.png)
+
+1. Fill in the App information
+
+    ![appinfo](./assets/appinfo.png)
+
+1. Specify the commands
+
+    ![commands](./assets/commands.png)
+
+1. Fill in the requirements
+
+    ![requirements](./assets/requirements.png)
+
+1. Configure detection rule
+
+    ![detectionrule](./assets/detectionrule.png)
+
+1. Click OK > Click Next.
+1. Click Next two more times to get to the Assignments tab.
+1. Under Required click +Add group. Select a group of users or devices and click Select.
+1. Click Next. Click Create.
+
+
+
+## Reference
+
+- [Package Script](https://learn.microsoft.com/en-us/entra/global-secure-access/how-to-install-windows-client#package-the-client)
+
+- [aka.ms/GlobalSecureAccess-Windows](http://aka.ms/GlobalSecureAccess-Windows)
+
+- [Known Issues](https://microsoft.github.io/GlobalSecureAccess/Troubleshooting/KnownIssues)
