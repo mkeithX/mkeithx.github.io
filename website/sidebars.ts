@@ -51,7 +51,7 @@ const sidebars: SidebarsConfig = {
                 'guides/system-administration/ms-entra/conditional-access',
                 'guides/system-administration/ms-entra/emergency-access',
                 'guides/system-administration/ms-entra/custom-branding',
-                'guides/system-administration/ms-entra/install-gsa',
+                'guides/system-administration/ms-entra/deploy-gsa',
                 //
               ],
             },
