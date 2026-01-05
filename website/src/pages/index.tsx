@@ -29,23 +29,29 @@ function HomepageHeader(): JSX.Element {
           height={150} // 180
         />
         <div className={styles.heroSubtitle}>
-          <span className={styles.heroSubTitleText}>{"OpenSource"}</span>
+          <span className={styles.heroSubTitleText}>{'OpenSource'}</span>
         </div>
         <Heading as="h1">
           <div className={styles.heroBannerTitle}>
-            <span className={styles.heroBannerTitleText}>{"Guides and Code Samples"}</span>
+            <span className={styles.heroBannerTitleText}>
+              {'Guides and Code Samples'}
+            </span>
             <br></br>
           </div>
           <div className={styles.heroSubtitle}>
-            <span className={styles.heroSubtitleText}>{"Built for IT Admins & Developers"}</span>
+            <span className={styles.heroSubtitleText}>
+              {'Built for IT Admins & Developers'}
+            </span>
           </div>
         </Heading>
         <div className={clsx(styles.indexCtas, 'margin-vert--md')}>
           <Link className={clsx('button button--lg')} to="/docs">
-            {"Explore"}
+            {'Explore'}
           </Link>
-          <Link className={clsx('button button--lg')} to="/blog/2025/windows-11-local-setup">
-            {"Latest"}
+          <Link
+            className={clsx('button button--lg')}
+            to="/blog/2025/artemis-2">
+            {'Latest'}
           </Link>
         </div>
       </div>
