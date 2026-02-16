@@ -15,6 +15,7 @@ import TabItem from '@theme/TabItem';
 
 This article outlines how to deploy Global Secure Access (GSA) with Intune and install it silently on Windows devices.
 
+
 ## What is GSA?
 Global Secure Access (GSA) is a Microsoft solution that helps keep your organization’s network safe when employees connect from anywhere. It combines three things:
 
@@ -198,6 +199,14 @@ Global Secure Access (GSA) is a Microsoft solution that helps keep your organiza
         ![appinfo](./assets/appinfo.png)
 
     - Specify install/uninstall commands.
+
+        ```powershell
+        powershell.exe -ExecutionPolicy Bypass -File GlobalSecureAccessClient.ps1
+        ```
+
+        ```powershell
+        "GlobalSecureAccessClient.exe" /uninstall /quiet /norestart
+        ```
 
         ![commands](./assets/commands.png)
 
