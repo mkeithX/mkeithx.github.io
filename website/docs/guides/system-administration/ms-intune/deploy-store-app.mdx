@@ -1,8 +1,74 @@
 ---
 title: Deploy Microsoft Store App
-description: Install and deploy Microsoft Store app via Intune
+description: Deploy Microsoft Store app via Intune
 ---
 
 import ComingSoon from "@site/src/components/ComingSoon";
+import MSIntune from '@site/static/img/logo/Microsoft-intune.svg';
 
-<ComingSoon />
+<!-- <ComingSoon /> -->
+
+<MSIntune height="45"  />
+
+This guide outlines steps for deploying Microsoft Store apps (new) through Microsoft Intune. This method uses the modern Windows Package Manager (WinGet) for reliable, automatically updated app installations on Windows devices.
+
+:::tip[applies to]
+
+- Microsoft Intune
+- Windows 10/11 devices enrolled in Intune
+- Microsoft Store apps (new)
+
+:::
+
+## Prerequisite
+
+- Intune Admin or Application Admin role
+- Devices must be connected to the Microsoft Store service
+- Windows 10 1709+ or Windows 11
+
+
+### 1. Open Intune Admin Center
+Navigate to **[Microsoft Intune admin center](https://intune.microsoft.com) → All Apps → Windows → Create**
+
+### 2. Select App Type
+Under **Select app type**, choose:  
+**Microsoft Store app (new)**
+
+### 3. Search for the App
+1. Click **Search the Microsoft Store app (new)**  
+2. Enter the name of the application  
+3. Select the app from the search results  
+4. Click **Select**
+
+### 4. Review App Information
+Intune automatically fills in:
+- App name  
+- Publisher  
+- Description  
+- Package identifier  
+
+Make changes if needed, then select **Next**.
+
+### 5. Assign the App
+Choose how the app is deployed:
+
+- **Required** – Auto‑install  
+- **Available for enrolled devices** – User‑install via Company Portal  
+- **Uninstall** – Remove the app  
+
+Click **Next**.
+
+### 6. Review + Create
+Review your configuration.  
+Select **Create** to publish the app.
+
+Intune will deploy the app on the next device sync.
+
+## Monitoring
+Check installation status at:  
+**Apps → Windows → [App Name] → Device install status**
+
+## Notes
+- Microsoft Store apps update automatically via the Store.  
+- Use Store apps when available—no packaging required.  
+- For apps not available in the Store, use **Win32 app (IntuneWin)**.
