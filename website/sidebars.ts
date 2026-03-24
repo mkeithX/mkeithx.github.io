@@ -65,6 +65,7 @@ const sidebars: SidebarsConfig = {
               },
               items: [
                 'guides/system-administration/ms-intune/custom-lockscreen',
+                'guides/system-administration/ms-intune/deploy-store-app',
                 'guides/system-administration/ms-intune/enable-copilot-edge',
                 'guides/system-administration/ms-intune/deploy-win32-app',
                 'guides/system-administration/ms-intune/enroll-device',
