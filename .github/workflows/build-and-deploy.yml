@@ -69,7 +69,7 @@ jobs:
 
       - name: Deploy to Pages
         id: deployment
-        uses: actions/deploy-pages@v4.0.5
+        uses: actions/deploy-pages@v5.0.0
 
   publish:
     if: ${{ github.event_name != 'pull_request' || github.event_name == 'push' && github.ref == 'refs/heads/main' }}
