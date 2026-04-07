@@ -63,13 +63,14 @@ const config: Config = {
   onBrokenLinks: 'throw',
   onBrokenAnchors: 'throw',
 
+  storage: {
+    type: 'localStorage',
+    namespace: true,
+  },
+
   future: {
     v4: true,
-    experimental_faster: true,
-    experimental_storage: {
-      type: 'localStorage',
-      namespace: true,
-    },
+    faster: true,
   },
 
   staticDirectories: ['static', 'public', path.join(__dirname, 'non-existent')],
