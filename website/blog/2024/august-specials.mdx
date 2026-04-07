@@ -44,20 +44,13 @@ MDX allow JSX directly in your Markdown files and render them as React component
 
 ## Deployment
 
-<!-- ### Cloudflare Pages
-
-Cloudflare Pages has become a popular choice for deploying fast and secure static sites, and this month we’re excited to introduce new features that will simplify your deployment process. -->
-
 
 ### Wrangler Integration
 
-<!-- Wrangler, the command-line tool for Cloudflare Workers, now supports seamless integration with Cloudflare Pages. [Learn more](/docs/custom-deployment/deploy-to-cloudflare-pages). -->
-
-<!-- You can use Wrangler to manage your deployment configurations, automate builds, and handle advanced deployment scenarios with ease. -->
 
 ### GitHub Actions
 
-<!-- To make continuous deployment even more accessible, we’ve integrated GitHub Actions with Cloudflare Pages.  -->
+
 
 
 
@@ -83,97 +76,3 @@ Cloudflare Pages has become a popular choice for deploying fast and secure stati
 - [PR#83](https://github.com/mkeithX/mkeithx.github.io/pull/83)
 - [PR#80](https://github.com/mkeithX/mkeithx.github.io/pull/80)
 - [PR#72](https://github.com/mkeithX/mkeithx.github.io/pull/72)
-
-<!-- 
-### Deployments
-
-#### CLI
-
-```json title="package.json" showLineNumbers {16, 17}
-  "scripts": {
-    // ...
-    "start:fast": "npm run docusaurus start -- --host 0.0.0.0 --no-open",
-    "serve:fast": "docusaurus build && docusaurus serve --host 0.0.0.0 --no-open",
-    "build:local": "docusaurus build && docusaurus serve",
-    "deploy:cf": "npm run build && wrangler pages deploy ./build",
-    "rm:pckg": "pwsh -Command \"Remove-Item -Path 'node_modules', 'yarn.lock', 'package-lock.json' -Recurse -Force -ErrorAction SilentlyContinue\""
-  },
-
-```
-
-#### Actions
-
-```yml title=".github/workflows/pages-deployment.yml" showLineNumbers {13,26}
-on: [push]
-jobs:
-  deploy:
-    runs-on: ubuntu-latest
-    permissions:
-      contents: read
-      deployments: write
-    name: Deploy to Cloudflare Pages
-    steps:
-      - name: Checkout
-        uses: actions/checkout@v4
-        with:
-          fetch-depth: 0
-
-      - name: Build
-        run: |
-          cd website
-          npm install && npm run build
-
-      - name: Publish
-        uses: cloudflare/pages-action@v1
-        with:
-          apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
-          accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          projectName: <CLOUDFLARE_PROJECT_NAME>
-          directory: website/build
-          gitHubToken: ${{ secrets.GITHUB_TOKEN }}
-``` -->
-
-
-<!-- 
-## Extending React: New Capabilities Unveiled
-
-React continues to be at the forefront of modern web development, and we’re excited to share some new ways you can extend its capabilities. This month, we’re focusing on advanced patterns and techniques that will take your React applications to the next level.
-
-### Enhanced Context API
-
-We’re rolling out improvements to the Context API, making it easier to manage and share global state across your application. With these enhancements, you can now handle complex state interactions more efficiently and with less boilerplate code.
-
-### Suspense and Concurrent Mode Updates
-
-React’s Suspense and Concurrent Mode are getting some much-anticipated updates. These improvements will allow for smoother data fetching, better handling of asynchronous tasks, and improved overall performance of your React applications.
-
-### Custom Hooks Toolkit
-
-We’re introducing a new toolkit for creating and managing custom hooks. This toolkit will streamline the process of building reusable logic and make it simpler to share functionality across different components. -->
-
-
-
-
-
-
-<!-- ## Revamping Core Documentation
-
-Clear and comprehensive documentation is crucial for developers, and we’re committed to making our core docs better than ever. This month, we’re revamping our documentation to provide a more intuitive and user-friendly experience.
-
-### Improved Navigation
-
-We’ve reorganized the documentation structure to make it easier to find the information you need. With a more intuitive navigation system, you can quickly access guides, tutorials, and reference materials.
-
-### Enhanced Examples and Tutorials
-
-Our documentation now features a wealth of new examples and tutorials to help you get up to speed faster. Whether you’re looking for code snippets or step-by-step guides, we’ve got you covered.
-
-### Interactive Demos
-
-To provide hands-on learning experiences, we’re introducing interactive demos directly within the documentation. You can experiment with code and see results in real-time without leaving the page. -->
-
-<!-- ## What’s Next?
-
-We’re constantly working to enhance our tools and resources to support your development journey. These August 2024 updates are just the beginning, and we’re excited to see how you’ll leverage these new features and improvements.
-
-Stay tuned for more updates, and as always, we’d love to hear your feedback. Happy coding, and here’s to making August a month of innovation and progress! -->
