@@ -3,14 +3,13 @@ mkeithx:
   title: Software Engineer · M365 Developer 
   url: https://github.com/mkeithx
   image_url: https://github.com/mkeithx.png
-  email: pr@kitimi365.com
-  page: true
+  email: developers@kitimi365.com
+  page: false
   
   socials:
     github: mkeithX
     linkedin: mkeithtan
     x: mkeithtan
-    bluesky: mkeithx
  
 
 
@@ -19,7 +18,7 @@ kpxeng:
   title: The Kitiplex Engineering Team
   url: https://github.com/kpxengineering
   image_url: https://github.com/kpxengineering.png
-  email: pr@kitimi365.com
+  email: developers@kitimi365.com
   page: true
   socials:
     github: kpxengineering
@@ -30,7 +29,7 @@ botgina:
   title: Software Engineer @ Kitiplex
   url: https://github.com/botgina
   image_url: https://github.com/botgina.png
-  email: pr@kitimi365.com
+  email: developers@kitimi365.com
   page: true
   socials:
     github: botgina
@@ -41,7 +40,7 @@ guleedev:
   title: Software Engineer @ Kitiplex
   url: https://github.com/GuLeeDev
   image_url: https://github.com/GuLeeDev.png
-  email: pr@kitimi365.com
+  email: developers@kitimi365.com
   page: true
   socials:
     github: GuLeeDev
@@ -52,7 +51,7 @@ adele:
   title: Software Engineer @ Kitiplex
   url: https://github.com/CodeByAdele
   image_url: https://github.com/CodeByAdele.png
-  email: pr@kitimi365.com
+  email: developers@kitimi365.com
   page: true
   socials:
     github: CodeByAdele
@@ -63,7 +62,7 @@ megan:
   title: Software Engineer @ Kitiplex
   url: https://github.com/CodeByMegan
   image_url: https://github.com/CodeByMegan.png
-  email: pr@kitimi365.com
+  email: developers@kitimi365.com
   page: true
   socials:
     github: CodeByMegan
@@ -75,8 +74,20 @@ jonisy:
   title: Software Engineer @ Kitiplex
   url: https://github.com/SyJoniDev
   image_url: https://github.com/SyJoniDev.png
-  email: pr@kitimi365.com
+  email: developers@kitimi365.com
   page: true
   socials:
     github: SyJoniDev
+    x: kitiplex
+
+
+kitiplex:
+  name: Kitiplex
+  title: The Kitimi Development Team
+  url: https://github.com/kitiplex
+  image_url: https://github.com/kitiplex.png
+  email: developers@kitimi365.com
+  page: false
+  socials:
+    github: kitiplex
     x: kitiplex

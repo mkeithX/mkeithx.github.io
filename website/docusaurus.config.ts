@@ -287,7 +287,8 @@ const config: Config = {
           label: 'More',
           position: 'right',
           items: [
-            {to: '/feature-requests', label: 'Feedback'},
+            {label: 'Portal', href: 'https://kitimi.atlassian.net/servicedesk'},
+            // {to: '/feature-requests', label: 'Feedback'},
             {
               label: 'Issue tracker',
               href: 'https://github.com/mkeithX/mkeithx.github.io/issues',

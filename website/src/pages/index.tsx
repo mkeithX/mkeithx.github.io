@@ -50,7 +50,7 @@ function HomepageHeader(): JSX.Element {
           </Link>
           <Link
             className={clsx('button button--lg')}
-            to="/blog/2025/artemis-2">
+            to="/blog/2026/spacehub-portal">
             {'Latest'}
           </Link>
         </div>
