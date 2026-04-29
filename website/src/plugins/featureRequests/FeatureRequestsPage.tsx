@@ -6,7 +6,7 @@ import Layout from "@theme/Layout";
 import cannyScript from "./cannyScript";
 import styles from "./styles.module.css";
 
-const BOARD_TOKEN = "bb007af8-3e9b-aec6-3288-4edadfd67459";
+const BOARD_TOKEN = '212cce93-f9e4-78a5-56a5-18f493ee8e9e';
 function useCannyTheme() {
   const { colorMode } = useColorMode();
   return colorMode === "light" ? "light" : "dark";
