@@ -40,7 +40,7 @@
     "@mdx-js/react": "^3.1.0",
     "@mermaid-js/layout-elk": "^0.1.9",
     "clsx": "^2.1.0",
-    "postcss": "^8.5.2",
+    "postcss": "^8.5.10",
     "prism-react-renderer": "^2.4.1",
     "raw-loader": "^4.0.2",
     "react": "^19.0.0",
